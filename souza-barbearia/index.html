@@ -70,7 +70,6 @@ nav ul a:hover{color:var(--tinta)}
 .galeria{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:12px;margin:0;padding:0;list-style:none}
 .galeria li{overflow:hidden;border-radius:6px;background:var(--linha)}
 .galeria li:nth-child(1){grid-column:span 2;grid-row:span 2}
-.galeria li:nth-child(4){grid-column:span 2}
 .galeria img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
 .galeria li:hover img{transform:scale(1.04)}
 
@@ -166,7 +165,7 @@ footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wr
   .selo{width:130px;height:130px;position:absolute;right:18px;top:24px}
   .selo strong{font-size:40px}
   .galeria{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
-  .galeria li:nth-child(4){grid-column:span 2}
+  .galeria li:nth-child(1){grid-row:span 1}
   .sobre .largura,.contato .largura,.avaliacoes .largura{grid-template-columns:1fr;gap:36px}
   .logo-moldura{width:220px;grid-row:1}
   .passos{grid-template-columns:1fr;gap:28px}
