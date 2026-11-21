@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Barbearia Grau e Corte, Sumaré</title>
+<meta name="description" content="Modelo demonstrativo de site para a Barbearia Grau e Corte, em Sumaré. Degradê, barba e acabamento com hora marcada.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --grafite:#20262B; --grafite2:#2C343A; --concreto:#ECEDEA; --branco:#FBFBF9;
+  --aco:#6E7A81; --linha:#D3D6D2; --regua:#E9B824; --regua-esc:#B98C0B;
+  --pele:#C99A78; --cabelo:#33241B;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--concreto);color:var(--grafite);font:17px/1.6 'Public Sans',system-ui,sans-serif}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--regua);outline-offset:3px}
+.ico{width:1.25em;height:1.25em;flex:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:'Big Shoulders Display',Impact,sans-serif;font-weight:800;line-height:.95;margin:0}
+h2{font-size:clamp(44px,6vw,72px);letter-spacing:.005em}
+.intro{max-width:56ch;color:#4A545A;margin:14px 0 0}
+
+.aviso{background:var(--regua);color:var(--grafite);font-size:14px;text-align:center;padding:8px 16px;font-weight:600}
+
+nav{background:var(--grafite);color:var(--branco)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:66px}
+.marca{font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:26px;text-decoration:none;letter-spacing:.01em;display:flex;align-items:center;gap:10px}
+.marca .tick{display:inline-block;width:28px;height:14px;background:
+  repeating-linear-gradient(90deg,var(--regua) 0 2px,transparent 2px 7px) bottom/100% 60% no-repeat,
+  linear-gradient(var(--regua),var(--regua)) bottom/100% 3px no-repeat}
+nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0;font-size:15px}
+nav ul a{text-decoration:none;opacity:.85}
+nav ul a:hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
+.botao{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:700;padding:15px 22px;border-radius:4px;font-size:17px;line-height:1.2;border:2px solid transparent;cursor:pointer;font-family:inherit}
+.botao.wa{background:#25D366;color:#06341A}
+.botao.wa:hover{background:#1FBE5B}
+.botao.claro{border-color:rgba(255,255,255,.7);color:#fff;background:transparent}
+.botao.claro:hover{background:rgba(255,255,255,.1)}
+.botao.escuro{border-color:var(--grafite);color:var(--grafite);background:transparent}
+.botao.escuro:hover{background:var(--grafite);color:var(--branco)}
+nav .botao{padding:10px 16px;font-size:15px}
+
+/* HERO */
+.hero{position:relative;min-height:calc(100vh - 100px);min-height:calc(100svh - 100px);display:flex;align-items:center;color:#fff;overflow:hidden;background:var(--grafite)}
+.hero img.fundo{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;object-position:72% 40%}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(24,29,33,.95) 0%,rgba(24,29,33,.9) 36%,rgba(24,29,33,.45) 54%,rgba(24,29,33,0) 72%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-top:70px;padding-bottom:120px}
+.hero .conteudo{max-width:540px;padding-left:26px;position:relative}
+.hero .conteudo::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:10px;background:
+  repeating-linear-gradient(180deg,var(--regua) 0 2px,transparent 2px 9px)}
+.desde{font-family:'Big Shoulders Display',sans-serif;font-weight:600;font-size:24px;color:var(--regua);margin:0 0 10px}
+.hero h1{font-size:clamp(64px,8.6vw,122px);line-height:.86}
+.hero p.texto{font-size:clamp(18px,1.8vw,20px);color:#E2E6E8;max-width:40ch;margin:22px 0 0}
+.hero .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.hero .regua-base{position:absolute;z-index:2;left:0;right:0;bottom:0;height:46px;background:var(--regua);color:var(--grafite);overflow:hidden}
+.hero .regua-base svg{display:block;width:100%;height:46px}
+
+/* MONTADOR */
+.montador{padding:96px 0;background:var(--branco)}
+.montador-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;margin-top:44px;align-items:start}
+fieldset{border:0;margin:0 0 30px;padding:0;min-width:0}
+legend{font-weight:700;font-size:18px;margin-bottom:12px;padding:0}
+legend small{font-weight:400;color:var(--aco);font-size:15px;margin-left:6px}
+fieldset[disabled]{opacity:.38}
+.opcoes{display:flex;flex-wrap:wrap;gap:8px}
+.opcoes input{position:absolute;opacity:0;pointer-events:none}
+.opcoes label{display:inline-block;padding:10px 15px;border:2px solid var(--linha);border-radius:3px;cursor:pointer;font-weight:600;font-size:16px;background:#fff;user-select:none}
+.opcoes label:hover{border-color:var(--aco)}
+.opcoes input:checked+label{background:var(--grafite);border-color:var(--grafite);color:#fff}
+.opcoes input:focus-visible+label{outline:3px solid var(--regua);outline-offset:2px}
+
+/* régua de pentes */
+.regua-pente{position:relative;background:var(--regua);border-radius:2px;height:92px;margin-top:4px;box-shadow:inset 0 -2px 0 var(--regua-esc)}
+.regua-pente svg.marcas{position:absolute;left:0;top:0;width:100%;height:100%}
+.regua-pente .pentes{position:absolute;inset:0}
+.regua-pente input{position:absolute;opacity:0;pointer-events:none}
+.regua-pente label{position:absolute;top:36px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;cursor:pointer;font-family:'Big Shoulders Display',sans-serif;line-height:1}
+.regua-pente label b{display:grid;place-items:center;width:34px;height:34px;border:2px solid var(--grafite);border-radius:3px;font-size:22px;font-weight:800;background:transparent;color:var(--grafite)}
+.regua-pente label span{font-family:'Public Sans',sans-serif;font-size:12px;font-weight:600;margin-top:4px;white-space:nowrap}
+.regua-pente input:checked+label b{background:var(--grafite);color:var(--regua)}
+.regua-pente input:focus-visible+label b{outline:3px solid var(--grafite);outline-offset:3px}
+.regua-pente label:hover b{background:rgba(32,38,43,.12)}
+.regua-pente input:checked+label:hover b{background:var(--grafite)}
+
+.visual{position:sticky;top:20px;background:var(--grafite);color:#fff;border-radius:4px;padding:26px 26px 24px}
+.visual svg.cabeca{width:100%;max-width:340px;height:auto;display:block;margin:0 auto}
+.visual .leitura{font-family:'Big Shoulders Display',sans-serif;font-size:30px;font-weight:800;line-height:1.05;margin:16px 0 6px}
+.visual .leitura-sub{color:#B9C1C5;font-size:15px;margin:0 0 18px}
+.visual pre{white-space:pre-wrap;font:14px/1.5 'Public Sans',sans-serif;background:var(--grafite2);border-left:4px solid var(--regua);padding:12px 14px;margin:0 0 16px;color:#E2E6E8}
+.visual .botao{width:100%}
+#hair-grad stop{transition:offset .45s ease,stop-opacity .45s ease}
+.linha-grau{transition:transform .45s ease}
+
+/* SERVIÇOS */
+.servicos{padding:96px 0}
+.servicos-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:56px;align-items:start}
+.servicos figure{margin:0}
+.servicos figure img{width:100%;aspect-ratio:5/6;object-fit:cover;border-radius:3px}
+.lista-servicos{list-style:none;margin:28px 0 0;padding:0;border-top:2px solid var(--grafite)}
+.lista-servicos li{display:grid;grid-template-columns:150px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid var(--linha)}
+.lista-servicos h3{font-size:30px;font-weight:800}
+.lista-servicos p{margin:0;color:#4A545A}
+.exemplo{font-size:14px;color:var(--aco);margin-top:16px}
+
+/* HORA MARCADA */
+.hora{background:var(--grafite);color:#fff;padding:96px 0}
+.hora h2{color:#fff}
+.hora .intro{color:#C3CACE}
+.passos{list-style:none;padding:0;margin:44px 0 0;display:grid;grid-template-columns:repeat(3,1fr);gap:0;counter-reset:p;border-top:1px solid #47515A}
+.passos li{counter-increment:p;padding:26px 28px 0 0;position:relative}
+.passos li::before{content:counter(p);display:block;font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:64px;line-height:1;color:var(--regua);margin-bottom:10px}
+.passos li::after{content:"";position:absolute;top:-1px;left:0;width:2px;height:18px;background:var(--regua)}
+.passos strong{display:block;font-size:20px;margin-bottom:6px}
+.passos p{margin:0;color:#C3CACE;max-width:32ch}
+.hora .dias{margin-top:48px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.hora .dias span{padding:8px 12px;border:1px solid #5A656D;border-radius:3px;font-weight:600;font-size:15px}
+.hora .dias span.fora{opacity:.4;text-decoration:line-through}
+.hora .dias em{font-style:normal;color:#C3CACE;margin-left:10px;font-size:15px}
+
+/* GALERIA */
+.galeria{padding:96px 0 80px}
+.grade{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:120px;gap:10px;margin-top:40px}
+.grade img{width:100%;height:100%;object-fit:cover;border-radius:3px}
+.g1{grid-column:1/6;grid-row:span 4}
+.g2{grid-column:6/10;grid-row:span 2}
+.g3{grid-column:10/13;grid-row:span 3}
+.g4{grid-column:6/10;grid-row:span 2}
+.g5{grid-column:1/5;grid-row:span 2}
+.g6{grid-column:5/10;grid-row:span 2}
+.g7{grid-column:10/13;grid-row:span 1}
+.galeria .nota{font-size:14px;color:var(--aco);margin-top:12px}
+
+/* FACEBOOK */
+.prova{padding:0 0 96px}
+.prova-caixa{background:var(--branco);border-radius:4px;padding:44px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:44px;align-items:center}
+.prova .grande{font-family:'Big Shoulders Display',sans-serif;font-weight:900;font-size:clamp(96px,12vw,150px);line-height:.85;color:var(--grafite)}
+.prova .grande-sub{font-size:18px;margin:10px 0 0;color:#4A545A}
+.medidas{list-style:none;margin:0;padding:0}
+.medidas li{padding:14px 0;border-bottom:1px solid var(--linha)}
+.medidas li:first-child{padding-top:0}
+.medidas .rotulo{display:flex;justify-content:space-between;gap:12px;font-weight:600}
+.medidas .rotulo b{font-family:'Big Shoulders Display',sans-serif;font-size:30px;font-weight:800;line-height:1}
+.medidas .barra{height:10px;margin-top:8px;background:
+  repeating-linear-gradient(90deg,rgba(32,38,43,.25) 0 1px,transparent 1px 10px),var(--concreto);border-radius:2px;overflow:hidden}
+.medidas .barra i{display:block;height:100%;background:var(--regua)}
+.prova .fonte{font-size:15px;margin-top:18px;color:#4A545A}
+
+/* ENDEREÇO */
+.onde{background:var(--branco);padding:96px 0}
+.onde-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;align-items:stretch}
+.onde address{font-style:normal;font-size:22px;line-height:1.4;margin:22px 0 8px;font-weight:600}
+.onde .obs{color:#4A545A;margin:0 0 26px}
+.onde .acoes{display:flex;flex-wrap:wrap;gap:12px}
+.mapa{width:100%;min-height:380px;height:100%;border:0;border-radius:4px;filter:grayscale(.35)}
+
+footer{background:var(--grafite);color:#AEB7BC;padding:40px 0 100px;font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+footer strong{color:#fff;font-family:'Big Shoulders Display',sans-serif;font-size:24px;font-weight:800}
+
+.flutuante{position:fixed;right:18px;bottom:18px;display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#06341A;font-weight:800;text-decoration:none;padding:14px 18px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.28);font-size:15px;z-index:5}
+
+@media (max-width:980px){
+  nav ul{display:none}
+  .montador-grid,.servicos-grid,.onde-grid,.prova-caixa{grid-template-columns:1fr}
+  .visual{position:static}
+  .servicos figure img{aspect-ratio:16/10}
+  .hero::before{background:linear-gradient(90deg,rgba(24,29,33,.95) 0%,rgba(24,29,33,.9) 50%,rgba(24,29,33,.4) 70%,rgba(24,29,33,0) 90%)}
+}
+@media (max-width:720px){
+  .wrap{padding:0 16px}
+  .hero{align-items:flex-end;min-height:calc(100svh - 120px)}
+  .hero img.fundo{object-position:68% 30%}
+  .hero::before{background:linear-gradient(180deg,rgba(24,29,33,.05) 0%,rgba(24,29,33,.35) 30%,rgba(24,29,33,.88) 58%,rgba(24,29,33,.95) 100%)}
+  .hero .wrap{padding-top:220px;padding-bottom:84px}
+  .hero h1{font-size:clamp(58px,17vw,84px)}
+  .hero .acoes .botao{width:100%}
+  .montador,.servicos,.hora,.galeria,.onde{padding:68px 0}
+  .passos{grid-template-columns:1fr}
+  .passos li{padding-bottom:26px}
+  .lista-servicos li{grid-template-columns:1fr;gap:4px}
+  .grade{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}
+  .grade img{grid-column:auto!important;grid-row:span 1!important}
+  .grade .g1{grid-row:span 2!important}
+  .grade .g7{display:none}
+  .prova-caixa{padding:28px 20px}
+  .regua-pente label span{font-size:11px}
+  .visual{padding:20px 16px}
+  nav .botao span{display:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para Barbearia Grau e Corte. Ainda não é o site oficial.</div>
+
+<nav aria-label="Principal">
+  <div class="wrap">
+    <a class="marca" href="#topo"><span class="tick" aria-hidden="true"></span>Grau e Corte</a>
+    <ul>
+      <li><a href="#montar">Monte seu corte</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#hora-marcada">Hora marcada</a></li>
+      <li><a href="#onde">Onde fica</a></li>
+    </ul>
+    <a class="botao wa" href="https://wa.me/5519992921678?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Barbearia%20Grau%20e%20Corte%20e%20quero%20marcar%20um%20hor%C3%A1rio." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg><span>Marcar horário</span></a>
+  </div>
+</nav>
+
+<header class="hero" id="topo">
+  <img class="fundo" src="fotos/hero.jpg" alt="Barbeiro passando a máquina na nuca de um cliente, fazendo o degradê" fetchpriority="high">
+  <div class="wrap">
+    <div class="conteudo">
+      <p class="desde">Desde 2016 em Sumaré</p>
+      <h1>Barbearia <span style="white-space:nowrap">Grau e Corte</span></h1>
+      <p class="texto">Degradê medido no pente, barba e acabamento no capricho. Atendimento só com hora marcada, de segunda a sábado.</p>
+      <div class="acoes">
+        <a class="botao wa" href="https://wa.me/5519992921678?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Barbearia%20Grau%20e%20Corte%20e%20quero%20marcar%20um%20hor%C3%A1rio." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Marcar no WhatsApp</a>
+        <a class="botao claro" href="#montar">Montar meu corte</a>
+      </div>
+    </div>
+  </div>
+  <div class="regua-base" aria-hidden="true">
+    <svg id="reguaHero" preserveAspectRatio="none"></svg>
+  </div>
+</header>
+
+<main>
+<section class="montador" id="montar" aria-labelledby="t-montar">
+  <div class="wrap">
+    <h2 id="t-montar">Escolha o grau antes de sentar na cadeira</h2>
+    <p class="intro">Marque o corte, a altura do degradê e o pente da base. O desenho mostra como fica a transição, e a mensagem para o WhatsApp sai pronta com tudo isso.</p>
+
+    <div class="montador-grid">
+      <form id="form" onsubmit="return false">
+        <fieldset>
+          <legend>Corte</legend>
+          <div class="opcoes" id="op-corte"></div>
+        </fieldset>
+
+        <fieldset id="fs-altura">
+          <legend>Altura do degradê <small>onde a máquina começa a subir</small></legend>
+          <div class="opcoes" id="op-altura"></div>
+        </fieldset>
+
+        <fieldset id="fs-pente">
+          <legend>Pente na base <small>quanto mais baixo, mais pele aparece</small></legend>
+          <div class="regua-pente">
+            <svg class="marcas" id="marcasPente" viewBox="0 0 1000 92" preserveAspectRatio="none" aria-hidden="true"></svg>
+            <div class="pentes" id="op-pente"></div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Dia da semana</legend>
+          <div class="opcoes" id="op-dia"></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Período</legend>
+          <div class="opcoes" id="op-periodo"></div>
+        </fieldset>
+      </form>
+
+      <div class="visual" aria-live="polite">
+        <svg class="cabeca" viewBox="0 0 360 400" role="img" aria-labelledby="desc-cabeca">
+          <title id="desc-cabeca">Desenho da nuca mostrando o degradê escolhido</title>
+          <defs>
+            <linearGradient id="hair-grad" x1="0" y1="30" x2="0" y2="292" gradientUnits="userSpaceOnUse">
+              <stop offset="0" stop-color="#33241B" stop-opacity="1"/>
+              <stop id="st-ini" offset=".5" stop-color="#33241B" stop-opacity="1"/>
+              <stop id="st-fim" offset="1" stop-color="#33241B" stop-opacity=".3"/>
+            </linearGradient>
+            <pattern id="fios" width="6" height="6" patternUnits="userSpaceOnUse">
+              <path d="M1 5 L2 1 M4 6 L5 2" stroke="#1E150F" stroke-width=".8" opacity=".55"/>
+            </pattern>
+            <clipPath id="clip-cabelo"><path id="p-cabelo" d="M48,165 A112,130 0 0 1 272,165 L272,214 Q262,268 214,292 L106,292 Q58,268 48,214 Z"/></clipPath>
+          </defs>
+          <circle cx="160" cy="175" r="150" fill="#353F46"/>
+          <!-- ombros e pescoço -->
+          <path d="M8,400 Q20,330 110,318 L110,260 L210,260 L210,318 Q300,330 312,400 Z" fill="#B78665"/>
+          <path d="M110,300 Q160,318 210,300 L210,330 Q160,345 110,330 Z" fill="#000" opacity=".08"/>
+          <!-- cabeça -->
+          <ellipse cx="160" cy="168" rx="112" ry="130" fill="#C99A78"/>
+          <!-- cabelo -->
+          <g clip-path="url(#clip-cabelo)">
+            <rect x="40" y="30" width="240" height="270" fill="url(#hair-grad)"/>
+            <rect x="40" y="30" width="240" height="270" fill="url(#fios)" mask="url(#m-fios)"/>
+          </g>
+          <!-- orelhas -->
+          <path d="M50,180 Q30,178 32,205 Q34,232 54,236 Z" fill="#BE8C69"/>
+          <path d="M270,180 Q290,178 288,205 Q286,232 266,236 Z" fill="#BE8C69"/>
+          <mask id="m-fios"><linearGradient id="mask-grad" x1="0" y1="30" x2="0" y2="292" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff"/><stop id="mk-ini" offset=".5" stop-color="#fff"/><stop id="mk-fim" offset="1" stop-color="#fff" stop-opacity=".3"/></linearGradient><rect x="40" y="30" width="240" height="270" fill="url(#mask-grad)"/></mask>
+          <!-- linha do grau -->
+          <g class="linha-grau" id="linhaGrau">
+            <line x1="40" x2="300" y1="0" y2="0" stroke="#E9B824" stroke-width="2" stroke-dasharray="6 5"/>
+          </g>
+          <!-- régua lateral -->
+          <g id="reguaLateral" transform="translate(306,0)"></g>
+          <text id="txtGrau" x="300" y="0" fill="#E9B824" font-family="Public Sans, sans-serif" font-size="12" font-weight="700" text-anchor="end"></text>
+        </svg>
+        <p class="leitura" id="leitura">Degradê médio, pente 1</p>
+        <p class="leitura-sub" id="leituraSub"></p>
+        <pre id="previa"></pre>
+        <a class="botao wa" id="enviar" href="#" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Mandar no WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="servicos" id="servicos" aria-labelledby="t-serv">
+  <div class="wrap servicos-grid">
+    <figure>
+      <img src="fotos/nuca.jpg" alt="Nuca com degradê bem marcado e risco desenhado na máquina" loading="lazy">
+    </figure>
+    <div>
+      <h2 id="t-serv">O que sai da cadeira</h2>
+      <ul class="lista-servicos">
+        <li><h3>Degradê</h3><p>Transição da pele até o cabelo, no pente e na altura que você escolher: baixo, médio ou alto.</p></li>
+        <li><h3>Corte social</h3><p>Tesoura e máquina para quem prefere um visual mais clássico, sem transição marcada.</p></li>
+        <li><h3>Barba</h3><p>Desenho do contorno, acerto do volume e acabamento na navalha.</p></li>
+        <li><h3>Corte e barba</h3><p>Os dois no mesmo horário, para sair pronto de uma vez.</p></li>
+        <li><h3>Pezinho</h3><p>Acerto do contorno da nuca e das costeletas entre um corte e outro.</p></li>
+        <li><h3>Sobrancelha</h3><p>Limpeza e acerto rápido para fechar o visual.</p></li>
+      </ul>
+      <p class="exemplo">Texto de exemplo. No site final entram os serviços e valores da própria barbearia.</p>
+    </div>
+  </div>
+</section>
+
+<section class="hora" id="hora-marcada" aria-labelledby="t-hora">
+  <div class="wrap">
+    <h2 id="t-hora">Só com hora marcada</h2>
+    <p class="intro">Nada de ficar esperando na cadeira de fora. Você combina o horário antes e chega na sua vez.</p>
+    <ol class="passos">
+      <li><strong>Escolha o corte</strong><p>Use a régua acima ou diga do seu jeito o que quer fazer.</p></li>
+      <li><strong>Mande no WhatsApp</strong><p>A mensagem vai com o dia e o período que fica melhor para você.</p></li>
+      <li><strong>Receba o horário</strong><p>A barbearia responde com o horário livre e é só chegar.</p></li>
+    </ol>
+    <div class="dias" aria-label="Dias de atendimento">
+      <span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span><span class="fora">Dom</span>
+      <em>De segunda a sábado, com horário combinado pelo WhatsApp.</em>
+    </div>
+  </div>
+</section>
+
+<section class="galeria" aria-labelledby="t-gal">
+  <div class="wrap">
+    <h2 id="t-gal">Máquina, pente e navalha</h2>
+    <div class="grade">
+      <img class="g1" src="fotos/maquina.jpg" alt="Barbeiro de luvas acertando o degradê em cabelo crespo" loading="lazy">
+      <img class="g2" src="fotos/contorno.jpg" alt="Máquina fazendo o contorno perto da orelha" loading="lazy">
+      <img class="g3" src="fotos/acabado.jpg" alt="Nuca com degradê baixo já finalizado" loading="lazy">
+      <img class="g4" src="fotos/pente.jpg" alt="Barbeiro separando o cabelo com o pente" loading="lazy">
+      <img class="g5" src="fotos/barba.jpg" alt="Acerto da barba com tesoura" loading="lazy">
+      <img class="g6" src="fotos/maquinas.jpg" alt="Máquinas de corte organizadas na bancada" loading="lazy">
+      <img class="g7" src="fotos/tesoura.jpg" alt="Tesoura e pente no acabamento do corte" loading="lazy">
+    </div>
+    <p class="nota">Fotos ilustrativas. No site final entram fotos dos cortes feitos na Grau e Corte.</p>
+  </div>
+</section>
+
+<section class="prova" aria-labelledby="t-prova">
+  <div class="wrap">
+    <div class="prova-caixa">
+      <div>
+        <h2 id="t-prova" class="grande">90%</h2>
+        <p class="grande-sub">de quem avaliou no Facebook recomenda a Grau e Corte.</p>
+      </div>
+      <div>
+        <ul class="medidas">
+          <li><div class="rotulo"><span>Recomendação</span><b>90%</b></div><div class="barra"><i style="width:90%"></i></div></li>
+          <li><div class="rotulo"><span>Avaliações</span><b>9</b></div></li>
+          <li><div class="rotulo"><span>Curtidas na página</span><b>496</b></div></li>
+          <li><div class="rotulo"><span>Check-ins</span><b>297</b></div></li>
+        </ul>
+        <p class="fonte">Números da <a href="https://www.facebook.com/p/Barbearia-GRAU-E-CORTE-100063642666526/" rel="noopener" target="_blank">página da barbearia no Facebook</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="onde" id="onde" aria-labelledby="t-onde">
+  <div class="wrap onde-grid">
+    <div>
+      <h2 id="t-onde">Onde fica</h2>
+      <address>Rua Máximo Biondo, 575, Sala 6<br>Sumaré - SP</address>
+      <p class="obs">Segunda a sábado, só com hora marcada. Combine antes pelo WhatsApp (19) 99292-1678.</p>
+      <div class="acoes">
+        <a class="botao wa" href="https://wa.me/5519992921678?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Barbearia%20Grau%20e%20Corte%20e%20quero%20marcar%20um%20hor%C3%A1rio." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Marcar horário</a>
+        <a class="botao escuro" href="https://www.google.com/maps/dir/?api=1&destination=Rua%20M%C3%A1ximo%20Biondo%2C%20575%2C%20Sumar%C3%A9%20-%20SP" rel="noopener" target="_blank">Traçar rota</a>
+      </div>
+    </div>
+    <iframe class="mapa" src="https://www.google.com/maps?q=Rua%20M%C3%A1ximo%20Biondo%2C%20575%2C%20Sumar%C3%A9%20-%20SP&output=embed" loading="lazy" title="Mapa: Barbearia Grau e Corte" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong>Barbearia Grau e Corte</strong><br>Rua Máximo Biondo, 575, Sala 6, Sumaré - SP<br>WhatsApp (19) 99292-1678</div>
+    <div>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</div>
+  </div>
+</footer>
+
+<a class="flutuante" href="https://wa.me/5519992921678?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Barbearia%20Grau%20e%20Corte%20e%20quero%20marcar%20um%20hor%C3%A1rio." rel="noopener" aria-label="Chamar a Barbearia Grau e Corte no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+
+<script>
+(function(){
+  var TEL='5519992921678';
+  var NS='http://www.w3.org/2000/svg';
+  var cortes=[
+    {v:'degrade',t:'Degradê',fade:true},
+    {v:'degrade-barba',t:'Degradê e barba',fade:true},
+    {v:'social',t:'Corte social',fade:false},
+    {v:'barba',t:'Só a barba',fade:false},
+    {v:'pezinho',t:'Pezinho',fade:false},
+    {v:'sobrancelha',t:'Sobrancelha',fade:false}
+  ];
+  var alturas=[{v:'baixo',t:'Baixo',y:236},{v:'medio',t:'Médio',y:182},{v:'alto',t:'Alto',y:124}];
+  var pentes=[
+    {v:0,t:'0',mm:0,rot:'máquina zero',op:.06},
+    {v:1,t:'1',mm:3,rot:'3 mm',op:.24},
+    {v:2,t:'2',mm:6,rot:'6 mm',op:.42},
+    {v:3,t:'3',mm:9,rot:'9 mm',op:.6},
+    {v:4,t:'4',mm:12,rot:'12 mm',op:.76}
+  ];
+  var dias=['Segunda','Terça','Quarta','Quinta','Sexta','Sábado'];
+  var periodos=['Manhã','Tarde','Fim do dia'];
+
+  function radios(cont,nome,lista,sel){
+    var el=document.getElementById(cont);
+    lista.forEach(function(o,i){
+      var val=(typeof o==='string')?o:o.v, txt=(typeof o==='string')?o:o.t;
+      var id=nome+'-'+i;
+      var inp=document.createElement('input');inp.type='radio';inp.name=nome;inp.id=id;inp.value=val;
+      if(String(val)===String(sel))inp.checked=true;
+      var lb=document.createElement('label');lb.htmlFor=id;lb.textContent=txt;
+      el.appendChild(inp);el.appendChild(lb);
+    });
+  }
+  radios('op-corte','corte',cortes,'degrade');
+  radios('op-altura','altura',alturas,'medio');
+  radios('op-dia','dia',dias,'Sábado');
+  radios('op-periodo','periodo',periodos,'Tarde');
+
+  // régua de pentes: 0 a 12 mm, com folga nas pontas
+  var pc=document.getElementById('op-pente'), marcas=document.getElementById('marcasPente');
+  function xmm(mm){return 6+mm/12*88;} // em %
+  for(var m=0;m<=13;m+=.5){
+    var x=xmm(m)*10; if(x>995)break;
+    var inteiro=(m%1===0), h=inteiro?((m%3===0)?26:18):10;
+    var l=document.createElementNS(NS,'line');
+    l.setAttribute('x1',x);l.setAttribute('x2',x);l.setAttribute('y1',0);l.setAttribute('y2',h);
+    l.setAttribute('stroke','#20262B');l.setAttribute('stroke-width',inteiro?2:1);l.setAttribute('vector-effect','non-scaling-stroke');
+    marcas.appendChild(l);
+  }
+  pentes.forEach(function(p,i){
+    var id='pente-'+i;
+    var inp=document.createElement('input');inp.type='radio';inp.name='pente';inp.id=id;inp.value=p.v;if(p.v===1)inp.checked=true;
+    var lb=document.createElement('label');lb.htmlFor=id;lb.style.left=xmm(p.mm)+'%';
+    lb.innerHTML='<b>'+p.t+'</b><span>'+(p.mm===0?'zero':p.rot)+'</span>';
+    lb.setAttribute('aria-label','Pente '+p.t+', '+p.rot);
+    pc.appendChild(inp);pc.appendChild(lb);
+  });
+
+  // régua lateral da cabeça (30 a 292 = topo até a nuca)
+  var rl=document.getElementById('reguaLateral');
+  var fundo=document.createElementNS(NS,'rect');
+  fundo.setAttribute('x',0);fundo.setAttribute('y',24);fundo.setAttribute('width',30);fundo.setAttribute('height',276);fundo.setAttribute('fill','#E9B824');fundo.setAttribute('rx',2);
+  rl.appendChild(fundo);
+  for(var y=30,k=0;y<=294;y+=6,k++){
+    var t=document.createElementNS(NS,'line');var w=(k%5===0)?14:7;
+    t.setAttribute('x1',30-w);t.setAttribute('x2',30);t.setAttribute('y1',y);t.setAttribute('y2',y);
+    t.setAttribute('stroke','#20262B');t.setAttribute('stroke-width',(k%5===0)?1.6:1);
+    rl.appendChild(t);
+  }
+  var seta=document.createElementNS(NS,'path');seta.setAttribute('d','M-2,-7 L10,0 L-2,7 Z');seta.setAttribute('fill','#fff');seta.setAttribute('id','setaGrau');
+  seta.setAttribute('class','linha-grau');rl.appendChild(seta);
+
+  // régua do hero
+  function reguaHero(){
+    var s=document.getElementById('reguaHero');if(!s)return;
+    var w=s.clientWidth||1200;s.setAttribute('viewBox','0 0 '+w+' 46');s.innerHTML='';
+    for(var x=8,i=0;x<w;x+=8,i++){
+      var h=(i%10===0)?26:(i%5===0)?18:10;
+      var l=document.createElementNS(NS,'line');l.setAttribute('x1',x);l.setAttribute('x2',x);l.setAttribute('y1',0);l.setAttribute('y2',h);
+      l.setAttribute('stroke','#20262B');l.setAttribute('stroke-width',(i%10===0)?2:1);s.appendChild(l);
+      if(i%10===0&&i>0){var tx=document.createElementNS(NS,'text');tx.setAttribute('x',x+4);tx.setAttribute('y',40);tx.setAttribute('font-size','13');tx.setAttribute('font-weight','700');tx.setAttribute('font-family','Big Shoulders Display, sans-serif');tx.setAttribute('fill','#20262B');tx.textContent=i/10;s.appendChild(tx);}
+    }
+  }
+  reguaHero();window.addEventListener('resize',reguaHero);
+
+  var form=document.getElementById('form');
+  function val(n){var e=form.querySelector('input[name="'+n+'"]:checked');return e?e.value:'';}
+  function atualizar(){
+    var c=cortes.filter(function(o){return o.v===val('corte');})[0];
+    var a=alturas.filter(function(o){return o.v===val('altura');})[0];
+    var p=pentes[+val('pente')];
+    var dia=val('dia'), per=val('periodo');
+    document.getElementById('fs-altura').disabled=!c.fade;
+    document.getElementById('fs-pente').disabled=!c.fade;
+
+    var yIni, opFim, mostra=c.fade;
+    if(c.fade){yIni=a.y;opFim=p.op;}else{yIni=262;opFim=c.v==='social'?.92:1;}
+    var off=(yIni-30)/262;
+    var sIni=document.getElementById('st-ini'),sFim=document.getElementById('st-fim');
+    sIni.setAttribute('offset',off.toFixed(3));
+    sFim.setAttribute('stop-opacity',opFim);
+    document.getElementById("mk-ini").setAttribute("offset",off.toFixed(3));document.getElementById("mk-fim").setAttribute("stop-opacity",opFim);
+    var lg=document.getElementById('linhaGrau'),sg=document.getElementById('setaGrau'),tg=document.getElementById('txtGrau');
+    lg.style.transform='translateY('+yIni+'px)';sg.style.transform='translateY('+yIni+'px)';
+    lg.style.opacity=mostra?1:0;sg.style.opacity=mostra?1:0;
+    tg.setAttribute('y',yIni-8);tg.textContent=mostra?'começa o grau':'';
+
+    var leitura,sub,linhas=['Olá! Vi o site da Barbearia Grau e Corte e quero marcar um horário.',''];
+    if(c.fade){
+      leitura=c.t+' '+a.t.toLowerCase()+', pente '+p.t;
+      sub="Base no pente "+p.t+" ("+p.rot+"), com o degradê "+a.t.toLowerCase()+".";
+      linhas.push('Corte: '+c.t,'Altura do degradê: '+a.t.toLowerCase(),'Pente na base: '+p.t+' ('+p.rot+')');
+    }else{
+      leitura=c.t;
+      sub='Sem degradê. O acabamento a gente combina na cadeira.';
+      linhas.push('Serviço: '+c.t);
+    }
+    linhas.push('Dia: '+dia.toLowerCase(),'Período: '+per.toLowerCase(),'','Qual horário vocês têm livre?');
+    document.getElementById('leitura').textContent=leitura;
+    document.getElementById('leituraSub').textContent=sub+' '+dia+', '+per.toLowerCase()+'.';
+    var msg=linhas.join('\n');
+    document.getElementById('previa').textContent=msg;
+    document.getElementById('enviar').href='https://wa.me/'+TEL+'?text='+encodeURIComponent(msg);
+  }
+  form.addEventListener('change',atualizar);
+  atualizar();
+})();
+</script>
+</body>
+</html>
