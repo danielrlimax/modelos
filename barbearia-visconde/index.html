@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Barbearia Visconde, Leme</title>
+<meta name="description" content="Modelo demonstrativo de site para a Barbearia Visconde, barbearia com hora marcada no bairro Barra Funda, em Leme - SP.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Libre+Franklin:wght@400;500;600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+:root{
+  --carvao:#1C1A19;   /* cadeira de couro preta */
+  --cimento:#8E9192;  /* parede cinza */
+  --papel:#ECEBE7;    /* papel de cartaz */
+  --madeira:#9A5B33;  /* painel de madeira */
+  --vermelho:#B3242B; /* listra da placa de barbeiro */
+  --linha:#CFCDC7;
+  --verde:#1FA855;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--papel);color:var(--carvao);font:17px/1.65 'Libre Franklin',system-ui,sans-serif}
+a{color:inherit}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--vermelho);outline-offset:3px}
+.largura{max-width:1140px;margin:0 auto;padding:0 24px}
+.aviso{background:var(--carvao);color:var(--papel);font-size:14px;text-align:center;padding:8px 16px}
+.ico{width:1.25em;height:1.25em;flex:none}
+h1,h2,h3{font-family:'Bowlby One',Impact,sans-serif;font-weight:400;line-height:1;margin:0;letter-spacing:.005em}
+h2{font-size:clamp(34px,5vw,58px)}
+.exemplo{font-size:14px;color:#5d5c59;font-style:italic}
+
+.botao{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:700;padding:15px 22px;border-radius:3px;font-size:17px;line-height:1.2;border:2px solid transparent;cursor:pointer;font-family:inherit}
+.botao-zap{background:var(--verde);color:#fff}
+.botao-zap:hover{background:#178a45}
+.botao-claro{border-color:var(--papel);color:var(--papel);background:transparent}
+.botao-claro:hover{background:var(--papel);color:var(--carvao)}
+.botao-escuro{border-color:var(--carvao);color:var(--carvao)}
+.botao-escuro:hover{background:var(--carvao);color:var(--papel)}
+
+/* HERO: cartaz de show em preto e branco */
+.hero{position:relative;min-height:min(92vh,860px);display:flex;align-items:flex-end;color:var(--papel);overflow:hidden;background:var(--carvao)}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 70%;filter:grayscale(1) contrast(1.15) brightness(.5)}
+.hero .largura{position:relative;width:100%;padding-top:72px;padding-bottom:56px}
+.cartaz-topo{display:flex;justify-content:space-between;gap:16px;font-weight:600;font-size:15px;border-bottom:2px solid var(--papel);padding-bottom:10px;margin-bottom:22px;max-width:760px}
+.hero h1{font-size:clamp(54px,10.5vw,148px);line-height:.88;text-shadow:0 2px 24px rgba(0,0,0,.35)}
+.hero h1 span{display:block}
+.hero h1 .fino{font-family:'Libre Franklin',sans-serif;font-weight:700;font-size:.28em;letter-spacing:.02em;line-height:1.1;margin-bottom:.15em}
+.hero p.chamada{font-size:clamp(18px,2vw,21px);max-width:560px;margin:22px 0 28px}
+.acoes{display:flex;flex-wrap:wrap;gap:12px}
+.faixa-listra{height:10px;background:repeating-linear-gradient(90deg,var(--vermelho) 0 40px,var(--papel) 40px 80px,var(--carvao) 80px 120px,var(--papel) 120px 160px)}
+
+/* PROVA SOCIAL */
+.publico{background:var(--carvao);color:var(--papel);padding:44px 0}
+.publico .largura{display:grid;grid-template-columns:1.1fr repeat(3,1fr);gap:28px;align-items:end}
+.publico h2{font-size:28px;line-height:1.1}
+.num{font-family:'Bowlby One',sans-serif;font-size:clamp(38px,4.5vw,54px);line-height:1;display:block}
+.num-leg{font-size:15px;color:#c9c7c1;display:block;margin-top:8px}
+
+/* REPERTÓRIO: verso de LP */
+.repertorio{padding:88px 0}
+.repertorio .largura{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:56px;align-items:start}
+.disco-capa{position:relative;aspect-ratio:1;max-width:460px}
+.capa{position:absolute;inset:0 18% 0 0;background:var(--carvao) url(fotos/cadeira.jpg) center/cover;filter:grayscale(1);border-radius:2px;z-index:2;box-shadow:6px 6px 0 var(--madeira)}
+.capa span{position:absolute;left:18px;bottom:16px;color:var(--papel);font-family:'Bowlby One',sans-serif;font-size:clamp(22px,3vw,32px);line-height:.95}
+.vinil{position:absolute;top:5%;right:0;width:82%;aspect-ratio:1;border-radius:50%;background:repeating-radial-gradient(circle,#111 0 2px,#1d1d1d 2px 4px);z-index:1}
+.vinil::after{content:"";position:absolute;inset:36%;border-radius:50%;background:radial-gradient(circle,var(--carvao) 0 7%,var(--vermelho) 8% 100%)}
+.repertorio h2{margin-bottom:12px}
+.lado{margin-top:30px}
+.lado h3{font-size:22px;border-bottom:3px solid var(--carvao);padding-bottom:6px;margin-bottom:4px}
+.faixas{list-style:none;margin:0;padding:0}
+.faixas li{display:grid;grid-template-columns:44px 1fr;gap:6px 12px;padding:14px 0;border-bottom:1px solid var(--linha)}
+.faixas b{font-size:18px}
+.faixas .n{font-weight:700;color:var(--vermelho)}
+.faixas small{grid-column:2;font-size:15px;color:#4e4d4a}
+
+/* MARCAR HORÁRIO: setlist */
+.marcar{background:var(--cimento);padding:88px 0;position:relative}
+.marcar .largura{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr);gap:56px;align-items:start}
+.marcar h2{color:var(--carvao)}
+.marcar .intro{max-width:520px;margin:14px 0 26px}
+fieldset{border:0;margin:0 0 24px;padding:0}
+legend{font-weight:700;font-size:17px;margin-bottom:10px;padding:0}
+.opcoes{display:flex;flex-wrap:wrap;gap:8px}
+.opcoes input{position:absolute;opacity:0;pointer-events:none}
+.opcoes label{display:inline-block;padding:10px 14px;border:2px solid var(--carvao);background:var(--papel);cursor:pointer;font-weight:600;font-size:16px;border-radius:2px;user-select:none}
+.opcoes input:checked+label{background:var(--carvao);color:var(--papel)}
+.opcoes input:focus-visible+label{outline:3px solid var(--vermelho);outline-offset:2px}
+.campo-nome{width:100%;max-width:340px;padding:12px 14px;border:2px solid var(--carvao);background:var(--papel);font:inherit;border-radius:2px}
+
+.setlist{position:relative;background:#fbfbf8;padding:46px 34px 34px;transform:rotate(1.6deg);box-shadow:0 18px 40px rgba(28,26,25,.28);font-family:'Permanent Marker',cursive;color:#171717;margin-top:10px}
+.setlist::before,.setlist::after{content:"";position:absolute;top:-14px;width:96px;height:30px;background:rgba(220,214,190,.85)}
+.setlist::before{left:22px;transform:rotate(-6deg)}
+.setlist::after{right:22px;transform:rotate(5deg)}
+.setlist .cab{font-size:30px;line-height:1.1;border-bottom:3px solid #171717;padding-bottom:8px;margin:0 0 14px}
+.setlist .data{font-size:20px;color:var(--vermelho);margin:0 0 12px;min-height:1.4em}
+.setlist ol{margin:0 0 16px;padding-left:34px;font-size:27px;line-height:1.45;min-height:80px}
+.setlist ol li.novo{animation:escrever .45s ease-out}
+.setlist .vazio{font-size:20px;color:#8a8a86;margin:0 0 16px}
+.setlist .rodape{font-size:19px;margin:0 0 22px;line-height:1.5}
+@keyframes escrever{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+.setlist .botao{font-family:'Libre Franklin',sans-serif;width:100%}
+.setlist .obs{font-family:'Libre Franklin',sans-serif;font-size:14px;color:#55544f;margin:12px 0 0}
+
+/* CENAS */
+.cenas{padding:88px 0 72px}
+.cenas .topo-sec{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+.grade{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:260px 260px;gap:10px}
+.grade figure{margin:0;overflow:hidden;background:var(--carvao)}
+.grade img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.08)}
+.grade .alta{grid-row:span 2}
+.grade .larga{grid-column:span 2}
+
+/* COMO FUNCIONA */
+.hora{background:var(--carvao);color:var(--papel);padding:80px 0}
+.hora .largura{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px}
+.hora h2{color:var(--papel)}
+.passos{list-style:none;margin:0;padding:0;counter-reset:p}
+.passos li{counter-increment:p;display:grid;grid-template-columns:56px 1fr;gap:14px;padding:18px 0;border-top:1px solid #45423f}
+.passos li::before{content:counter(p);font-family:'Bowlby One',sans-serif;font-size:34px;color:var(--vermelho);line-height:1}
+.passos b{display:block;font-size:19px;margin-bottom:2px}
+.passos span{color:#cfcdc7}
+.dias{display:flex;gap:6px;margin-top:22px;flex-wrap:wrap}
+.dias span{padding:6px 10px;border:2px solid var(--papel);font-weight:700;font-size:15px}
+.dias span.off{border-color:#55524f;color:#77736f;text-decoration:line-through}
+
+/* ONDE */
+.onde{padding:88px 0}
+.onde .largura{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px;align-items:start}
+.onde iframe{width:100%;height:400px;border:0;filter:grayscale(.85);border:3px solid var(--carvao)}
+.onde address{font-style:normal;font-size:20px;font-weight:600;margin:18px 0 6px}
+.onde .acoes{margin-top:22px}
+
+.final{background:var(--madeira);color:#fff;padding:64px 0;text-align:left}
+.final .largura{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.final h2{font-size:clamp(30px,4.4vw,48px);max-width:680px}
+footer{background:var(--carvao);color:#bdbab4;font-size:14px;padding:26px 0 90px}
+footer .largura{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+.flutuante{position:fixed;right:18px;bottom:18px;width:60px;height:60px;border-radius:50%;background:var(--verde);color:#fff;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.3);z-index:20}
+.flutuante .ico{width:32px;height:32px}
+
+@media (min-width:901px){.setlist{position:sticky;top:28px}}
+@media (max-width:900px){
+  .publico .largura{grid-template-columns:repeat(3,1fr)}
+  .publico h2{grid-column:1/-1}
+  .repertorio .largura,.marcar .largura,.hora .largura,.onde .largura{grid-template-columns:1fr;gap:40px}
+  .disco-capa{max-width:360px}
+  .setlist{max-width:520px}
+}
+@media (max-width:640px){
+  .largura{padding:0 16px}
+  .hero{min-height:88vh}
+  .cartaz-topo{font-size:13px}
+  .publico .largura{grid-template-columns:1fr;gap:20px}
+  .repertorio,.marcar,.cenas,.onde{padding:64px 0}
+  .grade{grid-template-columns:1fr 1fr;grid-template-rows:200px 160px 160px}
+  .grade .alta{grid-row:span 1;grid-column:span 2}
+  .grade .larga{grid-column:span 2}
+  .setlist{padding:40px 22px 26px;transform:rotate(.8deg)}
+  .setlist ol{font-size:23px}
+  .onde iframe{height:300px}
+  .acoes .botao{width:100%}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para a Barbearia Visconde. Ainda não é o site oficial.</div>
+
+<header class="hero">
+  <img src="fotos/hero.jpg" alt="Salão de barbearia com cadeiras de couro preto e luminárias pendentes" fetchpriority="high">
+  <div class="largura">
+    <div class="cartaz-topo"><span>Leme, Barra Funda</span><span>Segunda a sábado</span></div>
+    <h1><span class="fino">Em cartaz na Barra Funda</span><span>Barbearia</span><span>Visconde</span></h1>
+    <p class="chamada">Corte e barba só com hora marcada: você chega, senta na cadeira e não pega fila. Escolha o dia e mande a mensagem.</p>
+    <div class="acoes">
+      <a class="botao botao-zap" href="https://wa.me/5519999742316?text=Ol%C3%A1!%20Vi%20o%20site%20e%20quero%20marcar%20um%20hor%C3%A1rio%20na%20Barbearia%20Visconde."><svg class="ico"><use href="#wa"/></svg>Marcar pelo WhatsApp</a>
+      <a class="botao botao-claro" href="#marcar">Montar meu horário</a>
+    </div>
+  </div>
+</header>
+<div class="faixa-listra" aria-hidden="true"></div>
+
+<section class="publico" aria-label="Avaliações">
+  <div class="largura">
+    <h2>Quem já sentou na cadeira volta</h2>
+    <div><span class="num">100%</span><span class="num-leg">recomendam no Facebook, em 5 avaliações</span></div>
+    <div><span class="num">4,9</span><span class="num-leg">de 5 no magicpin, com 13 notas</span></div>
+    <div><span class="num">637</span><span class="num-leg">seguidores na página do Facebook</span></div>
+  </div>
+</section>
+
+<section class="repertorio" id="servicos">
+  <div class="largura">
+    <div class="disco-capa" aria-hidden="true">
+      <div class="vinil"></div>
+      <div class="capa"><span>Visconde<br>ao vivo</span></div>
+    </div>
+    <div>
+      <h2>O repertório da casa</h2>
+      <p>Os serviços de sempre de uma barbearia, tocados um por vez e com tempo para cada cliente.</p>
+      <div class="lado">
+        <h3>Lado A, cabelo</h3>
+        <ul class="faixas">
+          <li><span class="n">A1</span><b>Corte</b><small>Na máquina, na tesoura ou nos dois, do social ao degradê.</small></li>
+          <li><span class="n">A2</span><b>Pezinho</b><small>Acabamento da nuca e do contorno entre um corte e outro.</small></li>
+        </ul>
+      </div>
+      <div class="lado">
+        <h3>Lado B, barba e detalhes</h3>
+        <ul class="faixas">
+          <li><span class="n">B1</span><b>Barba</b><small>Desenho, aparo e acabamento na navalha.</small></li>
+          <li><span class="n">B2</span><b>Sobrancelha</b><small>Limpeza discreta, sem exagero.</small></li>
+          <li><span class="n">B3</span><b>Combo corte e barba</b><small>O disco inteiro, de uma vez só.</small></li>
+        </ul>
+      </div>
+      <p class="exemplo">Texto de exemplo. No site final entram os serviços, a duração e os preços da Barbearia Visconde.</p>
+    </div>
+  </div>
+</section>
+
+<section class="marcar" id="marcar">
+  <div class="largura">
+    <div>
+      <h2>Monte o setlist do seu horário</h2>
+      <p class="intro">Escolha o que vai fazer, o dia e o período. A gente escreve a mensagem e você só confirma no WhatsApp.</p>
+      <form id="form" onsubmit="return false">
+        <fieldset>
+          <legend>O que vai fazer?</legend>
+          <div class="opcoes" id="servicos-op">
+            <input type="checkbox" id="s1" value="Corte"><label for="s1">Corte</label>
+            <input type="checkbox" id="s2" value="Barba"><label for="s2">Barba</label>
+            <input type="checkbox" id="s3" value="Combo corte e barba"><label for="s3">Combo corte e barba</label>
+            <input type="checkbox" id="s4" value="Pezinho"><label for="s4">Pezinho</label>
+            <input type="checkbox" id="s5" value="Sobrancelha"><label for="s5">Sobrancelha</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Qual dia?</legend>
+          <div class="opcoes" id="dias-op"></div>
+        </fieldset>
+        <fieldset>
+          <legend>Qual período?</legend>
+          <div class="opcoes">
+            <input type="radio" name="per" id="p1" value="de manhã"><label for="p1">Manhã</label>
+            <input type="radio" name="per" id="p2" value="à tarde"><label for="p2">Tarde</label>
+            <input type="radio" name="per" id="p3" value="no horário que tiver" checked><label for="p3">Tanto faz</label>
+          </div>
+        </fieldset>
+        <label for="nome" style="font-weight:700;display:block;margin-bottom:8px">Seu nome <span style="font-weight:400">(opcional)</span></label>
+        <input class="campo-nome" id="nome" autocomplete="given-name" placeholder="Como te chamam?">
+      </form>
+    </div>
+    <div class="setlist" aria-live="polite">
+      <p class="cab">Visconde<br>setlist</p>
+      <p class="data" id="sl-data">Escolha o dia</p>
+      <ol id="sl-lista"></ol>
+      <p class="vazio" id="sl-vazio">Marque ao menos um serviço</p>
+      <p class="rodape" id="sl-rodape"></p>
+      <a class="botao botao-zap" id="sl-enviar" href="https://wa.me/5519999742316"><svg class="ico"><use href="#wa"/></svg>Mandar pelo WhatsApp</a>
+      <p class="obs">O horário exato é combinado na conversa. Atendimento só com hora marcada.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cenas" aria-labelledby="cenas-t">
+  <div class="largura">
+    <div class="topo-sec">
+      <h2 id="cenas-t">Bastidores</h2>
+      <p class="exemplo">Fotos ilustrativas. No site final entram fotos da Barbearia Visconde.</p>
+    </div>
+    <div class="grade">
+      <figure class="alta"><img src="fotos/degrade.jpg" alt="Barbeiro fazendo degradê com tesoura e pente" loading="lazy"></figure>
+      <figure><img src="fotos/navalha.jpg" alt="Mão segurando uma navalha" loading="lazy"></figure>
+      <figure><img src="fotos/salao.jpg" alt="Cadeira de barbeiro antiga em salão" loading="lazy"></figure>
+      <figure class="larga"><img src="fotos/tesoura.jpg" alt="Barbeiro cortando o cabelo de um cliente" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="hora" aria-labelledby="hora-t">
+  <div class="largura">
+    <div>
+      <h2 id="hora-t">Aqui é com hora marcada</h2>
+      <p>A Barbearia Visconde atende de segunda a sábado, só com horário combinado antes. Não tem horário fixo de porta aberta: o dia é montado pela agenda.</p>
+      <div class="dias" aria-label="Dias de atendimento">
+        <span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span><span class="off" aria-label="Domingo, sem atendimento">Dom</span>
+      </div>
+    </div>
+    <ol class="passos">
+      <li><div><b>Mande uma mensagem</b><span>Diga o serviço e o dia que prefere, pelo WhatsApp (19) 99974-2316.</span></div></li>
+      <li><div><b>Combine o horário</b><span>A resposta vem com o horário livre mais perto do que você pediu.</span></div></li>
+      <li><div><b>Chegue e sente</b><span>Seu horário fica reservado para você, sem fila na porta.</span></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="onde" id="onde" aria-labelledby="onde-t">
+  <div class="largura">
+    <div>
+      <h2 id="onde-t">Onde fica</h2>
+      <address>Bairro Barra Funda<br>Leme - SP</address>
+      <p class="exemplo">No site final entra o endereço completo, com rua e número.</p>
+      <p>Atendimento com hora marcada, de segunda a sábado. Combine pelo WhatsApp.</p>
+      <div class="acoes">
+        <a class="botao botao-escuro" href="https://www.google.com/maps/dir/?api=1&amp;destination=Barra%20Funda%2C%20Leme%20-%20SP" target="_blank" rel="noopener">Traçar rota</a>
+        <a class="botao botao-zap" href="https://wa.me/5519999742316?text=Ol%C3%A1!%20Vi%20o%20site%20da%20Barbearia%20Visconde.%20Qual%20o%20endere%C3%A7o%20certinho%3F"><svg class="ico"><use href="#wa"/></svg>Pedir o endereço</a>
+      </div>
+    </div>
+    <iframe src="https://www.google.com/maps?q=Barra%20Funda%2C%20Leme%20-%20SP&amp;output=embed" loading="lazy" title="Mapa do bairro Barra Funda, em Leme - SP" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<section class="final">
+  <div class="largura">
+    <h2>Seu próximo corte já pode estar na agenda</h2>
+    <a class="botao botao-zap" href="https://wa.me/5519999742316?text=Ol%C3%A1!%20Vi%20o%20site%20e%20quero%20marcar%20um%20hor%C3%A1rio%20na%20Barbearia%20Visconde."><svg class="ico"><use href="#wa"/></svg>Marcar pelo WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <div class="largura">
+    <span>Barbearia Visconde, Barra Funda, Leme - SP. WhatsApp (19) 99974-2316.</span>
+    <span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span>
+  </div>
+</footer>
+
+<a class="flutuante" href="https://wa.me/5519999742316?text=Ol%C3%A1!%20Vi%20o%20site%20e%20quero%20marcar%20um%20hor%C3%A1rio%20na%20Barbearia%20Visconde." aria-label="Falar no WhatsApp"><svg class="ico"><use href="#wa"/></svg></a>
+
+<script>
+(function(){
+  var FONE='5519999742316';
+  var nomes=['domingo','segunda','terça','quarta','quinta','sexta','sábado'];
+  var curtos=['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
+  // hoje no fuso de Leme
+  var p=new Intl.DateTimeFormat('en-CA',{timeZone:'America/Sao_Paulo',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date()).split('-');
+  var hoje=new Date(+p[0],+p[1]-1,+p[2]);
+  var caixa=document.getElementById('dias-op');
+  var datas=[];
+  for(var i=0;datas.length<6;i++){
+    var d=new Date(hoje);d.setDate(hoje.getDate()+i);
+    if(d.getDay()===0)continue;
+    datas.push(d);
+  }
+  datas.forEach(function(d,k){
+    var dd=('0'+d.getDate()).slice(-2)+'/'+('0'+(d.getMonth()+1)).slice(-2);
+    var rot=(k===0&&d.getTime()===hoje.getTime())?'Hoje':curtos[d.getDay()];
+    var id='d'+k;
+    var inp=document.createElement('input');inp.type='radio';inp.name='dia';inp.id=id;
+    inp.value=(rot==='Hoje'?'hoje, ':'')+nomes[d.getDay()]+' ('+dd+')';
+    var lb=document.createElement('label');lb.htmlFor=id;lb.textContent=rot+' '+dd;
+    caixa.appendChild(inp);caixa.appendChild(lb);
+  });
+  var form=document.getElementById('form');
+  var lista=document.getElementById('sl-lista');
+  var antes=[];
+  function atualizar(){
+    var serv=[].slice.call(document.querySelectorAll('#servicos-op input:checked')).map(function(x){return x.value});
+    var dia=form.querySelector('input[name=dia]:checked');
+    var per=form.querySelector('input[name=per]:checked').value;
+    var nome=document.getElementById('nome').value.trim();
+    document.getElementById('sl-data').textContent=dia?dia.value:'Escolha o dia';
+    lista.innerHTML='';
+    serv.forEach(function(s){var li=document.createElement('li');li.textContent=s;if(antes.indexOf(s)<0)li.className='novo';lista.appendChild(li)});
+    antes=serv;
+    document.getElementById('sl-vazio').style.display=serv.length?'none':'block';
+    document.getElementById('sl-rodape').textContent='Período: '+(per==='de manhã'?'manhã':per==='à tarde'?'tarde':'tanto faz')+(nome?' • '+nome:'');
+    var msg='Olá! Vi o site e quero marcar um horário na Barbearia Visconde.';
+    if(nome)msg+=' Meu nome é '+nome+'.';
+    msg+='\nServiço: '+(serv.length?serv.join(' + '):'ainda vou decidir');
+    msg+='\nDia: '+(dia?dia.value:'o primeiro que tiver');
+    msg+='\nPeríodo: '+per;
+    msg+='\nQual horário você tem?';
+    document.getElementById('sl-enviar').href='https://wa.me/'+FONE+'?text='+encodeURIComponent(msg);
+  }
+  form.addEventListener('change',atualizar);
+  form.addEventListener('input',atualizar);
+  atualizar();
+})();
+</script>
+</body>
+</html>
