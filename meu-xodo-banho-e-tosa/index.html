@@ -85,14 +85,23 @@ section{padding:104px 0}
 .pedido .intro{color:var(--tinta);font-weight:600}
 .pedido .grade{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:start;margin-top:40px}
 .palco{background:#fff;border:3px solid var(--tinta);border-radius:22px;box-shadow:8px 8px 0 var(--tinta);padding:18px 18px 22px}
-.palco svg{width:100%;height:auto;max-height:470px;display:block}
-.parte{cursor:pointer}
-.parte .pele{fill:#fff;transition:fill .18s}
-.parte:hover .pele{fill:var(--rosinha)}
-.parte.on .pele{fill:var(--patinho)}
-.dog .tr{stroke:var(--tinta);stroke-width:6;stroke-linejoin:round;stroke-linecap:round}
-.bolha{opacity:0;transition:opacity .2s}
-.parte.on .bolha{opacity:1}
+/* Cachorro 3D (three.js). Se o WebGL falhar, entra a foto. */
+.cena3d{position:relative;width:100%;aspect-ratio:1/.9;max-height:480px;border-radius:14px;overflow:hidden;
+  background:radial-gradient(ellipse 70% 60% at 50% 42%,#fff 0,#FDEFF5 45%,var(--rosinha) 72%,#F7D3E3 100%)}
+.cena3d canvas{position:absolute;inset:0;width:100%!important;height:100%!important;display:block;outline:none;cursor:grab}
+.cena3d canvas:active{cursor:grabbing}
+.cena3d.aponta canvas{cursor:pointer}
+.cena3d .reserva{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 40%;display:none}
+.cena3d.falhou .reserva{display:block}
+.cena3d.falhou canvas,.cena3d.falhou .rotulo{display:none}
+.cena3d .carregando{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-weight:700;color:var(--cinza);font-size:15px;display:flex;align-items:center;gap:10px;pointer-events:none}
+.cena3d .carregando i{width:18px;height:18px;border-radius:50%;border:3px solid var(--chiclete);border-top-color:var(--tinta);animation:roda .8s linear infinite}
+@keyframes roda{to{transform:rotate(360deg)}}
+.cena3d.pronto .carregando,.cena3d.falhou .carregando{display:none}
+.dica .so-foto,.cena3d.falhou~.dica .so3d{display:none}
+.cena3d.falhou~.dica .so-foto{display:inline}
+.cena3d .rotulo{position:absolute;left:0;top:0;pointer-events:none;font-size:13px;font-weight:800;background:var(--tinta);color:#fff;border-radius:8px;padding:3px 9px;white-space:nowrap;opacity:0;transition:opacity .12s;transform:translate(-50%,-140%)}
+.cena3d .rotulo.ver{opacity:1}
 .dica{text-align:center;font-weight:600;margin:6px 0 14px;color:var(--cinza)}
 .chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
 .chip{font:inherit;font-weight:700;font-size:15px;background:#fff;color:var(--tinta);border:2px solid var(--tinta);border-radius:10px;padding:8px 13px;cursor:pointer}
@@ -249,55 +258,15 @@ footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wr
 <section class="pedido" id="pedido">
   <div class="largura">
     <h2>Onde o seu xodó precisa de carinho?</h2>
-    <p class="intro">Toque nas partes do cachorrinho para escolher os cuidados. O pedido vai pronto para o WhatsApp do Meu Xodó.</p>
+    <p class="intro">Gire o cachorrinho e toque nele para escolher os cuidados. Cada cuidado aparece no xodó, e o pedido vai pronto para o WhatsApp do Meu Xodó.</p>
     <div class="grade">
       <div class="palco">
-        <svg class="dog" viewBox="0 0 420 470" aria-hidden="true">
-          <!-- corpo e rabo: banho -->
-          <g class="parte" data-s="banho">
-            <path class="pele tr" d="M300 372c52-6 78-48 70-98 26 34 28 92-14 120-16 10-38 14-58 10z"/>
-            <path class="pele tr" d="M112 430c-14-96 18-178 98-182 80 4 112 86 98 182z"/>
-            <ellipse class="pele tr" cx="126" cy="408" rx="42" ry="34"/>
-            <ellipse class="pele tr" cx="294" cy="408" rx="42" ry="34"/>
-            <rect class="pele tr" x="166" y="318" width="36" height="104" rx="18"/>
-            <rect class="pele tr" x="218" y="318" width="36" height="104" rx="18"/>
-            <g class="bolha" fill="#fff" stroke="#22171D" stroke-width="3"><circle cx="150" cy="300" r="12"/><circle cx="170" cy="282" r="8"/><circle cx="276" cy="330" r="10"/><circle cx="352" cy="300" r="7"/></g>
-          </g>
-          <!-- patas: unhas -->
-          <g class="parte" data-s="unhas">
-            <ellipse class="pele tr" cx="182" cy="428" rx="30" ry="18"/>
-            <ellipse class="pele tr" cx="238" cy="428" rx="30" ry="18"/>
-            <path class="tr" fill="none" d="M174 434v8M190 434v8M230 434v8M246 434v8" stroke-width="4"/>
-          </g>
-          <!-- lenço: perfume e laço -->
-          <g class="parte" data-s="perfume">
-            <path class="pele tr" d="M132 246q78 30 156 0l-72 76q-6 6-12 0z"/>
-            <circle cx="180" cy="266" r="5" fill="#E881B0"/><circle cx="214" cy="286" r="5" fill="#E881B0"/><circle cx="244" cy="264" r="5" fill="#E881B0"/>
-          </g>
-          <!-- cabeça e topete: tosa -->
-          <g class="parte" data-s="tosa">
-            <circle class="pele tr" cx="210" cy="166" r="90"/>
-            <path class="pele tr" d="M168 88c2-30 30-38 40-14 8-28 42-24 42 6 18-8 30 8 20 22"/>
-          </g>
-          <!-- orelhas: ouvidos -->
-          <g class="parte" data-s="ouvidos">
-            <path class="pele tr" d="M140 108c-46-4-70 60-56 120 8 30 40 30 50 4 10-26 16-74 6-124z"/>
-            <path class="pele tr" d="M280 108c46-4 70 60 56 120-8 30-40 30-50 4-10-26-16-74-6-124z"/>
-          </g>
-          <!-- rosto (não clicável) -->
-          <g pointer-events="none">
-            <circle cx="178" cy="156" r="11" fill="#22171D"/><circle cx="242" cy="156" r="11" fill="#22171D"/>
-            <circle cx="181" cy="152" r="3.5" fill="#fff"/><circle cx="245" cy="152" r="3.5" fill="#fff"/>
-          </g>
-          <!-- focinho e boca: dentes -->
-          <g class="parte" data-s="dentes">
-            <ellipse class="pele tr" cx="210" cy="204" rx="42" ry="30"/>
-            <path d="M198 220q12 34 26 0z" fill="#C8146B" stroke="#22171D" stroke-width="4" stroke-linejoin="round"/>
-            <path class="tr" fill="none" d="M186 214q24 16 48 0"/>
-            <ellipse cx="210" cy="192" rx="15" ry="10" fill="#22171D"/>
-          </g>
-        </svg>
-        <p class="dica">Ou escolha por aqui:</p>
+        <div class="cena3d" id="cena3d" role="img" aria-label="Cachorrinho em 3D. Os cuidados escolhidos aparecem nele como acessórios.">
+          <img class="reserva" src="fotos/hero.jpg" alt="Cachorrinho de pelo claro com lenço no pescoço" loading="lazy">
+          <p class="carregando"><i></i>Chamando o xodó…</p>
+          <span class="rotulo" id="rotulo3d"></span>
+        </div>
+        <p class="dica"><span class="so3d">Arraste para girar e toque no cachorrinho, ou escolha </span><span class="so-foto">Escolha os cuidados </span>por aqui:</p>
         <div class="chips" id="chips"></div>
       </div>
 
@@ -395,7 +364,7 @@ footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wr
 </main>
 
 <footer>
-  <div class="largura"><span>Meu Xodó Banho e Tosa, Vila Rezende, Piracicaba – SP</span><span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span></div>
+  <div class="largura"><span>Meu Xodó Banho e Tosa, Vila Rezende, Piracicaba – SP</span><span>Fotos ilustrativas: Unsplash. Cachorro 3D: “Shiba Inu”, de Quaternius (CC0, via Poly Pizza). Modelo feito por Daniel.</span></div>
 </footer>
 <a class="flutuante" href="https://wa.me/5519998884433?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20marcar%20um%20banho%20para%20o%20meu%20pet." rel="noopener" aria-label="Chamar o Meu Xodó no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
 
@@ -412,6 +381,7 @@ footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wr
     ['dentes', 'Dentes', 'escovação dos dentes'],
     ['unhas', 'Unhas', 'corte de unhas'],
     ['perfume', 'Perfume e lacinho', 'perfume e lacinho'],
+    ['lenco', 'Lencinho', 'lencinho no pescoço'],
   ];
   const escolha = new Set(['banho']);
   const chips = $('chips');
@@ -422,12 +392,12 @@ footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wr
     b.addEventListener('click', () => alternar(id));
     chips.appendChild(b);
   });
-  document.querySelectorAll('.parte').forEach((g) => g.addEventListener('click', () => alternar(g.dataset.s)));
-  function alternar(id) { escolha.has(id) ? escolha.delete(id) : escolha.add(id); atualizar(); }
+  function alternar(id) { if (!CUIDADOS.some((c) => c[0] === id)) return; escolha.has(id) ? escolha.delete(id) : escolha.add(id); atualizar(); }
+  // Ponte com o cachorro 3D (script de módulo mais abaixo)
+  window.xodoPedido = { alternar, tem: (id) => escolha.has(id), rotulo: (id) => (CUIDADOS.find((c) => c[0] === id) || [])[1] || '' };
 
   function lista(itens) { return itens.length < 2 ? itens.join('') : itens.slice(0, -1).join(', ') + ' e ' + itens[itens.length - 1]; }
   function atualizar() {
-    document.querySelectorAll('.parte').forEach((g) => g.classList.toggle('on', escolha.has(g.dataset.s)));
     chips.querySelectorAll('.chip').forEach((b) => { const on = escolha.has(b.dataset.s); b.setAttribute('aria-pressed', on); b.firstChild.textContent = on ? '✓' : '+'; });
     const itens = CUIDADOS.filter(([id]) => escolha.has(id)).map((c) => c[2]);
     const nome = $('nome').value.trim();
@@ -441,6 +411,7 @@ footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wr
     const pedido = itens.length ? lista(itens) : 'banho e tosa';
     const msg = `Olá! Vim pelo site. Quero marcar ${pedido} para ${quem} (porte ${porte}). Prefiro ${periodo}. Qual o valor e os horários disponíveis?`;
     $('enviar').href = `https://wa.me/${FONE}?text=` + encodeURIComponent(msg);
+    document.dispatchEvent(new CustomEvent('xodo:cuidados', { detail: [...escolha] }));
   }
   $('ficha').addEventListener('input', atualizar);
   $('ficha').addEventListener('change', atualizar);
@@ -458,6 +429,392 @@ footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wr
   else txt = 'Fim de semana: consulte pelo WhatsApp. Segunda abre às 8h';
   [$('agora'), $('status-topo')].forEach((el) => { el.querySelector('span').textContent = txt; el.classList.toggle('aberto', aberto); });
 })();
+</script>
+<script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"}}</script>
+<script type="module">
+// ----- Cachorro 3D com acessórios (three.js). Modelo: "Shiba Inu", Quaternius, CC0 -----
+const palco = document.getElementById('cena3d');
+const rotulo = document.getElementById('rotulo3d');
+const falhar = (e) => { if (e) console.warn('Cachorro 3D indisponível, usando a foto.', e); palco.classList.add('falhou'); };
+const temWebGL = () => { try { const c = document.createElement('canvas'); return !!(window.WebGLRenderingContext && (c.getContext('webgl2') || c.getContext('webgl'))); } catch (e) { return false; } };
+
+if (!temWebGL() || !window.xodoPedido) falhar();
+else {
+  const io = new IntersectionObserver((ents) => {
+    if (ents.some((e) => e.isIntersecting)) { io.disconnect(); iniciar().catch(falhar); }
+  }, { rootMargin: '350px 0px' });
+  io.observe(palco);
+}
+
+async function iniciar() {
+  const [THREE, { GLTFLoader }, { OrbitControls }, { RoomEnvironment }] = await Promise.all([
+    import('three'),
+    import('three/addons/loaders/GLTFLoader.js'),
+    import('three/addons/controls/OrbitControls.js'),
+    import('three/addons/environments/RoomEnvironment.js'),
+  ]);
+  const reduz = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const V = (x = 0, y = 0, z = 0) => new THREE.Vector3(x, y, z);
+  const COR = { chiclete: 0xE881B0, magenta: 0xC8146B, patinho: 0xFFD23F, tinta: 0x22171D, rosa: 0xF05A9C };
+
+  // ---------- cena ----------
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'low-power' });
+  renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 2));
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.1;
+  renderer.setClearColor(0x000000, 0);
+  const scene = new THREE.Scene();
+  const pmrem = new THREE.PMREMGenerator(renderer);
+  scene.environment = pmrem.fromScene(new RoomEnvironment(renderer), 0.04).texture;
+  scene.add(new THREE.HemisphereLight(0xffffff, 0xf6c3d8, 0.7));
+  const sol = new THREE.DirectionalLight(0xfff4ea, 1.5); sol.position.set(2, 4, 3); scene.add(sol);
+  const camera = new THREE.PerspectiveCamera(30, 1, 0.05, 50);
+
+  const gltf = await new GLTFLoader().loadAsync('3d/shiba-inu.glb');
+  const modelo = gltf.scene;
+  const pivo = new THREE.Group(); pivo.add(modelo); scene.add(pivo);
+  const malhas = [];
+  modelo.traverse((o) => { if (o.isSkinnedMesh) malhas.push(o); if (o.isMesh) o.frustumCulled = false; });
+  if (!malhas.length) throw new Error('modelo sem malha');
+  const nomeLimpo = (n) => n.replace(/[\[\]\.:\/]/g, '');
+  const osso = (n) => modelo.getObjectByName(nomeLimpo(n));
+
+  // cada vértice usado: malha, índice, osso dominante e material (o modelo vem em 6 partes, uma por material)
+  const usados = []; // {m, i, dono, mat}
+  const donoPorMalha = new Map();
+  for (const m of malhas) {
+    const g = m.geometry, sI = g.attributes.skinIndex, sW = g.attributes.skinWeight, ossos = m.skeleton.bones;
+    const dono = new Array(g.attributes.position.count);
+    for (let i = 0; i < dono.length; i++) {
+      let mx = 0, k = 0; for (let j = 0; j < 4; j++) { const w = sW.getComponent(i, j); if (w > mx) { mx = w; k = sI.getComponent(i, j); } }
+      dono[i] = ossos[k] ? ossos[k].name : '';
+    }
+    donoPorMalha.set(m, dono);
+    const idx = g.index ? new Set(g.index.array) : dono.map((_, i) => i);
+    for (const i of idx) usados.push({ m, i, dono: dono[i], mat: m.material.name || '' });
+  }
+  const dono = usados.map((u) => u.dono);
+  function amostrar() {
+    scene.updateMatrixWorld(true); malhas.forEach((m) => m.skeleton.update());
+    const v = V();
+    return usados.map(({ m, i }) => { m.getVertexPosition(i, v); m.applyBoneTransform(i, v); return v.clone().applyMatrix4(m.matrixWorld); });
+  }
+  // vira o cachorro para a frente (+Z), normaliza a altura em 1 e apoia no chão
+  scene.updateMatrixWorld(true);
+  const pCab = osso('Head').getWorldPosition(V()), pRabo = osso('Tail1').getWorldPosition(V());
+  pivo.rotation.y = -Math.atan2(pCab.x - pRabo.x, pCab.z - pRabo.z);
+  let vs = amostrar(); let caixa = new THREE.Box3().setFromPoints(vs);
+  pivo.scale.setScalar(1 / (caixa.max.y - caixa.min.y));
+  vs = amostrar(); caixa = new THREE.Box3().setFromPoints(vs);
+  const c0 = caixa.getCenter(V());
+  pivo.position.set(-c0.x, -caixa.min.y, -c0.z);
+  vs = amostrar(); caixa = new THREE.Box3().setFromPoints(vs);
+
+  // pontos de referência a partir dos vértices
+  const de = (f) => vs.filter((_, i) => f(dono[i]));
+  const media = (a) => a.reduce((s, p) => s.add(p), V()).divideScalar(Math.max(1, a.length));
+  const maxPor = (a, eixo) => a.reduce((b, p) => (p[eixo] > b[eixo] ? p : b), a[0]);
+  const vNariz = vs.filter((_, i) => usados[i].mat === 'Black');
+  const focinho = maxPor(vNariz.length ? vNariz : de((n) => n === 'Head'), 'z').clone();
+  const pOssoCab = osso('Head').getWorldPosition(V());
+  const vCab = vs.filter((p, i) => !dono[i].startsWith('Ear') && p.distanceTo(pOssoCab) < 0.2 && p.y > pOssoCab.y - 0.12);
+  const centroCab = media(vCab);
+  const topoCab = maxPor(vCab.filter((p) => Math.abs(p.x - centroCab.x) < 0.04), 'y').clone();
+  const orelha = (lado) => { const a = de((n) => n.startsWith('Ear') && n.endsWith(lado)); return { centro: media(a), ponta: maxPor(a, 'y').clone() }; };
+  const orelhas = [orelha('L'), orelha('R')];
+  const vPesc = de((n) => n.startsWith('Neck'));
+  const centroPesc = media(vPesc);
+  const centroCorpo = media(vs);
+  const tamCab = centroCab.distanceTo(focinho);
+  // pelagem shiba mais clarinha e quente, combinando com o site
+  modelo.traverse((o) => { if (!o.isMesh) return; [].concat(o.material).forEach((m) => {
+    if (m.name === 'Main') m.color.set(0xD98A4E); else if (m.name === 'Main_Light') m.color.set(0xFFF3E6);
+    m.roughness = Math.max(m.roughness ?? 1, 0.75); m.metalness = 0; }); });
+
+  // pose de descanso dos ossos (para os acessórios acompanharem a animação)
+  const presos = [];
+  function prender(obj, nomeOsso, girar = true) {
+    const b = osso(nomeOsso); if (!b) { scene.add(obj); return obj; }
+    const p0 = b.getWorldPosition(V()), q0 = b.getWorldQuaternion(new THREE.Quaternion());
+    presos.push({ obj, b, off: obj.position.clone().sub(p0), qBase: obj.quaternion.clone(), q0inv: q0.clone().invert(), girar });
+    scene.add(obj); return obj;
+  }
+  const _p = V(), _q = new THREE.Quaternion();
+  function seguir() {
+    for (const s of presos) {
+      s.b.getWorldPosition(_p); s.b.getWorldQuaternion(_q); _q.multiply(s.q0inv);
+      s.obj.position.copy(s.off).applyQuaternion(_q).add(_p);
+      if (s.girar) s.obj.quaternion.copy(_q).multiply(s.qBase);
+    }
+  }
+
+  // ---------- texturas desenhadas em canvas ----------
+  function tex(w, h, desenho) { const c = document.createElement('canvas'); c.width = w; c.height = h; desenho(c.getContext('2d'), w, h); const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; return t; }
+  const texSombra = tex(128, 128, (g, w) => { const r = g.createRadialGradient(w / 2, w / 2, 0, w / 2, w / 2, w / 2); r.addColorStop(0, 'rgba(34,23,29,.42)'); r.addColorStop(.55, 'rgba(34,23,29,.16)'); r.addColorStop(1, 'rgba(34,23,29,0)'); g.fillStyle = r; g.fillRect(0, 0, w, w); });
+  const texBrilho = tex(128, 128, (g, w) => {
+    const c = w / 2, r = g.createRadialGradient(c, c, 0, c, c, c); r.addColorStop(0, 'rgba(255,255,255,1)'); r.addColorStop(.18, 'rgba(255,240,170,.95)'); r.addColorStop(.45, 'rgba(255,210,63,.35)'); r.addColorStop(1, 'rgba(255,210,63,0)'); g.fillStyle = r; g.fillRect(0, 0, w, w);
+    g.fillStyle = '#fff'; g.beginPath(); g.moveTo(c, 6); g.quadraticCurveTo(c + 6, c - 6, w - 6, c); g.quadraticCurveTo(c + 6, c + 6, c, w - 6); g.quadraticCurveTo(c - 6, c + 6, 6, c); g.quadraticCurveTo(c - 6, c - 6, c, 6); g.fill();
+  });
+  const texAnel = tex(128, 128, (g, w) => {
+    const c = w / 2, r = g.createRadialGradient(c, c, 22, c, c, 62); r.addColorStop(0, 'rgba(255,210,63,0)'); r.addColorStop(.55, 'rgba(255,210,63,.5)'); r.addColorStop(1, 'rgba(255,210,63,0)'); g.fillStyle = r; g.fillRect(0, 0, w, w);
+    g.lineWidth = 7; g.strokeStyle = '#FFD23F'; g.beginPath(); g.arc(c, c, 40, 0, Math.PI * 2); g.stroke();
+    g.lineWidth = 2.5; g.strokeStyle = '#ffffff'; g.beginPath(); g.arc(c, c, 40, 0, Math.PI * 2); g.stroke();
+  });
+  const texLenco = tex(128, 128, (g, w) => { g.fillStyle = '#E881B0'; g.fillRect(0, 0, w, w); g.fillStyle = '#FFF9FB'; for (const [x, y] of [[32, 32], [96, 96], [96, 32], [32, 96], [64, 64], [0, 64], [64, 0], [128, 64], [64, 128]]) { g.beginPath(); g.arc(x, y, 9, 0, Math.PI * 2); g.fill(); } });
+  texLenco.wrapS = texLenco.wrapT = THREE.RepeatWrapping;
+
+  // sombra suave no chão
+  const sombra = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), new THREE.MeshBasicMaterial({ map: texSombra, transparent: true, depthWrite: false }));
+  sombra.rotation.x = -Math.PI / 2; sombra.position.y = 0.002;
+  sombra.scale.set((caixa.max.x - caixa.min.x) * 1.9, (caixa.max.z - caixa.min.z) * 1.35, 1);
+  sombra.position.z = (caixa.max.z + caixa.min.z) / 2;
+  scene.add(sombra);
+
+  // ---------- acessórios ----------
+  const ACESS = {}; // id -> {grupo, t, anima(t, dt)}
+  const novoGrupo = (id) => { const g = new THREE.Group(); g.name = 'acc-' + id; g.scale.setScalar(0.0001); g.visible = false; ACESS[id] = { g, t: 0, partes: [], anima: null }; return g; };
+  const plastico = (cor, o = {}) => new THREE.MeshStandardMaterial({ color: cor, roughness: 0.42, metalness: 0, ...o });
+
+  // banho: bolhas de espuma subindo em volta do corpo
+  {
+    const g = novoGrupo('banho'); scene.add(g); g.position.copy(centroCorpo).setY(0);
+    const geo = new THREE.SphereGeometry(1, 24, 16);
+    const bolhas = [];
+    const rx = (caixa.max.x - caixa.min.x) * 0.62, rz = (caixa.max.z - caixa.min.z) * 0.55;
+    for (let i = 0; i < 16; i++) {
+      const mat = new THREE.MeshPhysicalMaterial({ color: 0xffffff, roughness: 0.05, metalness: 0, transparent: true, opacity: 0.38, iridescence: 1, iridescenceIOR: 1.3, clearcoat: 1, envMapIntensity: 1.6, depthWrite: false });
+      const b = new THREE.Mesh(geo, mat);
+      const a = (i / 16) * Math.PI * 2 + Math.random() * 0.3;
+      const r = 0.035 + Math.random() * 0.045;
+      b.userData = { a, r, x: Math.cos(a) * rx * (0.85 + Math.random() * 0.3), z: Math.sin(a) * rz * (0.85 + Math.random() * 0.3), fase: Math.random(), vel: 0.07 + Math.random() * 0.06 };
+      b.scale.setScalar(r); g.add(b); bolhas.push(b);
+    }
+    // um montinho de espuma nas costas
+    const espuma = new THREE.Group(); const mEsp = plastico(0xffffff, { roughness: 0.6 });
+    for (let i = 0; i < 7; i++) { const s = new THREE.Mesh(geo, mEsp); const k = 0.035 + Math.random() * 0.03; s.scale.setScalar(k); s.position.set((Math.random() - 0.5) * 0.12, Math.random() * 0.03, (Math.random() - 0.5) * 0.18); espuma.add(s); }
+    const costas = maxPor(de((n) => n.startsWith('Torso') || n === 'Back' || n === 'Body'), 'y');
+    espuma.position.copy(costas).sub(g.position).add(V(0, 0.01, 0));
+    g.add(espuma);
+    ACESS.banho.anima = (t) => {
+      for (const b of bolhas) {
+        const u = (t * b.userData.vel + b.userData.fase) % 1;
+        b.position.set(b.userData.x + Math.sin(t * 1.3 + b.userData.a) * 0.03, 0.08 + u * 1.05, b.userData.z);
+        b.material.opacity = 0.42 * Math.min(1, u * 6) * Math.min(1, (1 - u) * 4);
+      }
+    };
+  }
+
+  // tosa: brilhos piscando no pelo + uma tesourinha
+  {
+    const g = novoGrupo('tosa'); scene.add(g);
+    const pontos = [topoCab.clone().add(V(0.09, 0.02, 0.02)), centroCab.clone().add(V(-0.14, 0.05, 0.03)), centroCorpo.clone().add(V(0.17, 0.2, -0.1)), centroCorpo.clone().add(V(-0.16, 0.14, 0.12)), centroCorpo.clone().add(V(0.05, 0.3, -0.32)), centroCorpo.clone().add(V(0.2, -0.02, 0.2))];
+    const brilhos = pontos.map((p, i) => { const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: texBrilho, transparent: true, depthWrite: false })); s.position.copy(p); s.userData.fase = i * 1.1; g.add(s); return s; });
+    // tesoura
+    const tes = new THREE.Group(); const metal = new THREE.MeshStandardMaterial({ color: 0xdfe3ea, metalness: 1, roughness: 0.22 }); const cabo = plastico(COR.magenta);
+    for (const lado of [-1, 1]) {
+      const lamina = new THREE.Mesh(new THREE.ConeGeometry(0.022, 0.2, 4), metal); lamina.scale.set(1, 1, 0.35); lamina.position.set(0, 0.1, 0);
+      const aro = new THREE.Mesh(new THREE.TorusGeometry(0.033, 0.011, 10, 24), cabo); aro.position.set(0, -0.045, 0);
+      const perna = new THREE.Group(); perna.add(lamina, aro); perna.rotation.z = lado * 0.32; perna.position.z = lado * 0.006; tes.add(perna); perna.userData.lado = lado;
+    }
+    const pino = new THREE.Mesh(new THREE.SphereGeometry(0.012, 12, 8), metal); tes.add(pino);
+    const yTes = centroCorpo.y + 0.32; tes.position.copy(centroCorpo).add(V(0.2, 0.32, 0.1)); tes.rotation.set(0, 0.6, -0.9);
+    g.add(tes);
+    ACESS.tosa.porItem = true;
+    ACESS.tosa.anima = (t, k0) => {
+      brilhos.forEach((s) => { const k = 0.5 + 0.5 * Math.sin(t * 3 + s.userData.fase); s.scale.setScalar((0.05 + 0.08 * k) * k0); s.material.rotation = t * 0.6 + s.userData.fase; });
+      tes.children.forEach((p) => { if (p.userData.lado) p.rotation.z = p.userData.lado * (0.12 + 0.2 * Math.abs(Math.sin(t * 4))); });
+      tes.position.y = yTes + Math.sin(t * 1.6) * 0.015; tes.scale.setScalar(Math.max(0.0001, k0 * 0.7));
+    };
+  }
+
+  // perfume e lacinho: laço rosa no alto da cabeça
+  {
+    const g = novoGrupo('perfume');
+    const mLaco = plastico(COR.rosa, { roughness: 0.32 });
+    const mN = plastico(COR.magenta);
+    const lobo = new THREE.SphereGeometry(1, 24, 16);
+    for (const lado of [-1, 1]) {
+      const l = new THREE.Mesh(lobo, mLaco); l.scale.set(0.06, 0.04, 0.022); l.position.set(lado * 0.055, 0.008, 0); l.rotation.z = lado * 0.32; g.add(l);
+      const fita = new THREE.Mesh(new THREE.BoxGeometry(0.022, 0.06, 0.008), mN); fita.position.set(lado * 0.02, -0.035, 0.004); fita.rotation.z = lado * 0.45; g.add(fita);
+    }
+    const no = new THREE.Mesh(new THREE.SphereGeometry(0.022, 16, 12), mN); no.scale.set(1, 1, 0.75); g.add(no);
+    // gotinhas de perfume
+    const gotas = []; const mG = new THREE.MeshPhysicalMaterial({ color: 0xffd9ea, transparent: true, opacity: 0.8, roughness: 0.05, clearcoat: 1 });
+    for (let i = 0; i < 4; i++) { const d = new THREE.Mesh(new THREE.SphereGeometry(0.009, 10, 8), mG); d.userData.f = i / 4; g.add(d); gotas.push(d); }
+    g.position.copy(topoCab).add(V(0, 0.012, 0.0));
+    g.rotation.x = -0.25;
+    prender(g, 'Head');
+    ACESS.perfume.anima = (t) => { gotas.forEach((d) => { const u = (t * 0.35 + d.userData.f) % 1; d.position.set(Math.sin(u * 9 + d.userData.f * 6) * 0.06, 0.03 + u * 0.14, 0.01); d.scale.setScalar(Math.sin(u * Math.PI)); }); };
+  }
+
+  // lencinho: bandana triangular no pescoço
+  {
+    const g = novoGrupo('lenco');
+    const eixo = osso('Head').getWorldPosition(V()).sub(osso('Neck1').getWorldPosition(V())).normalize();
+    // raio do pescoço medido nos vértices
+    const pN2 = osso('Neck2').getWorldPosition(V());
+    const fatia = vs.filter((p) => Math.abs(p.clone().sub(pN2).dot(eixo)) < 0.03 && p.distanceTo(pN2) < 0.25);
+    const centroGola = media(fatia);
+    const ds = fatia.map((p) => { const d = p.clone().sub(centroGola); return d.sub(eixo.clone().multiplyScalar(d.dot(eixo))).length(); }).sort((a, b) => a - b);
+    const raio = ds[Math.floor(ds.length * 0.5)] * 0.97;
+    const mL = new THREE.MeshStandardMaterial({ map: texLenco, roughness: 0.7, side: THREE.DoubleSide });
+    const gola = new THREE.Mesh(new THREE.TorusGeometry(raio * 0.98, raio * 0.1, 12, 40), plastico(COR.magenta, { roughness: 0.6 }));
+    g.add(gola);
+    // triângulo levemente curvo, caindo na frente do peito
+    const L = raio * 1.9, A = raio * 1.7, seg = 12;
+    const geo = new THREE.BufferGeometry(); const P = [], U = [], I = [];
+    for (let r = 0; r <= seg; r++) {
+      const fy = r / seg, larg = (1 - fy) * L;
+      for (let c = 0; c <= seg; c++) {
+        const fx = c / seg - 0.5, x = fx * larg, ang = x / raio;
+        P.push(Math.sin(ang) * raio * 1.08, -fy * A, Math.cos(ang) * raio * 1.08 + fy * raio * 0.25 - Math.abs(fx) * raio * 0.1);
+        U.push(x * 6, fy * A * 6);
+      }
+    }
+    for (let r = 0; r < seg; r++) for (let c = 0; c < seg; c++) { const a = r * (seg + 1) + c, b = a + 1, d = a + seg + 1, e = d + 1; I.push(a, d, b, b, d, e); }
+    geo.setAttribute('position', new THREE.Float32BufferAttribute(P, 3)); geo.setAttribute('uv', new THREE.Float32BufferAttribute(U, 2)); geo.setIndex(I); geo.computeVertexNormals();
+    const pano = new THREE.Mesh(geo, mL); g.add(pano);
+    // orienta: anel perpendicular ao pescoço, pano voltado para a frente
+    const frente = V(0, 0, 1).sub(eixo.clone().multiplyScalar(eixo.z)).normalize();
+    const lat = new THREE.Vector3().crossVectors(eixo, frente).normalize();
+    gola.rotation.x = Math.PI / 2;
+    g.quaternion.setFromRotationMatrix(new THREE.Matrix4().makeBasis(lat, eixo, frente));
+    g.position.copy(centroGola);
+    prender(g, 'Neck2');
+    ACESS.lenco.dados = { raio };
+  }
+
+  // ouvidos, dentes e unhas: anel de brilho pulsando no ponto
+  function destaque(id, alvos) {
+    const g = novoGrupo(id); scene.add(g);
+    const itens = alvos.map(({ p, nome, tam, chao }) => {
+      let obj;
+      if (chao) { obj = new THREE.Mesh(new THREE.RingGeometry(tam * 0.7, tam, 40), new THREE.MeshBasicMaterial({ color: COR.patinho, transparent: true, opacity: 0.9, side: THREE.DoubleSide, depthWrite: false })); obj.rotation.x = -Math.PI / 2; }
+      else { obj = new THREE.Sprite(new THREE.SpriteMaterial({ map: texAnel, transparent: true, depthWrite: false, depthTest: false })); obj.renderOrder = 5; obj.scale.setScalar(tam); }
+      const h = new THREE.Group(); h.add(obj); h.position.copy(p); h.userData = { tam, obj, chao };
+      const b = osso(nome); if (b) { const p0 = b.getWorldPosition(V()); h.userData.b = b; h.userData.off = p.clone().sub(p0); }
+      g.add(h); return h;
+    });
+    ACESS[id].porItem = true;
+    ACESS[id].anima = (t, k0) => itens.forEach((h, i) => {
+      const k = (1 + 0.16 * Math.sin(t * 4 + i)) * Math.max(0.0001, k0);
+      if (h.userData.b) { h.userData.b.getWorldPosition(h.position).add(h.userData.off); if (h.userData.chao) h.position.y = 0.006; }
+      h.userData.obj.scale.setScalar(h.userData.chao ? k : h.userData.tam * k);
+      if (h.userData.chao) h.userData.obj.material.opacity = 0.55 + 0.35 * Math.sin(t * 4 + i);
+    });
+  }
+  destaque('ouvidos', orelhas.map((o, i) => ({ p: o.centro.clone().lerp(o.ponta, 0.25).add(V(0, 0, 0.02)), nome: i ? 'Ear2.R' : 'Ear2.L', tam: tamCab * 0.9 })));
+  destaque('dentes', [{ p: focinho.clone().add(V(0, -0.045, -0.015)), nome: 'Head', tam: tamCab * 0.75 }]);
+  const patas = ['FrontLowerLeg.L', 'FrontLowerLeg.R', 'BackLowerLeg.L', 'BackLowerLeg.R'].map((n) => { const a = de((d) => d === nomeLimpo(n) || d === n); const baixo = a.length ? a.reduce((b, p) => (p.y < b.y ? p : b), a[0]).clone() : osso(n + '_end').getWorldPosition(V()); baixo.y = 0.006; return { p: baixo, nome: n, tam: 0.075, chao: true }; });
+  destaque('unhas', patas);
+
+  // ---------- animação do modelo ----------
+  const mixer = new THREE.AnimationMixer(modelo);
+  const clipe = THREE.AnimationClip.findByName(gltf.animations, 'Idle') || gltf.animations[0];
+  if (clipe && !reduz) mixer.clipAction(clipe).play();
+
+  // ---------- câmera e controle ----------
+  const alvo = V(0, 0.5, (caixa.max.z + caixa.min.z) / 2);
+  const controls = new OrbitControls(camera, renderer.domElement);
+  controls.target.copy(alvo);
+  controls.enablePan = false; controls.enableZoom = false; controls.enableDamping = true; controls.dampingFactor = 0.08;
+  controls.minPolarAngle = 0.75; controls.maxPolarAngle = 1.5;
+  controls.autoRotate = !reduz; controls.autoRotateSpeed = 1.1;
+  controls.addEventListener('start', () => { controls.autoRotate = false; });
+  renderer.domElement.style.touchAction = 'pan-y'; // no celular, arrastar na vertical continua rolando a página
+  const raioCena = caixa.getSize(V()).length() * 0.43;
+  camera.position.set(alvo.x + Math.sin(0.62) * 3, alvo.y + 1.1, alvo.z + Math.cos(0.62) * 3);
+  function enquadrar() {
+    const w = palco.clientWidth || 1, h = palco.clientHeight || 1;
+    renderer.setSize(w, h, false); camera.aspect = w / h;
+    const vf = THREE.MathUtils.degToRad(camera.fov) / 2, hf = Math.atan(Math.tan(vf) * camera.aspect);
+    const d = raioCena / Math.sin(Math.min(vf, hf)) * 1.02;
+    const dir = camera.position.clone().sub(alvo);
+    camera.position.copy(alvo).add(dir.normalize().multiplyScalar(d));
+    camera.updateProjectionMatrix();
+  }
+  palco.appendChild(renderer.domElement);
+  enquadrar();
+  new ResizeObserver(enquadrar).observe(palco);
+
+  // ---------- liga/desliga acessórios ----------
+  const backOut = (x) => { const c = 1.9; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+  const sincronizar = () => { for (const id in ACESS) ACESS[id].on = window.xodoPedido.tem(id); };
+  document.addEventListener('xodo:cuidados', sincronizar);
+  sincronizar();
+
+  // ---------- tocar no cachorro ----------
+  const ray = new THREE.Raycaster(), ptr = new THREE.Vector2();
+  const NOMES = { banho: 'Banho', tosa: 'Tosa', ouvidos: 'Ouvidos', dentes: 'Dentes', unhas: 'Unhas', lenco: 'Lencinho', perfume: 'Perfume e lacinho' };
+  function regiao(ev) {
+    const r = renderer.domElement.getBoundingClientRect();
+    ptr.set(((ev.clientX - r.left) / r.width) * 2 - 1, -((ev.clientY - r.top) / r.height) * 2 + 1);
+    ray.setFromCamera(ptr, camera);
+    const hit = ray.intersectObjects(malhas, false)[0];
+    if (!hit) return null;
+    const n = donoPorMalha.get(hit.object)[hit.face.a] || '';
+    if (n.startsWith('Ear')) return 'ouvidos';
+    if (n.startsWith('Neck')) return 'lenco';
+    if (/LowerLeg|^FF/.test(n)) return 'unhas';
+    if (n === 'Head') {
+      if (hit.point.distanceTo(posAtual(focinho, 'Head')) < tamCab * 0.6) return 'dentes';
+      if (hit.point.distanceTo(posAtual(topoCab, 'Head')) < tamCab * 0.45) return 'perfume';
+      return 'tosa';
+    }
+    return 'banho';
+  }
+  // posição atual de um ponto preso a um osso (acompanha a animação)
+  const restos = {};
+  function posAtual(p, nome) {
+    const b = osso(nome); const k = nome + p.x + p.y + p.z;
+    if (!restos[k]) restos[k] = { off: p.clone().sub(b.getWorldPosition(V())), q0inv: b.getWorldQuaternion(new THREE.Quaternion()).invert() };
+    const q = b.getWorldQuaternion(new THREE.Quaternion()).multiply(restos[k].q0inv);
+    return restos[k].off.clone().applyQuaternion(q).add(b.getWorldPosition(V()));
+  }
+  posAtual(focinho, 'Head'); posAtual(topoCab, 'Head');
+  let ini = null;
+  renderer.domElement.addEventListener('pointerdown', (e) => { ini = { x: e.clientX, y: e.clientY, t: performance.now() }; });
+  renderer.domElement.addEventListener('pointerup', (e) => {
+    if (!ini) return; const mov = Math.hypot(e.clientX - ini.x, e.clientY - ini.y), dt = performance.now() - ini.t; ini = null;
+    if (mov > 7 || dt > 600) return;
+    const id = regiao(e); if (id) { window.xodoPedido.alternar(id); mostrarRotulo(e, id); }
+  });
+  let ultimo = 0;
+  renderer.domElement.addEventListener('pointermove', (e) => {
+    if (e.pointerType !== 'mouse' || e.buttons) return; const t = performance.now(); if (t - ultimo < 60) return; ultimo = t;
+    const id = regiao(e); palco.classList.toggle('aponta', !!id);
+    if (id) mostrarRotulo(e, id); else rotulo.classList.remove('ver');
+  });
+  renderer.domElement.addEventListener('pointerleave', () => { rotulo.classList.remove('ver'); palco.classList.remove('aponta'); });
+  function mostrarRotulo(e, id) {
+    const r = palco.getBoundingClientRect();
+    rotulo.textContent = (window.xodoPedido.tem(id) ? '✓ ' : '+ ') + NOMES[id];
+    rotulo.style.left = (e.clientX - r.left) + 'px'; rotulo.style.top = (e.clientY - r.top) + 'px';
+    rotulo.classList.add('ver');
+    if (e.pointerType !== 'mouse') { clearTimeout(mostrarRotulo.t); mostrarRotulo.t = setTimeout(() => rotulo.classList.remove('ver'), 1100); }
+  }
+
+  // ---------- laço de desenho (só roda com a seção visível) ----------
+  const relogio = new THREE.Clock();
+  let tempo = 0;
+  function quadro() {
+    const dt = Math.min(relogio.getDelta(), 0.05); tempo += dt;
+    mixer.update(dt);
+    seguir();
+    for (const id in ACESS) {
+      const a = ACESS[id];
+      a.t = a.on ? Math.min(1, a.t + dt / (reduz ? 0.001 : 0.45)) : Math.max(0, a.t - dt / (reduz ? 0.001 : 0.22));
+      a.g.visible = a.t > 0;
+      if (a.g.visible) { const s = Math.max(0.0001, a.on ? backOut(a.t) : a.t * a.t); a.g.scale.setScalar(a.porItem ? 1 : s); if (a.anima) a.anima(reduz ? 1.5 : tempo, s); }
+    }
+    controls.update(dt);
+    renderer.render(scene, camera);
+  }
+  new IntersectionObserver((ents) => { const vis = ents.some((e) => e.isIntersecting); renderer.setAnimationLoop(vis ? quadro : null); if (vis) relogio.getDelta(); }).observe(palco);
+  quadro();
+  palco.classList.add('pronto');
+}
 </script>
 </body>
 </html>
