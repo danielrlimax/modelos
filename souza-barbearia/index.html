@@ -40,17 +40,39 @@ nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:15px}
 nav ul a{text-decoration:none;color:var(--aco)}
 nav ul a:hover{color:var(--tinta)}
 
-/* Topo */
-.topo{padding:72px 0 80px}
-.topo .largura{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:center}
-.topo h1{font-family:'Zilla Slab',serif;font-weight:700;font-size:clamp(52px,8vw,96px);line-height:.95;margin:0;color:var(--azul)}
-.topo .desde{font-family:'Zilla Slab',serif;font-style:italic;font-weight:500;font-size:clamp(22px,2.6vw,28px);color:var(--vermelho);margin:14px 0 0}
-.topo p.texto{font-size:19px;color:var(--aco);max-width:44ch;margin:20px 0 0}
+/* Banner: foto grande, nome gigante e selo de avaliação. O elemento que vende. */
+.topo{position:relative;min-height:min(88vh,820px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;isolation:isolate}
+.topo .fundo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center 30%;transform:scale(1.04);animation:aproxima 9s ease-out forwards}
+@keyframes aproxima{to{transform:scale(1)}}
+.topo::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(16,24,44,.92) 0%,rgba(16,24,44,.72) 45%,rgba(16,24,44,.15) 100%),linear-gradient(0deg,rgba(16,24,44,.85) 0%,transparent 45%)}
+/* listra de poste de barbeiro na lateral */
+.topo::after{content:"";position:absolute;left:0;top:0;bottom:0;width:16px;background:repeating-linear-gradient(-45deg,var(--vermelho) 0 14px,#fff 14px 28px,var(--azul) 28px 42px,#fff 42px 56px)}
+.topo .largura{width:100%;padding-top:96px;padding-bottom:72px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+.topo .logo-mini{width:84px;height:84px;border-radius:50%;overflow:hidden;box-shadow:0 0 0 4px #fff;margin-bottom:24px}
+.topo .logo-mini img{width:100%;height:100%;object-fit:cover}
+.topo .desde{font-family:'Zilla Slab',serif;font-style:italic;font-weight:500;font-size:clamp(20px,2.4vw,26px);color:#FF8A80;margin:0 0 6px}
+.topo h1{font-family:'Zilla Slab',serif;font-weight:700;font-size:clamp(60px,11vw,148px);line-height:.88;margin:0;letter-spacing:-.01em;text-shadow:0 4px 30px rgba(0,0,0,.35)}
+.topo p.texto{font-size:clamp(18px,2vw,21px);color:#E4E8F0;max-width:42ch;margin:22px 0 0}
 .topo .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-.topo .nota{margin-top:24px;display:flex;align-items:center;gap:10px;font-weight:600}
+.topo .botao.secundario{color:#fff}
+.topo .botao.secundario:hover{background:rgba(255,255,255,.12)}
+.topo .botao.principal{font-size:18px;padding:17px 28px}
+/* selo carimbado */
+.selo{width:170px;height:170px;border-radius:50%;background:var(--vermelho);color:#fff;display:grid;place-items:center;text-align:center;transform:rotate(-10deg);box-shadow:0 0 0 6px rgba(255,255,255,.9),0 18px 40px rgba(0,0,0,.35);margin-bottom:8px}
+.selo div{line-height:1.1}
+.selo strong{display:block;font-family:'Zilla Slab',serif;font-size:54px;line-height:1}
+.selo .estrelas{color:#fff;font-size:14px;letter-spacing:3px}
+.selo small{display:block;font-size:13px;margin-top:4px;opacity:.95}
 .estrelas{color:var(--vermelho);letter-spacing:2px}
-.logo-moldura{justify-self:center;width:min(360px,100%);aspect-ratio:1;border-radius:50%;overflow:hidden;box-shadow:0 0 0 10px var(--papel),0 0 0 12px var(--azul)}
-.logo-moldura img{width:100%;height:100%;object-fit:cover}
+@media (prefers-reduced-motion:reduce){.topo .fundo{animation:none;transform:none}}
+
+/* Galeria */
+.galeria{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:12px;margin:0;padding:0;list-style:none}
+.galeria li{overflow:hidden;border-radius:6px;background:var(--linha)}
+.galeria li:nth-child(1){grid-column:span 2;grid-row:span 2}
+.galeria li:nth-child(4){grid-column:span 2}
+.galeria img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.galeria li:hover img{transform:scale(1.04)}
 
 section{padding:88px 0}
 h2{font-family:'Zilla Slab',serif;font-weight:700;font-size:clamp(34px,4.6vw,50px);line-height:1.05;margin:0 0 12px;color:var(--azul)}
@@ -138,8 +160,14 @@ footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wr
 
 @media (max-width:860px){
   nav ul{display:none}
-  .topo{padding:48px 0 56px}
-  .topo .largura,.sobre .largura,.contato .largura,.avaliacoes .largura{grid-template-columns:1fr;gap:36px}
+  .topo{min-height:auto}
+  .topo .largura{grid-template-columns:1fr;padding-top:72px;padding-bottom:48px;padding-left:36px}
+  .topo::before{background:linear-gradient(0deg,rgba(16,24,44,.95) 0%,rgba(16,24,44,.75) 60%,rgba(16,24,44,.45) 100%)}
+  .selo{width:130px;height:130px;position:absolute;right:18px;top:24px}
+  .selo strong{font-size:40px}
+  .galeria{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
+  .galeria li:nth-child(4){grid-column:span 2}
+  .sobre .largura,.contato .largura,.avaliacoes .largura{grid-template-columns:1fr;gap:36px}
   .logo-moldura{width:220px;grid-row:1}
   .passos{grid-template-columns:1fr;gap:28px}
   section{padding:60px 0}
@@ -171,18 +199,19 @@ footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wr
 </nav>
 
 <header class="topo">
+  <img class="fundo" src="fotos/banner.jpg" alt="" fetchpriority="high">
   <div class="largura">
     <div>
-      <h1>Souza Barbearia</h1>
+      <div class="logo-mini"><img src="logo.jpg" alt="Logo da Souza Barbearia"></div>
       <p class="desde">Barbearia clássica desde 1963</p>
+      <h1>Souza<br>Barbearia</h1>
       <p class="texto">Corte finalizado na pomada e no secador, barba na toalha quente com produtos importados. Na Vila Esteves, em Limeira.</p>
       <div class="acoes">
-        <a class="botao principal" href="https://booksy.com/pt-br/1388_souza-barbearia_barbearias_959481_limeira" rel="noopener">Agendar horário</a>
+        <a class="botao principal" href="https://booksy.com/pt-br/1388_souza-barbearia_barbearias_959481_limeira" rel="noopener">Agendar meu horário</a>
         <a class="botao secundario" href="https://wa.me/551937025334?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Chamar no WhatsApp</a>
       </div>
-      <p class="nota"><span class="estrelas" aria-hidden="true">★★★★★</span><span>5,0 em 527 avaliações no Booksy</span></p>
     </div>
-    <div class="logo-moldura"><img src="logo.jpg" alt="Logo da Souza Barbearia"></div>
+    <div class="selo" role="img" aria-label="Nota 5,0 em 527 avaliações no Booksy"><div><strong>5,0</strong><span class="estrelas">★★★★★</span><small>527 avaliações<br>no Booksy</small></div></div>
   </div>
 </header>
 
@@ -222,6 +251,20 @@ footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wr
       <p class="servico-desc"><span>Manutenção feita com agulha</span><span class="tempo">2h30</span></p>
     </div>
     <p class="nota-fonte">Preços tirados do Booksy da barbearia em novembro de 2026.</p>
+  </div>
+</section>
+
+<section id="fotos">
+  <div class="largura">
+    <h2>Por dentro da barbearia</h2>
+    <p class="intro">Fotos ilustrativas. No site final entram as fotos da Souza e dos cortes de vocês.</p>
+    <ul class="galeria">
+      <li><img src="fotos/g1.jpg" alt="Barbeiro fazendo corte" loading="lazy"></li>
+      <li><img src="fotos/g2.jpg" alt="Barba com navalha" loading="lazy"></li>
+      <li><img src="fotos/g3.jpg" alt="Ferramentas de barbeiro" loading="lazy"></li>
+      <li><img src="fotos/g4.jpg" alt="Cadeira de barbeiro clássica" loading="lazy"></li>
+      <li><img src="fotos/g5.jpg" alt="Acabamento do corte" loading="lazy"></li>
+    </ul>
   </div>
 </section>
 
@@ -320,7 +363,7 @@ footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wr
 </main>
 
 <footer>
-  <div class="largura"><span>Souza Barbearia · Limeira – SP</span><span>Modelo feito por Daniel, de Limeira.</span></div>
+  <div class="largura"><span>Souza Barbearia · Limeira – SP</span><span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel, de Limeira.</span></div>
 </footer>
 <a class="flutuante" href="https://wa.me/551937025334?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio." rel="noopener" aria-label="Chamar a Souza Barbearia no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
 </body>
