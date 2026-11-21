@@ -31,21 +31,24 @@ img{display:block;max-width:100%}
 .botao.linha{box-shadow:inset 0 0 0 2px var(--tinta)}
 .botao.linha:hover{background:var(--gelo)}
 
-/* ---- Topo ---- */
-.topo{padding:64px 0 0}
-.topo .grade{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:end}
-.marca{font-weight:800;font-size:18px;letter-spacing:-.01em;margin:0 0 56px;display:flex;align-items:center;gap:10px}
+/* ---- Banner: foto do estúdio de ponta a ponta + painel sólido com o título ---- */
+.topo{position:relative;min-height:min(88vh,860px);display:flex;align-items:stretch;overflow:hidden;isolation:isolate}
+.topo>.fundo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 40%;z-index:-1}
+.painel{background:var(--tinta);color:#fff;width:min(560px,46%);padding:56px 48px 52px max(28px,calc((100vw - 1160px)/2 + 28px));display:flex;flex-direction:column;justify-content:flex-end}
+.marca{font-weight:800;font-size:18px;letter-spacing:-.01em;margin:0 0 auto;display:flex;align-items:center;gap:10px;padding-bottom:48px}
 .marca i{display:inline-block;width:12px;height:12px;border-radius:50%;background:var(--mola-verde)}
-h1{font-weight:900;font-size:clamp(54px,7.4vw,104px);line-height:.9;letter-spacing:-.045em;margin:0}
-.topo .sub{font-size:clamp(18px,1.8vw,21px);color:var(--tinta-2);max-width:34ch;margin:26px 0 0}
-.topo .acoes{display:flex;flex-wrap:wrap;gap:12px;margin:34px 0 0}
-.topo .nota{margin:22px 0 64px;font-size:15px;color:var(--tinta-2)}
-.topo .nota b{color:var(--tinta)}
-.foto-topo{position:relative;margin:0;border-radius:14px 14px 0 0;overflow:hidden;aspect-ratio:15/14}
-.foto-topo img{width:100%;height:100%;object-fit:cover}
+h1{font-weight:900;font-size:clamp(52px,6.2vw,96px);line-height:.9;letter-spacing:-.045em;margin:0}
+.painel .sub{font-size:clamp(18px,1.6vw,20px);color:#C9D0DF;max-width:32ch;margin:24px 0 0}
+.painel .acoes{display:flex;flex-wrap:wrap;gap:12px;margin:32px 0 0}
+.painel .botao.cheio{background:#fff;color:var(--tinta)}
+.painel .botao.cheio:hover{background:var(--gelo)}
+.painel .botao.linha{color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.7)}
+.painel .botao.linha:hover{background:rgba(255,255,255,.08)}
+.painel .nota{margin:22px 0 0;font-size:15px;color:#B7C0D4}
+.painel .nota b{color:#fff}
 
 /* Molas do Reformer: o elemento marcante. Esticam uma vez ao abrir. */
-.molas{position:absolute;left:24px;right:24px;bottom:26px;display:grid;gap:12px;padding:18px 20px;background:rgba(255,255,255,.92);border-radius:10px;backdrop-filter:blur(4px)}
+.molas{position:absolute;right:max(28px,calc((100vw - 1160px)/2 + 28px));bottom:36px;width:min(440px,40%);display:grid;gap:12px;padding:18px 20px;background:rgba(255,255,255,.94);border-radius:10px;box-shadow:0 14px 34px rgba(20,30,50,.22)}
 .mola{display:flex;align-items:center;gap:0;height:20px}
 .mola .gancho{width:14px;height:14px;border:3px solid #9aa3b5;border-radius:50%;flex:none}
 .mola svg{flex:1;height:20px;transform-origin:left center;animation:estica 1.6s cubic-bezier(.3,1.4,.5,1) both}
@@ -78,6 +81,15 @@ h2{font-weight:900;font-size:clamp(36px,4.8vw,60px);line-height:.98;letter-spaci
 .lista strong{display:block;font-size:19px}
 .lista span{color:var(--tinta-2)}
 .legenda{font-size:14px;color:var(--tinta-2);margin-top:14px}
+
+/* Galeria do estúdio */
+.estudio{padding-top:0}
+.mosaico{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:240px;gap:12px}
+.mosaico li{overflow:hidden;border-radius:10px;background:var(--gelo)}
+.mosaico li:first-child{grid-column:span 2;grid-row:span 2}
+.mosaico img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.mosaico li:hover img{transform:scale(1.04)}
+@media (prefers-reduced-motion:reduce){.mosaico img{transition:none}}
 
 /* Horários: gráfico da semana */
 .horarios{background:var(--gelo)}
@@ -129,18 +141,21 @@ footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wr
 .flutuante{position:fixed;right:18px;bottom:18px;display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#073B1E;font-weight:700;text-decoration:none;padding:14px 18px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.25);font-size:15px;z-index:5}
 
 @media (max-width:900px){
-  .topo{padding-top:40px}
-  .topo .grade,.aulas .grade,.onde .grade,.avaliacao .grade{grid-template-columns:1fr;gap:36px}
-  .marca{margin-bottom:32px}
-  .topo .nota{margin-bottom:28px}
-  .foto-topo{aspect-ratio:4/4.4}
+  .topo{display:flex;flex-direction:column;min-height:auto;padding-top:380px}
+  .topo>.fundo{height:380px;bottom:auto;object-position:55% 40%}
+  .molas{top:250px;bottom:auto;left:16px;right:16px;width:auto;padding:12px 14px;gap:8px}
+  .painel{width:100%;padding:36px 24px 44px}
+  .marca{padding-bottom:28px}
+  .painel .acoes .botao{flex:1 1 100%;justify-content:center}
+  .aulas .grade,.onde .grade,.avaliacao .grade{grid-template-columns:1fr;gap:36px}
+  .mosaico{grid-template-columns:1fr 1fr;grid-auto-rows:160px}
+  .mosaico li:first-child{grid-column:span 2;grid-row:span 1}
   .objetivos{grid-template-columns:1fr 1fr}
   .objetivos li,.objetivos li+li{padding:24px 18px 26px 0}
   section{padding:68px 0}
   .escala,.dia{grid-template-columns:64px 1fr;gap:10px}
   .quando{grid-column:2;text-align:left;font-size:14px;margin-top:-4px}
   .escala span:last-child{display:none}
-  .topo .acoes .botao{flex:1 1 100%;justify-content:center}
 }
 @media (max-width:520px){
   .objetivos{grid-template-columns:1fr}
@@ -157,8 +172,8 @@ footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wr
 <div class="aviso">Modelo demonstrativo feito por Daniel para o Vita Pilates Studio. Ainda não é o site oficial.</div>
 
 <header class="topo">
-  <div class="largura grade">
-    <div>
+  <img class="fundo" src="fotos/banner.jpg" alt="Estúdio de pilates com aparelhos Reformer e Cadillac" fetchpriority="high">
+  <div class="painel">
       <p class="marca"><i aria-hidden="true"></i>Vita Pilates Studio</p>
       <h1>Força, postura e respiração.</h1>
       <p class="sub">Aulas de pilates na Cidade Nova, em Rio Claro. De segunda a sexta, das 7h às 20h, e sábado de manhã.</p>
@@ -167,17 +182,13 @@ footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wr
         <a class="botao linha" href="#horarios">Ver horários</a>
       </div>
       <p class="nota"><b>5,0</b> no Google, com mais de 30 avaliações</p>
-    </div>
-    <figure class="foto-topo">
-      <img src="fotos/capa.jpg" alt="Estúdio de pilates com aparelhos Reformer e Cadillac" fetchpriority="high">
+  </div>
       <div class="molas" aria-hidden="true">
         <div class="mola"><span class="gancho"></span><svg style="color:var(--mola-vermelha)"><use href="#espiral"/></svg><span class="gancho"></span></div>
         <div class="mola"><span class="gancho"></span><svg style="color:var(--mola-azul)"><use href="#espiral"/></svg><span class="gancho"></span></div>
         <div class="mola"><span class="gancho"></span><svg style="color:var(--mola-amarela)"><use href="#espiral"/></svg><span class="gancho"></span></div>
         <div class="mola"><span class="gancho"></span><svg style="color:var(--mola-verde)"><use href="#espiral"/></svg><span class="gancho"></span></div>
       </div>
-    </figure>
-  </div>
 </header>
 
 <main>
@@ -214,6 +225,20 @@ footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wr
       </div>
       <p class="legenda">Fotos ilustrativas.</p>
     </div>
+  </div>
+</section>
+
+<section class="estudio">
+  <div class="largura">
+    <h2>O estúdio</h2>
+    <p class="intro">Fotos ilustrativas. No site final entram as fotos do espaço e das aulas do Vita.</p>
+    <ul class="mosaico">
+      <li><img src="fotos/estudio.jpg" alt="Aparelhos de pilates em estúdio claro" loading="lazy"></li>
+      <li><img src="fotos/g1.jpg" alt="Aluna alongando no Reformer" loading="lazy"></li>
+      <li><img src="fotos/g2.jpg" alt="Exercício com alça no aparelho" loading="lazy"></li>
+      <li><img src="fotos/g3.jpg" alt="Prancha lateral no Reformer" loading="lazy"></li>
+      <li><img src="fotos/g4.jpg" alt="Exercício de perna com alça" loading="lazy"></li>
+    </ul>
   </div>
 </section>
 
