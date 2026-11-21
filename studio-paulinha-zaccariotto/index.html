@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Studio Paulinha Zaccariotto - Pilates em Leme</title>
+<meta name="description" content="Modelo demonstrativo de site para o Studio Paulinha Zaccariotto - Pilates, no Centro de Leme.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ameixa:#2B1A2A; --ameixa-2:#6B5868; --magenta:#C8286B; --magenta-escuro:#A11D55;
+  --rosa:#FBEAF1; --rosa-linha:#F0CFDD; --branco:#FFFFFF; --nevoa:#F6F4F6; --linha:#E6E0E5;
+  --verde-wa:#1FA855;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--branco);color:var(--ameixa);font:17px/1.6 'Hanken Grotesk',system-ui,sans-serif}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--magenta);outline-offset:3px}
+.largura{max-width:1160px;margin:0 auto;padding:0 28px}
+.ico{width:1.2em;height:1.2em;flex:none}
+h1,h2,h3{font-family:'Newsreader',Georgia,serif;font-weight:400;letter-spacing:-.01em;line-height:1.12;margin:0}
+h2{font-size:clamp(32px,4.2vw,48px)}
+.aviso{background:var(--ameixa);color:#fff;font-size:14px;text-align:center;padding:8px 16px}
+.exemplo{font-size:14px;color:var(--ameixa-2);font-style:italic}
+
+.botao{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;font-size:17px;line-height:1.2;padding:15px 24px;border-radius:4px;border:0;cursor:pointer;font-family:inherit}
+.botao.cheio{background:var(--magenta);color:#fff}
+.botao.cheio:hover{background:var(--magenta-escuro)}
+.botao.linha{color:var(--ameixa);box-shadow:inset 0 0 0 1.5px var(--ameixa)}
+.botao.linha:hover{background:var(--nevoa)}
+
+/* ---- Hero: foto do studio ocupa a tela; uma folha branca com o texto apoia no canto ---- */
+.topo{position:relative;min-height:min(92vh,860px);display:flex;align-items:flex-end;isolation:isolate;overflow:hidden;background:#ddd}
+.topo>.fundo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;z-index:-1}
+.topo .largura{width:100%;padding-bottom:56px}
+.folha{background:var(--branco);max-width:600px;padding:36px 40px 30px;border-radius:2px;box-shadow:0 30px 60px -30px rgba(43,26,42,.45)}
+.assinatura{font-family:'Allura',cursive;color:var(--magenta);font-size:46px;line-height:1;margin:0 0 4px}
+.assinatura small{display:block;font-family:'Hanken Grotesk',sans-serif;font-size:15px;color:var(--ameixa-2);margin-top:6px;font-weight:500}
+.folha h1{font-size:clamp(34px,3.7vw,46px);margin:22px 0 16px}
+.folha p.intro{margin:0 0 26px;color:var(--ameixa-2);font-size:18px}
+.acoes{display:flex;flex-wrap:wrap;gap:12px}
+.nota{display:flex;align-items:center;gap:10px;margin-top:24px;padding-top:20px;border-top:1px solid var(--linha);font-size:15px;color:var(--ameixa-2)}
+.nota b{font-family:'Newsreader',serif;font-size:28px;font-weight:500;color:var(--ameixa);line-height:1}
+.estrelas{color:#E8A317;letter-spacing:2px}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:600;color:#1B7A43}
+.status::before{content:"";width:9px;height:9px;border-radius:50%;background:currentColor}
+.status.fechado{color:var(--ameixa-2)}
+.topo .status{position:absolute;top:24px;right:28px;background:var(--branco);padding:8px 14px;border-radius:2px}
+
+/* ---- Frase dela ---- */
+.frase{padding:110px 0 90px}
+.frase blockquote{margin:0;max-width:880px}
+.frase blockquote p{font-family:'Newsreader',serif;font-size:clamp(28px,3.4vw,42px);line-height:1.28;margin:0}
+.frase blockquote footer{margin-top:22px;color:var(--ameixa-2);font-size:16px}
+.frase blockquote footer span{font-family:'Allura',cursive;color:var(--magenta);font-size:30px;margin-right:6px}
+
+/* ---- Aulas: três práticas reais, fotos de tamanhos diferentes ---- */
+.aulas{padding:20px 0 110px}
+.aulas .cabeca{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:40px}
+.aulas .cabeca p{max-width:420px;margin:0;color:var(--ameixa-2)}
+.praticas{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:28px;align-items:start}
+.pratica img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px}
+.pratica:first-child img{aspect-ratio:5/5.2}
+.pratica:nth-child(2){margin-top:70px}
+.pratica:nth-child(3){margin-top:140px}
+.pratica h3{font-size:28px;margin:18px 0 6px}
+.pratica p{margin:0;color:var(--ameixa-2);font-size:16px}
+
+/* ---- Formatos ---- */
+.formatos{background:var(--rosa);padding:100px 0}
+.formatos .grade{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.formatos figure{margin:0}
+.formatos figure img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px}
+.formatos figcaption{font-size:13px;color:var(--ameixa-2);margin-top:8px}
+.formatos h2{margin-bottom:28px}
+.formato{padding:22px 0;border-top:1px solid var(--rosa-linha)}
+.formato:last-of-type{border-bottom:1px solid var(--rosa-linha)}
+.formato h3{font-size:26px;margin-bottom:6px}
+.formato p{margin:0;color:var(--ameixa-2)}
+.detalhes{display:flex;flex-wrap:wrap;gap:8px 26px;margin:26px 0 0;padding:0;list-style:none;font-weight:600;font-size:16px}
+.detalhes li{display:flex;align-items:center;gap:8px}
+.detalhes li::before{content:"";width:6px;height:6px;background:var(--magenta);border-radius:50%}
+
+/* ---- Agenda: o elemento ousado. Grade real da semana, cada hora é clicável ---- */
+.agenda{padding:110px 0}
+.agenda .topo-agenda{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:end;margin-bottom:40px}
+.agenda .topo-agenda p{margin:0;color:var(--ameixa-2)}
+.mesa{display:grid;grid-template-columns:1.5fr 1fr;gap:44px;align-items:start}
+.semana{border:1.5px solid var(--ameixa);border-radius:2px;background:var(--branco)}
+.semana table{width:100%;border-collapse:collapse;table-layout:fixed}
+.semana th{font-weight:600;font-size:15px;padding:12px 4px;border-bottom:1.5px solid var(--ameixa);text-align:center}
+.semana th.hora,.semana td.hora{width:64px;text-align:right;padding-right:12px;font-family:'Newsreader',serif;font-size:18px;font-weight:400;color:var(--ameixa-2)}
+.semana th.hoje{background:var(--ameixa);color:#fff}
+.semana td{border-bottom:1px solid var(--linha);border-left:1px solid var(--linha);padding:0;height:46px}
+.semana tr:last-child td{border-bottom:0}
+.semana td.hora{border-left:0}
+.semana tr.pausa td{height:34px;background:repeating-linear-gradient(-45deg,var(--nevoa) 0 6px,#fff 6px 12px);font-size:13px;color:var(--ameixa-2);text-align:center;border-left:0}
+.vaga{width:100%;height:100%;min-height:45px;border:0;background:transparent;font:inherit;font-size:14px;color:var(--ameixa-2);cursor:pointer;position:relative}
+.vaga:hover{background:var(--rosa)}
+.vaga[aria-pressed="true"]{background:var(--magenta);color:#fff;font-weight:600}
+.vaga.agora::after{content:"agora";position:absolute;top:3px;right:4px;font-size:10px;font-weight:700;color:#1B7A43}
+.vaga[aria-pressed="true"].agora::after{color:#fff}
+td.sem{background:var(--nevoa)}
+.legenda{display:flex;flex-wrap:wrap;gap:6px 18px;padding:12px 14px;border-top:1.5px solid var(--ameixa);font-size:14px;color:var(--ameixa-2)}
+.legenda i{display:inline-block;width:14px;height:14px;vertical-align:-2px;margin-right:6px;border:1px solid var(--linha)}
+.legenda i.m{background:var(--magenta);border-color:var(--magenta)}
+.legenda i.s{background:var(--nevoa)}
+
+.pedido{background:var(--nevoa);padding:30px 30px 32px;border-radius:2px}
+.pedido h3{font-size:26px;margin-bottom:16px}
+.pedido fieldset{border:0;padding:0;margin:0 0 22px}
+.pedido legend{font-weight:600;margin-bottom:10px;font-size:16px}
+.opcao{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;background:#fff;border:1.5px solid var(--linha);border-radius:2px;margin-bottom:8px;cursor:pointer;font-size:16px}
+.opcao:has(input:checked){border-color:var(--magenta)}
+.opcao input{accent-color:var(--magenta);margin-top:5px}
+.opcao small{display:block;color:var(--ameixa-2);font-size:14px}
+.escolhidos{min-height:24px;font-size:16px;margin:0 0 18px}
+.escolhidos.vazio{color:var(--ameixa-2)}
+.pedido .botao{width:100%;justify-content:center}
+.pedido .botao[aria-disabled="true"]{background:#B7A9B4;pointer-events:none}
+
+/* ---- Galeria do ambiente ---- */
+.ambiente{padding:0 0 110px}
+.ambiente .fotos{display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px;height:440px}
+.ambiente .fotos img{width:100%;height:100%;object-fit:cover;border-radius:2px}
+.ambiente .texto{display:flex;justify-content:space-between;gap:30px;align-items:baseline;margin-bottom:28px}
+.ambiente .texto p{margin:0;max-width:460px;color:var(--ameixa-2)}
+
+/* ---- Avaliações ---- */
+.avaliacoes{background:var(--ameixa);color:#fff;padding:90px 0}
+.avaliacoes .grade{display:grid;grid-template-columns:auto 1fr;gap:60px;align-items:center}
+.numero{font-family:'Newsreader',serif;font-size:clamp(96px,13vw,168px);line-height:.85}
+.avaliacoes p{margin:0 0 22px;font-size:19px;color:#E9DDE6;max-width:560px}
+.avaliacoes h2{margin-bottom:16px}
+.avaliacoes .botao.linha{color:#fff;box-shadow:inset 0 0 0 1.5px #fff}
+.avaliacoes .botao.linha:hover{background:rgba(255,255,255,.08)}
+
+/* ---- Onde ---- */
+.onde{padding:110px 0}
+.onde .grade{display:grid;grid-template-columns:1fr 1.25fr;gap:56px;align-items:stretch}
+.onde dl{margin:26px 0 30px}
+.onde dt{font-weight:600;font-size:15px;color:var(--ameixa-2);margin-top:18px}
+.onde dd{margin:2px 0 0;font-size:18px}
+.onde dd a{text-decoration-color:var(--rosa-linha);text-underline-offset:3px}
+.mapa{border:0;width:100%;min-height:420px;height:100%;border-radius:2px;background:var(--nevoa)}
+
+/* ---- Dúvidas ---- */
+.duvidas{padding:0 0 110px}
+.duvidas .grade{display:grid;grid-template-columns:1fr 1.6fr;gap:56px}
+details{border-top:1px solid var(--linha);padding:18px 0}
+details:last-child{border-bottom:1px solid var(--linha)}
+summary{cursor:pointer;font-weight:600;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:20px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:'Newsreader',serif;font-size:26px;line-height:.9;color:var(--magenta)}
+details[open] summary::after{content:"–"}
+details p{margin:10px 0 0;color:var(--ameixa-2)}
+
+.final{background:var(--rosa);padding:80px 0;text-align:center}
+.final h2{max-width:720px;margin:0 auto 26px}
+.final .acoes{justify-content:center}
+
+footer.rodape{padding:34px 0 100px;font-size:14px;color:var(--ameixa-2)}
+footer.rodape .largura{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+.flutuante{position:fixed;right:20px;bottom:20px;z-index:20;width:60px;height:60px;border-radius:50%;background:var(--verde-wa);color:#fff;display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(0,0,0,.45)}
+.flutuante .ico{width:32px;height:32px}
+.flutuante:hover{background:#178a45}
+
+@media (max-width:960px){
+  .folha{max-width:500px;padding:30px 32px 26px}
+  .folha h1{font-size:34px;margin:16px 0 12px}
+  .folha p.intro{font-size:17px;margin-bottom:20px}
+  .topo>.fundo{object-position:72% 50%}
+  .praticas{grid-template-columns:1fr 1fr}
+  .pratica:first-child{grid-column:1/-1}
+  .pratica:first-child img{aspect-ratio:16/9}
+  .pratica:nth-child(2),.pratica:nth-child(3){margin-top:0}
+  .formatos .grade,.mesa,.onde .grade,.duvidas .grade,.agenda .topo-agenda{grid-template-columns:1fr;gap:36px}
+  .ambiente .fotos{grid-template-columns:1fr 1fr;height:auto}
+  .ambiente .fotos img{aspect-ratio:4/3}
+  .ambiente .fotos img:first-child{grid-column:1/-1;aspect-ratio:16/8}
+  .aulas .cabeca,.ambiente .texto{flex-direction:column;align-items:flex-start;gap:14px}
+}
+@media (max-width:700px){
+  .topo{min-height:auto;display:block;background:var(--branco)}
+  .topo>.fundo{position:relative;height:min(52vh,460px)}
+  .topo .largura{margin-top:-90px;padding-bottom:0}
+  .folha{max-width:620px}
+}
+@media (max-width:600px){
+  .largura{padding:0 16px}
+  .topo .largura{margin-top:-40px;padding:0 12px}
+  .topo>.fundo{height:300px;object-position:62% 50%}
+  .topo .status{top:14px;right:14px;font-size:14px}
+  .folha{padding:28px 22px 26px}
+  .assinatura{font-size:38px}
+  .acoes .botao{width:100%;justify-content:center}
+  .praticas{grid-template-columns:1fr}
+  .pratica img,.pratica:first-child img{aspect-ratio:4/3}
+  .frase{padding:80px 0 60px}
+  .aulas,.agenda,.onde{padding-top:70px;padding-bottom:70px}
+  .aulas{padding-top:0}
+  .formatos,.avaliacoes{padding:70px 0}
+  .ambiente,.duvidas{padding-bottom:70px}
+  .avaliacoes .grade{grid-template-columns:1fr;gap:20px}
+  .semana th{font-size:13px;padding:10px 0}
+  .semana th.hora,.semana td.hora{width:44px;padding-right:6px;font-size:15px}
+  .vaga{font-size:0}
+  .vaga::before{content:"+";font-size:18px;color:#D9A9BE}
+  .vaga[aria-pressed="true"]::before{content:"✓";font-size:16px;color:#fff}
+  .vaga.agora::after{font-size:8px;top:1px;right:2px}
+  .pedido{padding:24px 18px}
+  .mapa{min-height:320px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para Studio Paulinha Zaccariotto - Pilates. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <img class="fundo" src="fotos/banner.jpg" alt="Sala de pilates clara, com aparelhos de madeira e uma planta em primeiro plano" fetchpriority="high">
+  <p class="status" id="statusTopo" role="status"><span>Vendo horário…</span></p>
+  <div class="largura">
+    <div class="folha">
+      <p class="assinatura">Paulinha Zaccariotto<small>Studio de Pilates no Centro de Leme</small></p>
+      <h1>Pilates com hora marcada, num lugar para você se sentir em casa.</h1>
+      <p class="intro">Pilates tradicional, alongamento e relaxamento, em pequenos grupos ou com atendimento personalizado. Ambiente calmo e climatizado.</p>
+      <div class="acoes">
+        <a class="botao cheio" href="https://wa.me/5519992568039?text=Ol%C3%A1%2C%20Paulinha!%20Vi%20o%20site%20do%20studio%20e%20gostaria%20de%20marcar%20um%20hor%C3%A1rio%20de%20pilates." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Marcar pelo WhatsApp</a>
+        <a class="botao linha" href="#agenda">Ver horários da semana</a>
+      </div>
+      <div class="nota"><b>4,9</b><span><span class="estrelas" aria-hidden="true">★★★★★</span><br>mais de 37 avaliações no Google</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="frase">
+  <div class="largura">
+    <blockquote>
+      <p>“Atendimento com hora marcada, em pequenos grupos ou personalizado. Ambiente calmo e agradável, climatizado, para você se sentir em casa.”</p>
+      <footer><span>Paulinha</span> sobre o studio</footer>
+    </blockquote>
+  </div>
+</section>
+
+<section class="aulas" id="aulas">
+  <div class="largura">
+    <div class="cabeca">
+      <h2>O que se faz no studio</h2>
+      <p>Três práticas, sempre no seu ritmo, com hora marcada e turmas pequenas.</p>
+    </div>
+    <div class="praticas">
+      <article class="pratica">
+        <img src="fotos/reformer.jpg" alt="Aluna fazendo exercício de prancha no aparelho de pilates" loading="lazy">
+        <h3>Pilates tradicional</h3>
+        <p>Exercícios nos aparelhos e no solo para fortalecer o centro do corpo, melhorar a postura e ganhar consciência dos movimentos.</p>
+      </article>
+      <article class="pratica">
+        <img src="fotos/alongamento.jpg" alt="Mulher alongando as pernas sentada no chão de uma sala" loading="lazy">
+        <h3>Alongamento</h3>
+        <p>Para soltar o que o dia a dia enrijece: costas, quadril, pescoço e ombros.</p>
+      </article>
+      <article class="pratica">
+        <img src="fotos/relaxar.jpg" alt="Mulher se espreguiçando perto de uma janela iluminada" loading="lazy">
+        <h3>Relaxamento</h3>
+        <p>Respiração e movimentos lentos para sair da aula mais leve do que entrou.</p>
+      </article>
+    </div>
+    <p class="exemplo" style="margin-top:28px">Fotos ilustrativas. Texto de exemplo: no site final entram as palavras e as fotos do próprio studio.</p>
+  </div>
+</section>
+
+<section class="formatos">
+  <div class="largura grade">
+    <figure>
+      <img src="fotos/grupo.jpg" alt="Três alunas fazendo exercício de ponte no colchonete" loading="lazy">
+      <figcaption>Foto ilustrativa.</figcaption>
+    </figure>
+    <div>
+      <h2>Do jeito que funciona para você</h2>
+      <div class="formato">
+        <h3>Em pequenos grupos</h3>
+        <p>Turmas pequenas, para cada aluno ser acompanhado de perto e ninguém se perder no meio da aula.</p>
+      </div>
+      <div class="formato">
+        <h3>Personalizado</h3>
+        <p>A aula montada só para você, com o foco que o seu corpo pede.</p>
+      </div>
+      <ul class="detalhes">
+        <li>Sempre com hora marcada</li>
+        <li>Sala climatizada</li>
+        <li>Ambiente calmo</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="agenda" id="agenda" aria-labelledby="t-agenda">
+  <div class="largura">
+    <div class="topo-agenda">
+      <h2 id="t-agenda">A semana do studio. Toque nas horas que combinam com você.</h2>
+      <div>
+        <p class="status" id="statusAgenda" role="status"><span>Vendo horário…</span></p>
+        <p style="margin-top:10px">Escolha um ou mais horários e o formato. A mensagem chega pronta no WhatsApp da Paulinha, que confirma se tem vaga.</p>
+      </div>
+    </div>
+    <div class="mesa">
+      <div class="semana">
+        <table id="grade">
+          <caption class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Horários de atendimento: segunda a quinta das 7h às 11h e das 16h às 20h; sexta das 8h às 9h; sábado e domingo fechado.</caption>
+          <thead><tr><th class="hora" scope="col"><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Hora</span></th><th scope="col" data-d="1">Seg</th><th scope="col" data-d="2">Ter</th><th scope="col" data-d="3">Qua</th><th scope="col" data-d="4">Qui</th><th scope="col" data-d="5">Sex</th></tr></thead>
+          <tbody id="corpo"></tbody>
+        </table>
+        <div class="legenda"><span><i class="m"></i>escolhido</span><span><i class="s"></i>sem atendimento</span><span>Sábado e domingo: fechado</span></div>
+      </div>
+      <form class="pedido" id="pedido" onsubmit="return false" aria-label="Montar pedido de horário">
+        <h3>Seu pedido</h3>
+        <fieldset>
+          <legend>Formato da aula</legend>
+          <label class="opcao"><input type="radio" name="formato" value="em pequeno grupo" checked><span>Pequeno grupo<small>Turma pequena, com acompanhamento</small></span></label>
+          <label class="opcao"><input type="radio" name="formato" value="personalizada"><span>Personalizado<small>Aula só para você</small></span></label>
+        </fieldset>
+        <p class="legend" style="font-weight:600;margin:0 0 6px;font-size:16px">Horários escolhidos</p>
+        <p class="escolhidos vazio" id="escolhidos" aria-live="polite">Nenhum ainda. Toque na grade.</p>
+        <a class="botao cheio" id="enviar" href="https://wa.me/5519992568039" rel="noopener" aria-disabled="true"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Enviar pelo WhatsApp</a>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="ambiente">
+  <div class="largura">
+    <div class="texto">
+      <h2>Um studio pequeno, de propósito</h2>
+      <p>Poucos alunos por vez, sala fresquinha mesmo no verão de Leme e silêncio para você prestar atenção no próprio corpo.</p>
+    </div>
+    <div class="fotos">
+      <img src="fotos/banner.jpg" alt="Aparelhos de pilates de madeira em sala clara" loading="lazy" style="object-position:50% 60%">
+      <img src="fotos/acessorios.jpg" alt="Bolas, arcos e elásticos de pilates organizados na parede" loading="lazy">
+      <img src="fotos/aula.jpg" alt="Aluna fazendo exercício em aparelho de pilates" loading="lazy">
+    </div>
+    <p class="exemplo" style="margin-top:14px">Fotos ilustrativas. No site final entram fotos do studio da Paulinha.</p>
+  </div>
+</section>
+
+<section class="avaliacoes">
+  <div class="largura grade">
+    <div class="numero" aria-hidden="true">4,9</div>
+    <div>
+      <h2>Nota 4,9 no Google, com mais de 37 avaliações</h2>
+      <p>Quem faz aula no studio recomenda. Leia o que os alunos escreveram e, se você já é aluno, deixe a sua.</p>
+      <a class="botao linha" href="https://www.google.com/search?q=Studio+Paulinha+Zaccariotto+Pilates+Leme" rel="noopener">Ver avaliações no Google</a>
+    </div>
+  </div>
+</section>
+
+<section class="onde" id="onde">
+  <div class="largura grade">
+    <div>
+      <h2>No Centro de Leme</h2>
+      <dl>
+        <dt>Endereço</dt>
+        <dd>Av. Dr. Jambeiro Costa, 115, Centro<br>Leme - SP, 13610-236</dd>
+        <dt>WhatsApp</dt>
+        <dd><a href="https://wa.me/5519992568039?text=Ol%C3%A1%2C%20Paulinha!%20Vi%20o%20site%20do%20studio%20e%20queria%20tirar%20uma%20d%C3%BAvida." rel="noopener">(19) 99256-8039</a></dd>
+        <dt>E-mail</dt>
+        <dd><a href="mailto:zaccapaulets@hotmail.com">zaccapaulets@hotmail.com</a></dd>
+        <dt>Atendimento</dt>
+        <dd>Segunda a quinta, 7h às 11h e 16h às 20h<br>Sexta, 8h às 9h<br>Sábado e domingo, fechado</dd>
+      </dl>
+      <div class="acoes">
+        <a class="botao cheio" href="https://www.google.com/maps/dir/?api=1&destination=Av.%20Dr.%20Jambeiro%20Costa%2C%20115%20-%20Centro%2C%20Leme%20-%20SP%2C%2013610-236" rel="noopener">Traçar rota</a>
+        <a class="botao linha" href="https://wa.me/5519992568039?text=Ol%C3%A1%2C%20Paulinha!%20Vi%20o%20site%20do%20studio%20e%20gostaria%20de%20marcar%20um%20hor%C3%A1rio%20de%20pilates." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Chamar no WhatsApp</a>
+      </div>
+    </div>
+    <iframe class="mapa" title="Mapa do Studio Paulinha Zaccariotto em Leme" src="https://www.google.com/maps?q=Av.%20Dr.%20Jambeiro%20Costa%2C%20115%20-%20Centro%2C%20Leme%20-%20SP%2C%2013610-236&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<section class="duvidas">
+  <div class="largura grade">
+    <h2>Antes da primeira aula</h2>
+    <div>
+      <details><summary>Preciso marcar horário?</summary><p>Sim. O atendimento é sempre com hora marcada, para o studio nunca ficar cheio. Use a agenda acima ou chame no WhatsApp.</p></details>
+      <details><summary>Qual a diferença entre grupo e personalizado?</summary><p>No pequeno grupo você faz aula com poucas pessoas e acompanhamento de perto. No personalizado a aula é só sua.</p></details>
+      <details><summary>Quais são os horários?</summary><p>Segunda a quinta, das 7h às 11h e das 16h às 20h. Sexta, das 8h às 9h. Sábado e domingo o studio fica fechado.</p></details>
+      <details><summary>Quanto custa?</summary><p>Depende do formato e de quantas aulas por semana. Mande sua escolha pelo WhatsApp e a Paulinha passa os valores.</p></details>
+      <details><summary>Onde fica?</summary><p>Na Av. Dr. Jambeiro Costa, 115, no Centro de Leme.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="largura">
+    <h2>Seu horário com calma, no seu ritmo. É só marcar.</h2>
+    <div class="acoes">
+      <a class="botao cheio" href="https://wa.me/5519992568039?text=Ol%C3%A1%2C%20Paulinha!%20Vi%20o%20site%20do%20studio%20e%20gostaria%20de%20marcar%20um%20hor%C3%A1rio%20de%20pilates." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Marcar pelo WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="rodape">
+  <div class="largura">
+    <span>Studio Paulinha Zaccariotto - Pilates · Av. Dr. Jambeiro Costa, 115, Centro, Leme - SP</span>
+    <span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span>
+  </div>
+</footer>
+
+<a class="flutuante" href="https://wa.me/5519992568039?text=Ol%C3%A1%2C%20Paulinha!%20Vi%20o%20site%20do%20studio%20e%20gostaria%20de%20marcar%20um%20hor%C3%A1rio%20de%20pilates." rel="noopener" aria-label="Chamar a Paulinha no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg></a>
+
+<script>
+(() => {
+  const FONE = '5519992568039';
+  // Horários reais (perfil do WhatsApp), em minutos
+  const SEG_QUI = [[420, 660], [960, 1200]];
+  const DIAS = { 0: null, 1: SEG_QUI, 2: SEG_QUI, 3: SEG_QUI, 4: SEG_QUI, 5: [[480, 540]], 6: null };
+  const NOMES = ['domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado'];
+  const h = (m) => `${Math.floor(m / 60)}h`;
+
+  const p = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date()).map((x) => [x.type, x.value]));
+  const hoje = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(p.weekday);
+  const agora = Number(p.hour) * 60 + Number(p.minute);
+
+  // Status aberto/fechado
+  let texto, aberto = false;
+  const faixa = (DIAS[hoje] || []).find(([a, b]) => agora >= a && agora < b);
+  if (faixa) { aberto = true; texto = `Aberto agora, até as ${h(faixa[1])}`; }
+  else {
+    let prox = null;
+    for (let i = 0; i < 8 && !prox; i++) {
+      const d = (hoje + i) % 7;
+      const f = (DIAS[d] || []).find(([a]) => i > 0 || agora < a);
+      if (f) prox = { i, d, a: f[0] };
+    }
+    const quando = prox.i === 0 ? 'hoje' : prox.i === 1 ? 'amanhã' : `na ${NOMES[prox.d]}`;
+    texto = `Fechado agora. Abre ${quando} às ${h(prox.a)}`;
+  }
+  for (const id of ['statusTopo', 'statusAgenda']) {
+    const el = document.getElementById(id);
+    el.querySelector('span').textContent = texto;
+    if (!aberto) el.classList.add('fechado');
+  }
+
+  // Grade da semana
+  const HORAS = [7, 8, 9, 10, null, 16, 17, 18, 19];
+  const temAula = (d, hr) => (DIAS[d] || []).some(([a, b]) => hr * 60 >= a && hr * 60 < b);
+  const corpo = document.getElementById('corpo');
+  corpo.innerHTML = HORAS.map((hr) => {
+    if (hr === null) return '<tr class="pausa"><td class="hora"></td><td colspan="5">intervalo das 11h às 16h</td></tr>';
+    const cels = [1, 2, 3, 4, 5].map((d) => {
+      if (!temAula(d, hr)) return '<td class="sem"></td>';
+      const eAgora = d === hoje && agora >= hr * 60 && agora < hr * 60 + 60;
+      return `<td><button type="button" class="vaga${eAgora ? ' agora' : ''}" aria-pressed="false" data-d="${d}" data-h="${hr}" aria-label="${NOMES[d]} às ${hr}h">${hr}h</button></td>`;
+    }).join('');
+    return `<tr><td class="hora">${hr}h</td>${cels}</tr>`;
+  }).join('');
+  const th = document.querySelector(`th[data-d="${hoje}"]`);
+  if (th) th.classList.add('hoje');
+
+  const escolhidos = document.getElementById('escolhidos');
+  const enviar = document.getElementById('enviar');
+  const form = document.getElementById('pedido');
+  const atualizar = () => {
+    const sel = [...corpo.querySelectorAll('.vaga[aria-pressed="true"]')]
+      .map((b) => ({ d: +b.dataset.d, h: +b.dataset.h }))
+      .sort((x, y) => x.d - y.d || x.h - y.h);
+    const formato = form.querySelector('input[name="formato"]:checked').value;
+    if (!sel.length) {
+      escolhidos.textContent = 'Nenhum ainda. Toque na grade.';
+      escolhidos.classList.add('vazio');
+      enviar.setAttribute('aria-disabled', 'true');
+      enviar.href = `https://wa.me/${FONE}`;
+      return;
+    }
+    const lista = sel.map((s) => `${NOMES[s.d]} às ${s.h}h`);
+    const junta = lista.length > 1 ? `${lista.slice(0, -1).join(', ')} e ${lista.at(-1)}` : lista[0];
+    escolhidos.textContent = junta.charAt(0).toUpperCase() + junta.slice(1);
+    escolhidos.classList.remove('vazio');
+    const msg = `Olá, Paulinha! Vi o site do studio e gostaria de fazer aula ${formato}. Horários que combinam comigo: ${junta}. Tem vaga?`;
+    enviar.href = `https://wa.me/${FONE}?text=${encodeURIComponent(msg)}`;
+    enviar.removeAttribute('aria-disabled');
+  };
+  corpo.addEventListener('click', (e) => {
+    const b = e.target.closest('.vaga');
+    if (!b) return;
+    b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+    atualizar();
+  });
+  form.addEventListener('change', atualizar);
+})();
+</script>
+</body>
+</html>
