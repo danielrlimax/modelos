@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Esteticão Banho e Tosa · Jardim dos Ipês, Sumaré</title>
+<meta name="description" content="Modelo demonstrativo de site para o Esteticão Banho e Tosa, no Jardim dos Ipês, em Sumaré.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--rosa:#E2558B;--rosa-escuro:#C23C72;--rosa-claro:#FDEEF3;--marrom:#6B4228;--marrom-2:#8C6650;--texto:#3A2618;--linha:#F0DCE3;--branco:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--branco);color:var(--texto);font:17px/1.6 'Nunito',system-ui,sans-serif}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--rosa);outline-offset:3px}
+.largura{max-width:1160px;margin:0 auto;padding:0 28px}
+.ico{width:1.2em;height:1.2em;flex:none}
+.aviso{background:var(--marrom);color:#fff;font-size:14px;text-align:center;padding:8px 16px}
+h1,h2,h3{font-family:'Fredoka',sans-serif;color:var(--marrom)}
+
+.botao{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:17px;line-height:1.2;padding:16px 26px;border-radius:999px}
+.botao.rosa{background:var(--rosa);color:#fff}
+.botao.rosa:hover{background:var(--rosa-escuro)}
+.botao.contorno{box-shadow:inset 0 0 0 2px var(--marrom);color:var(--marrom)}
+.botao.contorno:hover{background:rgba(107,66,40,.06)}
+
+/* ---- Hero: foto de fundo, texto à direita sobre um véu rosa claro ---- */
+.topo{position:relative;min-height:min(90vh,820px);display:flex;align-items:center;overflow:hidden;isolation:isolate}
+.topo>.fundo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 40%;z-index:-2}
+.topo::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(270deg,rgba(253,238,243,.96) 0%,rgba(253,238,243,.9) 34%,rgba(253,238,243,.35) 58%,rgba(253,238,243,0) 72%)}
+.topo .largura{width:100%;display:flex;justify-content:flex-end}
+.topo .texto{max-width:520px;padding:64px 0}
+.logo{width:104px;height:104px;border-radius:50%;background:#fff;box-shadow:0 8px 24px rgba(107,66,40,.15);margin-bottom:22px;overflow:hidden}
+.logo img{width:100%;height:100%;object-fit:cover}
+h1{font-weight:700;font-size:clamp(46px,6vw,84px);line-height:.98;letter-spacing:-.01em;margin:0}
+h1 span{color:var(--rosa)}
+.topo .sub{font-size:clamp(18px,1.7vw,20px);color:var(--marrom-2);margin:20px 0 0;max-width:36ch}
+.topo .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.selo-fb{display:inline-flex;align-items:center;gap:10px;margin-top:24px;font-weight:700;color:var(--marrom)}
+.selo-fb b{display:inline-grid;place-items:center;background:#fff;color:var(--rosa);font-family:'Fredoka',sans-serif;font-size:20px;border-radius:999px;padding:6px 14px;box-shadow:0 4px 12px rgba(226,85,139,.18)}
+
+section{padding:96px 0}
+h2{font-weight:700;font-size:clamp(36px,4.8vw,56px);line-height:1.02;margin:0 0 14px}
+.intro{color:var(--marrom-2);max-width:56ch;margin:0 0 44px;font-size:18px}
+
+/* Serviços */
+.servicos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.servicos li{background:var(--rosa-claro);border-radius:22px;overflow:hidden;display:flex;flex-direction:column}
+.servicos img{width:100%;aspect-ratio:9/7;object-fit:cover}
+.servicos div{padding:20px 22px 24px}
+.servicos h3{font-size:24px;margin:0 0 6px}
+.servicos p{margin:0;color:var(--marrom-2);font-size:16px}
+.credito{font-size:14px;color:var(--marrom-2);margin-top:14px}
+
+/* Agendador: o elemento marcante */
+.agendar{background:var(--rosa-claro)}
+.agendar .grade{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:start}
+.agendar .fotos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.agendar .fotos img{width:100%;aspect-ratio:9/11;object-fit:cover;border-radius:22px}
+.agendar .fotos img:nth-child(2){margin-top:44px}
+.cartao{background:#fff;border-radius:28px;padding:34px;box-shadow:0 20px 50px rgba(194,60,114,.14)}
+.cartao h3{font-size:30px;margin:0 0 22px}
+.grupo{border:0;margin:0 0 22px;padding:0}
+.grupo legend{font-weight:800;margin-bottom:10px;padding:0}
+.opcoes{display:flex;flex-wrap:wrap;gap:10px}
+.opcoes input{position:absolute;opacity:0;pointer-events:none}
+.opcoes label{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;border:2px solid var(--linha);cursor:pointer;font-weight:700;background:#fff;transition:background .15s,border-color .15s}
+.opcoes label .emoji{font-size:20px;line-height:1}
+.opcoes input:checked + label{background:var(--rosa);border-color:var(--rosa);color:#fff}
+.opcoes input:focus-visible + label{outline:3px solid var(--marrom);outline-offset:2px}
+.taxi{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 18px;border-radius:18px;background:var(--rosa-claro);margin:4px 0 22px;cursor:pointer}
+.taxi strong{display:block}
+.taxi span{font-size:15px;color:var(--marrom-2)}
+.chave{position:relative;width:54px;height:30px;flex:none}
+.chave input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.chave i{position:absolute;inset:0;border-radius:999px;background:#E6CFD8;transition:background .2s}
+.chave i::after{content:"";position:absolute;top:3px;left:3px;width:24px;height:24px;border-radius:50%;background:#fff;box-shadow:0 2px 4px rgba(0,0,0,.2);transition:transform .2s}
+.chave input:checked + i{background:var(--rosa)}
+.chave input:checked + i::after{transform:translateX(24px)}
+.chave input:focus-visible + i{outline:3px solid var(--marrom);outline-offset:2px}
+.resumo{border-top:2px dashed var(--linha);padding-top:18px;margin-bottom:18px;color:var(--marrom);font-weight:700}
+.resumo small{display:block;font-weight:600;color:var(--marrom-2);margin-top:4px}
+.cartao .botao{width:100%;justify-content:center}
+
+/* Táxi dog */
+.faixa-taxi{position:relative;color:#fff;overflow:hidden;isolation:isolate;padding:110px 0}
+.faixa-taxi img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.faixa-taxi::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(107,66,40,.9),rgba(107,66,40,.55) 55%,rgba(107,66,40,.1));z-index:-1}
+.faixa-taxi h2{color:#fff;max-width:12ch}
+.faixa-taxi p{font-size:20px;max-width:40ch;margin:0 0 28px;color:#F6E7DF}
+
+/* Avaliação + horários */
+.info .grade{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.recomenda{background:var(--rosa-claro);border-radius:28px;padding:36px}
+.recomenda .grande{font-family:'Fredoka',sans-serif;font-weight:700;font-size:96px;line-height:.9;color:var(--rosa)}
+.recomenda p{margin:12px 0 0;font-size:19px}
+table{border-collapse:collapse;width:100%}
+th,td{text-align:left;padding:11px 0;border-bottom:1px solid var(--linha)}
+th{width:45%}
+tr.hoje th,tr.hoje td{color:var(--rosa-escuro)}
+td.fechado{color:var(--marrom-2)}
+.agora-txt{font-weight:800;margin:0 0 14px;color:var(--marrom)}
+
+/* Onde */
+.onde{background:var(--rosa-claro)}
+.onde .grade{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:start}
+.onde dl{margin:0 0 26px}
+.onde dt{font-size:14px;color:var(--marrom-2)}
+.onde dd{margin:0 0 14px;font-size:19px}
+.mapa{width:100%;aspect-ratio:4/3;border:0;border-radius:22px;background:#fff}
+
+.faq details{border-bottom:1px solid var(--linha);max-width:820px}
+.faq summary{cursor:pointer;padding:18px 0;font-weight:800;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:'Fredoka',sans-serif;font-size:28px;line-height:1;color:var(--rosa)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin:0 0 18px;color:var(--marrom-2);max-width:64ch}
+
+footer{padding:28px 0 100px;font-size:14px;color:var(--marrom-2);border-top:1px solid var(--linha)}
+footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.flutuante{position:fixed;right:18px;bottom:18px;display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#073B1E;font-weight:800;text-decoration:none;padding:14px 18px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.25);font-size:15px;z-index:5}
+
+@media (max-width:980px){
+  .servicos{grid-template-columns:1fr 1fr}
+  .agendar .grade,.info .grade,.onde .grade{grid-template-columns:1fr;gap:36px}
+  .agendar .fotos{display:none}
+}
+@media (max-width:980px){
+  .topo{min-height:auto;align-items:flex-end}
+  .topo>.fundo{height:62%;object-position:38% 30%}
+  .topo::before{background:linear-gradient(0deg,rgba(253,238,243,1) 0%,rgba(253,238,243,1) 42%,rgba(253,238,243,.0) 58%)}
+  .topo .largura{justify-content:flex-start}
+  .topo .texto{padding:min(56vw,430px) 0 44px}
+  .logo{width:84px;height:84px}
+}
+@media (max-width:760px){
+  .topo .texto{padding-top:300px}
+  .topo .acoes .botao{flex:1 1 100%;justify-content:center}
+  section{padding:64px 0}
+  .servicos{grid-template-columns:1fr}
+  .cartao{padding:24px}
+  .faixa-taxi{padding:80px 0}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para o Esteticão Banho e Tosa. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <img class="fundo" src="fotos/banner.jpg" alt="Cachorro de toalha rosa na cabeça depois do banho" fetchpriority="high">
+  <div class="largura">
+    <div class="texto">
+      <div class="logo"><img src="logo.jpg" alt="Logo do Esteticão Banho e Tosa"></div>
+      <h1>Banho, tosa e <span>muito carinho.</span></h1>
+      <p class="sub">Cães e gatos cheirosos e bem cuidados no Jardim dos Ipês, em Sumaré. E se ficar difícil trazer, tem táxi dog.</p>
+      <div class="acoes">
+        <a class="botao rosa" href="#agendar">Agendar banho e tosa</a>
+        <a class="botao contorno" href="https://wa.me/5519997586478?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20banho." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+      </div>
+      <p class="selo-fb"><b>100%</b> recomendam no Facebook</p>
+    </div>
+  </div>
+</header>
+
+<main>
+<section>
+  <div class="largura">
+    <h2>O que a gente faz</h2>
+    <p class="intro">Do banho caprichado à tosa do jeitinho que você gosta.</p>
+    <ul class="servicos">
+      <li><img src="fotos/banho.jpg" alt="Cachorro com espuma durante o banho" loading="lazy"><div><h3>Banho</h3><p>Banho completo, secagem e escovação.</p></div></li>
+      <li><img src="fotos/tesoura.jpg" alt="Tosa na tesoura em cachorro branco" loading="lazy"><div><h3>Tosa</h3><p>Na máquina ou na tesoura, do jeito que o seu pet fica mais bonito.</p></div></li>
+      <li><img src="fotos/gato.jpg" alt="Gato de pelo longo sendo tosado" loading="lazy"><div><h3>Gatos também</h3><p>Banho e tosa com paciência e cuidado para os felinos.</p></div></li>
+      <li><img src="fotos/taxi.jpg" alt="Cachorro olhando pela janela do carro" loading="lazy"><div><h3>Táxi dog</h3><p>A gente busca e leva o seu pet. Consulte os bairros atendidos.</p></div></li>
+    </ul>
+    <p class="credito">Fotos ilustrativas. No site final entram as fotos dos pets atendidos no Esteticão.</p>
+  </div>
+</section>
+
+<section class="agendar" id="agendar">
+  <div class="largura grade">
+    <div>
+      <h2>Monte o agendamento do seu pet</h2>
+      <p class="intro">Escolha o que o seu pet precisa e mande direto para o WhatsApp do Esteticão. A gente responde com o horário e o valor.</p>
+      <div class="fotos" aria-hidden="true">
+        <img src="fotos/depois.jpg" alt="" loading="lazy">
+        <img src="fotos/toalha.jpg" alt="" loading="lazy">
+      </div>
+    </div>
+    <form class="cartao" id="form" onsubmit="return false" aria-label="Montar agendamento">
+      <h3>Agendamento</h3>
+      <fieldset class="grupo"><legend>Seu pet é</legend>
+        <div class="opcoes">
+          <input type="radio" name="pet" id="p1" value="cachorro" checked><label for="p1"><span class="emoji" aria-hidden="true">🐶</span>Cachorro</label>
+          <input type="radio" name="pet" id="p2" value="gato"><label for="p2"><span class="emoji" aria-hidden="true">🐱</span>Gato</label>
+        </div>
+      </fieldset>
+      <fieldset class="grupo"><legend>Porte</legend>
+        <div class="opcoes">
+          <input type="radio" name="porte" id="s1" value="pequeno" checked><label for="s1">Pequeno</label>
+          <input type="radio" name="porte" id="s2" value="médio"><label for="s2">Médio</label>
+          <input type="radio" name="porte" id="s3" value="grande"><label for="s3">Grande</label>
+        </div>
+      </fieldset>
+      <fieldset class="grupo"><legend>Serviço</legend>
+        <div class="opcoes">
+          <input type="radio" name="servico" id="v1" value="banho" checked><label for="v1">Banho</label>
+          <input type="radio" name="servico" id="v2" value="banho e tosa na máquina"><label for="v2">Banho + tosa na máquina</label>
+          <input type="radio" name="servico" id="v3" value="banho e tosa na tesoura"><label for="v3">Banho + tosa na tesoura</label>
+        </div>
+      </fieldset>
+      <label class="taxi"><span><strong>Quero táxi dog</strong><span>Buscar e levar o pet em casa</span></span><span class="chave"><input type="checkbox" id="taxi"><i></i></span></label>
+      <div class="resumo" aria-live="polite"><span id="resumo">Banho para cachorro de porte pequeno</span><small>O valor e o horário o Esteticão confirma pelo WhatsApp.</small></div>
+      <a class="botao rosa" id="enviar" href="#" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Enviar pelo WhatsApp</a>
+    </form>
+  </div>
+</section>
+
+<section class="faixa-taxi">
+  <img src="fotos/taxi.jpg" alt="" loading="lazy">
+  <div class="largura">
+    <h2>Sem tempo de trazer? Tem táxi dog.</h2>
+    <p>O Esteticão busca o seu pet, dá aquele banho e leva de volta cheiroso. Pergunte se atendemos o seu bairro.</p>
+    <a class="botao rosa" href="https://wa.me/5519997586478?text=Ol%C3%A1!%20Voc%C3%AAs%20fazem%20t%C3%A1xi%20dog%20no%20meu%20bairro%3F" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar sobre o táxi dog</a>
+  </div>
+</section>
+
+<section class="info">
+  <div class="largura grade">
+    <div class="recomenda">
+      <div class="grande">100%</div>
+      <p>dos clientes que avaliaram recomendam o Esteticão no Facebook.</p>
+      <p style="font-size:15px;color:var(--marrom-2)">No site final entram os comentários dos tutores.</p>
+    </div>
+    <div>
+      <h2>Horários</h2>
+      <p class="agora-txt" id="agora"></p>
+      <table aria-label="Horário de funcionamento"><tbody id="tabela">
+        <tr data-dia="1"><th>Segunda</th><td>9h às 17h</td></tr>
+        <tr data-dia="2"><th>Terça</th><td>9h às 17h</td></tr>
+        <tr data-dia="3"><th>Quarta</th><td>9h às 17h</td></tr>
+        <tr data-dia="4"><th>Quinta</th><td>9h às 17h</td></tr>
+        <tr data-dia="5"><th>Sexta</th><td>9h às 17h</td></tr>
+        <tr data-dia="6"><th>Sábado</th><td>9h às 15h</td></tr>
+        <tr data-dia="0"><th>Domingo</th><td class="fechado">Fechado</td></tr>
+      </tbody></table>
+    </div>
+  </div>
+</section>
+
+<section class="onde">
+  <div class="largura grade">
+    <div>
+      <h2>Onde fica</h2>
+      <dl>
+        <dt>Endereço</dt><dd>Rua Áureo Laurindo da Silva, 164<br>Jardim dos Ipês – Sumaré, SP</dd>
+        <dt>WhatsApp</dt><dd><a href="https://wa.me/5519997586478" rel="noopener">(19) 99758-6478</a></dd>
+        <dt>Facebook</dt><dd><a href="https://www.facebook.com/esteticaobanhoetosasumare/" rel="noopener">Esteticão Banho e Tosa</a></dd>
+      </dl>
+      <a class="botao contorno" href="https://www.google.com/maps/dir/?api=1&destination=Rua%20%C3%81ureo%20Laurindo%20da%20Silva%2C%20164%2C%20Sumar%C3%A9%20-%20SP" rel="noopener">Traçar rota</a>
+    </div>
+    <iframe class="mapa" src="https://www.google.com/maps?q=Rua%20%C3%81ureo%20Laurindo%20da%20Silva%2C%20164%2C%20Jardim%20dos%20Ip%C3%AAs%2C%20Sumar%C3%A9%20-%20SP&output=embed" loading="lazy" title="Mapa: Esteticão Banho e Tosa" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="largura">
+    <h2>Perguntas frequentes</h2>
+    <details><summary>Atendem gatos?</summary><p>Sim. Gatos também tomam banho e fazem tosa no Esteticão.</p></details>
+    <details><summary>Como funciona o táxi dog?</summary><p>A gente busca o seu pet em casa e leva de volta depois do banho. Pergunte pelo WhatsApp se atendemos o seu bairro.</p></details>
+    <details><summary>Quanto custa?</summary><p>Depende do porte, do tipo de pelo e do serviço. Monte o agendamento acima e o Esteticão responde com o valor certinho.</p></details>
+    <details><summary>Qual o horário?</summary><p>De segunda a sexta, das 9h às 17h. Aos sábados, das 9h às 15h.</p></details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="largura"><span>Esteticão Banho e Tosa · Jardim dos Ipês, Sumaré – SP</span><span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span></div>
+</footer>
+<a class="flutuante" href="https://wa.me/5519997586478?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20banho." rel="noopener" aria-label="Chamar o Esteticão no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+
+<script>
+(function () {
+  const f = document.getElementById('form'), $ = (id) => document.getElementById(id);
+  const val = (n) => f.querySelector(`input[name=${n}]:checked`).value;
+  function atualizar() {
+    const pet = val('pet'), porte = val('porte'), serv = val('servico'), taxi = $('taxi').checked;
+    const txt = `${serv[0].toUpperCase() + serv.slice(1)} para ${pet} de porte ${porte}${taxi ? ', com táxi dog' : ''}`;
+    $('resumo').textContent = txt;
+    const msg = `Olá! Vim pelo site. Gostaria de agendar ${serv} para o meu ${pet} de porte ${porte}${taxi ? ', com táxi dog (buscar e levar)' : ''}. Qual o valor e os horários disponíveis?`;
+    $('enviar').href = 'https://wa.me/5519997586478?text=' + encodeURIComponent(msg);
+  }
+  f.addEventListener('change', atualizar); atualizar();
+
+  // Horário real (perfil do WhatsApp). 0 = domingo.
+  const T = { 0: null, 1: [540, 1020], 2: [540, 1020], 3: [540, 1020], 4: [540, 1020], 5: [540, 1020], 6: [540, 900] };
+  const NOMES = ['domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado'];
+  const p = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date()).map((x) => [x.type, x.value]));
+  const dia = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(p.weekday), agora = Number(p.hour) * 60 + Number(p.minute);
+  document.querySelector(`#tabela tr[data-dia="${dia}"]`)?.classList.add('hoje');
+  const h = (m) => `${Math.floor(m / 60)}h`;
+  if (T[dia] && agora >= T[dia][0] && agora < T[dia][1]) $('agora').textContent = `Aberto agora, até as ${h(T[dia][1])}`;
+  else { let i = 0, d = dia; while (i++ < 8) { if (i === 1 && T[d] && agora < T[d][0]) break; d = (d + 1) % 7; if (T[d]) break; }
+    const quando = d === dia ? 'hoje' : d === (dia + 1) % 7 ? 'amanhã' : NOMES[d];
+    $('agora').textContent = `Fechado agora. Abre ${quando} às ${h(T[d][0])}`; }
+})();
+</script>
+</body>
+</html>
