@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Ateliê de Doces Fátima Barros · Bem-casados em Limeira</title>
+<meta name="description" content="Modelo demonstrativo de site para o Ateliê de Doces Fátima Barros, bem-casados e doces finos em Limeira.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cacau:#5A3426; --cacau-escuro:#3B2118; --tiffany:#7CCFD1; --tiffany-claro:#E3F5F5; --branco:#FFFFFF; --nevoa:#F6F8F8; --texto:#3B2B25; --suave:#6F625C; --linha:#E5E0DD;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--branco);color:var(--texto);font:17px/1.65 'Nunito Sans',system-ui,sans-serif}
+a{color:inherit}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--tiffany);outline-offset:3px}
+.largura{max-width:1120px;margin:0 auto;padding:0 24px}
+.aviso{background:var(--cacau-escuro);color:#fff;font-size:14px;text-align:center;padding:8px 16px}
+.ico{width:1.2em;height:1.2em;flex:none}
+
+.botao{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:700;padding:15px 26px;border-radius:999px;font-size:17px;line-height:1.2;text-align:center;border:0;cursor:pointer;font-family:inherit}
+.botao.principal{background:var(--cacau);color:#fff}
+.botao.principal:hover{background:var(--cacau-escuro)}
+.botao.tiffany{background:var(--tiffany);color:var(--cacau-escuro)}
+.botao.tiffany:hover{background:#68c3c5}
+.botao.contorno{box-shadow:inset 0 0 0 2px currentColor;background:transparent}
+
+/* Banner */
+.topo{position:relative;min-height:min(90vh,840px);display:flex;align-items:center;overflow:hidden;isolation:isolate;color:#fff}
+.topo .fundo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center 55%;transform:scale(1.05);animation:aproxima 10s ease-out forwards}
+@keyframes aproxima{to{transform:scale(1)}}
+.topo::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(43,26,19,.88) 0%,rgba(43,26,19,.62) 50%,rgba(43,26,19,.12) 100%)}
+.topo .largura{width:100%;padding-top:80px;padding-bottom:80px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end}
+.topo .logo{width:110px;height:110px;border-radius:50%;background:#fff;padding:6px;margin-bottom:26px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.topo .logo img{width:100%;height:100%;border-radius:50%;object-fit:cover}
+.topo .chamada{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:clamp(22px,2.6vw,30px);color:var(--tiffany);margin:0 0 4px}
+.topo h1{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(54px,9vw,120px);line-height:.92;margin:0;letter-spacing:-.01em}
+.topo p.texto{font-size:clamp(18px,2vw,21px);color:#F3ECE8;max-width:40ch;margin:22px 0 0}
+.topo .acoes{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.topo .botao.contorno{color:#fff}
+.topo .botao.contorno:hover{background:rgba(255,255,255,.12)}
+/* fita de bem-casado: o laço que fecha o selo */
+.selo{position:relative;width:176px;height:176px;border-radius:50%;background:#fff;color:var(--cacau);display:grid;place-items:center;text-align:center;box-shadow:0 0 0 6px var(--tiffany),0 18px 40px rgba(0,0,0,.35);transform:rotate(-6deg)}
+.selo strong{display:block;font-family:'Cormorant Garamond',serif;font-size:58px;line-height:1}
+.selo .estrelas{color:#D9A441;letter-spacing:3px;font-size:14px}
+.selo small{display:block;font-size:13px;line-height:1.25;margin-top:4px;color:var(--suave)}
+@media (prefers-reduced-motion:reduce){.topo .fundo{animation:none;transform:none}}
+
+/* Fita divisória */
+.fita{height:18px;background:var(--tiffany);position:relative}
+.fita::after{content:"";position:absolute;left:50%;top:50%;width:46px;height:46px;transform:translate(-50%,-50%) rotate(45deg);background:var(--tiffany);box-shadow:0 0 0 6px #fff}
+
+section{padding:88px 0}
+h2{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(38px,5vw,56px);line-height:1.02;margin:0 0 12px;color:var(--cacau)}
+.intro{color:var(--suave);max-width:60ch;margin:0 0 40px}
+
+/* Ocasiões */
+.ocasioes ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.ocasioes li{padding:26px 22px;border-radius:18px;background:var(--nevoa);border-top:5px solid var(--tiffany)}
+.ocasioes strong{display:block;font-family:'Cormorant Garamond',serif;font-size:28px;line-height:1.1;color:var(--cacau);margin-bottom:6px}
+.ocasioes span{color:var(--suave);font-size:15px}
+
+/* Produtos com foto */
+.produtos{background:var(--tiffany-claro)}
+.produto{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;margin-bottom:56px}
+.produto:last-child{margin-bottom:0}
+.produto:nth-child(even) .foto{order:2}
+.produto .foto{border-radius:22px;overflow:hidden;aspect-ratio:4/3}
+.produto .foto img{width:100%;height:100%;object-fit:cover}
+.produto h3{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:38px;line-height:1.05;margin:0 0 10px;color:var(--cacau)}
+.produto p{margin:0 0 14px;color:var(--suave)}
+.produto ul{margin:0;padding-left:20px;color:var(--texto)}
+
+/* Calculadora: o elemento que vende */
+.calc{background:var(--cacau);color:#fff}
+.calc h2{color:#fff}
+.calc .intro{color:#E6D7D0}
+.calc-caixa{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:24px;overflow:hidden;background:#fff;color:var(--texto);box-shadow:0 30px 60px rgba(0,0,0,.25)}
+.calc-form{padding:36px}
+.calc-form label{display:block;font-weight:700;margin:0 0 8px}
+.calc-form .campo{margin-bottom:24px}
+.tipos{display:flex;flex-wrap:wrap;gap:8px}
+.tipos input{position:absolute;opacity:0;pointer-events:none}
+.tipos label{margin:0;font-weight:600;padding:10px 16px;border-radius:999px;border:2px solid var(--linha);cursor:pointer}
+.tipos input:checked + label{background:var(--tiffany-claro);border-color:var(--tiffany);color:var(--cacau)}
+.tipos input:focus-visible + label{outline:3px solid var(--tiffany);outline-offset:2px}
+.convidados{display:flex;align-items:center;gap:16px}
+.convidados input[type=range]{flex:1;accent-color:var(--cacau)}
+.convidados output{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:600;color:var(--cacau);min-width:3ch;text-align:right}
+.calc-form input[type=date]{font:inherit;padding:10px 14px;border:2px solid var(--linha);border-radius:12px;color:var(--texto);width:100%}
+.calc-resultado{background:var(--tiffany-claro);padding:36px;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.calc-resultado h3{font-family:'Cormorant Garamond',serif;font-size:30px;margin:0;color:var(--cacau)}
+.quantidades{list-style:none;margin:0;padding:0}
+.quantidades li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:14px 0;border-bottom:1px dashed rgba(90,52,38,.25)}
+.quantidades li[hidden]{display:none}
+.quantidades b{font-family:'Cormorant Garamond',serif;font-size:42px;line-height:1;color:var(--cacau)}
+.quantidades span{color:var(--suave)}
+.calc-resultado small{color:var(--suave);font-size:14px}
+
+/* Como funciona (sequência real) */
+.passos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:36px;counter-reset:p}
+.passos li{counter-increment:p}
+.passos li::before{content:counter(p);display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--tiffany);color:var(--cacau-escuro);font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;margin-bottom:14px}
+.passos strong{display:block;font-size:19px;margin-bottom:4px}
+.passos span{color:var(--suave)}
+
+/* Galeria */
+.galeria{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:12px;list-style:none;margin:0;padding:0}
+.galeria li{overflow:hidden;border-radius:16px;background:var(--nevoa)}
+.galeria li:first-child{grid-column:span 2;grid-row:span 2}
+.galeria img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.galeria li:hover img{transform:scale(1.04)}
+
+/* Contato */
+.contato{background:var(--nevoa)}
+.contato .largura{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:start}
+.contato dl{margin:8px 0 28px}
+.contato dt{color:var(--suave);font-size:14px;margin-top:18px}
+.contato dd{margin:2px 0 0;font-size:18px}
+.mapa{width:100%;aspect-ratio:4/3;border:0;border-radius:18px;background:var(--linha)}
+
+/* Perguntas */
+.faq details{border-bottom:1px solid var(--linha);max-width:820px}
+.faq summary{cursor:pointer;padding:18px 0;font-weight:700;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:26px;line-height:1;color:var(--tiffany)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin:0 0 18px;color:var(--suave);max-width:64ch}
+
+.final{position:relative;text-align:center;color:#fff;overflow:hidden;isolation:isolate}
+.final img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.final::before{content:"";position:absolute;inset:0;background:rgba(43,26,19,.78);z-index:-1}
+.final h2{color:#fff}
+.final p{color:#F3ECE8;margin:0 auto 28px;max-width:46ch}
+
+footer{padding:28px 0 96px;font-size:14px;color:var(--suave)}
+footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.flutuante{position:fixed;right:18px;bottom:18px;display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#073B1E;font-weight:700;text-decoration:none;padding:14px 18px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.25);font-size:15px;z-index:5}
+
+@media (max-width:900px){
+  .ocasioes ul{grid-template-columns:1fr 1fr}
+  .produto,.calc-caixa,.contato .largura{grid-template-columns:1fr}
+  .produto:nth-child(even) .foto{order:0}
+  .produto{gap:24px}
+  .passos{grid-template-columns:1fr;gap:28px}
+}
+@media (max-width:760px){
+  .topo{min-height:auto}
+  .topo .largura{grid-template-columns:1fr;padding-top:64px;padding-bottom:56px}
+  .topo::before{background:linear-gradient(0deg,rgba(43,26,19,.95) 0%,rgba(43,26,19,.72) 60%,rgba(43,26,19,.45) 100%)}
+  .selo{position:absolute;right:16px;top:22px;width:124px;height:124px}
+  .selo strong{font-size:40px}
+  .topo .logo{width:86px;height:86px}
+  .topo .acoes .botao{flex:1 1 100%}
+  section{padding:60px 0}
+  .ocasioes ul{grid-template-columns:1fr}
+  .calc-form,.calc-resultado{padding:24px}
+  .galeria{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
+  .galeria li:first-child{grid-row:span 1}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para o Ateliê de Doces Fátima Barros. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <img class="fundo" src="fotos/banner.jpg" alt="" fetchpriority="high">
+  <div class="largura">
+    <div>
+      <div class="logo"><img src="logo.jpg" alt="Logo do Ateliê de Doces Fátima Barros"></div>
+      <p class="chamada">Ateliê de Doces</p>
+      <h1>Fátima Barros</h1>
+      <p class="texto">Bem-casados e doces finos feitos à mão para casamentos, 15 anos e festas em Limeira.</p>
+      <div class="acoes">
+        <a class="botao tiffany" href="#calcular">Calcular minha encomenda</a>
+        <a class="botao contorno" href="https://wa.me/5519990027901?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir orçamento</a>
+      </div>
+    </div>
+    <div class="selo" role="img" aria-label="Nota 5,0 no Google"><div><strong>5,0</strong><span class="estrelas">★★★★★</span><small>nota no<br>Google</small></div></div>
+  </div>
+</header>
+<div class="fita" aria-hidden="true"></div>
+
+<main>
+<section class="ocasioes">
+  <div class="largura">
+    <h2>Para cada momento</h2>
+    <p class="intro">Do sim no altar ao chá de bebê, cada doce embalado no tom da festa.</p>
+    <ul>
+      <li><strong>Casamento</strong><span>Bem-casados para os convidados e doces finos para a mesa.</span></li>
+      <li><strong>15 anos</strong><span>Docinhos decorados nas cores da debutante.</span></li>
+      <li><strong>Batizado e chá</strong><span>Lembrancinhas delicadas para receber a família.</span></li>
+      <li><strong>Empresas</strong><span>Brindes para clientes, eventos e fim de ano.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="produtos">
+  <div class="largura">
+    <h2>O que sai do ateliê</h2>
+    <p class="intro">Fotos ilustrativas. No site final entram as fotos dos doces da Fátima.</p>
+    <article class="produto">
+      <div class="foto"><img src="fotos/g4.jpg" alt="Lembrancinhas embaladas com fita azul" loading="lazy"></div>
+      <div>
+        <h3>Bem-casados</h3>
+        <p>O doce que deseja felicidade aos noivos. Massa fofinha, recheio cremoso e embalagem fechada com fita na cor do casamento.</p>
+        <ul><li>Embalagem e fita personalizadas</li><li>Tag com o nome dos noivos</li><li>Para padrinhos e convidados</li></ul>
+      </div>
+    </article>
+    <article class="produto">
+      <div class="foto"><img src="fotos/g2.jpg" alt="Doces finos em taça de cristal" loading="lazy"></div>
+      <div>
+        <h3>Doces finos</h3>
+        <p>Docinhos de festa feitos à mão, em forminhas e acabamento que combinam com a decoração da mesa.</p>
+        <ul><li>Trufas, camafeus e bombons</li><li>Sabores tradicionais e especiais</li><li>Montados para a mesa de doces</li></ul>
+      </div>
+    </article>
+    <article class="produto">
+      <div class="foto"><img src="fotos/g5.jpg" alt="Lembrancinhas em tecido sobre bandeja de prata" loading="lazy"></div>
+      <div>
+        <h3>Lembrancinhas</h3>
+        <p>Um mimo para os convidados levarem para casa, embalado com o mesmo cuidado dos doces.</p>
+        <ul><li>Caixinhas e saquinhos com fita</li><li>Cores e tags da sua festa</li></ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="calc" id="calcular">
+  <div class="largura">
+    <h2>Quantos doces eu preciso?</h2>
+    <p class="intro">Responda três coisas e veja uma sugestão de quantidade. Depois é só mandar para a Fátima pelo WhatsApp.</p>
+    <div class="calc-caixa">
+      <form class="calc-form" id="calcForm" onsubmit="return false">
+        <div class="campo">
+          <label id="lblTipo">Tipo de festa</label>
+          <div class="tipos" role="radiogroup" aria-labelledby="lblTipo">
+            <input type="radio" name="tipo" id="t1" value="casamento" checked><label for="t1">Casamento</label>
+            <input type="radio" name="tipo" id="t2" value="15 anos"><label for="t2">15 anos</label>
+            <input type="radio" name="tipo" id="t3" value="aniversário"><label for="t3">Aniversário</label>
+            <input type="radio" name="tipo" id="t4" value="batizado ou chá"><label for="t4">Batizado ou chá</label>
+          </div>
+        </div>
+        <div class="campo">
+          <label for="conv">Número de convidados</label>
+          <div class="convidados"><input type="range" id="conv" min="20" max="400" step="10" value="150"><output id="convOut" for="conv">150</output></div>
+        </div>
+        <div class="campo">
+          <label for="data">Data da festa</label>
+          <input type="date" id="data">
+        </div>
+      </form>
+      <div class="calc-resultado" aria-live="polite">
+        <div>
+          <h3>Sugestão para a sua festa</h3>
+          <ul class="quantidades">
+            <li id="linhaBC"><span>Bem-casados</span><b id="qBC">165</b></li>
+            <li><span>Doces finos</span><b id="qDF">600</b></li>
+          </ul>
+        </div>
+        <a class="botao principal" id="btnCalc" href="#" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Enviar para a Fátima</a>
+        <small>Conta de referência: um bem-casado por convidado com 10% de folga, e de 3 a 5 doces finos por pessoa. A quantidade certa é combinada no orçamento.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="como">
+  <div class="largura">
+    <h2>Como encomendar</h2>
+    <p class="intro">Do primeiro contato até os doces na sua festa.</p>
+    <ol class="passos">
+      <li><strong>Conte sobre a festa</strong><span>Data, tipo de festa e número de convidados, pelo WhatsApp ou pela calculadora acima.</span></li>
+      <li><strong>Escolha sabores e embalagem</strong><span>A Fátima mostra as opções e monta o orçamento com as cores da sua festa.</span></li>
+      <li><strong>Receba os doces</strong><span>Retirada ou entrega combinada direto com o ateliê.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="largura">
+    <h2>Docinhos que viram decoração</h2>
+    <p class="intro">Fotos ilustrativas.</p>
+    <ul class="galeria">
+      <li><img src="fotos/g1.jpg" alt="Mesa de doces de casamento com bolo branco" loading="lazy"></li>
+      <li><img src="fotos/g3.jpg" alt="Trufas de chocolate polvilhadas com cacau" loading="lazy"></li>
+      <li><img src="fotos/g2.jpg" alt="Doces finos em taça de cristal" loading="lazy"></li>
+      <li><img src="fotos/g4.jpg" alt="Lembrancinhas com fita azul" loading="lazy"></li>
+      <li><img src="fotos/g5.jpg" alt="Lembrancinhas embrulhadas em tecido" loading="lazy"></li>
+    </ul>
+  </div>
+</section>
+
+<section class="contato" id="contato">
+  <div class="largura">
+    <div>
+      <h2>Fale com o ateliê</h2>
+      <dl>
+        <dt>WhatsApp</dt><dd><a href="https://wa.me/5519990027901" rel="noopener">(19) 99002-7901</a></dd>
+        <dt>Endereço</dt><dd>R. da Imprensa – Limeira, SP<br>13481-370</dd>
+        <dt>Atendimento</dt><dd>Segunda a sábado, das 9h às 18h</dd>
+      </dl>
+      <a class="botao principal" href="https://wa.me/5519990027901?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir orçamento</a>
+    </div>
+    <iframe class="mapa" src="https://www.google.com/maps?q=R.%20da%20Imprensa%2C%20Limeira%20-%20SP%2C%2013481-370&output=embed" loading="lazy" title="Mapa: R. da Imprensa, Limeira" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="largura">
+    <h2>Perguntas frequentes</h2>
+    <details><summary>Com quanto tempo de antecedência devo encomendar?</summary><p>Quanto antes, melhor, principalmente para casamentos e datas concorridas. Chame no WhatsApp com a data da festa que a Fátima confirma a disponibilidade.</p></details>
+    <details><summary>Dá para escolher a cor da fita e da embalagem?</summary><p>Sim. As embalagens são montadas nas cores e no estilo da sua festa.</p></details>
+    <details><summary>Quantos bem-casados preciso?</summary><p>O mais comum é um por convidado, com uma pequena folga. Use a calculadora acima para ter uma base.</p></details>
+    <details><summary>Qual o horário de atendimento?</summary><p>De segunda a sábado, das 9h às 18h, pelo WhatsApp (19) 99002-7901.</p></details>
+  </div>
+</section>
+
+<section class="final">
+  <img src="fotos/g1.jpg" alt="" loading="lazy">
+  <div class="largura">
+    <h2>Vamos adoçar a sua festa?</h2>
+    <p>Mande a data e o número de convidados e receba seu orçamento.</p>
+    <a class="botao tiffany" href="https://wa.me/5519990027901?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir orçamento pelo WhatsApp</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="largura"><span>Ateliê de Doces Fátima Barros · Limeira – SP</span><span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel, de Limeira.</span></div>
+</footer>
+<a class="flutuante" href="https://wa.me/5519990027901?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." rel="noopener" aria-label="Chamar o Ateliê Fátima Barros no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+
+<script>
+(function () {
+  const POR_PESSOA = { 'casamento': 4, '15 anos': 5, 'aniversário': 4, 'batizado ou chá': 3 };
+  const conv = document.getElementById('conv'), out = document.getElementById('convOut'), data = document.getElementById('data');
+  const qBC = document.getElementById('qBC'), qDF = document.getElementById('qDF'), linhaBC = document.getElementById('linhaBC'), btn = document.getElementById('btnCalc');
+  const arred = (n, m) => Math.ceil(n / m) * m;
+  function calcular() {
+    const tipo = document.querySelector('input[name=tipo]:checked').value;
+    const n = Number(conv.value);
+    out.textContent = n;
+    const bc = tipo === 'casamento' ? arred(n * 1.1, 5) : 0;
+    const df = arred(n * POR_PESSOA[tipo], 10);
+    linhaBC.hidden = !bc;
+    qBC.textContent = bc.toLocaleString('pt-BR');
+    qDF.textContent = df.toLocaleString('pt-BR');
+    const quando = data.value ? ' no dia ' + data.value.split('-').reverse().join('/') : '';
+    const itens = (bc ? `uns ${bc} bem-casados e ` : '') + `uns ${df} doces finos`;
+    const msg = `Olá! Vim pelo site. Quero um orçamento para ${tipo}${quando}, com ${n} convidados. Pensei em ${itens}.`;
+    btn.href = 'https://wa.me/5519990027901?text=' + encodeURIComponent(msg);
+  }
+  document.getElementById('calcForm').addEventListener('input', calcular);
+  document.getElementById('calcForm').addEventListener('change', calcular);
+  calcular();
+})();
+</script>
+</body>
+</html>
