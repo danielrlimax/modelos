@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Renovato Fisioterapia e Pilates · Santa Bárbara d'Oeste</title>
+<meta name="description" content="Modelo demonstrativo de site para a Renovato Fisioterapia e Pilates, no Jardim São Francisco, em Santa Bárbara d'Oeste.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal: #1592b8;      /* RENOV do logo */
+  --teal-escuro: #0d6f8e;
+  --agua: #8fd8e6;      /* ATO do logo */
+  --agua-clara: #dff3f7;
+  --tinta: #10303b;
+  --cinza: #a4a6a7;     /* fundo do logo */
+  --nevoa: #eef3f5;
+  --branco: #ffffff;
+  --estrela: #e3a21a;
+  --wa: #1fa855;
+  --raio: 6px;
+  --largura: 1160px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation: none !important; transition: none !important; } }
+body { margin: 0; background: var(--branco); color: var(--tinta); font: 400 1.0625rem/1.6 "Atkinson Hyperlegible", system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; }
+a { color: var(--teal-escuro); }
+:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; border-radius: 2px; }
+h1, h2, h3 { font-family: "Jost", sans-serif; font-weight: 300; line-height: 1.08; letter-spacing: -0.01em; margin: 0; }
+h2 { font-size: clamp(2rem, 4.2vw, 3.1rem); }
+h3 { font-size: 1.45rem; font-weight: 400; }
+p { margin: 0 0 1em; }
+.largura { width: min(var(--largura), 100% - 32px); margin-inline: auto; }
+.ico { width: 1.2em; height: 1.2em; flex: none; }
+.exemplo { font-size: .85rem; color: #5b6f76; font-style: italic; }
+
+.faixa-modelo { background: var(--tinta); color: #e8f4f7; font-size: .85rem; text-align: center; padding: 7px 16px; }
+
+/* Cabeçalho */
+.topo { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.96); border-bottom: 1px solid #dfe7ea; }
+.topo .largura { display: flex; align-items: center; gap: 24px; min-height: 68px; }
+.marca { display: block; width: 150px; height: 52px; background: var(--cinza); border-radius: 3px; overflow: hidden; flex: none; }
+.marca img { width: 100%; height: auto; margin-top: -31%; }
+.topo nav { display: flex; gap: 22px; margin-left: auto; font-size: .95rem; }
+.topo nav a { color: var(--tinta); text-decoration: none; }
+.topo nav a:hover { color: var(--teal-escuro); text-decoration: underline; text-underline-offset: 4px; }
+.botao { display: inline-flex; align-items: center; gap: 9px; padding: 13px 20px; border-radius: var(--raio); font-weight: 700; text-decoration: none; border: 0; cursor: pointer; font: inherit; font-weight: 700; line-height: 1.2; }
+.botao.wa { background: var(--wa); color: #fff; }
+.botao.wa:hover { background: #178c46; }
+.botao.linha { background: transparent; color: var(--tinta); box-shadow: inset 0 0 0 2px var(--tinta); }
+.botao.linha:hover { background: var(--tinta); color: #fff; }
+.topo .botao { padding: 10px 16px; font-size: .95rem; }
+
+/* Hero */
+.hero { position: relative; min-height: calc(100svh - 100px); display: flex; align-items: flex-start; overflow: hidden; background: #dde3e6; }
+.hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 72% 22%; }
+.hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(232,238,241,.92) 0%, rgba(232,238,241,.72) 34%, rgba(232,238,241,0) 58%); z-index: 1; }
+.hero .largura { position: relative; z-index: 2; padding: clamp(40px, 8vh, 90px) 0 48px; }
+.hero-texto { max-width: 33rem; }
+.hero h1 { font-size: clamp(2.6rem, 5.6vw, 4.6rem); margin-bottom: 20px; }
+
+.hero .lead { font-size: 1.15rem; max-width: 29rem; }
+.acoes { display: flex; flex-wrap: wrap; gap: 12px; margin: 26px 0 30px; }
+.nota-hero { display: inline-flex; align-items: center; gap: 14px; background: var(--branco); padding: 12px 16px 12px 12px; border-radius: var(--raio); text-decoration: none; color: var(--tinta); box-shadow: 0 1px 0 #c9d5d9; }
+.nota-hero strong { font-family: "Jost"; font-weight: 500; font-size: 2rem; line-height: 1; }
+.estrelas { color: var(--estrela); letter-spacing: 2px; font-size: 1.05rem; line-height: 1; }
+.nota-hero small { display: block; font-size: .88rem; color: #3f5861; }
+
+/* Prova social */
+.prova { background: var(--teal-escuro); color: #fff; }
+.prova .largura { display: grid; grid-template-columns: auto 1fr auto; gap: 40px; align-items: center; padding: 56px 0; }
+.prova .grande { font-family: "Jost"; font-weight: 300; font-size: clamp(5rem, 12vw, 9rem); line-height: .85; }
+.prova .grande .estrelas { display: block; font-size: 1.6rem; letter-spacing: 6px; margin-top: 14px; color: #ffd36b; }
+.prova h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); margin-bottom: 12px; }
+.prova p { color: #d5eef5; max-width: 34rem; margin: 0; }
+.prova .botao { background: #fff; color: var(--teal-escuro); }
+.prova .botao:hover { background: var(--agua-clara); }
+
+/* Serviços */
+.secao { padding: clamp(64px, 9vw, 112px) 0; }
+.cabeca { max-width: 40rem; margin-bottom: 44px; }
+.cabeca p { font-size: 1.1rem; margin-top: 14px; color: #34505a; }
+.duas { display: grid; grid-template-columns: 1.15fr .85fr; gap: 28px; }
+.porta { position: relative; border-radius: var(--raio); overflow: hidden; color: var(--tinta); background: var(--nevoa); display: grid; grid-template-rows: auto 1fr; }
+.porta img { width: 100%; aspect-ratio: 16/10; object-fit: cover; }
+.porta.pilates img { aspect-ratio: 4/3.4; }
+.porta .corpo { padding: 28px 30px 30px; }
+.porta h3 { font-size: 2rem; font-weight: 300; margin-bottom: 10px; }
+.porta ul { list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.porta li { font-size: .92rem; background: #fff; padding: 5px 11px; border-radius: 3px; border-left: 3px solid var(--agua); }
+
+/* Mapa do corpo */
+.onde { background: var(--nevoa); }
+.onde-grade { display: grid; grid-template-columns: minmax(260px, 380px) 1fr; gap: clamp(28px, 5vw, 72px); align-items: start; }
+.corpo-mapa { position: relative; aspect-ratio: 300/600; max-width: 340px; margin-inline: auto; width: 100%; }
+.corpo-mapa svg { width: 100%; height: 100%; }
+.silhueta { fill: #d3e1e6; }
+.ponto { position: absolute; transform: translate(-50%, -50%); width: 34px; height: 34px; border-radius: 50%; border: 2px solid var(--teal); background: rgba(255,255,255,.9); cursor: pointer; padding: 0; display: grid; place-items: center; }
+.ponto::after { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--teal); transition: transform .2s; }
+.ponto:hover::after { transform: scale(1.4); }
+.ponto[aria-pressed="true"] { background: var(--teal); box-shadow: 0 0 0 7px rgba(21,146,184,.22); }
+.ponto[aria-pressed="true"]::after { background: #fff; }
+.ponto .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.legenda-ponto { position: absolute; left: 50%; bottom: -6px; transform: translateX(-50%); font-size: .85rem; color: #4b636b; white-space: nowrap; }
+.painel { background: #fff; border-radius: var(--raio); padding: clamp(22px, 3vw, 34px); box-shadow: 0 1px 0 #cfdde2; }
+.regioes { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; padding: 0; border: 0; }
+.regioes legend, .campo legend, .campo label.rot { font-weight: 700; margin-bottom: 10px; display: block; padding: 0; }
+.chip { font: inherit; font-size: .95rem; padding: 8px 13px; border-radius: 4px; border: 1px solid #b9cdd4; background: #fff; color: var(--tinta); cursor: pointer; }
+.chip:hover { border-color: var(--teal); }
+.chip[aria-pressed="true"] { background: var(--tinta); border-color: var(--tinta); color: #fff; }
+.explica { border-left: 3px solid var(--agua); padding: 4px 0 4px 16px; margin: 0 0 24px; min-height: 5.5em; }
+.explica h3 { font-size: 1.5rem; margin-bottom: 6px; }
+.explica p { margin: 0 0 4px; }
+.campo { border: 0; padding: 0; margin: 0 0 20px; }
+.opcoes { display: flex; flex-wrap: wrap; gap: 8px; }
+.opcoes label { position: relative; }
+.opcoes input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+.opcoes span { display: inline-block; padding: 8px 13px; border: 1px solid #b9cdd4; border-radius: 4px; font-size: .95rem; }
+.opcoes input:checked + span { background: var(--agua-clara); border-color: var(--teal); box-shadow: inset 0 0 0 1px var(--teal); }
+.opcoes input:focus-visible + span { outline: 3px solid var(--teal); outline-offset: 2px; }
+.campo input[type="text"] { font: inherit; width: 100%; max-width: 22rem; padding: 10px 12px; border: 1px solid #b9cdd4; border-radius: 4px; }
+.previa { background: #e7f6ee; border-radius: var(--raio); padding: 14px 16px; font-size: .95rem; margin: 6px 0 18px; color: #1d3f2c; }
+.previa b { display: block; font-size: .85rem; color: #3b6a4f; margin-bottom: 4px; font-weight: 700; }
+
+/* Como funciona */
+.passos { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 2px solid var(--tinta); }
+.passos li { padding: 22px 22px 0 0; }
+.passos li + li { padding-left: 22px; border-left: 1px solid #d5e0e4; }
+.passos .n { font-family: "Jost"; font-weight: 300; font-size: 2.6rem; color: var(--teal); line-height: 1; display: block; margin-bottom: 12px; }
+.passos h3 { margin-bottom: 8px; }
+.passos p { color: #3b555e; font-size: 1rem; }
+
+/* Galeria */
+.galeria { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: 260px 260px; gap: 10px; }
+.galeria figure { margin: 0; overflow: hidden; border-radius: 4px; background: var(--nevoa); }
+.galeria img { width: 100%; height: 100%; object-fit: cover; }
+.galeria .g1 { grid-row: span 2; }
+.galeria .g4 { grid-column: span 2; }
+
+/* Horários e endereço */
+.visita { background: var(--tinta); color: #e9f3f6; }
+.visita h2 { color: #fff; }
+.visita .grade { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 64px); }
+.status { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1.1rem; margin: 18px 0 26px; }
+.status::before { content: ""; width: 12px; height: 12px; border-radius: 50%; background: #4fd08a; box-shadow: 0 0 0 5px rgba(79,208,138,.2); }
+.status.fechado::before { background: #f08a6b; box-shadow: 0 0 0 5px rgba(240,138,107,.2); }
+.colunas { display: grid; grid-template-columns: 2.4rem repeat(7, 1fr); gap: 8px; align-items: start; }
+.escala { position: relative; height: 210px; font-size: .75rem; color: #8fb0bb; }
+.escala span { position: absolute; right: 0; transform: translateY(-50%); }
+.escala span:first-child { transform: none; } .escala span:last-child { transform: translateY(-100%); }
+.col { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.col .trilho { position: relative; width: 100%; max-width: 46px; height: 210px; background: rgba(255,255,255,.06); border-radius: 3px; background-image: repeating-linear-gradient(180deg, transparent 0 41px, rgba(255,255,255,.08) 41px 42px); }
+.col .aberto { position: absolute; left: 0; right: 0; background: var(--agua); border-radius: 3px; opacity: .55; }
+.col.hoje .aberto { opacity: 1; background: var(--agua); }
+.col .agora { position: absolute; left: -4px; right: -4px; height: 2px; background: #fff; }
+.col b { font-size: .85rem; font-weight: 400; }
+.col.hoje b { font-weight: 700; color: #fff; }
+.col small { font-size: .72rem; color: #9fc0ca; text-align: center; line-height: 1.25; }
+.horas-lista { margin: 22px 0 0; padding: 0; list-style: none; font-size: .98rem; }
+.horas-lista li { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,.1); max-width: 26rem; }
+.endereco { font-style: normal; font-size: 1.1rem; margin: 18px 0 20px; }
+.mapa { width: 100%; height: 300px; border: 0; border-radius: var(--raio); background: #24444f; }
+.contatos { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.visita .botao.linha { color: #fff; box-shadow: inset 0 0 0 2px #fff; }
+.visita .botao.linha:hover { background: #fff; color: var(--tinta); }
+.visita a.email { color: var(--agua); }
+
+/* Chamada final */
+.final { position: relative; padding: clamp(80px, 12vw, 140px) 0; overflow: hidden; color: #fff; }
+.final > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 55%; }
+.final::before { content: ""; position: absolute; inset: 0; background: rgba(13,70,90,.72); z-index: 1; }
+.final .largura { position: relative; z-index: 2; max-width: 40rem; margin-left: max(16px, (100% - var(--largura)) / 2); }
+.final h2 { color: #fff; margin-bottom: 16px; }
+.final p { font-size: 1.15rem; color: #e1f3f8; }
+
+footer { background: #0b232c; color: #9fbcc6; font-size: .9rem; padding: 26px 0 90px; }
+footer .largura { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+
+.flutuante { position: fixed; right: 18px; bottom: 18px; z-index: 30; display: flex; align-items: center; gap: 8px; background: var(--wa); color: #fff; font-weight: 700; text-decoration: none; padding: 14px 18px; border-radius: 30px; box-shadow: 0 6px 20px rgba(0,0,0,.25); }
+.flutuante .ico { width: 1.5em; height: 1.5em; }
+.flutuante:hover { background: #178c46; }
+
+@media (max-width: 980px) {
+  .topo nav { display: none; }
+  .topo .botao { margin-left: auto; }
+  .duas, .onde-grade, .visita .grade { grid-template-columns: 1fr; }
+  .passos { grid-template-columns: 1fr 1fr; }
+  .passos li:nth-child(3) { padding-left: 0; border-left: 0; }
+  .prova .largura { grid-template-columns: auto 1fr; }
+  .prova .botao { grid-column: 1 / -1; justify-self: start; }
+  .corpo-mapa { max-width: 260px; }
+}
+@media (max-width: 860px) {
+  .hero > img { object-position: 78% 22%; }
+  .hero::before { background: linear-gradient(90deg, rgba(232,238,241,.94) 0%, rgba(232,238,241,.8) 42%, rgba(232,238,241,0) 68%); }
+  .hero-texto { max-width: 25rem; }
+  .hero h1 { font-size: clamp(2.4rem, 6vw, 3.3rem); }
+}
+@media (max-width: 640px) {
+  .hero { display: block; min-height: 0; background: var(--nevoa); }
+  .hero > img { position: relative; height: 300px; object-position: 66% 30%; }
+  .hero::before { display: none; }
+  .hero .largura { padding: 28px 0 40px; }
+  .prova .largura { grid-template-columns: 1fr; gap: 22px; padding: 44px 0; }
+  .passos { grid-template-columns: 1fr; }
+  .passos li, .passos li + li { padding: 20px 0 10px; border-left: 0; border-bottom: 1px solid #d5e0e4; }
+  .galeria { grid-template-columns: 1fr 1fr; grid-template-rows: 220px 160px 160px; }
+  .galeria .g1 { grid-row: auto; grid-column: span 2; }
+  .galeria .g4 { grid-column: span 2; }
+  .marca { width: 124px; height: 44px; }
+  .topo .botao span { display: none; }
+  .flutuante span { display: none; }
+  .flutuante { padding: 14px; }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+</svg>
+
+<div class="faixa-modelo">Modelo demonstrativo feito por Daniel para Renovato Fisioterapia e Pilates. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <div class="largura">
+    <a class="marca" href="#inicio" aria-label="Renovato Fisioterapia e Pilates, início"><img src="logo.jpg" alt="Renovato Fisioterapia e Pilates"></a>
+    <nav aria-label="Seções">
+      <a href="#servicos">Fisioterapia e pilates</a>
+      <a href="#onde-doi">Onde dói?</a>
+      <a href="#como-funciona">Primeira visita</a>
+      <a href="#visita">Horários e endereço</a>
+    </nav>
+    <a class="botao wa" href="https://wa.me/5519997301781?text=Ol%C3%A1%2C%20Renovato!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg><span>Agendar avaliação</span></a>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero" aria-labelledby="titulo">
+  <img src="fotos/hero.jpg" alt="Fisioterapeuta avaliando o joelho de um paciente deitado na maca" fetchpriority="high">
+  <div class="largura">
+    <div class="hero-texto">
+      <h1 id="titulo">Volte a se mexer sem dor.</h1>
+      <p class="lead">Fisioterapia e pilates no mesmo endereço, no Jardim São Francisco. Primeiro a gente trata o que dói; depois fortalece para não voltar.</p>
+      <div class="acoes">
+        <a class="botao wa" href="https://wa.me/5519997301781?text=Ol%C3%A1%2C%20Renovato!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Agendar pelo WhatsApp</a>
+        <a class="botao linha" href="#onde-doi">Mostrar onde dói</a>
+      </div>
+      <a class="nota-hero" href="https://www.google.com/maps/search/?api=1&query=Renovato%20Fisioterapia%20e%20Pilates%20Rua%20Tupis%20833%20Santa%20B%C3%A1rbara%20d%27Oeste" target="_blank" rel="noopener">
+        <strong>5,0</strong>
+        <span><span class="estrelas" aria-hidden="true">★★★★★</span><small>Mais de 100 avaliações no Google</small></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="prova" aria-labelledby="prova-titulo">
+  <div class="largura">
+    <div class="grande" aria-label="Nota 5,0 de 5">5,0<span class="estrelas" aria-hidden="true">★★★★★</span></div>
+    <div>
+      <h2 id="prova-titulo">Nota máxima, com mais de 100 avaliações no Google.</h2>
+      <p>Não é uma nota de poucas pessoas: são mais de cem pacientes e alunos de Santa Bárbara d'Oeste que deram cinco estrelas. Leia o que escreveram direto no Google.</p>
+    </div>
+    <a class="botao" href="https://www.google.com/maps/search/?api=1&query=Renovato%20Fisioterapia%20e%20Pilates%20Rua%20Tupis%20833%20Santa%20B%C3%A1rbara%20d%27Oeste" target="_blank" rel="noopener">Ver avaliações no Google</a>
+  </div>
+</section>
+
+<section class="secao" id="servicos" aria-labelledby="serv-titulo">
+  <div class="largura">
+    <div class="cabeca">
+      <h2 id="serv-titulo">Uma clínica de fisioterapia e um estúdio de pilates.</h2>
+      <p>Você não precisa escolher entre tratar e treinar. Na Renovato, a reabilitação e o pilates acontecem no mesmo lugar e conversam entre si.</p>
+    </div>
+    <div class="duas">
+      <article class="porta">
+        <img src="fotos/ombro.jpg" alt="Fisioterapeuta examinando o ombro de uma paciente" loading="lazy">
+        <div class="corpo">
+          <h3>Fisioterapia</h3>
+          <p>Avaliação, tratamento da dor e reabilitação depois de lesões ou cirurgias, com sessões pensadas para o seu caso.</p>
+          <ul aria-label="Exemplos de atendimento">
+            <li>Dor na coluna</li><li>Pós-operatório</li><li>Lesões esportivas</li><li>Ortopedia</li><li>Postura</li>
+          </ul>
+          <p class="exemplo" style="margin-top:16px">Texto de exemplo. No site final entram as especialidades reais da clínica.</p>
+        </div>
+      </article>
+      <article class="porta pilates">
+        <img src="fotos/reformer.jpg" alt="Aluna fazendo exercício de pilates no aparelho reformer" loading="lazy">
+        <div class="corpo">
+          <h3>Pilates</h3>
+          <p>Aulas para fortalecer o corpo, ganhar mobilidade e manter longe a dor que já foi tratada.</p>
+          <ul aria-label="Exemplos de aulas">
+            <li>Pilates em aparelhos</li><li>Iniciantes</li><li>Prevenção</li>
+          </ul>
+          <p class="exemplo" style="margin-top:16px">Texto de exemplo. No site final entram as modalidades e planos reais.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="secao onde" id="onde-doi" aria-labelledby="onde-titulo">
+  <div class="largura">
+    <div class="cabeca">
+      <h2 id="onde-titulo">Onde dói?</h2>
+      <p>Toque no ponto do corpo, diga o que você procura e o melhor período. A mensagem para o WhatsApp da Renovato sai pronta.</p>
+    </div>
+    <div class="onde-grade">
+      <div class="corpo-mapa" id="corpoMapa">
+        <svg viewBox="0 0 300 600" aria-hidden="true">
+          <g class="silhueta">
+            <circle cx="150" cy="58" r="38"/>
+            <rect x="136" y="92" width="28" height="26" rx="8"/>
+            <path d="M92 124 Q150 106 208 124 Q222 130 222 150 L214 300 Q212 322 196 326 L104 326 Q88 322 86 300 L78 150 Q78 130 92 124Z"/>
+            <path d="M84 132 Q64 140 60 168 L46 300 Q44 316 54 318 Q64 320 66 304 L86 190Z"/>
+            <path d="M216 132 Q236 140 240 168 L254 300 Q256 316 246 318 Q236 320 234 304 L214 190Z"/>
+            <ellipse cx="50" cy="334" rx="13" ry="20"/>
+            <ellipse cx="250" cy="334" rx="13" ry="20"/>
+            <path d="M104 318 L148 318 L144 470 Q143 486 128 486 Q114 486 113 470Z"/>
+            <path d="M152 318 L196 318 L187 470 Q186 486 172 486 Q157 486 156 470Z"/>
+            <path d="M113 476 L143 476 L140 560 Q140 572 128 572 Q117 572 117 560Z"/>
+            <path d="M157 476 L187 476 L183 560 Q183 572 172 572 Q160 572 160 560Z"/>
+            <path d="M112 566 L140 566 L142 586 Q142 594 132 594 L104 594 Q96 594 100 586Z"/>
+            <path d="M160 566 L188 566 L200 586 Q204 594 196 594 L168 594 Q158 594 158 586Z"/>
+          </g>
+        </svg>
+        <!-- posições em % do desenho -->
+        <button class="ponto" type="button" data-r="cervical" style="left:50%;top:17.5%"><span class="sr">Pescoço e cervical</span></button>
+        <button class="ponto" type="button" data-r="ombro" style="left:32%;top:24.5%"><span class="sr">Ombro</span></button>
+        <button class="ponto" type="button" data-r="coluna" style="left:50%;top:43%"><span class="sr">Coluna e lombar</span></button>
+        <button class="ponto" type="button" data-r="punho" style="left:83%;top:55.5%"><span class="sr">Punho e mão</span></button>
+        <button class="ponto" type="button" data-r="quadril" style="left:39%;top:53%"><span class="sr">Quadril</span></button>
+        <button class="ponto" type="button" data-r="joelho" style="left:57%;top:79.5%"><span class="sr">Joelho</span></button>
+        <button class="ponto" type="button" data-r="tornozelo" style="left:42.5%;top:95%"><span class="sr">Tornozelo e pé</span></button>
+      </div>
+
+      <form class="painel" id="montador" onsubmit="return false">
+        <fieldset class="regioes" id="chips">
+          <legend>Região</legend>
+        </fieldset>
+        <div class="explica" id="explica" aria-live="polite">
+          <h3>Escolha um ponto</h3>
+          <p>Toque no desenho ou numa das regiões acima. Se não sente dor e quer só fazer pilates, escolha “Quero só pilates”.</p>
+        </div>
+        <fieldset class="campo">
+          <legend>O que você procura</legend>
+          <div class="opcoes">
+            <label><input type="radio" name="obj" value="aliviar uma dor" checked><span>Aliviar uma dor</span></label>
+            <label><input type="radio" name="obj" value="me recuperar de uma lesão ou cirurgia"><span>Recuperar de lesão ou cirurgia</span></label>
+            <label><input type="radio" name="obj" value="fazer pilates para fortalecer e prevenir"><span>Pilates para fortalecer</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="campo">
+          <legend>Melhor período</legend>
+          <div class="opcoes">
+            <label><input type="radio" name="per" value="de manhã" checked><span>Manhã (a partir das 6h)</span></label>
+            <label><input type="radio" name="per" value="à tarde"><span>Tarde</span></label>
+            <label><input type="radio" name="per" value="à noite"><span>Noite (até 21h)</span></label>
+            <label><input type="radio" name="per" value="no sábado de manhã"><span>Sábado, 8h às 11h</span></label>
+          </div>
+        </fieldset>
+        <div class="campo">
+          <label class="rot" for="nome">Seu nome (opcional)</label>
+          <input type="text" id="nome" autocomplete="given-name" placeholder="Como podemos te chamar?">
+        </div>
+        <div class="previa" aria-live="polite"><b>Mensagem que vai ser enviada</b><span id="previa"></span></div>
+        <a class="botao wa" id="enviar" href="https://wa.me/5519997301781" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Enviar no WhatsApp</a>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="secao" id="como-funciona" aria-labelledby="como-titulo">
+  <div class="largura">
+    <div class="cabeca">
+      <h2 id="como-titulo">Como é a primeira visita</h2>
+      <p class="exemplo">Texto de exemplo. No site final entra o passo a passo real da Renovato.</p>
+    </div>
+    <ol class="passos">
+      <li><span class="n">1</span><h3>Você chama no WhatsApp</h3><p>Conta o que está sentindo e escolhe um horário que cabe na sua rotina.</p></li>
+      <li><span class="n">2</span><h3>Avaliação</h3><p>O fisioterapeuta conversa com você, examina o movimento e entende a origem da dor.</p></li>
+      <li><span class="n">3</span><h3>Plano de tratamento</h3><p>Você sai sabendo o que vai ser feito, com que frequência e o que esperar.</p></li>
+      <li><span class="n">4</span><h3>Fisioterapia e pilates</h3><p>Quando a dor melhora, o pilates entra para fortalecer e manter o resultado.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="secao" style="padding-top:0" aria-label="Fotos">
+  <div class="largura">
+    <div class="galeria">
+      <figure class="g1"><img src="fotos/estudio.jpg" alt="Estúdio de pilates com aparelhos reformer" loading="lazy"></figure>
+      <figure><img src="fotos/halter.jpg" alt="Exercício de reabilitação com halteres leves" loading="lazy"></figure>
+      <figure><img src="fotos/perna.jpg" alt="Exercício de pernas no reformer" loading="lazy"></figure>
+      <figure class="g4"><img src="fotos/ultrassom.jpg" alt="Fisioterapeuta usando aparelho no antebraço de um paciente" loading="lazy"></figure>
+    </div>
+    <p class="exemplo" style="margin-top:12px">Fotos ilustrativas. No site final entram fotos da clínica e do estúdio.</p>
+  </div>
+</section>
+
+<section class="secao visita" id="visita" aria-labelledby="visita-titulo">
+  <div class="largura grade">
+    <div>
+      <h2 id="visita-titulo">Horários</h2>
+      <p class="status" id="statusAgora"><span>Conferindo o horário…</span></p>
+      <div class="colunas" role="img" aria-label="Segunda a sexta das 6h às 21h, sábado das 8h às 11h, domingo fechado">
+        <div class="escala" aria-hidden="true"><span style="top:0">6h</span><span style="top:20%">9h</span><span style="top:40%">12h</span><span style="top:60%">15h</span><span style="top:80%">18h</span><span style="top:100%">21h</span></div>
+        <div id="cols" style="display:contents"></div>
+      </div>
+      <ul class="horas-lista">
+        <li><span>Segunda a sexta</span><b>6h às 21h</b></li>
+        <li><span>Sábado</span><b>8h às 11h</b></li>
+        <li><span>Domingo</span><b>Fechado</b></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Onde estamos</h2>
+      <address class="endereco">Rua Tupis, 833, Jardim São Francisco<br>Santa Bárbara d'Oeste – SP</address>
+      <iframe class="mapa" src="https://www.google.com/maps?q=Rua%20Tupis%2C%20833%20-%20Jardim%20S%C3%A3o%20Francisco%2C%20Santa%20B%C3%A1rbara%20d%27Oeste%20-%20SP&output=embed" loading="lazy" title="Mapa: Renovato Fisioterapia e Pilates" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="contatos">
+        <a class="botao wa" href="https://wa.me/5519997301781?text=Ol%C3%A1%2C%20Renovato!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>(19) 99730-1781</a>
+        <a class="botao linha" href="https://www.google.com/maps/dir/?api=1&destination=Rua%20Tupis%2C%20833%20-%20Jardim%20S%C3%A3o%20Francisco%2C%20Santa%20B%C3%A1rbara%20d%27Oeste%20-%20SP" target="_blank" rel="noopener">Traçar rota</a>
+      </div>
+      <p style="margin-top:18px">E-mail: <a class="email" href="mailto:renovatofisioterapia@outlook.com">renovatofisioterapia@outlook.com</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="final" aria-labelledby="final-titulo">
+  <img src="fotos/costas.jpg" alt="" loading="lazy">
+  <div class="largura">
+    <h2 id="final-titulo">A dor não precisa fazer parte da rotina.</h2>
+    <p>Atendimento de segunda a sexta das 6h às 21h, e sábado de manhã. Chame no WhatsApp e marque sua avaliação.</p>
+    <a class="botao wa" href="https://wa.me/5519997301781?text=Ol%C3%A1%2C%20Renovato!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Agendar avaliação</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="largura"><span>Renovato Fisioterapia e Pilates · Rua Tupis, 833, Jardim São Francisco, Santa Bárbara d'Oeste – SP</span><span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span></div>
+</footer>
+<a class="flutuante" href="https://wa.me/5519997301781?text=Ol%C3%A1%2C%20Renovato!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." rel="noopener" aria-label="Chamar a Renovato no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg><span>WhatsApp</span></a>
+
+<script>
+(function () {
+  // Mapa do corpo -> mensagem de WhatsApp
+  const REG = {
+    cervical: { nome: 'Pescoço e cervical', msg: 'no pescoço', txt: 'Tensão de quem passa o dia no computador ou no celular, torcicolo, dor que sobe para a cabeça.' },
+    ombro: { nome: 'Ombro', msg: 'no ombro', txt: 'Dor para levantar o braço, tendinite, recuperação depois de lesão ou cirurgia no ombro.' },
+    coluna: { nome: 'Coluna e lombar', msg: 'na coluna', txt: 'Dor nas costas e na lombar, hérnia de disco, postura. A queixa mais comum de quem procura fisioterapia.' },
+    punho: { nome: 'Punho e mão', msg: 'no punho', txt: 'Dor por esforço repetitivo, formigamento, recuperação depois de fratura ou imobilização.' },
+    quadril: { nome: 'Quadril', msg: 'no quadril', txt: 'Dor ao caminhar ou sentar por muito tempo, perda de mobilidade, pós-operatório de quadril.' },
+    joelho: { nome: 'Joelho', msg: 'no joelho', txt: 'Dor ao subir escada ou agachar, lesão de ligamento ou menisco, pós-operatório de joelho.' },
+    tornozelo: { nome: 'Tornozelo e pé', msg: 'no tornozelo', txt: 'Entorse, dor na sola do pé, recuperação para voltar a caminhar e correr com segurança.' },
+    pilates: { nome: 'Quero só pilates', msg: null, txt: 'Sem dor no momento? O pilates fortalece, melhora a postura e ajuda a prevenir lesões.' },
+  };
+  const NOTA = '<p class="exemplo">Texto de exemplo. No site final, a Renovato revisa cada explicação.</p>';
+  const chips = document.getElementById('chips');
+  Object.entries(REG).forEach(([k, r]) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'chip'; b.dataset.r = k; b.textContent = r.nome; b.setAttribute('aria-pressed', 'false');
+    chips.appendChild(b);
+  });
+  let atual = null;
+  const form = document.getElementById('montador');
+  const exp = document.getElementById('explica');
+  function escolher(k) {
+    atual = k;
+    document.querySelectorAll('[data-r]').forEach((el) => el.setAttribute('aria-pressed', String(el.dataset.r === k)));
+    exp.innerHTML = `<h3>${REG[k].nome}</h3><p>${REG[k].txt}</p>${NOTA}`;
+    if (k === 'pilates') form.querySelector('input[name="obj"][value^="fazer pilates"]').checked = true;
+    else if (form.obj.value.startsWith('fazer pilates')) form.querySelector('input[name="obj"][value="aliviar uma dor"]').checked = true;
+    montar();
+  }
+  document.querySelectorAll('[data-r]').forEach((el) => el.addEventListener('click', () => escolher(el.dataset.r)));
+  function montar() {
+    const nome = document.getElementById('nome').value.trim();
+    const obj = form.obj.value, per = form.per.value;
+    let m = `Olá, Renovato!${nome ? ` Aqui é ${nome}.` : ''} Vim pelo site.`;
+    const r = atual && REG[atual].msg;
+    if (r && obj === 'aliviar uma dor') m += ` Sinto dor ${r} e gostaria de agendar uma avaliação.`;
+    else if (r && obj.startsWith('me recuperar')) m += ` Preciso ${obj} ${r} e gostaria de agendar uma avaliação.`;
+    else if (r) m += ` Tenho uma queixa ${r} e quero ${obj}.`;
+    else if (obj.startsWith('fazer pilates')) m += ' Quero fazer pilates para fortalecer e prevenir.';
+    else m += ` Quero ${obj} e gostaria de agendar uma avaliação.`;
+    m += ` Prefiro horários ${per}.`;
+    document.getElementById('previa').textContent = m;
+    document.getElementById('enviar').href = 'https://wa.me/5519997301781?text=' + encodeURIComponent(m);
+  }
+  form.addEventListener('input', montar); form.addEventListener('change', montar);
+  montar();
+
+  // Horário real (perfil do WhatsApp), em minutos. Escala do gráfico: 6h às 21h.
+  const DIAS = [
+    { n: 1, c: 'Seg', nome: 'segunda', t: [360, 1260] }, { n: 2, c: 'Ter', nome: 'terça', t: [360, 1260] },
+    { n: 3, c: 'Qua', nome: 'quarta', t: [360, 1260] }, { n: 4, c: 'Qui', nome: 'quinta', t: [360, 1260] },
+    { n: 5, c: 'Sex', nome: 'sexta', t: [360, 1260] }, { n: 6, c: 'Sáb', nome: 'sábado', t: [480, 660] },
+    { n: 0, c: 'Dom', nome: 'domingo', t: null },
+  ];
+  const INI = 360, FIM = 1260, pct = (m) => ((m - INI) / (FIM - INI)) * 100;
+  const h = (m) => `${Math.floor(m / 60)}h`;
+  const p = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date()).map((x) => [x.type, x.value]));
+  const hoje = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(p.weekday);
+  const agora = Number(p.hour) * 60 + Number(p.minute);
+  document.getElementById('cols').innerHTML = DIAS.map((d) => {
+    const ehHoje = d.n === hoje;
+    const faixa = d.t ? `<span class="aberto" style="top:${pct(d.t[0])}%;height:${pct(d.t[1]) - pct(d.t[0])}%"></span>` : '';
+    const marca = ehHoje && agora >= INI && agora <= FIM ? `<span class="agora" style="top:${pct(agora)}%"></span>` : '';
+    return `<div class="col${ehHoje ? ' hoje' : ''}"><div class="trilho">${faixa}${marca}</div><b>${d.c}</b><small>${d.t ? `${h(d.t[0])}–${h(d.t[1])}` : 'fechado'}</small></div>`;
+  }).join('');
+  const d = DIAS.find((x) => x.n === hoje);
+  const aberto = d.t && agora >= d.t[0] && agora < d.t[1];
+  const st = document.getElementById('statusAgora');
+  if (aberto) st.querySelector('span').textContent = `Aberto agora, até as ${h(d.t[1])}`;
+  else {
+    st.classList.add('fechado');
+    let prox = null;
+    for (let i = 0; i < 8 && !prox; i++) {
+      const dd = DIAS.find((x) => x.n === (hoje + i) % 7);
+      if (dd.t && (i > 0 || agora < dd.t[0])) prox = { i, dd };
+    }
+    const quando = prox.i === 0 ? 'hoje' : prox.i === 1 ? 'amanhã' : prox.dd.nome;
+    st.querySelector('span').textContent = `Fechado agora. Abre ${quando} às ${h(prox.dd.t[0])}`;
+  }
+})();
+</script>
+</body>
+</html>
