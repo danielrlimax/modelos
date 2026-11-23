@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Poliana Souza Beauty · Sobrancelhas personalizadas em Piracicaba</title>
+<meta name="description" content="Poliana Souza Beauty: marca beauty intimista e autoral que cria sobrancelhas personalizadas. Atendimento em Piracicaba e Araras com horário marcado pelo WhatsApp.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<meta name="theme-color" content="#2B1813">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cacau:#2B1813;
+  --cacau-2:#43271E;
+  --henna:#7B3A22;
+  --henna-esc:#5F2B18;
+  --pele:#EAD7CD;
+  --pele-clara:#F7EEEA;
+  --po:#C99A8B;
+  --ouro:#B8893F;
+  --branco:#FFFCFB;
+  --linha:#DCC3B7;
+  --verde-wa:#1FA855;
+  --serif:"Gloock", Georgia, "Times New Roman", serif;
+  --sans:"Onest", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans);font-size:17px;line-height:1.6;color:var(--cacau);background:var(--pele-clara);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ouro);outline-offset:3px;border-radius:2px}
+.ico{width:1.2em;height:1.2em;flex:none}
+.wrap{width:min(1180px,100% - 48px);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.05;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(34px,4.6vw,56px)}
+p{margin:0}
+.nota{font-size:13.5px;color:#7a5d52;font-style:italic}
+
+/* aviso */
+.aviso{background:var(--cacau);color:#F1DED5;font-size:13px;text-align:center;padding:8px 16px;line-height:1.4}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 16px/1 var(--sans);text-decoration:none;padding:16px 22px;border-radius:6px;border:1.5px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.btn-wa{background:var(--cacau);color:var(--branco)}
+.btn-wa:hover{background:var(--henna)}
+.btn-linha{border-color:currentColor;color:var(--cacau);background:transparent}
+.btn-linha:hover{background:var(--cacau);color:var(--branco)}
+
+/* topo */
+.topo{position:absolute;left:0;right:0;z-index:5}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;padding:22px 0}
+.marca{font-family:var(--serif);font-size:26px;text-decoration:none;line-height:1}
+.marca small{display:block;font:500 12.5px/1.2 var(--sans);letter-spacing:.06em;margin-top:4px;color:var(--henna-esc)}
+.topo nav{display:flex;gap:26px;align-items:center;font-size:15px;font-weight:500}
+.topo nav a{text-decoration:none}
+.topo nav a:not(.btn):hover{text-decoration:underline;text-underline-offset:4px}
+.topo .btn{padding:11px 16px;font-size:15px;background:rgba(255,252,251,.82);color:var(--cacau);border-color:rgba(43,24,19,.25)}
+.topo .btn:hover{background:var(--cacau);color:var(--branco)}
+
+/* hero */
+.hero{position:relative;min-height:min(100svh,880px);display:flex;align-items:flex-end;overflow:hidden;background:linear-gradient(180deg,#C29C8D 0%,#C9A596 55%,#C7A293 100%)}
+.hero>img{position:absolute;top:0;right:0;width:64%;height:100%;object-fit:cover;object-position:68% 40%;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 34%);mask-image:linear-gradient(90deg,transparent 0,#000 34%)}
+.hero-txt{position:relative;padding:0 0 clamp(36px,6vh,72px);width:min(1180px,100% - 48px);margin-inline:auto}
+.hero-txt .lugar{font-weight:600;font-size:15px;color:var(--henna-esc);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.hero-txt .lugar::before{content:"";width:34px;height:1.5px;background:var(--henna-esc)}
+.hero h1{font-size:clamp(46px,6.4vw,92px);max-width:9.5em;color:var(--cacau)}
+.hero .sub{margin-top:18px;max-width:31em;font-size:18px;color:var(--cacau-2)}
+.hero .acoes{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.hero .acoes .btn-linha{background:rgba(255,252,251,.55)}
+.hero h1 .tr{display:block}
+@media (prefers-reduced-motion:no-preference){
+  .hero>img{animation:foco 1.6s cubic-bezier(.2,.7,.2,1) both}
+  .hero h1 .tr{animation:sobe .9s cubic-bezier(.2,.7,.2,1) both}
+  .hero h1 .tr:nth-child(2){animation-delay:.12s}
+  .hero h1 .tr:nth-child(3){animation-delay:.24s}
+  @keyframes foco{from{transform:scale(1.06);filter:blur(6px)}to{transform:none;filter:none}}
+  @keyframes sobe{from{opacity:0;transform:translateY(.35em)}to{opacity:1;transform:none}}
+}
+
+/* provas */
+.provas{background:var(--cacau);color:#F4E4DC}
+.provas ul{list-style:none;margin:0;padding:22px 0;display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.provas li{padding:4px 22px;border-left:1px solid rgba(244,228,220,.2);font-size:14.5px;line-height:1.35}
+.provas li:first-child{border-left:0;padding-left:0}
+.provas b{display:block;font-family:var(--serif);font-weight:400;font-size:30px;color:#fff;margin-bottom:4px}
+.provas a{color:#F4E4DC}
+
+/* manifesto */
+.manifesto{padding:clamp(72px,10vw,128px) 0;background:var(--pele-clara)}
+.manifesto .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(32px,6vw,90px);align-items:end}
+.manifesto blockquote{margin:0;font-family:var(--serif);font-size:clamp(40px,5.6vw,78px);line-height:1.02;color:var(--henna)}
+.manifesto blockquote span{display:block;color:var(--cacau)}
+.manifesto .txt p+p{margin-top:16px}
+.manifesto .txt p:first-child{font-size:19px}
+.manifesto .fonte{font-size:14px;color:#7a5d52;margin-top:20px}
+
+/* atendimento */
+.atend{background:var(--pele);padding:clamp(64px,9vw,112px) 0}
+.atend .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,5vw,72px);align-items:center}
+.atend figure{margin:0;position:relative}
+.atend figure img{width:100%;height:auto;aspect-ratio:6/7;object-fit:cover;border-radius:4px}
+.atend figcaption{font-size:13px;color:#7a5d52;margin-top:8px}
+.atend h2{margin-bottom:12px}
+.atend .intro{max-width:34em;margin-bottom:28px}
+.passos{list-style:none;margin:0;padding:0;counter-reset:p}
+.passos li{counter-increment:p;display:grid;grid-template-columns:56px 1fr;gap:4px 14px;padding:18px 0;border-top:1px solid var(--linha)}
+.passos li:last-child{border-bottom:1px solid var(--linha)}
+.passos li::before{content:counter(p);font-family:var(--serif);font-size:34px;line-height:1;color:var(--henna);grid-row:span 2}
+.passos h3{font-size:24px}
+.passos p{font-size:15.5px;color:var(--cacau-2)}
+
+/* agendar */
+.agendar{padding:clamp(72px,9vw,120px) 0;background:var(--branco)}
+.agendar .cab{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:34px;flex-wrap:wrap}
+.agendar .cab p{max-width:30em}
+.agenda-grid{display:grid;grid-template-columns:1fr 360px;gap:32px;align-items:start}
+.servicos{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.serv{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;background:var(--pele-clara);border:1.5px solid var(--linha);border-radius:6px;overflow:hidden;position:relative;transition:background .2s,border-color .2s,color .2s}
+.serv img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.serv .t{padding:12px 12px 14px;display:block}
+.serv strong{display:block;font-family:var(--serif);font-weight:400;font-size:19px;line-height:1.1}
+.serv small{display:block;font-size:13px;line-height:1.35;color:#6f5248;margin-top:5px}
+.serv .ck{position:absolute;top:8px;right:8px;width:30px;height:30px;border-radius:50%;background:rgba(255,252,251,.9);border:1.5px solid var(--linha);display:grid;place-items:center;font-size:16px;color:transparent;font-weight:700}
+.serv:hover{border-color:var(--po)}
+.serv:focus-visible{outline:3px solid var(--ouro);outline-offset:2px}
+.serv[aria-pressed="true"]{background:var(--cacau);border-color:var(--cacau);color:var(--branco)}
+.serv[aria-pressed="true"] small{color:#E6CFC5}
+.serv[aria-pressed="true"] .ck{background:var(--ouro);border-color:var(--ouro);color:var(--cacau)}
+.servicos+.nota{margin-top:12px}
+
+.ficha{position:sticky;top:20px;background:var(--pele);border-radius:6px;padding:26px;border:1.5px solid var(--linha)}
+.ficha h3{font-size:28px;margin-bottom:4px}
+.ficha .vazio{font-size:14.5px;color:#6f5248;margin-bottom:16px}
+.escolhidos{list-style:none;margin:0 0 18px;padding:0;font-size:15px}
+.escolhidos li{padding:7px 0;border-bottom:1px dashed var(--po);display:flex;gap:8px}
+.escolhidos li::before{content:"✓";color:var(--henna);font-weight:700}
+.campo{margin-bottom:16px}
+.campo>span,.campo legend{display:block;font-size:14px;font-weight:600;margin-bottom:7px;padding:0}
+fieldset.campo{border:0;margin:0 0 16px;padding:0;min-width:0}
+.campo input[type=text]{width:100%;font:inherit;font-size:16px;padding:12px 13px;border-radius:5px;border:1.5px solid var(--linha);background:var(--branco);color:var(--cacau)}
+.campo input[type=text]:focus{outline:3px solid var(--ouro);outline-offset:1px;border-color:var(--cacau)}
+.opcoes{display:flex;flex-wrap:wrap;gap:6px}
+.opcoes label{position:relative}
+.opcoes input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.opcoes span{display:block;padding:9px 13px;border:1.5px solid var(--linha);border-radius:5px;background:var(--branco);font-size:14.5px;font-weight:500}
+.opcoes input:checked+span{background:var(--henna);border-color:var(--henna);color:#fff}
+.opcoes input:focus-visible+span{outline:3px solid var(--ouro);outline-offset:2px}
+.ficha .btn-wa{width:100%;justify-content:center;margin-top:4px}
+.ficha .aviso-f{font-size:13px;color:#6f5248;margin-top:10px;text-align:center}
+
+/* pausa */
+.pausa{background:var(--cacau);color:#F4E4DC;padding:clamp(72px,9vw,120px) 0}
+.pausa .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,80px);align-items:center}
+.pausa h2{color:#fff;margin-bottom:18px}
+.pausa p{max-width:30em}
+.pausa p+p{margin-top:14px}
+.pausa .acoes{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.pausa .btn-claro{background:var(--pele);color:var(--cacau)}
+.pausa .btn-claro:hover{background:#fff}
+.pausa .btn-linha{color:#F4E4DC}
+.pausa .btn-linha:hover{background:#F4E4DC;color:var(--cacau)}
+.spotify{border-radius:12px;overflow:hidden;background:#3a2219;min-height:352px}
+.spotify iframe{display:block;width:100%;height:352px;border:0}
+
+/* galeria */
+.galeria{padding:clamp(64px,8vw,104px) 0 clamp(40px,5vw,64px);background:var(--pele-clara)}
+.galeria .cab{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:26px;flex-wrap:wrap}
+.mosaico{display:grid;grid-template-columns:1.1fr 1fr 1fr 1.1fr;grid-template-rows:240px 240px;gap:10px}
+.mosaico img{width:100%;height:100%;object-fit:cover;border-radius:4px}
+.mosaico .alto{grid-row:span 2}
+
+/* onde */
+.onde{padding:clamp(40px,5vw,64px) 0 clamp(72px,9vw,112px);background:var(--pele-clara)}
+.onde .wrap{display:grid;grid-template-columns:1fr 1.25fr;gap:clamp(28px,5vw,64px);align-items:stretch}
+.onde h2{margin-bottom:18px}
+.onde address{font-style:normal;font-size:19px;line-height:1.5;margin-bottom:20px}
+.cidades{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0 26px}
+.cidades div{background:var(--branco);border:1.5px solid var(--linha);border-radius:6px;padding:16px}
+.cidades b{font-family:var(--serif);font-weight:400;font-size:24px;display:block}
+.cidades span{font-size:14px;color:#6f5248}
+.onde .acoes{display:flex;gap:10px;flex-wrap:wrap}
+.mapa{width:100%;min-height:400px;height:100%;border:0;border-radius:6px;filter:saturate(.75);background:var(--pele)}
+
+/* final */
+.final{background:var(--henna);color:#fff;padding:clamp(64px,8vw,100px) 0;text-align:left}
+.final .wrap{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap}
+.final h2{font-size:clamp(36px,5vw,64px);max-width:12em;color:#fff}
+.final .btn{background:var(--pele-clara);color:var(--cacau);font-size:17px;padding:18px 26px}
+.final .btn:hover{background:#fff}
+
+footer{background:var(--cacau);color:#D9C2B8;font-size:14px;padding:30px 0 96px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:#F4E4DC}
+
+.flutua{position:fixed;right:18px;bottom:18px;z-index:30;width:60px;height:60px;border-radius:50%;background:var(--verde-wa);color:#fff;display:grid;place-items:center;box-shadow:0 6px 20px rgba(31,168,85,.35)}
+.flutua .ico{width:32px;height:32px}
+.flutua:hover{background:#178a45}
+
+/* responsivo */
+@media (max-width:1060px){
+  .agenda-grid{grid-template-columns:1fr}
+  .ficha{position:static}
+  .topo nav .so-largo{display:none}
+}
+@media (max-width:900px){
+  .hero h1{font-size:clamp(44px,6.8vw,62px)}
+  .hero .sub{font-size:17px;max-width:21em}
+  .hero>img{width:62%;object-position:58% 40%}
+  .manifesto .wrap,.atend .wrap,.pausa .wrap,.onde .wrap{grid-template-columns:1fr}
+  .atend figure img{aspect-ratio:16/10;object-position:center 30%}
+  .provas ul{grid-template-columns:repeat(2,1fr);row-gap:18px}
+  .provas li:nth-child(3){border-left:0;padding-left:0}
+  .mosaico{grid-template-columns:repeat(3,1fr);grid-template-rows:200px 200px}
+  .mosaico img:nth-child(5){display:none}
+  .mapa{min-height:320px}
+}
+@media (max-width:700px){
+  body{font-size:16px}
+  .wrap{width:min(1180px,100% - 36px)}
+  .topo{position:static;background:var(--pele-clara)}
+  .topo .wrap{padding:14px 0}
+  .topo nav a:not(.btn){display:none}
+  .hero{display:block;min-height:0;background:var(--pele)}
+  .hero>img{position:static;width:100%;height:52svh;min-height:300px;object-position:58% 30%;-webkit-mask-image:none;mask-image:none}
+  .hero-txt{width:calc(100% - 36px);padding:28px 0 36px}
+  .hero h1{font-size:clamp(40px,11.5vw,56px)}
+  .hero .acoes .btn{flex:1 1 100%;justify-content:center}
+  .servicos{grid-template-columns:repeat(2,1fr);gap:10px}
+  .serv strong{font-size:17px}
+  .ficha{padding:20px}
+  .cidades{grid-template-columns:1fr}
+  .mosaico{grid-template-columns:1fr 1fr;grid-template-rows:170px 170px 170px}
+  .mosaico .alto{grid-row:span 2}
+  .mosaico img:nth-child(5){display:block}
+  .mosaico img:nth-child(4){display:none}
+  .final .btn{width:100%;justify-content:center}
+  .provas b{font-size:26px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.030-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.870 9.870 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.860 9.860 0 01-1.510-5.260c.001-5.450 4.436-9.884 9.888-9.884 2.640 0 5.122 1.030 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.450-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.050 0C5.495 0 .160 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.480-8.413Z"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para Poliana Souza Beauty. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio">Poliana Souza<small>beauty · sobrancelhas</small></a>
+    <nav aria-label="Seções">
+      <a class="so-largo" href="#atendimento">Atendimento</a>
+      <a class="so-largo" href="#agendar">Serviços</a>
+      <a class="so-largo" href="#pausa">Podcast</a>
+      <a class="so-largo" href="#onde">Onde</a>
+      <a class="btn" href="https://wa.me/5519995896064?text=Oii%2C%20eu%20gostaria%20de%20reservar%20um%20hor%C3%A1rio%20pra%20agenda%20de%20Piracicaba" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Agendar</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero" aria-labelledby="h-hero">
+  <img src="fotos/hero.jpg" alt="Sobrancelha desenhada fio a fio, em close" width="2000" height="1200" fetchpriority="high">
+  <div class="hero-txt">
+    <p class="lugar">Sobrancelhas em Piracicaba e Araras</p>
+    <h1 id="h-hero"><span class="tr">Sobrancelhas</span> <span class="tr">criadas pra</span> <span class="tr">o seu rosto.</span></h1>
+    <p class="sub">Uma marca beauty intimista e autoral. Pausa, presença e beleza integrados, com horário marcado e atenção só pra você.</p>
+    <div class="acoes">
+      <a class="btn btn-wa" href="https://wa.me/5519995896064?text=Oii%2C%20eu%20gostaria%20de%20reservar%20um%20hor%C3%A1rio%20pra%20agenda%20de%20Piracicaba" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Quero agendar</a>
+      <a class="btn btn-linha" href="#agendar">Escolher meu serviço</a>
+    </div>
+  </div>
+</section>
+
+<section class="provas" aria-label="Sobre a marca">
+  <div class="wrap">
+    <ul>
+      <li><b>1.135</b>seguidoras e seguidores no <a href="https://www.instagram.com/polianasouza.beauty/" rel="noopener">Instagram</a></li>
+      <li><b>Podcast</b>no Spotify, com conversas da marca</li>
+      <li><b>Comunidade</b>no WhatsApp pra quem acompanha a Poliana</li>
+      <li><b>2 cidades</b>agenda em Piracicaba e em Araras</li>
+    </ul>
+  </div>
+</section>
+
+<section class="manifesto" aria-labelledby="h-man">
+  <div class="wrap">
+    <blockquote id="h-man">Pausa, presença <span>e beleza integrados.</span></blockquote>
+    <div class="txt">
+      <p>A Poliana Souza Beauty é uma marca própria, pequena de propósito. Cada sobrancelha é criada pra uma pessoa, não copiada de um molde.</p>
+      <p>O horário é seu. Dá tempo de conversar, de entender o que você quer e de sair se reconhecendo no espelho.</p>
+      <p class="fonte">Frase da marca e descrição do perfil @polianasouza.beauty. O restante é texto de exemplo; no site final entra a história contada pela Poliana.</p>
+    </div>
+  </div>
+</section>
+
+<section class="atend" id="atendimento" aria-labelledby="h-at">
+  <div class="wrap">
+    <figure>
+      <img src="fotos/mapeamento.jpg" alt="Profissional medindo a sobrancelha da cliente com uma régua de mapeamento" width="1200" height="1400" loading="lazy">
+      <figcaption>Foto ilustrativa.</figcaption>
+    </figure>
+    <div>
+      <h2 id="h-at">Como é o seu horário</h2>
+      <p class="intro">Sobrancelha personalizada começa antes da pinça: olhar o rosto, medir, desenhar e só depois tirar o que sobra.</p>
+      <ol class="passos">
+        <li><h3>Conversa</h3><p>Você conta como gosta de se ver, o que incomoda e a sua rotina de cuidados.</p></li>
+        <li><h3>Mapeamento</h3><p>Medição do rosto pra achar o começo, o arco e o fim que combinam com você.</p></li>
+        <li><h3>Desenho</h3><p>O traço é feito antes de qualquer fio sair, e você aprova no espelho.</p></li>
+        <li><h3>Finalização</h3><p>Acabamento, dicas de manutenção e a sugestão de quando voltar.</p></li>
+      </ol>
+      <p class="nota" style="margin-top:14px">Texto de exemplo. No site final entra o passo a passo real da Poliana.</p>
+    </div>
+  </div>
+</section>
+
+<section class="agendar" id="agendar" aria-labelledby="h-ag">
+  <div class="wrap">
+    <div class="cab">
+      <h2 id="h-ag">Monte seu pedido de horário</h2>
+      <p>Toque nos serviços que quer fazer, preencha a ficha e a mensagem chega pronta no WhatsApp da Poliana.</p>
+    </div>
+    <div class="agenda-grid">
+      <div>
+        <div class="servicos" id="servicos">
+          <button class="serv" type="button" aria-pressed="false" data-s="Design personalizado"><img src="fotos/s-personalizado.jpg" alt="" width="800" height="600" loading="lazy"><span class="t"><strong>Design personalizado</strong><small>Mapeamento e desenho pro seu rosto</small></span><span class="ck" aria-hidden="true">✓</span></button>
+          <button class="serv" type="button" aria-pressed="false" data-s="Design com pinça"><img src="fotos/s-pinca.jpg" alt="" width="800" height="600" loading="lazy"><span class="t"><strong>Design com pinça</strong><small>Limpeza e formato, fio por fio</small></span><span class="ck" aria-hidden="true">✓</span></button>
+          <button class="serv" type="button" aria-pressed="false" data-s="Design com henna"><img src="fotos/s-henna.jpg" alt="" width="800" height="600" loading="lazy"><span class="t"><strong>Design com henna</strong><small>Preenche falhas e marca o desenho</small></span><span class="ck" aria-hidden="true">✓</span></button>
+          <button class="serv" type="button" aria-pressed="false" data-s="Brow lamination"><img src="fotos/s-lamination.jpg" alt="" width="800" height="600" loading="lazy"><span class="t"><strong>Brow lamination</strong><small>Fios alinhados pra cima, efeito cheio</small></span><span class="ck" aria-hidden="true">✓</span></button>
+          <button class="serv" type="button" aria-pressed="false" data-s="Coloração"><img src="fotos/s-coloracao.jpg" alt="" width="800" height="600" loading="lazy"><span class="t"><strong>Coloração</strong><small>Tom ajustado à cor do cabelo</small></span><span class="ck" aria-hidden="true">✓</span></button>
+          <button class="serv" type="button" aria-pressed="false" data-s="Epilação de buço"><img src="fotos/s-buco.jpg" alt="" width="800" height="600" loading="lazy"><span class="t"><strong>Epilação de buço</strong><small>Rápida, no mesmo horário</small></span><span class="ck" aria-hidden="true">✓</span></button>
+          <button class="serv" type="button" aria-pressed="false" data-s="Lash lifting"><img src="fotos/s-cilios.jpg" alt="" width="800" height="600" loading="lazy"><span class="t"><strong>Lash lifting</strong><small>Curvatura nos cílios naturais</small></span><span class="ck" aria-hidden="true">✓</span></button>
+          <button class="serv" type="button" aria-pressed="false" data-s="Manutenção"><img src="fotos/s-consulta.jpg" alt="" width="800" height="600" loading="lazy"><span class="t"><strong>Manutenção</strong><small>Pra quem já fez e quer manter o desenho</small></span><span class="ck" aria-hidden="true">✓</span></button>
+        </div>
+        <p class="nota">Serviços e fotos ilustrativos. No site final entra o catálogo real da Poliana, com os valores dela.</p>
+      </div>
+
+      <form class="ficha" id="ficha" aria-labelledby="h-ficha">
+        <h3 id="h-ficha">Sua ficha</h3>
+        <p class="vazio" id="vazio">Nenhum serviço escolhido ainda. Toque nos cartões ao lado.</p>
+        <ul class="escolhidos" id="escolhidos" aria-live="polite"></ul>
+        <label class="campo"><span>Seu nome</span><input type="text" id="nome" autocomplete="given-name" placeholder="Como posso te chamar?"></label>
+        <fieldset class="campo"><legend>Agenda</legend>
+          <div class="opcoes">
+            <label><input type="radio" name="cidade" value="Piracicaba" checked><span>Piracicaba</span></label>
+            <label><input type="radio" name="cidade" value="Araras"><span>Araras</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="campo"><legend>Melhor período</legend>
+          <div class="opcoes">
+            <label><input type="radio" name="periodo" value="manhã"><span>Manhã</span></label>
+            <label><input type="radio" name="periodo" value="tarde" checked><span>Tarde</span></label>
+            <label><input type="radio" name="periodo" value="noite"><span>Noite</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="campo"><legend>É sua primeira vez com a Poliana?</legend>
+          <div class="opcoes">
+            <label><input type="radio" name="primeira" value="sim" checked><span>Sim</span></label>
+            <label><input type="radio" name="primeira" value="não, já sou cliente"><span>Já sou cliente</span></label>
+          </div>
+        </fieldset>
+        <a class="btn btn-wa" id="enviar" href="https://wa.me/5519995896064" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Enviar pedido no WhatsApp</a>
+        <p class="aviso-f">A Poliana responde com os horários livres.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="pausa" id="pausa" aria-labelledby="h-pa">
+  <div class="wrap">
+    <div>
+      <h2 id="h-pa">A conversa continua fora da cadeira</h2>
+      <p>A Poliana tem podcast no Spotify e uma comunidade no WhatsApp. É onde a marca fala de autocuidado, rotina e beleza sem pressa.</p>
+      <p>Ouça um episódio aqui mesmo ou entre na comunidade pra acompanhar novidades e agendas abertas.</p>
+      <div class="acoes">
+        <a class="btn btn-claro" href="https://chat.whatsapp.com/HwNJK0BlxcJ90rhDrjzd7M" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Entrar na comunidade</a>
+        <a class="btn btn-linha" href="https://open.spotify.com/show/2SrPi1SItkUnGCLwq86z9U" rel="noopener">Abrir no Spotify</a>
+      </div>
+    </div>
+    <div class="spotify">
+      <iframe src="https://open.spotify.com/embed/show/2SrPi1SItkUnGCLwq86z9U?utm_source=generator&theme=0" title="Podcast da Poliana Souza no Spotify" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="galeria" aria-labelledby="h-ga">
+  <div class="wrap">
+    <div class="cab">
+      <h2 id="h-ga">Detalhe é tudo</h2>
+      <p class="nota">Fotos ilustrativas. No site final entram os antes e depois da Poliana.</p>
+    </div>
+    <div class="mosaico">
+      <img class="alto" src="fotos/g-pinca.jpg" alt="Pinça e pincel sobre a bancada" width="900" height="1100" loading="lazy">
+      <img src="fotos/g-olhar.jpg" alt="Olhar com luz quente" width="900" height="700" loading="lazy">
+      <img src="fotos/g-pinceis.jpg" alt="Pincéis de maquiagem" width="900" height="700" loading="lazy">
+      <img class="alto" src="fotos/g-olho.jpg" alt="Sobrancelha e olhar em close" width="900" height="1100" loading="lazy">
+      <img src="fotos/g-bandeja.jpg" alt="Pinça sobre bandeja" width="900" height="700" loading="lazy">
+      <img src="fotos/s-lamination.jpg" alt="Sobrancelha penteada pra cima" width="800" height="600" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="onde" id="onde" aria-labelledby="h-on">
+  <div class="wrap">
+    <div>
+      <h2 id="h-on">Onde a Poliana atende</h2>
+      <address>R. Alexandre Herculano, 187<br>Vila Monteiro, Piracicaba, SP<br>CEP 13418-445</address>
+      <p>Atendimento com horário marcado. Os dias e horários livres são combinados pelo WhatsApp.</p>
+      <div class="cidades">
+        <div><b>Piracicaba</b><span>Endereço acima, no mapa</span></div>
+        <div><b>Araras</b><span>Agenda na cidade, pergunte as datas</span></div>
+      </div>
+      <div class="acoes">
+        <a class="btn btn-linha" href="https://www.google.com/maps/dir/?api=1&destination=R.%20Alexandre%20Herculano%2C%20187%20-%20Vila%20Monteiro%2C%20Piracicaba%20-%20SP%2C%2013418-445" rel="noopener">Traçar rota</a>
+        <a class="btn btn-wa" href="https://wa.me/5519995896064?text=Oii%2C%20Poliana!%20Vim%20pelo%20site.%20Quais%20as%20pr%C3%B3ximas%20datas%20em%20Araras%3F" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Datas em Araras</a>
+      </div>
+    </div>
+    <iframe class="mapa" src="https://www.google.com/maps?q=R.%20Alexandre%20Herculano%2C%20187%20-%20Vila%20Monteiro%2C%20Piracicaba%20-%20SP%2C%2013418-445&output=embed" loading="lazy" title="Mapa: Poliana Souza Beauty em Piracicaba" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<section class="final" aria-labelledby="h-fi">
+  <div class="wrap">
+    <h2 id="h-fi">Reserve o seu horário de pausa.</h2>
+    <a class="btn" href="https://wa.me/5519995896064?text=Oii%2C%20eu%20gostaria%20de%20reservar%20um%20hor%C3%A1rio%20pra%20agenda%20de%20Piracicaba" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Agendar pelo WhatsApp</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Poliana Souza Beauty · Sobrancelhas em Piracicaba e Araras · <a href="https://www.instagram.com/polianasouza.beauty/" rel="noopener">@polianasouza.beauty</a></span>
+    <span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span>
+  </div>
+</footer>
+
+<a class="flutua" href="https://wa.me/5519995896064?text=Oii%2C%20eu%20gostaria%20de%20reservar%20um%20hor%C3%A1rio%20pra%20agenda%20de%20Piracicaba" rel="noopener" aria-label="Agendar pelo WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg></a>
+
+<script>
+(function(){
+  var tel='5519995896064';
+  var cartoes=[].slice.call(document.querySelectorAll('.serv'));
+  var lista=document.getElementById('escolhidos');
+  var vazio=document.getElementById('vazio');
+  var enviar=document.getElementById('enviar');
+  var form=document.getElementById('ficha');
+  function val(n){var e=form.querySelector('input[name="'+n+'"]:checked');return e?e.value:'';}
+  function atualiza(){
+    var sel=cartoes.filter(function(c){return c.getAttribute('aria-pressed')==='true';}).map(function(c){return c.dataset.s;});
+    lista.innerHTML='';
+    sel.forEach(function(s){var li=document.createElement('li');li.textContent=s;lista.appendChild(li);});
+    vazio.hidden=sel.length>0;
+    var nome=document.getElementById('nome').value.trim();
+    var m='Oii, Poliana! Vim pelo site e quero agendar.';
+    if(nome) m+='\nMeu nome: '+nome;
+    m+='\nServiços: '+(sel.length?sel.join(', '):'quero ajuda pra escolher');
+    m+='\nAgenda: '+val('cidade');
+    m+='\nMelhor período: '+val('periodo');
+    m+='\nPrimeira vez: '+val('primeira');
+    enviar.href='https://wa.me/'+tel+'?text='+encodeURIComponent(m);
+  }
+  cartoes.forEach(function(c){c.addEventListener('click',function(){c.setAttribute('aria-pressed',c.getAttribute('aria-pressed')==='true'?'false':'true');atualiza();});});
+  form.addEventListener('input',atualiza);
+  form.addEventListener('change',atualiza);
+  form.addEventListener('submit',function(e){e.preventDefault();});
+  atualiza();
+})();
+</script>
+</body>
+</html>
