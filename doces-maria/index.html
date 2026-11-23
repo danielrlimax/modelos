@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Doces Maria | Brigadeiros e docinhos em Rio Claro</title>
+<meta name="description" content="Modelo demonstrativo de site para a Doces Maria, brigadeiros e docinhos de festa por encomenda em Rio Claro.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,800;1,6..12,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cacau:#3D2116; --cacau-2:#5A3424; --kraft:#C99E6E; --kraft-claro:#EBD5B8; --kraft-fundo:#F5E9DA;
+  --branco:#FFFFFF; --confete:#D9432F; --cinza:#6B5449;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;color:var(--cacau);font:17px/1.6 'Nunito Sans',system-ui,sans-serif;background:var(--branco)}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--confete);outline-offset:3px}
+.ico{width:1.15em;height:1.15em;flex:none}
+.largura{max-width:1160px;margin:0 auto;padding:0 32px}
+h1,h2,h3{font-family:'Lilita One',system-ui,sans-serif;font-weight:400;margin:0;letter-spacing:.005em}
+h2{font-size:clamp(34px,4.4vw,52px);line-height:1.02;margin-bottom:14px}
+.intro{max-width:56ch;margin:0 0 34px;color:var(--cinza)}
+.nota{font-size:14px;color:var(--cinza);margin:14px 0 0}
+section{padding:92px 0}
+
+.aviso{background:var(--cacau);color:#fff;font:14px/1.4 system-ui,sans-serif;text-align:center;padding:8px 16px}
+
+.botao{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font:800 16px/1.2 'Nunito Sans',sans-serif;padding:15px 22px;border-radius:10px;border:2px solid transparent;cursor:pointer}
+.botao.cacau{background:var(--cacau);color:#fff}
+.botao.cacau:hover{background:var(--cacau-2)}
+.botao.contorno{border-color:var(--cacau);color:var(--cacau);background:rgba(255,255,255,.6)}
+.botao.contorno:hover{background:#fff}
+.botao.zap{background:#1f8a4c;color:#fff}
+.botao.zap:hover{background:#18723e}
+
+/* ---------- Hero: a pirâmide de brigadeiros ocupando a tela ---------- */
+.hero{position:relative;min-height:calc(100svh - 36px);display:flex;align-items:center;background:var(--kraft-fundo)}
+.hero::after{content:"";position:absolute;top:0;right:0;bottom:0;width:58%;background:#e7cbbb url("fotos/capa.jpg") 40% center/cover no-repeat}
+.hero .largura{width:100%;position:relative;z-index:1}
+.hero-texto{max-width:430px;padding:40px 0}
+.hero .marca{font:800 15px/1 'Nunito Sans',sans-serif;color:var(--cacau-2);margin:0 0 14px}
+.hero h1{font-size:clamp(76px,9vw,124px);line-height:.88;color:var(--cacau)}
+.hero .sub{font-size:20px;line-height:1.5;margin:22px 0 0;max-width:24ch;font-weight:600}
+.hero .acoes{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.hero .prova{margin:22px 0 0;font-size:15px;color:var(--cacau-2)}
+.hero .prova b{font-weight:800}
+
+/* ---------- Monte a caixa: o elemento marcante ---------- */
+.monte{background:var(--kraft-fundo)}
+.monte .grade{display:grid;grid-template-columns:1.35fr 1fr;gap:44px;align-items:start}
+.cartoes{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cartao{position:relative;display:flex;flex-direction:column;text-align:left;font:inherit;color:var(--cacau);background:#fff;border:2px solid var(--kraft-claro);border-radius:14px;padding:0;cursor:pointer;overflow:hidden;transition:border-color .15s,background .15s}
+.cartao:hover{border-color:var(--kraft)}
+.cartao-foto{display:block;aspect-ratio:1;overflow:hidden;background:#ddd}
+.cartao-foto img{width:100%;height:100%;object-fit:cover}
+.cartao-texto{display:block;padding:10px 12px 13px}
+.cartao-texto strong{display:block;font:400 19px/1.1 'Lilita One',sans-serif}
+.cartao-texto small{display:block;margin-top:4px;font-size:13px;line-height:1.35;color:var(--cinza)}
+.cartao-marca{position:absolute;top:8px;right:8px;width:30px;height:30px;border-radius:50%;background:#fff;border:2px solid var(--cacau);display:grid;place-items:center;font:800 16px/1 'Nunito Sans',sans-serif}
+.cartao-marca::after{content:'+'}
+.cartao[aria-pressed="true"]{background:var(--cacau);border-color:var(--cacau);color:#fff}
+.cartao[aria-pressed="true"] .cartao-texto small{color:var(--kraft-claro)}
+.cartao[aria-pressed="true"] .cartao-marca{background:#25D366;border-color:#fff;color:#073B1E}
+.cartao[aria-pressed="true"] .cartao-marca::after{content:'✓'}
+
+.ficha{position:sticky;top:20px;background:#fff;border-radius:18px;padding:26px 24px 24px;border:2px solid var(--kraft-claro)}
+.ficha h3{font-size:28px;line-height:1.1}
+.tamanhos{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:14px 0 0}
+.tamanhos input{position:absolute;opacity:0;width:1px;height:1px}
+.tamanhos label{display:block;text-align:center;padding:9px 4px;border:2px solid var(--kraft-claro);border-radius:10px;cursor:pointer;font-weight:800;line-height:1.15}
+.tamanhos label small{display:block;font-weight:600;font-size:12px;color:var(--cinza)}
+.tamanhos input:checked+label{background:var(--cacau);border-color:var(--cacau);color:#fff}
+.tamanhos input:checked+label small{color:var(--kraft-claro)}
+.tamanhos input:focus-visible+label{outline:3px solid var(--confete);outline-offset:2px}
+
+/* A caixa: vista de cima, papelão kraft com as cavidades preenchidas pelos sabores escolhidos */
+.caixa{margin:18px 0 8px;padding:14px;border-radius:8px;background:var(--kraft);box-shadow:inset 0 0 0 6px #B88B5A,inset 0 0 0 7px #a87b4c}
+.caixa .tampa{display:flex;justify-content:space-between;gap:8px;font:400 15px/1 'Lilita One',sans-serif;color:#fff;padding:2px 4px 10px}
+.cavidades{display:grid;gap:4px;padding:8px;background:#A97C4C;border-radius:4px}
+.cav{aspect-ratio:1;border-radius:50%;background:#8E6439;box-shadow:inset 0 2px 3px rgba(0,0,0,.35);overflow:hidden;position:relative}
+.cav img{width:100%;height:100%;object-fit:cover;border-radius:50%;transform:scale(.9)}
+.cav.nova img{animation:cai .28s ease-out}
+@keyframes cai{from{transform:scale(.4);opacity:0}to{transform:scale(.9);opacity:1}}
+.divisao{font-size:14px;color:var(--cinza);margin:6px 0 14px;min-height:1.5em}
+
+.campos{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.campos label{display:block;font-size:13px;font-weight:800;margin-bottom:4px}
+.campos input,.campos select{width:100%;font:16px 'Nunito Sans',sans-serif;padding:10px 11px;border:2px solid var(--kraft-claro);border-radius:10px;background:#fff;color:var(--cacau)}
+.campos input:focus,.campos select:focus{outline:none;border-color:var(--cacau)}
+.ficha .enviar{width:100%}
+.ficha small{display:block;margin-top:10px;font-size:13px;color:var(--cinza);line-height:1.45}
+
+/* ---------- Ocasiões ---------- */
+.ocasioes .fotos{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ocasioes figure{margin:0}
+.ocasioes img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px}
+.ocasioes figcaption{margin-top:10px}
+.ocasioes figcaption strong{display:block;font:400 22px/1.1 'Lilita One',sans-serif}
+.ocasioes figcaption span{font-size:15px;color:var(--cinza)}
+
+/* ---------- Como encomendar (é sequência) ---------- */
+.passos{background:var(--cacau);color:#fff}
+.passos ol{list-style:none;margin:34px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:36px;counter-reset:p}
+.passos li{counter-increment:p;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start}
+.passos li::before{content:counter(p);display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--kraft);color:var(--cacau);font:400 28px/1 'Lilita One',sans-serif}
+.passos h3{font-size:24px}
+.passos p{margin:6px 0 0;color:var(--kraft-claro)}
+.passos .nota{color:var(--kraft-claro)}
+
+/* ---------- Onde ---------- */
+.onde .grade{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.onde dl{margin:0 0 24px}
+.onde dt{font-size:14px;font-weight:800;color:var(--cacau-2)}
+.onde dd{margin:0 0 14px;font-size:18px}
+.mapa{width:100%;aspect-ratio:4/3;border:0;border-radius:18px;background:#eee}
+
+.faq{background:var(--kraft-fundo)}
+.faq details{border-bottom:2px solid var(--kraft-claro);max-width:800px}
+.faq summary{cursor:pointer;padding:16px 0;font-weight:800;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:400 26px/1 'Lilita One',sans-serif;color:var(--confete)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin:0 0 18px;max-width:64ch;color:var(--cinza)}
+
+footer{background:var(--cacau);color:var(--kraft-claro);padding:36px 0 100px;font-size:14px}
+footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.flutuante{position:fixed;right:18px;bottom:18px;display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#073B1E;font:700 15px/1 system-ui,sans-serif;text-decoration:none;padding:14px 18px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.22);z-index:5}
+
+@media (max-width:1040px){
+  .monte .grade{grid-template-columns:1fr}
+  .ficha{position:static;max-width:560px}
+}
+@media (max-width:900px){
+  .hero{display:block;min-height:0;background:none}
+  .hero::after{display:none}
+  .hero::before{content:"";display:block;height:52svh;min-height:320px;background:#e7cbbb url("fotos/capa.jpg") 70% center/cover no-repeat}
+  .hero .largura{background:var(--kraft-fundo)}
+  .hero-texto{max-width:none;padding:36px 0 44px}
+  .onde .grade{grid-template-columns:1fr;gap:32px}
+  .passos ol{grid-template-columns:1fr;gap:22px}
+  .ocasioes .fotos{grid-template-columns:1fr 1fr}
+  section{padding:70px 0}
+}
+@media (max-width:640px){
+  .largura{padding:0 18px}
+  .cartoes{grid-template-columns:repeat(2,1fr)}
+  .hero .acoes .botao{flex:1 1 100%}
+  .ficha{padding:20px 16px}
+  .campos{grid-template-columns:1fr}
+  .tamanhos label{font-size:15px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para Doces Maria. Ainda não é o site oficial.</div>
+
+<header class="hero">
+  <div class="largura">
+    <div class="hero-texto">
+      <p class="marca">Rio Claro, SP</p>
+      <h1>Doces Maria</h1>
+      <p class="sub">Brigadeiros e docinhos de festa feitos sob encomenda.</p>
+      <div class="acoes">
+        <a class="botao cacau" href="#monte">Montar minha caixa</a>
+        <a class="botao contorno" href="https://wa.me/5519998130566?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20encomendar%20docinhos." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Chamar no WhatsApp</a>
+      </div>
+      <p class="prova"><b>7,1 mil pessoas</b> acompanham a Doces Maria no Instagram.</p>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="monte" id="monte">
+  <div class="largura">
+    <h2>Monte a sua caixa de docinhos</h2>
+    <p class="intro">Toque nos sabores que você quer. A caixa ao lado vai se enchendo do jeito que vai chegar na sua festa, e o pedido sai pronto para o WhatsApp da Doces Maria.</p>
+    <div class="grade">
+      <div>
+        <div class="cartoes" id="cartoes" role="group" aria-label="Sabores de docinhos"></div>
+        <p class="nota">Sabores e fotos ilustrativos. No site final entram o cardápio e as fotos da Doces Maria.</p>
+      </div>
+
+      <form class="ficha" id="ficha" onsubmit="return false" aria-label="Pedido para a Doces Maria">
+        <h3>Sua caixa</h3>
+        <fieldset style="border:0;margin:0;padding:0">
+          <legend class="visually" style="font-size:13px;font-weight:800">Quantos docinhos?</legend>
+          <div class="tamanhos">
+            <input type="radio" name="qtd" id="q12" value="12"><label for="q12">12<small>presente</small></label>
+            <input type="radio" name="qtd" id="q25" value="25" checked><label for="q25">25<small>caixinha</small></label>
+            <input type="radio" name="qtd" id="q50" value="50"><label for="q50">50<small>meio cento</small></label>
+            <input type="radio" name="qtd" id="q100" value="100"><label for="q100">100<small>um cento</small></label>
+          </div>
+        </fieldset>
+
+        <div class="caixa" aria-hidden="true">
+          <div class="tampa"><span>Doces Maria</span><span id="tampaQtd">25 docinhos</span></div>
+          <div class="cavidades" id="cavidades"></div>
+        </div>
+        <p class="divisao" id="divisao" aria-live="polite"></p>
+
+        <div class="campos">
+          <div><label for="nome">Seu nome</label><input id="nome" maxlength="30" autocomplete="given-name" placeholder="Ex.: Juliana"></div>
+          <div><label for="data">Para quando</label><input id="data" type="date"></div>
+          <div style="grid-column:1/-1"><label for="ocasiao">Ocasião</label>
+            <select id="ocasiao"><option>aniversário</option><option>chá de bebê</option><option>casamento</option><option>presente</option><option>outra ocasião</option></select></div>
+        </div>
+        <a class="botao zap enviar" id="enviar" href="#" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir no WhatsApp</a>
+        <small>Valor, sabores do dia e retirada ou entrega a Doces Maria confirma pelo WhatsApp.</small>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="ocasioes">
+  <div class="largura">
+    <h2>Docinho para cada festa</h2>
+    <p class="intro">Do aniversário de criança ao presente de última hora.</p>
+    <div class="fotos">
+      <figure><img src="fotos/capa2.jpg" alt="Bandeja de brigadeiros em forminhas rosa numa festa infantil" loading="lazy"><figcaption><strong>Aniversário</strong><span>Bandejas pela quantidade de convidados.</span></figcaption></figure>
+      <figure><img src="fotos/g1.jpg" alt="Docinhos de chocolate num espeto sobre mesa de festa" loading="lazy"><figcaption><strong>Mesa de festa</strong><span>Docinhos para montar a mesa.</span></figcaption></figure>
+      <figure><img src="fotos/g3.jpg" alt="Dois brigadeiros em forminhas escuras" loading="lazy"><figcaption><strong>Presente</strong><span>Caixinha para agradar alguém.</span></figcaption></figure>
+      <figure><img src="fotos/g4.jpg" alt="Pedaços de brownie empilhados" loading="lazy"><figcaption><strong>Para o dia a dia</strong><span>Aquele doce depois do almoço.</span></figcaption></figure>
+    </div>
+    <p class="nota">Fotos e textos ilustrativos. No site final entram as fotos e os produtos da Doces Maria.</p>
+  </div>
+</section>
+
+<section class="passos">
+  <div class="largura">
+    <h2>Como encomendar</h2>
+    <ol>
+      <li><div><h3>Monte a caixa</h3><p>Escolha os sabores e a quantidade aqui no site ou mande direto no WhatsApp.</p></div></li>
+      <li><div><h3>Combine a data</h3><p>A Doces Maria confirma o valor, os sabores e o dia da sua encomenda.</p></div></li>
+      <li><div><h3>Receba os docinhos</h3><p>Retirada ou entrega em Rio Claro, combinada pelo WhatsApp.</p></div></li>
+    </ol>
+    <p class="nota">Texto de exemplo. No site final entra o jeito de trabalhar da Doces Maria.</p>
+  </div>
+</section>
+
+<section class="onde" id="onde">
+  <div class="largura grade">
+    <div>
+      <h2>Doces Maria em Rio Claro</h2>
+      <dl>
+        <dt>Cidade</dt><dd>Rio Claro, SP</dd>
+        <dt>WhatsApp</dt><dd><a href="https://wa.me/5519998130566" rel="noopener">(19) 99813-0566</a></dd>
+        <dt>Instagram</dt><dd><a href="https://www.instagram.com/_docesmaria_/" rel="noopener">@_docesmaria_</a></dd>
+        <dt>Retirada</dt><dd>No site final entra o endereço de retirada e as regiões de entrega.</dd>
+      </dl>
+      <a class="botao zap" href="https://wa.me/5519998130566?text=Ol%C3%A1!%20Vim%20pelo%20site.%20Voc%C3%AAs%20entregam%20no%20meu%20bairro%3F" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar sobre entrega</a>
+    </div>
+    <iframe class="mapa" src="https://www.google.com/maps?q=Rio%20Claro%20-%20SP&output=embed" loading="lazy" title="Mapa: Rio Claro, SP" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="largura">
+    <h2>Perguntas frequentes</h2>
+    <details><summary>Com quanto tempo de antecedência devo encomendar?</summary><p>Quanto antes, melhor, principalmente em fim de semana. Mande a data no WhatsApp que a Doces Maria confirma se tem vaga.</p></details>
+    <details><summary>Quantos docinhos eu preciso para a festa?</summary><p>Uma conta comum é de 4 a 6 docinhos por convidado. Na dúvida, conte quantas pessoas vão e pergunte pelo WhatsApp.</p></details>
+    <details><summary>Posso misturar sabores na mesma caixa?</summary><p>Pode. Escolha os sabores na caixa acima e a divisão vai junto no pedido.</p></details>
+    <details><summary>Vocês entregam?</summary><p>Retirada e entrega são combinadas pelo WhatsApp, conforme o bairro e a data.</p></details>
+    <p class="nota">Respostas de exemplo. No site final entram as respostas da Doces Maria.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="largura"><span>Doces Maria, Rio Claro – SP</span><span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span></div>
+</footer>
+<a class="flutuante" href="https://wa.me/5519998130566?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20encomendar%20docinhos." rel="noopener" aria-label="Chamar a Doces Maria no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const FONE = '5519998130566';
+  // [id, nome, foto, descrição (exemplo)]
+  const SABORES = [
+    ['trad', 'Tradicional', 'fotos/tradicional.jpg', 'Chocolate com granulado.'],
+    ['belga', 'Granulado belga', 'fotos/belga.jpg', 'Chocolate mais intenso.'],
+    ['beijinho', 'Beijinho', 'fotos/beijinho.jpg', 'Coco, leite condensado e cravo.'],
+    ['confete', 'Confete', 'fotos/confete.jpg', 'O preferido das crianças.'],
+    ['bicho', 'Bicho de pé', 'fotos/bicho.jpg', 'Rosinha, sabor morango.'],
+    ['morango', 'Morango', 'fotos/morango.jpg', 'Com fruta e chocolate.'],
+    ['crocante', 'Crocante', 'fotos/crocante.jpg', 'Com casquinha crocante.'],
+    ['ninho', 'Ninho com chocolate', 'fotos/ninho.jpg', 'Leite em pó e chocolate.'],
+  ];
+  const escolha = ['trad', 'beijinho'];
+  const cartoes = $('cartoes');
+  SABORES.forEach(([id, rotulo, foto, desc]) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'cartao'; b.dataset.s = id; b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = `<span class="cartao-foto"><img src="${foto}" alt="" loading="lazy"></span>` +
+      `<span class="cartao-texto"><strong>${rotulo}</strong><small>${desc}</small></span>` +
+      `<span class="cartao-marca" aria-hidden="true"></span>`;
+    b.addEventListener('click', () => { const i = escolha.indexOf(id); i >= 0 ? escolha.splice(i, 1) : escolha.push(id); atualizar(true); });
+    cartoes.appendChild(b);
+  });
+  const lista = (a) => a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' e ' + a[a.length - 1];
+  const COLS = { 12: 4, 25: 5, 50: 10, 100: 10 };
+  let antes = [];
+  function atualizar(animar) {
+    cartoes.querySelectorAll('.cartao').forEach((b) => b.setAttribute('aria-pressed', String(escolha.includes(b.dataset.s))));
+    const qtd = Number(document.querySelector('input[name=qtd]:checked').value);
+    const sab = escolha.map((id) => SABORES.find((s) => s[0] === id));
+    // divide igualmente; o resto vai para os primeiros sabores
+    const base = sab.length ? Math.floor(qtd / sab.length) : 0;
+    const conta = sab.map((s, i) => [s, base + (i < qtd % sab.length ? 1 : 0)]);
+    const celulas = [];
+    conta.forEach(([s, n]) => { for (let k = 0; k < n; k++) celulas.push(s); });
+    const cav = $('cavidades');
+    cav.style.gridTemplateColumns = `repeat(${COLS[qtd]},1fr)`;
+    cav.innerHTML = '';
+    for (let i = 0; i < qtd; i++) {
+      const d = document.createElement('div'); d.className = 'cav';
+      const s = celulas[i];
+      if (s) { const im = document.createElement('img'); im.src = s[2]; im.alt = ''; d.appendChild(im); if (animar && antes[i] !== s[0]) d.classList.add('nova'); }
+      cav.appendChild(d);
+    }
+    antes = celulas.map((s) => s[0]);
+    $('tampaQtd').textContent = qtd + ' docinhos';
+    const partes = conta.map(([s, n]) => `${n} de ${s[1].toLowerCase()}`);
+    $('divisao').textContent = sab.length ? 'Divisão: ' + lista(partes) + '.' : 'Caixa vazia. Toque nos sabores para encher.';
+    const nome = $('nome').value.trim();
+    const data = $('data').value ? ', para o dia ' + $('data').value.split('-').reverse().join('/') : '';
+    const oc = $('ocasiao').value;
+    const msg = `Olá! ${nome ? 'Aqui é ' + nome + '. ' : ''}Vim pelo site e quero encomendar ${qtd} docinhos para ${oc}${data}.` +
+      (sab.length ? ` Sabores: ${lista(partes)}.` : ' Quero ajuda para escolher os sabores.') + ' Qual o valor?';
+    $('enviar').href = `https://wa.me/${FONE}?text=` + encodeURIComponent(msg);
+  }
+  $('ficha').addEventListener('input', () => atualizar(false));
+  $('ficha').addEventListener('change', () => atualizar(false));
+  atualizar(false);
+})();
+</script>
+</body>
+</html>
