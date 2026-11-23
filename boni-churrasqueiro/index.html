@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BONI Churrasqueiro | Churrasqueiro para eventos em Rio Claro</title>
+<meta name="description" content="BONI Churrasqueiro: churrasqueiro para aniversários, casamentos e confraternizações em Rio Claro. Calcule a carne da sua festa e chame no WhatsApp.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --carvao:#241a15;
+  --carvao-2:#33261f;
+  --pardo:#d9c09a;
+  --pardo-claro:#ecdcc0;
+  --boi:#8c2317;
+  --boi-escuro:#6a1910;
+  --brasa:#f28c28;
+  --sal:#fbf6ec;
+  --zap:#1f9d55;
+  --zap-escuro:#167a41;
+  --tinta:#2b201b;
+  --display:'Alfa Slab One', Georgia, serif;
+  --texto:'Barlow', system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;font-family:var(--texto);font-size:18px;line-height:1.55;color:var(--tinta);background:var(--pardo-claro)}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brasa);outline-offset:3px}
+.largura{width:min(1180px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;margin:0;letter-spacing:.005em}
+h2{font-size:clamp(34px,5vw,56px);color:var(--boi)}
+.intro{max-width:58ch;font-size:19px;margin:14px 0 0}
+.nota{font-size:14px;font-style:italic;opacity:.75;margin:18px 0 0}
+.ico{width:22px;height:22px;flex:none}
+
+/* botões: retângulos de etiqueta de açougue, cantos quase retos */
+.botao{display:inline-flex;align-items:center;gap:10px;padding:15px 22px;border-radius:4px;font-weight:700;font-size:17px;text-decoration:none;border:2px solid transparent;cursor:pointer;line-height:1.1}
+.botao.zap{background:var(--zap);color:#fff}
+.botao.zap:hover{background:var(--zap-escuro)}
+.botao.contorno{border-color:currentColor;color:var(--sal);background:transparent}
+.botao.contorno:hover{background:rgba(255,255,255,.1)}
+.botao.boi{background:var(--boi);color:var(--sal)}
+.botao.boi:hover{background:var(--boi-escuro)}
+
+.aviso{background:var(--carvao);color:var(--pardo);font-size:14px;text-align:center;padding:8px 16px}
+
+/* ---------- HERO ---------- */
+.topo{position:relative;min-height:min(100svh,880px);color:var(--sal);display:flex;flex-direction:column;overflow:hidden;background:var(--carvao)}
+.topo .foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 60%}
+.topo::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(36,26,21,.92) 0%,rgba(36,26,21,.72) 38%,rgba(36,26,21,.1) 72%),linear-gradient(0deg,rgba(36,26,21,.85) 0%,rgba(36,26,21,0) 35%);z-index:1}
+.topo>*{position:relative;z-index:2}
+.barra{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.marca{font-family:var(--display);font-size:26px;text-decoration:none;line-height:1}
+.marca small{display:block;font-family:var(--texto);font-weight:600;font-size:14px;color:var(--pardo);margin-top:3px}
+.barra nav{display:flex;gap:26px;font-weight:600}
+.barra nav a{text-decoration:none;opacity:.9}
+.barra nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:5px}
+.miolo{flex:1;display:flex;align-items:center;padding:30px 0 70px}
+.miolo .texto{max-width:660px}
+.topo h1{font-size:clamp(40px,5.6vw,74px);color:var(--sal);text-shadow:0 2px 18px rgba(36,26,21,.5)}
+.topo h1 .linha2{display:block;color:var(--brasa)}
+.sub{font-size:clamp(18px,2vw,21px);max-width:46ch;margin:22px 0 30px;color:#f3e6d2}
+.acoes{display:flex;flex-wrap:wrap;gap:12px}
+.prova{display:inline-flex;gap:0;margin-top:34px;flex-wrap:wrap;background:rgba(36,26,21,.82);border-left:5px solid var(--brasa);border-radius:2px}
+.prova div{line-height:1.2;padding:14px 22px}
+.prova div+div{border-left:1px solid rgba(217,192,154,.25)}
+.prova b{display:block;font-family:var(--display);font-weight:400;font-size:30px;color:var(--pardo)}
+.prova span{font-size:15px;color:#e6d6bd}
+
+/* ---------- O QUE FAZ ---------- */
+.faz{padding:100px 0 90px;background:var(--pardo-claro)}
+.faz .grade{display:grid;grid-template-columns:1fr 1.05fr;gap:60px;align-items:center}
+.faz ul{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:20px}
+.faz li{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start}
+.faz li svg{width:34px;height:34px;color:var(--boi);margin-top:2px}
+.faz li strong{display:block;font-size:20px}
+.faz li span{display:block}
+.mural{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:12px;height:560px}
+.mural img{width:100%;height:100%;object-fit:cover;border-radius:3px}
+.mural img:first-child{grid-row:span 2}
+
+/* ---------- PEDIDO / BALANÇA ---------- */
+.pedido{padding:100px 0;background:var(--pardo);background-image:radial-gradient(rgba(106,25,16,.07) 1px,transparent 1.4px);background-size:7px 7px}
+.pedido .grade{display:grid;grid-template-columns:1.35fr 1fr;gap:34px;margin-top:40px;align-items:start}
+.cartoes{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cartao{position:relative;display:flex;flex-direction:column;text-align:left;padding:0;border:2px solid rgba(43,32,27,.18);background:var(--sal);border-radius:4px;cursor:pointer;font:inherit;color:inherit;overflow:hidden;transition:border-color .15s,background .15s}
+.cartao:hover{border-color:var(--boi)}
+.cartao-foto{display:block;aspect-ratio:4/3;overflow:hidden}
+.cartao-foto img{width:100%;height:100%;object-fit:cover}
+.cartao-texto{padding:10px 12px 13px;display:block}
+.cartao-texto strong{display:block;font-size:17px;line-height:1.2}
+.cartao-texto small{display:block;font-size:14px;line-height:1.3;opacity:.8;margin-top:3px}
+.cartao-marca{position:absolute;top:8px;right:8px;width:30px;height:30px;border-radius:3px;background:rgba(251,246,236,.92);border:2px solid var(--tinta);display:grid;place-items:center}
+.cartao[aria-pressed="true"]{background:var(--boi);color:var(--sal);border-color:var(--boi)}
+.cartao[aria-pressed="true"] .cartao-marca{background:var(--brasa);border-color:var(--brasa)}
+.cartao[aria-pressed="true"] .cartao-marca::after{content:"✓";font-weight:700;color:var(--carvao);font-size:18px;line-height:1}
+
+/* a comanda: papel de açougue com a balança no topo */
+.comanda{background:var(--sal);border-radius:4px;padding:26px 26px 22px;box-shadow:0 2px 0 rgba(43,32,27,.25),0 18px 30px -18px rgba(43,32,27,.5);position:sticky;top:18px}
+.comanda h3{font-size:26px;color:var(--boi)}
+.balanca{margin:16px 0 18px;background:var(--boi);border-radius:14px 14px 6px 6px;padding:16px 16px 12px;color:var(--sal)}
+.mostrador{background:var(--pardo-claro);border-radius:120px 120px 8px 8px;padding:10px 10px 0;border:4px solid var(--boi-escuro)}
+.mostrador svg{display:block;width:100%;height:auto}
+.ponteiro{transform-origin:150px 150px;transition:transform .9s cubic-bezier(.3,1.6,.5,1)}
+.visor{display:flex;justify-content:space-between;align-items:baseline;margin-top:12px;gap:10px}
+.visor b{font-family:var(--display);font-weight:400;font-size:40px;line-height:1;color:#fff;white-space:nowrap}
+.visor span{font-size:14px;color:#f3d9c9;text-align:right;line-height:1.3}
+fieldset{border:0;padding:0;margin:0 0 14px}
+legend,.tit{display:block;font-weight:700;font-size:15px;margin-bottom:6px}
+.contadores{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.contador{display:grid;grid-template-columns:40px 1fr 40px;border:2px solid var(--tinta);border-radius:4px;overflow:hidden}
+.contador button{border:0;background:var(--pardo-claro);font:700 22px var(--texto);cursor:pointer;color:var(--tinta)}
+.contador button:hover{background:var(--pardo)}
+.contador input{width:100%;border:0;text-align:center;font:700 20px var(--texto);background:#fff;color:var(--tinta);-moz-appearance:textfield;min-width:0}
+.contador input::-webkit-inner-spin-button{-webkit-appearance:none}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{padding:8px 12px;border:2px solid rgba(43,32,27,.35);border-radius:4px;font-weight:600;font-size:15px;cursor:pointer;background:#fff}
+.seg input:checked+label{background:var(--tinta);color:var(--sal);border-color:var(--tinta)}
+.seg input:focus-visible+label{outline:3px solid var(--brasa);outline-offset:2px}
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}
+.campo input{width:100%;padding:10px 12px;border:2px solid rgba(43,32,27,.35);border-radius:4px;font:500 16px var(--texto);background:#fff;color:var(--tinta)}
+.lista{border-top:2px dashed rgba(43,32,27,.35);padding-top:12px;margin:4px 0 16px;font-size:16px}
+.lista p{margin:0}
+.lista .vazio{opacity:.7}
+.comanda .botao{width:100%;justify-content:center}
+.comanda small{display:block;font-size:13px;line-height:1.4;margin-top:10px;opacity:.75}
+
+/* ---------- PROVA ---------- */
+.prova-sec{position:relative;color:var(--sal);padding:110px 0;overflow:hidden;background:var(--carvao)}
+.prova-sec>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 50%;opacity:.42}
+.prova-sec .largura{position:relative}
+.prova-sec .grande{font-family:var(--display);font-size:clamp(90px,16vw,200px);line-height:.85;color:var(--brasa)}
+.prova-sec .frase{font-size:clamp(22px,2.6vw,30px);max-width:24ch;margin:14px 0 30px;font-weight:600;line-height:1.25}
+.fatos{display:flex;flex-wrap:wrap;gap:16px;margin:0 0 30px;padding:0;list-style:none}
+.fatos li{background:rgba(36,26,21,.8);border-left:4px solid var(--brasa);padding:14px 18px;min-width:200px}
+.fatos b{display:block;font-family:var(--display);font-weight:400;font-size:30px;line-height:1.1}
+.fatos span{font-size:15px;color:var(--pardo)}
+.redes{display:flex;gap:12px;flex-wrap:wrap}
+.prova-sec .nota{color:var(--pardo)}
+
+/* ---------- PASSOS ---------- */
+.passos{padding:100px 0;background:var(--pardo-claro)}
+.passos ol{list-style:none;padding:0;margin:44px 0 0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:p}
+.passos li{counter-increment:p;padding:0 24px 0 0;position:relative}
+.passos li::before{content:counter(p);font-family:var(--display);font-size:22px;width:48px;height:48px;display:grid;place-items:center;background:var(--boi);color:var(--sal);border-radius:50%;position:relative;z-index:1;margin-bottom:16px}
+.passos li::after{content:"";position:absolute;top:23px;left:48px;right:0;border-top:3px dotted rgba(140,35,23,.45)}
+.passos li:last-child::after{display:none}
+.passos h3{font-size:24px;color:var(--tinta);margin-bottom:6px}
+.passos p{margin:0}
+
+/* ---------- GALERIA ---------- */
+.galeria{padding:0 0 100px;background:var(--pardo-claro)}
+.fotos{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:260px 260px;gap:12px;margin-top:34px}
+.fotos img{width:100%;height:100%;object-fit:cover;border-radius:3px}
+.fotos img:first-child{grid-row:span 2}
+.fotos img:nth-child(4){grid-column:span 2}
+
+/* ---------- ONDE ---------- */
+.onde{padding:100px 0;background:var(--carvao);color:var(--sal)}
+.onde h2{color:var(--brasa)}
+.onde .grade{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;margin-top:30px;align-items:stretch}
+.onde dl{margin:24px 0 30px;display:grid;grid-template-columns:auto 1fr;gap:12px 20px}
+.onde dt{font-weight:700;color:var(--pardo)}
+.onde dd{margin:0}
+.eventos{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.eventos li{border:1px solid rgba(217,192,154,.5);padding:6px 12px;border-radius:3px;font-size:15px}
+.mapa{width:100%;min-height:380px;border:0;border-radius:4px;filter:sepia(.25)}
+.onde .nota{color:var(--pardo)}
+
+footer{background:#1b1310;color:var(--pardo);font-size:15px;padding:26px 0 100px}
+footer .largura{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+.flutuante{position:fixed;right:18px;bottom:18px;z-index:50;display:flex;align-items:center;gap:8px;background:var(--zap);color:#fff;text-decoration:none;font-weight:700;padding:14px 18px;border-radius:40px;box-shadow:0 6px 20px rgba(0,0,0,.35)}
+.flutuante:hover{background:var(--zap-escuro)}
+.flutuante .ico{width:26px;height:26px}
+
+/* ---------- RESPONSIVO ---------- */
+@media (max-width:1060px){
+  .pedido .grade{grid-template-columns:1fr}
+  .comanda{position:static;max-width:560px}
+  .cartoes{grid-template-columns:repeat(4,1fr)}
+}
+@media (max-width:900px){
+  .barra nav{display:none}
+  .topo::before{background:linear-gradient(90deg,rgba(36,26,21,.9) 0%,rgba(36,26,21,.7) 55%,rgba(36,26,21,.25) 100%),linear-gradient(0deg,rgba(36,26,21,.85) 0%,rgba(36,26,21,0) 40%)}
+  .faz .grade,.onde .grade{grid-template-columns:1fr;gap:40px}
+  .mural{height:440px}
+  .cartoes{grid-template-columns:repeat(2,1fr)}
+  .passos ol{grid-template-columns:1fr 1fr;gap:34px 0}
+  .passos li:nth-child(2)::after{display:none}
+}
+@media (max-width:600px){
+  body{font-size:17px}
+  .topo{min-height:auto}
+  .topo .foto{object-position:70% 50%}
+  .topo::before{background:linear-gradient(0deg,rgba(36,26,21,.95) 0%,rgba(36,26,21,.82) 50%,rgba(36,26,21,.55) 100%)}
+  .miolo{padding:40px 0 50px}
+  .prova{display:flex}
+  .prova div{padding:12px 14px;flex:1}
+  .prova b{font-size:24px}
+  .prova span{font-size:13px}
+  .prova div:nth-child(3){display:none}
+  .faz,.pedido,.passos,.onde,.prova-sec{padding:70px 0}
+  .galeria{padding-bottom:70px}
+  .mural{height:auto;grid-template-columns:1fr 1fr;grid-template-rows:240px 150px}
+  .mural img:first-child{grid-row:auto;grid-column:span 2}
+  .cartoes{gap:10px}
+  .cartao-texto{padding:8px 10px 10px}
+  .cartao-texto strong{font-size:16px}
+  .cartao-texto small{font-size:13px}
+  .comanda{padding:20px 16px}
+  .passos ol{grid-template-columns:1fr}
+  .passos li::after{display:none}
+  .fotos{grid-template-columns:1fr 1fr;grid-template-rows:220px 150px 150px}
+  .fotos img:first-child{grid-row:auto;grid-column:span 2}
+  .fotos img:nth-child(4){grid-column:span 2}
+  .flutuante span{display:none}
+  .visor b{font-size:32px}
+  .fatos li{min-width:0;flex:1 1 100%}
+  .fatos b{font-size:22px;overflow-wrap:anywhere}
+  .flutuante{padding:14px}
+  .acoes .botao{flex:1 1 100%;justify-content:center}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.030-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.040 1.016-1.040 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.870 9.870 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.860 9.860 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.030 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para BONI Churrasqueiro. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <img class="foto" src="fotos/hero.jpg" alt="Carnes assando na grelha sobre a brasa, com a pinça do churrasqueiro virando um corte" fetchpriority="high">
+  <div class="largura barra">
+    <a class="marca" href="#">BONI<small>Churrasqueiro</small></a>
+    <nav aria-label="Seções"><a href="#faz">O serviço</a><a href="#pedido">Calcular a carne</a><a href="#onde">Onde atende</a></nav>
+  </div>
+  <div class="largura miolo">
+    <div class="texto">
+      <h1>Você recebe os convidados. <span class="linha2">O Boni cuida da brasa.</span></h1>
+      <p class="sub">Churrasqueiro para eventos em Rio Claro. Aniversário, casamento, confraternização da firma: a carne sai no ponto e você aproveita a festa.</p>
+      <div class="acoes">
+        <a class="botao zap" href="https://wa.me/5519998316085?text=Ol%C3%A1%2C%20Boni!%20Vim%20pelo%20site%20e%20quero%20saber%20se%20voc%C3%AA%20est%C3%A1%20livre%20para%20o%20churrasco%20do%20meu%20evento." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Chamar o Boni no WhatsApp</a>
+        <a class="botao contorno" href="#pedido">Calcular a carne da festa</a>
+      </div>
+      <div class="prova">
+        <div><b>~690</b><span>curtidas no Facebook</span></div>
+        <div><b>11</b><span>avaliações de clientes</span></div>
+        <div><b>Rio Claro</b><span>e região</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="faz" id="faz">
+  <div class="largura grade">
+    <div>
+      <h2>Churrasco de festa, sem você preso na churrasqueira</h2>
+      <p class="intro">Quem dá a festa quer conversar, abraçar e comer junto. O Boni assume a grelha do acender do carvão até o último corte servido.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 3c2 3 5 5 5 9a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-5 1-8z"/></svg><div><strong>Fogo e ponto na mão</strong><span>Carvão no tempo certo, cada corte no ponto que o pessoal pede.</span></div></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M4 20 20 4M14 4h6v6M7 13l4 4"/></svg><div><strong>Corte e serviço</strong><span>A carne vai fatiada para a tábua e passa na roda o tempo todo.</span></div></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M3 7h18M6 7v12h12V7M9 7V4h6v3"/></svg><div><strong>Cardápio combinado antes</strong><span>Quantidade e cortes acertados com você pelo WhatsApp, sem sobrar nem faltar.</span></div></li>
+      </ul>
+      <p class="nota">Texto de exemplo. No site final entram os detalhes do serviço do Boni.</p>
+    </div>
+    <div class="mural">
+      <img src="fotos/evento.jpg" alt="Convidados reunidos em volta da churrasqueira com fumaça subindo" loading="lazy">
+      <img src="fotos/buffet.jpg" alt="Churrasqueiro de branco servindo carne numa festa ao ar livre" loading="lazy">
+      <img src="fotos/pinca.jpg" alt="Pinça segurando carne sobre a chama" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="pedido" id="pedido">
+  <div class="largura">
+    <h2>Quanto de carne a sua festa pede?</h2>
+    <p class="intro">Escolha o que não pode faltar, diga quantas pessoas vêm e veja o ponteiro da balança. O pedido sai pronto para o WhatsApp do Boni.</p>
+    <div class="grade">
+      <div class="cartoes" id="cartoes" role="group" aria-label="O que vai na grelha"></div>
+
+      <form class="comanda" id="comanda" onsubmit="return false" aria-label="Comanda do churrasco">
+        <h3>Comanda da festa</h3>
+        <div class="balanca">
+          <div class="mostrador">
+            <svg viewBox="0 0 300 165" role="img" aria-labelledby="kg-txt">
+              <g id="escala" font-family="Barlow, sans-serif" font-weight="700" font-size="14" fill="#2b201b" text-anchor="middle"></g>
+              <g class="ponteiro" id="ponteiro"><line x1="150" y1="150" x2="150" y2="34" stroke="#8c2317" stroke-width="4" stroke-linecap="round"/></g>
+              <circle cx="150" cy="150" r="11" fill="#2b201b"/>
+              <circle cx="150" cy="150" r="4" fill="#f28c28"/>
+            </svg>
+          </div>
+          <div class="visor"><b id="kg">0 kg</b><span id="kg-txt">de carne, mais ou menos</span></div>
+        </div>
+
+        <div class="contadores">
+          <div><span class="tit" id="l-ad">Adultos</span><div class="contador"><button type="button" data-alvo="adultos" data-d="-5" aria-label="Menos 5 adultos">−</button><input type="number" id="adultos" value="30" min="0" max="500" inputmode="numeric" aria-labelledby="l-ad"><button type="button" data-alvo="adultos" data-d="5" aria-label="Mais 5 adultos">+</button></div></div>
+          <div><span class="tit" id="l-cr">Crianças</span><div class="contador"><button type="button" data-alvo="criancas" data-d="-1" aria-label="Menos 1 criança">−</button><input type="number" id="criancas" value="6" min="0" max="300" inputmode="numeric" aria-labelledby="l-cr"><button type="button" data-alvo="criancas" data-d="1" aria-label="Mais 1 criança">+</button></div></div>
+        </div>
+
+        <fieldset><legend>Que festa é</legend><div class="seg">
+          <input type="radio" name="tipo" id="t1" value="um aniversário" checked><label for="t1">Aniversário</label>
+          <input type="radio" name="tipo" id="t2" value="um casamento"><label for="t2">Casamento</label>
+          <input type="radio" name="tipo" id="t3" value="uma confraternização"><label for="t3">Confraternização</label>
+          <input type="radio" name="tipo" id="t4" value="um evento"><label for="t4">Outro</label>
+        </div></fieldset>
+
+        <div class="duas">
+          <div class="campo"><label class="tit" for="data">Data</label><input type="date" id="data"></div>
+          <div class="campo"><label class="tit" for="bairro">Bairro ou cidade</label><input type="text" id="bairro" placeholder="Ex.: Jardim Claret" maxlength="40" autocomplete="off"></div>
+        </div>
+
+        <div class="lista" aria-live="polite"><p><b>Na grelha:</b> <span id="escolhidos"></span></p></div>
+        <a class="botao zap" id="enviar" href="#" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Mandar a comanda pro Boni</a>
+        <small>Conta de referência: uns 400 g de carne por adulto e 200 g por criança. O Boni confirma a quantidade, a data e o valor pelo WhatsApp. Itens de exemplo: no site final entra o cardápio do Boni.</small>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="prova-sec">
+  <img src="fotos/hero2.jpg" alt="" loading="lazy">
+  <div class="largura">
+    <div class="grande">~690</div>
+    <p class="frase">pessoas curtem o trabalho do Boni no Facebook.</p>
+    <ul class="fatos">
+      <li><b>11</b><span>avaliações no Facebook</span></li>
+      <li><b>@boni.churrasqueiro</b><span>fotos dos eventos no Instagram</span></li>
+    </ul>
+    <div class="redes">
+      <a class="botao contorno" href="https://www.facebook.com/p/BONI-Churrasqueiro-100063809522265/" rel="noopener" target="_blank">Ver avaliações no Facebook</a>
+      <a class="botao contorno" href="https://www.instagram.com/boni.churrasqueiro/" rel="noopener" target="_blank">Ver o Instagram</a>
+    </div>
+    <p class="nota">No site final entram os comentários dos clientes do Boni.</p>
+  </div>
+</section>
+
+<section class="passos">
+  <div class="largura">
+    <h2>Do zap até a picanha na mesa</h2>
+    <ol>
+      <li><h3>Chama no WhatsApp</h3><p>Conta a data, o lugar e quantas pessoas vêm.</p></li>
+      <li><h3>Acerta o cardápio</h3><p>Cortes, quantidade e valor do serviço, tudo combinado antes.</p></li>
+      <li><h3>Boni chega cedo</h3><p>Acende o fogo com calma para a primeira carne sair na hora.</p></li>
+      <li><h3>Você aproveita</h3><p>A carne passa na roda até o fim da festa.</p></li>
+    </ol>
+    <p class="nota">Texto de exemplo. No site final entra o jeito de trabalhar do Boni.</p>
+  </div>
+</section>
+
+<section class="galeria">
+  <div class="largura">
+    <h2>Brasa acesa, festa cheia</h2>
+    <div class="fotos">
+      <img src="fotos/g2.jpg" alt="Linguiça e frango dourando na grelha" loading="lazy">
+      <img src="fotos/g1.jpg" alt="Carnes assando sobre carvão" loading="lazy">
+      <img src="fotos/g4.jpg" alt="Grelha cheia vista de cima, com linguiças e carnes" loading="lazy">
+      <img src="fotos/g3.jpg" alt="Amigos comendo ao ar livre numa mesa comprida" loading="lazy">
+    </div>
+    <p class="nota">Fotos ilustrativas. No site final entram fotos dos eventos do Boni.</p>
+  </div>
+</section>
+
+<section class="onde" id="onde">
+  <div class="largura">
+    <h2>Onde o Boni atende</h2>
+    <div class="grade">
+      <div>
+        <p class="intro">O Boni vai até o local da sua festa: na sua casa, na chácara ou no salão, em Rio Claro e região.</p>
+        <dl>
+          <dt>WhatsApp</dt><dd><a href="https://wa.me/5519998316085" rel="noopener">(19) 99831-6085</a></dd>
+          <dt>Agenda</dt><dd>Datas combinadas pelo WhatsApp. Quanto antes você chamar, mais fácil garantir a sua.</dd>
+          <dt>Redes</dt><dd><a href="https://www.instagram.com/boni.churrasqueiro/" rel="noopener" target="_blank">@boni.churrasqueiro</a> e <a href="https://www.facebook.com/p/BONI-Churrasqueiro-100063809522265/" rel="noopener" target="_blank">Facebook</a></dd>
+        </dl>
+        <ul class="eventos" aria-label="Tipos de evento">
+          <li>Aniversário</li><li>Casamento</li><li>Chácara</li><li>Confraternização</li><li>Batizado</li><li>Formatura</li>
+        </ul>
+        <p class="nota">Texto de exemplo. No site final entram as cidades e o raio de atendimento do Boni.</p>
+        <div class="acoes" style="margin-top:26px">
+          <a class="botao zap" href="https://wa.me/5519998316085?text=Ol%C3%A1%2C%20Boni!%20Vim%20pelo%20site.%20Voc%C3%AA%20atende%20no%20meu%20bairro%3F" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar se atende no meu bairro</a>
+        </div>
+      </div>
+      <iframe class="mapa" src="https://www.google.com/maps?q=Rio%20Claro%20-%20SP&output=embed" loading="lazy" title="Mapa de Rio Claro, área de atendimento do BONI Churrasqueiro" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="largura"><span>BONI Churrasqueiro, churrasqueiro para eventos em Rio Claro – SP</span><span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span></div>
+</footer>
+<a class="flutuante" href="https://wa.me/5519998316085?text=Ol%C3%A1%2C%20Boni!%20Vim%20pelo%20site%20e%20quero%20saber%20se%20voc%C3%AA%20est%C3%A1%20livre%20para%20o%20churrasco%20do%20meu%20evento." rel="noopener" aria-label="Chamar o Boni no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg><span>WhatsApp</span></a>
+
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const FONE = '5519998316085';
+
+  // [id, nome no cartão, texto na mensagem, foto, linha, é carne?]
+  const ITENS = [
+    ['picanha', 'Picanha', 'picanha', 'fotos/picanha.jpg', 'A rainha da festa, fatiada na tábua.', true],
+    ['costela', 'Costela', 'costela', 'fotos/costela.jpg', 'Fogo baixo e paciência.', true],
+    ['fraldinha', 'Fraldinha e maminha', 'fraldinha e maminha', 'fotos/cortes.jpg', 'Macias e suculentas.', true],
+    ['linguica', 'Linguiça', 'linguiça', 'fotos/linguica.jpg', 'Pra abrir o apetite.', true],
+    ['frango', 'Frango', 'frango (coxinha da asa)', 'fotos/frango.jpg', 'Coxinha da asa douradinha.', true],
+    ['espeto', 'Espetinhos', 'espetinhos', 'fotos/espeto.jpg', 'Carne, frango e legumes.', true],
+    ['pao', 'Pão de alho', 'pão de alho', 'fotos/paoalho.jpg', 'Crocante por fora, cremoso.', false],
+    ['abacaxi', 'Abacaxi com canela', 'abacaxi com canela', 'fotos/abacaxi.jpg', 'A sobremesa da grelha.', false],
+  ];
+  const escolha = new Set(['picanha', 'linguica', 'pao']);
+  const cartoes = $('cartoes');
+  ITENS.forEach(([id, rotulo, , foto, desc]) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'cartao'; b.dataset.s = id; b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = `<span class="cartao-foto"><img src="${foto}" alt="" loading="lazy"></span>` +
+      `<span class="cartao-texto"><strong>${rotulo}</strong><small>${desc}</small></span>` +
+      `<span class="cartao-marca" aria-hidden="true"></span>`;
+    b.addEventListener('click', () => { escolha.has(id) ? escolha.delete(id) : escolha.add(id); atualizar(); });
+    cartoes.appendChild(b);
+  });
+
+  // escala da balança: 0 a 60 kg em meio círculo
+  const MAX = 60, cx = 150, cy = 150;
+  const escala = $('escala');
+  let marcas = '';
+  for (let k = 0; k <= MAX; k += 2.5) {
+    const a = Math.PI - (k / MAX) * Math.PI;
+    const longo = k % 10 === 0, r1 = longo ? 106 : (k % 5 === 0 ? 112 : 116), r2 = 124;
+    marcas += `<line x1="${cx + r1 * Math.cos(a)}" y1="${cy - r1 * Math.sin(a)}" x2="${cx + r2 * Math.cos(a)}" y2="${cy - r2 * Math.sin(a)}" stroke="#2b201b" stroke-width="${longo ? 3 : 1.5}"/>`;
+    if (longo) marcas += `<text x="${cx + 90 * Math.cos(a)}" y="${cy - 90 * Math.sin(a) + 5}">${k}</text>`;
+  }
+  marcas += `<text x="150" y="112" font-family="Alfa Slab One, serif" font-weight="400" font-size="17" fill="#8c2317">BONI</text><text x="150" y="128" font-size="11" font-weight="600">kg</text>`;
+  escala.innerHTML = marcas;
+
+  function num(id) { const v = parseInt($(id).value, 10); return isNaN(v) || v < 0 ? 0 : v; }
+  function lista(itens) { return itens.length < 2 ? itens.join('') : itens.slice(0, -1).join(', ') + ' e ' + itens[itens.length - 1]; }
+  function dataBR(v) { if (!v) return ''; const [a, m, d] = v.split('-'); return `${d}/${m}/${a}`; }
+
+  function atualizar() {
+    cartoes.querySelectorAll('.cartao').forEach((b) => b.setAttribute('aria-pressed', String(escolha.has(b.dataset.s))));
+    const ad = num('adultos'), cr = num('criancas');
+    const temCarne = ITENS.some((i) => i[5] && escolha.has(i[0]));
+    const kg = temCarne ? Math.round((ad * 0.4 + cr * 0.2) * 2) / 2 : 0;
+    const ang = -90 + Math.min(kg, MAX) / MAX * 180;
+    $('ponteiro').style.transform = `rotate(${ang}deg)`;
+    $('kg').textContent = kg.toLocaleString('pt-BR') + ' kg';
+    $('kg-txt').textContent = temCarne ? `de carne pra ${ad + cr} pessoas, mais ou menos` : 'escolha pelo menos uma carne';
+    const nomes = ITENS.filter(([id]) => escolha.has(id)).map((i) => i[2]);
+    $('escolhidos').textContent = nomes.length ? lista(nomes) : 'nada ainda. Toque nas fotos.';
+    const tipo = document.querySelector('input[name=tipo]:checked').value;
+    const data = dataBR($('data').value), bairro = $('bairro').value.trim();
+    let msg = `Olá, Boni! Vim pelo site. Estou organizando ${tipo} para ${ad} adultos e ${cr} crianças`;
+    if (data) msg += `, no dia ${data}`;
+    if (bairro) msg += `, em ${bairro}`;
+    msg += '.';
+    if (nomes.length) msg += ` Queria na grelha: ${lista(nomes)}.`;
+    if (kg) msg += ` A calculadora do site deu uns ${kg.toLocaleString('pt-BR')} kg de carne.`;
+    msg += ' Você está livre nessa data? Qual o valor do seu serviço?';
+    $('enviar').href = `https://wa.me/${FONE}?text=` + encodeURIComponent(msg);
+  }
+  document.querySelectorAll('.contador button').forEach((b) => b.addEventListener('click', () => {
+    const alvo = $(b.dataset.alvo);
+    alvo.value = Math.max(0, Math.min(Number(alvo.max), num(b.dataset.alvo) + Number(b.dataset.d)));
+    atualizar();
+  }));
+  $('comanda').addEventListener('input', atualizar);
+  $('comanda').addEventListener('change', atualizar);
+  atualizar();
+})();
+</script>
+</body>
+</html>
