@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Espaço Cínthia Talasso | Sobrancelha, micropigmentação e depilação em Americana</title>
+<meta name="description" content="Design de sobrancelha, micropigmentação, lash lifting, hidragloss e depilação no Parque Nova Carioba, em Americana. Agende pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Figtree:wght@400;500;600;700&family=Monsieur+La+Doulaise&display=swap" rel="stylesheet">
+<style>
+:root{
+  --tinta:#000;
+  --grafite:#2c2b2c;
+  --papel:#fff;
+  --nevoa:#f2f0f1;
+  --linha:#d9d5d7;
+  --batom:#c21d68;
+  --batom-escuro:#9c1453;
+  --zap:#1fa855;
+  --serif:'Bodoni Moda', Didot, 'Times New Roman', serif;
+  --sans:'Figtree', system-ui, sans-serif;
+  --assina:'Monsieur La Doulaise', cursive;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:400 1.0625rem/1.6 var(--sans);color:var(--tinta);background:var(--papel);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--batom);outline-offset:3px}
+.largura{width:min(1180px,100% - 48px);margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(2.1rem,4.4vw,3.4rem)}
+.intro{max-width:56ch;color:#3d3a3c;margin:.9rem 0 0}
+.nota{font-size:.85rem;color:#6d6870;margin:1.2rem 0 0;font-style:italic}
+.ico{width:1.25em;height:1.25em;flex:none}
+
+/* botões: retos, como um traço de lápis */
+.botao{display:inline-flex;align-items:center;gap:.6rem;padding:.95rem 1.4rem;border-radius:2px;font:600 1rem/1 var(--sans);text-decoration:none;border:1.5px solid transparent;transition:background .2s,color .2s,border-color .2s}
+.botao.zap{background:var(--zap);color:#fff}
+.botao.zap:hover{background:#178a45}
+.botao.claro{border-color:#fff;color:#fff}
+.botao.claro:hover{background:#fff;color:var(--tinta)}
+.botao.escuro{border-color:var(--tinta);color:var(--tinta)}
+.botao.escuro:hover{background:var(--tinta);color:#fff}
+
+.aviso{background:var(--batom);color:#fff;text-align:center;font-size:.85rem;padding:.5rem 1rem}
+
+/* ---------- HERO ---------- */
+.topo{position:relative;min-height:min(100svh,920px);color:#fff;background:var(--tinta);display:flex;flex-direction:column;overflow:hidden}
+.topo .foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 40%}
+.topo::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.82) 0%,rgba(0,0,0,.55) 34%,rgba(0,0,0,0) 62%);z-index:1}
+.barra{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:1.2rem}
+.marca{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:#fff}
+.marca svg{width:54px;height:40px}
+.marca span{display:flex;flex-direction:column;line-height:1}
+.marca small{font:500 .78rem/1 var(--sans);letter-spacing:.04em;opacity:.85}
+.marca b{font:400 2rem/1 var(--assina);margin-top:.1rem}
+.barra nav{display:flex;gap:1.6rem}
+.barra nav a{color:#fff;text-decoration:none;font-weight:500;font-size:.95rem;padding-block:.3rem;border-bottom:1.5px solid transparent}
+.barra nav a:hover{border-color:var(--batom)}
+.miolo{position:relative;z-index:2;flex:1;display:flex;align-items:center;padding-block:2rem 4rem}
+.texto{max-width:470px}
+.topo h1{font-size:clamp(2.7rem,5.6vw,4.9rem);font-weight:500}
+.topo h1 em{font-style:italic;font-weight:400}
+.sub{font-size:1.12rem;margin:1.2rem 0 1.8rem;max-width:40ch;color:#eee}
+.acoes{display:flex;flex-wrap:wrap;gap:.8rem}
+.status{display:flex;align-items:center;gap:.55rem;margin:1.4rem 0 0;font-size:.95rem}
+.status i,.agora i{width:9px;height:9px;border-radius:50%;background:#9b979a;flex:none}
+.status.aberto i,.agora.aberto i{background:#33d16f;box-shadow:0 0 0 4px rgba(51,209,111,.22)}
+.provas{display:flex;gap:2.2rem;margin:2.2rem 0 0;padding:1.3rem 0 0;border-top:1px solid rgba(255,255,255,.28);list-style:none}
+.provas b{display:block;font:500 2.3rem/1 var(--serif)}
+.provas span{font-size:.88rem;color:#ddd}
+
+/* ---------- O PAINEL (backdrop da marca) ---------- */
+.painel{background:var(--grafite);overflow:hidden;border-block:1px solid #000}
+.trilha{display:flex;width:max-content;animation:desliza 60s linear infinite}
+.bloco{display:grid;grid-template-columns:repeat(6,220px);grid-template-rows:repeat(2,150px)}
+.ladrilho{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.2rem;background:var(--grafite);color:#fff}
+.ladrilho:nth-child(-n+6):nth-child(odd),.ladrilho:nth-child(n+7):nth-child(even){background:#fff;color:var(--tinta)}
+.ladrilho svg{width:110px;height:70px}
+.ladrilho span{font:400 1.9rem/1 var(--assina)}
+@keyframes desliza{to{transform:translateX(-50%)}}
+
+/* ---------- SERVIÇOS / SELETOR ---------- */
+.servicos{padding:6rem 0 5rem}
+.servicos .grade{display:grid;grid-template-columns:1fr 340px;gap:2.4rem;margin-top:2.6rem;align-items:start}
+.cartoes{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.cartao{all:unset;box-sizing:border-box;cursor:pointer;position:relative;display:flex;flex-direction:column;background:var(--nevoa);border:1.5px solid transparent;transition:background .2s,color .2s,border-color .2s}
+.cartao:focus-visible{outline:3px solid var(--batom);outline-offset:3px}
+.cartao:hover{border-color:var(--tinta)}
+.cartao-foto{aspect-ratio:5/4;overflow:hidden}
+.cartao-foto img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.cartao-texto{padding:.8rem .85rem 1rem}
+.cartao-texto strong{display:block;font:500 1.15rem/1.15 var(--serif)}
+.cartao-texto small{display:block;font-size:.85rem;line-height:1.4;color:#575257;margin-top:.35rem}
+.cartao-marca{position:absolute;top:10px;right:10px;width:30px;height:30px;background:#fff;border:1.5px solid var(--tinta);display:grid;place-items:center;font-weight:700}
+.cartao[aria-pressed="true"]{background:var(--tinta);color:#fff}
+.cartao[aria-pressed="true"] small{color:#cfcbce}
+.cartao[aria-pressed="true"] .cartao-marca{background:var(--batom);border-color:var(--batom);color:#fff}
+.cartao[aria-pressed="true"] .cartao-marca::after{content:"✓"}
+
+.ficha{position:sticky;top:20px;background:var(--tinta);color:#fff;padding:1.8rem 1.6rem}
+.ficha h3{font-size:1.75rem}
+.ficha .linha-assina{font:400 2.2rem/1 var(--assina);color:#e4a6c3;margin:.1rem 0 1rem}
+.campo{margin-bottom:1.1rem}
+.tit,legend{display:block;font-weight:600;font-size:.9rem;margin-bottom:.45rem;padding:0}
+fieldset{border:0;margin:0 0 1.1rem;padding:0}
+.ficha input[type=text]{width:100%;padding:.75rem .8rem;border:1.5px solid #555;background:#111;color:#fff;font:inherit;border-radius:2px}
+.ficha input[type=text]:focus{border-color:#fff;outline:none}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{padding:.5rem .75rem;border:1.5px solid #555;cursor:pointer;font-size:.9rem;border-radius:2px}
+.seg input:checked+label{background:#fff;color:var(--tinta);border-color:#fff}
+.seg input:focus-visible+label{outline:3px solid var(--batom);outline-offset:2px}
+.lista{border-top:1px solid #444;padding-top:1rem;margin-bottom:1.2rem}
+.lista>p{margin:0 0 .4rem;font-weight:600;font-size:.9rem}
+.lista ul{margin:0;padding-left:1.1rem;color:#e6e2e4}
+.lista .vazio{margin:0;color:#a9a4a7;font-size:.92rem}
+.ficha .botao{width:100%;justify-content:center}
+.ficha small{display:block;margin-top:.9rem;font-size:.8rem;color:#b5b0b3;line-height:1.45}
+
+/* ---------- A CÍNTHIA ---------- */
+.cinthia{background:var(--nevoa);padding:6rem 0}
+.cinthia .grade{display:grid;grid-template-columns:1.05fr 1fr;gap:4rem;align-items:center}
+.cinthia figure{margin:0;position:relative}
+.cinthia figure img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.cinthia figcaption{font-size:.82rem;color:#6d6870;margin-top:.5rem}
+.anos{display:flex;align-items:flex-end;gap:1rem;margin-bottom:1.4rem}
+.anos b{font:400 clamp(6rem,12vw,9.5rem)/.8 var(--serif)}
+.anos span{font-size:1.05rem;line-height:1.3;padding-bottom:.4rem;max-width:16ch}
+.cinthia h2{font-size:clamp(1.9rem,3.6vw,2.8rem)}
+.cinthia p{max-width:54ch}
+.cinthia .assina{font:400 3rem/1 var(--assina);color:var(--batom);margin:1rem 0 0}
+.insta{display:inline-flex;align-items:center;gap:.5rem;margin-top:1rem;font-weight:600;color:var(--batom-escuro)}
+
+/* ---------- MICRO PASSO A PASSO ---------- */
+.passos{padding:6rem 0}
+.passos ol{list-style:none;margin:2.6rem 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1.5px solid var(--tinta)}
+.passos li{padding:1.4rem 1.4rem 0 0;position:relative}
+.passos li::before{content:"";position:absolute;top:-6px;left:0;width:11px;height:11px;background:var(--batom);border-radius:50%}
+.passos .n{font:italic 400 1rem/1 var(--serif);color:var(--batom-escuro)}
+.passos h3{font-size:1.45rem;margin:.5rem 0 .5rem}
+.passos p{margin:0;color:#3d3a3c;font-size:.98rem}
+
+/* ---------- GALERIA ---------- */
+.galeria{padding:0 0 6rem}
+.galeria .fotos{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:260px 260px;gap:12px;margin-top:2.2rem}
+.galeria img{width:100%;height:100%;object-fit:cover}
+.galeria img:first-child{grid-row:span 2}
+.galeria img:last-child{grid-column:span 2}
+
+/* ---------- ONDE ---------- */
+.onde{background:var(--tinta);color:#fff;padding:6rem 0}
+.onde .grade{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;margin-top:2.4rem}
+.agora{display:flex;align-items:center;gap:.6rem;font-size:1.1rem;font-weight:600;margin:0 0 1.4rem}
+.semana{list-style:none;margin:0;padding:0}
+.semana li{display:grid;grid-template-columns:90px 1fr;align-items:center;gap:1rem;padding:.42rem 0;border-bottom:1px solid #2a2a2a}
+.semana .dia{font-size:.95rem;color:#cfcbce}
+.trilho{position:relative;height:28px;background:#161616}
+.faixa{position:absolute;top:0;bottom:0;background:#fff;color:var(--tinta);font-size:.8rem;font-weight:600;display:flex;align-items:center;padding-left:.5rem;white-space:nowrap}
+.fechado{font-size:.85rem;color:#8d888b;display:flex;align-items:center;height:100%;padding-left:.5rem}
+.semana li.hoje .dia{color:#fff;font-weight:700}
+.semana li.hoje .faixa{background:var(--batom);color:#fff}
+.escala{display:grid;grid-template-columns:90px 1fr;gap:1rem;font-size:.75rem;color:#8d888b;margin-top:.4rem}
+.escala div{display:flex;justify-content:space-between}
+.onde dl{margin:2rem 0 1.6rem;display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.2rem}
+.onde dt{color:#a9a4a7}
+.onde dd{margin:0}
+.onde .acoes .botao.claro{border-color:#fff}
+.mapa{width:100%;height:100%;min-height:420px;border:0;filter:grayscale(.85) contrast(1.05)}
+
+footer{background:#0a0a0a;color:#a9a4a7;font-size:.85rem;padding:1.6rem 0 6rem}
+footer .largura{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem}
+
+.flutuante{position:fixed;right:18px;bottom:18px;z-index:50;display:flex;align-items:center;gap:.5rem;background:var(--zap);color:#fff;text-decoration:none;font-weight:700;padding:.85rem 1.1rem;border-radius:2px;box-shadow:0 6px 20px rgba(0,0,0,.3)}
+.flutuante .ico{width:1.5em;height:1.5em}
+
+/* ---------- RESPONSIVO ---------- */
+@media (max-width:1060px){
+  .servicos .grade{grid-template-columns:1fr}
+  .ficha{position:static}
+  .cartoes{grid-template-columns:repeat(4,1fr)}
+}
+@media (max-width:900px){
+  .topo{min-height:0}
+  .topo .foto{position:relative;height:62svh;min-height:360px;max-height:560px;object-position:62% 38%}
+  .topo::before{display:none}
+  .barra{position:absolute;top:0;left:0;right:0;width:100%;padding-inline:max(24px,(100% - 1180px)/2);background:linear-gradient(180deg,rgba(0,0,0,.65),rgba(0,0,0,0))}
+  .miolo{padding-block:2.4rem 3.4rem}
+  .texto{max-width:620px}
+  .barra nav{display:none}
+  .cartoes{grid-template-columns:repeat(2,1fr)}
+  .cinthia .grade,.onde .grade{grid-template-columns:1fr;gap:2.6rem}
+  .passos ol{grid-template-columns:1fr 1fr;row-gap:2.2rem;border-top:0}
+  .passos li{border-top:1.5px solid var(--tinta)}
+  .galeria .fotos{grid-template-columns:1fr 1fr;grid-template-rows:220px 220px 220px}
+  .galeria img:first-child{grid-row:span 1;grid-column:span 2}
+  .galeria img:last-child{grid-column:span 2}
+}
+@media (max-width:640px){
+  .largura{width:min(1180px,100% - 36px)}
+  .topo .foto{height:54svh;min-height:330px;object-position:66% 35%}
+  .barra{padding-inline:18px}
+  .miolo{padding-block:1.8rem 3rem}
+  .topo h1{font-size:2.6rem}
+  .provas{gap:1.6rem}
+  .provas b{font-size:2rem}
+  .bloco{grid-template-columns:repeat(6,160px);grid-template-rows:repeat(2,112px)}
+  .ladrilho svg{width:80px;height:52px}
+  .ladrilho span{font-size:1.5rem}
+  .servicos,.cinthia,.passos,.onde{padding:4rem 0}
+  .galeria{padding-bottom:4rem}
+  .cartoes{gap:10px}
+  .cartao-texto{padding:.6rem .6rem .8rem}
+  .cartao-texto strong{font-size:1.02rem}
+  .cartao-texto small{font-size:.8rem}
+  .passos ol{grid-template-columns:1fr}
+  .galeria .fotos{grid-template-rows:180px 180px 180px}
+  .semana li,.escala{grid-template-columns:66px 1fr;gap:.6rem}
+  .mapa{min-height:320px}
+  .flutuante span{display:none}
+  .flutuante{padding:.9rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .trilha{animation:none}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.030-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.870 9.870 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.860 9.860 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.030 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+  <!-- marca: sobrancelha + olho com cílios, como no painel do Espaço -->
+  <symbol id="olho" viewBox="0 0 120 76">
+    <path fill="currentColor" d="M6 26C26 8 62 2 100 10c6 1 11 3 15 6-4-1-9-2-15-2C66 9 34 14 10 30z"/>
+    <path fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" d="M18 52c22-20 58-24 88-6"/>
+    <path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M24 54c22 12 52 12 78-6"/>
+    <circle cx="62" cy="50" r="10" fill="currentColor"/>
+    <circle cx="65" cy="47" r="2.4" fill="var(--furo,#fff)"/>
+    <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M30 44l-6-9M40 39l-4-10M51 36l-2-10M62 35l1-10M73 36l4-10M84 39l6-9M94 43l8-8M102 47l9-5"/>
+  </symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para Espaço Cínthia Talasso. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <img class="foto" src="fotos/hero.jpg" alt="Profissional de luvas pretas fazendo micropigmentação na sobrancelha de uma cliente" fetchpriority="high">
+  <div class="largura barra">
+    <a class="marca" href="#" aria-label="Espaço Cínthia Talasso, início"><svg aria-hidden="true" style="--furo:#000"><use href="#olho"/></svg><span><small>Espaço</small><b>Cínthia Talasso</b></span></a>
+    <nav aria-label="Seções"><a href="#servicos">Serviços</a><a href="#cinthia">A Cínthia</a><a href="#onde">Horário e endereço</a></nav>
+  </div>
+  <div class="largura miolo">
+    <div class="texto">
+      <h1>Sobrancelha no desenho do seu rosto.</h1>
+      <p class="sub">Design de sobrancelha, micropigmentação, lash lifting, hidragloss e depilação no Parque Nova Carioba, em Americana.</p>
+      <div class="acoes">
+        <a class="botao zap" href="https://wa.me/5519992442660?text=Ol%C3%A1%2C%20C%C3%ADnthia!%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Agendar no WhatsApp</a>
+        <a class="botao claro" href="#servicos">Escolher serviços</a>
+      </div>
+      <p class="status" id="status-topo"><i></i><span>Confira o horário</span></p>
+      <ul class="provas">
+        <li><b>8 anos</b><span>de sobrancelha e micropigmentação</span></li>
+        <li><b>1.112</b><span>seguidores no Instagram</span></li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="painel" aria-hidden="true">
+  <div class="trilha" id="trilha"></div>
+</div>
+
+<main>
+<section class="servicos" id="servicos">
+  <div class="largura">
+    <h2>O que você quer fazer?</h2>
+    <p class="intro">Toque nos serviços que você quer. A sua ficha se monta ao lado e o pedido de horário vai pronto para o WhatsApp da Cínthia.</p>
+    <div class="grade">
+      <div class="cartoes" id="cartoes" role="group" aria-label="Serviços do Espaço Cínthia Talasso"></div>
+
+      <form class="ficha" id="ficha" onsubmit="return false" aria-label="Pedido de horário">
+        <h3>Sua ficha</h3>
+        <p class="linha-assina" aria-hidden="true">Cínthia Talasso</p>
+        <div class="campo"><label class="tit" for="nome">Seu nome</label><input type="text" id="nome" placeholder="Ex.: Mariana" autocomplete="given-name" maxlength="30"></div>
+        <fieldset><legend>Já é cliente do Espaço?</legend><div class="seg">
+          <input type="radio" name="cliente" id="c1" value="primeira" checked><label for="c1">Primeira vez</label>
+          <input type="radio" name="cliente" id="c2" value="cliente"><label for="c2">Já sou cliente</label>
+        </div></fieldset>
+        <fieldset><legend>Melhor dia</legend><div class="seg">
+          <input type="radio" name="dia" id="d0" value="" checked><label for="d0">Tanto faz</label>
+          <input type="radio" name="dia" id="d2" value="na terça"><label for="d2">Ter</label>
+          <input type="radio" name="dia" id="d3" value="na quarta"><label for="d3">Qua</label>
+          <input type="radio" name="dia" id="d4" value="na quinta"><label for="d4">Qui</label>
+          <input type="radio" name="dia" id="d5" value="na sexta"><label for="d5">Sex</label>
+          <input type="radio" name="dia" id="d6" value="no sábado"><label for="d6">Sáb</label>
+        </div></fieldset>
+        <fieldset><legend>Período</legend><div class="seg">
+          <input type="radio" name="periodo" id="pm" value="de manhã" checked><label for="pm">Manhã</label>
+          <input type="radio" name="periodo" id="pt" value="à tarde"><label for="pt">Tarde</label>
+        </div></fieldset>
+        <div class="lista" aria-live="polite"><p>Serviços escolhidos</p><div id="escolhidos"></div></div>
+        <a class="botao zap" id="enviar" href="https://wa.me/5519992442660" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir horário no WhatsApp</a>
+        <small>Valor e horário a Cínthia confirma pelo WhatsApp. Lista de exemplo: no site final entram os serviços e os detalhes do Espaço.</small>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="cinthia" id="cinthia">
+  <div class="largura grade">
+    <figure>
+      <img src="fotos/desenho.jpg" alt="Desenho da sobrancelha sendo marcado com lápis antes do procedimento" loading="lazy">
+      <figcaption>Foto ilustrativa.</figcaption>
+    </figure>
+    <div>
+      <div class="anos"><b>8</b><span>anos desenhando sobrancelhas em Americana</span></div>
+      <h2>Quem atende é a própria Cínthia</h2>
+      <p>A Cínthia é designer de sobrancelhas e micropigmentadora há 8 anos. No Espaço, no Parque Nova Carioba, ela cuida de sobrancelha, cílios, lábios e depilação.</p>
+      <p>Cada desenho começa olhando o rosto, os traços e o que você gosta. Nada de sobrancelha igual para todo mundo.</p>
+      <p class="nota">Texto de exemplo. No site final entra a história da Cínthia, contada por ela.</p>
+      <p class="assina" aria-hidden="true">Cínthia Talasso</p>
+      <a class="insta" href="https://www.instagram.com/espacocinthiatalasso/" rel="noopener">Ver os trabalhos no Instagram @espacocinthiatalasso</a>
+    </div>
+  </div>
+</section>
+
+<section class="passos">
+  <div class="largura">
+    <h2>Micropigmentação, do desenho ao retoque</h2>
+    <p class="intro">Para quem nunca fez, o caminho costuma ser este.</p>
+    <ol>
+      <li><span class="n">Primeiro</span><h3>Conversa</h3><p>Você conta o que incomoda e o resultado que imagina.</p></li>
+      <li><span class="n">Depois</span><h3>Desenho</h3><p>A sobrancelha é medida e desenhada no seu rosto antes de qualquer pigmento.</p></li>
+      <li><span class="n">Então</span><h3>Pigmentação</h3><p>Com o desenho aprovado por você, começa o procedimento.</p></li>
+      <li><span class="n">Por fim</span><h3>Retoque</h3><p>Depois da cicatrização, um retoque acerta cor e falhas.</p></li>
+    </ol>
+    <p class="nota">Texto de exemplo. No site final entram as etapas e os cuidados do jeito que a Cínthia trabalha.</p>
+  </div>
+</section>
+
+<section class="galeria">
+  <div class="largura">
+    <h2>Sobrancelha, cílios e pele cuidados</h2>
+    <div class="fotos">
+      <img src="fotos/espaco.jpg" alt="Cadeira preta em sala clara de atendimento" loading="lazy">
+      <img src="fotos/lash2.jpg" alt="Cílios sendo modelados com pinça" loading="lazy">
+      <img src="fotos/olho.jpg" alt="Olho com cílios curvados e sobrancelha marcada" loading="lazy">
+      <img src="fotos/cera.jpg" alt="Profissional de luvas mexendo a cera no aquecedor" loading="lazy">
+    </div>
+    <p class="nota">Fotos ilustrativas. No site final entram fotos do Espaço e dos trabalhos da Cínthia.</p>
+  </div>
+</section>
+
+<section class="onde" id="onde">
+  <div class="largura">
+    <h2>Horário e endereço</h2>
+    <div class="grade">
+      <div>
+        <p class="agora" id="agora"><i></i><span></span></p>
+        <ul class="semana" id="semana" aria-label="Horário de funcionamento"></ul>
+        <div class="escala" aria-hidden="true"><span></span><div><span>7h</span><span>10h</span><span>13h</span><span>16h</span><span>19h</span></div></div>
+        <dl>
+          <dt>Endereço</dt><dd>R. Celestina Scarazzato Giordano, 239<br>Parque Nova Carioba, Americana – SP, 13473-771</dd>
+          <dt>WhatsApp</dt><dd><a href="https://wa.me/5519992442660" rel="noopener">(19) 99244-2660</a></dd>
+          <dt>Instagram</dt><dd><a href="https://www.instagram.com/espacocinthiatalasso/" rel="noopener">@espacocinthiatalasso</a></dd>
+        </dl>
+        <div class="acoes">
+          <a class="botao claro" href="https://www.google.com/maps/dir/?api=1&destination=R.%20Celestina%20Scarazzato%20Giordano%2C%20239%20-%20Parque%20Nova%20Carioba%2C%20Americana%20-%20SP%2C%2013473-771" rel="noopener">Traçar rota</a>
+          <a class="botao zap" href="https://wa.me/5519992442660?text=Ol%C3%A1%2C%20C%C3%ADnthia!%20Vim%20pelo%20site.%20Tem%20hor%C3%A1rio%20livre%20esta%20semana%3F" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar horário livre</a>
+        </div>
+      </div>
+      <iframe class="mapa" src="https://www.google.com/maps?q=R.%20Celestina%20Scarazzato%20Giordano%2C%20239%20-%20Parque%20Nova%20Carioba%2C%20Americana%20-%20SP%2C%2013473-771&output=embed" loading="lazy" title="Mapa: Espaço Cínthia Talasso" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="largura"><span>Espaço Cínthia Talasso, Parque Nova Carioba, Americana – SP</span><span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span></div>
+</footer>
+<a class="flutuante" href="https://wa.me/5519992442660?text=Ol%C3%A1%2C%20C%C3%ADnthia!%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio." rel="noopener" aria-label="Chamar o Espaço Cínthia Talasso no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg><span>WhatsApp</span></a>
+
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const FONE = '5519992442660';
+
+  // ----- Painel da marca (ladrilhos preto e branco, como o backdrop do Espaço) -----
+  const lad = '<div class="ladrilho"><svg aria-hidden="true"><use href="#olho"/></svg><span>Cínthia Talasso</span></div>';
+  const bloco = '<div class="bloco">' + lad.repeat(12) + '</div>';
+  $('trilha').innerHTML = bloco + bloco;
+  // o "furo" do brilho do olho acompanha a cor do ladrilho
+  document.querySelectorAll('.ladrilho').forEach((l) => { l.querySelector('svg').style.setProperty('--furo', getComputedStyle(l).backgroundColor); });
+
+  // ----- Seletor de serviços -----
+  // [id, nome no cartão, texto na mensagem, foto, descrição (exemplo)]
+  const SERVICOS = [
+    ['design', 'Design de sobrancelha', 'design de sobrancelha', 'fotos/sobrancelha.jpg', 'Medida, desenho e acabamento na pinça.'],
+    ['coloracao', 'Coloração ou henna', 'coloração de sobrancelha', 'fotos/coloracao.jpg', 'Cor para preencher e marcar o desenho.'],
+    ['micro', 'Micropigmentação', 'micropigmentação de sobrancelha', 'fotos/micro.jpg', 'Sobrancelha feita que dura, sem lápis.'],
+    ['retoque', 'Retoque da micro', 'retoque da micropigmentação', 'fotos/desenho.jpg', 'Acerto de cor depois da cicatrização.'],
+    ['lash', 'Lash lifting', 'lash lifting', 'fotos/lash.jpg', 'Cílios curvados da raiz, sem extensão.'],
+    ['hidragloss', 'Hidragloss', 'hidragloss', 'fotos/hidragloss.jpg', 'Lábios com cor e brilho natural.'],
+    ['rosto', 'Depilação do rosto', 'depilação do rosto', 'fotos/depil-rosto.jpg', 'Buço, queixo e laterais.'],
+    ['corpo', 'Depilação do corpo', 'depilação do corpo', 'fotos/depil-corpo.jpg', 'Pernas, axilas e virilha.'],
+  ];
+  const escolha = new Set(['design']);
+  const cartoes = $('cartoes');
+  SERVICOS.forEach(([id, rotulo, , foto, desc]) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'cartao'; b.dataset.s = id; b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = `<span class="cartao-foto"><img src="${foto}" alt="" loading="lazy"></span>` +
+      `<span class="cartao-texto"><strong>${rotulo}</strong><small>${desc}</small></span>` +
+      `<span class="cartao-marca" aria-hidden="true"></span>`;
+    b.addEventListener('click', () => { escolha.has(id) ? escolha.delete(id) : escolha.add(id); atualizar(); });
+    cartoes.appendChild(b);
+  });
+
+  const lista = (i) => i.length < 2 ? i.join('') : i.slice(0, -1).join(', ') + ' e ' + i[i.length - 1];
+  function atualizar() {
+    cartoes.querySelectorAll('.cartao').forEach((b) => b.setAttribute('aria-pressed', String(escolha.has(b.dataset.s))));
+    const itens = SERVICOS.filter(([id]) => escolha.has(id)).map((s) => s[2]);
+    const nome = $('nome').value.trim();
+    const cliente = document.querySelector('input[name=cliente]:checked').value;
+    const dia = document.querySelector('input[name=dia]:checked').value;
+    const periodo = document.querySelector('input[name=periodo]:checked').value;
+    const alvo = $('escolhidos');
+    alvo.innerHTML = '';
+    if (!itens.length) { const p = document.createElement('p'); p.className = 'vazio'; p.textContent = 'Nenhum serviço escolhido. Toque nos cartões ao lado.'; alvo.appendChild(p); }
+    else { const ul = document.createElement('ul'); itens.forEach((t) => { const li = document.createElement('li'); li.textContent = t[0].toUpperCase() + t.slice(1); ul.appendChild(li); }); alvo.appendChild(ul); }
+    let msg = `Olá, Cínthia! ${nome ? `Aqui é a ${nome}. ` : ''}Vim pelo site. `;
+    msg += cliente === 'primeira' ? 'É a minha primeira vez no Espaço. ' : 'Já sou cliente do Espaço. ';
+    msg += `Quero agendar ${itens.length ? lista(itens) : 'um horário'}`;
+    msg += dia ? `, de preferência ${dia} ${periodo}.` : `, de preferência ${periodo}.`;
+    msg += ' Qual o valor e os horários livres?';
+    $('enviar').href = `https://wa.me/${FONE}?text=` + encodeURIComponent(msg);
+  }
+  $('ficha').addEventListener('input', atualizar);
+  $('ficha').addEventListener('change', atualizar);
+  atualizar();
+
+  // ----- Horário real (perfil no Fresha): ter a sex 7h30–18h15, sáb 7h30–17h, seg e dom fechado -----
+  const T = { 0: null, 1: null, 2: [450, 1095], 3: [450, 1095], 4: [450, 1095], 5: [450, 1095], 6: [450, 1020] };
+  const NOMES = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
+  const INI = 420, FIM = 1140; // escala de 7h às 19h
+  const h = (m) => Math.floor(m / 60) + 'h' + (m % 60 ? String(m % 60).padStart(2, '0') : '');
+  const sem = $('semana');
+  [2, 3, 4, 5, 6, 0, 1].forEach((d) => {
+    const li = document.createElement('li'); li.dataset.dia = d;
+    const t = T[d];
+    const trilho = t
+      ? `<div class="trilho"><span class="faixa" style="left:${(t[0] - INI) / (FIM - INI) * 100}%;right:${(FIM - t[1]) / (FIM - INI) * 100}%">${h(t[0])} às ${h(t[1])}</span></div>`
+      : '<div class="trilho"><span class="fechado">Fechado</span></div>';
+    li.innerHTML = `<span class="dia">${NOMES[d]}</span>${trilho}`;
+    sem.appendChild(li);
+  });
+
+  const p = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date()).map((x) => [x.type, x.value]));
+  const dia = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(p.weekday), agora = Number(p.hour) * 60 + Number(p.minute);
+  sem.querySelector(`li[data-dia="${dia}"]`)?.classList.add('hoje');
+  let txt, aberto = false;
+  if (T[dia] && agora >= T[dia][0] && agora < T[dia][1]) { txt = `Aberto agora, até as ${h(T[dia][1])}`; aberto = true; }
+  else if (T[dia] && agora < T[dia][0]) txt = `Fechado agora. Abre hoje às ${h(T[dia][0])}`;
+  else {
+    let k = 1; while (!T[(dia + k) % 7]) k++;
+    const nd = (dia + k) % 7;
+    txt = `Fechado agora. Abre ${k === 1 ? 'amanhã' : NOMES[nd].toLowerCase()} às ${h(T[nd][0])}`;
+  }
+  [$('agora'), $('status-topo')].forEach((el) => { el.querySelector('span').textContent = txt; el.classList.toggle('aberto', aberto); });
+})();
+</script>
+</body>
+</html>
