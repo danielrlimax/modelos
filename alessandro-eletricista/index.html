@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alessandro Eletricista | Eletricista em Sumaré</title>
+<meta name="description" content="Alessandro Eletricista: instalação, manutenção e conserto elétrico em Sumaré. 100% de recomendação nas avaliações do Facebook. Chame no WhatsApp.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<meta name="theme-color" content="#17295A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --azul:#17295A;        /* uniforme */
+  --azul-fundo:#0F1D44;
+  --capacete:#F5C518;    /* capacete */
+  --capacete-esc:#D9A800;
+  --painel:#EDF0F3;      /* tampa do quadro */
+  --branco:#FFFFFF;
+  --cinza:#58606E;
+  --linha:#C9CFD8;
+  --fita:#EFE6C4;        /* fita crepe */
+  --zap:#25D366;
+  --zap-esc:#128C4A;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+body{margin:0;font-family:"Archivo",system-ui,sans-serif;font-variation-settings:"wdth" 100;color:var(--azul);background:var(--painel);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--capacete);outline-offset:3px}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.ico{width:1.15em;height:1.15em;flex:none}
+h1,h2,h3{font-stretch:125%;font-variation-settings:"wdth" 125;line-height:1.05;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(1.9rem,4vw,3rem);font-weight:850}
+.sub{color:var(--cinza);max-width:60ch;margin:.8rem 0 0}
+.exemplo{font-size:.85rem;color:var(--cinza);font-style:italic}
+
+/* faixa de aviso */
+.aviso{background:var(--capacete);color:var(--azul);text-align:center;font-size:.85rem;font-weight:600;padding:.45rem 1rem}
+
+/* cabeçalho */
+.topo{position:absolute;left:0;right:0;z-index:5}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem 0}
+.marca{display:flex;flex-direction:column;line-height:1;text-decoration:none;color:#fff;text-shadow:0 1px 8px rgba(10,19,46,.75)}
+.marca b{font-size:1.35rem;font-weight:900;font-variation-settings:"wdth" 125}
+.marca span{font-size:.95rem;font-weight:500;font-variation-settings:"wdth" 80;color:var(--capacete);margin-top:.2rem}
+.btn{display:inline-flex;align-items:center;gap:.55rem;font:inherit;font-weight:700;font-variation-settings:"wdth" 90;font-size:1.02rem;text-decoration:none;border:0;border-radius:4px;padding:.85rem 1.25rem;cursor:pointer;transition:transform .15s,background .15s}
+.btn:active{transform:translateY(1px)}
+.btn-zap{background:var(--zap);color:#04331a}
+.btn-zap:hover{background:#2fe476}
+.btn-amarelo{background:var(--capacete);color:var(--azul)}
+.btn-amarelo:hover{background:#ffd43a}
+.btn-linha{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.7)}
+.btn-linha:hover{background:rgba(255,255,255,.1)}
+.topo .btn{padding:.6rem 1rem;font-size:.95rem}
+
+/* hero */
+.hero{position:relative;min-height:min(92vh,820px);display:flex;align-items:center;color:#fff;overflow:hidden;background:var(--azul-fundo)}
+.hero-foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:100% 30%;transform:scaleX(-1)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(15,29,68,.94) 0%,rgba(15,29,68,.8) 38%,rgba(15,29,68,.05) 66%)}
+.hero-conteudo{position:relative;z-index:2;padding:6.5rem 0 8rem}
+.hero-txt{max-width:600px}
+.hero h1{font-size:clamp(2.2rem,4.2vw,3.5rem);font-weight:900}
+.hero h1 small{display:block;font-size:.42em;font-weight:600;font-variation-settings:"wdth" 85;color:var(--capacete);letter-spacing:0;margin-bottom:.6rem}
+.hero p{font-size:1.15rem;max-width:44ch;color:#E3E8F2;margin:1.1rem 0 1.6rem}
+.acoes{display:flex;flex-wrap:wrap;gap:.75rem}
+
+/* régua de provas no rodapé do hero */
+.provas{position:absolute;left:0;right:0;bottom:0;z-index:3;background:var(--capacete);color:var(--azul)}
+.provas .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:0}
+.prova{padding:1rem 1.2rem;display:flex;align-items:baseline;gap:.7rem;border-left:2px solid rgba(23,41,90,.18)}
+.prova:first-child{border-left:0;padding-left:0}
+.prova b{font-size:2rem;font-weight:900;font-variation-settings:"wdth" 125;line-height:1}
+.prova span{font-size:.92rem;line-height:1.25;font-weight:500}
+
+/* 12 de 12 */
+.recomenda{padding:5.5rem 0 4.5rem;background:var(--branco)}
+.recomenda .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:3rem;align-items:center}
+.trilho{background:var(--painel);border:2px solid var(--linha);border-radius:6px;padding:1.4rem 1.2rem 1rem}
+.trilho-linha{display:grid;grid-template-columns:repeat(12,1fr);gap:6px;background:linear-gradient(#9aa3b1,#9aa3b1) center 50%/100% 10px no-repeat}
+.mini{aspect-ratio:1/2.4;background:#fff;border:1px solid var(--linha);border-radius:3px;position:relative;box-shadow:0 2px 0 #c3c9d2}
+.mini::before{content:"";position:absolute;left:25%;right:25%;height:36%;top:52%;background:#3b4352;border-radius:2px;transition:top .25s ease,background .25s}
+.mini.on::before{top:12%;background:var(--capacete)}
+.trilho figcaption{display:flex;justify-content:space-between;gap:1rem;margin-top:.9rem;font-size:.9rem;color:var(--cinza)}
+.trilho figcaption b{color:var(--azul)}
+.recomenda h2 + p{margin-top:1rem}
+.link-fb{display:inline-flex;margin-top:1.2rem;font-weight:700;color:var(--azul);text-underline-offset:4px}
+
+/* quadro de serviços */
+.pedido{padding:5rem 0;background:var(--painel)}
+.pedido-grid{display:grid;grid-template-columns:1fr 360px;gap:2rem;margin-top:2.2rem;align-items:start}
+.quadro{background:#dde2e8;border:2px solid #b9c1cc;border-radius:8px;padding:14px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;box-shadow:inset 0 0 0 6px #e8ecf0}
+.disj{all:unset;cursor:pointer;display:flex;flex-direction:column;background:#fff;border-radius:5px;overflow:hidden;box-shadow:0 0 0 1px #c3cad4,0 3px 0 #b3bbc6;position:relative;transition:box-shadow .15s,background .15s}
+.disj:focus-visible{outline:3px solid var(--azul);outline-offset:3px}
+.disj img{aspect-ratio:4/3;object-fit:cover;width:100%;filter:saturate(.85)}
+.disj .base{display:grid;grid-template-columns:1fr 34px;gap:.6rem;padding:.7rem .7rem .8rem;align-items:center}
+.fita{font-family:"Caveat",cursive;font-weight:700;font-size:1.4rem;line-height:1;background:var(--fita);color:#1d2a52;padding:.28rem .45rem;transform:rotate(-1.2deg);justify-self:start;box-shadow:0 1px 0 rgba(0,0,0,.08)}
+.disj:nth-child(even) .fita{transform:rotate(.9deg)}
+.disj .linha1{grid-column:1/-1;font-size:.86rem;line-height:1.3;color:var(--cinza)}
+.alavanca{width:34px;height:52px;border-radius:4px;background:#e9ecf0;border:1px solid #c3cad4;position:relative;grid-row:1;grid-column:2}
+.alavanca::before{content:"";position:absolute;left:6px;right:6px;height:22px;top:24px;border-radius:3px;background:#3b4352;transition:top .2s ease,background .2s}
+.alavanca::after{content:"O";position:absolute;left:0;right:0;top:3px;text-align:center;font-size:.62rem;font-weight:800;color:#8a92a0}
+.disj[aria-pressed="true"]{background:var(--azul);box-shadow:0 0 0 3px var(--capacete),0 3px 0 #b3bbc6}
+.disj[aria-pressed="true"] img{filter:none}
+.disj[aria-pressed="true"] .linha1{color:#d5dcec}
+.disj[aria-pressed="true"] .alavanca{background:#22377a;border-color:#3a4f93}
+.disj[aria-pressed="true"] .alavanca::before{top:4px;background:var(--capacete)}
+.disj[aria-pressed="true"] .alavanca::after{content:"I";top:auto;bottom:3px;color:var(--capacete)}
+.check{position:absolute;top:8px;right:8px;width:30px;height:30px;border-radius:4px;background:var(--capacete);color:var(--azul);display:grid;place-items:center;font-weight:900;opacity:0;transform:scale(.6);transition:.18s}
+.disj[aria-pressed="true"] .check{opacity:1;transform:none}
+
+/* ordem de serviço */
+.ordem{background:#fff;border-radius:6px;box-shadow:0 0 0 1px var(--linha);position:sticky;top:16px;overflow:hidden}
+.ordem header{background:var(--azul);color:#fff;padding:1rem 1.2rem}
+.ordem header b{font-size:1.2rem;font-variation-settings:"wdth" 125;font-weight:850}
+.ordem header p{margin:.2rem 0 0;font-size:.88rem;color:#c9d2e6}
+.ordem .corpo{padding:1.1rem 1.2rem 1.3rem}
+.escolhidos{min-height:2.6rem;margin:0 0 1rem;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:.35rem}
+.escolhidos li{font-family:"Caveat",cursive;font-weight:700;background:var(--fita);padding:.1rem .5rem;font-size:1.25rem;line-height:1.2}
+.escolhidos .vazio{font-family:inherit;background:none;color:var(--cinza);font-size:.9rem;padding:0}
+fieldset{border:0;margin:0 0 .95rem;padding:0}
+legend,.rot{font-weight:700;font-size:.9rem;margin-bottom:.4rem;display:block;padding:0}
+.opcoes{display:flex;flex-wrap:wrap;gap:.4rem}
+.opcoes label{position:relative}
+.opcoes input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.opcoes span{display:block;padding:.45rem .7rem;border-radius:4px;border:1.5px solid var(--linha);font-size:.9rem;font-weight:600}
+.opcoes input:checked + span{background:var(--azul);border-color:var(--azul);color:#fff}
+.opcoes input:focus-visible + span{outline:3px solid var(--capacete);outline-offset:2px}
+.campo{display:block;margin-bottom:.85rem}
+.campo input,.campo textarea{width:100%;font:inherit;font-size:.95rem;padding:.6rem .7rem;border:1.5px solid var(--linha);border-radius:4px;color:var(--azul);background:#fbfcfd}
+.campo textarea{min-height:76px;resize:vertical}
+.ordem .btn{width:100%;justify-content:center;margin-top:.3rem}
+.aviso-sel{font-size:.85rem;color:#a33;min-height:1.2em;margin:.5rem 0 0}
+
+/* quando chamar */
+.sinais{padding:5rem 0;background:var(--azul);color:#fff}
+.sinais .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.sinais .sub{color:#c9d2e6}
+.lista-sinais{list-style:none;margin:0;padding:0;border-top:1px solid rgba(255,255,255,.2)}
+.lista-sinais li{display:grid;grid-template-columns:28px 1fr;gap:.9rem;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,.2)}
+.lista-sinais svg{width:24px;height:24px;color:var(--capacete);margin-top:.15rem}
+.lista-sinais b{display:block;font-size:1.08rem}
+.lista-sinais span{color:#c9d2e6;font-size:.95rem}
+.sinais-foto{border-radius:6px;overflow:hidden;position:relative}
+.sinais-foto img{aspect-ratio:4/5;object-fit:cover;width:100%}
+
+/* como funciona */
+.passos{padding:5rem 0;background:#fff}
+.passos ol{list-style:none;margin:2.2rem 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:p}
+.passos li{counter-increment:p;padding:1.2rem 1.4rem 1.2rem 0;border-top:4px solid var(--azul);position:relative}
+.passos li::before{content:counter(p);display:grid;place-items:center;width:38px;height:38px;background:var(--capacete);font-weight:900;font-size:1.1rem;margin:-1.45rem 0 .9rem;border-radius:3px}
+.passos b{display:block;font-size:1.1rem;font-variation-settings:"wdth" 110;margin-bottom:.3rem}
+.passos p{margin:0;color:var(--cinza);font-size:.95rem}
+
+/* galeria */
+.galeria{padding:5rem 0;background:var(--painel)}
+.fotos{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:220px 220px;gap:10px;margin-top:2rem}
+.fotos img{width:100%;height:100%;object-fit:cover;border-radius:4px}
+.fotos img:first-child{grid-row:1/3}
+
+/* área */
+.area{padding:5rem 0;background:#fff}
+.area .wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:3rem;align-items:center}
+.mapa{border-radius:6px;overflow:hidden;box-shadow:0 0 0 1px var(--linha);aspect-ratio:4/3}
+.mapa iframe{width:100%;height:100%;border:0;display:block}
+.contatos{list-style:none;padding:0;margin:1.4rem 0;display:grid;gap:.6rem}
+.contatos li{display:flex;gap:.6rem;align-items:center}
+.contatos svg{width:20px;height:20px;color:var(--azul)}
+
+/* fechamento */
+.final{position:relative;color:#fff;padding:7rem 0;overflow:hidden;background:var(--azul-fundo)}
+.final img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.final::after{content:"";position:absolute;inset:0;background:rgba(10,19,46,.55)}
+.final .wrap{position:relative;z-index:2;max-width:760px;text-align:center}
+.final h2{font-size:clamp(2rem,5vw,3.4rem)}
+.final p{color:#e1e7f3;font-size:1.1rem;margin:1rem auto 1.8rem;max-width:46ch}
+.final .acoes{justify-content:center}
+
+footer{background:var(--azul-fundo);color:#b9c3da;padding:2.2rem 0 6rem;font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+footer b{color:#fff}
+
+.flutua{position:fixed;right:18px;bottom:18px;z-index:50;width:60px;height:60px;border-radius:50%;background:var(--zap);color:#fff;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.28)}
+.flutua svg{width:32px;height:32px}
+
+/* responsivo */
+@media (max-width:1000px){
+  .pedido-grid{grid-template-columns:1fr}
+  .ordem{position:static}
+  .quadro{grid-template-columns:repeat(4,1fr)}
+}
+@media (max-width:900px){
+  .hero{min-height:0;display:block}
+  .hero-foto{position:relative;height:430px;object-position:12% 20%}
+  .hero::after{display:none}
+  .hero-conteudo{padding:0 0 2.2rem;margin-top:-90px}
+  .hero-txt{max-width:640px;background:var(--azul-fundo);padding:1.6rem 1.5rem 1.7rem;border-top:6px solid var(--capacete);border-radius:0 0 4px 4px}
+  .hero p{margin-bottom:1.3rem}
+  .provas{position:static}
+  .recomenda .wrap,.sinais .wrap,.area .wrap{grid-template-columns:1fr;gap:2rem}
+  .sinais-foto img{aspect-ratio:16/9}
+  .passos ol{grid-template-columns:1fr 1fr;row-gap:1.6rem}
+  .fotos{grid-template-columns:1fr 1fr;grid-template-rows:200px 160px 160px}
+  .fotos img:first-child{grid-row:auto;grid-column:1/3}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .topo .btn span{display:none}
+  .topo .btn{padding:.6rem .7rem}
+  .hero-foto{height:360px}
+  .hero-conteudo{margin-top:-40px;width:100%}
+  .hero-txt{border-radius:0}
+  .provas .wrap{grid-template-columns:1fr}
+  .prova{border-left:0;border-top:2px solid rgba(23,41,90,.18);padding:.8rem 0}
+  .prova:first-child{border-top:0}
+  .quadro{grid-template-columns:1fr 1fr;gap:9px;padding:9px}
+  .fita{font-size:1.25rem}
+  .disj .linha1{font-size:.8rem}
+  .trilho-linha{gap:4px}
+  .passos ol{grid-template-columns:1fr}
+  .acoes .btn{flex:1 1 100%;justify-content:center}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.030-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.870 9.870 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.860 9.860 0 01-1.510-5.260c.001-5.450 4.436-9.884 9.888-9.884 2.640 0 5.122 1.030 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.450-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.050 0C5.495 0 .160 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.480-8.413Z"/></symbol>
+  <symbol id="raio" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 2 4 13.5h6.2L9 22l10-12h-6.4L13.5 2Z"/></symbol>
+  <symbol id="pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></symbol>
+  <symbol id="fb" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.5 1.6-1.5h1.6V4.4c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.4H7.6V14h2.7v8h3.2Z"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para Alessandro Eletricista. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio"><b>Alessandro</b><span>Eletricista em Sumaré</span></a>
+    <a class="btn btn-zap" href="https://wa.me/5519998461347?text=Ol%C3%A1%2C%20Alessandro!%20Vi%20o%20site%20e%20preciso%20de%20um%20eletricista%20em%20Sumar%C3%A9." target="_blank" rel="noopener"><svg class="ico"><use href="#wa"/></svg><span>Chamar no WhatsApp</span></a>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero">
+  <img class="hero-foto" src="fotos/hero1.jpg" alt="Eletricista de capacete amarelo trabalhando em uma caixa elétrica (foto ilustrativa)" fetchpriority="high">
+  <div class="wrap hero-conteudo">
+    <div class="hero-txt">
+      <h1><small>Alessandro Eletricista</small>Eletricista em Sumaré que os clientes recomendam.</h1>
+      <p>Instalação, manutenção e conserto elétrico para casa e comércio. Mande uma mensagem contando o problema e combine a visita.</p>
+      <div class="acoes">
+        <a class="btn btn-zap" href="https://wa.me/5519998461347?text=Ol%C3%A1%2C%20Alessandro!%20Vi%20o%20site%20e%20preciso%20de%20um%20eletricista%20em%20Sumar%C3%A9." target="_blank" rel="noopener"><svg class="ico"><use href="#wa"/></svg>Chamar no WhatsApp</a>
+        <a class="btn btn-linha" href="#pedido">Montar meu pedido</a>
+      </div>
+    </div>
+  </div>
+  <div class="provas">
+    <div class="wrap">
+      <div class="prova"><b>100%</b><span>de recomendação nas 12 avaliações do Facebook</span></div>
+      <div class="prova"><b>+4</b><span>anos de experiência</span></div>
+      <div class="prova"><b>797</b><span>seguidores na página</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="recomenda" aria-labelledby="t-rec">
+  <div class="wrap">
+    <div>
+      <h2 id="t-rec">12 avaliações. 12 recomendações.</h2>
+      <p class="sub">Quem já chamou o Alessandro voltou ao Facebook para recomendar. Em serviço elétrico, confiança é o que faz a gente abrir a porta de casa.</p>
+      <a class="link-fb" href="https://www.facebook.com/alessandroeletricista19/" target="_blank" rel="noopener">Ver as avaliações no Facebook</a>
+      <p class="exemplo">No site final entram trechos dos depoimentos reais dos clientes.</p>
+    </div>
+    <figure class="trilho" style="margin:0" aria-label="12 de 12 avaliações recomendam">
+      <div class="trilho-linha" id="trilho"></div>
+      <figcaption><span>Cada disjuntor é uma avaliação no Facebook</span><b>12 de 12 ligados</b></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="pedido" id="pedido" aria-labelledby="t-ped">
+  <div class="wrap">
+    <h2 id="t-ped">Ligue o que você precisa</h2>
+    <p class="sub">Toque nos serviços do quadro, preencha a ordem de serviço e a mensagem vai pronta para o WhatsApp do Alessandro.</p>
+    <div class="pedido-grid">
+      <div class="quadro" id="quadro" role="group" aria-label="Serviços">
+        <button class="disj" type="button" aria-pressed="false" data-s="Quadro de disjuntores"><img src="fotos/disj.jpg" alt="" loading="lazy"><span class="check" aria-hidden="true">✓</span><span class="base"><span class="fita">Quadro de disjuntores</span><span class="alavanca" aria-hidden="true"></span><span class="linha1">Troca, organização e disjuntor que desarma</span></span></button>
+        <button class="disj" type="button" aria-pressed="false" data-s="Chuveiro elétrico"><img src="fotos/chuv.jpg" alt="" loading="lazy"><span class="check" aria-hidden="true">✓</span><span class="base"><span class="fita">Chuveiro</span><span class="alavanca" aria-hidden="true"></span><span class="linha1">Instalação, resistência e chuveiro fraco</span></span></button>
+        <button class="disj" type="button" aria-pressed="false" data-s="Tomadas e interruptores"><img src="fotos/inter.jpg" alt="" loading="lazy"><span class="check" aria-hidden="true">✓</span><span class="base"><span class="fita">Tomadas e interruptores</span><span class="alavanca" aria-hidden="true"></span><span class="linha1">Pontos novos, troca e tomada esquentando</span></span></button>
+        <button class="disj" type="button" aria-pressed="false" data-s="Iluminação e luminárias"><img src="fotos/lumi.jpg" alt="" loading="lazy"><span class="check" aria-hidden="true">✓</span><span class="base"><span class="fita">Iluminação</span><span class="alavanca" aria-hidden="true"></span><span class="linha1">Lustres, pendentes, spots e LED</span></span></button>
+        <button class="disj" type="button" aria-pressed="false" data-s="Ventilador de teto"><img src="fotos/vent.jpg" alt="" loading="lazy"><span class="check" aria-hidden="true">✓</span><span class="base"><span class="fita">Ventilador de teto</span><span class="alavanca" aria-hidden="true"></span><span class="linha1">Instalação e ventilador que balança</span></span></button>
+        <button class="disj" type="button" aria-pressed="false" data-s="Fiação nova ou reforma"><img src="fotos/fios.jpg" alt="" loading="lazy"><span class="check" aria-hidden="true">✓</span><span class="base"><span class="fita">Fiação e reforma</span><span class="alavanca" aria-hidden="true"></span><span class="linha1">Troca de fios antigos e obra nova</span></span></button>
+        <button class="disj" type="button" aria-pressed="false" data-s="Curto ou falta de energia"><img src="fotos/hero2.jpg" alt="" loading="lazy"><span class="check" aria-hidden="true">✓</span><span class="base"><span class="fita">Curto e falta de luz</span><span class="alavanca" aria-hidden="true"></span><span class="linha1">Achar o defeito e religar com segurança</span></span></button>
+        <button class="disj" type="button" aria-pressed="false" data-s="Padrão de entrada"><img src="fotos/medidor2.jpg" alt="" loading="lazy"><span class="check" aria-hidden="true">✓</span><span class="base"><span class="fita">Padrão de entrada</span><span class="alavanca" aria-hidden="true"></span><span class="linha1">Montagem e adequação do padrão</span></span></button>
+      </div>
+
+      <form class="ordem" id="ordem" aria-labelledby="t-os">
+        <header><b id="t-os">Ordem de serviço</b><p>Vai pronta para o WhatsApp</p></header>
+        <div class="corpo">
+          <span class="rot">Serviços ligados</span>
+          <ul class="escolhidos" id="escolhidos" aria-live="polite"><li class="vazio">Nenhum ainda. Toque nos disjuntores do quadro.</li></ul>
+          <fieldset><legend>Onde é</legend>
+            <div class="opcoes">
+              <label><input type="radio" name="imovel" value="Casa" checked><span>Casa</span></label>
+              <label><input type="radio" name="imovel" value="Apartamento"><span>Apartamento</span></label>
+              <label><input type="radio" name="imovel" value="Comércio"><span>Comércio</span></label>
+            </div>
+          </fieldset>
+          <fieldset><legend>Para quando</legend>
+            <div class="opcoes">
+              <label><input type="radio" name="quando" value="O quanto antes"><span>O quanto antes</span></label>
+              <label><input type="radio" name="quando" value="Nesta semana" checked><span>Nesta semana</span></label>
+              <label><input type="radio" name="quando" value="Quero só um orçamento"><span>Só orçamento</span></label>
+            </div>
+          </fieldset>
+          <fieldset><legend>Melhor período</legend>
+            <div class="opcoes">
+              <label><input type="radio" name="periodo" value="Manhã" checked><span>Manhã</span></label>
+              <label><input type="radio" name="periodo" value="Tarde"><span>Tarde</span></label>
+            </div>
+          </fieldset>
+          <label class="campo"><span class="rot">Seu nome</span><input name="nome" autocomplete="name" placeholder="Como podemos te chamar"></label>
+          <label class="campo"><span class="rot">Bairro em Sumaré</span><input name="bairro" placeholder="Ex.: Centro, Nova Veneza"></label>
+          <label class="campo"><span class="rot">Conte o problema (opcional)</span><textarea name="obs" placeholder="Ex.: o disjuntor do chuveiro desarma toda vez que liga"></textarea></label>
+          <button class="btn btn-zap" type="submit"><svg class="ico"><use href="#wa"/></svg>Enviar pedido no WhatsApp</button>
+          <p class="aviso-sel" id="aviso-sel" role="status"></p>
+        </div>
+      </form>
+    </div>
+    <p class="exemplo">Lista de serviços de exemplo. No site final entram os serviços que o Alessandro realmente faz. Fotos ilustrativas.</p>
+  </div>
+</section>
+
+<section class="sinais" aria-labelledby="t-sin">
+  <div class="wrap">
+    <div>
+      <h2 id="t-sin">Hora de chamar o eletricista</h2>
+      <p class="sub">Problema elétrico pequeno vira grande quando a gente deixa para depois. Se reconhecer algum destes, mande mensagem.</p>
+      <ul class="lista-sinais">
+        <li><svg><use href="#raio"/></svg><div><b>Disjuntor desarmando</b><span>Desliga sozinho quando liga o chuveiro, o micro-ondas ou o ar.</span></div></li>
+        <li><svg><use href="#raio"/></svg><div><b>Tomada quente ou escurecida</b><span>Sinal de mau contato ou fio subdimensionado.</span></div></li>
+        <li><svg><use href="#raio"/></svg><div><b>Cheiro de queimado</b><span>Desligue o circuito no quadro e chame logo.</span></div></li>
+        <li><svg><use href="#raio"/></svg><div><b>Luz piscando ou fraca</b><span>Pode ser emenda solta, lâmpada ou sobrecarga.</span></div></li>
+        <li><svg><use href="#raio"/></svg><div><b>Choque ao encostar</b><span>Torneira, chuveiro ou eletrodoméstico dando choque não é normal.</span></div></li>
+      </ul>
+    </div>
+    <div class="sinais-foto"><img src="fotos/quadro.jpg" alt="Quadro de disjuntores aberto com fios organizados (foto ilustrativa)" loading="lazy"></div>
+  </div>
+</section>
+
+<section class="passos" aria-labelledby="t-pas">
+  <div class="wrap">
+    <h2 id="t-pas">Do WhatsApp à luz acesa</h2>
+    <ol>
+      <li><b>Você chama</b><p>Manda mensagem contando o que está acontecendo.</p></li>
+      <li><b>Manda uma foto</b><p>Uma foto do quadro ou da tomada ajuda a entender o serviço.</p></li>
+      <li><b>Combina a visita</b><p>Dia, horário e orçamento acertados antes de começar.</p></li>
+      <li><b>Serviço feito</b><p>Instalação testada e tudo explicado para você.</p></li>
+    </ol>
+    <p class="exemplo" style="margin-top:1.4rem">Texto de exemplo. No site final entra o jeito de trabalhar do Alessandro.</p>
+  </div>
+</section>
+
+<section class="galeria" aria-labelledby="t-gal">
+  <div class="wrap">
+    <h2 id="t-gal">Trabalho bem acabado</h2>
+    <div class="fotos">
+      <img src="fotos/hero3.jpg" alt="Eletricista apertando conexões em um quadro elétrico" loading="lazy">
+      <img src="fotos/lumi2.jpg" alt="Plafon instalado no teto" loading="lazy">
+      <img src="fotos/disj2.jpg" alt="Disjuntores identificados em fileira" loading="lazy">
+      <img src="fotos/fios2.jpg" alt="Mão com luva segurando fio elétrico" loading="lazy">
+      <img src="fotos/tomada.jpg" alt="Tomada instalada em parede" loading="lazy">
+    </div>
+    <p class="exemplo" style="margin-top:1rem">Fotos ilustrativas. No site final entram fotos dos serviços do Alessandro.</p>
+  </div>
+</section>
+
+<section class="area" aria-labelledby="t-area">
+  <div class="wrap">
+    <div>
+      <h2 id="t-area">Atende em Sumaré</h2>
+      <p class="sub">O Alessandro vai até você. Diga o seu bairro na mensagem e combine o melhor horário.</p>
+      <ul class="contatos">
+        <li><svg class="ico"><use href="#wa"/></svg>(19) 99846-1347</li>
+        <li><svg class="ico"><use href="#pin"/></svg>Sumaré, SP</li>
+        <li><svg class="ico"><use href="#fb"/></svg><a href="https://www.facebook.com/alessandroeletricista19/" target="_blank" rel="noopener">facebook.com/alessandroeletricista19</a></li>
+      </ul>
+      <div class="acoes">
+        <a class="btn btn-zap" href="https://wa.me/5519998461347?text=Ol%C3%A1%2C%20Alessandro!%20Voc%C3%AA%20atende%20no%20meu%20bairro%20em%20Sumar%C3%A9%3F" target="_blank" rel="noopener"><svg class="ico"><use href="#wa"/></svg>Perguntar se atende meu bairro</a>
+        <a class="btn btn-amarelo" href="https://www.google.com/maps/search/?api=1&query=Sumar%C3%A9%2C%20SP" target="_blank" rel="noopener">Ver no mapa</a>
+      </div>
+      <p class="exemplo">No site final entram os bairros e cidades vizinhas que o Alessandro atende.</p>
+    </div>
+    <div class="mapa"><iframe src="https://www.google.com/maps?q=Sumar%C3%A9%2C%20SP&output=embed" loading="lazy" title="Mapa de Sumaré, SP" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+  </div>
+</section>
+
+<section class="final">
+  <img src="fotos/casa2.jpg" alt="" loading="lazy">
+  <div class="wrap">
+    <h2>Casa com luz, sem susto.</h2>
+    <p>Conte o que está acontecendo e o Alessandro responde pelo WhatsApp.</p>
+    <div class="acoes">
+      <a class="btn btn-zap" href="https://wa.me/5519998461347?text=Ol%C3%A1%2C%20Alessandro!%20Vi%20o%20site%20e%20preciso%20de%20um%20eletricista%20em%20Sumar%C3%A9." target="_blank" rel="noopener"><svg class="ico"><use href="#wa"/></svg>Chamar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>Alessandro Eletricista</b><br>Sumaré, SP<br>(19) 99846-1347</div>
+    <div>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</div>
+  </div>
+</footer>
+
+<a class="flutua" href="https://wa.me/5519998461347?text=Ol%C3%A1%2C%20Alessandro!%20Vi%20o%20site%20e%20preciso%20de%20um%20eletricista%20em%20Sumar%C3%A9." target="_blank" rel="noopener" aria-label="Chamar o Alessandro no WhatsApp"><svg><use href="#wa"/></svg></a>
+
+<script>
+(function(){
+  // trilho 12 de 12
+  var trilho=document.getElementById('trilho');
+  for(var i=0;i<12;i++){var m=document.createElement('span');m.className='mini';trilho.appendChild(m);}
+  var minis=trilho.querySelectorAll('.mini');
+  var reduz=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function ligar(){minis.forEach(function(m,i){ if(reduz){m.classList.add('on');} else setTimeout(function(){m.classList.add('on')},120*i); });}
+  if('IntersectionObserver' in window && !reduz){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){ligar();io.disconnect();}})},{threshold:.5});
+    io.observe(trilho);
+  } else ligar();
+
+  // quadro de serviços
+  var botoes=document.querySelectorAll('.disj');
+  var lista=document.getElementById('escolhidos');
+  var aviso=document.getElementById('aviso-sel');
+  function escolhidos(){return Array.prototype.filter.call(botoes,function(b){return b.getAttribute('aria-pressed')==='true'}).map(function(b){return b.dataset.s});}
+  function render(){
+    var s=escolhidos();lista.innerHTML='';
+    if(!s.length){lista.innerHTML='<li class="vazio">Nenhum ainda. Toque nos disjuntores do quadro.</li>';return;}
+    s.forEach(function(n){var li=document.createElement('li');li.textContent=n;lista.appendChild(li);});
+    aviso.textContent='';
+  }
+  botoes.forEach(function(b){b.addEventListener('click',function(){b.setAttribute('aria-pressed',b.getAttribute('aria-pressed')==='true'?'false':'true');render();});});
+
+  document.getElementById('ordem').addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var f=ev.target,s=escolhidos();
+    if(!s.length){aviso.textContent='Ligue pelo menos um serviço no quadro.';document.getElementById('quadro').scrollIntoView({behavior:reduz?'auto':'smooth',block:'center'});return;}
+    var v=function(n){var el=f.querySelector('[name="'+n+'"]:checked')||f.elements[n];return el&&el.value?el.value.trim():'';};
+    var linhas=['Olá, Alessandro! Vim pelo site e quero pedir um serviço.','','Serviços: '+s.join(', '),'Onde: '+v('imovel'),'Para quando: '+v('quando'),'Período: '+v('periodo')];
+    if(v('bairro'))linhas.push('Bairro: '+v('bairro'));
+    if(v('nome'))linhas.push('Nome: '+v('nome'));
+    if(v('obs'))linhas.push('Problema: '+v('obs'));
+    window.open('https://wa.me/5519998461347?text='+encodeURIComponent(linhas.join('\n')),'_blank','noopener');
+  });
+})();
+</script>
+</body>
+</html>
