@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Posi Confeitaria | Bolos e doces em Mogi Mirim</title>
+<meta name="description" content="Modelo demonstrativo de site para a Posi Confeitaria: bolos e doces de festa por encomenda em Mogi Mirim, desde 2007.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blush:#FBE7E5; --papel:#FFF6F5; --furo:#EBC8C3; --cacau:#7B4B2A; --cacau-escuro:#4A2C17;
+  --caramelo:#C9965E; --tinta:#3A2418; --cinza:#6E5548;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:#fff;color:var(--tinta);font:500 17px/1.6 'Quicksand',system-ui,sans-serif}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--caramelo);outline-offset:3px}
+.ico{width:1.15em;height:1.15em;flex:none}
+.largura{max-width:1160px;margin:0 auto;padding:0 32px}
+h1,h2,h3{font-family:'Gilda Display',Georgia,serif;font-weight:400;margin:0;color:var(--cacau-escuro)}
+h2{font-size:clamp(34px,4.4vw,52px);line-height:1.08}
+.intro{max-width:56ch;margin:14px 0 0;color:var(--cinza)}
+
+.aviso{background:var(--cacau-escuro);color:#fff;font:500 14px/1.4 'Quicksand',sans-serif;text-align:center;padding:8px 16px}
+
+.botao{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font:700 16px/1.2 'Quicksand',sans-serif;padding:14px 22px;border-radius:6px;border:2px solid var(--cacau);cursor:pointer}
+.botao.cheio{background:var(--cacau);color:#fff}
+.botao.cheio:hover{background:var(--cacau-escuro);border-color:var(--cacau-escuro)}
+.botao.vazio{background:transparent;color:var(--cacau)}
+.botao.vazio:hover{background:var(--blush)}
+
+/* ---------- Papel rendado: a toalhinha de papel que vai embaixo dos doces ----------
+   Borda de bolinhas (recorte) + uma fileira de furinhos em relevo. É o elemento marcante do site. */
+.renda{position:relative;isolation:isolate;background:var(--papel);--b:var(--papel)}
+.renda::before{content:"";position:absolute;inset:-9px;z-index:-1;
+  background:
+    radial-gradient(circle at 9px 9px,var(--b) 8.6px,transparent 9px) 0 0/18px 18px repeat-x,
+    radial-gradient(circle at 9px 9px,var(--b) 8.6px,transparent 9px) 0 100%/18px 18px repeat-x,
+    radial-gradient(circle at 9px 9px,var(--b) 8.6px,transparent 9px) 0 0/18px 18px repeat-y,
+    radial-gradient(circle at 9px 9px,var(--b) 8.6px,transparent 9px) 100% 0/18px 18px repeat-y}
+.renda::after{content:"";position:absolute;inset:10px;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(circle,var(--furo) 2.2px,transparent 2.7px) 0 0/12px 12px repeat-x,
+    radial-gradient(circle,var(--furo) 2.2px,transparent 2.7px) 0 100%/12px 12px repeat-x,
+    radial-gradient(circle,var(--furo) 2.2px,transparent 2.7px) 0 0/12px 12px repeat-y,
+    radial-gradient(circle,var(--furo) 2.2px,transparent 2.7px) 100% 0/12px 12px repeat-y}
+
+/* ---------- Hero: brigadeiros em fundo de cacau ---------- */
+.capa{position:relative;min-height:min(780px,calc(100vh - 36px));display:flex;align-items:center;overflow:hidden;
+  background:linear-gradient(180deg,#602d10 0%,#763716 20%,#823e17 40%,#a85a36 60%,#db7d4e 80%,#f08f61 100%)}
+.capa > img{position:absolute;right:0;top:0;height:100%;width:auto;max-width:none;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 32%);mask-image:linear-gradient(90deg,transparent,#000 32%)}
+.capa .largura{position:relative;width:100%;padding-top:56px;padding-bottom:56px}
+.capa .renda{width:min(470px,100%);padding:40px 40px 36px;text-align:center}
+.capa .renda .logo{width:150px;height:150px;margin:0 auto 6px;border-radius:50%;object-fit:cover}
+.capa h1{font-size:clamp(34px,3.8vw,46px);line-height:1.1}
+.capa .sub{margin:14px auto 0;max-width:32ch;color:var(--cinza)}
+.capa .acoes{display:flex;flex-direction:column;gap:10px;margin-top:26px}
+
+section{padding:96px 0}
+
+/* ---------- Bandeja ---------- */
+.bandeja{background:var(--blush)}
+.cartoes{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.cartao{position:relative;display:flex;flex-direction:column;text-align:left;font:inherit;color:var(--tinta);background:#fff;border:2px solid #fff;border-radius:6px;padding:0;cursor:pointer;overflow:hidden;transition:border-color .15s,background .15s}
+.cartao:hover{border-color:var(--caramelo)}
+.cartao img{width:100%;aspect-ratio:5/4;object-fit:cover}
+.cartao strong{display:block;font:400 21px/1.15 'Gilda Display',serif;color:var(--cacau-escuro);margin:12px 14px 2px}
+.cartao small{display:block;font-size:14px;line-height:1.4;color:var(--cinza);margin:0 14px 14px}
+.cartao .marca{position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:50%;background:#fff;border:2px solid var(--cacau);display:grid;place-items:center;font-weight:700;color:#fff}
+.cartao[aria-pressed="true"]{background:var(--cacau);border-color:var(--cacau)}
+.cartao[aria-pressed="true"] strong{color:#fff}
+.cartao[aria-pressed="true"] small{color:#F3DCCF}
+.cartao[aria-pressed="true"] .marca{background:var(--caramelo);border-color:#fff}
+.cartao[aria-pressed="true"] .marca::after{content:"✓"}
+
+.monta{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start;margin-top:48px}
+.campos{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px}
+.campo{display:block}
+.campo span{display:block;font-size:14px;font-weight:700;color:var(--cacau);margin-bottom:6px}
+.campo input,.campo select{width:100%;min-width:0;font:600 16px/1.3 'Quicksand',sans-serif;color:var(--tinta);background:#fff;border:2px solid #EBCFC9;border-radius:6px;padding:11px 12px}
+.campo input:focus,.campo select:focus{outline:none;border-color:var(--cacau)}
+.campos .largo{grid-column:1 / -1}
+.campos .obs{grid-column:1 / -1;font-size:14px;color:var(--cinza);margin:0}
+
+.comanda{padding:36px 34px 30px}
+.comanda h3{font-size:28px;text-align:center}
+.comanda .total{text-align:center;color:var(--cinza);margin:4px 0 18px}
+.comanda .total b{color:var(--cacau-escuro)}
+.comanda ul{list-style:none;margin:0;padding:0}
+.comanda li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed #E2BDB6}
+.comanda li span:last-child{font-weight:700;color:var(--cacau);white-space:nowrap}
+.comanda .vazio{text-align:center;color:var(--cinza);border:0}
+.comanda .botao{width:100%;margin-top:22px}
+.comanda small{display:block;text-align:center;font-size:13px;color:var(--cinza);margin-top:10px}
+.credito{font-size:14px;color:var(--cinza);margin:16px 0 0}
+
+/* ---------- Desde 2007 ---------- */
+.historia .grade{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.historia .ano{font:400 clamp(90px,13vw,170px)/.9 'Gilda Display',serif;color:var(--blush);-webkit-text-stroke:1.5px var(--caramelo);margin:0 0 10px}
+.historia p{max-width:48ch}
+.historia figure{margin:0}
+.historia figure img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px}
+.historia figcaption{font-size:14px;color:var(--cinza);margin-top:8px}
+
+/* ---------- Galeria ---------- */
+.galeria{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.galeria img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px}
+
+/* ---------- Onde ---------- */
+.onde{background:var(--blush)}
+.onde .grade{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.onde dl{margin:26px 0}
+.onde dt{font-size:14px;color:var(--cinza)}
+.onde dd{margin:0 0 16px;font-size:19px}
+.onde .exemplo{display:block;font-size:14px;color:var(--cinza)}
+.onde .acoes{display:flex;gap:12px;flex-wrap:wrap}
+.mapa{width:100%;aspect-ratio:4/3;border:0;border-radius:6px;background:#F3DAD6}
+
+.faq details{border-bottom:1px solid #EFD8D3;max-width:780px}
+.faq summary{cursor:pointer;padding:16px 0;font-weight:700;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:400 28px/1 'Gilda Display',serif;color:var(--caramelo)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin:0 0 16px;max-width:62ch;color:var(--cinza)}
+
+footer{background:var(--cacau-escuro);color:#F1DCD3;padding:36px 0 110px;font-size:14px}
+footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.flutuante{position:fixed;right:18px;bottom:18px;display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#073B1E;font:700 15px/1 'Quicksand',sans-serif;text-decoration:none;padding:14px 18px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.22);z-index:5}
+
+@media (max-width:900px){
+  .capa{display:block;min-height:0;background:linear-gradient(180deg,#602d10,#a85a36 45%,#f08f61)}
+  .capa > img{position:relative;width:100%;height:auto;aspect-ratio:2;object-fit:cover;object-position:50% 62%;-webkit-mask-image:none;mask-image:none}
+  .capa .largura{margin-top:-70px;padding-top:0;padding-bottom:40px}
+  .capa .renda{margin:0 auto}
+}
+@media (max-width:560px){
+  .capa > img{aspect-ratio:1.25}
+}
+@media (max-width:980px){
+  .monta,.historia .grade,.onde .grade{grid-template-columns:1fr;gap:40px}
+  .cartao strong{font-size:19px;margin:10px 10px 2px}
+  .cartao small{font-size:13px;margin:0 10px 12px}
+}
+@media (max-width:760px){
+  .cartoes{grid-template-columns:1fr 1fr;gap:12px}
+  .galeria{grid-template-columns:1fr 1fr}
+  .galeria li:first-child{grid-column:span 2}
+  .galeria li:first-child img{aspect-ratio:16/10}
+}
+@media (max-width:560px){
+  .largura{padding:0 18px}
+  section{padding:72px 0}
+  .capa .renda{padding:32px 22px 28px}
+  .capa .renda .logo{width:120px;height:120px}
+  .campos{grid-template-columns:1fr}
+  .comanda{padding:32px 28px 26px}
+  .onde .acoes .botao{flex:1 1 100%}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para Posi Confeitaria. Ainda não é o site oficial.</div>
+
+<header class="capa">
+  <img src="fotos/capa.jpg" alt="Dois brigadeiros com chocolate em lascas em forminhas marrons">
+  <div class="largura">
+    <div class="renda">
+      <img class="logo" src="logo.jpg" alt="Logo da Posi Confeitaria">
+      <h1>Bolos e doces de festa, desde 2007</h1>
+      <p class="sub">Doces finos e tradicionais feitos por encomenda em Mogi Mirim.</p>
+      <div class="acoes">
+        <a class="botao cheio" href="#bandeja">Montar minha bandeja</a>
+        <a class="botao vazio" href="https://wa.me/5519991956648?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Posi%20Confeitaria%20e%20quero%20fazer%20uma%20encomenda." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Chamar no WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="bandeja" id="bandeja" aria-labelledby="t-bandeja">
+  <div class="largura">
+    <h2 id="t-bandeja">Monte a bandeja da sua festa</h2>
+    <p class="intro">Escolha os doces e diga quantos convidados vêm. A conta sai em centos, dividida entre os doces escolhidos, e vai pronta para o WhatsApp da Posi.</p>
+    <div class="cartoes" id="cartoes" aria-label="Escolha os doces"></div>
+
+    <div class="monta">
+      <form class="campos" id="campos" onsubmit="return false" aria-label="Dados da festa">
+        <label class="campo largo"><span>Seu nome</span><input id="nome" autocomplete="given-name" placeholder="Juliana"></label>
+        <label class="campo"><span>Data da festa</span><input id="data" type="date"></label>
+        <label class="campo"><span>Convidados</span><input id="conv" type="number" min="10" max="1000" step="10" value="80" inputmode="numeric"></label>
+        <label class="campo largo"><span>Docinhos por convidado</span>
+          <select id="pp">
+            <option value="3">3 por pessoa (festa curta ou com outros doces)</option>
+            <option value="4" selected>4 por pessoa (o mais comum)</option>
+            <option value="6">6 por pessoa (festa longa)</option>
+          </select>
+        </label>
+        <p class="obs">A conta é só uma referência para começar a conversa. Sabores, quantidades e valores a Posi confirma no orçamento.</p>
+      </form>
+
+      <div class="comanda renda" aria-live="polite">
+        <h3>Sua bandeja</h3>
+        <p class="total" id="total">80 convidados, <b>4 centos</b> de docinhos</p>
+        <ul id="lista"></ul>
+        <a class="botao cheio" id="enviar" href="https://wa.me/5519991956648" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Enviar encomenda no WhatsApp</a>
+        <small>Cento = 100 unidades. Arredondamos para meio cento.</small>
+      </div>
+    </div>
+    <p class="credito">Fotos ilustrativas. No site final entram as fotos dos doces da Posi.</p>
+  </div>
+</section>
+
+<section class="historia" aria-labelledby="t-historia">
+  <div class="largura grade">
+    <div>
+      <p class="ano" aria-hidden="true">2007</p>
+      <h2 id="t-historia">Quase vinte anos de festa em Mogi Mirim</h2>
+      <p>Desde 2007 a Posi faz bolos e doces por encomenda, dos docinhos tradicionais que não podem faltar na mesa até os doces finos.</p>
+      <p>Texto de exemplo. No site final entra a história da Posi contada por ela.</p>
+    </div>
+    <figure>
+      <img src="fotos/g-bandeja.jpg" alt="Bandeja de brigadeiros em forminhas de papel rosa" loading="lazy">
+      <figcaption>Foto ilustrativa.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="fotos" aria-labelledby="t-fotos" style="padding-top:0">
+  <div class="largura">
+    <h2 id="t-fotos">Bolos e doces para a sua mesa</h2>
+    <ul class="galeria">
+      <li><img src="fotos/c-bolo.jpg" alt="Bolo com cobertura de chocolate escorrendo" loading="lazy"></li>
+      <li><img src="fotos/g-brigadeiros.jpg" alt="Brigadeiros com granulado" loading="lazy"></li>
+      <li><img src="fotos/g-cupcakes.jpg" alt="Cupcakes com cobertura rosa" loading="lazy"></li>
+    </ul>
+    <p class="credito">Fotos ilustrativas. No site final entram fotos dos bolos e doces da Posi.</p>
+  </div>
+</section>
+
+<section class="onde" id="contato" aria-labelledby="t-onde">
+  <div class="largura grade">
+    <div>
+      <h2 id="t-onde">Encomendas</h2>
+      <dl>
+        <dt>WhatsApp</dt><dd><a href="https://wa.me/5519991956648" rel="noopener">(19) 99195-6648</a></dd>
+        <dt>Cidade</dt><dd>Mogi Mirim – SP</dd>
+        <dt>Retirada</dt><dd>Combinada pelo WhatsApp.<span class="exemplo">Texto de exemplo. No site final entram o endereço e os horários da Posi.</span></dd>
+        <dt>Instagram</dt><dd><a href="https://www.instagram.com/posiconfeitaria/" rel="noopener" target="_blank">@posiconfeitaria</a>, com 2,9 mil seguidores</dd>
+      </dl>
+      <div class="acoes">
+        <a class="botao cheio" href="https://wa.me/5519991956648?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Posi%20Confeitaria%20e%20quero%20fazer%20uma%20encomenda." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir orçamento</a>
+      </div>
+    </div>
+    <iframe class="mapa" src="https://www.google.com/maps?q=Mogi%20Mirim%2C%20SP&amp;output=embed" loading="lazy" title="Mapa de Mogi Mirim, SP" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<section class="faq" aria-labelledby="t-faq">
+  <div class="largura">
+    <h2 id="t-faq" style="margin-bottom:20px">Perguntas frequentes</h2>
+    <details><summary>O que é um cento de docinhos?</summary><p>São 100 unidades. É o jeito mais comum de encomendar docinhos de festa, e dá para misturar sabores.</p></details>
+    <details><summary>Quantos docinhos eu preciso por convidado?</summary><p>Uma conta comum é de 3 a 6 por pessoa, conforme a duração da festa. A bandeja acima faz essa conta para você.</p></details>
+    <details><summary>Com quanto tempo de antecedência eu encomendo?</summary><p>Quanto antes, melhor. Mande a data no WhatsApp que a Posi confirma se tem vaga.</p></details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="largura"><span>Posi Confeitaria, Mogi Mirim – SP</span><span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span></div>
+</footer>
+<a class="flutuante" href="https://wa.me/5519991956648?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Posi%20Confeitaria%20e%20quero%20fazer%20uma%20encomenda." rel="noopener" aria-label="Chamar a Posi Confeitaria no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+
+<script>
+(function () {
+  const TEL = '5519991956648';
+  const $ = (id) => document.getElementById(id);
+  // [id, nome, foto, linha]
+  const DOCES = [
+    ['brig', 'Brigadeiro', 'fotos/c-brigadeiro.jpg', 'O clássico de toda festa.'],
+    ['trufa', 'Trufa', 'fotos/c-trufa.jpg', 'Recheio cremoso e casquinha de chocolate.'],
+    ['bombom', 'Bombom', 'fotos/c-bombom.jpg', 'Doce fino em forminha.'],
+    ['morango', 'Morango com chocolate', 'fotos/c-morango.jpg', 'Fruta fresca coberta.'],
+    ['confeitado', 'Docinho confeitado', 'fotos/c-colorido.jpg', 'Colorido para festa infantil.'],
+    ['pirulito', 'Pirulito de chocolate', 'fotos/c-pirulito.jpg', 'No palito, fácil de servir.'],
+    ['cupcake', 'Mini cupcake', 'fotos/c-cupcake.jpg', 'Com cobertura e confeito.'],
+    ['bolo', 'Bolo da festa', 'fotos/c-bolo.jpg', 'Para cortar na hora do parabéns.']
+  ];
+  const escolha = new Set(['brig', 'bombom', 'bolo']);
+  const grade = $('cartoes');
+  DOCES.forEach(([id, nome, foto, linha]) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'cartao'; b.dataset.s = id;
+    b.innerHTML = `<img src="${foto}" alt="" loading="lazy"><strong>${nome}</strong><small>${linha}</small><span class="marca" aria-hidden="true"></span>`;
+    b.addEventListener('click', () => { escolha.has(id) ? escolha.delete(id) : escolha.add(id); atualizar(); });
+    grade.appendChild(b);
+  });
+  const centos = (u) => { const c = u / 100; return (c === 1 ? '1 cento' : c.toLocaleString('pt-BR') + ' centos'); };
+  function atualizar() {
+    grade.querySelectorAll('.cartao').forEach((b) => b.setAttribute('aria-pressed', String(escolha.has(b.dataset.s))));
+    const conv = Math.max(0, Math.min(1000, Number($('conv').value) || 0));
+    const pp = Number($('pp').value);
+    const doces = DOCES.filter((d) => d[0] !== 'bolo' && escolha.has(d[0]));
+    const comBolo = escolha.has('bolo');
+    const ul = $('lista'); ul.innerHTML = '';
+    let total = 0; const linhas = [];
+    if (doces.length && conv) {
+      const cada = Math.max(50, Math.ceil(conv * pp / doces.length / 50) * 50);
+      doces.forEach((d) => { total += cada; linhas.push([d[1], cada]); });
+    }
+    linhas.forEach(([n, u]) => { const li = document.createElement('li'); li.innerHTML = `<span>${n}</span><span>${u} un.</span>`; ul.appendChild(li); });
+    if (comBolo && conv) { const li = document.createElement('li'); li.innerHTML = `<span>Bolo da festa</span><span>${conv} pessoas</span>`; ul.appendChild(li); }
+    if (!ul.children.length) { const li = document.createElement('li'); li.className = 'vazio'; li.textContent = 'Escolha os doces nos cartões acima.'; ul.appendChild(li); }
+    $('total').innerHTML = conv ? `${conv} convidados${total ? `, <b>${centos(total)}</b> de docinhos` : ''}` : 'Diga quantos convidados vêm.';
+
+    const nome = $('nome').value.trim();
+    const d = $('data').value ? ' no dia ' + $('data').value.split('-').reverse().join('/') : '';
+    let msg = `Olá!${nome ? ' Aqui é ' + nome + '.' : ''} Vim pelo site da Posi Confeitaria. Quero encomendar para uma festa${d}${conv ? ' com ' + conv + ' convidados' : ''}.`;
+    if (linhas.length) msg += ' Pensei em: ' + linhas.map(([n, u]) => `${u} un. de ${n.toLowerCase()}`).join(', ') + '.';
+    if (comBolo) msg += ` Também quero um bolo${conv ? ' para ' + conv + ' pessoas' : ''}.`;
+    msg += ' Qual o valor e se tem vaga nessa data?';
+    $('enviar').href = `https://wa.me/${TEL}?text=` + encodeURIComponent(msg);
+  }
+  $('campos').addEventListener('input', atualizar);
+  $('campos').addEventListener('change', atualizar);
+  atualizar();
+})();
+</script>
+</body>
+</html>
