@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Alessandra Chocolove Cakes | Bolos personalizados em Araras</title>
+<meta name="description" content="Modelo demonstrativo de site para a Alessandra Chocolove Cakes: bolos personalizados em Araras, SP, desde 2015.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --choco:#3B201B; --choco-claro:#5A3127; --violeta:#7A3E9D; --violeta-escuro:#5E2C7A;
+  --glace:#F8DCE5; --papel:#FFF8FA; --tinta:#2A1714; --cinza:#6E5853;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.6 'Figtree',system-ui,sans-serif}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--violeta);outline-offset:3px}
+.ico{width:1.15em;height:1.15em;flex:none}
+.largura{max-width:1180px;margin:0 auto;padding:0 32px}
+h1,h2,h3{font-family:'Gloock',Georgia,serif;font-weight:400;margin:0}
+h2{font-size:clamp(34px,4.6vw,56px);line-height:1.04;letter-spacing:-.01em}
+.intro{max-width:56ch;margin:14px 0 0}
+
+.aviso{background:var(--choco);color:#fff;font:14px/1.4 'Figtree',sans-serif;text-align:center;padding:8px 16px}
+
+.botao{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font:600 16px/1.2 'Figtree',sans-serif;padding:15px 22px;border-radius:8px;border:2px solid transparent;cursor:pointer}
+.botao.choco{background:var(--choco);color:#fff}
+.botao.choco:hover{background:#2a1612}
+.botao.violeta{background:var(--violeta);color:#fff}
+.botao.violeta:hover{background:var(--violeta-escuro)}
+.botao.linha{border-color:var(--choco);color:var(--choco);background:rgba(255,255,255,.7)}
+.botao.linha:hover{background:#fff}
+
+/* ---------- Hero: o bolo com ganache ocupa a tela, o texto fica no fundo cinza da foto ---------- */
+.capa{position:relative;min-height:min(800px,calc(100vh - 36px));display:flex;overflow:hidden;background:#E6E5E3}
+.capa > img{position:absolute;left:0;top:0;height:100%;width:auto;max-width:none;-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}
+.capa .conteudo{position:relative;z-index:1;width:100%;display:flex;flex-direction:column;align-items:flex-end}
+.capa .lado{width:min(470px,40%);display:flex;flex-direction:column;flex:1}
+.capa .marca{margin:0;padding-top:28px;font:400 22px/1 'Gloock',serif;color:var(--choco)}
+.capa .texto{margin-top:auto;padding:40px 0 64px}
+.capa h1{font-size:clamp(44px,5.2vw,76px);line-height:.98;letter-spacing:-.015em;color:var(--choco)}
+.capa .sub{font-size:clamp(18px,1.9vw,21px);line-height:1.45;max-width:34ch;margin:22px 0 0;color:var(--tinta);font-weight:500}
+.capa .acoes{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.contagem{display:flex;gap:36px;margin:34px 0 0;padding:0;list-style:none}
+.contagem li{font-size:15px;line-height:1.3;color:var(--choco)}
+.contagem b{display:block;font:400 34px/1 'Gloock',serif}
+
+/* ---------- Pedido: placa de ganache que escorre na seção de baixo ---------- */
+.pedido{position:relative;background:var(--choco);color:#F6E7EA;padding:92px 0 40px}
+.pedido h2{color:#fff}
+.pedido .intro{color:#E9CFD6}
+.pedido::after{content:"";position:absolute;left:0;right:0;top:100%;height:92px;z-index:2;pointer-events:none;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='92' viewBox='0 0 240 92'%3E%3Cg fill='%233B201B'%3E%3Crect width='240' height='16'/%3E%3Crect x='12' width='12' height='46' rx='6'/%3E%3Crect x='40' width='14' height='74' rx='7'/%3E%3Crect x='70' width='11' height='30' rx='5.5'/%3E%3Crect x='96' width='13' height='58' rx='6.5'/%3E%3Crect x='128' width='14' height='86' rx='7'/%3E%3Crect x='158' width='11' height='38' rx='5.5'/%3E%3Crect x='184' width='13' height='64' rx='6.5'/%3E%3Crect x='214' width='11' height='34' rx='5.5'/%3E%3C/g%3E%3C/svg%3E") repeat-x 0 0/240px 92px}
+.cartoes{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+.cartao{position:relative;display:flex;flex-direction:column;text-align:left;font:inherit;color:var(--tinta);background:var(--papel);border:0;border-radius:10px;padding:0;cursor:pointer;overflow:hidden;transition:background .15s,color .15s,transform .15s}
+.cartao:hover{transform:translateY(-3px)}
+.cartao:focus-visible{outline:3px solid #F3B5CB;outline-offset:3px}
+.cartao img{width:100%;aspect-ratio:5/4;object-fit:cover}
+.cartao strong{display:block;font:400 22px/1.1 'Gloock',serif;margin:14px 14px 4px}
+.cartao small{display:block;font-size:14px;line-height:1.4;color:var(--cinza);margin:0 14px 16px}
+.cartao .marca{position:absolute;top:10px;right:10px;width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,.92);display:grid;place-items:center;font-weight:700;color:var(--violeta)}
+.cartao[aria-pressed="true"]{background:var(--violeta);color:#fff}
+.cartao[aria-pressed="true"] small{color:#EBD9F3}
+.cartao[aria-pressed="true"] .marca{background:#fff}
+.cartao[aria-pressed="true"] .marca::after{content:"✓"}
+
+.ficha{margin-top:28px;background:var(--choco-claro);border-radius:12px;padding:26px 26px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px 18px;align-items:end}
+.campo{display:block}
+.campo span{display:block;font-size:14px;font-weight:600;color:#F3D9E1;margin-bottom:6px}
+.campo input,.campo select{width:100%;min-width:0;font:500 16px/1.3 'Figtree',sans-serif;color:var(--tinta);background:#FFF8FA;border:2px solid transparent;border-radius:8px;padding:11px 12px}
+.campo input:focus,.campo select:focus{outline:none;border-color:#F3B5CB}
+.ficha .largo{grid-column:span 2}
+.resumo{grid-column:1 / -1;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;border-top:1px solid rgba(255,255,255,.18);padding-top:20px;margin-top:6px}
+.resumo p{margin:0;font-size:17px;color:#fff}
+.resumo p b{font:400 24px/1.2 'Gloock',serif;color:#F7C9D8}
+.resumo small{display:block;margin-top:4px;font-size:13.5px;color:#DDBFC7}
+.pedido .credito{color:#CDB0B7}
+.credito{font-size:14px;color:var(--cinza);margin:14px 0 0}
+
+/* ---------- Como encomendar (é sequência, então tem número) ---------- */
+.passos{background:var(--glace);padding:150px 0 92px}
+.passos ol{list-style:none;margin:44px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:36px;counter-reset:p}
+.passos li{counter-increment:p}
+.passos li::before{content:counter(p);display:block;font:400 64px/1 'Gloock',serif;color:var(--violeta);margin-bottom:10px}
+.passos strong{display:block;font-size:20px;color:var(--choco)}
+.passos li span{display:block;margin-top:6px;color:#5a4440}
+
+/* ---------- Galeria ---------- */
+.galeria-sec{padding:92px 0}
+.galeria{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.galeria img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px}
+.insta{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;margin-top:40px;padding:24px 28px;border:2px solid var(--choco);border-radius:12px}
+.insta p{margin:0;font-size:19px;max-width:44ch}
+.insta b{font-family:'Gloock',serif;font-weight:400;font-size:26px;color:var(--violeta)}
+
+/* ---------- Onde ---------- */
+.onde{background:#fff;padding:92px 0}
+.onde .grade{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.onde dl{margin:26px 0}
+.onde dt{font-size:14px;color:var(--cinza)}
+.onde dd{margin:0 0 16px;font-size:19px}
+.onde .exemplo{font-size:14px;color:var(--cinza)}
+.onde .acoes{display:flex;gap:12px;flex-wrap:wrap}
+.mapa{width:100%;aspect-ratio:4/3;border:0;border-radius:12px;background:#f1e4e8}
+
+.faq{padding:0 0 92px;background:#fff}
+.faq details{border-bottom:1px solid #EAD9DE;max-width:780px}
+.faq summary{cursor:pointer;padding:16px 0;font-weight:600;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:400 28px/1 'Gloock',serif;color:var(--violeta)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin:0 0 16px;max-width:62ch;color:#5a4440}
+
+footer{background:var(--choco);color:#E9CFD6;padding:36px 0 110px;font-size:14px}
+footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.flutuante{position:fixed;right:18px;bottom:18px;display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#073B1E;font:700 15px/1 'Figtree',sans-serif;text-decoration:none;padding:14px 18px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.22);z-index:5}
+
+@media (max-width:900px){
+  .capa{display:block;min-height:0}
+  .capa > img{position:relative;inset:auto;width:100%;max-width:100%;height:auto;aspect-ratio:1.8;object-fit:cover;object-position:0% 30%;-webkit-mask-image:none;mask-image:none}
+  .capa::after{content:"";position:absolute;left:0;right:0;top:0;aspect-ratio:1.8;background:linear-gradient(180deg,rgba(230,229,227,0) 70%,#E6E5E3 100%)}
+  .capa .conteudo{display:block}
+  .capa .lado{width:auto;display:block}
+  .capa .marca{padding-top:4px;font-size:19px}
+  .capa .texto{padding:8px 0 52px}
+  .capa h1{max-width:14ch}
+}
+@media (max-width:980px){
+  .cartoes{grid-template-columns:repeat(4,1fr);gap:12px}
+  .cartao strong{font-size:19px;margin:10px 10px 2px}
+  .cartao small{font-size:13px;margin:0 10px 12px}
+  .ficha{grid-template-columns:1fr 1fr}
+  .onde .grade{grid-template-columns:1fr;gap:36px}
+}
+@media (max-width:760px){
+  .cartoes{grid-template-columns:1fr 1fr}
+  .passos ol{grid-template-columns:1fr;gap:20px}
+  .galeria{grid-template-columns:1fr 1fr}
+}
+@media (max-width:560px){
+  .largura{padding:0 18px}
+  .capa > img,.capa::after{aspect-ratio:1.3!important}
+  .capa .texto{padding-bottom:40px}
+  .capa .acoes .botao{flex:1 1 100%}
+  .contagem{gap:24px}
+  .ficha{grid-template-columns:1fr;padding:20px 16px}
+  .ficha .largo{grid-column:auto}
+  .resumo{grid-template-columns:1fr}
+  .resumo .botao{width:100%}
+  .pedido::after{height:70px;background-size:180px 70px}
+  .passos{padding-top:120px}
+  .onde .acoes .botao{flex:1 1 100%}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para Alessandra Chocolove Cakes. Ainda não é o site oficial.</div>
+
+<header class="capa">
+  <img src="fotos/capa.jpg" alt="Bolo cor-de-rosa com calda de chocolate escorrendo pelas laterais">
+  <div class="largura conteudo"><div class="lado">
+  <p class="marca">Alessandra Chocolove Cakes</p>
+  <div class="texto">
+    <h1>Bolos personalizados para momentos inesquecíveis</h1>
+    <p class="sub">Bolos decorados feitos pela Alessandra em Araras, do aniversário ao casamento.</p>
+    <div class="acoes">
+      <a class="botao choco" href="#pedido">Montar meu pedido</a>
+      <a class="botao linha" href="https://wa.me/5519998509754?text=Ol%C3%A1%2C%20Alessandra!%20Vim%20pelo%20site%20e%20quero%20encomendar%20um%20bolo." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Chamar no WhatsApp</a>
+    </div>
+    <ul class="contagem">
+      <li><b>50 mil</b>bolos produzidos, e contando</li>
+      <li><b>2015</b>o primeiro deles</li>
+    </ul>
+  </div>
+  </div></div>
+</header>
+
+<main>
+<section class="pedido" id="pedido" aria-labelledby="t-pedido">
+  <div class="largura">
+    <h2 id="t-pedido">Qual é a festa?</h2>
+    <p class="intro">Escolha a ocasião, diga quantas pessoas vão comer e a data. O pedido vai pronto para o WhatsApp da Alessandra, que combina sabor, decoração e valor com você.</p>
+    <div class="cartoes" id="cartoes" aria-label="Ocasião do bolo"></div>
+    <form class="ficha" id="ficha" onsubmit="return false" aria-label="Dados do pedido">
+      <label class="campo"><span>Seu nome</span><input id="nome" autocomplete="given-name" placeholder="Camila"></label>
+      <label class="campo"><span>Data da festa</span><input id="data" type="date"></label>
+      <label class="campo"><span>Quantas pessoas</span><input id="pessoas" type="number" min="5" max="400" step="5" value="30" inputmode="numeric"></label>
+      <label class="campo"><span>Como recebe</span>
+        <select id="entrega"><option>Retirada</option><option>Entrega</option></select>
+      </label>
+      <label class="campo largo"><span>Tema ou cores</span><input id="tema" placeholder="Ex.: lilás e dourado, tema jardim" autocomplete="off"></label>
+      <label class="campo largo"><span>Sabor que você gosta (opcional)</span><input id="sabor" placeholder="Ex.: chocolate com morango" autocomplete="off"></label>
+      <div class="resumo" aria-live="polite">
+        <div>
+          <p id="frase">Para <b>30 pessoas</b>, um bolo de cerca de <b>3 kg</b>.</p>
+          <small>Referência: uns 100 g por pessoa. O tamanho certo a Alessandra confirma no orçamento.</small>
+        </div>
+        <a class="botao violeta" id="enviar" href="https://wa.me/5519998509754" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Enviar pedido no WhatsApp</a>
+      </div>
+    </form>
+    <p class="credito">Fotos ilustrativas. No site final entram fotos dos bolos da Alessandra.</p>
+  </div>
+</section>
+
+<section class="passos" aria-labelledby="t-passos">
+  <div class="largura">
+    <h2 id="t-passos">Do pedido à mesa da festa</h2>
+    <ol>
+      <li><strong>Mande o pedido</strong><span>Pela ficha acima ou direto no WhatsApp, com a data e o número de pessoas.</span></li>
+      <li><strong>Combine os detalhes</strong><span>Sabor, recheio, decoração e valor, tudo acertado com a Alessandra.</span></li>
+      <li><strong>Receba o seu bolo</strong><span>Retirada ou entrega no dia combinado.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="galeria-sec" aria-labelledby="t-galeria">
+  <div class="largura">
+    <h2 id="t-galeria">Para dar ideia</h2>
+    <ul class="galeria">
+      <li><img src="fotos/g1.jpg" alt="Bolo lilás com cobertura de chantilly sendo cortado" loading="lazy"></li>
+      <li><img src="fotos/g2.jpg" alt="Bolo de chocolate com suspiros em forma de rosa" loading="lazy"></li>
+      <li><img src="fotos/g3.jpg" alt="Bolo com calda de chocolate e biscoitos no topo" loading="lazy"></li>
+      <li><img src="fotos/c-chocolate.jpg" alt="Bolo de mousse de chocolate com ganache" loading="lazy"></li>
+    </ul>
+    <p class="credito">Fotos ilustrativas. No site final entram fotos dos bolos da Alessandra.</p>
+    <div class="insta">
+      <p><b>19,7 mil pessoas</b> acompanham os bolos da Alessandra no Instagram.</p>
+      <a class="botao choco" href="https://www.instagram.com/alessandrachocolovecakes/" rel="noopener" target="_blank">Ver @alessandrachocolovecakes</a>
+    </div>
+  </div>
+</section>
+
+<section class="onde" id="contato" aria-labelledby="t-onde">
+  <div class="largura grade">
+    <div>
+      <h2 id="t-onde">Encomendas</h2>
+      <dl>
+        <dt>WhatsApp</dt><dd><a href="https://wa.me/5519998509754" rel="noopener">(19) 99850-9754</a></dd>
+        <dt>Cidade</dt><dd>Araras – SP</dd>
+        <dt>Retirada</dt><dd>Endereço combinado pelo WhatsApp.<br><span class="exemplo">Texto de exemplo. No site final entram o endereço e os horários do ateliê.</span></dd>
+      </dl>
+      <div class="acoes">
+        <a class="botao choco" href="https://wa.me/5519998509754?text=Ol%C3%A1%2C%20Alessandra!%20Vim%20pelo%20site%20e%20quero%20encomendar%20um%20bolo." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir orçamento</a>
+      </div>
+    </div>
+    <iframe class="mapa" src="https://www.google.com/maps?q=Araras%2C%20SP&amp;output=embed" loading="lazy" title="Mapa de Araras, SP" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<section class="faq" aria-labelledby="t-faq">
+  <div class="largura">
+    <h2 id="t-faq" style="margin-bottom:20px">Perguntas frequentes</h2>
+    <details><summary>Com quanto tempo de antecedência eu encomendo?</summary><p>Quanto antes, melhor, principalmente em datas concorridas. Mande a data no WhatsApp que a Alessandra confirma se tem vaga.</p></details>
+    <details><summary>Dá para fazer o bolo no tema da festa?</summary><p>Sim. Os bolos são personalizados: conte o tema e as cores e a decoração é pensada para a sua festa.</p></details>
+    <details><summary>Qual tamanho de bolo eu preciso?</summary><p>Uma conta comum é de uns 100 g por pessoa. A ficha de pedido acima faz essa conta, e a Alessandra confirma o tamanho certo.</p></details>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="largura"><span>Alessandra Chocolove Cakes, Araras – SP</span><span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span></div>
+</footer>
+<a class="flutuante" href="https://wa.me/5519998509754?text=Ol%C3%A1%2C%20Alessandra!%20Vim%20pelo%20site%20e%20quero%20encomendar%20um%20bolo." rel="noopener" aria-label="Chamar a Alessandra Chocolove Cakes no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+
+<script>
+(function () {
+  const TEL = '5519998509754';
+  const $ = (id) => document.getElementById(id);
+  // [id, nome no cartão, como entra na mensagem, foto, linha]
+  const OCASIOES = [
+    ['aniv', 'Aniversário', 'um bolo de aniversário', 'fotos/c-aniversario.jpg', 'Com o nome e a idade de quem comemora.'],
+    ['infantil', 'Festa infantil', 'um bolo para festa infantil', 'fotos/c-infantil.jpg', 'No tema que a criança escolher.'],
+    ['15', '15 anos', 'um bolo de 15 anos', 'fotos/c-cha.jpg', 'Para a mesa principal da festa.'],
+    ['casamento', 'Casamento', 'um bolo de casamento', 'fotos/c-casamento.jpg', 'Andares, flores e o estilo dos noivos.'],
+    ['cha', 'Chá revelação', 'um bolo para chá revelação ou chá de bebê', 'fotos/g4.jpg', 'Também para chá de bebê.'],
+    ['drip', 'Drip cake', 'um drip cake', 'fotos/c-drip.jpg', 'Com calda de chocolate escorrendo.'],
+    ['frutas', 'Com frutas', 'um bolo com frutas', 'fotos/c-frutas.jpg', 'Morango e frutas frescas no topo.'],
+    ['outra', 'Outra comemoração', 'um bolo para comemorar', 'fotos/c-confete.jpg', 'Dia das mães, formatura, empresa.']
+  ];
+  let escolha = 'aniv';
+  const grade = $('cartoes');
+  OCASIOES.forEach(([id, nome, , foto, linha]) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'cartao'; b.dataset.s = id;
+    b.innerHTML = `<img src="${foto}" alt="" loading="lazy"><strong>${nome}</strong><small>${linha}</small><span class="marca" aria-hidden="true"></span>`;
+    b.addEventListener('click', () => { escolha = escolha === id ? null : id; atualizar(); });
+    grade.appendChild(b);
+  });
+  const fmt = (n) => n.toLocaleString('pt-BR', { maximumFractionDigits: 1 });
+  function atualizar() {
+    grade.querySelectorAll('.cartao').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.s === escolha)));
+    const p = Math.max(0, Math.min(400, Number($('pessoas').value) || 0));
+    const kg = p ? Math.max(1, Math.ceil(p * 0.1 * 2) / 2) : 0;
+    $('frase').innerHTML = p ? `Para <b>${p} pessoas</b>, um bolo de cerca de <b>${fmt(kg)} kg</b>.` : 'Diga quantas pessoas vão comer para calcular o tamanho.';
+    const o = OCASIOES.find((x) => x[0] === escolha);
+    const nome = $('nome').value.trim(), tema = $('tema').value.trim(), sabor = $('sabor').value.trim();
+    const d = $('data').value ? ' para o dia ' + $('data').value.split('-').reverse().join('/') : '';
+    let msg = `Olá, Alessandra!${nome ? ' Aqui é ' + nome + '.' : ''} Vim pelo site. Quero encomendar ${o ? o[2] : 'um bolo'}${d}`;
+    if (p) msg += `, para ${p} pessoas (uns ${fmt(kg)} kg)`;
+    msg += '.';
+    if (tema) msg += ` Tema/cores: ${tema}.`;
+    if (sabor) msg += ` Sabor: ${sabor}.`;
+    msg += ` Vai ser ${$('entrega').value.toLowerCase()}. Qual o valor e se tem vaga nessa data?`;
+    $('enviar').href = `https://wa.me/${TEL}?text=` + encodeURIComponent(msg);
+  }
+  $('ficha').addEventListener('input', atualizar);
+  $('ficha').addEventListener('change', atualizar);
+  atualizar();
+})();
+</script>
+</body>
+</html>
