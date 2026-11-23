@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Tay Doces Finos | Doces finos e bem-casados em Santa Bárbara d'Oeste</title>
+<meta name="description" content="Modelo demonstrativo de site para a Tay Doces Finos, doces finos e bem-casados para casamentos em Santa Bárbara d'Oeste e região.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Gilda+Display&family=Mulish:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --vinho:#5B1F33; --vinho-escuro:#43142A; --blush:#F6E3E1; --blush-forte:#EBC6C2;
+  --ouro:#A97C37; --papel:#FFFCFA; --tinta:#2E1A21; --cinza:#6E5A60;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;color:var(--tinta);font:17px/1.65 'Mulish',system-ui,sans-serif;background:var(--papel)}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--ouro);outline-offset:3px}
+.ico{width:1.15em;height:1.15em;flex:none}
+.largura{max-width:1160px;margin:0 auto;padding:0 32px}
+h1,h2,h3{font-family:'Gilda Display',Georgia,serif;font-weight:400;color:var(--vinho);margin:0}
+h2{font-size:clamp(32px,4.2vw,48px);line-height:1.1;margin-bottom:14px}
+.intro{max-width:58ch;margin:0 0 36px;color:var(--cinza)}
+.nota{font-size:14px;color:var(--cinza);margin:14px 0 0}
+section{padding:96px 0}
+
+.aviso{background:var(--vinho-escuro);color:#fff;font:14px/1.4 system-ui,sans-serif;text-align:center;padding:8px 16px}
+
+.botao{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font:700 16px/1.2 'Mulish',sans-serif;padding:15px 22px;border-radius:2px;border:1.5px solid transparent;cursor:pointer}
+.botao.ouro{background:var(--ouro);color:#fff}
+.botao.ouro:hover{background:#8f6828}
+.botao.linha{border-color:currentColor;color:#fff}
+.botao.linha:hover{background:rgba(255,255,255,.1)}
+.botao.zap{background:#1f8a4c;color:#fff}
+.botao.zap:hover{background:#18723e}
+.botao.vinho{background:var(--vinho);color:#fff}
+.botao.vinho:hover{background:var(--vinho-escuro)}
+
+/* ---------- Hero: foto da mesa ocupando a tela, cartão vinho preso à esquerda ---------- */
+.hero{position:relative;min-height:calc(100svh - 36px);display:flex;align-items:flex-end;background:#3a2a22 url("fotos/capa.jpg") center/cover no-repeat}
+.hero .largura{width:100%;padding-bottom:56px}
+.cartao-hero{background:var(--vinho);color:#fff;max-width:500px;padding:44px 44px 40px;position:relative}
+.cartao-hero::before{content:"";position:absolute;inset:10px;border:1px solid rgba(214,179,120,.55);pointer-events:none}
+.hero h1{color:#fff;line-height:.9}
+.hero h1 .tay{display:block;font-family:'Pinyon Script',cursive;font-size:clamp(96px,11vw,140px);color:#F3D9A4;margin-left:-6px}
+.hero h1 .df{display:block;font-size:clamp(28px,3vw,36px);letter-spacing:.03em;margin-top:18px}
+.hero .sub{margin:22px 0 0;font-size:18px;line-height:1.55;color:#F6E7EA;max-width:34ch}
+.hero .bio{margin:18px 0 0;font-family:'Gilda Display',serif;font-size:19px;color:#F3D9A4}
+.hero .acoes{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px;position:relative}
+
+/* ---------- Encomenda: cartões + tag do bem-casado ---------- */
+.encomenda{background:var(--blush)}
+.encomenda .grade{display:grid;grid-template-columns:1.55fr .85fr;gap:44px;align-items:start}
+.cartoes{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.cartao{position:relative;display:flex;flex-direction:column;text-align:left;font:inherit;color:var(--tinta);background:var(--papel);border:1px solid #e3cdcb;border-radius:3px;padding:0;cursor:pointer;overflow:hidden;transition:background .15s,border-color .15s}
+.cartao:hover{border-color:var(--ouro)}
+.cartao-foto{display:block;aspect-ratio:1;overflow:hidden;background:#eee}
+.cartao-foto img{width:100%;height:100%;object-fit:cover}
+.cartao-texto{display:block;padding:11px 12px 14px}
+.cartao-texto strong{display:block;font:400 18px/1.15 'Gilda Display',serif;color:var(--vinho)}
+.cartao-texto small{display:block;margin-top:5px;font-size:13px;line-height:1.4;color:var(--cinza)}
+.cartao-marca{position:absolute;top:8px;right:8px;width:30px;height:30px;background:var(--papel);border:1.5px solid var(--vinho);display:grid;place-items:center;font:700 16px/1 'Mulish',sans-serif;color:var(--vinho)}
+.cartao-marca::after{content:'+'}
+.cartao[aria-pressed="true"]{background:var(--vinho);border-color:var(--vinho)}
+.cartao[aria-pressed="true"] .cartao-texto strong{color:#F3D9A4}
+.cartao[aria-pressed="true"] .cartao-texto small{color:#F2DCE0}
+.cartao[aria-pressed="true"] .cartao-marca{background:var(--ouro);border-color:var(--ouro);color:#fff}
+.cartao[aria-pressed="true"] .cartao-marca::after{content:'✓'}
+
+.ficha{position:sticky;top:20px}
+.campos{display:grid;gap:14px;margin-bottom:28px}
+.campos label,.campos legend{display:block;font-size:14px;font-weight:700;color:var(--vinho);margin-bottom:5px}
+.campos input{width:100%;font:16px 'Mulish',sans-serif;padding:11px 12px;border:1px solid #d8bcb9;background:#fff;border-radius:2px;color:var(--tinta)}
+.campos input:focus{outline:2px solid var(--ouro);outline-offset:0;border-color:var(--ouro)}
+.duas{display:grid;grid-template-columns:1.2fr .8fr;gap:12px}
+fieldset{border:0;margin:0;padding:0}
+.opcoes{display:flex;flex-wrap:wrap;gap:6px}
+.opcoes input{position:absolute;opacity:0;width:1px;height:1px}
+.opcoes label{margin:0;font-weight:600;font-size:14px;padding:8px 12px;border:1px solid #d8bcb9;background:#fff;cursor:pointer;color:var(--tinta);border-radius:2px}
+.opcoes input:checked+label{background:var(--vinho);border-color:var(--vinho);color:#fff}
+.opcoes input:focus-visible+label{outline:3px solid var(--ouro);outline-offset:2px}
+
+/* A tag: o elemento marcante. Papel cortado, furo e fita, como a tag que vai amarrada no bem-casado. */
+.tag{position:relative;background:#fff;margin:34px 0 18px;padding:46px 26px 26px;text-align:center;
+  clip-path:polygon(18% 0,82% 0,100% 12%,100% 100%,0 100%,0 12%);filter:drop-shadow(0 10px 22px rgba(91,31,51,.18))}
+.tag-wrap{position:relative}
+.tag-wrap::before{content:"";position:absolute;left:50%;top:-34px;width:2px;height:62px;background:var(--ouro);transform:translateX(-50%) rotate(8deg);transform-origin:bottom;z-index:2}
+.tag::before{content:"";position:absolute;left:50%;top:16px;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--blush);box-shadow:inset 0 1px 2px rgba(0,0,0,.25)}
+.tag::after{content:"";position:absolute;inset:8px;border:1px solid #E6D0B0;clip-path:inherit;pointer-events:none}
+.tag .de{font:400 13px/1 'Gilda Display',serif;letter-spacing:.08em;color:var(--ouro)}
+.tag .nomes{font:400 clamp(40px,4vw,48px)/1.05 'Pinyon Script',cursive;color:var(--vinho);margin:10px 0 2px;word-break:break-word}
+.tag .quando{font:400 16px/1.3 'Gilda Display',serif;color:var(--tinta)}
+.tag ul{list-style:none;margin:16px 0 0;padding:14px 0 0;border-top:1px solid #EAD9C0;font-size:14px;line-height:1.5;color:var(--cinza)}
+.tag .vazio{font-style:italic}
+.ficha .enviar{width:100%}
+.ficha small{display:block;margin-top:12px;font-size:13px;color:var(--cinza);line-height:1.5}
+
+/* ---------- História ---------- */
+.historia .grade{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+.historia blockquote{margin:0;font:400 clamp(30px,3.6vw,44px)/1.2 'Gilda Display',serif;color:var(--vinho)}
+.historia blockquote p{margin:0}
+.historia cite{display:block;margin-top:16px;font:600 15px 'Mulish',sans-serif;font-style:normal;color:var(--cinza)}
+.historia .texto p{max-width:52ch}
+.mosaico{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:12px}
+.mosaico img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5}
+.mosaico img:first-child{grid-row:span 2;aspect-ratio:auto}
+
+/* ---------- Como encomendar (é sequência) ---------- */
+.passos{background:var(--vinho);color:#fff}
+.passos h2{color:#F3D9A4}
+.passos ol{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:40px;counter-reset:p}
+.passos li{counter-increment:p;border-top:1px solid rgba(243,217,164,.45);padding-top:18px}
+.passos li::before{content:counter(p);display:block;font:400 64px/1 'Pinyon Script',cursive;color:#F3D9A4;margin-bottom:6px}
+.passos h3{color:#fff;font-size:22px}
+.passos p{margin:8px 0 0;color:#EED9DE}
+
+/* ---------- Galeria ---------- */
+.galeria .fotos{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.galeria .fotos img{width:100%;aspect-ratio:3/4;object-fit:cover}
+
+/* ---------- Onde ---------- */
+.onde{background:var(--blush)}
+.onde .grade{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:start}
+.onde dl{margin:0 0 26px}
+.onde dt{font-size:14px;font-weight:700;color:var(--vinho)}
+.onde dd{margin:0 0 14px;font-size:18px}
+.onde .acoes{display:flex;gap:12px;flex-wrap:wrap}
+.mapa{width:100%;aspect-ratio:4/3;border:0;background:#eee}
+
+.faq details{border-bottom:1px solid #e6d3d1;max-width:800px}
+.faq summary{cursor:pointer;padding:16px 0;font:400 20px/1.3 'Gilda Display',serif;color:var(--vinho);list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--ouro);font-size:26px;line-height:1}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin:0 0 18px;max-width:64ch;color:var(--cinza)}
+
+footer{background:var(--vinho-escuro);color:#E9D3D8;padding:36px 0 100px;font-size:14px}
+footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.flutuante{position:fixed;right:18px;bottom:18px;display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#073B1E;font:700 15px/1 system-ui,sans-serif;text-decoration:none;padding:14px 18px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.22);z-index:5}
+
+@media (max-width:1020px){
+  .encomenda .grade{grid-template-columns:1fr}
+  .ficha{position:static;max-width:520px}
+  .cartoes{grid-template-columns:repeat(4,1fr)}
+}
+@media (max-width:860px){
+  .historia .grade,.onde .grade{grid-template-columns:1fr;gap:36px}
+  .passos ol{grid-template-columns:1fr;gap:24px}
+  .galeria .fotos{grid-template-columns:1fr 1fr}
+  .cartoes{grid-template-columns:repeat(2,1fr)}
+  section{padding:72px 0}
+}
+@media (max-width:600px){
+  .largura{padding:0 18px}
+  .hero{display:block;min-height:0;background:none}
+  .hero::before{content:"";display:block;height:58svh;background:#3a2a22 url("fotos/capa.jpg") 30% center/cover no-repeat}
+  .hero .largura{padding:0}
+  .cartao-hero{max-width:none;padding:34px 22px 32px}
+  .hero .acoes .botao{flex:1 1 100%}
+  .cartao-texto{padding:9px 10px 12px}
+  .cartao-texto strong{font-size:16px}
+  .cartao-texto small{font-size:12.5px}
+  .duas{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para Tay Doces Finos. Ainda não é o site oficial.</div>
+
+<header class="hero">
+  <div class="largura">
+    <div class="cartao-hero">
+      <h1><span class="tay">Tay</span><span class="df">Doces Finos</span></h1>
+      <p class="sub">Doces finos e bem-casados para casamentos em Santa Bárbara d'Oeste e região.</p>
+      <p class="bio">Há mais de 10 anos adoçando histórias.</p>
+      <div class="acoes">
+        <a class="botao ouro" href="#encomenda">Montar meu orçamento</a>
+        <a class="botao linha" href="https://wa.me/5519991327216?text=Ol%C3%A1%2C%20Tay!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20de%20doces%20para%20o%20meu%20casamento." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Chamar no WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="encomenda" id="encomenda">
+  <div class="largura">
+    <h2>Monte a mesa de doces da sua festa</h2>
+    <p class="intro">Toque nos doces que você imagina na mesa. Ao lado, a tag do seu orçamento vai se preenchendo com os nomes, a data e a sua escolha, e segue pronta para o WhatsApp da Tay.</p>
+    <div class="grade">
+      <div>
+        <div class="cartoes" id="cartoes" role="group" aria-label="Doces para a sua festa"></div>
+        <p class="nota">Itens e fotos ilustrativos. No site final entram os doces, sabores e fotos da Tay.</p>
+      </div>
+
+      <form class="ficha" id="ficha" onsubmit="return false" aria-label="Orçamento para a Tay Doces Finos">
+        <div class="campos">
+          <div><label for="nomes">Nomes na tag</label><input id="nomes" maxlength="40" placeholder="Ex.: Ana &amp; Pedro" autocomplete="off"></div>
+          <fieldset><legend>Tipo de festa</legend><div class="opcoes">
+            <input type="radio" name="tipo" id="t1" value="casamento" checked><label for="t1">Casamento</label>
+            <input type="radio" name="tipo" id="t2" value="noivado"><label for="t2">Noivado</label>
+            <input type="radio" name="tipo" id="t3" value="15 anos"><label for="t3">15 anos</label>
+            <input type="radio" name="tipo" id="t4" value="outra festa"><label for="t4">Outra festa</label>
+          </div></fieldset>
+          <div class="duas">
+            <div><label for="data">Data da festa</label><input id="data" type="date"></div>
+            <div><label for="conv">Convidados</label><input id="conv" type="number" min="10" max="1500" step="10" value="150" inputmode="numeric"></div>
+          </div>
+        </div>
+
+        <div class="tag-wrap">
+          <div class="tag" aria-live="polite">
+            <div class="de">Tay Doces Finos</div>
+            <div class="nomes" id="tNomes">Ana &amp; Pedro</div>
+            <div class="quando" id="tQuando">casamento, 150 convidados</div>
+            <ul id="tLista"></ul>
+          </div>
+        </div>
+
+        <a class="botao zap enviar" id="enviar" href="#" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Enviar orçamento pelo WhatsApp</a>
+        <small>Valores, sabores e disponibilidade da data a Tay confirma pelo WhatsApp.</small>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="historia">
+  <div class="largura grade">
+    <div class="mosaico">
+      <img src="fotos/g-presentes.jpg" alt="Doces embrulhados em tecido verde numa boleira de dois andares" loading="lazy">
+      <img src="fotos/g-cristal2.jpg" alt="Docinhos brancos em taça de cristal" loading="lazy">
+      <img src="fotos/g-bolo.jpg" alt="Bolo branco de casamento com monograma dourado" loading="lazy">
+    </div>
+    <div class="texto">
+      <blockquote><p>Há mais de 10 anos adoçando histórias.</p><cite>Da apresentação da Tay no Instagram</cite></blockquote>
+      <p>Bem-casados embalados um a um, doces finos nas forminhas da cor da festa e a mesa montada para virar foto. A Tay é especialista em doces para casamento e atende Santa Bárbara d'Oeste e as cidades da região.</p>
+      <p class="nota">Texto de exemplo. No site final entra a história da Tay contada por ela.</p>
+      <p><a class="botao vinho" href="https://www.instagram.com/taydocesfinos/" rel="noopener">Ver o Instagram (2,2 mil seguidores)</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="passos">
+  <div class="largura">
+    <h2>Como encomendar</h2>
+    <ol>
+      <li><h3>Mande a data</h3><p>Monte a tag acima ou chame no WhatsApp com a data e o número de convidados.</p></li>
+      <li><h3>Escolha sabores e embalagem</h3><p>A Tay apresenta as opções e monta o orçamento com as cores do casamento.</p></li>
+      <li><h3>Receba na festa</h3><p>Entrega ou retirada combinada direto com ela, com tudo pronto para a mesa.</p></li>
+    </ol>
+    <p class="nota" style="color:#EBD3D9">Texto de exemplo. No site final entra o jeito de trabalhar da Tay.</p>
+  </div>
+</section>
+
+<section class="galeria">
+  <div class="largura">
+    <h2>Mesas que viram lembrança</h2>
+    <p class="intro">Doces finos, bem-casados e lembrancinhas para o grande dia.</p>
+    <div class="fotos">
+      <img src="fotos/mesa.jpg" alt="Mesa de doces de casamento com bolo branco" loading="lazy">
+      <img src="fotos/g-bandeja.jpg" alt="Bandejas de doces finos e biscoitos decorados" loading="lazy">
+      <img src="fotos/bombons.jpg" alt="Caixa de bombons sortidos" loading="lazy">
+      <img src="fotos/lembrancinha.jpg" alt="Lembrancinhas de doces em saquinhos com fita" loading="lazy">
+    </div>
+    <p class="nota">Fotos ilustrativas. No site final entram as fotos das mesas feitas pela Tay.</p>
+  </div>
+</section>
+
+<section class="onde" id="onde">
+  <div class="largura grade">
+    <div>
+      <h2>Onde a Tay atende</h2>
+      <dl>
+        <dt>Região</dt><dd>Santa Bárbara d'Oeste e região</dd>
+        <dt>WhatsApp</dt><dd><a href="https://wa.me/5519991327216" rel="noopener">(19) 99132-7216</a></dd>
+        <dt>Instagram</dt><dd><a href="https://www.instagram.com/taydocesfinos/" rel="noopener">@taydocesfinos</a></dd>
+        <dt>Retirada</dt><dd>Endereço de exemplo. No site final entra o endereço de retirada, se houver.</dd>
+      </dl>
+      <div class="acoes">
+        <a class="botao zap" href="https://wa.me/5519991327216?text=Ol%C3%A1%2C%20Tay!%20Vim%20pelo%20site.%20Voc%C3%AAs%20atendem%20a%20minha%20cidade%3F" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar se atende a minha cidade</a>
+      </div>
+    </div>
+    <iframe class="mapa" src="https://www.google.com/maps?q=Santa%20B%C3%A1rbara%20d'Oeste%20-%20SP&output=embed" loading="lazy" title="Mapa: Santa Bárbara d'Oeste" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="largura">
+    <h2>Perguntas frequentes</h2>
+    <details><summary>Com quanto tempo de antecedência devo encomendar?</summary><p>Quanto antes, melhor, principalmente para casamentos em datas concorridas. Mande a data no WhatsApp que a Tay confirma se ainda tem vaga.</p></details>
+    <details><summary>Quantos bem-casados eu preciso?</summary><p>O mais comum é um por convidado, com uma pequena folga. A Tay ajuda a fechar a quantidade certa no orçamento.</p></details>
+    <details><summary>Dá para escolher a cor da fita e da embalagem?</summary><p>Sim. Papel, fita e tag combinam com as cores e o estilo do seu casamento.</p></details>
+    <details><summary>Vocês atendem fora de Santa Bárbara d'Oeste?</summary><p>A Tay atende Santa Bárbara d'Oeste e região. Pergunte pelo WhatsApp se a sua cidade está incluída.</p></details>
+    <p class="nota">Respostas de exemplo. No site final entram as respostas da Tay.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="largura"><span>Tay Doces Finos · Santa Bárbara d'Oeste – SP</span><span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span></div>
+</footer>
+<a class="flutuante" href="https://wa.me/5519991327216?text=Ol%C3%A1%2C%20Tay!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." rel="noopener" aria-label="Chamar a Tay Doces Finos no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const FONE = '5519991327216';
+  // [id, nome no cartão, texto na mensagem, foto, descrição (exemplo)]
+  const DOCES = [
+    ['bc', 'Bem-casados', 'bem-casados', 'fotos/bem-casados.jpg', 'Embalados um a um, com fita e tag.'],
+    ['finos', 'Doces finos', 'doces finos', 'fotos/cristal.jpg', 'Para a mesa, em forminhas da cor da festa.'],
+    ['bombons', 'Bombons', 'bombons', 'fotos/bombons.jpg', 'Sortidos, para mesa ou caixinha.'],
+    ['morango', 'Morango com chocolate', 'morangos com chocolate', 'fotos/morango.jpg', 'Fruta fresca com cobertura.'],
+    ['brig', 'Brigadeiros gourmet', 'brigadeiros gourmet', 'fotos/brigadeiro.jpg', 'Clássico que some da mesa primeiro.'],
+    ['coco', 'Docinhos de coco', 'docinhos de coco', 'fotos/coco.jpg', 'Branquinhos, delicados, na forminha.'],
+    ['lembr', 'Lembrancinhas', 'lembrancinhas para os convidados', 'fotos/lembrancinha.jpg', 'Saquinhos e caixinhas com fita.'],
+    ['mesa', 'Mesa completa', 'montagem da mesa de doces', 'fotos/mesa.jpg', 'Doces escolhidos e mesa montada.'],
+  ];
+  const escolha = new Set(['bc', 'finos']);
+  const cartoes = $('cartoes');
+  DOCES.forEach(([id, rotulo, , foto, desc]) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'cartao'; b.dataset.s = id; b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = `<span class="cartao-foto"><img src="${foto}" alt="" loading="lazy"></span>` +
+      `<span class="cartao-texto"><strong>${rotulo}</strong><small>${desc}</small></span>` +
+      `<span class="cartao-marca" aria-hidden="true"></span>`;
+    b.addEventListener('click', () => { escolha.has(id) ? escolha.delete(id) : escolha.add(id); atualizar(); });
+    cartoes.appendChild(b);
+  });
+  const lista = (a) => a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' e ' + a[a.length - 1];
+  function atualizar() {
+    cartoes.querySelectorAll('.cartao').forEach((b) => b.setAttribute('aria-pressed', String(escolha.has(b.dataset.s))));
+    const itens = DOCES.filter(([id]) => escolha.has(id));
+    const nomes = $('nomes').value.trim();
+    const tipo = document.querySelector('input[name=tipo]:checked').value;
+    const n = Math.max(0, Math.min(1500, Number($('conv').value) || 0));
+    const data = $('data').value ? $('data').value.split('-').reverse().join('/') : '';
+    $('tNomes').textContent = nomes || 'Ana & Pedro';
+    $('tQuando').textContent = (data ? data + ', ' : '') + tipo + (n ? ', ' + n + ' convidados' : '');
+    const ul = $('tLista'); ul.innerHTML = '';
+    if (!itens.length) { const li = document.createElement('li'); li.className = 'vazio'; li.textContent = 'Toque nos doces para escolher.'; ul.appendChild(li); }
+    else itens.forEach((d) => { const li = document.createElement('li'); li.textContent = d[1]; ul.appendChild(li); });
+    const de = nomes ? ` de ${nomes}` : '';
+    const quando = data ? `, no dia ${data}` : '';
+    const conv = n ? `, com uns ${n} convidados` : '';
+    const quero = itens.length ? ` Tenho interesse em ${lista(itens.map((d) => d[2]))}.` : '';
+    const msg = `Olá, Tay! Vim pelo site. Quero um orçamento de doces para ${tipo}${de}${quando}${conv}.${quero}`;
+    $('enviar').href = `https://wa.me/${FONE}?text=` + encodeURIComponent(msg);
+  }
+  $('ficha').addEventListener('input', atualizar);
+  $('ficha').addEventListener('change', atualizar);
+  atualizar();
+})();
+</script>
+</body>
+</html>
