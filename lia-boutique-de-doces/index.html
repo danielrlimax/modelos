@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Lia Boutique de Doces | Doces finos para casamento</title>
+<meta name="description" content="Modelo demonstrativo de site para a Lia Boutique de Doces: bem-casados, doces finos e mesa de doces para casamento.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400;1,6..96,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --papel:#FCFAFA; --bordo:#5C1D2E; --bordo-escuro:#43121F; --rose:#F3E1E4; --rose-forte:#E2BFC6;
+  --ouro:#A6854F; --tinta:#2B1B21; --cinza:#6F5F65; --linha:#E7DCDF;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.6 'Jost',system-ui,sans-serif}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--ouro);outline-offset:3px}
+.ico{width:1.15em;height:1.15em;flex:none}
+.largura{max-width:1160px;margin:0 auto;padding:0 32px}
+h1,h2,h3{font-family:'Bodoni Moda',Georgia,serif;font-weight:400;margin:0;color:var(--bordo)}
+h2{font-size:clamp(34px,4.4vw,54px);line-height:1.05;letter-spacing:-.01em}
+.intro{max-width:54ch;color:var(--cinza);margin:14px 0 0}
+
+.aviso{background:var(--bordo-escuro);color:#fff;font:14px/1.4 'Jost',sans-serif;text-align:center;padding:8px 16px}
+
+.botao{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font:500 16px/1.2 'Jost',sans-serif;letter-spacing:.01em;padding:14px 22px;border-radius:2px;border:1.5px solid var(--bordo);cursor:pointer}
+.botao.cheio{background:var(--bordo);color:#fff}
+.botao.cheio:hover{background:var(--bordo-escuro)}
+.botao.vazio{background:transparent;color:var(--bordo)}
+.botao.vazio:hover{background:var(--rose)}
+
+/* ---------- Hero: foto da mesa + o convite ---------- */
+.capa{position:relative;min-height:min(820px,calc(100vh - 36px));display:flex;align-items:center;overflow:hidden;background:#3a2a20}
+.capa > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%}
+.capa .largura{position:relative;width:100%;padding-top:56px;padding-bottom:56px}
+/* O convite: papel com moldura dupla dourada. É o único "enfeite" do topo. */
+.convite{width:min(460px,100%);background:#fff;padding:14px;box-shadow:0 2px 4px rgba(40,20,25,.12),0 26px 60px rgba(40,20,25,.32)}
+.convite-dentro{border:1px solid var(--ouro);outline:1px solid var(--ouro);outline-offset:-7px;padding:44px 36px 36px;text-align:center}
+.convite .de{font-size:15px;color:var(--cinza);margin:0 0 12px}
+.convite h1{font-style:italic;font-size:clamp(44px,5.4vw,62px);line-height:1;font-weight:400}
+.convite h1 small{display:block;font-style:normal;font-size:.38em;letter-spacing:.06em;margin-top:12px;color:var(--ouro)}
+.convite .linha-ouro{width:64px;height:1px;background:var(--ouro);margin:22px auto}
+.convite p.sub{margin:0 auto;max-width:30ch;font-size:18px;line-height:1.5}
+.convite .acoes{display:flex;flex-direction:column;gap:10px;margin-top:28px}
+.convite .provas{margin:24px 0 0;font-size:14.5px;line-height:1.5;color:var(--cinza)}
+.convite .provas b{color:var(--bordo);font-weight:600}
+
+section{padding:96px 0}
+
+/* ---------- Depoimentos reais ---------- */
+.noivas{background:var(--rose)}
+.noivas .topo-sec{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap}
+.nota-grande{font-family:'Bodoni Moda',serif;font-size:20px;color:var(--bordo);text-align:right}
+.nota-grande strong{display:block;font-size:64px;line-height:1;font-weight:400}
+.nota-grande a{font:15px 'Jost',sans-serif;color:var(--cinza)}
+.falas{list-style:none;margin:48px 0 0;padding:0;columns:3 300px;column-gap:40px}
+.falas li{break-inside:avoid;margin:0 0 32px;padding-left:20px;border-left:1px solid var(--ouro)}
+.falas q{display:block;font-family:'Bodoni Moda',serif;font-style:italic;font-size:22px;line-height:1.35;quotes:"“" "”"}
+.falas span{display:block;margin-top:10px;font-size:15px;color:var(--cinza)}
+
+/* ---------- Reserva da data (o elemento interativo) ---------- */
+.reserva .grade{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start;margin-top:44px}
+.cartoes{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.cartao{position:relative;display:flex;flex-direction:column;text-align:left;font:inherit;color:var(--tinta);background:#fff;border:1px solid var(--linha);padding:10px;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.cartao:hover{border-color:var(--ouro)}
+.cartao img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.cartao strong{display:block;font:400 23px/1.15 'Bodoni Moda',serif;color:var(--bordo);margin:14px 6px 4px}
+.cartao small{display:block;font-size:14.5px;line-height:1.45;color:var(--cinza);margin:0 6px 8px}
+.cartao .marca{position:absolute;top:18px;right:18px;width:30px;height:30px;background:#fff;border:1px solid var(--ouro);display:grid;place-items:center;font-size:17px;color:var(--bordo)}
+.cartao[aria-pressed="true"]{background:var(--bordo);border-color:var(--bordo)}
+.cartao[aria-pressed="true"] strong{color:#fff}
+.cartao[aria-pressed="true"] small{color:#F1DDE1}
+.cartao[aria-pressed="true"] .marca{background:var(--ouro);border-color:var(--ouro);color:#fff}
+.cartao[aria-pressed="true"] .marca::after{content:"✓"}
+
+/* Cartão-resposta do convite */
+.resposta{position:sticky;top:20px;background:#fff;padding:12px;box-shadow:0 2px 4px rgba(40,20,25,.06),0 18px 44px rgba(40,20,25,.12)}
+.resposta-dentro{border:1px solid var(--ouro);padding:30px 28px 28px}
+.resposta h3{font-style:italic;font-size:30px;text-align:center}
+.resposta .dica{text-align:center;font-size:14.5px;color:var(--cinza);margin:6px 0 22px}
+.campo{display:block;margin-bottom:16px}
+.campo span{display:block;font-size:14px;color:var(--cinza);margin-bottom:4px}
+.campo input{width:100%;font:400 17px/1.4 'Jost',sans-serif;color:var(--tinta);background:transparent;border:0;border-bottom:1px solid #CDBFC4;padding:6px 0;min-width:0}
+.campo input:focus{outline:none;border-bottom:2px solid var(--bordo);padding-bottom:5px}
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.data-escrita{margin:8px 0 0;padding:22px 0 18px;border-top:1px solid var(--linha);border-bottom:1px solid var(--linha);text-align:center}
+.data-escrita .dia{font:italic 400 clamp(26px,3vw,32px)/1.15 'Bodoni Moda',serif;color:var(--bordo);min-height:1.15em}
+.data-escrita .prazo{margin:10px 0 0;font-size:15px;line-height:1.45}
+.prazo.ok{color:#2F6B4A}.prazo.alerta{color:#9A3B1E}
+.escolhidos{font-size:15px;color:var(--cinza);margin:16px 0 0;text-align:center}
+.resposta .botao{width:100%;margin-top:18px}
+
+/* ---------- Mesa montada ---------- */
+.mesa{background:#fff}
+.mesa .grade{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.mesa figure{margin:0}
+.mesa figure img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.mesa figcaption,.credito{font-size:14px;color:var(--cinza);margin-top:10px}
+.detalhes{margin:32px 0 0;display:grid;grid-template-columns:auto 1fr;gap:0 24px}
+.detalhes dt{font-family:'Bodoni Moda',serif;font-style:italic;color:var(--bordo);font-size:19px;padding:14px 0;border-top:1px solid var(--linha)}
+.detalhes dd{margin:0;padding:15px 0;border-top:1px solid var(--linha)}
+
+/* ---------- Galeria ---------- */
+.galeria{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:auto auto;gap:14px;list-style:none;padding:0;margin:40px 0 0}
+.galeria li:first-child{grid-row:span 2}
+.galeria img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/5}
+.galeria li:first-child img{aspect-ratio:auto}
+
+/* ---------- Onde fica ---------- */
+.onde{background:var(--rose)}
+.onde .grade{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+.onde dl{margin:28px 0}
+.onde dt{font-size:14px;color:var(--cinza)}
+.onde dd{margin:0 0 16px;font-size:19px}
+.onde .acoes{display:flex;gap:12px;flex-wrap:wrap}
+.mapa{width:100%;aspect-ratio:4/3;border:0;background:#eadde0}
+
+footer{padding:40px 0 110px;font-size:14px;color:var(--cinza)}
+footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.flutuante{position:fixed;right:18px;bottom:18px;display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#073B1E;font:600 15px/1 'Jost',sans-serif;text-decoration:none;padding:14px 18px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.22);z-index:5}
+
+@media (max-width:980px){
+  .reserva .grade,.mesa .grade,.onde .grade{grid-template-columns:1fr;gap:40px}
+  .resposta{position:static}
+  .cartoes{grid-template-columns:repeat(4,1fr)}
+}
+@media (max-width:700px){
+  .capa{min-height:0;align-items:flex-end}
+  .capa > img{object-position:62% 30%}
+  .capa .largura{padding-top:260px;padding-bottom:32px}
+  .convite{width:min(440px,100%)}
+}
+@media (max-width:760px){
+  .cartoes{grid-template-columns:1fr 1fr}
+  .galeria{grid-template-columns:1fr 1fr}
+  .galeria li:first-child{grid-row:auto;grid-column:span 2}
+  .galeria li:first-child img{aspect-ratio:16/10}
+}
+@media (max-width:560px){
+  .largura{padding:0 18px}
+  section{padding:72px 0}
+  .capa .largura{padding-top:240px;padding-bottom:24px}
+  .convite-dentro{padding:32px 20px 26px}
+  .nota-grande{text-align:left}
+  .cartao{padding:7px}
+  .cartao strong{font-size:19px;margin:10px 4px 2px}
+  .cartao small{font-size:13px;margin:0 4px 6px}
+  .cartao .marca{top:12px;right:12px;width:26px;height:26px}
+  .resposta-dentro{padding:26px 18px 22px}
+  .duas{grid-template-columns:1fr}
+  .detalhes{grid-template-columns:1fr}
+  .detalhes dt{padding-bottom:0}
+  .detalhes dd{border-top:0;padding-top:4px}
+  .onde .acoes .botao{flex:1 1 100%}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para Lia Boutique de Doces. Ainda não é o site oficial.</div>
+
+<header class="capa">
+  <img src="fotos/capa.jpg" alt="Mesa de doces de casamento com flores brancas, cúpula de vidro e bandejas douradas">
+  <div class="largura">
+    <div class="convite">
+      <div class="convite-dentro">
+        <p class="de">Com carinho, para a sua festa</p>
+        <h1>Lia<small>Boutique de Doces</small></h1>
+        <div class="linha-ouro" aria-hidden="true"></div>
+        <p class="sub">Bem-casados, doces finos e a mesa de doces montada no dia do seu casamento.</p>
+        <div class="acoes">
+          <a class="botao cheio" href="#reserva">Consultar a minha data</a>
+          <a class="botao vazio" href="https://wa.me/5519981488979?text=Ol%C3%A1%2C%20Lia!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20doces%20para%20o%20meu%20casamento." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Chamar no WhatsApp</a>
+        </div>
+        <p class="provas"><b>Nota 5,0</b> no Casamentos.com.br, com 8 avaliações de noivas.<br>Vencedora do <b>Casamentos Awards 2023</b>.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="noivas" aria-labelledby="t-noivas">
+  <div class="largura">
+    <div class="topo-sec">
+      <div>
+        <h2 id="t-noivas">O que as noivas contaram</h2>
+        <p class="intro">Trechos das avaliações publicadas no Casamentos.com.br. 100% dos casais recomendam.</p>
+      </div>
+      <p class="nota-grande"><strong>5,0</strong>de 5, com 8 avaliações<br><a href="https://www.casamentos.com.br/doces-casamento/lia-boutique-de-doces--e207626" rel="noopener" target="_blank">Ver no Casamentos.com.br</a></p>
+    </div>
+    <ul class="falas">
+      <li><q>Tudo muito impecável, principalmente o sabor.</q><span>Tatiana</span></li>
+      <li><q>Os ingredientes são de qualidade. Os doces são deliciosos.</q><span>Patricia</span></li>
+      <li><q>Doces muito gostosos, flexibilidade no trabalho com relação a data e horários.</q><span>Karol</span></li>
+      <li><q>Entregou com pontualidade e qualidade tudo o que foi combinado.</q><span>Claudia</span></li>
+      <li><q>Serviço incrível, sabores sensacional.</q><span>Monique</span></li>
+      <li><q>Recomendo de olhos fechados!</q><span>Yasmin</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="reserva" id="reserva" aria-labelledby="t-reserva">
+  <div class="largura">
+    <h2 id="t-reserva">Consulte a data do seu casamento</h2>
+    <p class="intro">A Lia recomenda fazer o pedido com 6 meses de antecedência para garantir a data. Escolha o que você quer na festa, preencha o cartão e ele vai pronto para o WhatsApp dela.</p>
+    <div class="grade">
+      <div class="cartoes" id="cartoes" aria-label="Escolha o que você quer na festa"></div>
+      <form class="resposta" id="resposta" onsubmit="return false" aria-label="Cartão de consulta da data">
+        <div class="resposta-dentro">
+          <h3>Os noivos</h3>
+          <p class="dica">Preencha e confira o prazo</p>
+          <label class="campo"><span>Nomes do casal</span><input id="nomes" placeholder="Ana e Pedro" autocomplete="off"></label>
+          <div class="duas">
+            <label class="campo"><span>Data do casamento</span><input id="data" type="date"></label>
+            <label class="campo"><span>Convidados</span><input id="conv" type="number" min="10" max="1500" step="10" placeholder="150" inputmode="numeric"></label>
+          </div>
+          <label class="campo"><span>Local da recepção</span><input id="local" placeholder="Nome do salão ou chácara" autocomplete="off"></label>
+          <div class="data-escrita" aria-live="polite">
+            <div class="dia" id="diaEscrito">Escolha a data</div>
+            <p class="prazo" id="prazo">Vamos conferir se dá tempo de garantir a sua data.</p>
+          </div>
+          <p class="escolhidos" id="escolhidos">Toque nos cartões para escolher os doces.</p>
+          <a class="botao cheio" id="enviar" href="https://wa.me/5519981488979" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Enviar para a Lia no WhatsApp</a>
+        </div>
+      </form>
+    </div>
+    <p class="credito">Fotos ilustrativas. No site final entram as fotos dos doces da Lia.</p>
+  </div>
+</section>
+
+<section class="mesa" aria-labelledby="t-mesa">
+  <div class="largura grade">
+    <figure>
+      <img src="fotos/mesa.jpg" alt="Mesa de doces montada com bolo branco, flores e bandejas de doces finos" loading="lazy">
+      <figcaption>Foto ilustrativa.</figcaption>
+    </figure>
+    <div>
+      <h2 id="t-mesa">Da cozinha da Lia até o salão</h2>
+      <p class="intro">Doces com visual bonito, delicadeza e sabor, com o acabamento feito no estilo da sua festa.</p>
+      <dl class="detalhes">
+        <dt>Antecedência</dt><dd>O ideal é encomendar 6 meses antes do casamento.</dd>
+        <dt>Entrega</dt><dd>Os doces são levados até o local da recepção.</dd>
+        <dt>Mesa</dt><dd>Montagem da mesa de doces e sobremesas.</dd>
+        <dt>Bandejas</dt><dd>Não estão inclusas. Combine com a sua decoração.</dd>
+        <dt>Pagamento</dt><dd>Cartão de débito e de crédito.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="fotos" aria-labelledby="t-fotos">
+  <div class="largura">
+    <h2 id="t-fotos">Para inspirar a sua mesa</h2>
+    <ul class="galeria">
+      <li><img src="fotos/g1.jpg" alt="Bolo de casamento branco com monograma dourado" loading="lazy"></li>
+      <li><img src="fotos/g3.jpg" alt="Bolo branco decorado com rosas cor de pêssego" loading="lazy"></li>
+      <li><img src="fotos/c2.jpg" alt="Pote de doces com tag de lembrancinha" loading="lazy"></li>
+      <li><img src="fotos/c4.jpg" alt="Morangos cobertos com chocolate em forminhas" loading="lazy"></li>
+      <li><img src="fotos/especiais.jpg" alt="Doces finos em taça de cristal" loading="lazy"></li>
+    </ul>
+    <p class="credito">Fotos ilustrativas. No site final entram fotos de casamentos atendidos pela Lia.</p>
+  </div>
+</section>
+
+<section class="onde" id="contato" aria-labelledby="t-onde">
+  <div class="largura grade">
+    <div>
+      <h2 id="t-onde">Fale com a Lia</h2>
+      <dl>
+        <dt>WhatsApp</dt><dd><a href="https://wa.me/5519981488979" rel="noopener">(19) 98148-8979</a></dd>
+        <dt>Endereço</dt><dd>R. Pierina C. Henrique, Jardim Boa Esperança<br>CEP 13486-458</dd>
+        <dt>Atendimento</dt><dd>Atende a cidade e toda a região. Horários combinados pelo WhatsApp.</dd>
+        <dt>Instagram</dt><dd><a href="https://www.instagram.com/liaboutiquededoces/" rel="noopener" target="_blank">@liaboutiquededoces</a></dd>
+      </dl>
+      <div class="acoes">
+        <a class="botao cheio" href="https://wa.me/5519981488979?text=Ol%C3%A1%2C%20Lia!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20doces%20para%20o%20meu%20casamento." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir orçamento</a>
+        <a class="botao vazio" href="https://www.google.com/maps/dir/?api=1&amp;destination=R.%20Pierina%20C.%20Henrique%2C%2013486-458" rel="noopener" target="_blank">Traçar rota</a>
+      </div>
+    </div>
+    <iframe class="mapa" src="https://www.google.com/maps?q=R.%20Pierina%20C.%20Henrique%2C%2013486-458&amp;output=embed" loading="lazy" title="Mapa da Lia Boutique de Doces" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="largura"><span>Lia Boutique de Doces</span><span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span></div>
+</footer>
+<a class="flutuante" href="https://wa.me/5519981488979?text=Ol%C3%A1%2C%20Lia!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20doces%20para%20o%20meu%20casamento." rel="noopener" aria-label="Chamar a Lia Boutique de Doces no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+
+<script>
+(function () {
+  const TEL = '5519981488979';
+  const $ = (id) => document.getElementById(id);
+  // [id, nome no cartão, como entra na mensagem, foto, linha]
+  const ITENS = [
+    ['bc', 'Bem-casados', 'bem-casados', 'fotos/c1.jpg', 'Embalados no papel e na fita da festa.'],
+    ['esp', 'Doces especiais', 'doces especiais', 'fotos/especiais.jpg', 'Doces finos com acabamento delicado.'],
+    ['simp', 'Doces simples', 'doces simples', 'fotos/c3.jpg', 'Os clássicos que todo convidado procura.'],
+    ['mesa', 'Mesa de doces', 'montagem da mesa de doces', 'fotos/mesa.jpg', 'Montada no salão, no estilo da decoração.']
+  ];
+  const escolha = new Set(['bc', 'esp']);
+  const grade = $('cartoes');
+  ITENS.forEach(([id, nome, , foto, linha]) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'cartao'; b.dataset.s = id;
+    b.innerHTML = `<img src="${foto}" alt="" loading="lazy"><strong>${nome}</strong><small>${linha}</small><span class="marca" aria-hidden="true"></span>`;
+    b.addEventListener('click', () => { escolha.has(id) ? escolha.delete(id) : escolha.add(id); atualizar(); });
+    grade.appendChild(b);
+  });
+
+  const lista = (a) => a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' e ' + a[a.length - 1];
+  function hojeSP() {
+    const p = Object.fromEntries(new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Sao_Paulo', year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(new Date()).map((x) => [x.type, x.value]));
+    return new Date(Number(p.year), Number(p.month) - 1, Number(p.day));
+  }
+  function atualizar() {
+    grade.querySelectorAll('.cartao').forEach((b) => b.setAttribute('aria-pressed', String(escolha.has(b.dataset.s))));
+    const itens = ITENS.filter((i) => escolha.has(i[0])).map((i) => i[2]);
+    $('escolhidos').textContent = itens.length ? 'Você escolheu: ' + lista(itens) + '.' : 'Toque nos cartões para escolher os doces.';
+
+    const v = $('data').value; let quando = '';
+    const dia = $('diaEscrito'), prazo = $('prazo');
+    prazo.className = 'prazo';
+    if (v) {
+      const [a, m, d] = v.split('-').map(Number);
+      const alvo = new Date(a, m - 1, d);
+      dia.textContent = alvo.toLocaleDateString('pt-BR', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+      quando = ` no dia ${String(d).padStart(2, '0')}/${String(m).padStart(2, '0')}/${a}`;
+      const hoje = hojeSP();
+      let meses = (a - hoje.getFullYear()) * 12 + (m - 1 - hoje.getMonth());
+      if (d < hoje.getDate()) meses -= 1;
+      if (alvo < hoje) { prazo.textContent = 'Essa data já passou. Confira o ano.'; prazo.classList.add('alerta'); }
+      else if (meses >= 6) { prazo.textContent = `Faltam ${meses} meses. Dentro da antecedência que a Lia recomenda.`; prazo.classList.add('ok'); }
+      else { prazo.textContent = (meses < 1 ? 'Falta menos de 1 mês.' : meses === 1 ? 'Falta 1 mês.' : `Faltam ${meses} meses.`) + ' A Lia recomenda 6 meses, então chame logo para ver se a data está livre.'; prazo.classList.add('alerta'); }
+    } else { dia.textContent = 'Escolha a data'; prazo.textContent = 'Vamos conferir se dá tempo de garantir a sua data.'; }
+
+    const nomes = $('nomes').value.trim();
+    const conv = Number($('conv').value) || 0;
+    const local = $('local').value.trim();
+    let msg = `Olá, Lia!${nomes ? ' Somos ' + nomes + '.' : ''} Vim pelo site. Vamos casar${quando || ' em breve'}`;
+    if (conv) msg += `, com cerca de ${conv} convidados`;
+    if (local) msg += `, recepção em ${local}`;
+    msg += '.';
+    if (itens.length) msg += ` Temos interesse em ${lista(itens)}.`;
+    msg += ' A data está disponível?';
+    $('enviar').href = `https://wa.me/${TEL}?text=` + encodeURIComponent(msg);
+  }
+  $('resposta').addEventListener('input', atualizar);
+  $('resposta').addEventListener('change', atualizar);
+  atualizar();
+})();
+</script>
+</body>
+</html>
