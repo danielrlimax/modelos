@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Abre Já Chaveiro | Chaveiro 24h em Limeira e região</title>
+<meta name="description" content="Modelo demonstrativo de site para o Abre Já Chaveiro, do Tiago Alves: chaves codificadas, abertura de veículos e cilindros de ignição, 24 horas em Limeira e região.">
+<meta name="theme-color" content="#0B1A2C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira:ital,wdth,wght@0,62.5..125,400..900;1,62.5..125,600..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --noite:#0B1A2C;
+  --noite-2:#12263D;
+  --ouro:#FFC21A;
+  --ouro-esc:#E0A200;
+  --sinal:#E0251B;
+  --gelo:#EEF2F6;
+  --aco:#8FA0B3;
+  --verde:#25D366;
+  --tinta:#13202F;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Saira",system-ui,sans-serif;font-stretch:100%;color:var(--tinta);background:var(--gelo);line-height:1.55;font-size:17px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ouro);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-stretch:75%;font-style:italic;font-weight:850;line-height:.98;letter-spacing:-.01em;margin:0}
+h2{font-size:clamp(2.1rem,4.6vw,3.4rem)}
+h3{font-size:1.45rem}
+p{margin:0 0 1em}
+
+/* faixa de aviso */
+.aviso{background:var(--ouro);color:var(--noite);font-size:.82rem;font-weight:600;text-align:center;padding:7px 14px;line-height:1.3}
+
+/* topo */
+.topo{position:absolute;left:0;right:0;z-index:5;padding:16px 0}
+.topo .wrap{display:flex;align-items:center;gap:14px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.marca img{width:52px;height:52px;border-radius:50%;border:2px solid var(--ouro)}
+.marca b{font-stretch:75%;font-style:italic;font-weight:900;font-size:1.5rem;line-height:1;display:block}
+.marca small{font-size:.8rem;color:var(--aco);display:block}
+.topo nav{margin-left:auto;display:flex;gap:22px;align-items:center}
+.topo nav a{color:#fff;text-decoration:none;font-weight:500;font-size:.95rem}
+.topo nav a:hover{color:var(--ouro)}
+.tel-topo{border:1.5px solid rgba(255,255,255,.5);padding:7px 14px;border-radius:6px}
+
+/* botoes */
+.btn{display:inline-flex;align-items:center;gap:10px;font:inherit;font-weight:700;font-size:1.05rem;text-decoration:none;border:0;cursor:pointer;padding:15px 22px;border-radius:8px;line-height:1.1}
+.btn svg{width:22px;height:22px;flex:none}
+.btn-wa{background:var(--verde);color:#062b14}
+.btn-wa:hover{background:#3be07a}
+.btn-ouro{background:var(--ouro);color:var(--noite)}
+.btn-ouro:hover{background:#ffd24f}
+.btn-linha{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px rgba(255,255,255,.55)}
+.btn-linha:hover{box-shadow:inset 0 0 0 2px #fff}
+
+/* HERO */
+.hero{position:relative;min-height:max(640px,100svh);color:#fff;display:flex;align-items:flex-end;overflow:hidden;background:var(--noite)}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 60%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,16,28,.92) 0%,rgba(7,16,28,.7) 38%,rgba(7,16,28,.05) 68%),linear-gradient(0deg,rgba(7,16,28,.85),rgba(7,16,28,0) 40%)}
+.hero .wrap{position:relative;z-index:2;padding:120px 0 44px}
+.relogio{display:inline-grid;grid-template-columns:auto auto;align-items:center;column-gap:16px;margin-bottom:22px}
+.relogio .hora{font-stretch:62.5%;font-weight:800;font-size:clamp(4.4rem,9vw,7rem);line-height:.82;color:var(--ouro);font-variant-numeric:tabular-nums;letter-spacing:-.02em;grid-row:span 2}
+.relogio .hora i{font-style:normal;animation:pisca 1s steps(1) infinite}
+@keyframes pisca{50%{opacity:.25}}
+.relogio .onde{font-size:1rem;color:var(--gelo);align-self:end}
+.relogio .status{display:flex;align-items:center;gap:8px;font-weight:700;font-size:1.1rem;align-self:start}
+.relogio .status::before{content:"";width:11px;height:11px;border-radius:50%;background:var(--verde);box-shadow:0 0 0 0 rgba(37,211,102,.7);animation:pulso 2s infinite}
+@keyframes pulso{70%{box-shadow:0 0 0 12px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+.hero h1{font-size:clamp(2.4rem,4.8vw,4rem);max-width:17ch;margin-bottom:18px}
+.hero .lead{font-size:1.15rem;max-width:40ch;color:#d6dee8;margin-bottom:28px}
+.acoes{display:flex;flex-wrap:wrap;gap:12px}
+.provas{display:flex;flex-wrap:wrap;gap:0;margin-top:34px;border-top:1px solid rgba(255,255,255,.18);padding-top:20px;max-width:720px}
+.provas div{padding-right:28px;margin-right:28px;border-right:1px solid rgba(255,255,255,.18)}
+.provas div:last-child{border:0;margin:0;padding:0}
+.provas b{display:block;font-stretch:75%;font-style:italic;font-weight:850;font-size:2rem;line-height:1;color:#fff}
+.provas span{font-size:.88rem;color:var(--aco)}
+
+/* servicos / pedido */
+.socorro{padding:96px 0 90px;background:var(--gelo)}
+.cab{max-width:640px;margin-bottom:40px}
+.cab p{font-size:1.1rem;color:#435466;margin-top:14px}
+.montar{display:grid;grid-template-columns:1.55fr 1fr;gap:32px;align-items:start}
+.cartoes{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.cartao{position:relative;display:flex;flex-direction:column;text-align:left;font:inherit;color:inherit;background:#fff;border:2px solid #d5dde6;border-radius:12px;padding:0;overflow:hidden;cursor:pointer;transition:border-color .15s,background .15s}
+.cartao img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.cartao .txt{padding:14px 16px 16px}
+.cartao .nome{display:block;font-stretch:75%;font-style:italic;font-weight:850;line-height:1;font-size:1.35rem;margin-bottom:5px}
+.cartao .txt span{font-size:.93rem;color:#4b5b6c;display:block;line-height:1.4}
+.cartao .ok{position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:50%;background:rgba(11,26,44,.6);border:2px solid #fff;color:transparent;display:grid;place-items:center;font-weight:900;font-size:1.1rem}
+.cartao:hover{border-color:var(--aco)}
+.cartao[aria-pressed="true"]{background:var(--noite);color:#fff;border-color:var(--ouro)}
+.cartao[aria-pressed="true"] .txt span{color:#c3cfdb}
+.cartao[aria-pressed="true"] .ok{background:var(--ouro);border-color:var(--ouro);color:var(--noite)}
+
+.ficha{position:sticky;top:20px;background:var(--noite);color:#fff;border-radius:14px;padding:26px 24px}
+.ficha h3{font-size:1.7rem;color:var(--ouro);margin-bottom:4px}
+.ficha .sub{color:var(--aco);font-size:.92rem;margin-bottom:18px}
+.campo{margin-bottom:18px}
+.campo>label,.campo>.rot{display:block;font-weight:600;font-size:.95rem;margin-bottom:8px}
+.escolhidos{min-height:28px;font-size:.98rem;color:#dbe4ee}
+.escolhidos ul{margin:0;padding-left:18px}
+.escolhidos em{color:var(--aco)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips button{font:inherit;font-size:.92rem;font-weight:600;background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.3);border-radius:6px;padding:7px 12px;cursor:pointer}
+.chips button[aria-pressed="true"]{background:var(--ouro);border-color:var(--ouro);color:var(--noite)}
+.ficha input{width:100%;font:inherit;font-size:1rem;padding:11px 12px;border-radius:7px;border:1.5px solid rgba(255,255,255,.25);background:var(--noite-2);color:#fff}
+.ficha input::placeholder{color:#7d8ea1}
+.local{display:flex;gap:8px}
+.local input{flex:1}
+.btn-gps{font:inherit;font-size:.88rem;font-weight:600;white-space:nowrap;background:transparent;color:var(--ouro);border:1.5px solid var(--ouro);border-radius:7px;padding:0 12px;cursor:pointer}
+.gps-msg{font-size:.85rem;color:var(--aco);margin-top:6px;min-height:1.2em}
+.ficha .btn-wa{width:100%;justify-content:center;margin-top:6px;font-size:1.1rem}
+.ficha .aviso-ficha{font-size:.82rem;color:var(--aco);margin:10px 0 0;text-align:center}
+
+/* como funciona */
+.passos{background:var(--noite);color:#fff;padding:90px 0}
+.passos .grade{display:grid;grid-template-columns:1fr 1.4fr;gap:60px;align-items:center}
+.passos h2{color:#fff}
+.passos .grade>div:first-child p{color:#c3cfdb;margin-top:16px;font-size:1.08rem}
+.passos ol{list-style:none;margin:0;padding:0;counter-reset:p}
+.passos li{counter-increment:p;display:grid;grid-template-columns:70px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.passos li:first-child{padding-top:0}
+.passos li::before{content:counter(p);font-stretch:62.5%;font-weight:800;font-size:3.6rem;line-height:.85;color:var(--ouro)}
+.passos li b{display:block;font-size:1.2rem;margin-bottom:4px}
+.passos li span{color:#c3cfdb}
+.nota{font-size:.84rem;color:var(--aco);margin-top:18px}
+
+/* galeria */
+.galeria{padding:90px 0;background:#fff}
+.mosaico{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:10px;margin-top:34px}
+.mosaico figure{margin:0;overflow:hidden;border-radius:8px;background:var(--noite)}
+.mosaico img{width:100%;height:100%;object-fit:cover}
+.mosaico .alto{grid-row:span 2}
+.mosaico .largo{grid-column:span 2}
+.galeria .nota{color:#5d6d7e}
+
+/* prova / instagram */
+.confianca{padding:90px 0;background:var(--gelo)}
+.confianca .grade{display:grid;grid-template-columns:340px 1fr;gap:56px;align-items:center}
+.confianca .selo{width:100%;border-radius:50%;box-shadow:0 20px 50px rgba(11,26,44,.25)}
+.numeros{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:28px 0;border-top:2px solid var(--noite)}
+.numeros div{padding:18px 18px 0 0}
+.numeros b{display:block;font-stretch:62.5%;font-style:italic;font-weight:850;font-size:3.4rem;line-height:.9;color:var(--noite)}
+.numeros span{font-size:.92rem;color:#4b5b6c}
+.depo{border-left:4px solid var(--ouro);padding:4px 0 4px 18px;color:#4b5b6c;font-size:.95rem;margin:0 0 24px}
+.btn-insta{background:var(--noite);color:#fff}
+.btn-insta:hover{background:var(--noite-2)}
+
+/* area */
+.area{padding:90px 0;background:#fff}
+.area .grade{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:center}
+.area p{color:#435466;font-size:1.08rem;margin-top:16px}
+.mapa{border-radius:12px;overflow:hidden;border:2px solid #d5dde6;aspect-ratio:4/3}
+.mapa iframe{width:100%;height:100%;border:0;display:block}
+.horas{display:flex;align-items:center;gap:14px;margin:22px 0;padding:16px 18px;background:var(--noite);color:#fff;border-radius:10px}
+.horas b{font-stretch:62.5%;font-weight:800;font-size:2.6rem;line-height:1;color:var(--ouro)}
+.horas span{font-size:.95rem}
+
+/* final */
+.final{position:relative;padding:110px 0;color:#fff;overflow:hidden;background:var(--noite)}
+.final>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.4}
+.final .wrap{position:relative}
+.final h2{font-size:clamp(2.4rem,6vw,4.4rem);max-width:16ch;margin-bottom:16px}
+.final p{font-size:1.15rem;color:#d6dee8;max-width:46ch;margin-bottom:28px}
+.final .numero{display:block;font-stretch:75%;font-style:italic;font-weight:850;font-size:clamp(2.4rem,7vw,4.8rem);color:var(--ouro);text-decoration:none;line-height:1;margin-bottom:26px}
+
+footer{background:#07111D;color:var(--aco);padding:30px 0 100px;font-size:.88rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 30px;justify-content:space-between}
+footer a{color:#fff}
+
+.wa-float{position:fixed;right:18px;bottom:18px;z-index:50;width:62px;height:62px;border-radius:50%;background:var(--verde);color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.wa-float svg{width:34px;height:34px}
+
+@media (max-width:980px){
+  .montar{grid-template-columns:1fr}
+  .ficha{position:static}
+  .passos .grade,.area .grade{grid-template-columns:1fr;gap:36px}
+  .confianca .grade{grid-template-columns:220px 1fr;gap:36px}
+  .mosaico{grid-template-columns:repeat(2,1fr);grid-auto-rows:200px}
+  .mosaico .largo{grid-column:span 2}
+}
+@media (max-width:860px){
+  .topo nav a:not(.tel-topo){display:none}
+  .hero>img{object-position:96% 60%}
+  .hero h1{max-width:15ch}
+  .hero .lead{max-width:29ch}
+  .hero::after{background:linear-gradient(90deg,rgba(7,16,28,.9) 0%,rgba(7,16,28,.6) 50%,rgba(7,16,28,.1) 85%),linear-gradient(0deg,rgba(7,16,28,.9),rgba(7,16,28,0) 50%)}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .wrap{width:min(1160px,100% - 32px)}
+  .marca img{width:44px;height:44px}
+  .marca b{font-size:1.25rem}
+  .tel-topo{display:none}
+  .hero{min-height:auto}
+  .hero>img{object-position:74% 50%}
+  .hero::after{background:linear-gradient(0deg,rgba(7,16,28,.97) 0%,rgba(7,16,28,.86) 55%,rgba(7,16,28,.35) 100%)}
+  .hero .wrap{padding:110px 0 40px}
+  .relogio{column-gap:12px}
+  .acoes .btn{width:100%;justify-content:center}
+  .provas{display:grid;grid-template-columns:repeat(3,1fr)}
+  .provas div{padding-right:10px;margin-right:10px}
+  .provas div:last-child{padding:0;margin:0}
+  .provas b{font-size:1.5rem}
+  .provas span{font-size:.8rem;display:block;line-height:1.3;margin-top:4px}
+  .cartoes{grid-template-columns:repeat(2,1fr);gap:10px}
+  .cartao .txt{padding:10px 11px 12px}
+  .cartao .nome{font-size:1.12rem}
+  .cartao .txt span{font-size:.84rem}
+  .confianca .grade{grid-template-columns:1fr}
+  .confianca .selo{width:200px}
+  .numeros b{font-size:2.6rem}
+  .mosaico{grid-auto-rows:150px}
+  .socorro,.passos,.galeria,.confianca,.area{padding:68px 0}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.030-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.870 9.870 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.860 9.860 0 01-1.510-5.260c.001-5.450 4.436-9.884 9.888-9.884 2.640 0 5.122 1.030 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.450-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.050 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.480-8.413Z"/></symbol>
+  <symbol id="fone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para Abre Já Chaveiro. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Abre Já Chaveiro, início">
+      <img src="logo.jpg" alt="Logo do Abre Já Chaveiro" width="52" height="52">
+      <span><b>Abre Já Chaveiro</b><small>Tiago Alves, Limeira e região</small></span>
+    </a>
+    <nav aria-label="Seções">
+      <a href="#servicos">Serviços</a>
+      <a href="#como">Como funciona</a>
+      <a href="#area">Onde atende</a>
+      <a class="tel-topo" href="tel:+5519996034439">(19) 99603-4439</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero" aria-labelledby="titulo">
+  <img src="fotos/hero.jpg" alt="Motorista ao lado do carro parado numa rua à noite, olhando o celular" fetchpriority="high">
+  <div class="wrap">
+    <div class="relogio" aria-live="polite">
+      <span class="hora" id="hora">--<i>:</i>--</span>
+      <span class="onde" id="onde">agora em Limeira</span>
+      <span class="status">e o Abre Já atende</span>
+    </div>
+    <h1 id="titulo">Perdeu a chave do carro? O Tiago vai até você.</h1>
+    <p class="lead">Chaveiro 24 horas especializado em chaves codificadas. Ele vai até onde o carro está, de dia ou de madrugada.</p>
+    <div class="acoes">
+      <a class="btn btn-wa" href="https://wa.me/5519996034439?text=Ol%C3%A1%2C%20Tiago!%20Preciso%20de%20um%20chaveiro%20agora." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Chamar no WhatsApp</a>
+      <a class="btn btn-linha" href="tel:+5519996034439"><svg aria-hidden="true"><use href="#fone"/></svg>Ligar (19) 99603-4439</a>
+    </div>
+    <div class="provas">
+      <div><b>15 anos</b><span>atendendo Limeira e região</span></div>
+      <div><b>24h</b><span>todos os dias</span></div>
+      <div><b>+1.100</b><span>publicações no Instagram</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="socorro" id="servicos" aria-labelledby="t-serv">
+  <div class="wrap">
+    <div class="cab">
+      <h2 id="t-serv">Do que você precisa?</h2>
+      <p>Toque no que aconteceu, diga o carro e onde ele está. A mensagem sai pronta para o WhatsApp do Tiago.</p>
+    </div>
+    <div class="montar">
+      <div class="cartoes" role="group" aria-label="Serviços">
+        <button class="cartao" type="button" aria-pressed="false" data-s="Chave codificada nova">
+          <img src="fotos/chave-nova.jpg" alt="Chave canivete com controle sobre banco de couro" loading="lazy">
+          <span class="ok" aria-hidden="true">✓</span>
+          <span class="txt"><b class="nome">Chave codificada nova</b><span>Perdeu ou quebrou a única chave? Ela é feita e programada no local.</span></span>
+        </button>
+        <button class="cartao" type="button" aria-pressed="false" data-s="Cópia de chave codificada">
+          <img src="fotos/copia.jpg" alt="Chave presencial de carro com botões de travar e destravar" loading="lazy">
+          <span class="ok" aria-hidden="true">✓</span>
+          <span class="txt"><b class="nome">Cópia de chave codificada</b><span>A chave reserva que todo carro deveria ter, já com o chip.</span></span>
+        </button>
+        <button class="cartao" type="button" aria-pressed="false" data-s="Abertura de veículo">
+          <img src="fotos/abertura.jpg" alt="Mão segurando a chave em frente a um carro branco" loading="lazy">
+          <span class="ok" aria-hidden="true">✓</span>
+          <span class="txt"><b class="nome">Abertura de veículo</b><span>Chave trancada dentro do carro, nacional ou importado.</span></span>
+        </button>
+        <button class="cartao" type="button" aria-pressed="false" data-s="Reparo no cilindro de ignição">
+          <img src="fotos/cilindro.jpg" alt="Chave inserida num cilindro de fechadura, em close" loading="lazy">
+          <span class="ok" aria-hidden="true">✓</span>
+          <span class="txt"><b class="nome">Cilindro de ignição</b><span>Chave que não gira, emperra ou não liga o carro.</span></span>
+        </button>
+      </div>
+
+      <form class="ficha" id="ficha" onsubmit="return false" aria-labelledby="t-ficha">
+        <h3 id="t-ficha">Seu chamado</h3>
+        <p class="sub">Quanto mais detalhe, mais rápido o Tiago chega com a peça certa.</p>
+        <div class="campo">
+          <span class="rot">O que aconteceu</span>
+          <div class="escolhidos" id="escolhidos"><em>Toque num serviço ao lado.</em></div>
+        </div>
+        <div class="campo">
+          <span class="rot" id="r-marca">Marca do carro</span>
+          <div class="chips" role="group" aria-labelledby="r-marca" id="marcas">
+            <button type="button" aria-pressed="false">Volkswagen</button>
+            <button type="button" aria-pressed="false">Chevrolet</button>
+            <button type="button" aria-pressed="false">Fiat</button>
+            <button type="button" aria-pressed="false">Ford</button>
+            <button type="button" aria-pressed="false">Importado</button>
+            <button type="button" aria-pressed="false">Outra</button>
+          </div>
+        </div>
+        <div class="campo">
+          <label for="modelo">Modelo e ano</label>
+          <input id="modelo" type="text" placeholder="Ex.: Onix 2019" autocomplete="off">
+        </div>
+        <div class="campo">
+          <label for="lugar">Onde o carro está</label>
+          <div class="local">
+            <input id="lugar" type="text" placeholder="Bairro ou rua" autocomplete="off">
+            <button class="btn-gps" type="button" id="gps">Usar minha localização</button>
+          </div>
+          <div class="gps-msg" id="gps-msg" aria-live="polite"></div>
+        </div>
+        <a class="btn btn-wa" id="enviar" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Enviar chamado no WhatsApp</a>
+        <p class="aviso-ficha">Orçamento combinado direto com o Tiago antes do serviço.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="passos" id="como" aria-labelledby="t-como">
+  <div class="wrap grade">
+    <div>
+      <h2 id="t-como">Você não precisa guinchar o carro.</h2>
+      <p>O atendimento é no local: em casa, no trabalho, no estacionamento ou na rua, de dia ou de madrugada.</p>
+    </div>
+    <div>
+      <ol>
+        <li><div><b>Você chama</b><span>Pelo WhatsApp ou ligação, dizendo o carro e onde ele está.</span></div></li>
+        <li><div><b>O Tiago vai até o carro</b><span>Com as ferramentas e o equipamento para codificar a chave ali mesmo.</span></div></li>
+        <li><div><b>Você sai dirigindo</b><span>Carro aberto, chave nova funcionando ou cilindro consertado.</span></div></li>
+      </ol>
+      <p class="nota">Texto de exemplo. No site final entram os detalhes do atendimento contados pelo Tiago.</p>
+    </div>
+  </div>
+</section>
+
+<section class="galeria" aria-labelledby="t-gal">
+  <div class="wrap">
+    <h2 id="t-gal">Chave de carro é com ele.</h2>
+    <div class="mosaico">
+      <figure class="alto"><img src="fotos/g-chaves.jpg" alt="Parede com dezenas de chaves de modelos diferentes" loading="lazy"></figure>
+      <figure class="largo"><img src="fotos/g-entrega.jpg" alt="Pessoa segurando a chave na frente de um carro prata" loading="lazy"></figure>
+      <figure><img src="fotos/g-mao.jpg" alt="Chave de carro na palma da mão" loading="lazy"></figure>
+      <figure><img src="fotos/g-painel.jpg" alt="Chave canivete sobre o painel do carro" loading="lazy"></figure>
+      <figure class="largo"><img src="fotos/g-rua.jpg" alt="Carro escuro na estrada ao anoitecer" loading="lazy"></figure>
+    </div>
+    <p class="nota">Fotos ilustrativas. No site final entram fotos dos atendimentos do Tiago, tiradas do Instagram.</p>
+  </div>
+</section>
+
+<section class="confianca" aria-labelledby="t-conf">
+  <div class="wrap grade">
+    <img class="selo" src="logo.jpg" alt="Arte do Abre Já Chaveiro: especializado em chaves codificadas, atendimento 24 horas" loading="lazy">
+    <div>
+      <h2 id="t-conf">15 anos abrindo carro em Limeira.</h2>
+      <div class="numeros">
+        <div><b>15</b><span>anos atendendo Limeira e região</span></div>
+        <div><b>945</b><span>seguidores no Instagram</span></div>
+        <div><b>1.100+</b><span>publicações de serviços</span></div>
+      </div>
+      <p class="depo">Espaço para avaliações. No site final entram depoimentos reais de clientes do Abre Já, com nome e autorização.</p>
+      <a class="btn btn-insta" href="https://www.instagram.com/abrejachaveiro/" target="_blank" rel="noopener">Ver @abrejachaveiro no Instagram</a>
+    </div>
+  </div>
+</section>
+
+<section class="area" id="area" aria-labelledby="t-area">
+  <div class="wrap grade">
+    <div>
+      <h2 id="t-area">Limeira e região, onde o carro estiver.</h2>
+      <p>O Abre Já é chaveiro de atendimento móvel: não é preciso levar o carro a lugar nenhum. Mande a localização pelo WhatsApp e o Tiago vai até você.</p>
+      <div class="horas"><b>24h</b><span>Atendimento todos os dias, inclusive de madrugada, fins de semana e feriados.</span></div>
+      <a class="btn btn-wa" href="https://wa.me/5519996034439?text=Ol%C3%A1%2C%20Tiago!%20Voc%C3%AA%20atende%20no%20meu%20bairro%3F" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Perguntar se atende meu bairro</a>
+    </div>
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps?q=Limeira%2C%20SP&output=embed" loading="lazy" title="Mapa de Limeira, SP" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="final" aria-labelledby="t-final">
+  <img src="fotos/g-noite.jpg" alt="" loading="lazy">
+  <div class="wrap">
+    <h2 id="t-final">Salve o número antes de precisar.</h2>
+    <p>Chave codificada, carro trancado ou ignição travada: um toque e o Abre Já Chaveiro está a caminho.</p>
+    <a class="numero" href="tel:+5519996034439">(19) 99603-4439</a>
+    <div class="acoes">
+      <a class="btn btn-wa" href="https://wa.me/5519996034439?text=Ol%C3%A1%2C%20Tiago!%20Vi%20o%20site%20e%20preciso%20de%20um%20chaveiro." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Chamar no WhatsApp</a>
+      <a class="btn btn-ouro" href="tel:+5519996034439"><svg aria-hidden="true"><use href="#fone"/></svg>Ligar agora</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Abre Já Chaveiro, Tiago Alves. Chaveiro 24h em Limeira e região. <a href="https://www.instagram.com/abrejachaveiro/" target="_blank" rel="noopener">@abrejachaveiro</a></span>
+    <span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5519996034439?text=Ol%C3%A1%2C%20Tiago!%20Preciso%20de%20um%20chaveiro." target="_blank" rel="noopener" aria-label="Chamar o Abre Já Chaveiro no WhatsApp"><svg aria-hidden="true"><use href="#wa"/></svg></a>
+
+<script>
+(function(){
+  // relógio ao vivo em Limeira (America/Sao_Paulo); atendimento 24h = sempre atendendo
+  var hora=document.getElementById('hora'), onde=document.getElementById('onde');
+  var fmt=new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',hour:'2-digit',minute:'2-digit',hour12:false});
+  var hfmt=new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',hour:'numeric',hour12:false});
+  function tique(){
+    var p=fmt.format(new Date()).split(':');
+    hora.innerHTML=p[0]+'<i>:</i>'+p[1];
+    var h=+hfmt.format(new Date())%24;
+    onde.textContent=(h<5?'de madrugada':h<12?'de manhã':h<18?'à tarde':'à noite')+' em Limeira';
+  }
+  tique(); setInterval(tique,15000);
+
+  // montador do chamado
+  var WA='5519996034439', sel=[], marca='', geo='';
+  var cards=document.querySelectorAll('.cartao'), lista=document.getElementById('escolhidos');
+  var enviar=document.getElementById('enviar');
+  cards.forEach(function(c){
+    c.addEventListener('click',function(){
+      var on=c.getAttribute('aria-pressed')!=='true';
+      c.setAttribute('aria-pressed',on);
+      var s=c.dataset.s;
+      if(on) sel.push(s); else sel=sel.filter(function(x){return x!==s});
+      lista.innerHTML=sel.length?'<ul>'+sel.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul>':'<em>Toque num serviço ao lado.</em>';
+      monta();
+    });
+  });
+  document.querySelectorAll('#marcas button').forEach(function(b,i,all){
+    b.addEventListener('click',function(){
+      var on=b.getAttribute('aria-pressed')!=='true';
+      all.forEach(function(x){x.setAttribute('aria-pressed','false')});
+      b.setAttribute('aria-pressed',on); marca=on?b.textContent:''; monta();
+    });
+  });
+  var modelo=document.getElementById('modelo'), lugar=document.getElementById('lugar');
+  modelo.addEventListener('input',monta); lugar.addEventListener('input',monta);
+  var gmsg=document.getElementById('gps-msg');
+  document.getElementById('gps').addEventListener('click',function(){
+    if(!navigator.geolocation){gmsg.textContent='Seu navegador não envia localização. Escreva o bairro ou a rua.';return}
+    gmsg.textContent='Pegando sua localização...';
+    navigator.geolocation.getCurrentPosition(function(p){
+      geo='https://maps.google.com/?q='+p.coords.latitude.toFixed(6)+','+p.coords.longitude.toFixed(6);
+      gmsg.textContent='Localização adicionada ao chamado.'; monta();
+    },function(){gmsg.textContent='Não deu para pegar a localização. Escreva o bairro ou a rua.'},{enableHighAccuracy:true,timeout:10000});
+  });
+  function monta(){
+    var t='Olá, Tiago! Vi o site do Abre Já e preciso de um chaveiro.';
+    if(sel.length) t+='\n\nServiço: '+sel.join(', ');
+    var carro=[marca,modelo.value.trim()].filter(Boolean).join(' ');
+    if(carro) t+='\nCarro: '+carro;
+    if(lugar.value.trim()) t+='\nOnde está: '+lugar.value.trim();
+    if(geo) t+='\nLocalização: '+geo;
+    enviar.href='https://wa.me/'+WA+'?text='+encodeURIComponent(t);
+  }
+  monta();
+})();
+</script>
+</body>
+</html>
