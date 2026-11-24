@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Michele Lofrani | Sobrancelha e micropigmentação em Hortolândia</title>
+<meta name="description" content="Design de sobrancelha, micropigmentação e lash lifting com a Michele Lofrani, na Vila Inema, em Hortolândia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Pinyon+Script&family=Albert+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --jaleco:#1d1517;      /* preto do jaleco, puxado pro vinho */
+  --jaleco-2:#2a1f21;
+  --ouro:#c9967f;        /* rosé gold do bordado */
+  --ouro-claro:#e9c7b7;
+  --porcelana:#fbf6f3;
+  --blush:#f3e2da;
+  --cacau:#3d2b27;
+  --cacau-2:#6e5650;
+  --zap:#1fa855;
+  --raio:6px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font-family:"Albert Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;color:var(--cacau);background:var(--porcelana)}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ouro);outline-offset:3px}
+h1,h2,h3{font-family:"Marcellus",Georgia,serif;font-weight:400;line-height:1.12;margin:0}
+h2{font-size:clamp(30px,4.2vw,46px);color:var(--jaleco);max-width:18ch}
+.largura{width:min(1160px,100% - 40px);margin-inline:auto}
+.intro{max-width:60ch;color:var(--cacau-2);margin:14px 0 0}
+.nota{font-size:13.5px;color:var(--cacau-2);font-style:italic;margin:18px 0 0}
+section{padding:96px 0}
+.ico{width:20px;height:20px;flex:none}
+
+/* botões: cantos discretos, nada de pílula */
+.botao{display:inline-flex;align-items:center;gap:10px;padding:15px 22px;border-radius:var(--raio);font-weight:600;font-size:16px;text-decoration:none;border:1.5px solid transparent;transition:background .2s,color .2s,border-color .2s}
+.botao.zap{background:var(--zap);color:#fff}
+.botao.zap:hover{background:#178a45}
+.botao.linha{border-color:var(--ouro);color:var(--ouro-claro)}
+.botao.linha:hover{background:var(--ouro);color:var(--jaleco)}
+.botao.escuro{background:var(--jaleco);color:#fff}
+.botao.escuro:hover{background:var(--jaleco-2)}
+
+.aviso{background:var(--ouro);color:var(--jaleco);text-align:center;font-size:14px;padding:8px 16px;font-weight:500}
+
+/* ---------- topo / banner ---------- */
+.topo{position:relative;background:var(--jaleco);color:#fff;min-height:min(100svh,860px);display:flex;flex-direction:column;overflow:hidden}
+.topo .foto{position:absolute;top:0;right:0;bottom:0;width:74%;}
+.topo .foto img{width:100%;height:100%;object-fit:cover;object-position:62% 40%}
+.topo .foto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--jaleco) 0%,rgba(29,21,23,.82) 22%,rgba(29,21,23,.15) 52%,rgba(29,21,23,0) 70%),linear-gradient(0deg,rgba(29,21,23,.55),rgba(29,21,23,0) 30%)}
+.barra{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0}
+.marca{text-decoration:none;font-family:"Pinyon Script",cursive;font-size:30px;line-height:1;color:var(--ouro-claro)}
+.barra nav{display:flex;gap:26px;font-size:15px}
+.barra nav a{text-decoration:none;color:#f2e6e0;padding:6px 0;border-bottom:1px solid transparent}
+.barra nav a:hover{border-color:var(--ouro)}
+.miolo{position:relative;z-index:2;flex:1;display:flex;align-items:center;padding:20px 0 70px}
+.texto{max-width:540px}
+.sobrancelha{width:min(330px,80%);height:auto;margin:0 0 6px -6px;overflow:visible}
+.sobrancelha path{fill:none;stroke:var(--ouro);stroke-linecap:round}
+.assinatura{font-family:"Pinyon Script",cursive;font-size:clamp(46px,6.2vw,76px);line-height:1;color:var(--ouro-claro);margin:0}
+.oficio{display:flex;align-items:center;gap:12px;color:var(--ouro);font-size:15px;letter-spacing:.06em;margin:8px 0 28px}
+.oficio::before,.oficio::after{content:"";height:1px;width:34px;background:var(--ouro);opacity:.7}
+.oficio svg{width:11px;height:11px;fill:var(--ouro)}
+.topo h1{font-size:clamp(34px,4.6vw,56px);max-width:13ch}
+.topo .sub{color:#eadcd6;font-size:18px;max-width:42ch;margin:16px 0 28px}
+.acoes{display:flex;flex-wrap:wrap;gap:12px}
+.prova{display:flex;flex-wrap:wrap;gap:10px 26px;margin:30px 0 0;padding:18px 0 0;border-top:1px solid rgba(201,150,127,.35);font-size:15px;color:#eadcd6}
+.prova b{font-family:"Marcellus",serif;font-weight:400;font-size:24px;color:#fff;margin-right:6px}
+.status{display:inline-flex;align-items:center;gap:9px}
+.status i,.agora i{width:9px;height:9px;border-radius:50%;background:#c98b7c;flex:none}
+.status.aberto i,.agora.aberto i{background:#3ad07a;box-shadow:0 0 0 4px rgba(58,208,122,.22)}
+
+/* ---------- quem atende ---------- */
+.quem{background:var(--porcelana)}
+.quem .grade{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
+.quem .fotos{display:grid;grid-template-columns:1.25fr 1fr;gap:14px;align-items:end}
+.quem .fotos img{border-radius:var(--raio);width:100%;object-fit:cover}
+.quem .fotos img:first-child{aspect-ratio:4/5}
+.quem .fotos img:last-child{aspect-ratio:3/4;margin-bottom:-40px}
+.fatos{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:18px}
+.fatos li{display:grid;grid-template-columns:26px 1fr;gap:12px;align-items:start}
+.fatos svg{width:22px;height:22px;margin-top:3px;stroke:var(--ouro);fill:none;stroke-width:1.6}
+.fatos strong{display:block;color:var(--jaleco);font-weight:600}
+.fatos span{color:var(--cacau-2);font-size:16px}
+.insta{display:inline-flex;align-items:center;gap:10px;margin-top:30px;font-weight:600;color:var(--jaleco);text-decoration:none;border-bottom:1.5px solid var(--ouro);padding-bottom:3px}
+.insta svg{width:20px;height:20px}
+
+/* ---------- monte seu horário ---------- */
+.pedido{background:var(--blush)}
+.pedido .grade{display:grid;grid-template-columns:1fr 360px;gap:36px;margin-top:40px;align-items:start}
+.cartoes{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.cartao{position:relative;display:flex;flex-direction:column;text-align:left;padding:0;border:1.5px solid rgba(61,43,39,.12);background:#fff;border-radius:var(--raio);overflow:hidden;cursor:pointer;font:inherit;color:inherit;transition:border-color .2s,background .2s,box-shadow .2s}
+.cartao:hover{border-color:var(--ouro)}
+.cartao-foto{aspect-ratio:1/1;overflow:hidden;background:var(--blush)}
+.cartao-foto img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.cartao-texto{padding:12px 13px 14px;display:block}
+.cartao-texto strong{display:block;font-weight:600;font-size:15.5px;line-height:1.25;color:var(--jaleco)}
+.cartao-texto small{display:block;font-size:13.5px;line-height:1.4;color:var(--cacau-2);margin-top:4px}
+.cartao-marca{position:absolute;top:10px;right:10px;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.92);border:1.5px solid rgba(61,43,39,.25);display:grid;place-items:center;font-size:15px;font-weight:700;color:transparent;transition:background .2s,color .2s,border-color .2s}
+.cartao[aria-pressed="true"]{background:var(--jaleco);border-color:var(--jaleco)}
+.cartao[aria-pressed="true"] .cartao-texto strong{color:#fff}
+.cartao[aria-pressed="true"] .cartao-texto small{color:var(--ouro-claro)}
+.cartao[aria-pressed="true"] .cartao-marca{background:var(--ouro);border-color:var(--ouro);color:var(--jaleco)}
+.cartao[aria-pressed="true"] .cartao-marca::before{content:"✓"}
+.ficha{background:var(--jaleco);color:#fff;border-radius:var(--raio);padding:28px;position:sticky;top:20px}
+.ficha h3{font-family:"Pinyon Script",cursive;font-size:40px;color:var(--ouro-claro);line-height:1;margin-bottom:18px}
+.campo{margin-bottom:16px}
+.tit,legend{display:block;font-size:14px;color:var(--ouro-claro);margin-bottom:7px;padding:0}
+fieldset{border:0;margin:0 0 16px;padding:0;min-width:0}
+input[type=text]{width:100%;font:inherit;font-size:16px;padding:12px 14px;border-radius:var(--raio);border:1.5px solid rgba(233,199,183,.35);background:var(--jaleco-2);color:#fff}
+input[type=text]::placeholder{color:#a8918b}
+input[type=text]:focus{border-color:var(--ouro);outline:none}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{flex:1 1 auto;text-align:center;padding:9px 10px;border:1.5px solid rgba(233,199,183,.35);border-radius:var(--raio);font-size:14.5px;cursor:pointer;color:#eadcd6}
+.seg input:checked+label{background:var(--ouro);border-color:var(--ouro);color:var(--jaleco);font-weight:600}
+.seg input:focus-visible+label{outline:3px solid var(--ouro-claro);outline-offset:2px}
+.lista{border-top:1px solid rgba(233,199,183,.25);padding-top:14px;margin:4px 0 18px}
+.lista p{margin:0 0 6px;font-size:14px;color:var(--ouro-claro)}
+.lista ul{margin:0;padding-left:18px}
+.lista li{font-size:15.5px}
+.lista .vazio{color:#bfa9a2;font-style:italic;font-size:15px}
+.ficha .botao{width:100%;justify-content:center}
+.ficha small{display:block;font-size:13px;color:#bfa9a2;margin-top:12px;line-height:1.45}
+
+/* ---------- micropigmentação: etapas ---------- */
+.etapas{background:var(--jaleco);color:#f2e6e0}
+.etapas h2{color:#fff}
+.etapas .intro{color:#cdb9b2}
+.etapas .grade{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center;margin-top:10px}
+.etapas .grade>img{border-radius:var(--raio);aspect-ratio:4/5;object-fit:cover;width:100%}
+.etapas ol{list-style:none;margin:30px 0 0;padding:0;counter-reset:e}
+.etapas li{counter-increment:e;display:grid;grid-template-columns:54px 1fr;gap:8px;padding:18px 0;border-top:1px solid rgba(201,150,127,.28)}
+.etapas li::before{content:counter(e);font-family:"Pinyon Script",cursive;font-size:38px;line-height:1;color:var(--ouro)}
+.etapas h3{font-family:"Albert Sans",sans-serif;font-weight:600;font-size:18px;color:#fff}
+.etapas li p{margin:4px 0 0;color:#cdb9b2;font-size:16px}
+.etapas .nota{color:#bfa9a2}
+
+/* ---------- galeria ---------- */
+.galeria .fotos{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:12px;margin-top:36px}
+.galeria img{width:100%;height:100%;object-fit:cover;border-radius:var(--raio)}
+.galeria img:nth-child(1){grid-row:span 2}
+.galeria img:nth-child(4){grid-column:span 2}
+
+/* ---------- perguntas ---------- */
+.duvidas{background:var(--blush)}
+.duvidas .grade{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px}
+details{border-top:1px solid rgba(61,43,39,.18);padding:4px 0}
+details:last-of-type{border-bottom:1px solid rgba(61,43,39,.18)}
+summary{cursor:pointer;list-style:none;padding:16px 36px 16px 0;position:relative;font-weight:600;color:var(--jaleco);font-size:17.5px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:12px;font-size:24px;color:var(--ouro);font-weight:400;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin:0 0 18px;color:var(--cacau-2);max-width:62ch}
+
+/* ---------- onde ---------- */
+.onde .grade{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:36px;align-items:stretch}
+.agora{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--jaleco);font-size:18px;margin:0 0 20px}
+.semana{list-style:none;margin:0;padding:0}
+.semana li{display:grid;grid-template-columns:92px 1fr;gap:14px;align-items:center;padding:7px 0;font-size:15.5px}
+.trilho{position:relative;height:28px;background:rgba(61,43,39,.06);border-radius:4px}
+.faixa{position:absolute;top:0;bottom:0;left:calc((8 - 6) / 16 * 100%);width:calc(10 / 16 * 100%);background:var(--blush);border-left:2px solid var(--ouro);border-radius:3px;display:flex;align-items:center;padding-left:10px;font-size:14px;color:var(--cacau)}
+.fechado{position:absolute;inset:0;display:flex;align-items:center;padding-left:10px;font-size:14px;color:var(--cacau-2);font-style:italic}
+.semana li.hoje .dia{font-weight:700;color:var(--jaleco)}
+.semana li.hoje .faixa{background:var(--jaleco);color:#fff;border-color:var(--ouro)}
+.escala{display:grid;grid-template-columns:92px 1fr;gap:14px;font-size:12px;color:var(--cacau-2);margin-top:2px}
+.escala div{display:flex;justify-content:space-between}
+dl{margin:28px 0 0;display:grid;grid-template-columns:auto 1fr;gap:8px 18px}
+dt{color:var(--cacau-2);font-size:15px}
+dd{margin:0;font-weight:500}
+.onde .acoes{margin-top:26px}
+.mapa{width:100%;height:100%;min-height:420px;border:0;border-radius:var(--raio);filter:saturate(.75)}
+
+/* ---------- fim ---------- */
+.chamada{background:var(--jaleco);color:#fff;text-align:center;padding:84px 0}
+.chamada .assinatura{font-size:clamp(44px,6vw,70px)}
+.chamada p{color:#cdb9b2;max-width:44ch;margin:12px auto 28px}
+footer{background:#140e10;color:#a8918b;font-size:14px;padding:26px 0}
+footer .largura{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+
+.flutuante{position:fixed;right:18px;bottom:18px;z-index:50;display:flex;align-items:center;gap:9px;background:var(--zap);color:#fff;text-decoration:none;font-weight:600;padding:14px 18px;border-radius:30px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.flutuante .ico{width:24px;height:24px}
+
+/* animação única: os fios da sobrancelha aparecem um a um */
+@media (prefers-reduced-motion:no-preference){
+  .sobrancelha.anima path{stroke-dasharray:var(--l);stroke-dashoffset:var(--l);animation:fio .5s ease-out forwards;animation-delay:calc(var(--i) * 32ms + 250ms)}
+  @keyframes fio{to{stroke-dashoffset:0}}
+  .cartao:hover .cartao-foto img{transform:scale(1.04)}
+}
+
+@media (max-width:1040px){
+  .cartoes{grid-template-columns:repeat(2,1fr)}
+  .pedido .grade{grid-template-columns:1fr 330px}
+}
+@media (max-width:960px){
+  section{padding:76px 0}
+  .topo{min-height:0}
+  .topo .foto{position:relative;width:100%;height:clamp(340px,58vw,520px)}
+  .topo .foto img{object-position:62% 35%}
+  .topo .foto::after{background:linear-gradient(0deg,var(--jaleco) 0%,rgba(29,21,23,.4) 30%,rgba(29,21,23,0) 55%),linear-gradient(180deg,rgba(29,21,23,.7),rgba(29,21,23,0) 30%)}
+  .barra{position:absolute;top:0;left:0;right:0;width:auto;padding:16px 20px}
+  .miolo{margin-top:-70px;padding-bottom:56px}
+  .texto{max-width:620px}
+  .quem .grade,.etapas .grade,.duvidas .grade,.onde .grade{grid-template-columns:1fr;gap:40px}
+  .quem .fotos img:last-child{margin-bottom:0}
+  .etapas .grade>img{aspect-ratio:16/10}
+  .pedido .grade{grid-template-columns:1fr}
+  .ficha{position:static}
+  .cartoes{grid-template-columns:repeat(4,1fr)}
+  .galeria .fotos{grid-template-columns:repeat(2,1fr);grid-auto-rows:190px}
+  .galeria img:nth-child(4){grid-column:span 2}
+}
+@media (max-width:720px){
+  .barra nav{display:none}
+  .cartoes{grid-template-columns:repeat(2,1fr);gap:10px}
+}
+@media (max-width:520px){
+  body{font-size:16px}
+  .topo .foto{height:360px}
+  .miolo{margin-top:-60px}
+  .acoes .botao{flex:1 1 100%;justify-content:center}
+  .prova{gap:8px 18px}
+  .ficha{padding:22px}
+  .cartao-texto{padding:10px 11px 12px}
+  .cartao-texto small{font-size:12.5px}
+  .semana li,.escala{grid-template-columns:74px 1fr;gap:10px}
+  .faixa{font-size:13px}
+  .mapa{min-height:320px}
+  .flutuante span{display:none}
+  .flutuante{padding:15px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.030-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.360.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.870 9.870 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.860 9.860 0 01-1.510-5.260c.001-5.450 4.436-9.884 9.888-9.884 2.640 0 5.122 1.030 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.450-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.050 0C5.495 0 .160 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.480-8.413Z"/></symbol>
+  <symbol id="coracao" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.6-9.2C.9 8.4 2.9 4.5 6.6 4.5c2.2 0 3.6 1.2 5.4 3.2 1.8-2 3.2-3.2 5.4-3.2 3.7 0 5.7 3.9 4.2 7.3C19.5 16.4 12 21 12 21z"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para Michele Lofrani – Sobrancelha e Micropigmentação. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <div class="foto"><img src="fotos/hero.jpg" alt="Profissional de luvas pretas fazendo micropigmentação na sobrancelha de uma cliente deitada na maca" fetchpriority="high"></div>
+  <div class="largura barra">
+    <a class="marca" href="#">Michele Lofrani</a>
+    <nav aria-label="Seções"><a href="#michele">A Michele</a><a href="#horario">Monte seu horário</a><a href="#micro">Micropigmentação</a><a href="#onde">Endereço</a></nav>
+  </div>
+  <div class="largura miolo">
+    <div class="texto">
+      <svg class="sobrancelha" id="sobrancelha" viewBox="0 0 400 120" role="img" aria-label="Sobrancelha desenhada fio a fio"></svg>
+      <p class="assinatura">Michele Lofrani</p>
+      <p class="oficio"><svg aria-hidden="true"><use href="#coracao"/></svg>Sobrancelha e Micropigmentação</p>
+      <h1>Acordar com a sobrancelha pronta.</h1>
+      <p class="sub">Design de sobrancelha, micropigmentação e lash lifting com a própria Michele, na Vila Inema, em Hortolândia.</p>
+      <div class="acoes">
+        <a class="botao zap" href="https://wa.me/5519992973467?text=Ol%C3%A1%2C%20Michele!%20Vim%20pelo%20site%20e%20quero%20marcar%20um%20hor%C3%A1rio." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Marcar pelo WhatsApp</a>
+        <a class="botao linha" href="#horario">Escolher o serviço</a>
+      </div>
+      <p class="prova"><span><b>2.059</b>seguidores no Instagram</span><span class="status" id="status-topo"><i></i><span>Seg. a sáb., 8h às 18h</span></span></p>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="quem" id="michele">
+  <div class="largura grade">
+    <div class="fotos">
+      <img src="fotos/fio.jpg" alt="Sobrancelha castanha bem desenhada, em close" loading="lazy">
+      <img src="fotos/henna.jpg" alt="Pincel fino aplicando cor na sobrancelha" loading="lazy">
+    </div>
+    <div>
+      <h2>Quem atende é a própria Michele</h2>
+      <p class="intro">Especialista em sobrancelhas com micropigmentação e lash lifting em Hortolândia. Atende sozinha, com hora marcada: quem desenha, pigmenta e faz o retoque é a mesma pessoa que conversou com você no WhatsApp.</p>
+      <ul class="fatos">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 15c4-7 12-9 18-6"/><path d="M5 15.5l1.2-3M8.5 13.6l.9-3.2M12 12.4l.6-3.2M15.5 11.9l.3-3"/></svg><div><strong>Desenho pensado para o seu rosto</strong><span>A forma nasce das suas medidas e do seu jeito, não de um molde.</span></div></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><div><strong>Um horário só seu</strong><span>Sem fila e sem pressa: cada cliente tem o seu tempo na cadeira.</span></div></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg><div><strong>Material descartável e cuidado em cada etapa</strong><span>Higiene que você vê acontecer na sua frente.</span></div></li>
+      </ul>
+      <p class="nota">Texto de exemplo. No site final entram a história, a formação e o jeito de trabalhar da Michele.</p>
+      <a class="insta" href="https://instagram.com/michele.lofrani" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Ver os trabalhos em @michele.lofrani</a>
+    </div>
+  </div>
+</section>
+
+<section class="pedido" id="horario">
+  <div class="largura">
+    <h2>Monte seu horário com a Michele</h2>
+    <p class="intro">Toque em um ou mais serviços. A ficha ao lado se monta sozinha e a mensagem vai pronta para o WhatsApp da Michele.</p>
+    <div class="grade">
+      <div class="cartoes" id="cartoes" role="group" aria-label="Serviços"></div>
+      <form class="ficha" id="ficha" onsubmit="return false" aria-label="Pedido de horário">
+        <h3>Sua ficha</h3>
+        <div class="campo"><label class="tit" for="nome">Seu nome</label><input type="text" id="nome" placeholder="Ex.: Juliana" autocomplete="given-name" maxlength="30"></div>
+        <fieldset><legend>Já atendeu com a Michele?</legend><div class="seg">
+          <input type="radio" name="vez" id="v1" value="primeira" checked><label for="v1">Primeira vez</label>
+          <input type="radio" name="vez" id="v2" value="cliente"><label for="v2">Já sou cliente</label>
+        </div></fieldset>
+        <fieldset><legend>Melhor dia</legend><div class="seg">
+          <input type="radio" name="dia" id="d0" value="qualquer dia" checked><label for="d0">Tanto faz</label>
+          <input type="radio" name="dia" id="d1" value="durante a semana"><label for="d1">Seg. a sex.</label>
+          <input type="radio" name="dia" id="d2" value="no sábado"><label for="d2">Sábado</label>
+        </div></fieldset>
+        <fieldset><legend>Período</legend><div class="seg">
+          <input type="radio" name="periodo" id="p1" value="de manhã" checked><label for="p1">Manhã</label>
+          <input type="radio" name="periodo" id="p2" value="à tarde"><label for="p2">Tarde</label>
+        </div></fieldset>
+        <div class="lista" aria-live="polite"><p>Serviços escolhidos</p><div id="escolhidos"></div></div>
+        <a class="botao zap" id="enviar" href="https://wa.me/5519992973467" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Mandar no WhatsApp</a>
+        <small>Valor e horário a Michele confirma pelo WhatsApp. Lista de exemplo: no site final entram os serviços e os valores que ela oferece.</small>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="etapas" id="micro">
+  <div class="largura grade">
+    <img src="fotos/mapa.jpg" alt="Mapeamento da sobrancelha com linha antes do procedimento" loading="lazy">
+    <div>
+      <h2>Micropigmentação, do desenho ao retoque</h2>
+      <p class="intro">Para quem quer sair de casa sem lápis e sem medo de borrar. Como costuma ser o caminho:</p>
+      <ol>
+        <li><div><h3>Conversa e avaliação</h3><p>Você conta o que incomoda e o que espera. A pele e os fios são avaliados antes de tudo.</p></div></li>
+        <li><div><h3>Desenho e aprovação</h3><p>A sobrancelha é medida e desenhada no seu rosto. Só segue quando você aprovar no espelho.</p></div></li>
+        <li><div><h3>Pigmentação</h3><p>Fio a fio ou sombreado, na cor que combina com os seus fios e o seu tom de pele.</p></div></li>
+        <li><div><h3>Cicatrização e retoque</h3><p>Você leva as orientações de cuidado para casa e volta para o retoque no prazo combinado.</p></div></li>
+      </ol>
+      <p class="nota">Texto de exemplo. No site final entram as técnicas, os prazos e os cuidados que a Michele indica.</p>
+    </div>
+  </div>
+</section>
+
+<section class="galeria">
+  <div class="largura">
+    <h2>Olhar feito com calma</h2>
+    <div class="fotos">
+      <img src="fotos/cilios.jpg" alt="Cílios curvados e sobrancelha marcada, em close" loading="lazy">
+      <img src="fotos/pinca.jpg" alt="Pinça ajustando o desenho da sobrancelha" loading="lazy">
+      <img src="fotos/lash.jpg" alt="Profissional fazendo procedimento nos cílios de uma cliente" loading="lazy">
+      <img src="fotos/olho.jpg" alt="Olho castanho com sobrancelha definida" loading="lazy">
+      <img src="fotos/macro.jpg" alt="Olho castanho em luz quente" loading="lazy">
+      <img src="fotos/atendimento.jpg" alt="Atendimento de cílios em estúdio de beleza" loading="lazy">
+    </div>
+    <p class="nota">Fotos ilustrativas. No site final entram os trabalhos da Michele, com antes e depois.</p>
+  </div>
+</section>
+
+<section class="duvidas">
+  <div class="largura grade">
+    <div>
+      <h2>Antes de marcar</h2>
+      <p class="intro">As dúvidas que mais aparecem no direct. Ficou alguma? É só chamar a Michele.</p>
+    </div>
+    <div>
+      <details><summary>Micropigmentação dói?</summary><p>A maioria das clientes sente um leve incômodo. A região é preparada antes e o procedimento é feito com pausas, no seu tempo.</p></details>
+      <details><summary>Quanto tempo dura?</summary><p>Depende da pele e dos cuidados, mas em geral o resultado dura bastante tempo e vai clareando aos poucos. O retoque mantém a cor bonita.</p></details>
+      <details><summary>Fica artificial?</summary><p>O desenho é feito para o seu rosto e a cor é escolhida junto com você. A ideia é parecer a sua sobrancelha num dia muito bom.</p></details>
+      <details><summary>Qual a diferença para o design de sobrancelha?</summary><p>O design organiza os seus fios com pinça, cera ou henna e dura algumas semanas. A micropigmentação preenche falhas e desenha a forma por muito mais tempo.</p></details>
+      <p class="nota">Texto de exemplo. No site final entram as respostas da própria Michele.</p>
+    </div>
+  </div>
+</section>
+
+<section class="onde" id="onde">
+  <div class="largura">
+    <h2>Onde a Michele atende</h2>
+    <div class="grade">
+      <div>
+        <p class="agora" id="agora"><i></i><span>Confira o horário</span></p>
+        <ul class="semana" id="semana" aria-label="Horário de atendimento">
+          <li data-dia="1"><span class="dia">Segunda</span><div class="trilho"><span class="faixa">8h às 18h</span></div></li>
+          <li data-dia="2"><span class="dia">Terça</span><div class="trilho"><span class="faixa">8h às 18h</span></div></li>
+          <li data-dia="3"><span class="dia">Quarta</span><div class="trilho"><span class="faixa">8h às 18h</span></div></li>
+          <li data-dia="4"><span class="dia">Quinta</span><div class="trilho"><span class="faixa">8h às 18h</span></div></li>
+          <li data-dia="5"><span class="dia">Sexta</span><div class="trilho"><span class="faixa">8h às 18h</span></div></li>
+          <li data-dia="6"><span class="dia">Sábado</span><div class="trilho"><span class="faixa">8h às 18h</span></div></li>
+          <li data-dia="0"><span class="dia">Domingo</span><div class="trilho"><span class="fechado">Fechado</span></div></li>
+        </ul>
+        <div class="escala" aria-hidden="true"><span></span><div><span>6h</span><span>10h</span><span>14h</span><span>18h</span><span>22h</span></div></div>
+        <dl>
+          <dt>Endereço</dt><dd>Rua Antônio Pascucci, 45<br>Vila Inema, Hortolândia – SP, 13185-134</dd>
+          <dt>WhatsApp</dt><dd><a href="https://wa.me/5519992973467" rel="noopener">(19) 99297-3467</a></dd>
+          <dt>Instagram</dt><dd><a href="https://instagram.com/michele.lofrani" rel="noopener">@michele.lofrani</a></dd>
+        </dl>
+        <p class="nota">Atendimento com hora marcada. Confirme o horário pelo WhatsApp antes de ir.</p>
+        <div class="acoes">
+          <a class="botao escuro" href="https://www.google.com/maps/dir/?api=1&amp;destination=Rua%20Ant%C3%B4nio%20Pascucci%2C%2045%20-%20Vila%20Inema%2C%20Hortol%C3%A2ndia%20-%20SP%2C%2013185-134" rel="noopener">Traçar rota</a>
+          <a class="botao zap" href="https://wa.me/5519992973467?text=Ol%C3%A1%2C%20Michele!%20Vim%20pelo%20site.%20Tem%20hor%C3%A1rio%20livre%20essa%20semana%3F" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar horário livre</a>
+        </div>
+      </div>
+      <iframe class="mapa" src="https://www.google.com/maps?q=Rua%20Ant%C3%B4nio%20Pascucci%2C%2045%20-%20Vila%20Inema%2C%20Hortol%C3%A2ndia%20-%20SP%2C%2013185-134&amp;output=embed" loading="lazy" title="Mapa: Michele Lofrani, Rua Antônio Pascucci, 45, Hortolândia" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="chamada">
+  <div class="largura">
+    <p class="assinatura">Michele Lofrani</p>
+    <p>Sua sobrancelha merece um desenho feito para você. Chame a Michele e reserve o seu horário.</p>
+    <a class="botao zap" href="https://wa.me/5519992973467?text=Ol%C3%A1%2C%20Michele!%20Vim%20pelo%20site%20e%20quero%20reservar%20um%20hor%C3%A1rio." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Reservar pelo WhatsApp</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="largura"><span>Michele Lofrani – Sobrancelha e Micropigmentação, Vila Inema, Hortolândia – SP</span><span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span></div>
+</footer>
+<a class="flutuante" href="https://wa.me/5519992973467?text=Ol%C3%A1%2C%20Michele!%20Vim%20pelo%20site%20e%20quero%20marcar%20um%20hor%C3%A1rio." rel="noopener" aria-label="Chamar a Michele no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg><span>WhatsApp</span></a>
+
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const FONE = '5519992973467';
+
+  // ----- Sobrancelha fio a fio (o elemento da marca) -----
+  const svg = $('sobrancelha'), NS = 'http://www.w3.org/2000/svg';
+  const q = (a, b, c, t) => [(1 - t) ** 2 * a[0] + 2 * (1 - t) * t * b[0] + t * t * c[0], (1 - t) ** 2 * a[1] + 2 * (1 - t) * t * b[1] + t * t * c[1]];
+  // contorno: cabeça larga à esquerda, arco, cauda fina terminando em ponta
+  const CIMA = [[14, 70], [214, -14], [396, 62]], BAIXO = [[20, 112], [250, 30], [396, 64]];
+  let s = 7; const r = () => ((s = (s * 9301 + 49297) % 233280) / 233280); // aleatório fixo
+  const fios = [];
+  // camada de baixo: fios que sobem inclinados para a cauda
+  for (let i = 0; i < 46; i++) {
+    const t = i / 45;
+    const b = q(...BAIXO, t), c = q(...CIMA, Math.min(1, t + 0.03 + t * 0.12));
+    const k = 0.62 + r() * 0.3;                     // nem todo fio vai até o topo
+    fios.push([b, [b[0] + (c[0] - b[0]) * k, b[1] + (c[1] - b[1]) * k], 2.3 - t * 1.2, t]);
+  }
+  // camada de cima: fios do arco e da cauda que descem para dentro
+  for (let i = 0; i < 26; i++) {
+    const t = 0.18 + (i / 25) * 0.8;
+    const a = q(...CIMA, t), z = q(...BAIXO, Math.min(1, t + 0.1 + t * 0.06));
+    const k = 0.55 + r() * 0.25;
+    fios.push([a, [a[0] + (z[0] - a[0]) * k, a[1] + (z[1] - a[1]) * k], 1.9 - t * 0.9, t]);
+  }
+  fios.sort((x, y) => x[3] - y[3]);
+  fios.forEach(([a, b, w, t], i) => {
+    const m = [(a[0] + b[0]) / 2 + 2, (a[1] + b[1]) / 2 - 2];
+    const p = document.createElementNS(NS, 'path');
+    p.setAttribute('d', `M${a[0].toFixed(1)} ${a[1].toFixed(1)} Q${m[0].toFixed(1)} ${m[1].toFixed(1)} ${b[0].toFixed(1)} ${b[1].toFixed(1)}`);
+    p.setAttribute('stroke-width', w.toFixed(2));
+    p.style.opacity = (0.5 + 0.5 * Math.sin(Math.PI * Math.min(1, 0.15 + t * 1.1))).toFixed(2);
+    p.style.setProperty('--i', i);
+    svg.appendChild(p);
+    p.style.setProperty('--l', Math.ceil(p.getTotalLength() + 1));
+  });
+  svg.classList.add('anima');
+
+  // ----- Monte seu horário -----
+  // [id, nome no cartão, texto na mensagem, foto, linha (exemplo)]
+  const SERVICOS = [
+    ['design', 'Design de sobrancelha', 'design de sobrancelha', 'fotos/pinca.jpg', 'Forma limpa, feita para o seu rosto.'],
+    ['henna', 'Design com henna', 'design com henna', 'fotos/henna.jpg', 'Cor que preenche as falhas por alguns dias.'],
+    ['fioafio', 'Micropigmentação fio a fio', 'micropigmentação fio a fio', 'fotos/fio.jpg', 'Fios desenhados um a um, efeito natural.'],
+    ['shadow', 'Micropigmentação sombreada', 'micropigmentação sombreada', 'fotos/olho.jpg', 'Efeito de sobrancelha maquiada.'],
+    ['retoque', 'Retoque da micropigmentação', 'retoque da micropigmentação', 'fotos/mapa.jpg', 'Para manter a cor e o desenho.'],
+    ['lash', 'Lash lifting', 'lash lifting', 'fotos/cilios.jpg', 'Cílios curvados sem precisar de curvex.'],
+    ['tintura', 'Tintura de cílios', 'tintura de cílios', 'fotos/tintura.jpg', 'Cílios mais escuros, olhar marcado.'],
+    ['avaliacao', 'Avaliação para micropigmentação', 'uma avaliação para micropigmentação', 'fotos/macro.jpg', 'Para tirar dúvidas antes de decidir.'],
+  ];
+  const escolha = new Set(['design']);
+  const cartoes = $('cartoes');
+  SERVICOS.forEach(([id, rotulo, , foto, desc]) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'cartao'; b.dataset.s = id; b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = `<span class="cartao-foto"><img src="${foto}" alt="" loading="lazy"></span>` +
+      `<span class="cartao-texto"><strong>${rotulo}</strong><small>${desc}</small></span>` +
+      `<span class="cartao-marca" aria-hidden="true"></span>`;
+    b.addEventListener('click', () => { escolha.has(id) ? escolha.delete(id) : escolha.add(id); atualizar(); });
+    cartoes.appendChild(b);
+  });
+  const lista = (x) => x.length < 2 ? x.join('') : x.slice(0, -1).join(', ') + ' e ' + x[x.length - 1];
+  function atualizar() {
+    cartoes.querySelectorAll('.cartao').forEach((b) => b.setAttribute('aria-pressed', String(escolha.has(b.dataset.s))));
+    const itens = SERVICOS.filter(([id]) => escolha.has(id)).map((s) => s[2]);
+    const nome = $('nome').value.trim();
+    const vez = document.querySelector('input[name=vez]:checked').value;
+    const dia = document.querySelector('input[name=dia]:checked').value;
+    const periodo = document.querySelector('input[name=periodo]:checked').value;
+    const alvo = $('escolhidos'); alvo.innerHTML = '';
+    if (!itens.length) { const p = document.createElement('p'); p.className = 'vazio'; p.textContent = 'Nenhum serviço ainda. Toque nos cartões.'; alvo.appendChild(p); }
+    else { const ul = document.createElement('ul'); itens.forEach((t) => { const li = document.createElement('li'); li.textContent = t[0].toUpperCase() + t.slice(1); ul.appendChild(li); }); alvo.appendChild(ul); }
+    const quem = nome ? `Olá, Michele! Aqui é a ${nome}.` : 'Olá, Michele!';
+    const vezTxt = vez === 'primeira' ? 'Vai ser a minha primeira vez com você.' : 'Já sou sua cliente.';
+    const pedido = itens.length ? lista(itens) : 'um horário';
+    const msg = `${quem} Vim pelo site e quero marcar ${pedido}. ${vezTxt} Prefiro ${dia}, ${periodo}. Qual o valor e os horários livres?`;
+    $('enviar').href = `https://wa.me/${FONE}?text=` + encodeURIComponent(msg);
+  }
+  $('ficha').addEventListener('input', atualizar);
+  $('ficha').addEventListener('change', atualizar);
+  atualizar();
+
+  // ----- Aberto / fechado (seg. a sáb., 8h às 18h; domingo fechado) -----
+  const T = { 0: null, 1: [480, 1080], 2: [480, 1080], 3: [480, 1080], 4: [480, 1080], 5: [480, 1080], 6: [480, 1080] };
+  const p = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date()).map((x) => [x.type, x.value]));
+  const d = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(p.weekday), agora = Number(p.hour) * 60 + Number(p.minute);
+  document.querySelector(`#semana li[data-dia="${d}"]`)?.classList.add('hoje');
+  let txt, aberto = false;
+  if (T[d] && agora >= T[d][0] && agora < T[d][1]) { txt = 'Aberto agora, até as 18h'; aberto = true; }
+  else if (T[d] && agora < T[d][0]) txt = 'Fechado agora. Abre hoje às 8h';
+  else if (d === 6 || d === 0) txt = 'Fechado agora. Abre segunda às 8h';
+  else txt = 'Fechado agora. Abre amanhã às 8h';
+  [$('agora'), $('status-topo')].forEach((el) => { el.querySelector('span').textContent = txt; el.classList.toggle('aberto', aberto); });
+})();
+</script>
+</body>
+</html>
