@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Iara Amâncio Fotografia | Aniversário infantil e eventos em Sumaré</title>
+<meta name="description" content="Modelo demonstrativo de site para a Iara Amâncio Fotografia, fotógrafa de aniversário infantil e eventos em Sumaré – SP.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400;1,6..96,500&family=Caveat+Brush&family=Schibsted+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rebatedor:#FCFBFC;  /* o branco da sombrinha de estúdio */
+  --carvao:#272123;     /* o escuro da folha de contato */
+  --batom:#B3122E;      /* batom e lápis de marcar foto */
+  --batom-claro:#F7DDE2;
+  --ouro:#C59D55;       /* colar dourado da foto do perfil */
+  --cinza:#665C60;
+  --linha:#E6DEE1;
+  --zap:#25D366;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--rebatedor);color:var(--carvao);font:17px/1.6 'Schibsted Grotesk',system-ui,sans-serif}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--batom);outline-offset:3px}
+.largura{max-width:1200px;margin:0 auto;padding:0 32px}
+.ico{width:1.25em;height:1.25em;flex:none}
+h1,h2,h3{font-family:'Bodoni Moda',Georgia,serif;font-weight:400;margin:0;line-height:1.05}
+h2{font-size:clamp(36px,4.6vw,58px);letter-spacing:-.01em;max-width:20ch}
+.mao{font-family:'Caveat Brush',cursive;color:var(--batom);font-weight:400}
+.aviso{background:var(--carvao);color:#fff;font-size:14px;text-align:center;padding:8px 16px}
+.intro{color:var(--cinza);max-width:56ch;margin:18px 0 0;font-size:18px}
+.nota{font-size:14px;color:var(--cinza);margin:18px 0 0}
+
+/* Botões: retângulo com canto leve, como um porta-retrato */
+.botao{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:17px;line-height:1.2;padding:15px 24px;border-radius:4px;border:2px solid transparent;cursor:pointer;font-family:inherit;transition:background .15s,color .15s,transform .12s}
+.botao:active{transform:translateY(1px)}
+.botao.zap{background:var(--zap);color:#07331B}
+.botao.zap:hover{background:#3ae07b}
+.botao.vazado{border-color:#fff;color:#fff}
+.botao.vazado:hover{background:#fff;color:var(--carvao)}
+.botao.escuro{background:var(--carvao);color:#fff}
+.botao.escuro:hover{background:var(--batom)}
+
+/* ---------- Topo: foto grande de fundo ---------- */
+.topo{position:relative;min-height:min(94vh,860px);display:flex;flex-direction:column;color:#fff;background:var(--carvao);isolation:isolate;overflow:hidden}
+.topo .foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:0% 40%;z-index:-2}
+.topo::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(39,33,35,.92) 0,rgba(39,33,35,.7) 30%,rgba(39,33,35,0) 52%)}
+.topo>.largura{width:100%}
+.barra{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:22px;padding-bottom:22px}
+.marca{text-decoration:none;line-height:1}
+.marca b{display:block;font:400 28px/1 'Bodoni Moda',serif}
+.marca span{display:block;font-size:14px;letter-spacing:.04em;margin-top:5px;color:#EBDDE1}
+.barra nav{display:flex;gap:28px;font-weight:500;font-size:16px}
+.barra nav a{text-decoration:none}
+.barra nav a:hover{text-decoration:underline;text-underline-offset:5px}
+.topo .miolo{flex:1;display:flex;align-items:center}
+.topo .texto{max-width:430px;padding:20px 0 80px}
+h1{font-size:clamp(42px,5vw,64px);font-style:italic;line-height:1.02;letter-spacing:-.015em}
+.assina{margin:16px 0 0;font-size:15px;color:#E8D9DE}
+.topo .sub{font-size:clamp(18px,1.6vw,20px);margin:24px 0 0;max-width:32ch}
+.topo .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.anotacao{position:absolute;right:max(32px,calc((100vw - 1200px)/2 + 32px));bottom:34px;font-size:clamp(24px,2.4vw,32px);line-height:1.05;color:#fff;transform:rotate(-4deg);text-align:right;text-shadow:0 2px 10px rgba(0,0,0,.45)}
+.anotacao::before{content:"";display:block;width:64px;height:3px;background:var(--batom);margin:0 0 8px auto;border-radius:2px}
+
+/* ---------- Prova social logo abaixo do topo ---------- */
+.prova{border-bottom:1px solid var(--linha)}
+.prova ul{list-style:none;margin:0 auto;padding:34px 32px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.prova li{display:flex;align-items:baseline;gap:14px}
+.prova b{font:400 clamp(40px,4.4vw,56px)/1 'Bodoni Moda',serif;color:var(--batom);white-space:nowrap}
+.prova span{color:var(--cinza);line-height:1.35;max-width:20ch}
+
+section{padding:110px 0}
+
+/* ---------- A festa inteira ---------- */
+.festa .grade{display:grid;grid-template-columns:1fr 1.1fr;gap:72px;align-items:start}
+.roteiro{list-style:none;margin:36px 0 0;padding:0;border-left:2px solid var(--linha)}
+.roteiro li{position:relative;padding:0 0 26px 28px}
+.roteiro li::before{content:"";position:absolute;left:-7px;top:9px;width:12px;height:12px;border-radius:50%;background:var(--rebatedor);border:2px solid var(--batom)}
+.roteiro li:last-child{padding-bottom:0}
+.roteiro time{font:500 22px/1.2 'Bodoni Moda',serif;font-style:italic;color:var(--batom)}
+.roteiro strong{display:block;font-size:18px;margin-top:2px}
+.roteiro span{color:var(--cinza)}
+.mosaico{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.mosaico img{width:100%;height:100%;object-fit:cover;border-radius:3px}
+.mosaico img:nth-child(1){grid-column:span 2;aspect-ratio:16/10}
+.mosaico img:nth-child(2),.mosaico img:nth-child(3){aspect-ratio:4/5}
+
+/* ---------- Folha de contato (o elemento marcante) ---------- */
+.folha{background:var(--carvao);color:#fff;position:relative}
+.folha::before,.folha::after{content:"";position:absolute;left:0;right:0;height:22px;background:
+  repeating-linear-gradient(90deg,transparent 0 14px,rgba(255,255,255,.16) 14px 30px,transparent 30px 44px);
+  -webkit-mask:linear-gradient(180deg,transparent 0 5px,#000 5px 17px,transparent 17px);mask:linear-gradient(180deg,transparent 0 5px,#000 5px 17px,transparent 17px)}
+.folha::before{top:18px}
+.folha::after{bottom:18px}
+.folha h2{color:#fff}
+.folha .intro{color:#D9CDD1}
+.folha .grade{display:grid;grid-template-columns:1.55fr .7fr;gap:44px;align-items:start;margin-top:44px}
+.quadros{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px 18px}
+.quadro{position:relative;display:flex;flex-direction:column;text-align:left;font:inherit;color:#fff;background:#352E31;border:0;border-radius:2px;padding:8px 8px 12px;cursor:pointer;transition:background .18s,color .18s}
+.quadro:hover{background:#433A3E}
+.quadro:focus-visible{outline:3px solid var(--ouro);outline-offset:4px}
+.quadro-foto{display:block;aspect-ratio:1/1;overflow:hidden;background:#1d1819}
+.quadro-foto img{width:100%;height:100%;object-fit:cover;filter:saturate(.85);transition:filter .2s}
+.quadro-texto{display:block;padding:10px 4px 0}
+.quadro-texto strong{display:block;font:500 21px/1.1 'Bodoni Moda',serif}
+.quadro-texto small{display:block;margin-top:5px;font-size:14px;line-height:1.4;color:#CDBFC4}
+.circulo{position:absolute;inset:-12px -10px -10px -12px;width:calc(100% + 22px);height:calc(100% + 22px);pointer-events:none;overflow:visible}
+.circulo{clip-path:inset(0 100% 0 0);transition:clip-path .45s ease}
+.circulo path{fill:none;stroke:var(--batom);stroke-width:4;stroke-linecap:round}
+.visto{position:absolute;top:2px;right:6px;font:400 34px/1 'Caveat Brush',cursive;color:var(--batom);opacity:0;transform:scale(.6) rotate(-8deg);transition:opacity .2s,transform .25s cubic-bezier(.34,1.6,.5,1)}
+.quadro[aria-pressed="true"]{background:#fff;color:var(--carvao)}
+.quadro[aria-pressed="true"] .quadro-texto small{color:var(--cinza)}
+.quadro[aria-pressed="true"] .quadro-foto img{filter:none}
+.quadro[aria-pressed="true"] .circulo{clip-path:inset(0 0 0 0)}
+.quadro[aria-pressed="true"] .visto{opacity:1;transform:scale(1) rotate(-8deg)}
+.ficha{position:sticky;top:20px;background:var(--rebatedor);color:var(--carvao);border-radius:3px;padding:30px;box-shadow:0 0 0 8px #fff,0 18px 50px rgba(0,0,0,.35)}
+.ficha h3{font-size:34px;font-style:italic}
+.ficha .campo{margin-top:18px}
+.ficha label.tit,.ficha legend{display:block;font-weight:700;margin-bottom:7px;padding:0;font-size:15px}
+.ficha fieldset{border:0;margin:18px 0 0;padding:0}
+.ficha input[type=text],.ficha input[type=date],.ficha input[type=number]{width:100%;font:inherit;font-size:17px;padding:11px 12px;border:1.5px solid #BFB2B7;border-radius:3px;background:#fff;color:var(--carvao)}
+.ficha input:focus-visible{outline:3px solid var(--batom);outline-offset:1px}
+.dupla{display:grid;grid-template-columns:.8fr 1.2fr;gap:12px}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{padding:8px 14px;border:1.5px solid var(--carvao);border-radius:3px;font-weight:500;cursor:pointer;background:#fff;font-size:15px}
+.seg input:checked+label{background:var(--carvao);color:#fff}
+.seg input:focus-visible+label{outline:3px solid var(--batom);outline-offset:2px}
+.extra{display:flex;gap:10px;align-items:flex-start;margin-top:16px;font-size:15px;cursor:pointer}
+.extra input{width:20px;height:20px;accent-color:var(--batom);margin:2px 0 0;flex:none}
+.contagem{margin:10px 0 0;font-size:15px;color:var(--batom);min-height:1.4em}
+.lista{margin:20px 0 0;padding:14px 0 0;border-top:1.5px dashed #BFB2B7}
+.lista p{margin:0;font-weight:700;font-size:15px}
+.lista ul{margin:6px 0 0;padding-left:20px}
+.lista .vazio{color:var(--cinza);font-weight:400}
+.ficha .botao{width:100%;justify-content:center;margin-top:20px}
+.ficha small{display:block;margin-top:12px;color:var(--cinza);font-size:13.5px;line-height:1.45}
+
+/* ---------- Quem fotografa ---------- */
+.quem .grade{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;align-items:center}
+.quem figure{margin:0;position:relative}
+.quem figure img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
+.quem figure figcaption{position:absolute;left:-18px;bottom:28px;background:var(--batom);color:#fff;padding:10px 16px;font-size:15px;border-radius:2px}
+.quem blockquote{margin:28px 0 0;padding:0;font:italic 400 clamp(28px,3vw,38px)/1.2 'Bodoni Moda',serif;max-width:22ch}
+.quem blockquote+p{margin:12px 0 0;color:var(--cinza);font-size:15px}
+.quem .texto p.corpo{max-width:52ch;margin:26px 0 0}
+.perfis{display:flex;flex-wrap:wrap;gap:12px 28px;margin:26px 0 0;padding:0;list-style:none}
+.perfis a{font-weight:700;text-underline-offset:4px;text-decoration-color:var(--batom);text-decoration-thickness:2px}
+.perfis span{display:block;font-size:14px;color:var(--cinza)}
+
+/* ---------- Galeria ---------- */
+.galeria{background:var(--batom-claro)}
+.galeria .fotos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+.galeria img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
+.galeria img:nth-child(2),.galeria img:nth-child(5){transform:translateY(32px)}
+
+/* ---------- Como reservar ---------- */
+.reservar ol{list-style:none;margin:44px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;counter-reset:p}
+.reservar li{counter-increment:p;border-top:2px solid var(--carvao);padding-top:16px}
+.reservar li::before{content:counter(p);display:block;font:italic 400 44px/1 'Bodoni Moda',serif;color:var(--batom);margin-bottom:10px}
+.reservar h3{font-size:24px}
+.reservar p{margin:8px 0 0;color:var(--cinza)}
+
+/* ---------- Onde ---------- */
+.onde{background:var(--carvao);color:#fff}
+.onde h2{color:#fff}
+.onde .grade{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
+.onde p{color:#DCCFD3;max-width:46ch}
+.onde dl{margin:28px 0}
+.onde dt{font-size:14px;color:#BFAFB5}
+.onde dd{margin:0 0 14px;font-size:19px}
+.onde .acoes{display:flex;flex-wrap:wrap;gap:12px}
+.mapa{width:100%;aspect-ratio:4/3.2;border:0;border-radius:3px;background:#3a3034;display:block;box-shadow:0 0 0 8px #fff}
+
+footer{padding:30px 0 110px;font-size:14px;color:var(--cinza)}
+footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.flutuante{position:fixed;right:18px;bottom:18px;display:inline-flex;align-items:center;gap:8px;background:var(--zap);color:#07331B;font-weight:700;text-decoration:none;padding:14px 18px;border-radius:6px;box-shadow:0 8px 24px rgba(0,0,0,.28);font-size:15px;z-index:9}
+.flutuante .ico{width:22px;height:22px}
+
+/* ---------- Responsivo ---------- */
+@media (max-width:1080px){
+  .barra nav{display:none}
+  .folha .grade{grid-template-columns:1fr}
+  .ficha{position:static;max-width:560px}
+}
+@media (max-width:980px){
+  .festa .grade,.quem .grade,.onde .grade{grid-template-columns:1fr;gap:44px}
+  .quem figure{max-width:440px}
+  .reservar ol{grid-template-columns:1fr 1fr;row-gap:36px}
+  .topo::before{background:linear-gradient(90deg,rgba(39,33,35,.94) 0,rgba(39,33,35,.72) 36%,rgba(39,33,35,0) 58%)}
+  .topo .texto{max-width:360px}
+  .anotacao{display:none}
+}
+@media (max-width:760px){
+  .largura{padding:0 20px}
+  .topo{min-height:0}
+  .topo .foto{position:static;height:auto;aspect-ratio:1/1;object-position:48% 50%;order:2;margin-top:-30px}
+  .topo::before{display:none}
+  .topo .miolo{order:3;background:var(--carvao)}
+  .topo .texto{max-width:none;padding:26px 0 44px}
+  .barra{position:absolute;top:0;left:0;right:0;z-index:2;background:linear-gradient(180deg,rgba(39,33,35,.85),rgba(39,33,35,0))}
+  .topo .foto{margin-top:0}
+  .topo .acoes .botao{flex:1 1 100%;justify-content:center}
+  .prova ul{grid-template-columns:1fr;gap:16px;padding:28px 20px}
+  section{padding:72px 0}
+  .quadros{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 14px}
+  .quadro-texto strong{font-size:18px}
+  .quadro-texto small{font-size:13px}
+  .ficha{padding:22px}
+  .galeria .fotos{grid-template-columns:1fr 1fr;gap:10px}
+  .galeria img:nth-child(2),.galeria img:nth-child(5){transform:none}
+  .reservar ol{grid-template-columns:1fr}
+  .quem figure figcaption{left:12px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.030-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.870 9.870 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.860 9.860 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.030 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para Iara Amâncio Fotografia. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <img class="foto" src="fotos/hero-b.jpg" alt="Menino de cabelo cacheado soprando as velinhas do bolo de aniversário" fetchpriority="high">
+  <div class="largura barra">
+    <a class="marca" href="#"><b>Iara Amâncio</b><span>Fotografia em Sumaré</span></a>
+    <nav aria-label="Seções"><a href="#festa">A festa</a><a href="#pedido">Montar pedido</a><a href="#quem">Quem fotografa</a><a href="#onde">Onde</a></nav>
+  </div>
+  <div class="largura miolo">
+    <div class="texto">
+      <h1>Eu faço das lembranças um lugar seguro.</h1>
+      <p class="assina">Iara Amâncio, na bio do Instagram</p>
+      <p class="sub">Fotógrafa de aniversário infantil e eventos em Sumaré. A festa passa voando. As fotos ficam.</p>
+      <div class="acoes">
+        <a class="botao zap" href="https://wa.me/5519997141915?text=Ol%C3%A1%2C%20Iara!%20Vim%20pelo%20site%20e%20quero%20saber%20se%20voc%C3%AA%20tem%20a%20data%20da%20minha%20festa%20livre." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Consultar minha data</a>
+        <a class="botao vazado" href="#pedido">Montar meu pedido</a>
+      </div>
+    </div>
+  </div>
+  <p class="anotacao mao" aria-hidden="true">esse sopro<br>não se repete</p>
+</header>
+
+<div class="prova">
+  <ul class="largura">
+    <li><b>9.611</b><span>pessoas seguem a Iara no Instagram</span></li>
+    <li><b>+13</b><span>anos criando memórias afetivas</span></li>
+    <li><b>2</b><span>perfis: festas e eventos, e o estúdio de bebês</span></li>
+  </ul>
+</div>
+
+<main>
+<section class="festa" id="festa">
+  <div class="largura grade">
+    <div>
+      <h2>A festa inteira, da mesa intacta ao último pedaço de bolo</h2>
+      <p class="intro">No dia, você vai estar recebendo os convidados. A Iara fica de olho no que ninguém vê: a decoração antes de alguém mexer, o abraço da avó, a careta no parabéns.</p>
+      <ol class="roteiro">
+        <li><time>Antes de abrir</time><strong>Decoração e detalhes</strong><span>Mesa, bolo, doces e lembrancinhas do jeito que foram montados.</span></li>
+        <li><time>Chegada</time><strong>Convidados e família</strong><span>Os abraços, as crianças correndo, quem veio de longe.</span></li>
+        <li><time>No meio da festa</time><strong>Brincadeiras</strong><span>Pula-pula, piscina de bolinhas, personagem, pista de dança.</span></li>
+        <li><time>Parabéns</time><strong>O momento das velinhas</strong><span>De vários ângulos, porque ele dura poucos segundos.</span></li>
+      </ol>
+      <p class="nota">Texto de exemplo. No site final entra o jeito de trabalhar da Iara e o que vem em cada pacote.</p>
+    </div>
+    <div class="mosaico">
+      <img src="fotos/g-mesa.jpg" alt="Mesa de aniversário decorada com balões e enfeites" loading="lazy">
+      <img src="fotos/g-turma.jpg" alt="Crianças com chapéu de festa assoprando as velas ao lado de um personagem" loading="lazy">
+      <img src="fotos/g-bolo.jpg" alt="Menina comendo um pedaço de bolo vermelho" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="folha" id="pedido">
+  <div class="largura">
+    <h2>Marque na folha de contato o que você quer fotografar</h2>
+    <p class="intro">É assim que fotógrafo escolhe as melhores fotos: circulando na folha. Toque nos quadros, preencha a ficha e o pedido vai pronto para o WhatsApp da Iara.</p>
+    <div class="grade">
+      <div class="quadros" id="quadros" role="group" aria-label="Tipos de ensaio e evento"></div>
+
+      <form class="ficha" id="ficha" onsubmit="return false" aria-label="Pedido para a Iara Amâncio Fotografia">
+        <h3>Ficha da festa</h3>
+        <div class="campo dupla">
+          <div><label class="tit" for="nome">Aniversariante</label><input type="text" id="nome" placeholder="Ex.: Helena" autocomplete="off" maxlength="30"></div>
+          <div><label class="tit" for="idade">Idade na festa</label><input type="number" id="idade" min="0" max="99" placeholder="Ex.: 3"></div>
+        </div>
+        <div class="campo"><label class="tit" for="data">Data da festa</label><input type="date" id="data"></div>
+        <p class="contagem" id="contagem" aria-live="polite"></p>
+        <fieldset><legend>Onde vai ser</legend><div class="seg">
+          <input type="radio" name="local" id="lb" value="em buffet" checked><label for="lb">Buffet</label>
+          <input type="radio" name="local" id="lc" value="em casa ou salão de festas do condomínio"><label for="lc">Casa ou condomínio</label>
+          <input type="radio" name="local" id="le" value="no estúdio"><label for="le">Estúdio</label>
+        </div></fieldset>
+        <label class="extra"><input type="checkbox" id="video"><span>Quero também o vídeo lembrança</span></label>
+        <div class="lista" aria-live="polite"><p>Quadros marcados</p><div id="escolhidos"></div></div>
+        <a class="botao zap" id="enviar" href="#" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Mandar pedido no WhatsApp</a>
+        <small>Valores, pacotes e disponibilidade a Iara confirma pelo WhatsApp. Os tipos de ensaio vêm dos destaques do Instagram; as descrições são de exemplo.</small>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="quem" id="quem">
+  <div class="largura grade">
+    <figure>
+      <img src="fotos/camera.jpg" alt="Câmera fotográfica erguida contra a luz" loading="lazy">
+      <figcaption>Foto ilustrativa</figcaption>
+    </figure>
+    <div class="texto">
+      <h2>Quem está atrás da câmera</h2>
+      <blockquote>“Eu faço das lembranças um lugar seguro.”</blockquote>
+      <p>Iara Amâncio</p>
+      <p class="corpo">São mais de 13 anos criando memórias afetivas em Sumaré: festas de aniversário, eventos e casamentos de um lado, e do outro um estúdio próprio para bebês, gestantes e newborn, acolhedor, climatizado e seguro.</p>
+      <ul class="perfis">
+        <li><a href="https://www.instagram.com/iaraamanciofotografia/" rel="noopener">@iaraamanciofotografia</a><span>Festas, aniversários e eventos</span></li>
+        <li><a href="https://www.instagram.com/estudioiaraamancio/" rel="noopener">@estudioiaraamancio</a><span>Bebês, gestantes e newborn</span></li>
+      </ul>
+      <p class="nota">No site final entram uma foto da Iara e os depoimentos das famílias, que hoje estão nos destaques do Instagram.</p>
+    </div>
+  </div>
+</section>
+
+<section class="galeria">
+  <div class="largura">
+    <h2>Lembranças guardadas</h2>
+    <div class="fotos">
+      <img src="fotos/g-baloes.jpg" alt="Decoração de aniversário com balões e bolo" loading="lazy">
+      <img src="fotos/hero.jpg" alt="Três crianças soprando juntas as velas de um bolo" loading="lazy">
+      <img src="fotos/g-cores.jpg" alt="Balões coloridos de festa" loading="lazy">
+      <img src="fotos/smash.jpg" alt="Bebê sentado ao lado de um bolo no ensaio smash the cake" loading="lazy">
+      <img src="fotos/g-pezinhos.jpg" alt="Pezinhos de bebê nas mãos da mãe" loading="lazy">
+      <img src="fotos/festa.jpg" alt="Crianças comemorando um aniversário com bolo e balões" loading="lazy">
+    </div>
+    <p class="nota" style="margin-top:56px">Fotos ilustrativas. No site final entram as fotos das festas e ensaios feitos pela Iara.</p>
+  </div>
+</section>
+
+<section class="reservar">
+  <div class="largura">
+    <h2>Como reservar a data</h2>
+    <ol>
+      <li><h3>Chame no WhatsApp</h3><p>Conte a data, o horário e onde vai ser a festa.</p></li>
+      <li><h3>Escolha o pacote</h3><p>A Iara manda as opções de cobertura e de vídeo.</p></li>
+      <li><h3>Garanta a data</h3><p>Sábados e domingos são os mais disputados para festas.</p></li>
+      <li><h3>Receba as fotos</h3><p>Tratadas e prontas para guardar, imprimir e mostrar.</p></li>
+    </ol>
+    <p class="nota">Texto de exemplo. No site final entra o passo a passo da Iara, que está no destaque “Como agendar”.</p>
+  </div>
+</section>
+
+<section class="onde" id="onde">
+  <div class="largura grade">
+    <div>
+      <h2>Em Sumaré e região</h2>
+      <p>A Iara vai até a sua festa, no buffet, em casa ou no salão do condomínio. Os ensaios de bebês e gestantes são no estúdio, em Sumaré.</p>
+      <dl>
+        <dt>Cidade</dt><dd>Sumaré – SP</dd>
+        <dt>WhatsApp</dt><dd><a href="https://wa.me/5519997141915" rel="noopener">(19) 99714-1915</a></dd>
+        <dt>Horário</dt><dd>Combinado pelo WhatsApp, conforme a data da festa</dd>
+      </dl>
+      <div class="acoes">
+        <a class="botao zap" href="https://wa.me/5519997141915?text=Ol%C3%A1%2C%20Iara!%20Vim%20pelo%20site.%20Voc%C3%AA%20atende%20festas%20na%20minha%20cidade%3F" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar se atende minha cidade</a>
+        <a class="botao vazado" href="https://www.google.com/maps/dir/?api=1&destination=Sumar%C3%A9%20-%20SP" rel="noopener">Traçar rota até Sumaré</a>
+      </div>
+      <p class="nota" style="color:#BFAFB5">No site final entra o endereço do estúdio no mapa.</p>
+    </div>
+    <iframe class="mapa" src="https://www.google.com/maps?q=Sumar%C3%A9%20-%20SP&output=embed" loading="lazy" title="Mapa de Sumaré – SP" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="largura"><span>Iara Amâncio Fotografia, Sumaré – SP</span><span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span></div>
+</footer>
+<a class="flutuante" href="https://wa.me/5519997141915?text=Ol%C3%A1%2C%20Iara!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20de%20fotos." rel="noopener" aria-label="Chamar a Iara Amâncio no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const FONE = '5519997141915';
+
+  // [id, nome no quadro, texto na mensagem, foto, linha de exemplo]
+  const QUADROS = [
+    ['festa', 'Aniversário infantil', 'cobertura de aniversário infantil', 'fotos/festa.jpg', 'A festa toda, da decoração ao parabéns.'],
+    ['smash', 'Smash the cake', 'ensaio smash the cake', 'fotos/smash.jpg', 'O primeiro bolo, com as mãos.'],
+    ['newborn', 'Newborn', 'ensaio newborn', 'fotos/newborn.jpg', 'Os primeiros dias, no estúdio.'],
+    ['gestante', 'Gestante', 'ensaio de gestante', 'fotos/gestante.jpg', 'A barriga antes da chegada.'],
+    ['mensal', 'Mês a mês','acompanhamento mensal do bebê', 'fotos/acompanhamento.jpg', 'Um ensaio por mês no primeiro ano.'],
+    ['natal', 'Ensaio de Natal', 'ensaio de Natal', 'fotos/natal.jpg', 'A família reunida no clima do fim de ano.'],
+    ['casamento', 'Casamento', 'cobertura de casamento', 'fotos/casamento.jpg', 'Da cerimônia à festa.'],
+    ['empresa', 'Evento de empresa', 'cobertura de evento empresarial', 'fotos/empresarial.jpg', 'Confraternizações e eventos da equipe.'],
+  ];
+  const CIRCULO = '<svg class="circulo" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" vector-effect="non-scaling-stroke" d="M58 3C80 2 98 14 98 46C98 82 80 98 48 97C18 96 2 80 3 47C4 18 20 4 46 4C60 4 70 7 76 11"/></svg>';
+  const escolha = new Set(['festa']);
+  const quadros = $('quadros');
+  QUADROS.forEach(([id, rotulo, , foto, desc]) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'quadro'; b.dataset.s = id; b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = `<span class="quadro-foto"><img src="${foto}" alt="" loading="lazy"></span>` +
+      `<span class="quadro-texto"><strong>${rotulo}</strong><small>${desc}</small></span>` +
+      CIRCULO + '<span class="visto" aria-hidden="true">✓</span>';
+    b.addEventListener('click', () => { escolha.has(id) ? escolha.delete(id) : escolha.add(id); atualizar(); });
+    quadros.appendChild(b);
+  });
+
+  // data mínima = hoje (fuso de São Paulo)
+  const hojeSP = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Sao_Paulo' }).format(new Date());
+  $('data').min = hojeSP;
+
+  function lista(itens) { return itens.length < 2 ? itens.join('') : itens.slice(0, -1).join(', ') + ' e ' + itens[itens.length - 1]; }
+  function dataBR(iso) { const [a, m, d] = iso.split('-'); return `${d}/${m}/${a}`; }
+
+  function atualizar() {
+    quadros.querySelectorAll('.quadro').forEach((b) => b.setAttribute('aria-pressed', String(escolha.has(b.dataset.s))));
+    const itens = QUADROS.filter(([id]) => escolha.has(id)).map((c) => c[2]);
+    const nome = $('nome').value.trim();
+    const idade = $('idade').value.trim();
+    const data = $('data').value;
+    const local = document.querySelector('input[name=local]:checked').value;
+    const video = $('video').checked;
+
+    const alvo = $('escolhidos');
+    alvo.innerHTML = '';
+    if (!itens.length) { const p = document.createElement('p'); p.className = 'vazio'; p.textContent = 'Nenhum quadro marcado. Toque nas fotos ao lado.'; alvo.appendChild(p); }
+    else { const ul = document.createElement('ul'); itens.forEach((t) => { const li = document.createElement('li'); li.textContent = t[0].toUpperCase() + t.slice(1); ul.appendChild(li); }); alvo.appendChild(ul); }
+
+    // contagem regressiva até a festa
+    let falta = '';
+    if (data) {
+      const dias = Math.round((Date.parse(data) - Date.parse(hojeSP)) / 864e5);
+      if (dias === 0) falta = 'A festa é hoje!';
+      else if (dias === 1) falta = 'A festa é amanhã. Chame a Iara agora.';
+      else if (dias > 1) falta = `Faltam ${dias} dias para a festa. Garanta a data antes que outra família reserve.`;
+    }
+    $('contagem').textContent = falta;
+
+    const pedido = itens.length ? lista(itens) : 'fotos para a minha festa';
+    const anos = `${idade} ${idade === '1' ? 'ano' : 'anos'}`;
+    let msg = `Olá, Iara! Vim pelo site. Tenho interesse em ${pedido}.`;
+    if (nome && idade) msg += ` Aniversariante: ${nome}, vai fazer ${anos}.`;
+    else if (nome) msg += ` Aniversariante: ${nome}.`;
+    else if (idade) msg += ` Aniversário de ${anos}.`;
+    if (data) msg += ` Data: ${dataBR(data)}, ${local}.`; else msg += ` Local: ${local}.`;
+    if (video) msg += ' Tenho interesse no vídeo lembrança também.';
+    msg += ' Você tem essa data livre? Quais são os pacotes?';
+    $('enviar').href = `https://wa.me/${FONE}?text=` + encodeURIComponent(msg);
+  }
+  $('ficha').addEventListener('input', atualizar);
+  $('ficha').addEventListener('change', atualizar);
+  atualizar();
+})();
+</script>
+</body>
+</html>
