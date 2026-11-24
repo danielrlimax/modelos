@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Chácara Pé na Rocha · Festas e fins de semana em Mogi Guaçu</title>
+<meta name="description" content="Modelo demonstrativo de site para a Chácara Pé na Rocha, chácara para aniversários, casamentos e fins de semana no Engenho Velho, em Mogi Guaçu.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mata:#1D3227; --mata-2:#2C4A39; --pedra:#E9EAE4; --pedra-2:#D3D5CC; --granito:#6E7268;
+  --terra:#8E3B22; --agua:#2F9FB4; --sol:#EBB54C; --texto:#1F2620; --branco:#FFFFFF;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--pedra);color:var(--texto);font:17px/1.6 'Figtree',system-ui,sans-serif}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--agua);outline-offset:3px}
+.largura{max-width:1180px;margin:0 auto;padding:0 28px}
+.ico{width:1.15em;height:1.15em;flex:none}
+.aviso{background:var(--mata);color:#DDE6DF;font-size:14px;text-align:center;padding:8px 16px}
+h1,h2,h3{font-family:'Young Serif',Georgia,serif;font-weight:400;margin:0}
+
+.botao{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:700;font-size:17px;line-height:1.2;padding:16px 24px;border-radius:4px;border:0;cursor:pointer;font-family:inherit}
+.botao.cheio{background:var(--terra);color:#fff}
+.botao.cheio:hover{background:#73301c}
+.botao.claro{background:#fff;color:var(--mata)}
+.botao.claro:hover{background:var(--pedra)}
+.botao.linha{box-shadow:inset 0 0 0 2px currentColor;background:transparent}
+
+/* Marca: um totem de três pedras empilhadas */
+.totem{width:28px;height:34px;flex:none}
+
+/* ---- Hero ---- */
+.topo{position:relative;min-height:min(94vh,900px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;isolation:isolate;background:var(--mata)}
+.topo>.fundo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%;z-index:-2;animation:chega 2.4s ease-out both}
+@keyframes chega{from{transform:scale(1.06)}to{transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){.topo>.fundo{animation:none}}
+.topo::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(20,34,26,.88) 0%,rgba(20,34,26,.55) 38%,rgba(20,34,26,0) 68%),linear-gradient(180deg,rgba(20,34,26,.45) 0%,transparent 22%)}
+.marca{position:absolute;top:28px;left:0;right:0}
+.marca .largura{display:flex;align-items:center;gap:12px;font-weight:700;font-size:18px}
+.marca .largura span{opacity:.85;font-weight:500;margin-left:auto;font-size:15px}
+.painel{width:100%;max-width:1180px;margin:0 auto;padding:140px 28px 64px}
+h1{font-size:clamp(46px,7.4vw,104px);line-height:.98;letter-spacing:-.02em;max-width:11ch;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+.painel .sub{font-size:clamp(18px,1.7vw,21px);max-width:44ch;margin:22px 0 0;color:#E6ECE6}
+.painel .acoes{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 0}
+.painel .botao.linha{color:#fff}
+.painel .botao.linha:hover{background:rgba(255,255,255,.1)}
+.provas{display:flex;flex-wrap:wrap;gap:8px 28px;margin:30px 0 0;padding:18px 0 0;border-top:1px solid rgba(255,255,255,.3);font-size:15px;color:#D6DFD8;list-style:none}
+.provas b{color:#fff;font-size:17px}
+
+section{padding:104px 0}
+h2{font-size:clamp(36px,4.6vw,58px);line-height:1.02;letter-spacing:-.015em;margin:0 0 16px;color:var(--mata)}
+.intro{max-width:54ch;margin:0 0 44px;font-size:18px;color:#3d463f}
+.legenda{font-size:14px;color:var(--granito);margin:14px 0 0}
+
+/* ---- Ocasiões: as três pedras empilhadas (o elemento marcante) ---- */
+.ocasioes{background:var(--pedra)}
+.ocasioes .grade{display:grid;grid-template-columns:1fr 1.05fr;gap:72px;align-items:center}
+.pilha{position:relative;display:flex;flex-direction:column;align-items:center;padding:10px 0 30px}
+.pedra{display:block;overflow:hidden;position:relative;background:var(--pedra-2);box-shadow:0 18px 30px -18px rgba(29,50,39,.55);transition:transform .5s cubic-bezier(.3,1.3,.5,1),filter .4s ease,box-shadow .4s ease;filter:saturate(.55) brightness(.92)}
+.pedra img{width:100%;height:100%;object-fit:cover}
+.pedra.p1{width:58%;aspect-ratio:1.45;border-radius:52% 48% 44% 56% / 58% 52% 48% 42%;z-index:3;transform:rotate(-4deg)}
+.pedra.p2{width:78%;aspect-ratio:1.7;border-radius:46% 54% 50% 50% / 52% 46% 54% 48%;margin-top:-26px;z-index:2;transform:rotate(3deg)}
+.pedra.p3{width:96%;aspect-ratio:1.9;border-radius:50% 50% 46% 54% / 56% 60% 40% 44%;margin-top:-30px;z-index:1;transform:rotate(-1.5deg)}
+.pedra.ativa{filter:none;box-shadow:0 0 0 5px var(--pedra),0 0 0 8px var(--agua),0 22px 34px -16px rgba(29,50,39,.6)}
+.pedra.p1.ativa{transform:rotate(-4deg) translateY(-8px)}
+.pedra.p2.ativa{transform:rotate(3deg) translateY(-8px)}
+.pedra.p3.ativa{transform:rotate(-1.5deg) translateY(-8px)}
+@media (prefers-reduced-motion:reduce){.pedra{transition:none}}
+.chao{position:absolute;bottom:8px;left:6%;right:6%;height:22px;border-radius:50%;background:radial-gradient(ellipse at center,rgba(29,50,39,.28),transparent 70%)}
+
+.escolha{border:0;margin:0;padding:0}
+.escolha legend{font-weight:700;font-size:15px;color:var(--granito);margin-bottom:6px;padding:0}
+.opcao{display:grid;grid-template-columns:28px 1fr;gap:14px;align-items:start;padding:18px 0;border-bottom:1px solid var(--pedra-2);cursor:pointer}
+.opcao input{appearance:none;-webkit-appearance:none;width:22px;height:20px;margin:8px 0 0;border:2px solid var(--granito);border-radius:50% 46% 54% 48% / 56% 50% 50% 44%;cursor:pointer;display:grid;place-items:center}
+.opcao input:checked{border-color:var(--agua);background:var(--agua);box-shadow:inset 0 0 0 4px var(--pedra)}
+.opcao strong{display:block;font:400 30px/1.15 'Young Serif',Georgia,serif;color:var(--mata)}
+.opcao span{color:#4a534c}
+.opcao:has(input:checked) strong{color:var(--terra)}
+.reserva{display:flex;flex-wrap:wrap;gap:14px;align-items:end;margin-top:26px}
+.reserva label{display:grid;gap:6px;font-weight:700;font-size:15px;color:var(--granito);flex:1 1 180px}
+.reserva input{font:500 18px 'Figtree',sans-serif;color:var(--texto);padding:13px 14px;border:2px solid var(--pedra-2);border-radius:4px;background:#fff;width:100%}
+.reserva input:focus{outline:none;border-color:var(--agua)}
+.reserva .botao{flex:1 1 260px}
+.reserva small{flex-basis:100%;color:var(--granito);font-size:14px}
+
+/* ---- Estrutura ---- */
+.estrutura{background:var(--mata);color:#fff}
+.estrutura h2{color:#fff}
+.estrutura .intro{color:#C7D3CA}
+.itens{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:28px 22px}
+.itens figure{margin:0}
+.itens img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px}
+.itens figcaption{padding:14px 0 0}
+.itens strong{display:block;font:400 25px/1.2 'Young Serif',Georgia,serif}
+.itens span{color:#C7D3CA;font-size:16px}
+.extras{margin:44px 0 0;padding:26px 0 0;border-top:1px solid rgba(255,255,255,.2);display:grid;grid-template-columns:repeat(4,1fr);gap:20px;list-style:none}
+.extras li{font-size:16px;color:#C7D3CA}
+.extras b{display:block;color:#fff;font:400 34px/1.1 'Young Serif',Georgia,serif;margin-bottom:4px}
+.estrutura .legenda{color:#9FB2A5}
+
+/* ---- Um fim de semana: faixa de fotos com horário (é sequência) ---- */
+.dia{padding-bottom:80px}
+.faixa{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(280px,1fr);gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 28px 18px;max-width:1236px;margin:0 auto;scrollbar-width:thin}
+@media (min-width:901px){.faixa{grid-auto-columns:1fr;overflow:visible}}
+.faixa li{list-style:none;scroll-snap-align:start}
+.faixa img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px}
+.faixa time{display:block;font:400 26px/1 'Young Serif',Georgia,serif;color:var(--terra);margin:16px 0 6px}
+.faixa p{margin:0;color:#3d463f;font-size:16px}
+.faixa ol{margin:0;padding:0}
+
+/* ---- Como reservar ---- */
+.passos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:40px;counter-reset:p}
+.passos li{counter-increment:p;padding-top:22px;border-top:3px solid var(--mata)}
+.passos li::before{content:counter(p);display:block;font:400 54px/1 'Young Serif',Georgia,serif;color:var(--terra);margin-bottom:12px}
+.passos strong{display:block;font-size:20px;margin-bottom:6px;color:var(--mata)}
+.passos span{color:#4a534c}
+.como{background:#fff}
+
+/* ---- Onde ---- */
+.onde .grade{display:grid;grid-template-columns:1fr 1.25fr;gap:56px;align-items:start}
+.onde dl{margin:0 0 28px}
+.onde dt{font-size:14px;color:var(--granito);font-weight:700}
+.onde dd{margin:0 0 16px;font-size:19px}
+.mapa{width:100%;aspect-ratio:4/3;border:0;border-radius:4px;background:var(--pedra-2)}
+.onde .botao{color:var(--mata)}
+
+/* ---- FAQ ---- */
+.faq{padding-top:0}
+.faq details{border-bottom:1px solid var(--pedra-2);max-width:820px}
+.faq summary{cursor:pointer;padding:18px 0;font-weight:700;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:400 28px/1 'Young Serif',serif;color:var(--terra)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin:0 0 18px;color:#4a534c;max-width:64ch}
+
+/* ---- Final ---- */
+.final{position:relative;color:#fff;isolation:isolate;overflow:hidden;padding:150px 0}
+.final>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.final::before{content:"";position:absolute;inset:0;background:rgba(20,34,26,.58);z-index:-1}
+.final h2{color:#fff;max-width:14ch;font-size:clamp(40px,5.6vw,76px)}
+.final p{font-size:19px;max-width:44ch;color:#E6ECE6;margin:0 0 30px}
+
+footer{background:var(--mata);color:#AFC0B4;padding:28px 0 100px;font-size:14px}
+footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.flutuante{position:fixed;right:18px;bottom:18px;display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#073B1E;font-weight:700;text-decoration:none;padding:14px 18px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.25);font-size:15px;z-index:5}
+
+@media (max-width:900px){
+  .ocasioes .grade,.onde .grade{grid-template-columns:1fr;gap:40px}
+  .pilha{max-width:460px;margin:0 auto;width:100%}
+  .itens{grid-template-columns:1fr 1fr}
+  .extras{grid-template-columns:1fr 1fr}
+  .passos{grid-template-columns:1fr;gap:28px}
+  section{padding:72px 0}
+}
+@media (max-width:560px){
+  .largura{padding:0 20px}
+  .painel{padding:120px 20px 40px}
+  .painel .acoes .botao{flex:1 1 100%}
+  .marca .largura span{display:none}
+  .itens{gap:22px 14px}
+  .itens strong{font-size:20px}
+  .itens span{font-size:14px;line-height:1.45;display:block}
+  .opcao strong{font-size:25px}
+  .faixa{grid-auto-columns:76%;padding:0 20px 16px}
+  .final{padding:110px 0}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+  <symbol id="totem" viewBox="0 0 28 34"><ellipse cx="14" cy="6" rx="7" ry="5" fill="currentColor"/><ellipse cx="13" cy="16" rx="10" ry="5.5" fill="currentColor" opacity=".85"/><ellipse cx="14" cy="27.5" rx="13.5" ry="6.5" fill="currentColor" opacity=".7"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para a Chácara Pé na Rocha. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <img class="fundo" src="fotos/hero2.jpg" alt="Piscina de chácara com gramado e árvores ao pôr do sol" fetchpriority="high">
+  <div class="marca"><div class="largura"><svg class="totem" aria-hidden="true"><use href="#totem"/></svg>Chácara Pé na Rocha<span>Engenho Velho, Mogi Guaçu</span></div></div>
+  <div class="painel">
+    <h1>Tira o sapato. A festa é aqui.</h1>
+    <p class="sub">Chácara para aniversários, casamentos e fins de semana em Mogi Guaçu. Piscina, ofurô, churrasqueira, forno a lenha e 4 quartos com banheiro.</p>
+    <div class="acoes">
+      <a class="botao cheio" href="https://wa.me/5519993834551?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20a%20disponibilidade%20da%20ch%C3%A1cara." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Consultar datas no WhatsApp</a>
+      <a class="botao linha" href="#estrutura">Conhecer a chácara</a>
+    </div>
+    <ul class="provas">
+      <li><b>2.165</b> seguidores no Instagram</li>
+      <li><b>20 pessoas</b> hospedadas com conforto</li>
+      <li><b>Acessível</b> para cadeirantes</li>
+    </ul>
+  </div>
+</header>
+
+<main>
+<section class="ocasioes" id="ocasioes">
+  <div class="largura grade">
+    <div class="pilha" aria-hidden="true">
+      <span class="pedra p1" data-o="fim de semana"><img src="fotos/hero.jpg" alt=""></span>
+      <span class="pedra p2" data-o="casamento"><img src="fotos/casamento.jpg" alt=""></span>
+      <span class="pedra p3 ativa" data-o="aniversário"><img src="fotos/festa.jpg" alt=""></span>
+      <span class="chao"></span>
+    </div>
+    <div>
+      <h2>Pra que vai ser?</h2>
+      <p class="intro" style="margin-bottom:20px">Escolha a ocasião e a data. A mensagem chega pronta no WhatsApp da Maria Helena.</p>
+      <form id="form-reserva" onsubmit="return false">
+        <fieldset class="escolha">
+          <legend>Ocasião</legend>
+          <label class="opcao"><input type="radio" name="o" value="aniversário" checked><div><strong>Aniversário</strong><span>Bolo na mesa, criançada na piscina e churrasco o dia todo.</span></div></label>
+          <label class="opcao"><input type="radio" name="o" value="casamento"><div><strong>Casamento</strong><span>Cerimônia ao ar livre e festa com espaço para os convidados.</span></div></label>
+          <label class="opcao"><input type="radio" name="o" value="fim de semana"><div><strong>Fim de semana</strong><span>Família ou amigos, com quarto para dormir e piscina até o pôr do sol.</span></div></label>
+        </fieldset>
+        <div class="reserva">
+          <label for="data">Data que você quer<input id="data" type="date"></label>
+          <a class="botao cheio" id="enviar" href="https://wa.me/5519993834551?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20a%20disponibilidade%20para%20um%20anivers%C3%A1rio." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar disponibilidade</a>
+          <small>Valores e regras de uso são combinados direto com a chácara.</small>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="estrutura" id="estrutura">
+  <div class="largura">
+    <h2>O que tem na chácara</h2>
+    <p class="intro">No bairro Engenho Velho, às margens da SP-342. Tudo o que a festa e o descanso pedem, num lugar só.</p>
+    <ul class="itens">
+      <li><figure><img src="fotos/hero2.jpg" alt="Piscina com espreguiçadeiras e gramado" loading="lazy"><figcaption><strong>Piscina</strong><span>Com espreguiçadeiras e gramado em volta.</span></figcaption></figure></li>
+      <li><figure><img src="fotos/mesa.jpg" alt="Área de mesas ao lado da piscina, sob árvores" loading="lazy"><figcaption><strong>Quiosque com cozinha</strong><span>Fogão, geladeira e freezer para a festa.</span></figcaption></figure></li>
+      <li><figure><img src="fotos/grelha.jpg" alt="Carne assando na churrasqueira" loading="lazy"><figcaption><strong>Churrasqueira</strong><span>Para o churrasco começar cedo.</span></figcaption></figure></li>
+      <li><figure><img src="fotos/luzes.jpg" alt="Varal de luzes no jardim à noite" loading="lazy"><figcaption><strong>Forno a lenha</strong><span>Pizza e assados quando cai a noite.</span></figcaption></figure></li>
+      <li><figure><img src="fotos/hero.jpg" alt="Varanda da casa com piscina ao entardecer" loading="lazy"><figcaption><strong>Ofurô</strong><span>Água quentinha para relaxar no fim do dia.</span></figcaption></figure></li>
+      <li><figure><img src="fotos/casamento.jpg" alt="Estrutura coberta de madeira preparada para festa" loading="lazy"><figcaption><strong>Espaço para eventos</strong><span>Aniversários, casamentos e eventos em geral.</span></figcaption></figure></li>
+    </ul>
+    <ul class="extras">
+      <li><b>4</b>quartos, cada um com banheiro</li>
+      <li><b>20</b>pessoas hospedadas com conforto</li>
+      <li><b>1</b>piscina e um ofurô</li>
+      <li><b>Acessível</b>para pessoas com deficiência</li>
+    </ul>
+    <p class="legenda">Fotos ilustrativas. No site final entram as fotos da própria Chácara Pé na Rocha.</p>
+  </div>
+</section>
+
+<section class="dia" aria-labelledby="t-dia">
+  <div class="largura">
+    <h2 id="t-dia">Um sábado na chácara</h2>
+    <p class="intro">Do café com o pé na grama até a última pizza do forno.</p>
+  </div>
+  <ol class="faixa">
+    <li><img src="fotos/hero2.jpg" alt="Piscina ao sol com gramado" loading="lazy"><time>10h</time><p>Primeiro mergulho, enquanto a turma vai chegando.</p></li>
+    <li><img src="fotos/grelha.jpg" alt="Churrasco na brasa" loading="lazy"><time>13h</time><p>Churrasqueira acesa e mesa posta no quiosque.</p></li>
+    <li><img src="fotos/mesa.jpg" alt="Mesas à sombra das árvores ao lado da piscina" loading="lazy"><time>16h</time><p>Sombra das árvores, conversa sem pressa.</p></li>
+    <li><img src="fotos/hero.jpg" alt="Céu alaranjado no fim de tarde" loading="lazy"><time>18h</time><p>O céu fica laranja. Hora do ofurô.</p></li>
+    <li><img src="fotos/festa.jpg" alt="Varal de luzes e bandeirinhas numa festa ao ar livre" loading="lazy"><time>20h</time><p>Luzes acesas, parabéns e pizza do forno a lenha.</p></li>
+  </ol>
+  <div class="largura"><p class="legenda">Fotos ilustrativas. Arraste para o lado para ver o dia inteiro.</p></div>
+</section>
+
+<section class="como" id="como">
+  <div class="largura">
+    <h2>Como reservar</h2>
+    <p class="intro">Tudo pelo WhatsApp, direto com a Maria Helena.</p>
+    <ol class="passos">
+      <li><strong>Mande a data e a ocasião</strong><span>Aniversário, casamento ou fim de semana, e quantas pessoas vêm.</span></li>
+      <li><strong>Receba a resposta</strong><span>A chácara confirma se a data está livre e passa o valor e as regras de uso.</span></li>
+      <li><strong>Combine e garanta a data</strong><span>Acertem horário de entrada e saída. Depois é só chegar e tirar o sapato.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="onde" id="onde">
+  <div class="largura grade">
+    <div>
+      <h2>Onde fica</h2>
+      <dl>
+        <dt>Endereço</dt><dd>Rodovia SP-342, bairro Engenho Velho<br>Mogi Guaçu – SP</dd>
+        <dt>WhatsApp</dt><dd><a href="https://wa.me/5519993834551" rel="noopener">(19) 99383-4551</a></dd>
+        <dt>Telefone</dt><dd><a href="tel:+551938414874">(19) 3841-4874</a></dd>
+        <dt>Instagram</dt><dd><a href="https://www.instagram.com/chacarapenarocha/" rel="noopener">@chacarapenarocha</a></dd>
+      </dl>
+      <a class="botao linha" href="https://www.google.com/maps/dir/?api=1&destination=Rodovia%20SP-342%2C%20Engenho%20Velho%2C%20Mogi%20Gua%C3%A7u%20-%20SP" rel="noopener">Traçar rota</a>
+      <p class="legenda">O ponto exato e as dicas de acesso a chácara envia pelo WhatsApp.</p>
+    </div>
+    <iframe class="mapa" src="https://www.google.com/maps?q=Rodovia%20SP-342%2C%20Engenho%20Velho%2C%20Mogi%20Gua%C3%A7u%20-%20SP&output=embed" loading="lazy" title="Mapa: Engenho Velho, Mogi Guaçu" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="largura">
+    <h2>Perguntas frequentes</h2>
+    <details><summary>Quantas pessoas a chácara recebe?</summary><p>Para dormir, são 4 quartos com banheiro, e a chácara hospeda 20 pessoas com conforto. Para festas com mais convidados, pergunte no WhatsApp.</p></details>
+    <details><summary>Quanto custa o aluguel?</summary><p>O valor muda conforme a data e a ocasião. Mande a data pelo WhatsApp e a chácara passa o orçamento.</p></details>
+    <details><summary>Dá para fazer churrasco e cozinhar?</summary><p>Sim. Tem churrasqueira, forno a lenha e um quiosque com cozinha, com fogão, geladeira e freezer.</p></details>
+    <details><summary>A chácara é acessível?</summary><p>Sim, tem acessibilidade para pessoas com deficiência.</p></details>
+    <details><summary>Posso levar buffet, decoração e som?</summary><p>Texto de exemplo. No site final entram as regras da chácara sobre fornecedores, som e horário.</p></details>
+  </div>
+</section>
+
+<section class="final">
+  <img src="fotos/hero.jpg" alt="" loading="lazy">
+  <div class="largura">
+    <h2>Qual fim de semana vai ser o seu?</h2>
+    <p>As datas de fim de semana são as primeiras a acabar. Pergunte agora se a sua está livre.</p>
+    <a class="botao claro" href="https://wa.me/5519993834551?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20a%20disponibilidade%20para%20um%20fim%20de%20semana." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Consultar datas no WhatsApp</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="largura"><span>Chácara Pé na Rocha, Engenho Velho, Mogi Guaçu – SP</span><span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span></div>
+</footer>
+<a class="flutuante" href="https://wa.me/5519993834551?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20a%20disponibilidade%20da%20ch%C3%A1cara." rel="noopener" aria-label="Chamar a Chácara Pé na Rocha no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+
+<script>
+(function () {
+  const f = document.getElementById('form-reserva');
+  const data = document.getElementById('data');
+  const btn = document.getElementById('enviar');
+  const hoje = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Sao_Paulo' }).format(new Date());
+  data.min = hoje;
+  function atualizar() {
+    const o = f.querySelector('input[name=o]:checked').value;
+    document.querySelectorAll('.pedra').forEach((p) => p.classList.toggle('ativa', p.dataset.o === o));
+    const artigo = 'um';
+    let msg = `Olá! Vim pelo site e quero saber a disponibilidade para ${artigo} ${o}`;
+    if (data.value) msg += ` no dia ${data.value.split('-').reverse().join('/')}`;
+    btn.href = 'https://wa.me/5519993834551?text=' + encodeURIComponent(msg + '.');
+  }
+  f.addEventListener('change', atualizar);
+  f.addEventListener('input', atualizar);
+  atualizar();
+})();
+</script>
+</body>
+</html>
