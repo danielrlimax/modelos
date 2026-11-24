@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Iris Fotografias · Ensaios de gestante, newborn e família em Santa Bárbara d'Oeste</title>
+<meta name="description" content="Iris Fotografias: estúdio de família desde 1986 em Santa Bárbara d'Oeste. Ensaios de gestante, newborn e família. Agende pelo WhatsApp.">
+<link rel="icon" href="logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@300;400;600;800&family=Figtree:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --branco:#ffffff;
+  --papel:#f6fafd;
+  --ceu:#cfe6f7;
+  --ceu-forte:#a9d1ef;
+  --iris:#2f78b4;
+  --gema:#f3c96b;
+  --caule:#2e9e58;
+  --tinta:#1c1c1c;
+  --nevoa:#6f6863;
+  --fundo-foto:#e2e2dc;
+  --zap:#1fa855;
+  --disp:"Big Shoulders Display", "Arial Narrow", sans-serif;
+  --txt:"Figtree", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font:400 17px/1.6 var(--txt);color:var(--tinta);background:var(--branco);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--iris);outline-offset:3px}
+.ico{width:1.2em;height:1.2em;flex:none}
+.largura{width:min(1180px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--disp);font-weight:600;line-height:.98;margin:0;letter-spacing:.005em}
+h2{font-size:clamp(2.6rem,6vw,4.4rem)}
+.nota{font-size:.84rem;color:var(--nevoa);font-style:italic}
+
+/* faixa demo */
+.demo{background:var(--tinta);color:#fff;font-size:.82rem;text-align:center;padding:.5rem 1rem}
+
+/* topo */
+.topo{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid #e7eef4}
+.topo .largura{display:flex;align-items:center;gap:1.4rem;height:68px}
+.marca{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+.marca img{width:46px;height:46px;border-radius:50%}
+.marca b{font-family:var(--disp);font-weight:800;font-size:1.6rem;letter-spacing:.04em;line-height:1}
+.marca small{display:block;font-family:var(--disp);font-weight:400;color:var(--nevoa);font-size:1rem;letter-spacing:.08em;line-height:1}
+.topo nav{margin-left:auto;display:flex;gap:1.3rem;font-size:.95rem}
+.topo nav a{text-decoration:none;color:var(--nevoa)}
+.topo nav a:hover{color:var(--tinta)}
+.botao{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;font:700 1rem/1 var(--txt);text-decoration:none;padding:.95rem 1.3rem;border-radius:6px;border:2px solid transparent;cursor:pointer}
+.zap{background:var(--zap);color:#fff}
+.zap:hover{background:#178a45}
+.contorno{border-color:var(--tinta);color:var(--tinta);background:transparent}
+.contorno:hover{background:var(--tinta);color:#fff}
+.topo .zap{padding:.7rem 1rem;font-size:.92rem}
+
+/* HERO com diafragma */
+.hero{position:relative;min-height:calc(100svh - 68px - 34px);background:var(--fundo-foto);overflow:hidden;display:grid}
+.hero-foto{position:absolute;inset:0 auto 0 0;width:60%;height:100%;object-fit:cover;object-position:30% 40%;-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}
+.diafragma{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}
+.hero-texto{position:relative;z-index:3;align-self:center;justify-self:end;width:min(470px,40%);margin-right:max(20px,calc((100vw - 1180px)/2));padding:2rem 0}
+.hero-texto>*{opacity:0;transform:translateY(10px);transition:opacity .7s ease,transform .7s ease}
+.hero.aberto .hero-texto>*{opacity:1;transform:none}
+.hero.aberto .hero-texto>*:nth-child(2){transition-delay:.1s}
+.hero.aberto .hero-texto>*:nth-child(3){transition-delay:.2s}
+.hero.aberto .hero-texto>*:nth-child(4){transition-delay:.3s}
+.hero.aberto .hero-texto>*:nth-child(5){transition-delay:.4s}
+.desde{display:flex;align-items:center;gap:.6rem;font-weight:500;color:var(--nevoa);margin:0 0 1rem}
+.desde svg{width:28px;height:28px}
+.hero h1{font-size:clamp(2.9rem,4.7vw,4.7rem);font-weight:600}
+.hero h1 span{display:block;font-weight:300;color:var(--nevoa)}
+.hero p.sub{margin:1.2rem 0 1.6rem;font-size:1.08rem;max-width:40ch}
+.acoes{display:flex;flex-wrap:wrap;gap:.7rem}
+.provas{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:1.6rem;margin-top:2rem;padding-top:1.3rem;border-top:1px solid #d9d6d1}
+.provas b{display:block;font-family:var(--disp);font-weight:800;font-size:2.3rem;line-height:1}
+.provas span{font-size:.86rem;color:var(--nevoa);line-height:1.3;display:block;margin-top:.25rem}
+
+@media (max-width:960px){
+  .hero{min-height:0;display:block}
+  .hero-foto{position:relative;width:100%;height:54svh;min-height:360px;object-position:34% 45%;-webkit-mask-image:none;mask-image:none}
+  .diafragma{height:54svh;min-height:360px}
+  .hero-texto{justify-self:auto;width:min(680px,100% - 40px);margin:0 auto;padding:1.6rem 0 2.6rem}
+}
+@media (max-width:600px){
+  .hero-foto,.diafragma{height:56svh;min-height:330px}
+  .provas{gap:1.1rem}
+  .provas b{font-size:1.9rem}
+  .topo nav{display:none}
+  .marca small{display:none}
+}
+
+/* seções */
+section.bloco{padding:clamp(4rem,9vw,7rem) 0}
+.cabeca{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:end;margin-bottom:2.6rem}
+.cabeca p{margin:0;max-width:46ch;color:#3d3a37}
+@media (max-width:760px){.cabeca{grid-template-columns:1fr}}
+
+/* seletor de ensaios */
+#ensaios{background:var(--papel)}
+.monta{display:grid;grid-template-columns:1fr 380px;gap:2rem;align-items:start}
+.cartoes{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cartao{all:unset;box-sizing:border-box;cursor:pointer;background:#fff;border:2px solid #e2ebf2;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;position:relative;transition:border-color .2s,background-color .2s}
+.cartao:focus-visible{outline:3px solid var(--iris);outline-offset:3px}
+.cartao img{width:100%;aspect-ratio:1;object-fit:cover}
+.cartao .t{padding:.8rem .9rem 1rem}
+.cartao h3{font-size:1.6rem;font-weight:600}
+.cartao p{margin:.25rem 0 0;font-size:.9rem;line-height:1.4;color:var(--nevoa)}
+.cartao .ok{position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:50%;background:#fff;border:2px solid #fff;display:grid;place-items:center;font-weight:800;color:transparent;box-shadow:0 1px 4px rgba(0,0,0,.25)}
+.cartao[aria-pressed="true"]{border-color:var(--iris);background:var(--ceu)}
+.cartao[aria-pressed="true"] .ok{background:var(--iris);color:#fff}
+.cartao:hover{border-color:var(--ceu-forte)}
+.ficha{position:sticky;top:90px;background:#fff;border:1px solid #dbe6ee;border-radius:10px;padding:1.5rem}
+.ficha h3{font-size:2rem}
+.escolhidos{min-height:2.4rem;margin:.7rem 0 1rem;display:flex;flex-wrap:wrap;gap:.4rem}
+.escolhidos span{background:var(--ceu);color:#163f60;font-size:.88rem;font-weight:500;padding:.3rem .6rem;border-radius:4px}
+.escolhidos em{color:var(--nevoa);font-size:.92rem}
+.ficha label{display:block;font-size:.88rem;font-weight:700;margin:.9rem 0 .3rem}
+.ficha input,.ficha select,.ficha textarea{width:100%;font:inherit;font-size:1rem;padding:.65rem .75rem;border:1.5px solid #cfd9e1;border-radius:6px;background:#fff;color:var(--tinta)}
+.ficha textarea{min-height:70px;resize:vertical}
+.opcoes{display:flex;gap:.4rem;flex-wrap:wrap}
+.opcoes input{position:absolute;opacity:0;width:1px;height:1px}
+.opcoes label{margin:0;font-weight:500;font-size:.92rem;border:1.5px solid #cfd9e1;border-radius:6px;padding:.5rem .75rem;cursor:pointer}
+.opcoes input:checked+label{background:var(--tinta);color:#fff;border-color:var(--tinta)}
+.opcoes input:focus-visible+label{outline:3px solid var(--iris);outline-offset:2px}
+.previa{margin:1.1rem 0;padding:.9rem 1rem;background:#e9f7ee;border-left:3px solid var(--zap);font-size:.9rem;line-height:1.45;white-space:pre-line;border-radius:0 6px 6px 0}
+.ficha .zap{width:100%}
+@media (max-width:1020px){.monta{grid-template-columns:1fr}.ficha{position:static}}
+@media (max-width:640px){.cartoes{grid-template-columns:repeat(2,1fr);gap:10px}.cartao h3{font-size:1.35rem}.cartao p{font-size:.84rem}}
+
+/* galeria */
+.galeria{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:10px;grid-auto-flow:dense}
+.galeria figure{margin:0;overflow:hidden;border-radius:4px;background:var(--ceu)}
+.galeria img{width:100%;height:100%;object-fit:cover}
+.galeria .alto{grid-row:span 2}
+.galeria .largo{grid-column:span 2}
+@media (max-width:760px){.galeria{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}}
+
+/* história + régua de foco */
+.historia{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.historia img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px}
+.historia p{max-width:52ch}
+.regua{margin:2.2rem 0 .4rem;position:relative;height:74px}
+.regua svg{width:100%;height:100%;overflow:visible}
+.regua text{font-family:var(--disp);font-size:20px;fill:var(--tinta)}
+.regua .m{fill:var(--nevoa);font-size:15px}
+@media (max-width:860px){.historia{grid-template-columns:1fr}}
+
+/* passos */
+#como{background:var(--ceu)}
+.passos{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:p;border-top:2px solid var(--tinta)}
+.passos li{padding:1.3rem 1.4rem 0 0;counter-increment:p}
+.passos li::before{content:counter(p);font-family:var(--disp);font-weight:800;font-size:3rem;line-height:1;display:block;color:var(--iris)}
+.passos h3{font-size:1.7rem;margin:.5rem 0 .4rem}
+.passos p{margin:0;font-size:.95rem;color:#28415a}
+@media (max-width:860px){.passos{grid-template-columns:1fr 1fr;row-gap:1.6rem}}
+@media (max-width:480px){.passos{grid-template-columns:1fr}}
+
+/* redes */
+.redes{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:2rem}
+.rede{display:flex;align-items:center;gap:1rem;padding:1.3rem 1.4rem;border:1.5px solid #dbe6ee;border-radius:10px;text-decoration:none}
+.rede:hover{border-color:var(--iris)}
+.rede b{font-family:var(--disp);font-size:2.4rem;font-weight:800;line-height:1}
+.rede span{display:block;color:var(--nevoa);font-size:.92rem}
+.rede svg{width:40px;height:40px;margin-left:auto;color:var(--iris)}
+@media (max-width:640px){.redes{grid-template-columns:1fr}}
+
+/* onde */
+#onde{background:var(--papel)}
+.onde{display:grid;grid-template-columns:1fr 1.3fr;gap:2rem;align-items:stretch}
+.onde dl{margin:1.4rem 0 1.8rem;display:grid;grid-template-columns:auto 1fr;gap:.6rem 1.2rem}
+.onde dt{font-weight:700}
+.onde dd{margin:0}
+.mapa{width:100%;min-height:380px;height:100%;border:0;border-radius:10px;background:var(--ceu)}
+@media (max-width:860px){.onde{grid-template-columns:1fr}}
+
+/* chamada final */
+.final{background:var(--tinta);color:#fff;text-align:center;padding:clamp(4rem,8vw,6rem) 0}
+.final h2{font-size:clamp(2.8rem,7vw,5rem);font-weight:300}
+.final h2 b{font-weight:800;display:block}
+.final p{color:#d7d2cc;margin:1rem auto 2rem;max-width:44ch}
+
+footer{padding:2rem 0 6rem;font-size:.88rem;color:var(--nevoa)}
+footer .largura{display:flex;flex-wrap:wrap;gap:1rem;justify-content:space-between}
+
+.flutuante{position:fixed;right:18px;bottom:18px;z-index:50;display:flex;align-items:center;gap:.5rem;background:var(--zap);color:#fff;text-decoration:none;font-weight:700;padding:.85rem 1.1rem;border-radius:30px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.flutuante .ico{width:1.5em;height:1.5em}
+@media (max-width:600px){.flutuante span{display:none}.flutuante{padding:.95rem}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.030-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.870 9.870 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.860 9.860 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.030 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+  <symbol id="flor" viewBox="0 0 40 40"><g transform="translate(20 20)"><g fill="#a9d1ef" stroke="#fff" stroke-width="1.2"><path d="M0-17 15-5 6 4-3-4Z"/><path d="M0-17 15-5 6 4-3-4Z" transform="rotate(72)"/><path d="M0-17 15-5 6 4-3-4Z" transform="rotate(144)"/><path d="M0-17 15-5 6 4-3-4Z" transform="rotate(216)"/><path d="M0-17 15-5 6 4-3-4Z" transform="rotate(288)"/></g><path d="M0-5.5 5.2-1.7 3.2 4.5-3.2 4.5-5.2-1.7Z" fill="#f3c96b"/></g></symbol>
+</svg>
+
+<div class="demo">Modelo demonstrativo feito por Daniel para Iris Fotografias. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <div class="largura">
+    <a class="marca" href="#inicio"><img src="logo.jpg" alt="Logo da Iris Fotografias" width="46" height="46"><span><b>IRIS</b><small>FOTOGRAFIAS</small></span></a>
+    <nav aria-label="Seções">
+      <a href="#ensaios">Ensaios</a>
+      <a href="#galeria">Fotos</a>
+      <a href="#historia">Desde 1986</a>
+      <a href="#onde">Onde estamos</a>
+    </nav>
+    <a class="botao zap" href="https://wa.me/5519971153997?text=Ol%C3%A1%2C%20Iris!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20os%20ensaios." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" id="hero" aria-label="Apresentação">
+    <img class="hero-foto" src="fotos/hero.jpg" alt="Gestante de perfil segurando a barriga, em silhueta contra fundo claro" width="2000" height="1250" fetchpriority="high">
+    <svg class="diafragma" id="diafragma" aria-hidden="true">
+      <defs>
+        <mask id="furo" maskUnits="userSpaceOnUse">
+          <rect id="m-fundo" x="0" y="0" width="100%" height="100%" fill="#fff"/>
+          <polygon id="m-furo" fill="#000" points="0,0"/>
+        </mask>
+      </defs>
+      <g mask="url(#furo)">
+        <rect x="0" y="0" width="100%" height="100%" fill="#cfe6f7"/>
+        <g id="laminas"></g>
+      </g>
+      <g id="linhas" stroke="#ffffff" stroke-width="2.5" fill="none"></g>
+      <polygon id="borda-furo" fill="none" stroke="#f3c96b" stroke-width="5" stroke-linejoin="round" points="0,0"/>
+    </svg>
+    <div class="hero-texto">
+      <p class="desde"><svg aria-hidden="true"><use href="#flor"/></svg>Estúdio de família em Santa Bárbara d'Oeste desde 1986</p>
+      <h1>Ensaio de gestante, newborn e família<span>com quem fotografa a cidade há 40 anos</span></h1>
+      <p class="sub">A barriga, os primeiros dias do bebê, a família toda junta. Escolha o seu ensaio e combine data e detalhes direto com a Iris pelo WhatsApp.</p>
+      <div class="acoes">
+        <a class="botao zap" href="https://wa.me/5519971153997?text=Ol%C3%A1%2C%20Iris!%20Vim%20pelo%20site%20e%20quero%20marcar%20um%20ensaio." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Marcar meu ensaio</a>
+        <a class="botao contorno" href="#ensaios">Ver os ensaios</a>
+      </div>
+      <div class="provas">
+        <div><b>1986</b><span>no ramo, negócio<br>de família</span></div>
+        <div><b>3,1 mil</b><span>seguidores no<br>Instagram</span></div>
+        <div><b>5,2 mil</b><span>seguidores no<br>Facebook</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco" id="ensaios" aria-labelledby="t-ensaios">
+    <div class="largura">
+      <div class="cabeca">
+        <h2 id="t-ensaios">Monte o seu ensaio</h2>
+        <p>Toque nos ensaios que você quer. Ao lado, conte o momento (semanas de gestação ou idade do bebê) e o mês. A mensagem pronta vai para o WhatsApp da Iris.</p>
+      </div>
+      <div class="monta">
+        <div class="cartoes" id="cartoes">
+          <button class="cartao" type="button" aria-pressed="false" data-nome="Gestante no estúdio"><img src="fotos/gestante.jpg" alt="Gestante segurando a barriga com as duas mãos" loading="lazy"><span class="ok" aria-hidden="true">✓</span><span class="t"><h3>Gestante no estúdio</h3><p>Luz controlada, fundo limpo, a barriga em destaque.</p></span></button>
+          <button class="cartao" type="button" aria-pressed="false" data-nome="Gestante ao ar livre"><img src="fotos/gestante-campo.jpg" alt="Gestante de vestido listrado em um campo ao pôr do sol" loading="lazy"><span class="ok" aria-hidden="true">✓</span><span class="t"><h3>Gestante ao ar livre</h3><p>Fim de tarde, campo e luz dourada.</p></span></button>
+          <button class="cartao" type="button" aria-pressed="false" data-nome="Newborn"><img src="fotos/newborn.jpg" alt="Recém-nascido dormindo de touca" loading="lazy"><span class="ok" aria-hidden="true">✓</span><span class="t"><h3>Newborn</h3><p>Os primeiros dias do bebê, com calma e cuidado.</p></span></button>
+          <button class="cartao" type="button" aria-pressed="false" data-nome="Acompanhamento do bebê"><img src="fotos/bebe-azul.jpg" alt="Bebê de pijama azul dormindo no lençol branco" loading="lazy"><span class="ok" aria-hidden="true">✓</span><span class="t"><h3>Acompanhamento do bebê</h3><p>Um registro a cada fase do primeiro ano.</p></span></button>
+          <button class="cartao" type="button" aria-pressed="false" data-nome="Família"><img src="fotos/familia.jpg" alt="Família com duas filhas caminhando num jardim ensolarado" loading="lazy"><span class="ok" aria-hidden="true">✓</span><span class="t"><h3>Família</h3><p>Pais, filhos, avós. Todo mundo na mesma foto.</p></span></button>
+          <button class="cartao" type="button" aria-pressed="false" data-nome="Mãe e filhos"><img src="fotos/mae-filhos.jpg" alt="Mãe erguendo a filha no ar num campo" loading="lazy"><span class="ok" aria-hidden="true">✓</span><span class="t"><h3>Mãe e filhos</h3><p>Um ensaio só de vocês, leve e brincalhão.</p></span></button>
+        </div>
+        <form class="ficha" id="ficha" onsubmit="return false">
+          <h3>Sua ficha</h3>
+          <div class="escolhidos" id="escolhidos" aria-live="polite"><em>Nenhum ensaio escolhido ainda.</em></div>
+          <label for="f-nome">Seu nome</label>
+          <input id="f-nome" type="text" autocomplete="given-name" placeholder="Ex.: Juliana">
+          <label for="f-momento">Semanas de gestação ou idade do bebê</label>
+          <input id="f-momento" type="text" placeholder="Ex.: 30 semanas / bebê de 10 dias">
+          <label id="l-local">Onde prefere fotografar</label>
+          <div class="opcoes" role="radiogroup" aria-labelledby="l-local">
+            <input type="radio" name="local" id="lc1" value="no estúdio" checked><label for="lc1">Estúdio</label>
+            <input type="radio" name="local" id="lc2" value="ao ar livre"><label for="lc2">Ao ar livre</label>
+            <input type="radio" name="local" id="lc3" value="tanto faz, quero uma sugestão"><label for="lc3">Quero sugestão</label>
+          </div>
+          <label for="f-mes">Mês que você quer fazer</label>
+          <select id="f-mes"></select>
+          <div class="previa" id="previa" aria-live="polite"></div>
+          <a class="botao zap" id="enviar" href="https://wa.me/5519971153997?text=Ol%C3%A1%2C%20Iris!%20Vim%20pelo%20site%20e%20quero%20marcar%20um%20ensaio." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Enviar pelo WhatsApp</a>
+          <p class="nota">Texto de exemplo. No site final entram os ensaios e pacotes que a Iris oferece. Fotos ilustrativas.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco" id="galeria" aria-labelledby="t-galeria">
+    <div class="largura">
+      <div class="cabeca">
+        <h2 id="t-galeria">Barriga, pezinhos e abraço apertado</h2>
+        <p>Fotos ilustrativas. No site final, esta galeria mostra os ensaios feitos pela Iris, os mesmos que hoje estão no Instagram.</p>
+      </div>
+      <div class="galeria">
+        <figure class="alto"><img src="fotos/g1.jpg" alt="Gestante em silhueta no escuro" loading="lazy"></figure>
+        <figure class="largo"><img src="fotos/g2.jpg" alt="Mão tocando a barriga de uma gestante" loading="lazy"></figure>
+        <figure><img src="fotos/g3.jpg" alt="Mãos dos pais segurando o pezinho do bebê" loading="lazy"></figure>
+        <figure><img src="fotos/g7.jpg" alt="Bebê dormindo com a mão perto do rosto" loading="lazy"></figure>
+        <figure class="alto"><img src="fotos/g5.jpg" alt="Pés de bebê saindo da manta branca" loading="lazy"></figure>
+        <figure class="largo"><img src="fotos/g4.jpg" alt="Pais segurando as mãos da criança num passeio" loading="lazy"></figure>
+        <figure class="largo"><img src="fotos/g6.jpg" alt="Barriga de gestante em preto e branco" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco" id="historia" aria-labelledby="t-historia">
+    <div class="largura historia">
+      <img src="fotos/estudio.jpg" alt="Estúdio fotográfico com rebatedores e fundo branco" loading="lazy">
+      <div>
+        <h2 id="t-historia">Uma família que fotografa famílias</h2>
+        <p>A Iris Fotografias é um negócio de família e está no ramo desde 1986, na Av. da Indústria, em Santa Bárbara d'Oeste. Muita coisa mudou de lá pra cá, do filme ao digital. O cuidado com quem entra no estúdio continua o mesmo.</p>
+        <div class="regua" aria-label="Linha do tempo de 1986 até hoje: 40 anos">
+          <svg viewBox="0 0 520 74" preserveAspectRatio="none" role="img" aria-hidden="true">
+            <line x1="0" y1="30" x2="520" y2="30" stroke="#1c1c1c" stroke-width="2"/>
+            <g stroke="#1c1c1c" stroke-width="1.5" id="tiques"></g>
+            <text x="0" y="62">1986</text>
+            <text x="520" y="62" text-anchor="end">hoje</text>
+            <text class="m" x="260" y="62" text-anchor="middle">40 anos de ensaios</text>
+            <circle cx="520" cy="30" r="7" fill="#f3c96b" stroke="#1c1c1c" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <p class="nota">Texto de exemplo. No site final entra a história contada pela própria família.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco" id="como" aria-labelledby="t-como">
+    <div class="largura">
+      <div class="cabeca">
+        <h2 id="t-como">Como funciona</h2>
+        <p class="nota" style="color:#28415a">Texto de exemplo. No site final entra o jeito de trabalhar da Iris.</p>
+      </div>
+      <ol class="passos">
+        <li><h3>Conversa</h3><p>Você chama no WhatsApp e conta o que imagina para o ensaio.</p></li>
+        <li><h3>Data marcada</h3><p>Combinamos o melhor momento: semanas de gestação ou dias de vida do bebê.</p></li>
+        <li><h3>Dia do ensaio</h3><p>No estúdio ou ao ar livre, no tempo de vocês.</p></li>
+        <li><h3>Entrega</h3><p>Você recebe as fotos tratadas para guardar e imprimir.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="bloco" id="redes-sec" aria-labelledby="t-redes">
+    <div class="largura">
+      <h2 id="t-redes">Quem acompanha a Iris</h2>
+      <div class="redes">
+        <a class="rede" href="https://www.instagram.com/irissfotografias/" rel="noopener" target="_blank">
+          <div><b>3,1 mil</b><span>seguidores no Instagram · @irissfotografias</span></div>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></svg>
+        </a>
+        <a class="rede" href="https://www.facebook.com/irissfotografias/" rel="noopener" target="_blank">
+          <div><b>5,2 mil</b><span>seguidores no Facebook</span></div>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.8v3h2.6V21h3.1Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco" id="onde" aria-labelledby="t-onde">
+    <div class="largura onde">
+      <div>
+        <h2 id="t-onde">Onde fica o estúdio</h2>
+        <dl>
+          <dt>Endereço</dt><dd>Av. da Indústria, 523<br>Santa Bárbara d'Oeste, SP</dd>
+          <dt>WhatsApp</dt><dd><a href="https://wa.me/5519971153997?text=Ol%C3%A1%2C%20Iris!%20Vim%20pelo%20site." rel="noopener">(19) 97115-3997</a></dd>
+          <dt>Instagram</dt><dd><a href="https://www.instagram.com/irissfotografias/" rel="noopener" target="_blank">@irissfotografias</a></dd>
+          <dt>Horários</dt><dd>Combine o seu pelo WhatsApp.</dd>
+        </dl>
+        <div class="acoes">
+          <a class="botao zap" href="https://wa.me/5519971153997?text=Ol%C3%A1%2C%20Iris!%20Vim%20pelo%20site%20e%20quero%20saber%20os%20hor%C3%A1rios%20dispon%C3%ADveis%20para%20ensaio." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar horários</a>
+          <a class="botao contorno" href="https://www.google.com/maps/dir/?api=1&amp;destination=Av.%20da%20Ind%C3%BAstria%2C%20523%2C%20Santa%20B%C3%A1rbara%20d%27Oeste%20-%20SP" rel="noopener" target="_blank">Traçar rota</a>
+        </div>
+      </div>
+      <iframe class="mapa" src="https://www.google.com/maps?q=Av.%20da%20Ind%C3%BAstria%2C%20523%2C%20Santa%20B%C3%A1rbara%20d%27Oeste%20-%20SP&amp;output=embed" loading="lazy" title="Mapa: Iris Fotografias, Av. da Indústria, 523" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <section class="final" aria-labelledby="t-final">
+    <div class="largura">
+      <h2 id="t-final">A barriga cresce rápido.<b>O bebê também.</b></h2>
+      <p>Garanta a data do seu ensaio enquanto o momento está acontecendo.</p>
+      <a class="botao zap" href="https://wa.me/5519971153997?text=Ol%C3%A1%2C%20Iris!%20Vim%20pelo%20site%20e%20quero%20garantir%20a%20data%20do%20meu%20ensaio." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Chamar a Iris no WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="largura">
+    <span>Iris Fotografias · Av. da Indústria, 523, Santa Bárbara d'Oeste, SP · (19) 97115-3997</span>
+    <span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span>
+  </div>
+</footer>
+
+<a class="flutuante" href="https://wa.me/5519971153997?text=Ol%C3%A1%2C%20Iris!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20os%20ensaios." rel="noopener" aria-label="Chamar a Iris Fotografias no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg><span>WhatsApp</span></a>
+
+<script>
+(() => {
+  const FONE = '5519971153997';
+  const $ = id => document.getElementById(id);
+
+  /* ---------- diafragma do hero ---------- */
+  const hero = $('hero'), svg = $('diafragma');
+  const NS = 'http://www.w3.org/2000/svg';
+  const N = 5, PASSO = 2 * Math.PI / N;
+  const tons = ['#cfe6f7', '#b9daf3', '#a9d1ef', '#c4e1f5', '#b2d6f1'];
+  const laminas = [], linhas = [];
+  for (let i = 0; i < N; i++) {
+    const p = document.createElementNS(NS, 'polygon'); p.setAttribute('fill', tons[i]); $('laminas').appendChild(p); laminas.push(p);
+    const l = document.createElementNS(NS, 'line'); $('linhas').appendChild(l); linhas.push(l);
+  }
+  function desenha(abertura, giro) {
+    const r = svg.getBoundingClientRect(), w = r.width, h = r.height;
+    if (!w || !h) return;
+    const cx = w * (innerWidth > 960 ? .3 : .5), cy = h * .5;
+    const R = Math.hypot(w, h) * 1.6;          // alcance das lâminas
+    const raio = abertura * Math.hypot(w, h);  // raio do furo
+    const v = [];
+    for (let k = 0; k < N; k++) {
+      const a = giro + k * PASSO - Math.PI / 2;
+      v.push([cx + raio * Math.cos(a), cy + raio * Math.sin(a)]);
+    }
+    $('m-furo').setAttribute('points', v.map(p => p.join(',')).join(' '));
+    $('borda-furo').setAttribute('points', v.map(p => p.join(',')).join(' '));
+    $('borda-furo').style.opacity = abertura > .9 ? 0 : 1;
+    for (let k = 0; k < N; k++) {
+      const A = v[k], B = v[(k + 1) % N];
+      const dx = B[0] - A[0], dy = B[1] - A[1], L = Math.hypot(dx, dy) || 1, ux = dx / L, uy = dy / L;
+      const fim = [B[0] + ux * R, B[1] + uy * R];
+      // lâmina: do lado de fora da aresta, girando junto
+      const nx = uy, ny = -ux;
+      const pts = [A, fim, [fim[0] + nx * R, fim[1] + ny * R], [A[0] + nx * R - ux * R * .2, A[1] + ny * R - uy * R * .2]];
+      laminas[k].setAttribute('points', pts.map(p => p.join(',')).join(' '));
+      linhas[k].setAttribute('x1', A[0]); linhas[k].setAttribute('y1', A[1]);
+      linhas[k].setAttribute('x2', fim[0]); linhas[k].setAttribute('y2', fim[1]);
+    }
+  }
+  const calmo = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function abre() {
+    if (calmo) { svg.style.display = 'none'; hero.classList.add('aberto'); return; }
+    const ini = .012, t0 = performance.now() + 450, dur = 1700;
+    const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    function quadro(agora) {
+      const t = Math.min(1, Math.max(0, (agora - t0) / dur)), e = ease(t);
+      desenha(ini + (1.05 - ini) * e, e * Math.PI * .55);
+      if (t > .55) hero.classList.add('aberto');
+      if (t < 1) requestAnimationFrame(quadro); else svg.style.display = 'none';
+    }
+    desenha(ini, 0);
+    requestAnimationFrame(quadro);
+  }
+  abre();
+
+  /* ---------- régua de foco ---------- */
+  const tq = $('tiques');
+  for (let i = 0; i <= 40; i++) {
+    const x = i * 13, alto = i % 10 === 0 ? 16 : (i % 5 === 0 ? 11 : 6);
+    const l = document.createElementNS(NS, 'line');
+    l.setAttribute('x1', x); l.setAttribute('x2', x); l.setAttribute('y1', 30 - alto); l.setAttribute('y2', 30);
+    tq.appendChild(l);
+  }
+
+  /* ---------- monte o seu ensaio ---------- */
+  const cartoes = [...document.querySelectorAll('.cartao')];
+  const mes = $('f-mes');
+  const nomes = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+  const hoje = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Sao_Paulo' }));
+  mes.add(new Option('Ainda não sei', ''));
+  for (let i = 0; i < 8; i++) {
+    const d = new Date(hoje.getFullYear(), hoje.getMonth() + i, 1);
+    const txt = nomes[d.getMonth()] + ' de ' + d.getFullYear();
+    mes.add(new Option(txt.charAt(0).toUpperCase() + txt.slice(1), txt));
+  }
+  function atualiza() {
+    const esc = cartoes.filter(c => c.getAttribute('aria-pressed') === 'true').map(c => c.dataset.nome);
+    $('escolhidos').innerHTML = esc.length ? esc.map(n => `<span>${n}</span>`).join('') : '<em>Nenhum ensaio escolhido ainda.</em>';
+    const nome = $('f-nome').value.trim(), momento = $('f-momento').value.trim();
+    const local = document.querySelector('input[name=local]:checked').value;
+    let msg = 'Olá, Iris! Vim pelo site.' + (nome ? ` Meu nome é ${nome}.` : '');
+    msg += esc.length ? `\nQuero fazer: ${esc.join(', ')}.` : '\nQuero saber sobre os ensaios.';
+    if (momento) msg += `\nMomento: ${momento}.`;
+    msg += `\nPrefiro fotografar ${local}.`;
+    if (mes.value) msg += `\nGostaria de fazer em ${mes.value}.`;
+    msg += '\nPode me passar valores e datas?';
+    $('previa').textContent = msg;
+    $('enviar').href = `https://wa.me/${FONE}?text=` + encodeURIComponent(msg);
+  }
+  cartoes.forEach(c => c.addEventListener('click', () => {
+    c.setAttribute('aria-pressed', c.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+    atualiza();
+  }));
+  $('ficha').addEventListener('input', atualiza);
+  $('ficha').addEventListener('change', atualiza);
+  atualiza();
+})();
+</script>
+</body>
+</html>
