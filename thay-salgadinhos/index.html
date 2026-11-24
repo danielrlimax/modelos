@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Thay Salgadinhos | Salgados para festa em Hortolândia</title>
+<meta name="description" content="Modelo demonstrativo de site para a Thay Salgadinhos, salgados para festas e eventos em Hortolândia.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Onest:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --limao:#FFF3A6;   /* amarelo do lado esquerdo do logo */
+  --rosa:#F1B4D8;    /* rosa do lado direito do logo */
+  --creme:#FFF8DE;   /* fundo da foto da coxinha */
+  --casca:#B04E12;   /* casquinha da coxinha, fechada para dar contraste */
+  --dourado:#E89A3C; /* coxinha frita */
+  --tinta:#1B1410;   /* letra preta do logo */
+  --cinza:#6B5A4E;
+  --papel:#FFFDF6;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.6 'Onest',system-ui,sans-serif}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--casca);outline-offset:3px}
+.largura{max-width:1200px;margin:0 auto;padding:0 32px}
+.ico{width:1.3em;height:1.3em;flex:none}
+h1,h2,h3{margin:0;font-weight:400}
+h1,h2{font-family:'Kaushan Script',cursive;line-height:1.05}
+h2{font-size:clamp(40px,5.2vw,66px)}
+h3{font-weight:800;font-size:21px;line-height:1.25}
+.aviso{background:var(--tinta);color:#fff;font-size:14px;text-align:center;padding:8px 16px}
+.nota{font-size:14px;color:var(--cinza);margin:18px 0 0}
+.intro{font-size:19px;max-width:52ch;margin:16px 0 0;color:var(--cinza)}
+
+.botao{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font:700 17px/1.2 'Onest',sans-serif;padding:15px 22px;border-radius:8px;border:2px solid var(--tinta);cursor:pointer;transition:background .15s,color .15s,transform .12s}
+.botao:active{transform:translateY(1px)}
+.botao.zap{background:#25D366;color:#062b14;border-color:#1a9e4b}
+.botao.zap:hover{background:#1fbf5b}
+.botao.linha{background:transparent;color:var(--tinta)}
+.botao.linha:hover{background:var(--tinta);color:#fff}
+
+/* ---------- Topo: a coxinha nascendo como um sol, no degradê do logo ---------- */
+.topo{position:relative;isolation:isolate;overflow:hidden;min-height:min(94vh,900px);display:flex;flex-direction:column;
+  background:linear-gradient(180deg,#FFF9E2 0%,#FDF0CC 70%,#F9E6BC 100%)}
+.topo .foto{position:absolute;right:0;top:0;height:100%;width:64%;object-fit:cover;object-position:58% 100%;z-index:-2;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 22%);mask-image:linear-gradient(90deg,transparent 0,#000 22%)}
+/* o rosa do logo entrando pelo canto, tingindo o fundo da foto */
+.topo::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;mix-blend-mode:multiply;
+  background:radial-gradient(120% 90% at 100% 0%,var(--rosa) 0%,rgba(241,180,216,.55) 38%,rgba(241,180,216,0) 66%)}
+.topo>.largura{width:100%}
+.barra{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:18px;padding-bottom:18px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none}
+.marca img{width:64px;height:64px;border-radius:50%;box-shadow:0 0 0 3px #fff}
+.marca span{font-family:'Kaushan Script',cursive;font-size:24px;line-height:1}
+.barra nav{display:flex;gap:28px;font-weight:500}
+.barra nav a{text-decoration:none}
+.barra nav a:hover{text-decoration:underline;text-underline-offset:5px}
+.topo .miolo{flex:1;display:flex;align-items:center}
+.topo .texto{max-width:500px;padding:10px 0 80px}
+h1{font-size:clamp(54px,6.6vw,96px);line-height:.98;letter-spacing:-.01em}
+.topo .sub{font-size:clamp(18px,1.6vw,21px);margin:24px 0 0;max-width:30ch}
+.topo .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.insta{display:flex;align-items:center;gap:12px;margin-top:30px;text-decoration:none;width:max-content;max-width:100%}
+.insta b{font-size:34px;font-weight:800;letter-spacing:-.02em;line-height:1}
+.insta span{font-size:15px;line-height:1.3;color:var(--cinza)}
+.insta:hover span{text-decoration:underline}
+
+section{padding:110px 0}
+
+/* ---------- Faixa do Instagram ---------- */
+.faixa{background:linear-gradient(90deg,var(--limao),var(--rosa));padding:64px 0}
+.faixa .largura{display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center}
+.faixa p.grande{font-family:'Kaushan Script',cursive;font-size:clamp(32px,3.8vw,48px);line-height:1.15;margin:0}
+.faixa ul{list-style:none;margin:0;padding:0}
+.faixa li{display:flex;gap:14px;align-items:baseline;padding:12px 0;border-bottom:2px solid rgba(27,20,16,.85);font-weight:500}
+.faixa li:first-child{border-top:2px solid rgba(27,20,16,.85)}
+.faixa li strong{font-weight:800;min-width:6.2em}
+
+/* ---------- Monte sua festa (seletor + comanda) ---------- */
+.festa .topo-sec{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap}
+.festa .grade{display:grid;grid-template-columns:1.55fr .75fr;gap:40px;align-items:start;margin-top:44px}
+.cartoes{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cartao{position:relative;display:flex;flex-direction:column;text-align:left;font:inherit;color:var(--tinta);background:#fff;border:2px solid #EADFCB;border-radius:14px;padding:0;cursor:pointer;overflow:hidden;transition:background .15s,border-color .15s}
+.cartao:hover{border-color:var(--dourado)}
+.cartao-foto{display:block;aspect-ratio:1/1;overflow:hidden;background:var(--creme)}
+.cartao-foto img{width:100%;height:100%;object-fit:cover}
+.cartao-texto{display:block;padding:12px 14px 16px}
+.cartao-texto strong{display:block;font-weight:800;font-size:18px;line-height:1.2}
+.cartao-texto small{display:block;margin-top:4px;font-size:14px;line-height:1.4;color:var(--cinza)}
+.cartao-marca{position:absolute;top:10px;right:10px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.92);border:2px solid var(--tinta);display:grid;place-items:center;font:800 17px/1 'Onest',sans-serif;transition:transform .2s cubic-bezier(.34,1.7,.5,1),background .15s}
+.cartao-marca::after{content:'+'}
+.cartao[aria-pressed="true"]{background:linear-gradient(160deg,var(--limao),var(--rosa));border-color:var(--tinta)}
+.cartao[aria-pressed="true"] .cartao-texto small{color:var(--tinta)}
+.cartao[aria-pressed="true"] .cartao-marca{background:var(--tinta);color:#fff;transform:scale(1.1)}
+.cartao[aria-pressed="true"] .cartao-marca::after{content:'✓'}
+
+.comanda{position:sticky;top:20px;background:#fff;border:2px solid var(--tinta);border-radius:16px;padding:26px 26px 24px}
+.comanda h3{font-family:'Kaushan Script',cursive;font-weight:400;font-size:34px;line-height:1.1}
+.conta{display:grid;gap:12px;margin-top:18px}
+.passo-n{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.passo-n label{font-weight:700}
+.contador{display:flex;align-items:center;border:2px solid var(--tinta);border-radius:8px;overflow:hidden}
+.contador button{width:42px;height:42px;border:0;background:var(--creme);font:800 22px/1 'Onest',sans-serif;cursor:pointer;color:var(--tinta)}
+.contador button:hover{background:var(--limao)}
+.contador input{width:56px;height:42px;border:0;border-left:2px solid var(--tinta);border-right:2px solid var(--tinta);text-align:center;font:700 18px 'Onest',sans-serif;-moz-appearance:textfield;color:var(--tinta)}
+.contador input::-webkit-outer-spin-button,.contador input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+fieldset{border:0;margin:16px 0 0;padding:0;min-width:0}
+legend{font-weight:700;margin-bottom:8px;padding:0}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{padding:8px 14px;border:2px solid var(--tinta);border-radius:8px;font-weight:600;font-size:15px;cursor:pointer;background:#fff}
+.seg input:checked+label{background:var(--tinta);color:#fff}
+.seg input:focus-visible+label{outline:3px solid var(--casca);outline-offset:2px}
+.campo{margin-top:16px}
+.campo label{display:block;font-weight:700;margin-bottom:6px}
+.campo input{width:100%;font:inherit;padding:10px 12px;border:2px solid var(--tinta);border-radius:8px;background:#fff;color:var(--tinta)}
+
+/* resultado dentro dos ramos de louro, como no logo */
+.coroa{position:relative;margin:20px auto 6px;width:260px;height:210px;display:grid;place-items:center;text-align:center}
+.coroa svg{position:absolute;inset:0;width:100%;height:100%;color:var(--tinta)}
+.coroa .num{position:relative;font-family:'Kaushan Script',cursive;font-size:40px;line-height:1;display:block}
+.coroa .num.pulo{animation:pulo .35s cubic-bezier(.34,1.7,.5,1)}
+@keyframes pulo{0%{transform:scale(.8)}100%{transform:scale(1)}}
+.coroa small{position:relative;display:block;max-width:130px;margin:6px auto 0;font-size:13px;color:var(--cinza);line-height:1.3}
+.regra{font-size:13px;color:var(--cinza);text-align:center;margin:0}
+.lista{margin:16px 0 0;padding:14px 0 0;border-top:2px dashed #D9CBB4}
+.lista p{margin:0;font-weight:700}
+.lista .itens{margin:4px 0 0;color:var(--cinza)}
+.comanda .botao{width:100%;justify-content:center;margin-top:18px}
+.comanda > small{display:block;margin-top:12px;color:var(--cinza);font-size:13px;line-height:1.45}
+
+/* ---------- Como pedir ---------- */
+.como{background:var(--creme)}
+.como ol{list-style:none;margin:44px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;counter-reset:p}
+.como li{counter-increment:p;border-top:2px solid var(--tinta);padding-top:16px}
+.como li::before{content:counter(p);display:block;font-family:'Kaushan Script',cursive;font-size:52px;line-height:1;color:var(--casca);margin-bottom:10px}
+.como p{margin:8px 0 0;color:var(--cinza)}
+
+/* ---------- Galeria ---------- */
+.galeria .fotos{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:210px;gap:14px;margin-top:40px}
+.galeria img{width:100%;height:100%;object-fit:cover;border-radius:12px}
+.galeria img:nth-child(1){grid-column:1/4;grid-row:1/3}
+.galeria img:nth-child(2){grid-column:4/7;grid-row:1}
+.galeria img:nth-child(3){grid-column:4/6;grid-row:2}
+.galeria img:nth-child(4){grid-column:6/7;grid-row:2}
+.galeria img:nth-child(5){grid-column:1/4;grid-row:3}
+.galeria img:nth-child(6){grid-column:4/7;grid-row:3}
+.galeria .rodape{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:18px}
+.galeria .rodape .nota{margin:0}
+
+/* ---------- Onde ---------- */
+.onde .grade{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
+.onde dl{margin:28px 0 28px}
+.onde dt{font-size:15px;color:var(--cinza)}
+.onde dd{margin:2px 0 18px;font-size:20px;font-weight:500}
+.onde .acoes{display:flex;flex-wrap:wrap;gap:12px}
+.mapa{width:100%;aspect-ratio:4/3.3;border:2px solid var(--tinta);border-radius:16px;background:var(--creme);display:block}
+
+footer{background:var(--tinta);color:#E9DCCD;padding:34px 0 120px;font-size:14px}
+footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.flutuante{position:fixed;right:18px;bottom:18px;z-index:9;display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#062b14;font-weight:800;text-decoration:none;padding:14px 18px;border-radius:14px;box-shadow:0 6px 18px rgba(6,43,20,.3);font-size:15px}
+.flutuante .ico{width:24px;height:24px}
+
+/* ---------- Responsivo ---------- */
+@media (max-width:1100px){
+  .barra nav{display:none}
+  .festa .grade{grid-template-columns:1fr 340px}
+  .cartoes{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:1000px){
+  .topo{min-height:min(88vh,820px)}
+  .topo .foto{width:74%;object-position:16% 100%}
+  .topo .texto{max-width:430px}
+  .faixa .largura,.onde .grade{grid-template-columns:1fr;gap:32px}
+  .como ol{grid-template-columns:1fr 1fr;row-gap:36px}
+}
+@media (max-width:820px){
+  .festa .grade{grid-template-columns:1fr}
+  .comanda{position:static}
+  .galeria .fotos{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}
+  .galeria img:nth-child(n){grid-column:auto/span 1;grid-row:auto/span 1}
+  .galeria img:nth-child(1),.galeria img:nth-child(6){grid-column:auto/span 2;grid-row:auto/span 2}
+}
+@media (max-width:600px){
+  .largura{padding:0 20px}
+  .marca img{width:54px;height:54px}
+  .topo{min-height:0}
+  .topo .miolo{display:block}
+  .topo .texto{max-width:none;padding:0}
+  h1{font-size:46px}
+  .topo .sub{margin-top:16px}
+  .topo .acoes{margin-top:22px}
+  .insta{margin-top:20px}
+  .topo .foto{position:relative;order:3;width:100%;height:auto;aspect-ratio:1/0.78;object-position:56% 100%;margin-top:-50px;
+    -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 30%);mask-image:linear-gradient(180deg,transparent 0,#000 30%)}
+  .topo .acoes .botao{flex:1 1 100%;justify-content:center}
+  section{padding:72px 0}
+  .faixa{padding:48px 0}
+  .cartoes{gap:12px}
+  .cartao-texto{padding:10px 11px 12px}
+  .cartao-texto strong{font-size:16px}
+  .cartao-texto small{font-size:13px}
+  .cartao-marca{width:28px;height:28px;font-size:15px;top:8px;right:8px}
+  .comanda{padding:22px 18px}
+  .como ol{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.030-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.390-1.475-.883-.788-1.480-1.761-1.653-2.059-.173-.297-.018-.458.130-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.040 1.016-1.040 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.200 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.360.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.870 9.870 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.860 9.860 0 01-1.510-5.260c.001-5.450 4.436-9.884 9.888-9.884 2.640 0 5.122 1.030 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.450-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.050 0C5.495 0 .160 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.480-8.413Z"/></symbol>
+  <symbol id="ig" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zM12 16a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.4 1.4 0 100 2.9 1.4 1.4 0 000-2.9z"/></symbol>
+  <!-- ramo de louro do logo -->
+  <symbol id="ramo" viewBox="0 0 100 200">
+    <path d="M78 196C34 170 14 118 30 6" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+    <g fill="currentColor">
+      <ellipse cx="0" cy="0" rx="6" ry="14" transform="translate(64 182) rotate(-62)"/>
+      <ellipse cx="0" cy="0" rx="6" ry="14" transform="translate(46 186) rotate(40)"/>
+      <ellipse cx="0" cy="0" rx="6" ry="14" transform="translate(42 158) rotate(-52)"/>
+      <ellipse cx="0" cy="0" rx="6" ry="14" transform="translate(24 160) rotate(28)"/>
+      <ellipse cx="0" cy="0" rx="6" ry="14" transform="translate(30 130) rotate(-40)"/>
+      <ellipse cx="0" cy="0" rx="6" ry="14" transform="translate(12 128) rotate(18)"/>
+      <ellipse cx="0" cy="0" rx="6" ry="13" transform="translate(26 100) rotate(-28)"/>
+      <ellipse cx="0" cy="0" rx="6" ry="13" transform="translate(8 96) rotate(10)"/>
+      <ellipse cx="0" cy="0" rx="5.5" ry="12" transform="translate(26 70) rotate(-18)"/>
+      <ellipse cx="0" cy="0" rx="5.5" ry="12" transform="translate(10 64) rotate(4)"/>
+      <ellipse cx="0" cy="0" rx="5" ry="11" transform="translate(28 40) rotate(-8)"/>
+      <ellipse cx="0" cy="0" rx="5" ry="11" transform="translate(14 34) rotate(-2)"/>
+      <ellipse cx="0" cy="0" rx="4.5" ry="10" transform="translate(30 12) rotate(0)"/>
+    </g>
+  </symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para Thay Salgadinhos. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <img class="foto" src="fotos/hero.jpg" alt="Coxinha dourada de perto, com a casquinha crocante, sobre fundo creme" fetchpriority="high">
+  <div class="largura barra">
+    <a class="marca" href="#"><img src="logo.jpg" alt="Logo da Thay Salgadinhos"><span>Thay Salgadinhos</span></a>
+    <nav aria-label="Seções"><a href="#festa">Montar a festa</a><a href="#como">Como pedir</a><a href="#fotos">Fotos</a><a href="#onde">Onde atende</a></nav>
+  </div>
+  <div class="largura miolo">
+    <div class="texto">
+      <h1>Salgadinho quentinho pra sua festa</h1>
+      <p class="sub">Coxinha, bolinha de queijo, kibe e companhia para festas e eventos em Hortolândia, com entrega.</p>
+      <div class="acoes">
+        <a class="botao zap" href="https://wa.me/5519995805376?text=Ol%C3%A1%2C%20Thay!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20or%C3%A7amento%20de%20salgados%20para%20festa." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir orçamento no WhatsApp</a>
+        <a class="botao linha" href="#festa">Calcular minha festa</a>
+      </div>
+      <a class="insta" href="https://www.instagram.com/thay.salgadinhos/" rel="noopener"><b>2.975</b><span>seguidores no Instagram<br>@thay.salgadinhos</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="faixa" aria-label="Quem já conhece">
+  <div class="largura">
+    <p class="grande">Quase 3 mil pessoas já acompanham as fornadas da Thay no Instagram.</p>
+    <ul>
+      <li><strong>2.975</strong><span>seguidores no @thay.salgadinhos</span></li>
+      <li><strong>Festas</strong><span>e eventos de todo tamanho</span></li>
+      <li><strong>Delivery</strong><span>saindo do Nova América, em Hortolândia</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="festa" id="festa">
+  <div class="largura">
+    <div class="topo-sec">
+      <div>
+        <h2>Monte a sua festa</h2>
+        <p class="intro">Conte quantos convidados vêm e toque nos salgados que não podem faltar. A comanda faz a conta dos centos e manda tudo pronto para o WhatsApp da Thay.</p>
+      </div>
+    </div>
+    <div class="grade">
+      <div class="cartoes" id="cartoes" role="group" aria-label="Salgados para a sua festa"></div>
+
+      <form class="comanda" id="comanda" onsubmit="return false" aria-label="Comanda da festa">
+        <h3>Comanda da festa</h3>
+        <div class="conta">
+          <div class="passo-n"><label for="adultos">Adultos</label><div class="contador"><button type="button" data-alvo="adultos" data-d="-5" aria-label="Menos 5 adultos">−</button><input type="number" id="adultos" value="30" min="0" max="500" inputmode="numeric"><button type="button" data-alvo="adultos" data-d="5" aria-label="Mais 5 adultos">+</button></div></div>
+          <div class="passo-n"><label for="criancas">Crianças</label><div class="contador"><button type="button" data-alvo="criancas" data-d="-5" aria-label="Menos 5 crianças">−</button><input type="number" id="criancas" value="10" min="0" max="500" inputmode="numeric"><button type="button" data-alvo="criancas" data-d="5" aria-label="Mais 5 crianças">+</button></div></div>
+        </div>
+        <fieldset><legend>Vai ter outras comidas?</legend><div class="seg">
+          <input type="radio" name="outras" id="o-sim" value="sim" checked><label for="o-sim">Sim, bolo e doces</label>
+          <input type="radio" name="outras" id="o-nao" value="nao"><label for="o-nao">Só salgados</label>
+        </div></fieldset>
+
+        <div class="coroa" aria-live="polite">
+          <svg viewBox="0 0 260 210" aria-hidden="true" id="louro"></svg>
+          <div><span class="num" id="centos">4 centos</span><small id="total">cerca de 400 salgados</small></div>
+        </div>
+        <p class="regra" id="regra">Conta de festa: 10 por adulto e 6 por criança.</p>
+
+        <div class="campo"><label for="data">Dia da festa</label><input type="date" id="data"></div>
+        <fieldset><legend>Como prefere receber?</legend><div class="seg">
+          <input type="radio" name="entrega" id="e-ent" value="entrega" checked><label for="e-ent">Entrega</label>
+          <input type="radio" name="entrega" id="e-ret" value="retirada"><label for="e-ret">Retirar</label>
+        </div></fieldset>
+        <div class="lista"><p>Salgados escolhidos</p><p class="itens" id="escolhidos"></p></div>
+        <a class="botao zap" id="enviar" href="https://wa.me/5519995805376" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Mandar a comanda no WhatsApp</a>
+        <small>A conta é só uma sugestão. Valor, sabores e entrega a Thay confirma pelo WhatsApp. Sabores de exemplo: no site final entra o cardápio da Thay.</small>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="como" id="como">
+  <div class="largura">
+    <h2>Como pedir</h2>
+    <ol>
+      <li><h3>Monte a comanda</h3><p>Convidados, sabores e o dia da festa, aqui no site.</p></li>
+      <li><h3>Mande no WhatsApp</h3><p>A mensagem já vai escrita. É só tocar em enviar.</p></li>
+      <li><h3>Combine com a Thay</h3><p>Ela confirma valor, sabores, horário e endereço.</p></li>
+      <li><h3>Receba quentinho</h3><p>Os salgados chegam prontos para ir à mesa.</p></li>
+    </ol>
+    <p class="nota">Texto de exemplo. No site final entra o jeito de trabalhar da Thay Salgadinhos.</p>
+  </div>
+</section>
+
+<section class="galeria" id="fotos">
+  <div class="largura">
+    <h2>Direto da fritura pra mesa</h2>
+    <div class="fotos">
+      <img src="fotos/hero2.jpg" alt="Coxinhas douradas sobre guardanapo xadrez azul" loading="lazy">
+      <img src="fotos/tabua.jpg" alt="Tábua com bolinhas e salgados fritos e molhos" loading="lazy">
+      <img src="fotos/aberta.jpg" alt="Coxinha aberta mostrando o recheio" loading="lazy">
+      <img src="fotos/cesta.jpg" alt="Coxinhas no prato" loading="lazy">
+      <img src="fotos/assados.jpg" alt="Assadeira com salgados assados dourados" loading="lazy">
+      <img src="fotos/buffet.jpg" alt="Mesa de festa com salgados e petiscos servidos" loading="lazy">
+    </div>
+    <div class="rodape">
+      <p class="nota">Fotos ilustrativas. No site final entram as fotos dos salgados da Thay.</p>
+      <a class="botao linha" href="https://www.instagram.com/thay.salgadinhos/" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#ig"/></svg>Ver mais no Instagram</a>
+    </div>
+  </div>
+</section>
+
+<section class="onde" id="onde">
+  <div class="largura grade">
+    <div>
+      <h2>Onde a Thay atende</h2>
+      <p class="intro">Salgados para festas e eventos com delivery, saindo do Nova América, em Hortolândia.</p>
+      <dl>
+        <dt>Região</dt><dd>Nova América, Hortolândia – SP</dd>
+        <dt>Pedidos</dt><dd><a href="https://wa.me/5519995805376" rel="noopener">(19) 99580-5376</a> no WhatsApp</dd>
+        <dt>Instagram</dt><dd><a href="https://www.instagram.com/thay.salgadinhos/" rel="noopener">@thay.salgadinhos</a></dd>
+      </dl>
+      <div class="acoes">
+        <a class="botao zap" href="https://wa.me/5519995805376?text=Ol%C3%A1%2C%20Thay!%20Vim%20pelo%20site.%20Voc%C3%AAs%20entregam%20no%20meu%20bairro%3F" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar se entrega no meu bairro</a>
+        <a class="botao linha" href="https://www.google.com/maps/dir/?api=1&destination=Jardim%20Nova%20Am%C3%A9rica%2C%20Hortol%C3%A2ndia%20-%20SP" rel="noopener">Traçar rota</a>
+      </div>
+      <p class="nota">O endereço exato, a área de entrega e os horários para pedido entram no site final.</p>
+    </div>
+    <iframe class="mapa" src="https://www.google.com/maps?q=Jardim%20Nova%20Am%C3%A9rica%2C%20Hortol%C3%A2ndia%20-%20SP&output=embed" loading="lazy" title="Mapa: Nova América, Hortolândia" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="largura"><span>Thay Salgadinhos, salgados para festa em Hortolândia – SP</span><span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span></div>
+</footer>
+<a class="flutuante" href="https://wa.me/5519995805376?text=Ol%C3%A1%2C%20Thay!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20or%C3%A7amento%20de%20salgados%20para%20festa." rel="noopener" aria-label="Chamar a Thay Salgadinhos no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const FONE = '5519995805376';
+
+  // [id, nome no cartão, nome na mensagem, foto, linha (exemplo)]
+  const SALGADOS = [
+    ['coxinha', 'Coxinha', 'coxinha', 'fotos/coxinha.jpg', 'A estrela do logo. Frango desfiado.'],
+    ['bolinha', 'Bolinha de queijo', 'bolinha de queijo', 'fotos/bolinha.jpg', 'Puxa queijo na primeira mordida.'],
+    ['kibe', 'Kibe', 'kibe', 'fotos/kibe.jpg', 'Carne temperada e casquinha crocante.'],
+    ['risoles', 'Risoles', 'risoles', 'fotos/risoles.jpg', 'Massa fininha, recheio cremoso.'],
+    ['enroladinho', 'Enroladinho de salsicha', 'enroladinho de salsicha', 'fotos/enroladinho.jpg', 'O preferido da criançada.'],
+    ['esfiha', 'Esfiha', 'esfiha', 'fotos/esfiha.jpg', 'Assadinha, fechada ou aberta.'],
+    ['croquete', 'Croquete', 'croquete', 'fotos/croquete.jpg', 'Empanado e dourado por igual.'],
+    ['pastel', 'Pastelzinho assado', 'pastelzinho assado', 'fotos/pastel.jpg', 'Massa leve com recheio caprichado.'],
+  ];
+  // coroa de louro em arco, como a do logo: dois ramos que saem de baixo e sobem pelos lados
+  (function louro() {
+    const cx = 130, cy = 108, r = 96, ns = 'http://www.w3.org/2000/svg';
+    const svg = $('louro');
+    [-1, 1].forEach((lado) => {
+      const pts = [];
+      for (let i = 0; i <= 9; i++) {
+        const a = (100 + i * 16) * Math.PI / 180; // de baixo (100°) subindo até 244°, deixando o alto aberto
+        pts.push([cx + lado * Math.cos(a) * r, cy + Math.sin(a) * r]);
+      }
+      const caule = document.createElementNS(ns, 'path');
+      caule.setAttribute('d', 'M' + pts.map((p) => p.map((n) => n.toFixed(1)).join(' ')).join(' L'));
+      caule.setAttribute('fill', 'none'); caule.setAttribute('stroke', 'currentColor'); caule.setAttribute('stroke-width', '2.6'); caule.setAttribute('stroke-linecap', 'round');
+      svg.appendChild(caule);
+      pts.slice(1).forEach(([x, y], i) => {
+        const a = (100 + (i + 1) * 16) * Math.PI / 180;
+        const tang = Math.atan2(-lado * Math.sin(a), -Math.cos(a)) * 180 / Math.PI; // folha apontando para onde o ramo cresce
+        [-1, 1].forEach((fora) => {
+          const f = document.createElementNS(ns, 'ellipse');
+          const tam = 1 - i * 0.04;
+          f.setAttribute('rx', (4.6 * tam).toFixed(1)); f.setAttribute('ry', (11 * tam).toFixed(1));
+          f.setAttribute('fill', 'currentColor');
+          f.setAttribute('transform', `translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${(tang + fora * 38).toFixed(1)}) translate(0 -9)`);
+          svg.appendChild(f);
+        });
+      });
+    });
+  })();
+
+  const escolha = new Set(['coxinha', 'bolinha']);
+  const cartoes = $('cartoes');
+  SALGADOS.forEach(([id, rotulo, , foto, desc]) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'cartao'; b.dataset.s = id;
+    b.innerHTML = `<span class="cartao-foto"><img src="${foto}" alt="" loading="lazy"></span>` +
+      `<span class="cartao-texto"><strong>${rotulo}</strong><small>${desc}</small></span>` +
+      `<span class="cartao-marca" aria-hidden="true"></span>`;
+    b.addEventListener('click', () => { escolha.has(id) ? escolha.delete(id) : escolha.add(id); atualizar(); });
+    cartoes.appendChild(b);
+  });
+
+  document.querySelectorAll('.contador button').forEach((bt) => bt.addEventListener('click', () => {
+    const inp = $(bt.dataset.alvo);
+    inp.value = Math.max(0, Math.min(500, (parseInt(inp.value, 10) || 0) + Number(bt.dataset.d)));
+    atualizar();
+  }));
+
+  const lista = (a) => a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' e ' + a[a.length - 1];
+  let ultimo = '';
+  function atualizar() {
+    cartoes.querySelectorAll('.cartao').forEach((b) => b.setAttribute('aria-pressed', String(escolha.has(b.dataset.s))));
+    const ad = Math.max(0, parseInt($('adultos').value, 10) || 0);
+    const cr = Math.max(0, parseInt($('criancas').value, 10) || 0);
+    const so = document.querySelector('input[name=outras]:checked').value === 'nao';
+    const [pa, pc] = so ? [14, 8] : [10, 6];
+    const conta = ad * pa + cr * pc;
+    const centos = Math.max(1, Math.ceil(conta / 100));
+    const txtCentos = centos === 1 ? '1 cento' : centos + ' centos';
+    const num = $('centos');
+    num.textContent = txtCentos;
+    if (txtCentos !== ultimo) { num.classList.remove('pulo'); void num.offsetWidth; num.classList.add('pulo'); ultimo = txtCentos; }
+    $('total').textContent = conta ? `pela conta, ${conta} salgados` : 'diga quantos convidados vêm';
+    $('regra').textContent = `Conta de festa: ${pa} por adulto e ${pc} por criança.`;
+
+    const itens = SALGADOS.filter(([id]) => escolha.has(id)).map((s) => s[2]);
+    $('escolhidos').textContent = itens.length ? lista(itens) : 'Nenhum ainda. Toque nos salgados ao lado.';
+
+    const d = $('data').value;
+    const quando = d ? ` no dia ${d.split('-').reverse().slice(0, 2).join('/')}` : '';
+    const ent = document.querySelector('input[name=entrega]:checked').value;
+    const pessoas = [ad ? `${ad} adulto${ad > 1 ? 's' : ''}` : '', cr ? `${cr} criança${cr > 1 ? 's' : ''}` : ''].filter(Boolean).join(' e ') || 'alguns convidados';
+    const msg = `Olá, Thay! Vim pelo site. Vou fazer uma festa${quando} com ${pessoas}. ` +
+      `Pela conta do site daria uns ${txtCentos} de salgados. ` +
+      (itens.length ? `Queria ${lista(itens)}. ` : '') +
+      `Prefiro ${ent === 'entrega' ? 'entrega' : 'retirar'}. Qual o valor?`;
+    $('enviar').href = `https://wa.me/${FONE}?text=` + encodeURIComponent(msg);
+  }
+  $('comanda').addEventListener('input', atualizar);
+  $('comanda').addEventListener('change', atualizar);
+  atualizar();
+})();
+</script>
+</body>
+</html>
