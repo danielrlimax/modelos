@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Vila Fest Buffet e Eventos · Piracicaba</title>
+<meta name="description" content="Modelo demonstrativo de site para a Vila Fest, buffet para festas infantis, casamentos e formaturas em Piracicaba.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --parede:#41505a;
+  --parede-escura:#2b363d;
+  --neon:#fffaf0;
+  --brilho:255,226,170;
+  --champanhe:#e6c78c;
+  --papel:#eef1f3;
+  --branco:#ffffff;
+  --texto:#1e2930;
+  --suave:#5b6b75;
+  --zap:#25d366;
+  --zap-escuro:#128c4a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Jost,system-ui,sans-serif;font-size:1.0625rem;line-height:1.6;color:var(--texto);background:var(--papel)}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--champanhe);outline-offset:3px;border-radius:4px}
+.ico{width:1.25em;height:1.25em;flex:none}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+
+.aviso{background:var(--parede-escura);color:#d9e1e6;font-size:.875rem;text-align:center;padding:8px 16px}
+
+/* topo */
+.topo{position:absolute;left:0;right:0;z-index:5}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--neon)}
+.marca img{width:52px;height:52px;object-fit:cover;border-radius:10px;border:1px solid rgba(255,255,255,.25)}
+.marca span{font-weight:600;font-size:1.05rem;line-height:1.2}
+.marca small{display:block;font-weight:400;font-size:.85rem;opacity:.8}
+.topo nav{display:flex;gap:24px}
+.topo nav a{color:#e9eef1;text-decoration:none;font-weight:500}
+.topo nav a:hover{color:var(--neon);text-shadow:0 0 12px rgba(var(--brilho),.8)}
+
+/* botões */
+.botao{display:inline-flex;align-items:center;gap:10px;font:600 1rem/1 Jost,sans-serif;text-decoration:none;padding:15px 22px;border-radius:10px;transition:transform .15s ease,background .15s ease}
+.botao:hover{transform:translateY(-1px)}
+.botao.zap{background:var(--zap);color:#06301a}
+.botao.zap:hover{background:#2fe072}
+.botao.linha{color:var(--neon);border:1.5px solid rgba(255,255,255,.55)}
+.botao.linha:hover{border-color:var(--neon);background:rgba(255,255,255,.08)}
+.botao.escuro{background:var(--parede-escura);color:#fff}
+.botao.escuro:hover{background:var(--parede)}
+.topo .botao{padding:11px 16px;font-size:.95rem}
+
+/* hero: o letreiro */
+.hero{position:relative;min-height:min(100svh,880px);display:grid;place-items:center;text-align:center;color:var(--neon);overflow:hidden;isolation:isolate}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(43,54,61,.72)}
+.hero .conteudo{padding:150px 20px 90px;max-width:900px}
+.letreiro{margin:0;font-family:Sacramento,cursive;font-weight:400;line-height:.9;font-size:clamp(5.2rem,15vw,11.5rem);color:var(--neon);
+  text-shadow:0 0 4px #fff,0 0 12px rgba(var(--brilho),.95),0 0 28px rgba(var(--brilho),.75),0 0 60px rgba(var(--brilho),.5),0 0 110px rgba(var(--brilho),.35)}
+.letreiro .linha2{display:block;font-size:.52em;margin-top:.05em}
+.acende{animation:acende 2.2s ease-out both}
+.acende.tarde{animation-delay:.55s}
+@keyframes acende{
+  0%{opacity:.08;text-shadow:none}
+  8%{opacity:.9}
+  11%{opacity:.15;text-shadow:none}
+  20%{opacity:1}
+  24%{opacity:.3;text-shadow:none}
+  34%,100%{opacity:1}
+}
+.hero p.sub{font-size:clamp(1.1rem,2.2vw,1.35rem);max-width:34em;margin:28px auto 0;color:#e8eef1}
+.hero .acoes{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:30px}
+.placa-ig{display:inline-flex;align-items:center;gap:10px;margin-top:34px;padding:10px 16px;border-radius:10px;background:rgba(20,28,33,.55);border:1px solid rgba(255,255,255,.18);font-size:.97rem;color:#e8eef1;text-decoration:none}
+.placa-ig strong{color:var(--champanhe);font-weight:600}
+.placa-ig svg{width:20px;height:20px}
+
+/* provas */
+.provas{background:var(--branco);border-bottom:1px solid #dde3e7}
+.provas .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.provas div{padding:28px 24px;border-left:1px solid #dde3e7}
+.provas div:first-child{border-left:0;padding-left:0}
+.provas b{display:block;font-size:1.9rem;font-weight:700;line-height:1.1;color:var(--parede-escura)}
+.provas span{color:var(--suave);font-size:.98rem}
+
+/* seções */
+section{padding-block:clamp(64px,9vw,110px)}
+h2{font-size:clamp(2rem,4.2vw,3rem);line-height:1.1;font-weight:600;margin:0 0 14px;letter-spacing:-.01em;color:var(--parede-escura)}
+.intro{max-width:40em;color:var(--suave);margin:0 0 40px}
+.exemplo{font-size:.9rem;color:var(--suave);font-style:italic}
+
+/* três festas */
+.festas{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.festa{position:relative;border-radius:14px;overflow:hidden;min-height:480px;display:flex;align-items:flex-end;color:#fff;isolation:isolate}
+.festa img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .6s ease}
+.festa:hover img{transform:scale(1.04)}
+.festa::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(35,45,52,.92) 0%,rgba(35,45,52,.55) 42%,rgba(35,45,52,0) 70%)}
+.festa .txt{padding:26px}
+.festa h3{font-family:Sacramento,cursive;font-weight:400;font-size:3.4rem;line-height:1;margin:0 0 6px;color:var(--neon);text-shadow:0 0 10px rgba(var(--brilho),.7),0 0 26px rgba(var(--brilho),.4)}
+.festa p{margin:0 0 18px;color:#e5ebee}
+.festa .botao{padding:12px 16px;font-size:.95rem}
+
+/* cardápio */
+.cardapio{background:var(--branco)}
+.pratos{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.prato img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:12px}
+.prato h3{font-size:1.2rem;font-weight:600;margin:14px 0 4px;color:var(--parede-escura)}
+.prato p{margin:0;color:var(--suave);font-size:.98rem}
+.cardapio .rodape-secao{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:40px;padding-top:28px;border-top:1px solid #dde3e7}
+
+/* galeria */
+.galeria{background:var(--parede-escura);color:#e8eef1}
+.galeria h2{color:var(--neon)}
+.galeria .intro{color:#b9c6ce}
+.mosaico{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:10px}
+.mosaico img{width:100%;height:100%;object-fit:cover;border-radius:10px}
+.mosaico .g1{grid-column:span 2;grid-row:span 2}
+.mosaico .g2{grid-column:span 2}
+
+/* passos */
+.passos{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;counter-reset:p;margin:0;padding:0;list-style:none}
+.passos li{counter-increment:p;border-top:2px solid var(--parede);padding-top:20px}
+.passos li::before{content:counter(p);display:block;font-family:Sacramento,cursive;font-size:3.4rem;line-height:1;color:var(--parede);margin-bottom:6px}
+.passos h3{margin:0 0 6px;font-size:1.25rem;font-weight:600;color:var(--parede-escura)}
+.passos p{margin:0;color:var(--suave)}
+
+/* instagram + local */
+.duo{display:grid;grid-template-columns:1fr 1.15fr;gap:28px;align-items:stretch}
+.perfil{background:var(--branco);border-radius:14px;padding:30px;display:flex;flex-direction:column;gap:18px}
+.perfil .cab{display:flex;gap:16px;align-items:center}
+.perfil .cab img{width:86px;height:86px;border-radius:50%;object-fit:cover}
+.perfil .cab b{font-size:1.15rem;display:block}
+.perfil .cab span{color:var(--suave)}
+.perfil .num{display:flex;gap:28px}
+.perfil .num b{display:block;font-size:1.6rem;line-height:1.1;color:var(--parede-escura)}
+.perfil .num span{color:var(--suave);font-size:.95rem}
+.perfil .fotos{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.perfil .fotos img{aspect-ratio:1;object-fit:cover;border-radius:6px}
+.local{background:var(--branco);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.mapa{border:0;width:100%;flex:1;min-height:300px;display:block}
+.local .info{padding:24px 28px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+.local .info p{margin:0}
+
+/* perguntas */
+.perguntas{max-width:760px}
+details{border-bottom:1px solid #d3dbe0;padding:18px 0}
+summary{cursor:pointer;font-weight:600;font-size:1.1rem;color:var(--parede-escura);list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.5rem;line-height:1;color:var(--parede)}
+details[open] summary::after{content:"–"}
+details p{margin:10px 0 0;color:var(--suave)}
+
+/* final */
+.final{position:relative;text-align:center;color:var(--neon);isolation:isolate;overflow:hidden;padding-block:clamp(90px,12vw,150px)}
+.final>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.final::before{content:"";position:absolute;inset:0;background:rgba(43,54,61,.8);z-index:-1}
+.final .letreiro{font-size:clamp(3.6rem,9vw,7rem)}
+.final p{color:#e3eaee;max-width:32em;margin:18px auto 28px}
+
+footer{background:#222b31;color:#aab8c0;font-size:.92rem;padding:34px 0 100px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+footer a{color:#dfe6ea}
+
+.flutuante{position:fixed;right:18px;bottom:18px;z-index:20;display:inline-flex;align-items:center;gap:8px;background:var(--zap);color:#06301a;font-weight:600;text-decoration:none;padding:14px 18px;border-radius:50px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.flutuante .ico{width:26px;height:26px}
+
+@media (max-width:980px){
+  .topo nav{display:none}
+  .festas{grid-template-columns:1fr 1fr}
+  .festas .festa:last-child{grid-column:span 2;min-height:380px}
+  .pratos{grid-template-columns:repeat(2,1fr)}
+  .duo{grid-template-columns:1fr}
+  .mosaico{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px}
+}
+@media (max-width:640px){
+  .topo .botao span{display:none}
+  .marca small{display:none}
+  .provas .wrap{grid-template-columns:1fr}
+  .provas div{border-left:0;border-top:1px solid #dde3e7;padding:18px 0}
+  .provas div:first-child{border-top:0}
+  .festas{grid-template-columns:1fr}
+  .festas .festa:last-child{grid-column:auto}
+  .festa{min-height:400px}
+  .pratos{gap:14px}
+  .passos{grid-template-columns:1fr;gap:26px}
+  .hero .conteudo{padding-top:120px}
+  .flutuante span{display:none}
+  .flutuante{padding:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+  <symbol id="ig" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M7 2.9h10A4.1 4.1 0 0 1 21.1 7v10a4.1 4.1 0 0 1-4.1 4.1H7A4.1 4.1 0 0 1 2.9 17V7A4.1 4.1 0 0 1 7 2.9Z"/><circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para a Vila Fest. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio"><img src="logo.jpg" alt="Letreiro de neon da Vila Fest Buffet e Eventos"><span>Vila Fest<small>Buffet e eventos em Piracicaba</small></span></a>
+    <nav aria-label="Seções">
+      <a href="#festas">Festas</a>
+      <a href="#cardapio">Cardápio</a>
+      <a href="#fotos">Fotos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="botao zap" href="https://wa.me/5519997559495?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20or%C3%A7amento%20de%20festa%20com%20a%20Vila%20Fest." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg><span>Pedir orçamento</span></a>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero" aria-label="Vila Fest Buffet e Eventos">
+  <img src="fotos/hero.jpg" alt="Salão de festas iluminado com convidados à mesa" fetchpriority="high">
+  <div class="conteudo">
+    <h1 class="letreiro"><span class="acende">Vila fest</span><span class="linha2 acende tarde">buffet e eventos</span></h1>
+    <p class="sub">Buffet para festas infantis, casamentos e formaturas em Piracicaba. Conte a data e o número de convidados e a gente monta a sua festa.</p>
+    <div class="acoes">
+      <a class="botao zap" href="https://wa.me/5519997559495?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20or%C3%A7amento%20de%20festa%20com%20a%20Vila%20Fest." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir orçamento no WhatsApp</a>
+      <a class="botao linha" href="#cardapio">Ver opções de cardápio</a>
+    </div>
+    <a class="placa-ig" href="https://www.instagram.com/vilafest.piracicaba/" rel="noopener"><svg aria-hidden="true"><use href="#ig"/></svg><span><strong>5.761 pessoas</strong> acompanham a Vila Fest no Instagram</span></a>
+  </div>
+</section>
+
+<div class="provas">
+  <div class="wrap">
+    <div><b>5.761</b><span>seguidores no Instagram @vilafest.piracicaba</span></div>
+    <div><b>3 tipos de festa</b><span>infantil, casamento e formatura</span></div>
+    <div><b>Várias opções</b><span>de cardápio para montar o buffet do seu jeito</span></div>
+  </div>
+</div>
+
+<section id="festas">
+  <div class="wrap">
+    <h2>Que festa vamos fazer?</h2>
+    <p class="intro">Do aniversário da criançada ao jantar de casamento, a Vila Fest cuida do buffet para você aproveitar a festa com os convidados.</p>
+    <div class="festas">
+      <article class="festa">
+        <img src="fotos/festa-infantil.jpg" alt="Mesa de festa infantil colorida com chapéus e pratinhos" loading="lazy">
+        <div class="txt">
+          <h3>Festa infantil</h3>
+          <p>Salgadinhos, docinhos e bolo para a festa da criançada.</p>
+          <a class="botao zap" href="https://wa.me/5519997559495?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20festa%20infantil." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Quero uma festa infantil</a>
+        </div>
+      </article>
+      <article class="festa">
+        <img src="fotos/casamento.jpg" alt="Mesa posta de casamento com flores e taças" loading="lazy">
+        <div class="txt">
+          <h3>Casamento</h3>
+          <p>Recepção e jantar para celebrar o grande dia.</p>
+          <a class="botao zap" href="https://wa.me/5519997559495?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20buffet%20para%20casamento." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Quero para meu casamento</a>
+        </div>
+      </article>
+      <article class="festa">
+        <img src="fotos/formatura.jpg" alt="Bolo de formatura com balões" loading="lazy">
+        <div class="txt">
+          <h3>Formatura</h3>
+          <p>Buffet para a turma e a família comemorarem a conquista.</p>
+          <a class="botao zap" href="https://wa.me/5519997559495?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20buffet%20para%20formatura." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Quero para minha formatura</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="cardapio" id="cardapio">
+  <div class="wrap">
+    <h2>Opções de cardápio</h2>
+    <p class="intro">A Vila Fest trabalha com várias opções de cardápio. Algumas ideias do que pode entrar no seu buffet:</p>
+    <div class="pratos">
+      <article class="prato"><img src="fotos/salgados.jpg" alt="Bandeja de salgados e finger foods" loading="lazy"><h3>Salgados e finger food</h3><p>Para servir quente durante toda a festa.</p></article>
+      <article class="prato"><img src="fotos/buffet-quente.jpg" alt="Buffet com réchauds e pratos quentes" loading="lazy"><h3>Buffet quente</h3><p>Pratos servidos em réchaud para jantares.</p></article>
+      <article class="prato"><img src="fotos/mesa-de-doces.jpg" alt="Mesa de doces com cupcakes e tortinhas em suportes" loading="lazy"><h3>Mesa de doces</h3><p>Docinhos e sobremesas para fechar a noite.</p></article>
+      <article class="prato"><img src="fotos/brinde.jpg" alt="Convidados brindando com taças" loading="lazy"><h3>Bebidas e brinde</h3><p>Para a hora do parabéns ou do brinde.</p></article>
+    </div>
+    <div class="rodape-secao">
+      <p class="exemplo">Texto de exemplo. No site final entram os cardápios reais da Vila Fest. Fotos ilustrativas.</p>
+      <a class="botao escuro" href="https://wa.me/5519997559495?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20conhecer%20as%20op%C3%A7%C3%B5es%20de%20card%C3%A1pio%20da%20Vila%20Fest." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Receber os cardápios</a>
+    </div>
+  </div>
+</section>
+
+<section class="galeria" id="fotos">
+  <div class="wrap">
+    <h2>Clima de festa</h2>
+    <p class="intro">Fotos ilustrativas. No site final entram as fotos das festas da Vila Fest, as mesmas que fazem sucesso no Instagram.</p>
+    <div class="mosaico">
+      <img class="g1" src="fotos/salao.jpg" alt="Salão decorado com velas e luzes" loading="lazy">
+      <img src="fotos/neon.jpg" alt="Letreiro de neon de feliz aniversário" loading="lazy">
+      <img src="fotos/doces-finos.jpg" alt="Doces finos com flores" loading="lazy">
+      <img class="g2" src="fotos/finger-food.jpg" alt="Mesa comprida de finger foods" loading="lazy">
+      <img class="g2" src="fotos/confete.jpg" alt="Chuva de confete em festa" loading="lazy">
+      <img class="g2" src="fotos/baloes.jpg" alt="Balões coloridos no teto" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="como">
+  <div class="wrap">
+    <h2>Do primeiro oi à festa</h2>
+    <p class="intro">Fechar o buffet é simples e tudo começa no WhatsApp.</p>
+    <ol class="passos">
+      <li><h3>Conte sobre a festa</h3><p>Mande a data, o tipo de festa e quantos convidados você espera.</p></li>
+      <li><h3>Escolha o cardápio</h3><p>A Vila Fest envia as opções e ajuda a montar o buffet certo para o seu evento.</p></li>
+      <li><h3>Aproveite</h3><p>No dia, é só chegar e curtir com quem você ama.</p></li>
+    </ol>
+    <p class="exemplo" style="margin-top:28px">Texto de exemplo. No site final entra o jeito de trabalhar da Vila Fest.</p>
+  </div>
+</section>
+
+<section id="contato" style="padding-top:0">
+  <div class="wrap duo">
+    <div class="perfil">
+      <div class="cab"><img src="logo.jpg" alt="Foto do perfil da Vila Fest"><div><b>@vilafest.piracicaba</b><span>Vila Fest Buffet e Eventos</span></div></div>
+      <div class="num"><div><b>5.761</b><span>seguidores</span></div><div><b>Nov/2026</b><span>posts recentes</span></div></div>
+      <div class="fotos">
+        <img src="fotos/festa-infantil.jpg" alt="" loading="lazy">
+        <img src="fotos/mesa-de-doces.jpg" alt="" loading="lazy">
+        <img src="fotos/salgados.jpg" alt="" loading="lazy">
+      </div>
+      <a class="botao escuro" href="https://www.instagram.com/vilafest.piracicaba/" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#ig"/></svg>Ver o Instagram</a>
+    </div>
+    <div class="local">
+      <iframe class="mapa" src="https://www.google.com/maps?q=Piracicaba%2C%20SP&output=embed" loading="lazy" title="Mapa: Piracicaba, SP" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="info">
+        <p><b>Piracicaba, SP</b><br><span class="exemplo">No site final entra o endereço do salão.</span></p>
+        <a class="botao escuro" href="https://www.google.com/maps/dir/?api=1&destination=Piracicaba%2C%20SP" rel="noopener">Traçar rota</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap"><div class="perguntas">
+    <h2>Perguntas frequentes</h2>
+    <details><summary>Quanto custa o buffet?</summary><p>Depende do tipo de festa, do cardápio e do número de convidados. Mande essas informações no WhatsApp e a Vila Fest responde com o orçamento.</p></details>
+    <details><summary>Que tipos de festa vocês atendem?</summary><p>Festas infantis, casamentos e formaturas.</p></details>
+    <details><summary>Tem mais de uma opção de cardápio?</summary><p>Sim, a Vila Fest tem várias opções de cardápio. Peça pelo WhatsApp para receber todas.</p></details>
+    <details><summary>Com quanta antecedência devo reservar?</summary><p>Quanto antes, melhor, principalmente para sábados. Consulte a sua data pelo WhatsApp.</p></details>
+  </div></div>
+</section>
+
+<section class="final">
+  <img src="fotos/confete.jpg" alt="" loading="lazy">
+  <div class="wrap">
+    <p class="letreiro" style="margin:0">Vamos festejar?</p>
+    <p>Chame a Vila Fest no WhatsApp, conte a data e receba o orçamento do seu buffet.</p>
+    <a class="botao zap" href="https://wa.me/5519997559495?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20consultar%20uma%20data%20para%20minha%20festa." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Consultar minha data</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Vila Fest Buffet e Eventos · Piracicaba, SP · <a href="https://wa.me/5519997559495" rel="noopener">(19) 99755-9495</a></span>
+    <span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span>
+  </div>
+</footer>
+
+<a class="flutuante" href="https://wa.me/5519997559495?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20or%C3%A7amento%20de%20festa%20com%20a%20Vila%20Fest." rel="noopener" aria-label="Chamar a Vila Fest no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg><span>WhatsApp</span></a>
+</body>
+</html>
