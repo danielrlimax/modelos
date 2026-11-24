@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Gabi Stephan · Estética e Lash Lifting em Araras/SP</title>
+<meta name="description" content="Lash lifting, design de sobrancelhas e estética facial e corporal em Araras/SP com Gabi Stephan, graduada em Estética e Cosmetologia.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Commissioner:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cacau:#3a2420;
+  --cacau-2:#5b3b33;
+  --po:#fbf1ee;
+  --nude:#efd6cd;
+  --batom:#a44c57;
+  --ouro:#b08546;
+  --wa:#1a9e50;
+  --serif:"Fraunces",Georgia,serif;
+  --sans:"Commissioner",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--po);color:var(--cacau);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ouro);outline-offset:3px;border-radius:2px}
+.ico{width:1.2em;height:1.2em;flex:none}
+h1,h2,h3{font-family:var(--serif);font-variation-settings:"SOFT" 100;font-weight:400;margin:0;line-height:1.08;letter-spacing:-.01em}
+h2{font-size:clamp(32px,4.2vw,52px)}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+.nota-ex{font-size:14px;color:var(--cacau-2);opacity:.85;margin-top:18px}
+
+/* faixa */
+.aviso{background:var(--cacau);color:var(--nude);font-size:13.5px;text-align:center;padding:8px 16px;line-height:1.4}
+
+/* botoes */
+.btn{display:inline-flex;align-items:center;gap:10px;font:600 16px/1 var(--sans);text-decoration:none;padding:16px 22px;border-radius:6px;transition:background .2s,color .2s}
+.btn.wa{background:var(--batom);color:#fff}
+.btn.wa:hover{background:#8e3c47}
+.btn.linha{color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.btn.linha:hover{background:rgba(255,255,255,.08)}
+
+/* hero */
+.hero{position:relative;min-height:min(92vh,860px);display:flex;align-items:flex-end;color:var(--po);overflow:hidden;background:var(--cacau)}
+.hero .fundo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 40%;transform:scaleX(-1);z-index:0}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(58,36,32,.92) 0%,rgba(58,36,32,.78) 34%,rgba(58,36,32,.15) 62%,rgba(58,36,32,0) 75%)}
+.hero .conteudo{position:relative;z-index:2;padding:70px 0 64px;width:min(1160px,100% - 40px);margin-inline:auto}
+.hero .bloco{max-width:520px}
+.marca{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--nude);margin:0 0 6px;font-variation-settings:"SOFT" 100}
+.curva{display:block;width:min(300px,70%);height:auto;color:var(--nude);overflow:visible;margin:0 0 12px -6px}
+.hero h1{font-size:clamp(46px,6.4vw,88px);font-weight:350;margin-bottom:22px}
+.hero .sub{font-size:18px;max-width:460px;margin:0 0 30px;color:#f6e6e1}
+.acoes{display:flex;flex-wrap:wrap;gap:12px}
+.prova{margin:28px 0 0;font-size:15px;color:var(--nude);display:flex;align-items:center;gap:10px}
+.prova b{font-family:var(--serif);font-size:22px;font-weight:500;color:#fff}
+.prova a{color:var(--nude)}
+
+/* instagram */
+.insta{background:var(--nude);padding:72px 0}
+.insta .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:end}
+.insta p.grande{font-family:var(--serif);font-variation-settings:"SOFT" 100;font-size:clamp(28px,3.4vw,42px);line-height:1.15;margin:0}
+.insta p.grande strong{font-weight:600;color:var(--batom)}
+.insta .lado p{margin:0 0 18px;max-width:40ch}
+.insta .btn.linha{color:var(--cacau)}
+.insta .btn.linha:hover{background:rgba(58,36,32,.06)}
+
+/* servicos */
+.servicos{padding:96px 0 80px}
+.cab{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:40px}
+.cab p{margin:0;max-width:42ch;color:var(--cacau-2)}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card img{aspect-ratio:4/5;object-fit:cover;width:100%;border-radius:4px}
+.card h3{font-size:26px;margin:18px 0 6px}
+.card p{margin:0 0 14px;font-size:15.5px;color:var(--cacau-2);min-height:3.2em}
+.card a{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;color:var(--wa);text-decoration:none;border-bottom:1.5px solid currentColor;padding-bottom:3px}
+.card a:hover{color:#127a3d}
+
+/* como funciona */
+.lift{background:#fff;padding:96px 0}
+.lift .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:64px;align-items:center}
+.lift .foto img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:4px}
+.lift h2{margin-bottom:12px}
+.lift .intro{margin:0 0 30px;color:var(--cacau-2);max-width:46ch}
+.passos{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.passos li{display:grid;grid-template-columns:76px 1fr;gap:18px;align-items:center;padding:16px 0;border-top:1px solid #ecdcd6}
+.passos li:last-child{border-bottom:1px solid #ecdcd6}
+.passos svg{width:76px;height:auto;color:var(--cacau);overflow:visible}
+.passos h3{font-size:22px;margin-bottom:2px}
+.passos p{margin:0;font-size:15.5px;color:var(--cacau-2)}
+
+/* sobre */
+.sobre{padding:96px 0}
+.sobre .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+.sobre .texto p{max-width:48ch}
+.sobre .selo{display:inline-block;font-family:var(--serif);font-style:italic;font-size:21px;color:var(--batom);margin:4px 0 14px}
+.sobre img{width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:4px}
+
+/* galeria */
+.galeria{padding:0 0 96px}
+.galeria h2{margin-bottom:28px}
+.grade{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.grade img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:3px}
+
+/* onde */
+.onde{background:var(--nude);padding:88px 0}
+.onde .wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:center}
+.onde p{max-width:42ch}
+.onde .acoes .btn.linha{color:var(--cacau)}
+.onde iframe{display:block;width:100%;height:380px;border:0;background:#e4c6bc;border-radius:4px;filter:sepia(.25) saturate(.85)}
+
+/* final */
+.final{background:var(--cacau);color:var(--po);padding:96px 0;text-align:center}
+.final .curva{margin:0 auto 18px;width:min(260px,70%)}
+.final h2{margin-bottom:14px}
+.final p{margin:0 auto 30px;max-width:44ch;color:#f0dcd5}
+.final .acoes{justify-content:center}
+
+footer{background:#2c1a17;color:#d9c2ba;font-size:14px;padding:34px 0 90px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+footer b{font-family:var(--serif);font-weight:500;font-size:18px;color:var(--po)}
+
+.flutua{position:fixed;right:18px;bottom:18px;z-index:20;width:60px;height:60px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.flutua .ico{width:32px;height:32px}
+
+@media (max-width:980px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .lift .wrap,.sobre .wrap,.onde .wrap,.insta .wrap{grid-template-columns:1fr;gap:36px}
+  .lift .foto img{aspect-ratio:16/11}
+  .cab{flex-direction:column;align-items:start}
+}
+@media (max-width:860px){
+  .hero::before{background:linear-gradient(90deg,rgba(58,36,32,.93) 0%,rgba(58,36,32,.8) 46%,rgba(58,36,32,.2) 74%,rgba(58,36,32,0) 88%)}
+  .hero .fundo{object-position:68% 40%}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .hero{min-height:94vh}
+  .hero .fundo{object-position:36% 50%}
+  .hero::before{background:linear-gradient(0deg,rgba(58,36,32,.96) 0%,rgba(58,36,32,.88) 50%,rgba(58,36,32,.25) 74%,rgba(58,36,32,0) 90%)}
+  .hero .conteudo{padding:40px 0 34px}
+  .hero .sub{font-size:16.5px}
+  .btn{padding:15px 18px}
+  .cards{gap:14px}
+  .card h3{font-size:21px}
+  .card p{font-size:14.5px;min-height:0}
+  .card a{font-size:14px}
+  .grade{grid-template-columns:repeat(2,1fr)}
+  .servicos,.lift,.sobre,.final{padding:70px 0}
+  .galeria{padding-bottom:70px}
+  .onde iframe{height:300px}
+  .passos li{grid-template-columns:58px 1fr;gap:14px}
+  .passos svg{width:58px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+  <symbol id="ig" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M7 2.9h10A4.1 4.1 0 0 1 21.1 7v10a4.1 4.1 0 0 1-4.1 4.1H7A4.1 4.1 0 0 1 2.9 17V7A4.1 4.1 0 0 1 7 2.9Z"/><circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para Gabi Stephan Estética e Lash Lifting. Ainda não é o site oficial.</div>
+
+<header class="hero">
+  <img class="fundo" src="fotos/banner.jpg" alt="Profissional modelando os cílios de uma cliente no escudo de silicone, durante um lash lifting" fetchpriority="high">
+  <div class="conteudo">
+    <div class="bloco">
+      <svg class="curva" data-curva="anima" viewBox="0 0 320 96" aria-hidden="true"></svg>
+      <p class="marca">Gabi Stephan</p>
+      <h1>Seus cílios, levantados.</h1>
+      <p class="sub">Lash lifting, design de sobrancelhas e estética facial e corporal em Araras/SP, com a Gabi, graduada em Estética e Cosmetologia.</p>
+      <div class="acoes">
+        <a class="btn wa" href="https://wa.me/5519997331707?text=Ol%C3%A1%2C%20Gabi!%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Agendar pelo WhatsApp</a>
+        <a class="btn linha" href="#servicos">Ver serviços</a>
+      </div>
+      <p class="prova"><b>4.327</b> <span>seguidores acompanham a Gabi no <a href="https://www.instagram.com/gabistephan.estetica/" rel="noopener">Instagram</a></span></p>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="insta" aria-label="Instagram da Gabi">
+  <div class="wrap">
+    <p class="grande">Mais de <strong>4 mil pessoas</strong> já acompanham o trabalho da Gabi com cílios, sobrancelhas e pele.</p>
+    <div class="lado">
+      <p>São 269 publicações em @gabistephan.estetica, com atendimentos novos postados neste mês de novembro.</p>
+      <a class="btn linha" href="https://www.instagram.com/gabistephan.estetica/" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#ig"/></svg>Ver o Instagram</a>
+    </div>
+  </div>
+</section>
+
+<section class="servicos" id="servicos">
+  <div class="wrap">
+    <div class="cab">
+      <h2>O que a Gabi faz</h2>
+      <p>Os quatro atendimentos da bio da Gabi. Toque no serviço para perguntar direto no WhatsApp.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <img src="fotos/lash-lifting.jpg" alt="Cílios naturais sendo modelados para o lash lifting" loading="lazy">
+        <h3>Lash lifting</h3>
+        <p>Curva e levanta os seus próprios cílios, sem extensão e sem rímel.</p>
+        <a href="https://wa.me/5519997331707?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20lash%20lifting." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar no WhatsApp</a>
+      </article>
+      <article class="card">
+        <img src="fotos/sobrancelhas.jpg" alt="Sobrancelha sendo desenhada com pinça" loading="lazy">
+        <h3>Design de sobrancelhas</h3>
+        <p>Desenho pensado para o formato do seu rosto e do seu olhar.</p>
+        <a href="https://wa.me/5519997331707?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20design%20de%20sobrancelhas." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar no WhatsApp</a>
+      </article>
+      <article class="card">
+        <img src="fotos/facial.jpg" alt="Cliente deitada com máscara facial em tratamento de pele" loading="lazy">
+        <h3>Estética facial</h3>
+        <p>Cuidados com a pele do rosto, de acordo com o que ela precisa.</p>
+        <a href="https://wa.me/5519997331707?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20est%C3%A9tica%20facial." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar no WhatsApp</a>
+      </article>
+      <article class="card">
+        <img src="fotos/corporal.jpg" alt="Mãos fazendo massagem em uma perna sobre toalha branca" loading="lazy">
+        <h3>Estética corporal</h3>
+        <p>Protocolos para o corpo, combinados com você na avaliação.</p>
+        <a href="https://wa.me/5519997331707?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20est%C3%A9tica%20corporal." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar no WhatsApp</a>
+      </article>
+    </div>
+    <p class="nota-ex">Descrições de exemplo e fotos ilustrativas. No site final entram os procedimentos, valores e fotos dos atendimentos da Gabi.</p>
+  </div>
+</section>
+
+<section class="lift" aria-labelledby="t-lift">
+  <div class="wrap">
+    <div class="foto"><img src="fotos/resultado.jpg" alt="Olho com cílios curvados para cima" loading="lazy"></div>
+    <div>
+      <h2 id="t-lift">Como é o lash lifting</h2>
+      <p class="intro">O lifting trabalha os fios que você já tem: eles saem da sessão curvados para cima, deixando o olhar mais aberto.</p>
+      <ol class="passos">
+        <li><svg data-curva="0.35" viewBox="0 0 320 96" aria-hidden="true"></svg><div><h3>Limpeza</h3><p>Os cílios são higienizados para receber o produto.</p></div></li>
+        <li><svg data-curva="0.62" viewBox="0 0 320 96" aria-hidden="true"></svg><div><h3>Modelagem</h3><p>Os fios são posicionados um a um no molde de silicone.</p></div></li>
+        <li><svg data-curva="0.85" viewBox="0 0 320 96" aria-hidden="true"></svg><div><h3>Fixação</h3><p>A curvatura é fixada no tempo certo para o seu tipo de fio.</p></div></li>
+        <li><svg data-curva="1" viewBox="0 0 320 96" aria-hidden="true"></svg><div><h3>Nutrição</h3><p>Finalização que cuida dos fios e realça a curva.</p></div></li>
+      </ol>
+      <p class="nota-ex">Texto de exemplo. No site final entram as etapas e os cuidados do jeito que a Gabi faz.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sobre" aria-labelledby="t-sobre">
+  <div class="wrap">
+    <div class="texto">
+      <h2 id="t-sobre">Quem cuida de você</h2>
+      <span class="selo">Graduada em Estética e Cosmetologia</span>
+      <p>A Gabi atende em Araras e divide o trabalho entre o olhar, com lash lifting e design de sobrancelhas, e a pele, com estética facial e corporal.</p>
+      <p>Cada atendimento começa por uma conversa sobre o que você quer e termina com as orientações para manter o resultado em casa.</p>
+      <p class="nota-ex">Texto de exemplo. No site final entram a história da Gabi e fotos dela e do espaço.</p>
+    </div>
+    <img src="fotos/atendimento.jpg" alt="Esteticista de luvas fazendo um procedimento na sobrancelha de uma cliente" loading="lazy">
+  </div>
+</section>
+
+<section class="galeria" aria-labelledby="t-gal">
+  <div class="wrap">
+    <h2 id="t-gal">Do dia a dia do atendimento</h2>
+    <div class="grade">
+      <img src="fotos/g1.jpg" alt="Cílios sendo trabalhados com o protetor de pálpebra" loading="lazy">
+      <img src="fotos/g2.jpg" alt="Pincel aplicando creme no rosto durante limpeza de pele" loading="lazy">
+      <img src="fotos/g4.jpg" alt="Profissional trabalhando os cílios com duas pinças" loading="lazy">
+      <img src="fotos/g3.jpg" alt="Massagem nas costas" loading="lazy">
+      <img src="fotos/g6.jpg" alt="Pinça apoiada sobre bandeja de fios" loading="lazy">
+      <img src="fotos/g5.jpg" alt="Poltrona e lavatório em espaço de beleza claro" loading="lazy">
+    </div>
+    <p class="nota-ex">Fotos ilustrativas. No site final entram fotos reais dos atendimentos, tiradas do Instagram da Gabi.</p>
+  </div>
+</section>
+
+<section class="onde" aria-labelledby="t-onde">
+  <div class="wrap">
+    <div>
+      <h2 id="t-onde">Atendimento em Araras</h2>
+      <p>A Gabi atende em Araras/SP. Chame no WhatsApp para combinar o dia e receber o endereço.</p>
+      <p class="nota-ex">O endereço completo e os horários entram no site final.</p>
+      <div class="acoes">
+        <a class="btn wa" href="https://wa.me/5519997331707?text=Ol%C3%A1%2C%20Gabi!%20Vim%20pelo%20site%20e%20quero%20marcar%20um%20hor%C3%A1rio." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Combinar horário</a>
+        <a class="btn linha" href="https://www.google.com/maps/dir/?api=1&amp;destination=Araras%2C%20SP" rel="noopener">Traçar rota</a>
+      </div>
+    </div>
+    <iframe src="https://www.google.com/maps?q=Araras%2C%20SP&amp;output=embed" loading="lazy" title="Mapa de Araras/SP" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<section class="final" aria-labelledby="t-final">
+  <div class="wrap">
+    <svg class="curva" data-curva="1" viewBox="0 0 320 96" aria-hidden="true"></svg>
+    <h2 id="t-final">Pronta para levantar o olhar?</h2>
+    <p>Mande uma mensagem e a Gabi responde com os horários livres da semana.</p>
+    <div class="acoes">
+      <a class="btn wa" href="https://wa.me/5519997331707?text=Ol%C3%A1%2C%20Gabi!%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20lash%20lifting." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Agendar pelo WhatsApp</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><b>Gabi Stephan</b><br>Estética e Lash Lifting · Araras/SP<br>WhatsApp (19) 99733-1707 · <a href="https://www.instagram.com/gabistephan.estetica/" rel="noopener">@gabistephan.estetica</a></div>
+    <div>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</div>
+  </div>
+</footer>
+
+<a class="flutua" href="https://wa.me/5519997331707?text=Ol%C3%A1%2C%20Gabi!%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio." aria-label="Conversar com a Gabi no WhatsApp" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg></a>
+
+<script>
+(function(){
+  var NS='http://www.w3.org/2000/svg', N=23;
+  // pálpebra: curva quadrática de (14,70) a (306,70) passando alto no meio
+  function ponto(t){var u=1-t;return{x:u*u*14+2*u*t*160+t*t*306,y:u*u*70+2*u*t*30+t*t*70};}
+  function normal(t){var dx=2*(1-t)*(160-14)+2*t*(306-160),dy=2*(1-t)*(30-70)+2*t*(70-30);var a=Math.atan2(dy,dx)*180/Math.PI;return a;}
+  function desenha(svg){
+    var lid=document.createElementNS(NS,'path');
+    lid.setAttribute('d','M14 70 Q160 30 306 70');
+    lid.setAttribute('fill','none');lid.setAttribute('stroke','currentColor');lid.setAttribute('stroke-width','2.4');lid.setAttribute('stroke-linecap','round');
+    svg.appendChild(lid);
+    var fios=[];
+    for(var i=0;i<N;i++){
+      var t=.06+i*(.88/(N-1)), p=ponto(t), lado=t<.5?-1:1, perto=Math.abs(t-.5)*2;
+      var L=26+(1-perto)*20, c=lado*(5+perto*12);
+      var g=document.createElementNS(NS,'g');
+      g.setAttribute('transform','translate('+p.x.toFixed(1)+' '+p.y.toFixed(1)+') rotate('+normal(t).toFixed(1)+')');
+      var f=document.createElementNS(NS,'path');
+      f.setAttribute('d','M0 0 C0 '+(-L*.55).toFixed(1)+' '+(c*.4).toFixed(1)+' '+(-L*.9).toFixed(1)+' '+c.toFixed(1)+' '+(-L).toFixed(1));
+      f.setAttribute('fill','none');f.setAttribute('stroke','currentColor');f.setAttribute('stroke-width','1.9');f.setAttribute('stroke-linecap','round');
+      g.appendChild(f);svg.appendChild(g);fios.push({el:f,d:Math.abs(i-(N-1)/2)});
+    }
+    return fios;
+  }
+  function curvar(fios,s){fios.forEach(function(o){o.el.setAttribute('transform','scale(1 '+s.toFixed(3)+')');});}
+  var reduz=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('svg[data-curva]').forEach(function(svg){
+    var fios=desenha(svg), v=svg.getAttribute('data-curva');
+    if(v!=='anima'){curvar(fios,(parseFloat(v)*2-1)<-.2?-.2:parseFloat(v)*1.6-.6);return;}
+    if(reduz){curvar(fios,1);return;}
+    curvar(fios,-.75);
+    var ini=null, dur=1300, atraso=380;
+    function quadro(ts){
+      if(!ini)ini=ts;
+      var tudo=true;
+      fios.forEach(function(o){
+        var k=Math.min(1,Math.max(0,(ts-ini-atraso-o.d*45)/dur));
+        if(k<1)tudo=false;
+        var e=1-Math.pow(1-k,3);
+        o.el.setAttribute('transform','scale(1 '+(-.75+e*1.75).toFixed(3)+')');
+      });
+      if(!tudo)requestAnimationFrame(quadro);
+    }
+    requestAnimationFrame(quadro);
+  });
+})();
+</script>
+</body>
+</html>
