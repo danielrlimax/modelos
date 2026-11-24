@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Franciele Estevam · Lash Designer e Micropigmentação em Rio Claro</title>
+<meta name="description" content="Extensão de cílios, lash lifting, sobrancelha e micropigmentação com a Franciele Estevam em Rio Claro. Agende pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --parede:#DCD7D4;      /* parede cinza do estúdio */
+  --parede-2:#EDEAE8;
+  --grafite:#2B2729;     /* máscara, cílios */
+  --grafite-2:#5A5457;
+  --luz:#F2C95C;         /* LED do espelho em arco */
+  --luz-suave:#FFF4D2;
+  --branco:#FBFAF9;
+  --boca:#A9545F;        /* rosado dos lábios */
+  --zap:#1FA855;
+  --display:'Italiana', 'Didot', serif;
+  --texto:'Manrope', system-ui, sans-serif;
+  --r:6px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--texto);color:var(--grafite);background:var(--branco);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--luz);outline-offset:3px;border-radius:2px}
+.largura{width:min(1160px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-weight:400;margin:0}
+h2{font-family:var(--display);font-size:clamp(2.3rem,5vw,3.6rem);line-height:1.05;letter-spacing:.005em}
+.intro{max-width:58ch;color:var(--grafite-2);margin:.8rem 0 0}
+.nota{font-size:.82rem;color:var(--grafite-2);margin-top:1.2rem;font-style:italic}
+.ico{width:1.15em;height:1.15em;flex:none}
+
+/* Botões: cantos discretos, nada de pílula */
+.botao{display:inline-flex;align-items:center;gap:.6rem;padding:.95rem 1.4rem;border-radius:var(--r);font-weight:700;font-size:1rem;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,background .15s}
+.botao:hover{transform:translateY(-1px)}
+.zap{background:var(--zap);color:#fff}
+.zap:hover{background:#178a45}
+.linha{background:transparent;color:var(--grafite);box-shadow:inset 0 0 0 1.5px var(--grafite)}
+
+/* Faixa demonstrativa */
+.faixa{background:var(--grafite);color:var(--luz-suave);font-size:.82rem;text-align:center;padding:.5rem 1rem}
+
+/* Topo */
+.topo{position:relative;z-index:5;background:var(--branco)}
+.topo .largura{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0}
+.marca{font-family:var(--display);font-size:1.6rem;text-decoration:none;line-height:1;color:var(--grafite)}
+.marca small{display:block;font-family:var(--texto);font-size:.72rem;letter-spacing:.08em;color:var(--grafite-2);margin-top:.25rem}
+.topo nav{display:flex;gap:1.6rem;align-items:center}
+.topo nav a{text-decoration:none;font-weight:600;font-size:.92rem}
+.topo nav a.zap{padding:.6rem 1rem;color:#fff}
+
+/* HERO com o arco de luz */
+.hero{position:relative;min-height:min(calc(100svh - 110px),860px);display:flex;align-items:center;overflow:hidden;background:var(--parede)}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:20% 30%}
+.hero .largura{position:relative;display:flex;justify-content:flex-end;padding:3.5rem 0}
+.arco{position:relative;width:min(410px,100%);padding:4.6rem 2.4rem 2.4rem;background:rgba(251,250,249,.88);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-radius:240px 240px var(--r) var(--r);text-align:center}
+.arco::before{content:"";position:absolute;inset:-9px;border-radius:250px 250px 12px 12px;border:3px solid var(--luz);box-shadow:0 0 18px 2px rgba(242,201,92,.75),0 0 60px 8px rgba(242,201,92,.35),inset 0 0 14px rgba(242,201,92,.5);pointer-events:none;animation:acende 1.6s ease-out .3s both}
+@keyframes acende{0%{opacity:0}18%{opacity:.8}24%{opacity:.15}38%{opacity:1}46%{opacity:.4}60%,100%{opacity:1}}
+.arco .quem{font-size:.92rem;font-weight:600;color:var(--grafite-2);margin:0 0 .6rem}
+.arco h1{font-family:var(--display);font-size:clamp(2.6rem,5.2vw,3.7rem);line-height:1;margin-bottom:1rem}
+.arco p.sub{margin:0 auto 1.6rem;max-width:32ch;color:var(--grafite-2)}
+.arco .acoes{display:flex;flex-direction:column;gap:.7rem}
+.arco .acoes .botao{justify-content:center}
+.arco .insta{display:flex;justify-content:center;gap:.5rem;align-items:center;margin-top:1.3rem;font-size:.9rem;color:var(--grafite-2)}
+.arco .insta b{color:var(--grafite)}
+
+/* Prova social */
+.prova{background:var(--grafite);color:var(--branco)}
+.prova ul{list-style:none;margin:0;padding:2.2rem 0;display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.prova li{border-left:1px solid rgba(242,201,92,.45);padding-left:1rem}
+.prova b{display:block;font-family:var(--display);font-size:2.3rem;line-height:1;color:var(--luz);font-weight:400}
+.prova span{font-size:.9rem;color:#d9d3d5}
+
+/* Seletor / agenda */
+.agenda{padding:6rem 0;background:var(--parede-2)}
+.grade{display:grid;grid-template-columns:1fr 360px;gap:2rem;margin-top:2.4rem;align-items:start}
+.cartoes{display:grid;grid-template-columns:repeat(4,1fr);gap:.9rem}
+.cartao{position:relative;display:flex;flex-direction:column;text-align:left;padding:0;border:1.5px solid transparent;background:var(--branco);border-radius:var(--r);overflow:hidden;cursor:pointer;font:inherit;color:inherit;transition:border-color .15s,background .15s}
+.cartao-foto{aspect-ratio:5/4;overflow:hidden;background:var(--parede)}
+.cartao-foto img{width:100%;height:100%;object-fit:cover}
+.cartao-texto{padding:.75rem .8rem .9rem;display:flex;flex-direction:column;gap:.2rem}
+.cartao strong{font-size:.98rem;line-height:1.25}
+.cartao small{font-size:.8rem;line-height:1.4;color:var(--grafite-2)}
+.cartao-marca{position:absolute;top:.55rem;right:.55rem;width:28px;height:28px;border-radius:50%;background:rgba(251,250,249,.92);box-shadow:inset 0 0 0 1.5px var(--grafite-2);display:grid;place-items:center;font-size:.9rem;font-weight:700}
+.cartao:hover{border-color:var(--grafite-2)}
+.cartao[aria-pressed="true"]{background:var(--luz-suave);border-color:var(--luz)}
+.cartao[aria-pressed="true"] .cartao-marca{background:var(--grafite);color:var(--luz);box-shadow:none}
+.cartao[aria-pressed="true"] .cartao-marca::after{content:"✓"}
+.ficha{position:sticky;top:1.2rem;background:var(--branco);border-radius:180px 180px var(--r) var(--r);padding:3.4rem 1.6rem 1.6rem;box-shadow:0 0 0 1.5px var(--grafite)}
+.ficha h3{font-family:var(--display);font-size:2rem;text-align:center;margin-bottom:1.2rem}
+.campo,fieldset{margin:0 0 1rem;border:0;padding:0}
+.tit,legend{display:block;font-weight:700;font-size:.86rem;margin-bottom:.4rem;padding:0}
+.ficha input[type=text],.ficha select{width:100%;font:inherit;font-size:1rem;padding:.7rem .8rem;border:1.5px solid #c9c3c0;border-radius:var(--r);background:#fff;color:var(--grafite)}
+.seg{display:flex;flex-wrap:wrap;gap:.4rem}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{flex:1;text-align:center;padding:.55rem .5rem;border:1.5px solid #c9c3c0;border-radius:var(--r);font-size:.88rem;font-weight:600;cursor:pointer;white-space:nowrap}
+.seg input:checked+label{background:var(--grafite);border-color:var(--grafite);color:var(--branco)}
+.seg input:focus-visible+label{outline:3px solid var(--luz);outline-offset:2px}
+.lista{border-top:1px dashed #c9c3c0;padding-top:.8rem;margin-bottom:1rem}
+.lista p{margin:0 0 .3rem;font-weight:700;font-size:.86rem}
+.lista ul{margin:0;padding-left:1.1rem;font-size:.95rem}
+.lista .vazio{font-weight:400;color:var(--grafite-2)}
+.ficha .botao{width:100%;justify-content:center}
+.ficha small{display:block;font-size:.76rem;color:var(--grafite-2);margin-top:.8rem;line-height:1.45}
+
+/* Trabalhos */
+.trabalhos{padding:6rem 0}
+.mosaico{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:260px 260px;gap:.8rem;margin-top:2.4rem}
+.mosaico img{width:100%;height:100%;object-fit:cover;border-radius:var(--r)}
+.mosaico img:first-child{grid-row:span 2}
+.destaques{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem;align-items:center}
+.destaques span{font-size:.9rem;color:var(--grafite-2);margin-right:.3rem}
+.destaques a{display:inline-block;text-decoration:none;font-weight:600;font-size:.9rem;padding:.45rem .8rem;border-radius:var(--r);background:var(--parede-2)}
+.destaques a:hover{background:var(--luz-suave)}
+
+/* Duas frentes */
+.frentes{padding:0 0 6rem}
+.frentes .par{display:grid;grid-template-columns:1fr 1fr;gap:2.4rem}
+.frente img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r)}
+.frente h3{font-family:var(--display);font-size:2.2rem;margin:1.2rem 0 .4rem}
+.frente p{margin:0;color:var(--grafite-2);max-width:48ch}
+
+/* Passos */
+.passos{background:var(--parede);padding:5.5rem 0}
+.passos ol{list-style:none;margin:2.4rem 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem;counter-reset:p}
+.passos li{counter-increment:p}
+.passos li::before{content:counter(p);font-family:var(--display);font-size:3rem;line-height:1;color:var(--boca);display:block;margin-bottom:.5rem}
+.passos h3{font-weight:700;font-size:1.05rem;margin-bottom:.3rem}
+.passos p{margin:0;font-size:.95rem;color:var(--grafite-2)}
+
+/* Cuidados */
+.cuidados{padding:6rem 0}
+.cuidados .par{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:center}
+.cuidados img{border-radius:200px 200px var(--r) var(--r);aspect-ratio:4/5;object-fit:cover;width:100%}
+.cuidados dl{margin:1.8rem 0 0}
+.cuidados dt{font-weight:700;margin-top:1.1rem}
+.cuidados dd{margin:.15rem 0 0;color:var(--grafite-2)}
+
+/* Onde */
+.onde{background:var(--grafite);color:var(--branco);padding:5.5rem 0}
+.onde .par{display:grid;grid-template-columns:1fr 1.2fr;gap:2.4rem;align-items:center}
+.onde .intro{color:#d9d3d5}
+.onde iframe{width:100%;height:360px;border:0;border-radius:var(--r);filter:grayscale(.35)}
+.onde .acoes{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.6rem}
+.onde .linha{color:var(--branco);box-shadow:inset 0 0 0 1.5px var(--branco)}
+.onde .nota{color:#bdb5b8}
+
+/* Final */
+.final{position:relative;padding:7rem 0;text-align:center;overflow:hidden}
+.final>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.18}
+.final .largura{position:relative}
+.final p{max-width:46ch;margin:1rem auto 2rem;color:var(--grafite-2)}
+
+footer{background:var(--parede-2);padding:2rem 0 6rem;font-size:.85rem;color:var(--grafite-2)}
+footer .largura{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+
+.flutua{position:fixed;right:18px;bottom:18px;z-index:20;width:60px;height:60px;border-radius:50%;background:var(--zap);color:#fff;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.flutua .ico{width:32px;height:32px}
+
+@media (max-width:1000px){
+  .grade{grid-template-columns:1fr}
+  .ficha{position:static;max-width:520px;margin-inline:auto;width:100%}
+  .passos ol{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:900px){
+  .topo nav a:not(.zap){display:none}
+  .hero{display:block;min-height:0;background:var(--parede-2)}
+  .hero>img{position:relative;height:min(62svh,560px);min-height:340px;object-position:45% 15%}
+  .hero .largura{justify-content:center;padding:0 0 3rem;margin-top:-7rem}
+  .arco{width:min(460px,100%);padding:3.6rem 1.8rem 1.8rem;background:var(--branco)}
+  .prova ul{grid-template-columns:repeat(2,1fr)}
+  .mosaico{grid-template-columns:1fr 1fr;grid-template-rows:200px 200px 200px}
+  .mosaico img:first-child{grid-row:span 1;grid-column:span 2}
+  .frentes .par,.cuidados .par,.onde .par{grid-template-columns:1fr}
+  .cuidados img{max-width:420px;margin-inline:auto}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .cartoes{grid-template-columns:repeat(2,1fr);gap:.6rem}
+  .cartao small{display:none}
+  .hero>img{height:48svh;min-height:300px}
+  .hero .largura{padding:0 0 2.4rem;margin-top:-5rem}
+  .arco{padding:3.2rem 1.3rem 1.5rem}
+  .marca{font-size:1.35rem}
+  .topo nav a.zap{padding:.55rem .85rem}
+  .passos ol{grid-template-columns:1fr}
+  .agenda,.trabalhos,.cuidados{padding:4.2rem 0}
+  .frentes{padding-bottom:4.2rem}
+  .onde iframe{height:280px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.030-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.870 9.870 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.860 9.860 0 01-1.51-5.26c.001-5.450 4.436-9.884 9.888-9.884 2.640 0 5.122 1.030 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.450-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.050 0C5.495 0 .160 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.480-8.413Z"/></symbol>
+<symbol id="ig" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zm0 4.7a5.1 5.1 0 1 0 0 10.2 5.1 5.1 0 0 0 0-10.2zm0 8.4a3.3 3.3 0 1 1 0-6.6 3.3 3.3 0 0 1 0 6.6zm5.3-9.8a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></symbol>
+</svg>
+
+<div class="faixa">Modelo demonstrativo feito por Daniel para Franciele Estevam Lash Designer. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <div class="largura">
+    <a class="marca" href="#">Franciele Estevam<small>Lash designer · Rio Claro</small></a>
+    <nav aria-label="Seções">
+      <a href="#agenda">Serviços</a>
+      <a href="#trabalhos">Trabalhos</a>
+      <a href="#cuidados">Cuidados</a>
+      <a href="#onde">Onde fica</a>
+      <a class="botao zap" data-msg="Olá, Franciele! Vim pelo site e quero agendar um horário." href="#"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Agendar</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <img src="fotos/hero.jpg" alt="Lash designer de máscara preta aplicando extensão de cílios com pinça" fetchpriority="high">
+  <div class="largura">
+    <div class="arco">
+      <p class="quem">Franciele Estevam, Rio Claro</p>
+      <h1>Cílios e micro feitos fio a fio, com calma</h1>
+      <p class="sub">Extensão de cílios, lash lifting, sobrancelha e micropigmentação. Você escolhe o efeito, a Franciele desenha no seu olhar.</p>
+      <div class="acoes">
+        <a class="botao zap" data-msg="Olá, Franciele! Vim pelo site e quero agendar um horário." href="#"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Agendar no WhatsApp</a>
+        <a class="botao linha" href="#agenda">Ver os serviços</a>
+      </div>
+      <a class="insta" href="https://www.instagram.com/franciele_estevaam/" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#ig"/></svg><span><b>2.563</b> seguidores no @franciele_estevaam</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="prova" aria-label="Números do Instagram">
+  <ul class="largura">
+    <li><b>2.563</b><span>pessoas acompanham o trabalho no Instagram</span></li>
+    <li><b>Toda semana</b><span>trabalho novo postado no perfil</span></li>
+    <li><b>2 artes</b><span>cílios e micropigmentação no mesmo lugar</span></li>
+    <li><b>Rio Claro</b><span>atendimento na cidade, horário marcado</span></li>
+  </ul>
+</section>
+
+<section class="agenda" id="agenda">
+  <div class="largura">
+    <h2>O que você quer fazer?</h2>
+    <p class="intro">Toque nos serviços que você quer. A ficha ao lado se monta sozinha e a mensagem vai pronta para o WhatsApp da Franciele.</p>
+    <div class="grade">
+      <div class="cartoes" id="cartoes" role="group" aria-label="Serviços"></div>
+      <form class="ficha" id="ficha" onsubmit="return false" aria-label="Pedido de horário">
+        <h3>Sua ficha</h3>
+        <div class="campo"><label class="tit" for="nome">Seu nome</label><input type="text" id="nome" placeholder="Ex.: Ana" autocomplete="given-name" maxlength="30"></div>
+        <fieldset><legend>É a sua primeira vez?</legend><div class="seg">
+          <input type="radio" name="vez" id="v1" value="primeira" checked><label for="v1">Primeira vez</label>
+          <input type="radio" name="vez" id="v2" value="cliente"><label for="v2">Já sou cliente</label>
+        </div></fieldset>
+        <div class="campo"><label class="tit" for="dia">Melhor dia</label>
+          <select id="dia"><option value="">Qualquer dia</option><option>segunda</option><option>terça</option><option>quarta</option><option>quinta</option><option>sexta</option><option>sábado</option></select></div>
+        <fieldset><legend>Melhor período</legend><div class="seg">
+          <input type="radio" name="periodo" id="pm" value="de manhã" checked><label for="pm">Manhã</label>
+          <input type="radio" name="periodo" id="pt" value="à tarde"><label for="pt">Tarde</label>
+          <input type="radio" name="periodo" id="pn" value="no fim do dia"><label for="pn">Fim do dia</label>
+        </div></fieldset>
+        <div class="lista" aria-live="polite"><p>Serviços escolhidos</p><div id="escolhidos"></div></div>
+        <a class="botao zap" id="enviar" href="#" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir horário no WhatsApp</a>
+        <small>Valor, duração e horário a Franciele confirma pelo WhatsApp. Lista de exemplo: no site final entram os serviços e efeitos que ela oferece.</small>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="trabalhos" id="trabalhos">
+  <div class="largura">
+    <h2>O olhar de quem já passou por aqui</h2>
+    <p class="intro">Fotos ilustrativas. No site final entram os antes e depois que a Franciele posta toda semana no Instagram.</p>
+    <div class="mosaico">
+      <img src="fotos/volume.jpg" alt="Olho com extensão de cílios volumosa" loading="lazy">
+      <img src="fotos/olho.jpg" alt="Olho aberto com cílios longos e curvados" loading="lazy">
+      <img src="fotos/hero2.jpg" alt="Aplicação de extensão de cílios com duas pinças" loading="lazy">
+      <img src="fotos/bandeja.jpg" alt="Pinça sobre bandeja de fios de cílios" loading="lazy">
+      <img src="fotos/fio.jpg" alt="Olho com cílios alongados fio a fio" loading="lazy">
+    </div>
+    <div class="destaques">
+      <span>Destaques no Instagram:</span>
+      <a href="https://www.instagram.com/franciele_estevaam/" target="_blank" rel="noopener">Clientes</a>
+      <a href="https://www.instagram.com/franciele_estevaam/" target="_blank" rel="noopener">Evolução</a>
+      <a href="https://www.instagram.com/franciele_estevaam/" target="_blank" rel="noopener">Pós micro</a>
+      <a href="https://www.instagram.com/franciele_estevaam/" target="_blank" rel="noopener">Nova fase</a>
+    </div>
+  </div>
+</section>
+
+<section class="frentes" aria-label="Cílios e micropigmentação">
+  <div class="largura par">
+    <article class="frente">
+      <img src="fotos/aplicacao.jpg" alt="Aplicação de cílios com protetor de gel embaixo dos olhos" loading="lazy">
+      <h3>Cílios</h3>
+      <p>Extensão fio a fio para um efeito natural, volume para quem quer mais marcado, lash lifting para curvar os seus próprios fios. Tudo desenhado para o formato do seu olho.</p>
+    </article>
+    <article class="frente">
+      <img src="fotos/micro.jpg" alt="Profissional de luvas pretas fazendo procedimento na sobrancelha" loading="lazy">
+      <h3>Micropigmentação</h3>
+      <p>Sobrancelha preenchida e alinhada, que acorda pronta. O desenho é feito antes e combinado com você, para o resultado ficar com a sua cara.</p>
+    </article>
+  </div>
+  <p class="largura nota">Texto de exemplo. No site final entram as técnicas e efeitos que a Franciele trabalha.</p>
+</section>
+
+<section class="passos">
+  <div class="largura">
+    <h2>Do primeiro oi ao olhar pronto</h2>
+    <ol>
+      <li><h3>Chame no WhatsApp</h3><p>Conte o que você quer fazer e se é a sua primeira vez.</p></li>
+      <li><h3>Combine o horário</h3><p>A Franciele confirma o dia, a hora e o valor.</p></li>
+      <li><h3>Escolha o efeito</h3><p>No estúdio, vocês desenham juntas o formato que combina com você.</p></li>
+      <li><h3>Saia pronta</h3><p>Com as dicas de cuidado e a data da manutenção já combinada.</p></li>
+    </ol>
+    <p class="nota">Texto de exemplo. No site final entra o jeito de atender da Franciele.</p>
+  </div>
+</section>
+
+<section class="cuidados" id="cuidados">
+  <div class="largura par">
+    <img src="fotos/luz.jpg" alt="Olho iluminado por luz quente lateral" loading="lazy">
+    <div>
+      <h2>Para os cílios durarem mais</h2>
+      <p class="intro">Alguns cuidados simples fazem a extensão ficar bonita até a manutenção.</p>
+      <dl>
+        <dt>Nas primeiras 24 horas</dt><dd>Evite molhar os cílios, vapor e sauna.</dd>
+        <dt>No dia a dia</dt><dd>Lave com espuma própria e penteie com a escovinha.</dd>
+        <dt>Na hora de dormir</dt><dd>Prefira dormir de barriga para cima ou de lado, sem esfregar o rosto.</dd>
+        <dt>Na maquiagem</dt><dd>Nada de rímel à prova d'água nem demaquilante oleoso.</dd>
+      </dl>
+      <p class="nota">Texto de exemplo. No site final entram as orientações da própria Franciele, como as do destaque "Pós micro".</p>
+    </div>
+  </div>
+</section>
+
+<section class="onde" id="onde">
+  <div class="largura par">
+    <div>
+      <h2>Atendimento em Rio Claro</h2>
+      <p class="intro">Horário marcado, no estúdio da Franciele. Chame no WhatsApp para receber o endereço e a localização.</p>
+      <div class="acoes">
+        <a class="botao zap" data-msg="Olá, Franciele! Vim pelo site. Pode me mandar o endereço do estúdio?" href="#"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir o endereço</a>
+        <a class="botao linha" href="https://www.google.com/maps/dir/?api=1&destination=Rio%20Claro%2C%20SP" target="_blank" rel="noopener">Traçar rota</a>
+      </div>
+      <p class="nota">No site final entram o endereço exato do estúdio e os horários de atendimento.</p>
+    </div>
+    <iframe src="https://www.google.com/maps?q=Rio%20Claro%2C%20SP&output=embed" loading="lazy" title="Mapa de Rio Claro, SP" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<section class="final">
+  <img src="fotos/rimel.jpg" alt="" loading="lazy">
+  <div class="largura">
+    <h2>Seu próximo olhar começa com um oi</h2>
+    <p>Mande uma mensagem, conte o que você quer fazer e a Franciele te responde com os horários livres.</p>
+    <a class="botao zap" data-msg="Olá, Franciele! Vim pelo site e quero agendar um horário." href="#"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Falar com a Franciele</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="largura">
+    <span>Franciele Estevam · Lash designer e micropigmentação · Rio Claro, SP · <a href="https://www.instagram.com/franciele_estevaam/" target="_blank" rel="noopener">@franciele_estevaam</a></span>
+    <span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span>
+  </div>
+</footer>
+
+<a class="flutua" data-msg="Olá, Franciele! Vim pelo site e quero agendar um horário." href="#" aria-label="Conversar no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg></a>
+
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const FONE = '5519997027397';
+  const wa = (m) => `https://wa.me/${FONE}?text=` + encodeURIComponent(m);
+  document.querySelectorAll('[data-msg]').forEach((a) => { a.href = wa(a.dataset.msg); a.target = '_blank'; a.rel = 'noopener'; });
+
+  // [id, nome no cartão, texto na mensagem, foto, descrição (exemplo)]
+  const SERVICOS = [
+    ['fio', 'Fio a fio', 'extensão fio a fio', 'fotos/fio.jpg', 'Efeito natural, um fio em cada cílio.'],
+    ['volume', 'Volume', 'extensão com volume', 'fotos/volume.jpg', 'Mais preenchido e marcado.'],
+    ['hibrido', 'Híbrido', 'extensão no efeito híbrido', 'fotos/hibrido.jpg', 'O meio-termo entre natural e volume.'],
+    ['lifting', 'Lash lifting', 'lash lifting', 'fotos/lifting.jpg', 'Curvatura nos seus próprios fios.'],
+    ['manut', 'Manutenção', 'manutenção dos cílios', 'fotos/manutencao.jpg', 'Repõe os fios que caíram.'],
+    ['remocao', 'Remoção', 'remoção da extensão', 'fotos/remocao.jpg', 'Tira a extensão sem machucar os fios.'],
+    ['sobrancelha', 'Design de sobrancelha', 'design de sobrancelha', 'fotos/sobrancelha.jpg', 'Desenho e limpeza no formato do rosto.'],
+    ['micro', 'Micropigmentação', 'micropigmentação de sobrancelha', 'fotos/micro.jpg', 'Sobrancelha preenchida que dura.'],
+  ];
+  const escolha = new Set(['fio']);
+  const cartoes = $('cartoes');
+  SERVICOS.forEach(([id, rotulo, , foto, desc]) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'cartao'; b.dataset.s = id; b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = `<span class="cartao-foto"><img src="${foto}" alt="" loading="lazy"></span>` +
+      `<span class="cartao-texto"><strong>${rotulo}</strong><small>${desc}</small></span>` +
+      `<span class="cartao-marca" aria-hidden="true"></span>`;
+    b.addEventListener('click', () => { escolha.has(id) ? escolha.delete(id) : escolha.add(id); atualizar(); });
+    cartoes.appendChild(b);
+  });
+
+  const lista = (it) => it.length < 2 ? it.join('') : it.slice(0, -1).join(', ') + ' e ' + it[it.length - 1];
+  function atualizar() {
+    cartoes.querySelectorAll('.cartao').forEach((b) => b.setAttribute('aria-pressed', String(escolha.has(b.dataset.s))));
+    const itens = SERVICOS.filter(([id]) => escolha.has(id)).map((s) => s[2]);
+    const alvo = $('escolhidos'); alvo.innerHTML = '';
+    if (!itens.length) { const p = document.createElement('p'); p.className = 'vazio'; p.textContent = 'Nada escolhido ainda. Toque nos serviços.'; alvo.appendChild(p); }
+    else { const ul = document.createElement('ul'); itens.forEach((t) => { const li = document.createElement('li'); li.textContent = t[0].toUpperCase() + t.slice(1); ul.appendChild(li); }); alvo.appendChild(ul); }
+    const nome = $('nome').value.trim();
+    const vez = document.querySelector('input[name=vez]:checked').value;
+    const periodo = document.querySelector('input[name=periodo]:checked').value;
+    const dia = $('dia').value;
+    const quem = nome ? `Olá, Franciele! Aqui é a ${nome}, vim pelo site.` : 'Olá, Franciele! Vim pelo site.';
+    const pedido = itens.length ? lista(itens) : 'um horário';
+    const primeira = vez === 'primeira' ? ' É a minha primeira vez com você.' : ' Já sou sua cliente.';
+    const quando = dia ? ` Prefiro ${dia}, ${periodo}.` : ` Prefiro ${periodo}.`;
+    const msg = `${quem} Quero agendar ${pedido}.${primeira}${quando} Qual o valor e os horários disponíveis?`;
+    $('enviar').href = wa(msg);
+  }
+  $('ficha').addEventListener('input', atualizar);
+  $('ficha').addEventListener('change', atualizar);
+  atualizar();
+})();
+</script>
+</body>
+</html>
