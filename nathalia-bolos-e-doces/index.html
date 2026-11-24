@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Nathália Bolos &amp; Doces · Bolos e doces de festa em Pirassununga</title>
+<meta name="description" content="Modelo demonstrativo de site para a Nathália Bolos & Doces, bolos e doces de festa sob encomenda em Pirassununga.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Figtree:wght@400;500;700&family=Yellowtail&display=swap" rel="stylesheet">
+<style>
+:root{
+  --laranja:#F39A3C;
+  --laranja-claro:#FFEFDC;
+  --turquesa:#22D8B9;
+  --turquesa-fundo:#C9F6EC;
+  --chocolate:#3B2016;
+  --morango:#D8323C;
+  --verde-wa:#128C4A;
+  --branco:#FFFFFF;
+  --babado:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+body{margin:0;font-family:"Figtree",system-ui,sans-serif;font-size:17px;line-height:1.6;color:var(--chocolate);background:var(--branco)}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--chocolate);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:"Fredoka",sans-serif;font-weight:600;line-height:1.15;margin:0}
+h2{font-size:clamp(30px,4.2vw,46px);letter-spacing:-.01em}
+h3{font-size:21px;font-weight:600}
+p{margin:0}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+.icon{width:1.2em;height:1.2em;flex:none}
+
+/* faixa demonstrativa */
+.aviso{background:var(--chocolate);color:#fff;font-size:14px;text-align:center;padding:8px 16px}
+
+/* o babado: borda ondulada do logo */
+.babado-cima,.babado-baixo{height:var(--babado);background-repeat:repeat-x;background-size:calc(var(--babado)*2) var(--babado)}
+.babado-cima{background-image:radial-gradient(circle at 50% 100%,var(--cor) calc(var(--babado) - .5px),transparent var(--babado));background-position:center bottom}
+.babado-baixo{background-image:radial-gradient(circle at 50% 0,var(--cor) calc(var(--babado) - .5px),transparent var(--babado));background-position:center top}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:"Fredoka",sans-serif;font-weight:600;font-size:18px;text-decoration:none;padding:14px 22px;border-radius:14px;border:2px solid transparent;transition:transform .15s ease,background-color .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:var(--verde-wa);color:#fff}
+.btn-wa:hover{background:#0e7a40}
+.btn-claro{background:#fff;color:var(--chocolate)}
+.btn-contorno{border-color:currentColor;color:inherit;background:transparent}
+
+/* HERO */
+.hero{position:relative;min-height:min(92vh,820px);display:flex;align-items:center;color:#fff;overflow:hidden;background:var(--chocolate)}
+.hero>img{position:absolute;top:0;left:0;width:138%;max-width:none;height:100%;object-fit:cover;object-position:50% 30%}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(74,32,10,.86) 0%,rgba(74,32,10,.62) 38%,rgba(74,32,10,0) 66%);z-index:1}
+.hero .wrap{position:relative;z-index:2;padding:72px 0 110px}
+.hero-texto{max-width:540px}
+.hero-logo{width:96px;height:96px;margin-bottom:18px;border-radius:22px;filter:drop-shadow(0 6px 14px rgba(0,0,0,.25))}
+.hero h1{font-family:"Yellowtail",cursive;font-weight:400;font-size:clamp(50px,6.6vw,84px);line-height:1;color:#fff;margin-bottom:14px}
+.hero h1 span{display:block;color:var(--laranja)}
+.hero .lead{font-family:"Fredoka",sans-serif;font-size:clamp(21px,2.3vw,27px);font-weight:500;line-height:1.3;max-width:24ch}
+.hero .prova{display:flex;align-items:center;gap:10px;margin:22px 0 28px;font-size:16px;color:#FFE3C4}
+.hero .prova strong{color:#fff}
+.hero .acoes{display:flex;flex-wrap:wrap;gap:12px}
+.hero .babado-cima{position:absolute;left:0;right:0;bottom:0;z-index:3;--cor:var(--turquesa)}
+
+/* faixa turquesa de prova social */
+.faixa{background:var(--turquesa);padding:18px 0 26px}
+.faixa .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:28px;align-items:center}
+.faixa p.grande{font-family:"Fredoka",sans-serif;font-size:clamp(22px,2.6vw,30px);font-weight:500;line-height:1.25}
+.faixa p.grande b{font-weight:700}
+.faixa ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-weight:500}
+.faixa li{display:flex;gap:10px;align-items:center}
+.faixa li svg{width:22px;height:22px;flex:none}
+.faixa+.babado-baixo{--cor:var(--turquesa)}
+
+/* vitrine */
+section{padding:84px 0}
+.cabeca{max-width:640px;margin-bottom:40px}
+.cabeca p{margin-top:12px;font-size:18px}
+.nota{font-size:14px;color:#7a5a4b;margin-top:10px}
+.vitrine-grupo{margin-top:44px}
+.vitrine-grupo>h3{font-size:26px;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.vitrine-grupo>h3::after{content:"";flex:1;height:0;border-top:3px dotted var(--laranja)}
+.grade{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 22px}
+.item img{aspect-ratio:4/5;object-fit:cover;width:100%;border-radius:22px}
+.item h4{font-family:"Fredoka",sans-serif;font-weight:600;font-size:20px;margin:14px 0 4px}
+.item p{font-size:15.5px;line-height:1.45;color:#5c3f32}
+.item a{display:inline-flex;align-items:center;gap:7px;margin-top:10px;font-weight:700;font-size:15px;color:var(--verde-wa);text-decoration:none;border-bottom:2px solid rgba(18,140,74,.25);padding-bottom:2px}
+.item a:hover{border-bottom-color:var(--verde-wa)}
+
+/* encomenda */
+.encomenda{background:var(--laranja-claro);position:relative}
+.encomenda-in{display:grid;grid-template-columns:1fr 1.25fr;gap:56px;align-items:start}
+.passos{list-style:none;margin:0;padding:0;counter-reset:p;display:grid;gap:22px}
+.passos li{counter-increment:p;display:grid;grid-template-columns:58px 1fr;gap:16px;align-items:start}
+.passos li::before{content:counter(p);font-family:"Fredoka",sans-serif;font-weight:700;font-size:26px;width:58px;height:58px;display:grid;place-items:center;background:var(--laranja);color:var(--chocolate);border-radius:50%;box-shadow:0 0 0 5px var(--turquesa)}
+.passos h3{margin-top:4px}
+.passos p{margin-top:4px;color:#5c3f32}
+.encomenda .btn{margin-top:28px}
+
+/* galeria */
+.galeria{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:260px 260px;gap:14px}
+.galeria figure{margin:0;overflow:hidden;border-radius:22px}
+.galeria img{width:100%;height:100%;object-fit:cover}
+.galeria figure:first-child{grid-row:span 2}
+
+/* sobre */
+.sobre{background:var(--laranja);position:relative}
+.sobre-in{display:grid;grid-template-columns:340px 1fr;gap:56px;align-items:center}
+.sobre-in img{width:100%;max-width:340px;margin-inline:auto;border-radius:32px}
+.sobre .lema{font-family:"Yellowtail",cursive;font-size:clamp(44px,5vw,64px);line-height:1;margin:10px 0 18px;color:#fff;text-shadow:0 2px 0 rgba(59,32,22,.35)}
+.sobre p+p{margin-top:14px}
+.sobre .nota{color:#5a2f12}
+.sobre .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.babado-laranja-cima{--cor:var(--laranja)}
+.babado-laranja-baixo{--cor:var(--laranja)}
+
+/* onde */
+.onde-in{display:grid;grid-template-columns:1fr 1.3fr;gap:44px;align-items:center}
+.onde iframe{width:100%;height:380px;border:0;border-radius:22px;box-shadow:0 0 0 6px var(--turquesa-fundo)}
+.onde .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.onde dl{margin:22px 0 0;display:grid;grid-template-columns:auto 1fr;gap:6px 16px}
+.onde dt{font-weight:700}
+.onde dd{margin:0}
+
+/* final */
+.final{background:var(--chocolate);color:#fff;text-align:center;padding:90px 0}
+.final h2{color:#fff;max-width:18ch;margin:0 auto 14px}
+.final p{max-width:48ch;margin:0 auto 28px;color:#f3d9c6}
+footer{background:var(--chocolate);color:#d9bfae;font-size:14px;padding:0 0 100px;text-align:center}
+footer .wrap{border-top:1px solid rgba(255,255,255,.14);padding-top:24px;display:grid;gap:6px}
+footer a{color:#fff}
+
+/* flutuante */
+.wa-flutuante{position:fixed;right:18px;bottom:18px;z-index:50;width:62px;height:62px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.28)}
+.wa-flutuante svg{width:34px;height:34px}
+
+@media (max-width:980px){
+  .grade{grid-template-columns:repeat(2,1fr)}
+  .encomenda-in,.onde-in{grid-template-columns:1fr;gap:36px}
+  .sobre-in{grid-template-columns:220px 1fr;gap:32px}
+  .faixa .wrap{grid-template-columns:1fr;gap:16px}
+  .hero>img{width:165%}
+  .hero::before{background:linear-gradient(90deg,rgba(74,32,10,.88) 0%,rgba(74,32,10,.66) 42%,rgba(74,32,10,0) 70%)}
+}
+@media (max-width:640px){
+  body{font-size:16.5px}
+  section{padding:64px 0}
+  .hero{min-height:auto;align-items:flex-end}
+  .hero>img{width:100%;object-position:50% 20%;height:58%}
+  .hero::before{background:linear-gradient(180deg,rgba(74,32,10,0) 22%,rgba(74,32,10,.9) 52%,#4a200a 100%)}
+  .hero .wrap{padding:200px 0 80px}
+  .hero-logo{width:76px;height:76px}
+  .hero .acoes .btn{width:100%;justify-content:center}
+  .grade{gap:24px 14px}
+  .item h4{font-size:18px}
+  .item p{font-size:14.5px}
+  .galeria{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .galeria figure{aspect-ratio:1}
+  .galeria figure:first-child{grid-column:span 2;grid-row:auto;aspect-ratio:4/3}
+  .sobre-in{grid-template-columns:1fr;text-align:center}
+  .sobre-in img{max-width:220px}
+  .sobre .acoes{justify-content:center}
+  .onde iframe{height:300px}
+  .btn{font-size:17px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+  <symbol id="ig" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2ZM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0Zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9Z"/></symbol>
+  <symbol id="morango" viewBox="0 0 24 24"><path fill="#D8323C" d="M12 7c4.6 0 8 1.6 8 4.6 0 4.6-4.4 10.4-8 10.4S4 16.2 4 11.6C4 8.6 7.4 7 12 7Z"/><path fill="#1E9E5A" d="M12 3.5c.5 1.4.4 2.4 0 3.5 1.4-1.2 3.3-1.4 5-.6-1.4 1.3-3 1.9-5 1.6-2 .3-3.6-.3-5-1.6 1.7-.8 3.6-.6 5 .6-.4-1.1-.5-2.1 0-3.5Z"/><g fill="#FFE3A6"><circle cx="9" cy="12" r=".8"/><circle cx="12" cy="11" r=".8"/><circle cx="15" cy="12" r=".8"/><circle cx="10.5" cy="15" r=".8"/><circle cx="13.5" cy="15" r=".8"/><circle cx="12" cy="18" r=".8"/></g></symbol>
+  <symbol id="cereja" viewBox="0 0 24 24"><path fill="none" stroke="#1E9E5A" stroke-width="1.6" stroke-linecap="round" d="M8 15C9 9 12 5 16 3M16 15c-.5-5-.3-9 0-12"/><circle cx="7.5" cy="17" r="4.5" fill="#D8323C"/><circle cx="16.5" cy="17" r="4.5" fill="#B8222C"/></symbol>
+  <symbol id="limao" viewBox="0 0 24 24"><ellipse cx="12" cy="13" rx="8.5" ry="6.5" fill="#FFD84A" transform="rotate(-25 12 13)"/><path fill="#1E9E5A" d="M15 5c2-1.6 4-1.8 5.5-1.2-1 1.6-3 2.6-5.2 2.4Z"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para Nathália Bolos &amp; Doces. Ainda não é o site oficial.</div>
+
+<header class="hero">
+  <img src="fotos/hero.jpg" alt="Bolo de festa decorado com morangos e flores sobre a mesa" fetchpriority="high">
+  <div class="wrap">
+    <div class="hero-texto">
+      <img class="hero-logo" src="logo.jpg" alt="Logo da Nathália Bolos &amp; Doces">
+      <h1>Nathália <span>Bolos &amp; Doces</span></h1>
+      <p class="lead">Bolos e doces de festa, feitos sob encomenda em Pirassununga.</p>
+      <p class="prova"><svg class="icon" aria-hidden="true"><use href="#ig"/></svg><span><strong>2.897 seguidores</strong> acompanham as encomendas no Instagram</span></p>
+      <div class="acoes">
+        <a class="btn btn-wa" href="https://wa.me/5519971186572?text=Ol%C3%A1%2C%20Nath%C3%A1lia!%20Vim%20pelo%20site%20e%20quero%20fazer%20uma%20encomenda." target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#wa"/></svg>Encomendar pelo WhatsApp</a>
+        <a class="btn btn-contorno" href="#vitrine">Ver bolos e doces</a>
+      </div>
+    </div>
+  </div>
+  <div class="babado-cima" aria-hidden="true"></div>
+</header>
+
+<div class="faixa">
+  <div class="wrap">
+    <p class="grande">Quase <b>2,9 mil pessoas</b> já acompanham os bolos e docinhos da Nathália no Instagram. Agora quem procura bolo de festa em Pirassununga também encontra por aqui.</p>
+    <ul>
+      <li><svg aria-hidden="true"><use href="#morango"/></svg>Somente encomendas, feitas para a sua data</li>
+      <li><svg aria-hidden="true"><use href="#cereja"/></svg>Bolos e doces para aniversários e festas</li>
+      <li><svg aria-hidden="true"><use href="#limao"/></svg>Pedido direto com a Nathália pelo WhatsApp</li>
+    </ul>
+  </div>
+</div>
+<div class="babado-baixo" aria-hidden="true"></div>
+
+<section id="vitrine">
+  <div class="wrap">
+    <div class="cabeca">
+      <h2>O que sai da cozinha da Nathália</h2>
+      <p>Escolha o que combina com a sua festa e chame no WhatsApp: a mensagem já vai pronta.</p>
+      <p class="nota">Fotos ilustrativas. No site final entram as fotos, sabores e modelos reais da Nathália.</p>
+    </div>
+
+    <div class="vitrine-grupo">
+      <h3>Bolos de festa</h3>
+      <div class="grade">
+        <article class="item">
+          <img src="fotos/aniversario.jpg" alt="Bolo de aniversário com rosas de chantilly" loading="lazy">
+          <h4>Bolo de aniversário</h4>
+          <p>Decorado no tema e nas cores da festa.</p>
+          <a href="https://wa.me/5519971186572?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20bolo%20de%20anivers%C3%A1rio" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#wa"/></svg>Pedir este</a>
+        </article>
+        <article class="item">
+          <img src="fotos/drip.jpg" alt="Bolo rosa com calda escorrendo e granulado colorido" loading="lazy">
+          <h4>Bolo drip colorido</h4>
+          <p>Com calda escorrendo, confeitos e cerejas.</p>
+          <a href="https://wa.me/5519971186572?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20bolo%20drip%20colorido" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#wa"/></svg>Pedir este</a>
+        </article>
+        <article class="item">
+          <img src="fotos/chocolate.jpg" alt="Bolo com cobertura de chocolate e biscoitos" loading="lazy">
+          <h4>Bolo de chocolate</h4>
+          <p>Para quem não abre mão de chocolate.</p>
+          <a href="https://wa.me/5519971186572?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20bolo%20de%20chocolate" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#wa"/></svg>Pedir este</a>
+        </article>
+        <article class="item">
+          <img src="fotos/morango.jpg" alt="Fatia de bolo de morango com chantilly" loading="lazy">
+          <h4>Bolo de morango</h4>
+          <p>Massa fofinha, chantilly e morango.</p>
+          <a href="https://wa.me/5519971186572?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20bolo%20de%20morango" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#wa"/></svg>Pedir este</a>
+        </article>
+      </div>
+    </div>
+
+    <div class="vitrine-grupo">
+      <h3>Doces para a mesa</h3>
+      <div class="grade">
+        <article class="item">
+          <img src="fotos/brigadeiros.jpg" alt="Brigadeiros de chocolate" loading="lazy">
+          <h4>Brigadeiros</h4>
+          <p>O docinho que não pode faltar na festa.</p>
+          <a href="https://wa.me/5519971186572?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20brigadeiros%20para%20festa" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#wa"/></svg>Pedir estes</a>
+        </article>
+        <article class="item">
+          <img src="fotos/sortidos.jpg" alt="Docinhos sortidos com confeitos coloridos" loading="lazy">
+          <h4>Docinhos sortidos</h4>
+          <p>Sabores variados para encher a mesa.</p>
+          <a href="https://wa.me/5519971186572?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20docinhos%20sortidos" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#wa"/></svg>Pedir estes</a>
+        </article>
+        <article class="item">
+          <img src="fotos/trufas.jpg" alt="Trufas de chocolate com cacau" loading="lazy">
+          <h4>Trufas</h4>
+          <p>Para lembrancinha ou para a mesa de doces.</p>
+          <a href="https://wa.me/5519971186572?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20trufas" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#wa"/></svg>Pedir estas</a>
+        </article>
+        <article class="item">
+          <img src="fotos/cupcakes.jpg" alt="Cupcakes com cobertura turquesa e granulado" loading="lazy">
+          <h4>Cupcakes</h4>
+          <p>Na cor da festa, um para cada convidado.</p>
+          <a href="https://wa.me/5519971186572?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20cupcakes" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#wa"/></svg>Pedir estes</a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="encomenda">
+  <div class="wrap encomenda-in">
+    <div class="cabeca">
+      <h2>Como encomendar</h2>
+      <p>A Nathália trabalha só com encomendas. Por isso, quanto antes você chamar, mais fácil garantir a sua data.</p>
+      <p class="nota">Texto de exemplo. No site final entram o prazo de antecedência e a forma de retirada ou entrega da Nathália.</p>
+      <a class="btn btn-wa" href="https://wa.me/5519971186572?text=Ol%C3%A1%2C%20Nath%C3%A1lia!%20Vim%20pelo%20site%20e%20quero%20ver%20se%20tem%20data%20para%20a%20minha%20festa." target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#wa"/></svg>Consultar minha data</a>
+    </div>
+    <ol class="passos">
+      <li><div><h3>Conte a data e o tamanho da festa</h3><p>Mande no WhatsApp o dia, quantas pessoas e o que você precisa: bolo, doces ou os dois.</p></div></li>
+      <li><div><h3>Escolha sabores e tema</h3><p>Combine com a Nathália o recheio, a decoração e as cores. Se tiver uma foto de referência, pode mandar.</p></div></li>
+      <li><div><h3>Feito para o seu dia</h3><p>O pedido é preparado para a sua data e a retirada ou entrega é combinada direto com ela.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="wrap">
+    <div class="cabeca">
+      <h2>Festa boa tem bolo bonito</h2>
+      <p class="nota">Fotos ilustrativas. No site final entram as fotos das encomendas postadas no Instagram.</p>
+    </div>
+    <div class="galeria">
+      <figure><img src="fotos/g-frutas.jpg" alt="Bolo de chocolate com frutas vermelhas e vela faísca" loading="lazy"></figure>
+      <figure><img src="fotos/g-colorido.jpg" alt="Bolo rosa recheado com confeitos coloridos" loading="lazy"></figure>
+      <figure><img src="fotos/g-cupcake.jpg" alt="Cupcake red velvet com chantilly" loading="lazy"></figure>
+      <figure><img src="fotos/g-framboesa.jpg" alt="Bolo com chantilly e framboesas" loading="lazy"></figure>
+      <figure><img src="fotos/g-velas.jpg" alt="Bolo de chocolate com velas acesas" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<div class="babado-cima babado-laranja-cima" aria-hidden="true"></div>
+<section class="sobre">
+  <div class="wrap sobre-in">
+    <img src="logo.jpg" alt="Logo da Nathália Bolos &amp; Doces com a Nathália de chapéu de confeiteira" loading="lazy">
+    <div>
+      <h2>Quem faz</h2>
+      <p class="lema">Adoçando a vida!</p>
+      <p>É o lema que está no logo da Nathália, e resume o trabalho: bolos e doces de festa feitos sob encomenda, em Pirassununga, para aniversários e comemorações.</p>
+      <p>Cada pedido é combinado direto com ela, do sabor à decoração, para chegar à mesa do jeito que você imaginou.</p>
+      <p class="nota">Texto de exemplo. No site final entra a história da Nathália contada por ela.</p>
+      <div class="acoes">
+        <a class="btn btn-wa" href="https://wa.me/5519971186572?text=Ol%C3%A1%2C%20Nath%C3%A1lia!%20Vim%20pelo%20site%20e%20quero%20fazer%20uma%20encomenda." target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#wa"/></svg>Falar com a Nathália</a>
+        <a class="btn btn-claro" href="https://www.instagram.com/nathaliabolosedoces/" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#ig"/></svg>@nathaliabolosedoces</a>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="babado-baixo babado-laranja-baixo" aria-hidden="true"></div>
+
+<section class="onde" id="onde">
+  <div class="wrap onde-in">
+    <div>
+      <h2>Encomendas em Pirassununga</h2>
+      <p style="margin-top:12px">A Nathália atende por encomenda. O local de retirada ou a entrega é combinado pelo WhatsApp.</p>
+      <dl>
+        <dt>WhatsApp</dt><dd><a href="https://wa.me/5519971186572?text=Ol%C3%A1%2C%20Nath%C3%A1lia!%20Vim%20pelo%20site%20e%20quero%20fazer%20uma%20encomenda." target="_blank" rel="noopener">(19) 97118-6572</a></dd>
+        <dt>Instagram</dt><dd><a href="https://www.instagram.com/nathaliabolosedoces/" target="_blank" rel="noopener">@nathaliabolosedoces</a></dd>
+        <dt>Cidade</dt><dd>Pirassununga, SP</dd>
+      </dl>
+      <p class="nota">No site final entram o endereço de retirada e os horários de atendimento.</p>
+      <div class="acoes">
+        <a class="btn btn-wa" href="https://wa.me/5519971186572?text=Ol%C3%A1%2C%20Nath%C3%A1lia!%20Vim%20pelo%20site%20e%20quero%20combinar%20a%20retirada%20de%20uma%20encomenda." target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#wa"/></svg>Combinar retirada</a>
+        <a class="btn btn-contorno" href="https://www.google.com/maps/dir/?api=1&amp;destination=Pirassununga%2C%20SP" target="_blank" rel="noopener">Traçar rota</a>
+      </div>
+    </div>
+    <iframe src="https://www.google.com/maps?q=Pirassununga%2C%20SP&amp;output=embed" loading="lazy" title="Mapa de Pirassununga, SP" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Tem festa chegando? Garanta o bolo.</h2>
+    <p>Mande a data e o tamanho da festa. A Nathália responde com sabores e o que dá para fazer.</p>
+    <a class="btn btn-wa" href="https://wa.me/5519971186572?text=Ol%C3%A1%2C%20Nath%C3%A1lia!%20Vim%20pelo%20site%20e%20quero%20fazer%20uma%20encomenda." target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#wa"/></svg>Encomendar pelo WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Nathália Bolos &amp; Doces · Pirassununga, SP · <a href="https://www.instagram.com/nathaliabolosedoces/" target="_blank" rel="noopener">@nathaliabolosedoces</a></p>
+    <p>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</p>
+  </div>
+</footer>
+
+<a class="wa-flutuante" href="https://wa.me/5519971186572?text=Ol%C3%A1%2C%20Nath%C3%A1lia!%20Vim%20pelo%20site%20e%20quero%20fazer%20uma%20encomenda." target="_blank" rel="noopener" aria-label="Encomendar pelo WhatsApp"><svg aria-hidden="true"><use href="#wa"/></svg></a>
+</body>
+</html>
