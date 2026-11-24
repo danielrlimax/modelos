@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Família do Salgado | Salgados, pastéis e churros a pronta entrega em Mogi Mirim</title>
+<meta name="description" content="Modelo demonstrativo de site para a Família do Salgado: salgados, pastéis, churros e assados a pronta entrega, por delivery em Mogi Mirim.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=Bowlby+One&family=Yellowtail&display=swap" rel="stylesheet">
+<style>
+:root{
+  --breu:#000;          /* fundo do logo */
+  --grafite:#1d1d1d;    /* superfícies sobre o preto */
+  --ouro:#F5B70A;       /* letras douradas do logo */
+  --ouro-claro:#FFD54A; /* brilho do dourado */
+  --brasa:#B4470C;      /* casquinha da coxinha frita */
+  --papel:#fff;
+  --tinta:#111;
+  --cinza:#5b5b5b;
+  --zap:#1FAF54;
+  --raio:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+body{font-family:Archivo,system-ui,sans-serif;font-size:17px;line-height:1.6;color:var(--tinta);background:var(--papel);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ouro);outline-offset:3px}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:"Bowlby One",Impact,sans-serif;font-weight:400;line-height:1.02;letter-spacing:-.01em}
+h2{font-size:clamp(34px,5vw,60px)}
+.nota{font-size:14px;color:var(--cinza);font-style:italic}
+.ico{width:1.2em;height:1.2em;flex:none}
+
+/* faixa e topo */
+.faixa{background:var(--ouro);color:var(--breu);text-align:center;font-size:13.5px;font-weight:600;padding:7px 16px;line-height:1.4}
+.topo{background:var(--breu);color:var(--papel);position:sticky;top:0;z-index:20;border-bottom:1px solid #2a2a2a}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px}
+.marca{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.marca b{font-family:"Bowlby One",sans-serif;font-weight:400;font-size:22px;color:var(--ouro)}
+.marca small{font-size:12.5px;color:#cfcfcf;margin-top:4px;font-weight:500}
+.topo nav{display:flex;gap:22px;font-size:15px;font-weight:500}
+.topo nav a{text-decoration:none;color:#e9e9e9}
+.topo nav a:hover{color:var(--ouro)}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:16px;border-radius:var(--raio);padding:14px 22px;line-height:1.2;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-zap{background:var(--zap);color:#fff}
+.btn-ouro{background:var(--ouro);color:var(--breu)}
+.btn-linha{border:2px solid currentColor;color:var(--papel)}
+.topo .btn{padding:10px 16px;font-size:15px}
+@media (max-width:860px){.topo nav{display:none}}
+@media (max-width:430px){.topo .btn span{display:none}.topo .btn{padding:10px 12px}}
+
+/* hero */
+.hero{position:relative;min-height:calc(100svh - 64px);display:flex;align-items:flex-end;background:var(--breu) url(fotos/hero.jpg) center 62%/cover no-repeat}
+.hero .wrap{padding:0 0 48px}
+.placa{background:var(--breu);color:var(--papel);max-width:600px;padding:34px 36px 32px;border-radius:var(--raio);position:relative}
+.placa .slogan{font-family:Yellowtail,cursive;color:var(--ouro-claro);font-size:30px;line-height:1;display:block;margin-bottom:10px}
+.placa h1{color:var(--ouro);font-size:clamp(40px,5vw,62px)}
+.placa p{margin-top:16px;font-size:18px;color:#e6e6e6;max-width:46ch}
+.placa .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.seguidores{display:flex;align-items:center;gap:12px;margin-top:24px;padding-top:20px;border-top:1px solid #333;font-size:15px;color:#cfcfcf}
+.seguidores b{font-family:"Bowlby One",sans-serif;font-weight:400;font-size:30px;color:var(--papel);line-height:1}
+@media (max-width:860px){.hero{background-position:62% 70%}}
+@media (max-width:560px){
+  .hero{min-height:auto;display:block;background:var(--breu)}
+  .hero::before{content:"";display:block;height:58vw;min-height:230px;background:url(fotos/hero.jpg) 30% 70%/cover}
+  .hero .wrap{width:100%;padding:0}
+  .placa{border-radius:0;padding:28px 20px 30px;max-width:none}
+  .placa .acoes .btn{flex:1 1 100%;justify-content:center}
+}
+
+/* faixa do cardápio em letreiro */
+.letreiro{background:var(--ouro);color:var(--breu);overflow:hidden}
+.letreiro ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:4px 34px;padding:22px 20px;font-family:"Bowlby One",sans-serif;font-size:clamp(26px,4.2vw,50px);line-height:1.1}
+.letreiro li{display:flex;align-items:center;gap:34px}
+.letreiro ul{gap:4px 26px}
+.letreiro li{gap:26px}
+.letreiro li+li::before{content:"";width:12px;height:12px;border-radius:50%;background:var(--breu);flex:none}
+.letreiro p{text-align:center;font-weight:600;padding:0 20px 20px;margin-top:-6px;font-size:16px}
+
+/* cardápio */
+.secao{padding:96px 0}
+.cab{display:flex;justify-content:space-between;align-items:end;gap:28px;flex-wrap:wrap;margin-bottom:40px}
+.cab p{max-width:46ch;color:var(--cinza)}
+.grade{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.item{display:flex;flex-direction:column}
+.item img{aspect-ratio:4/3;object-fit:cover;width:100%;border-radius:var(--raio)}
+.item h3{font-size:23px;margin-top:14px}
+.item p{font-size:15px;color:var(--cinza);margin-top:4px;flex:1}
+.item a{display:inline-flex;align-items:center;gap:8px;margin-top:10px;font-weight:800;font-size:15px;color:#13843f;text-decoration:none}
+.item a:hover{text-decoration:underline}
+.grade-nota{margin-top:30px}
+@media (max-width:980px){.grade{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:390px){.grade{gap:14px}.item h3{font-size:19px}}
+
+/* quarta maluca: o elemento da casa */
+.quarta{background:var(--breu);color:var(--papel);padding:100px 0;overflow:hidden}
+.quarta h2{color:var(--ouro)}
+.quarta .intro{max-width:56ch;margin-top:16px;color:#dcdcdc;font-size:18px}
+.semana{list-style:none;display:grid;grid-template-columns:1fr 1fr 1fr 2.4fr 1fr 1fr 1fr;gap:10px;margin:56px 0 30px;align-items:center}
+.dia{background:var(--grafite);border-radius:var(--raio);height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:600;color:#9a9a9a;font-size:17px;position:relative}
+.dia.hoje{outline:2px solid var(--papel);color:var(--papel)}
+.dia.hoje::after{content:"hoje";position:absolute;bottom:10px;font-size:12px;font-weight:800;color:var(--ouro)}
+.dia.qua{background:var(--ouro);color:var(--breu);height:210px;transform:rotate(-4deg);box-shadow:8px 10px 0 var(--brasa)}
+.dia.qua b{font-family:"Bowlby One",sans-serif;font-weight:400;font-size:clamp(34px,4.4vw,58px);line-height:.9;display:block}
+.dia.qua i{font-family:Yellowtail,cursive;font-style:normal;font-size:clamp(34px,4vw,54px);line-height:1;display:block;transform:rotate(-6deg);margin-top:2px}
+.dia.qua.hoje{outline:none}
+.dia.qua.hoje::after{bottom:auto;top:-30px;color:var(--ouro);font-size:14px}
+@media (prefers-reduced-motion:no-preference){.dia.qua.hoje{animation:pula 1.6s ease-in-out infinite}}
+@keyframes pula{50%{transform:rotate(3deg) scale(1.03)}}
+.contagem{font-family:"Bowlby One",sans-serif;font-size:clamp(22px,2.6vw,32px);line-height:1.15;color:var(--papel)}
+.contagem span{color:var(--ouro)}
+.quarta .acoes{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:22px}
+.quarta .nota{color:#a8a8a8}
+@media (max-width:700px){
+  .semana{grid-template-columns:repeat(6,1fr);gap:8px}
+  .dia{height:74px;font-size:15px}
+  .dia.qua{grid-column:1/-1;order:-1;height:150px;margin:0 6px 22px;transform:rotate(-2.5deg)}
+  .dia.hoje::after{bottom:4px;font-size:10.5px}
+}
+
+/* festa */
+.festa{background:var(--ouro);color:var(--breu)}
+.festa .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center;padding:90px 0}
+.festa img{border-radius:var(--raio);width:100%;aspect-ratio:5/4;object-fit:cover}
+.festa p{font-size:18px;margin-top:16px;max-width:44ch}
+.festa ul{margin:22px 0 28px 1.1em;font-weight:600}
+.festa li{margin:5px 0}
+.festa .nota{color:#4a3a00}
+@media (max-width:860px){.festa .wrap{grid-template-columns:1fr;gap:34px;padding:70px 0}}
+
+/* galeria */
+.galeria{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:260px 260px;gap:12px}
+.galeria img{width:100%;height:100%;object-fit:cover;border-radius:var(--raio)}
+.galeria img:first-child{grid-row:1/3}
+@media (max-width:700px){.galeria{grid-template-columns:1fr 1fr;grid-template-rows:auto}.galeria img{aspect-ratio:1}.galeria img:first-child{grid-column:1/-1;grid-row:auto;aspect-ratio:4/3}}
+
+/* entrega e mapa */
+.entrega{background:var(--breu);color:var(--papel)}
+.entrega .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:center;padding:96px 0}
+.entrega h2{color:var(--ouro)}
+.entrega p{color:#dcdcdc;margin-top:16px;max-width:46ch}
+.fatos{list-style:none;margin:26px 0 30px;border-top:1px solid #333}
+.fatos li{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid #333}
+.fatos b{min-width:112px;color:var(--ouro);font-weight:800}
+.fatos a{color:var(--papel)}
+.entrega iframe{width:100%;height:420px;border:0;background:var(--grafite);border-radius:var(--raio);filter:grayscale(.3)}
+.entrega .nota{color:#a8a8a8}
+@media (max-width:860px){.entrega .wrap{grid-template-columns:1fr;gap:34px;padding:70px 0}.entrega iframe{height:300px}}
+
+/* chamada final */
+.final{padding:100px 0;text-align:center;background:var(--papel)}
+.final .slogan{font-family:Yellowtail,cursive;font-size:clamp(40px,6vw,72px);color:var(--brasa);line-height:1}
+.final h2{margin-top:10px}
+.final p{color:var(--cinza);margin:14px auto 28px;max-width:46ch}
+
+footer{background:var(--breu);color:#bdbdbd;font-size:14px;padding:28px 0 96px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+.flutua{position:fixed;right:18px;bottom:18px;z-index:30;width:60px;height:60px;border-radius:50%;background:var(--zap);color:#fff;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.flutua svg{width:32px;height:32px}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.870 9.870 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.860 9.860 0 01-1.510-5.260c.001-5.450 4.436-9.884 9.888-9.884 2.640 0 5.122 1.030 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.450-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.050 0C5.495 0 .160 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.480-8.413Z"/></symbol>
+</svg>
+
+<div class="faixa">Modelo demonstrativo feito por Daniel para Família do Salgado Mogi Mirim. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Família do Salgado, início"><b>Família do Salgado</b><small>Salgados em Mogi Mirim</small></a>
+    <nav aria-label="Seções">
+      <a href="#cardapio">Cardápio</a>
+      <a href="#quarta">Quarta Maluca</a>
+      <a href="#festa">Festas</a>
+      <a href="#entrega">Entrega</a>
+    </nav>
+    <a class="btn btn-zap" href="https://wa.me/5519998904351?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg><span>Pedir agora</span></a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-label="Apresentação">
+    <div class="wrap">
+      <div class="placa">
+        <span class="slogan">sua melhor companhia</span>
+        <h1>Salgado quentinho, pronta entrega.</h1>
+        <p>Salgados, pastéis, churros e assados da Família do Salgado, com atendimento por delivery em Mogi Mirim. Chamou no WhatsApp, a gente prepara.</p>
+        <div class="acoes">
+          <a class="btn btn-zap" href="https://wa.me/5519998904351?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir pelo WhatsApp</a>
+          <a class="btn btn-linha" href="#cardapio">Ver o cardápio</a>
+        </div>
+        <div class="seguidores"><b>5.118</b><span>pessoas acompanham a Família do Salgado no Instagram</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="letreiro" aria-label="O que tem">
+    <ul>
+      <li>Salgados</li><li>Pastéis</li><li>Churros</li><li>Assados</li>
+    </ul>
+    <p>Tudo a pronta entrega, direto na sua casa.</p>
+  </section>
+
+  <section class="secao" id="cardapio">
+    <div class="wrap">
+      <div class="cab">
+        <h2>O que sai da cozinha</h2>
+        <p>Escolha o que deu vontade e chame no WhatsApp. A mensagem já vai escrita, é só enviar.</p>
+      </div>
+      <div class="grade">
+        <article class="item">
+          <img src="fotos/bolinha.jpg" alt="Bolinhas fritas douradas numa tigela" loading="lazy">
+          <h3>Bolinha de queijo</h3>
+          <p>Casquinha crocante e queijo puxando por dentro.</p>
+          <a href="https://wa.me/5519998904351?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20bolinha%20de%20queijo." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir</a>
+        </article>
+        <article class="item">
+          <img src="fotos/kibe.jpg" alt="Kibes fritos com alface, tomate e limão" loading="lazy">
+          <h3>Kibe</h3>
+          <p>Do jeito tradicional, com um limãozinho do lado.</p>
+          <a href="https://wa.me/5519998904351?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20kibe." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir</a>
+        </article>
+        <article class="item">
+          <img src="fotos/risoles.jpg" alt="Risoles dourados num prato branco" loading="lazy">
+          <h3>Risoles</h3>
+          <p>Massa fininha e recheio cremoso.</p>
+          <a href="https://wa.me/5519998904351?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20risoles." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir</a>
+        </article>
+        <article class="item">
+          <img src="fotos/croquete.jpg" alt="Croquetes empanados num prato" loading="lazy">
+          <h3>Croquete</h3>
+          <p>Empanado sequinho, bom de comer quente.</p>
+          <a href="https://wa.me/5519998904351?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20croquete." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir</a>
+        </article>
+        <article class="item">
+          <img src="fotos/pastel.jpg" alt="Pastéis fritos com molho de pimenta" loading="lazy">
+          <h3>Pastéis</h3>
+          <p>Massa estalando e recheio de verdade.</p>
+          <a href="https://wa.me/5519998904351?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20os%20past%C3%A9is." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir</a>
+        </article>
+        <article class="item">
+          <img src="fotos/churros.jpg" alt="Churros com açúcar e canela e chocolate para molhar" loading="lazy">
+          <h3>Churros</h3>
+          <p>Açúcar, canela e recheio na medida.</p>
+          <a href="https://wa.me/5519998904351?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20os%20churros." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir</a>
+        </article>
+        <article class="item">
+          <img src="fotos/assados.jpg" alt="Salgados assados dourados numa travessa" loading="lazy">
+          <h3>Assados</h3>
+          <p>Pra quem prefere forno à fritura.</p>
+          <a href="https://wa.me/5519998904351?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20os%20assados." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir</a>
+        </article>
+        <article class="item">
+          <img src="fotos/festa.jpg" alt="Bandeja cheia de salgados enfileirados" loading="lazy">
+          <h3>Cento para festa</h3>
+          <p>Salgados em quantidade pra aniversário e reunião.</p>
+          <a href="https://wa.me/5519998904351?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20encomendar%20salgados%20para%20festa." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Encomendar</a>
+        </article>
+      </div>
+      <p class="nota grade-nota">Texto de exemplo. No site final entram os sabores, tamanhos e preços reais da Família do Salgado. Fotos ilustrativas.</p>
+    </div>
+  </section>
+
+  <section class="quarta" id="quarta">
+    <div class="wrap">
+      <h2>Quarta Maluca</h2>
+      <p class="intro">No meio da semana tem promoção, e o pessoal do Instagram já sabe. Marque na agenda: quarta-feira é dia de pedir salgado.</p>
+      <ol class="semana" aria-label="Dias da semana">
+        <li class="dia" data-d="0">Dom</li>
+        <li class="dia" data-d="1">Seg</li>
+        <li class="dia" data-d="2">Ter</li>
+        <li class="dia qua" data-d="3"><b>Quarta</b><i>Maluca</i></li>
+        <li class="dia" data-d="4">Qui</li>
+        <li class="dia" data-d="5">Sex</li>
+        <li class="dia" data-d="6">Sáb</li>
+      </ol>
+      <p class="contagem" id="contagem" aria-live="polite">Quarta-feira é dia de <span>Quarta Maluca</span>.</p>
+      <div class="acoes">
+        <a class="btn btn-ouro" href="https://wa.me/5519998904351?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20da%20Quarta%20Maluca." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar da Quarta Maluca</a>
+        <span class="nota">Texto de exemplo. No site final entram as regras e os itens da promoção.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="festa" id="festa">
+    <div class="wrap">
+      <img src="fotos/cesta.jpg" alt="Salgados fritos servidos num guardanapo" loading="lazy">
+      <div>
+        <h2>Vai ter festa? Os salgados a gente resolve.</h2>
+        <p>Aniversário, chá, reunião da firma ou aquele domingo com a família toda. Conte quantas pessoas vêm e a gente monta a quantidade certa.</p>
+        <ul>
+          <li>Salgados fritos e assados</li>
+          <li>Pastéis e churros pra completar a mesa</li>
+          <li>Entrega no endereço da festa em Mogi Mirim</li>
+        </ul>
+        <a class="btn btn-zap" href="https://wa.me/5519998904351?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20encomendar%20salgados%20para%20uma%20festa." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Encomendar para festa</a>
+        <p class="nota">Texto de exemplo. No site final entram os pacotes, quantidades mínimas e prazos reais.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" aria-labelledby="g-tit">
+    <div class="wrap">
+      <div class="cab">
+        <h2 id="g-tit">Crocante de ver</h2>
+        <p>No site final entram as fotos dos salgados de verdade, direto do Instagram da casa. Fotos ilustrativas.</p>
+      </div>
+      <div class="galeria">
+        <img src="fotos/tabua.jpg" alt="Tábua com salgados fritos e molhos" loading="lazy">
+        <img src="fotos/pastel-mao.jpg" alt="Pastel frito no saquinho" loading="lazy">
+        <img src="fotos/churros-coracao.jpg" alt="Churros com açúcar" loading="lazy">
+        <img src="fotos/vitrine.jpg" alt="Salgados assados enfileirados" loading="lazy">
+        <img src="fotos/entrega.jpg" alt="Entregador de moto à noite" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="entrega" id="entrega">
+    <div class="wrap">
+      <div>
+        <h2>Atendimento exclusivo por delivery</h2>
+        <p>A Família do Salgado não tem balcão: você pede pelo WhatsApp e recebe em casa, em Mogi Mirim.</p>
+        <ul class="fatos">
+          <li><b>WhatsApp</b><a href="https://wa.me/5519998904351?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido." target="_blank" rel="noopener">(19) 99890-4351</a></li>
+          <li><b>Instagram</b><a href="https://www.instagram.com/companhia_do_salgado2/" target="_blank" rel="noopener">@companhia_do_salgado2</a></li>
+          <li><b>Cidade</b><span>Mogi Mirim, SP</span></li>
+          <li><b>Horários</b><span>No site final entra a tabela de horários, com aviso de aberto ou fechado agora.</span></li>
+        </ul>
+        <a class="btn btn-zap" href="https://wa.me/5519998904351?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20se%20entregam%20no%20meu%20bairro." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Entrega no meu bairro?</a>
+        <p class="nota" style="margin-top:14px">No site final entram os bairros atendidos e a taxa de entrega.</p>
+      </div>
+      <iframe title="Mapa de Mogi Mirim" src="https://www.google.com/maps?q=Mogi%20Mirim%2C%20SP&output=embed" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <span class="slogan">sua melhor companhia</span>
+      <h2>Bateu a fome? Chama a família.</h2>
+      <p>Salgados, pastéis, churros e assados a pronta entrega em Mogi Mirim.</p>
+      <a class="btn btn-zap" href="https://wa.me/5519998904351?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir pelo WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Família do Salgado, Mogi Mirim (SP). WhatsApp (19) 99890-4351</span>
+    <span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span>
+  </div>
+</footer>
+
+<a class="flutua" href="https://wa.me/5519998904351?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido." target="_blank" rel="noopener" aria-label="Pedir pelo WhatsApp"><svg aria-hidden="true"><use href="#wa"/></svg></a>
+
+<script>
+(function(){
+  var nomes=['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'];
+  var hoje=nomes.indexOf(new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',weekday:'short'}).format(new Date()).replace('.','').replace(/^./,function(c){return c.toUpperCase()}));
+  if(hoje<0){hoje=new Date().getDay();}
+  var dia=document.querySelector('.dia[data-d="'+hoje+'"]');
+  if(dia){dia.classList.add('hoje');dia.setAttribute('aria-current','date');}
+  var falta=(3-hoje+7)%7, el=document.getElementById('contagem');
+  if(falta===0) el.innerHTML='Hoje é <span>Quarta Maluca</span>. Aproveite!';
+  else if(falta===1) el.innerHTML='Amanhã é <span>Quarta Maluca</span>.';
+  else el.innerHTML='Faltam '+falta+' dias para a <span>Quarta Maluca</span>.';
+})();
+</script>
+</body>
+</html>
