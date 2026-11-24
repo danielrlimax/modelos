@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Imperial Salgados &amp; Cia | Salgados para festa em Limeira</title>
+<meta name="description" content="Salgados fritos e congelados para festas, eventos e buffets em Limeira. Nota 4,9 no Google. Encomende pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --rubi:#A8111B;      /* vermelho do logo */
+  --vinho:#5A0910;     /* fundo das seções nobres */
+  --ouro:#D9A62E;      /* coroa e letras */
+  --ouro-claro:#F3D27A;
+  --massa:#FFF4DC;     /* o creme da massa frita */
+  --tinta:#2B0B0D;
+  --zap:#1FA855;
+  --raio:6px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Figtree,system-ui,sans-serif;color:var(--tinta);background:var(--massa);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:"Rozha One",Georgia,serif;font-weight:400;line-height:1.05;letter-spacing:-.005em}
+h2{font-size:clamp(2rem,4.4vw,3.2rem);margin-bottom:.35em}
+.largura{width:min(1180px,100% - 40px);margin-inline:auto}
+:focus-visible{outline:3px solid var(--ouro);outline-offset:3px}
+.ico{width:1.2em;height:1.2em;flex:none}
+.nota{font-size:.82rem;opacity:.72;margin-top:14px;font-style:italic}
+
+/* botões: retângulos de canto curto, não pílulas */
+.botao{display:inline-flex;align-items:center;gap:.55em;padding:15px 22px;border-radius:var(--raio);font-weight:700;text-decoration:none;font-size:1rem;border:2px solid transparent;transition:transform .15s, background .15s}
+.botao:hover{transform:translateY(-1px)}
+.zap{background:var(--zap);color:#fff}
+.zap:hover{background:#178a45}
+.ouro{background:transparent;border-color:currentColor}
+.rubi{background:var(--rubi);color:#fff}
+
+.aviso{background:var(--tinta);color:var(--ouro-claro);text-align:center;font-size:.8rem;padding:7px 14px}
+
+/* ---------- HERO ---------- */
+.topo{position:relative;min-height:min(92svh,860px);display:flex;flex-direction:column;overflow:hidden;background:#fbe7b8}
+.topo picture,.topo .foto{position:absolute;inset:0;width:100%;height:100%}
+.topo .foto{object-fit:cover;object-position:0% 50%}
+.barra{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;padding-block:18px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none}
+.marca img{width:58px;height:58px;border-radius:var(--raio);box-shadow:0 4px 14px rgba(90,9,16,.25)}
+.marca span{font-family:"Rozha One",serif;font-size:1.25rem;line-height:1;color:var(--vinho)}
+.marca small{display:block;font-family:Figtree,sans-serif;font-size:.78rem;color:var(--rubi);font-weight:600;margin-top:4px}
+.barra nav{display:flex;gap:26px}
+.barra nav a{text-decoration:none;font-weight:600;color:var(--vinho);font-size:.95rem}
+.barra nav a:hover{color:var(--rubi)}
+.miolo{position:relative;z-index:2;flex:1;display:flex;align-items:center;padding-bottom:56px}
+.texto{max-width:600px}
+.coroa{width:64px;color:var(--ouro);margin-bottom:10px;filter:drop-shadow(0 2px 0 rgba(90,9,16,.25))}
+.topo h1{font-size:clamp(2.9rem,5.6vw,4.5rem);color:var(--vinho);margin-bottom:18px}
+.topo h1 em{font-style:normal;color:var(--rubi)}
+.sub{font-size:1.15rem;max-width:30em;color:#4a1a14;margin-bottom:26px;font-weight:500}
+.acoes{display:flex;flex-wrap:wrap;gap:12px}
+.topo .ouro{color:var(--vinho)}
+.selo-linha{margin-top:22px;display:flex;flex-direction:column;gap:6px}
+.nota-g{font-size:.95rem;font-weight:600;color:#4a1a14}
+.nota-g b{font-family:"Rozha One",serif;font-weight:400;font-size:1.5rem;color:var(--rubi);vertical-align:-2px}
+.nota-g .estrelas{color:#B3820F;margin-right:4px;font-size:.95rem}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:.92rem;font-weight:600;color:#4a1a14}
+.status i{width:10px;height:10px;border-radius:50%;background:#b4532a}
+.status.aberto i{background:var(--zap);box-shadow:0 0 0 4px rgba(31,168,85,.18)}
+
+/* faixa de prova social */
+.prova{background:var(--rubi);color:#fff;position:relative}
+.prova::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--ouro)}
+.prova ul{list-style:none;display:grid;grid-template-columns:repeat(4,1fr)}
+.prova li{padding:26px 18px;border-left:1px solid rgba(243,210,122,.28)}
+.prova li:first-child{border-left:0;padding-left:0}
+.prova b{display:block;font-family:"Rozha One",serif;font-weight:400;font-size:2.3rem;line-height:1;color:var(--ouro-claro)}
+.prova span{font-size:.92rem;opacity:.95}
+.estrelas{color:var(--ouro-claro);letter-spacing:2px;font-size:1rem;margin-left:4px;vertical-align:middle}
+
+/* ---------- fritos ou congelados ---------- */
+.jeito{padding:96px 0 80px}
+.jeito .cab{max-width:640px;margin-bottom:38px}
+.jeito .cab p{font-size:1.1rem}
+.duas{display:grid;grid-template-columns:1.15fr .85fr;gap:22px}
+.op{position:relative;border-radius:var(--raio);overflow:hidden;min-height:420px;display:flex;align-items:flex-end;color:#fff}
+.op img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.op::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(43,11,13,.88) 0%,rgba(43,11,13,.15) 55%,transparent 75%)}
+.op div{position:relative;z-index:1;padding:28px}
+.op h3{font-size:2.2rem;color:var(--ouro-claro)}
+.op p{max-width:28em}
+
+/* ---------- PEDIDO / calculadora ---------- */
+.pedido{background:var(--vinho);color:#fff;padding:96px 0;position:relative}
+.pedido h2{color:var(--ouro-claro)}
+.pedido .intro{max-width:620px;font-size:1.08rem;opacity:.92;margin-bottom:36px}
+.pedido .grade{display:grid;grid-template-columns:1fr 400px;gap:30px;align-items:start}
+.cartoes{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cartao{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;background:#6d1219;border-radius:var(--raio);overflow:hidden;position:relative;border:2px solid transparent;transition:background .15s,border-color .15s}
+.cartao:focus-visible{outline:3px solid var(--ouro);outline-offset:2px}
+.cartao-foto{aspect-ratio:4/3;overflow:hidden}
+.cartao-foto img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.cartao:hover .cartao-foto img{transform:scale(1.04)}
+.cartao-texto{padding:11px 12px 13px;display:flex;flex-direction:column;gap:2px}
+.cartao-texto strong{font-size:1rem;color:#fff}
+.cartao-texto small{font-size:.8rem;line-height:1.35;color:#f2d9c9}
+.cartao-marca{position:absolute;top:8px;right:8px;width:28px;height:28px;border-radius:50%;background:rgba(43,11,13,.55);border:2px solid rgba(255,255,255,.7)}
+.cartao[aria-pressed=true]{background:var(--ouro);border-color:var(--ouro-claro)}
+.cartao[aria-pressed=true] .cartao-texto strong{color:var(--tinta)}
+.cartao[aria-pressed=true] .cartao-texto small{color:#4a2a0c}
+.cartao[aria-pressed=true] .cartao-marca{background:var(--rubi);border-color:#fff}
+.cartao[aria-pressed=true] .cartao-marca::after{content:"✓";position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-weight:800;font-size:.95rem}
+
+.ficha{background:var(--massa);color:var(--tinta);border-radius:var(--raio);padding:26px;position:sticky;top:20px;box-shadow:0 0 0 6px rgba(217,166,46,.35)}
+.ficha h3{font-size:1.7rem;color:var(--vinho);margin-bottom:4px}
+.ficha>p{font-size:.9rem;margin-bottom:16px;color:#6b3a2a}
+.conta{background:var(--rubi);color:#fff;border-radius:var(--raio);padding:18px 18px 16px;margin-bottom:18px}
+.conta label{font-weight:600;font-size:.95rem;display:flex;justify-content:space-between;align-items:baseline}
+.conta output{font-family:"Rozha One",serif;font-size:1.6rem;color:var(--ouro-claro)}
+.conta input[type=range]{width:100%;margin:10px 0 6px;accent-color:var(--ouro)}
+.total{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;border-top:1px solid rgba(243,210,122,.35);padding-top:10px;margin-top:6px}
+.total b{font-family:"Rozha One",serif;font-weight:400;font-size:3.3rem;line-height:.95;color:var(--ouro-claro)}
+.total span{font-size:.95rem}
+.conta small{display:block;font-size:.76rem;opacity:.85;margin-top:6px}
+fieldset{border:0;margin-bottom:14px}
+legend,.tit{font-weight:700;font-size:.88rem;margin-bottom:6px;display:block;color:var(--vinho)}
+.seg{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;border:2px solid var(--vinho);border-radius:var(--raio);overflow:hidden}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{text-align:center;padding:9px 6px;font-weight:600;font-size:.88rem;cursor:pointer;border-left:2px solid var(--vinho);color:var(--vinho)}
+.seg label:first-of-type{border-left:0}
+.seg input:checked+label{background:var(--vinho);color:var(--ouro-claro)}
+.seg input:focus-visible+label{outline:3px solid var(--ouro);outline-offset:-3px}
+.campo{margin-bottom:14px}
+.campo input{width:100%;font:inherit;padding:10px 12px;border:2px solid #d7b98d;border-radius:var(--raio);background:#fff}
+.campo input:focus{border-color:var(--vinho);outline:none}
+.lista{font-size:.9rem;margin:4px 0 16px}
+.lista p{font-weight:700;color:var(--vinho)}
+.lista ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.lista li{background:#f6dfae;padding:3px 9px;border-radius:4px;font-weight:600;font-size:.85rem}
+.lista .vazio{font-weight:400;color:#8a5a3a}
+.ficha .zap{width:100%;justify-content:center}
+.ficha>small{display:block;font-size:.76rem;margin-top:10px;color:#6b3a2a}
+
+/* ---------- festas, eventos e buffets ---------- */
+.ocasioes{padding:96px 0}
+.ocasioes .grade{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.ocasioes .fotos{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:240px 240px;gap:12px}
+.ocasioes .fotos img{width:100%;height:100%;object-fit:cover;border-radius:var(--raio)}
+.ocasioes .fotos img:first-child{grid-row:span 2}
+.ocasioes dl{margin-top:22px}
+.ocasioes dt{font-family:"Rozha One",serif;font-size:1.45rem;color:var(--rubi);margin-top:16px}
+.ocasioes dd{max-width:32em}
+
+/* ---------- instagram ---------- */
+.insta{background:var(--rubi);color:#fff;padding:70px 0;overflow:hidden}
+.insta .grade{display:grid;grid-template-columns:auto 1fr auto;gap:34px;align-items:center}
+.insta .num{font-family:"Rozha One",serif;font-size:clamp(4rem,10vw,7.5rem);line-height:.9;color:var(--ouro-claro)}
+.insta h2{font-size:clamp(1.6rem,3vw,2.3rem);margin-bottom:6px}
+.insta .ouro{color:var(--ouro-claro)}
+
+/* ---------- galeria ---------- */
+.galeria{padding:96px 0 40px}
+.galeria .fotos{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:260px 260px;gap:12px;margin-top:26px}
+.galeria img{width:100%;height:100%;object-fit:cover;border-radius:var(--raio)}
+.galeria img:first-child{grid-row:span 2}
+
+/* ---------- onde ---------- */
+.onde{padding:70px 0 96px}
+.onde .grade{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.agora{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:1.05rem;margin-bottom:18px;color:var(--vinho)}
+.agora i{width:12px;height:12px;border-radius:50%;background:#b4532a}
+.agora.aberto i{background:var(--zap);box-shadow:0 0 0 5px rgba(31,168,85,.18)}
+.semana{list-style:none;margin-bottom:6px}
+.semana li{display:grid;grid-template-columns:92px 1fr;align-items:center;gap:12px;padding:5px 0}
+.semana .dia{font-weight:600;font-size:.95rem}
+.trilho{position:relative;height:30px;background:#f4ddb0;border-radius:4px}
+.faixa{position:absolute;top:0;bottom:0;background:var(--vinho);color:var(--ouro-claro);font-size:.8rem;font-weight:700;display:flex;align-items:center;padding-left:10px;border-radius:4px;white-space:nowrap}
+.semana li.hoje .dia{color:var(--rubi)}
+.semana li.hoje .faixa{background:var(--rubi)}
+.semana li.hoje .dia::after{content:" (hoje)";font-weight:500;font-size:.8rem}
+.escala{display:grid;grid-template-columns:92px 1fr;gap:12px;font-size:.75rem;color:#8a5a3a}
+.escala div{display:flex;justify-content:space-between}
+.onde dl{margin:24px 0}
+.onde dt{font-weight:700;color:var(--vinho);font-size:.9rem}
+.onde dd{margin-bottom:12px}
+.onde .acoes .rubi{color:#fff}
+.mapa{width:100%;height:100%;min-height:440px;border:0;border-radius:var(--raio);box-shadow:0 0 0 6px #f4ddb0}
+
+footer{background:var(--tinta);color:#f2d9c9;padding:30px 0 96px;font-size:.88rem}
+footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+.flutuante{position:fixed;right:18px;bottom:18px;z-index:50;display:inline-flex;align-items:center;gap:8px;background:var(--zap);color:#fff;text-decoration:none;font-weight:700;padding:14px 18px;border-radius:var(--raio);box-shadow:0 8px 24px rgba(0,0,0,.28)}
+.flutuante .ico{width:1.5em;height:1.5em}
+
+/* entrada única do hero */
+@media (prefers-reduced-motion:no-preference){
+  .coroa{animation:desce .9s cubic-bezier(.2,.8,.2,1) both}
+  .topo h1{animation:sobe .8s .12s cubic-bezier(.2,.8,.2,1) both}
+  @keyframes desce{from{opacity:0;transform:translateY(-18px)}}
+  @keyframes sobe{from{opacity:0;transform:translateY(14px)}}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+
+@media (max-width:1060px){
+  .pedido .grade{grid-template-columns:1fr}
+  .ficha{position:static;max-width:560px}
+  .cartoes{grid-template-columns:repeat(4,1fr)}
+}
+@media (max-width:900px){
+  .barra nav{display:none}
+  .texto{max-width:400px}
+  .prova ul{grid-template-columns:1fr 1fr}
+  .prova li:nth-child(3){border-left:0;padding-left:0}
+  .prova li{padding:20px 14px}
+  .duas,.ocasioes .grade,.onde .grade{grid-template-columns:1fr}
+  .op{min-height:340px}
+  .cartoes{grid-template-columns:repeat(2,1fr)}
+  .insta .grade{grid-template-columns:1fr;gap:14px}
+  .galeria .fotos{grid-template-columns:1fr 1fr;grid-template-rows:220px 160px 160px}
+  .galeria img:first-child{grid-row:auto;grid-column:span 2}
+  .mapa{min-height:340px}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  .topo{min-height:auto}
+  .topo .foto{object-position:50% 100%}
+  .miolo{align-items:flex-start;padding-bottom:300px;padding-top:4px}
+  .texto{max-width:none}
+  .topo h1{font-size:2.75rem}
+  .selo-linha{background:rgba(255,244,220,.93);padding:10px 12px;border-radius:var(--raio);box-shadow:0 6px 18px rgba(90,9,16,.18)}
+  .nota-g{font-size:.88rem;line-height:1.4}
+  .sub{font-size:1.02rem;margin-bottom:20px}
+  .marca img{width:48px;height:48px}
+  .prova b{font-size:1.9rem}
+  .jeito,.pedido,.ocasioes,.galeria{padding-top:70px}
+  .pedido{padding-bottom:70px}
+  .ficha{padding:20px}
+  .total b{font-size:2.8rem}
+  .ocasioes .fotos{grid-template-rows:180px 180px}
+  .semana li,.escala{grid-template-columns:70px 1fr}
+  .flutuante span{display:none}
+  .flutuante{padding:15px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.030-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.870 9.870 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.860 9.860 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.030 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.450-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+  <symbol id="coroa" viewBox="0 0 64 44"><path fill="currentColor" d="M4 14l12 10 8-18 8 14 8-14 8 18 12-10-5 24H9z"/><rect fill="currentColor" x="9" y="39" width="46" height="5" rx="1"/><circle fill="currentColor" cx="4" cy="12" r="3.4"/><circle fill="currentColor" cx="24" cy="4" r="3.4"/><circle fill="currentColor" cx="32" cy="17" r="2.6"/><circle fill="currentColor" cx="40" cy="4" r="3.4"/><circle fill="currentColor" cx="60" cy="12" r="3.4"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para Imperial Salgados &amp; Cia. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <picture>
+    <source media="(max-width:620px)" srcset="fotos/hero-orig.jpg">
+    <img class="foto" src="fotos/hero.jpg" alt="Uma coxinha dourada e crocante, em destaque sobre fundo claro" fetchpriority="high">
+  </picture>
+  <div class="largura barra">
+    <a class="marca" href="#"><img src="logo.jpg" alt="Logo da Imperial Salgados & Cia: coroa dourada sobre fundo vermelho"><span>Imperial<small>Salgados &amp; Cia</small></span></a>
+    <nav aria-label="Seções"><a href="#jeito">Fritos ou congelados</a><a href="#pedido">Montar encomenda</a><a href="#onde">Horário e endereço</a></nav>
+  </div>
+  <div class="largura miolo">
+    <div class="texto">
+      <svg class="coroa" aria-hidden="true" viewBox="0 0 64 44"><use href="#coroa"/></svg>
+      <h1>Sua festa merece salgado de rei.</h1>
+      <p class="sub">Salgados fritos e congelados para festas, eventos e buffets em Limeira. Você diz quantos convidados, a Imperial cuida do resto.</p>
+      <div class="acoes">
+        <a class="botao zap" href="https://wa.me/5519999630551?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20encomendar%20salgados%20para%20uma%20festa." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Encomendar no WhatsApp</a>
+        <a class="botao ouro" href="#pedido">Calcular quantos salgados</a>
+      </div>
+      <div class="selo-linha">
+        <p class="nota-g"><b>4,9</b><span class="estrelas" aria-hidden="true">★★★★★</span> no Google, com quase 9 mil seguidores no Instagram</p>
+        <p class="status" id="status-topo"><i></i><span>Confira o horário</span></p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="prova" aria-label="Números da Imperial">
+  <ul class="largura">
+    <li><b>4,9<span class="estrelas" aria-hidden="true">★★★★★</span></b><span>de nota no Google</span></li>
+    <li><b>8.900</b><span>seguidores no Instagram, mais ou menos</span></li>
+    <li><b>Fritos</b><span>prontos para servir na hora</span></li>
+    <li><b>Congelados</b><span>para fritar em casa ou no buffet</span></li>
+  </ul>
+</section>
+
+<main>
+<section class="jeito" id="jeito">
+  <div class="largura">
+    <div class="cab">
+      <h2>Do jeito que a sua festa pede</h2>
+      <p>Tem festa que quer o salgado chegando quentinho. Tem buffet que prefere fritar na hora, lá no evento. A Imperial atende os dois.</p>
+    </div>
+    <div class="duas">
+      <article class="op">
+        <img src="fotos/coxinha.jpg" alt="Coxinhas fritas, uma aberta mostrando o recheio de frango" loading="lazy">
+        <div><h3>Fritos</h3><p>Sequinhos e dourados, prontos para ir direto para a mesa da festa.</p></div>
+      </article>
+      <article class="op">
+        <img src="fotos/congelado.jpg" alt="Salgados crus enfileirados, prontos para congelar" loading="lazy">
+        <div><h3>Congelados</h3><p>Para guardar no freezer e fritar só na hora de servir.</p></div>
+      </article>
+    </div>
+    <p class="nota">Texto de exemplo. No site final entram os detalhes de cada opção da Imperial.</p>
+  </div>
+</section>
+
+<section class="pedido" id="pedido">
+  <div class="largura">
+    <h2>Monte a sua encomenda</h2>
+    <p class="intro">Toque nos salgados que não podem faltar e diga quantos convidados vêm. A gente faz a conta e o pedido vai pronto para o WhatsApp da Imperial.</p>
+    <div class="grade">
+      <div class="cartoes" id="cartoes" role="group" aria-label="Salgados para a festa"></div>
+
+      <form class="ficha" id="ficha" onsubmit="return false" aria-label="Encomenda para a Imperial">
+        <h3>Sua encomenda</h3>
+        <p>Preencha o que já sabe. O resto a Imperial combina com você.</p>
+        <div class="conta">
+          <label for="convidados">Convidados <output id="saida-conv" for="convidados">50</output></label>
+          <input type="range" id="convidados" min="10" max="300" step="5" value="50">
+          <fieldset style="margin:4px 0 6px"><div class="seg" style="border-color:rgba(243,210,122,.6)">
+            <input type="radio" name="mesa" id="m1" value="12" checked><label for="m1" style="color:#fff;border-color:rgba(243,210,122,.6)">Só salgados</label>
+            <input type="radio" name="mesa" id="m2" value="7"><label for="m2" style="color:#fff;border-color:rgba(243,210,122,.6)">Com outros pratos</label>
+          </div></fieldset>
+          <div class="total" aria-live="polite"><b id="total">600</b><span id="centos">salgados, uns 6 centos</span></div>
+          <small>Conta aproximada, de 12 ou 7 salgados por pessoa. A Imperial confirma a quantidade certa.</small>
+        </div>
+        <fieldset><legend>Como você quer</legend><div class="seg">
+          <input type="radio" name="tipo" id="t1" value="fritos" checked><label for="t1">Fritos</label>
+          <input type="radio" name="tipo" id="t2" value="congelados"><label for="t2">Congelados</label>
+        </div></fieldset>
+        <div class="campo"><label class="tit" for="data">Data da festa</label><input type="date" id="data"></div>
+        <div class="lista" aria-live="polite"><p>Salgados escolhidos</p><div id="escolhidos"></div></div>
+        <a class="botao zap" id="enviar" href="#" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Mandar encomenda no WhatsApp</a>
+        <small>Valores, sabores e prazo a Imperial confirma pelo WhatsApp. Sabores de exemplo: no site final entra o cardápio da Imperial.</small>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="ocasioes">
+  <div class="largura grade">
+    <div class="fotos">
+      <img src="fotos/mesa.jpg" alt="Mesa de festa ao ar livre com tábuas de salgadinhos e enroladinhos" loading="lazy">
+      <img src="fotos/esfiha.jpg" alt="Esfihas abertas em prato vermelho" loading="lazy">
+      <img src="fotos/queijo.jpg" alt="Bolinhas de queijo fritas com salada" loading="lazy">
+    </div>
+    <div>
+      <h2>Do aniversário ao buffet</h2>
+      <p>Quem já pediu sabe: a mesa esvazia rápido. Por isso a Imperial trabalha com encomenda para todo tipo de comemoração.</p>
+      <dl>
+        <dt>Festas</dt><dd>Aniversário, chá de bebê, batizado e aquele churrasco de domingo com a família.</dd>
+        <dt>Eventos</dt><dd>Confraternização da empresa, formatura, reunião com muita gente.</dd>
+        <dt>Buffets</dt><dd>Salgados congelados em quantidade para quem frita e serve na própria cozinha.</dd>
+      </dl>
+      <p class="nota">Texto de exemplo. No site final entram os tipos de evento que a Imperial atende.</p>
+    </div>
+  </div>
+</section>
+
+<section class="insta">
+  <div class="largura grade">
+    <div class="num">8.900</div>
+    <div>
+      <h2>Gente de Limeira que acompanha cada fornada</h2>
+      <p>Quase 9 mil seguidores no Instagram e nota 4,9 no Google. Siga para ver as fornadas, as encomendas da semana e as novidades.</p>
+    </div>
+    <a class="botao ouro" href="https://www.instagram.com/imperialsalgadosecia/" rel="noopener">Ver o Instagram</a>
+  </div>
+</section>
+
+<section class="galeria">
+  <div class="largura">
+    <h2>Direto da cozinha para a festa</h2>
+    <div class="fotos">
+      <img src="fotos/monte.jpg" alt="Coxinhas douradas sobre guardanapo xadrez" loading="lazy">
+      <img src="fotos/kibe.jpg" alt="Quibes fritos com alface, tomate e limão" loading="lazy">
+      <img src="fotos/risoles.jpg" alt="Risoles dourados em prato branco" loading="lazy">
+      <img src="fotos/bandeja.jpg" alt="Bandejas de petiscos montadas para festa" loading="lazy">
+      <img src="fotos/catupiry.jpg" alt="Coxinhas e uma delas aberta com recheio cremoso" loading="lazy">
+    </div>
+    <p class="nota">Fotos ilustrativas. No site final entram as fotos dos salgados da Imperial.</p>
+  </div>
+</section>
+
+<section class="onde" id="onde">
+  <div class="largura">
+    <h2>Horário e endereço</h2>
+    <div class="grade">
+      <div>
+        <p class="agora" id="agora"><i></i><span></span></p>
+        <ul class="semana" id="semana" aria-label="Horário de funcionamento"></ul>
+        <div class="escala" aria-hidden="true"><span></span><div><span>6h</span><span>10h</span><span>14h</span><span>18h</span><span>23h</span></div></div>
+        <dl>
+          <dt>Endereço</dt><dd>R. Ana Tumenas Tolle, 159<br>Limeira – SP, 13481-598</dd>
+          <dt>WhatsApp</dt><dd><a href="https://wa.me/5519999630551" rel="noopener">(19) 99963-0551</a></dd>
+          <dt>Instagram</dt><dd><a href="https://www.instagram.com/imperialsalgadosecia/" rel="noopener">@imperialsalgadosecia</a></dd>
+        </dl>
+        <div class="acoes">
+          <a class="botao rubi" href="https://www.google.com/maps/dir/?api=1&destination=R.%20Ana%20Tumenas%20Tolle%2C%20159%2C%20Limeira%20-%20SP%2C%2013481-598" rel="noopener">Traçar rota</a>
+          <a class="botao zap" href="https://wa.me/5519999630551?text=Ol%C3%A1!%20Vim%20pelo%20site.%20Qual%20o%20prazo%20para%20encomendar%20salgados%3F" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar o prazo</a>
+        </div>
+      </div>
+      <iframe class="mapa" src="https://www.google.com/maps?q=R.%20Ana%20Tumenas%20Tolle%2C%20159%2C%20Limeira%20-%20SP%2C%2013481-598&output=embed" loading="lazy" title="Mapa: Imperial Salgados & Cia" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="largura"><span>Imperial Salgados &amp; Cia, Limeira – SP</span><span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span></div>
+</footer>
+<a class="flutuante" href="https://wa.me/5519999630551?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20encomendar%20salgados%20para%20uma%20festa." rel="noopener" aria-label="Chamar a Imperial no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg><span>WhatsApp</span></a>
+
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const FONE = '5519999630551';
+
+  // ----- Encomenda -----
+  // [id, nome no cartão, texto na mensagem, foto, linha (exemplo)]
+  const SALGADOS = [
+    ['coxinha', 'Coxinha', 'coxinha', 'fotos/coxinha.jpg', 'A rainha da festa, de frango.'],
+    ['catupiry', 'Coxinha com catupiry', 'coxinha com catupiry', 'fotos/catupiry.jpg', 'Recheio cremoso por dentro.'],
+    ['kibe', 'Quibe', 'quibe', 'fotos/kibe.jpg', 'Carne temperada e hortelã.'],
+    ['esfiha', 'Esfiha', 'esfiha', 'fotos/esfiha.jpg', 'Massa macia, recheio aberto.'],
+    ['risoles', 'Risoles', 'risoles', 'fotos/risoles.jpg', 'Meia-lua crocante e recheada.'],
+    ['queijo', 'Bolinha de queijo', 'bolinha de queijo', 'fotos/queijo.jpg', 'Queijo que puxa na mordida.'],
+    ['croquete', 'Croquete', 'croquete', 'fotos/croquete.jpg', 'Carne bem temperada e empanada.'],
+    ['sortido', 'Sortido da casa', 'sortido da casa', 'fotos/bandeja.jpg', 'Deixa a Imperial escolher o mix.'],
+  ];
+  const escolha = new Set(['coxinha']);
+  const cartoes = $('cartoes');
+  SALGADOS.forEach(([id, rotulo, , foto, desc]) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'cartao'; b.dataset.s = id; b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = `<span class="cartao-foto"><img src="${foto}" alt="" loading="lazy"></span>` +
+      `<span class="cartao-texto"><strong>${rotulo}</strong><small>${desc}</small></span>` +
+      `<span class="cartao-marca" aria-hidden="true"></span>`;
+    b.addEventListener('click', () => { escolha.has(id) ? escolha.delete(id) : escolha.add(id); atualizar(); });
+    cartoes.appendChild(b);
+  });
+
+  const fmt = (n) => n.toLocaleString('pt-BR');
+  function lista(itens) { return itens.length < 2 ? itens.join('') : itens.slice(0, -1).join(', ') + ' e ' + itens[itens.length - 1]; }
+  function atualizar() {
+    cartoes.querySelectorAll('.cartao').forEach((b) => b.setAttribute('aria-pressed', String(escolha.has(b.dataset.s))));
+    const conv = Number($('convidados').value);
+    const porPessoa = Number(document.querySelector('input[name=mesa]:checked').value);
+    const total = Math.ceil((conv * porPessoa) / 50) * 50;
+    const centos = total / 100;
+    $('saida-conv').textContent = conv;
+    $('total').textContent = fmt(total);
+    $('centos').textContent = `salgados, uns ${fmt(centos)} ${centos === 1 ? 'cento' : 'centos'}`;
+    const tipo = document.querySelector('input[name=tipo]:checked').value;
+    const itens = SALGADOS.filter(([id]) => escolha.has(id)).map((s) => s[2]);
+    const alvo = $('escolhidos'); alvo.innerHTML = '';
+    if (!itens.length) { const p = document.createElement('p'); p.className = 'vazio'; p.textContent = 'Nenhum ainda. Toque nos salgados ao lado.'; alvo.appendChild(p); }
+    else { const ul = document.createElement('ul'); itens.forEach((t) => { const li = document.createElement('li'); li.textContent = t[0].toUpperCase() + t.slice(1); ul.appendChild(li); }); alvo.appendChild(ul); }
+    const d = $('data').value;
+    const quando = d ? ` A festa é dia ${d.split('-').reverse().join('/')}.` : '';
+    const sabores = itens.length ? ` Sabores: ${lista(itens)}.` : '';
+    const msg = `Olá! Vim pelo site da Imperial. Quero encomendar uns ${fmt(total)} salgados ${tipo} para uma festa de ${conv} convidados.${sabores}${quando} Qual o valor e o prazo?`;
+    $('enviar').href = `https://wa.me/${FONE}?text=` + encodeURIComponent(msg);
+  }
+  $('ficha').addEventListener('input', atualizar);
+  $('ficha').addEventListener('change', atualizar);
+  atualizar();
+
+  // ----- Horário real (Google / Restaurant Guru): dom 8h–17h30, seg–qui 8h–22h, sex e sáb 8h–22h30 -----
+  const T = { 0: [480, 1050], 1: [480, 1320], 2: [480, 1320], 3: [480, 1320], 4: [480, 1320], 5: [480, 1350], 6: [480, 1350] };
+  const NOMES = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
+  const hm = (m) => `${Math.floor(m / 60)}h${m % 60 ? String(m % 60).padStart(2, '0') : ''}`;
+  const INI = 360, FIM = 1380; // escala 6h–23h
+  const sem = $('semana');
+  [1, 2, 3, 4, 5, 6, 0].forEach((d) => {
+    const [a, f] = T[d];
+    const li = document.createElement('li'); li.dataset.dia = d;
+    li.innerHTML = `<span class="dia">${NOMES[d]}</span><div class="trilho"><span class="faixa" style="left:${(a - INI) / (FIM - INI) * 100}%;right:${(FIM - f) / (FIM - INI) * 100}%">${hm(a)} às ${hm(f)}</span></div>`;
+    sem.appendChild(li);
+  });
+  const p = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date()).map((x) => [x.type, x.value]));
+  const dia = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(p.weekday), agora = Number(p.hour) * 60 + Number(p.minute);
+  sem.querySelector(`li[data-dia="${dia}"]`)?.classList.add('hoje');
+  let txt, aberto = false;
+  if (agora >= T[dia][0] && agora < T[dia][1]) { txt = `Aberto agora, até as ${hm(T[dia][1])}`; aberto = true; }
+  else if (agora < T[dia][0]) txt = `Fechado agora. Abre hoje às ${hm(T[dia][0])}`;
+  else txt = `Fechado agora. Abre amanhã às ${hm(T[(dia + 1) % 7][0])}`;
+  [$('agora'), $('status-topo')].forEach((el) => { el.querySelector('span').textContent = txt; el.classList.toggle('aberto', aberto); });
+})();
+</script>
+</body>
+</html>
