@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Allegra Locações para Festas · Kits pegue e monte em Nova Odessa</title>
+<meta name="description" content="Modelo demonstrativo de site para a Allegra Locações para Festas, kits pegue e monte em Nova Odessa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Allura&family=Figtree:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --vermelho:#EE3D57;
+  --vermelho-escuro:#C92440;
+  --turquesa:#4DB6C6;
+  --amarelo:#F6CF55;
+  --tinta:#3A1F2B;
+  --papel:#FFF3F4;
+  --branco:#FFFFFF;
+  --verde-wa:#25D366;
+  --display:"League Gothic", "Oswald", Impact, sans-serif;
+  --script:"Allura", cursive;
+  --texto:"Figtree", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--texto);color:var(--tinta);background:var(--branco);font-size:17px;line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--turquesa);outline-offset:3px;border-radius:4px}
+.largura{width:min(1160px,100% - 40px);margin-inline:auto}
+.wa-ico{width:1.25em;height:1.25em;flex:none}
+
+/* faixa demo */
+.faixa-demo{background:var(--tinta);color:#fff;font-size:13.5px;text-align:center;padding:7px 14px;line-height:1.4}
+
+/* topo */
+.topo{background:#fff;border-bottom:4px solid var(--vermelho)}
+.topo .largura{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0}
+.marca{display:flex;align-items:center;gap:10px;text-decoration:none}
+.marca img{width:78px;height:78px;object-fit:cover;margin:-6px 0}
+.marca span{font-family:var(--display);font-size:30px;color:var(--vermelho);line-height:1;letter-spacing:.5px}
+.marca small{display:block;font-family:var(--script);font-size:22px;color:var(--vermelho);letter-spacing:0;margin-top:-2px}
+.topo nav{display:flex;gap:22px;align-items:center;font-weight:500;font-size:15px}
+.topo nav a{text-decoration:none}
+.topo nav a:hover{color:var(--vermelho)}
+.btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--texto);font-weight:700;text-decoration:none;border-radius:8px;padding:13px 20px;font-size:16px;line-height:1.2;transition:background .2s, transform .2s}
+.btn-wa{background:var(--verde-wa);color:#0d3b20}
+.btn-wa:hover{background:#1fbd5a}
+.btn-verm{background:var(--vermelho);color:#fff}
+.btn-verm:hover{background:var(--vermelho-escuro)}
+.btn-borda{border:2px solid var(--tinta);color:var(--tinta);background:#fff}
+.btn-borda:hover{background:var(--tinta);color:#fff}
+.topo .btn{padding:10px 16px;font-size:15px}
+
+/* hero */
+.hero{position:relative;min-height:calc(100vh - 110px);min-height:calc(100svh - 110px);display:flex;align-items:flex-end;overflow:hidden;background:#d9d2c6}
+.hero > img.fundo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%}
+.hero .largura{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,560px) 1fr;align-items:end;padding:120px 0 56px}
+.etiqueta{position:relative;background:#fff;padding:38px 36px 32px 36px;border-radius:6px 6px 6px 6px;box-shadow:0 18px 40px -18px rgba(58,31,43,.55)}
+.etiqueta::before{content:"";position:absolute;top:18px;right:20px;width:16px;height:16px;border-radius:50%;border:3px solid var(--papel);background:#e9dcdf}
+.etiqueta .script{font-family:var(--script);font-size:40px;color:var(--vermelho);line-height:1;margin:0 0 4px}
+.etiqueta h1{font-family:var(--display);font-weight:400;font-size:clamp(52px,6.4vw,84px);line-height:.92;margin:0 0 16px;color:var(--tinta);letter-spacing:.3px}
+.etiqueta p.sub{margin:0 0 24px;font-size:18px;max-width:42ch}
+.etiqueta .acoes{display:flex;flex-wrap:wrap;gap:12px}
+
+/* balões */
+.baloes{position:absolute;top:0;right:max(20px,calc((100% - 1160px)/2));z-index:3;display:flex;gap:18px;pointer-events:none}
+.balao{display:flex;flex-direction:column;align-items:center;transform-origin:50% 0;animation:balanco 5.5s ease-in-out infinite}
+.balao:nth-child(2){animation-delay:-1.8s;animation-duration:6.2s}
+.balao:nth-child(3){animation-delay:-3.1s;animation-duration:5s}
+.balao .fio{width:2px;background:rgba(255,255,255,.9);box-shadow:0 0 2px rgba(0,0,0,.35)}
+.balao:nth-child(1) .fio{height:110px}
+.balao:nth-child(2) .fio{height:40px}
+.balao:nth-child(3) .fio{height:150px}
+.balao .corpo{position:relative;width:150px;height:178px;border-radius:50% 50% 48% 48% / 55% 55% 45% 45%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;box-shadow:inset -14px -16px 0 rgba(0,0,0,.08)}
+.balao .corpo::before{content:"";position:absolute;top:22px;left:30px;width:22px;height:34px;border-radius:50%;background:rgba(255,255,255,.35);transform:rotate(20deg)}
+.balao .corpo::after{content:"";position:absolute;bottom:-11px;left:50%;transform:translateX(-50%);border:9px solid transparent;border-bottom:13px solid currentColor;border-top:0;color:inherit}
+.balao.t .corpo{background:var(--turquesa)}
+.balao.t .corpo::after{border-bottom-color:var(--turquesa);transform:translateX(-50%) rotate(180deg);bottom:-12px}
+.balao.v .corpo{background:var(--vermelho)}
+.balao.v .corpo::after{border-bottom-color:var(--vermelho);transform:translateX(-50%) rotate(180deg);bottom:-12px}
+.balao.a .corpo{background:var(--amarelo);color:var(--tinta)}
+.balao.a .corpo::after{border-bottom-color:var(--amarelo);transform:translateX(-50%) rotate(180deg);bottom:-12px}
+.balao b{font-family:var(--display);font-weight:400;font-size:44px;line-height:.95}
+.balao em{font-style:normal;font-size:14px;font-weight:700;line-height:1.2;max-width:11ch;margin:2px 0}
+.balao .rabo{width:2px;height:60px;background:rgba(255,255,255,.9);box-shadow:0 0 2px rgba(0,0,0,.35);margin-top:11px}
+@keyframes balanco{0%,100%{transform:rotate(-2.2deg)}50%{transform:rotate(2.2deg)}}
+
+/* seção genérica */
+section.bloco{padding:92px 0}
+.titulo{font-family:var(--display);font-weight:400;font-size:clamp(44px,5vw,64px);line-height:.98;margin:0 0 14px;letter-spacing:.3px}
+.titulo .s{font-family:var(--script);font-size:.8em;color:var(--vermelho);letter-spacing:0}
+.intro{max-width:60ch;margin:0 0 40px;font-size:18px}
+.nota{font-size:13.5px;color:#7a5c66;font-style:italic}
+
+/* como funciona */
+.como{background:var(--papel)}
+.passos{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:p;position:relative}
+.passos::before{content:"";position:absolute;top:34px;left:6%;right:6%;border-top:3px dashed rgba(238,61,87,.45)}
+.passos li{position:relative;padding:0 18px 0 0}
+.passos li .num{position:relative;display:flex;align-items:center;justify-content:center;width:68px;height:68px;border-radius:50%;font-family:var(--display);font-size:38px;color:#fff;margin-bottom:18px}
+.passos li:nth-child(1) .num{background:var(--turquesa)}
+.passos li:nth-child(2) .num{background:var(--vermelho)}
+.passos li:nth-child(3) .num{background:var(--amarelo);color:var(--tinta)}
+.passos li:nth-child(4) .num{background:var(--tinta)}
+.passos h3{font-size:20px;margin:0 0 6px;font-weight:800}
+.passos p{margin:0;font-size:16px;max-width:26ch}
+
+/* vitrine */
+.vitrine-grade{display:grid;grid-template-columns:repeat(4,1fr);gap:28px 22px}
+.kit{display:flex;flex-direction:column}
+.kit .foto{position:relative;aspect-ratio:4/3.4;overflow:hidden;border-radius:6px;background:#eee}
+.kit .foto img{width:100%;height:100%;object-fit:cover}
+.kit h3{font-family:var(--display);font-weight:400;font-size:31px;line-height:1;margin:16px 0 6px;letter-spacing:.3px}
+.kit p{margin:0 0 14px;font-size:15.5px;flex:1}
+.kit a.pedir{display:inline-flex;align-items:center;gap:7px;color:#128c4a;font-weight:700;font-size:15px;text-decoration:none;border-bottom:2px solid rgba(18,140,74,.3);align-self:flex-start;padding-bottom:2px}
+.kit a.pedir:hover{border-bottom-color:#128c4a}
+.kit:nth-child(4n+1) h3{color:var(--vermelho)}
+.kit:nth-child(4n+2) h3{color:#2b8e9e}
+.kit:nth-child(4n+3) h3{color:var(--tinta)}
+.kit:nth-child(4n+4) h3{color:var(--vermelho)}
+.vitrine-rodape{margin-top:46px;display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:space-between;border-top:2px solid var(--papel);padding-top:26px}
+
+/* preço / faixa amarela */
+.faixa-preco{background:var(--amarelo);padding:56px 0}
+.faixa-preco .largura{display:flex;gap:28px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.faixa-preco p{margin:0;font-family:var(--display);font-size:clamp(40px,5vw,60px);line-height:1;max-width:18ch}
+.faixa-preco p .s{font-family:var(--script);color:var(--vermelho-escuro);font-size:.85em}
+
+/* galeria */
+.galeria{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:260px 260px;gap:12px}
+.galeria figure{margin:0;overflow:hidden;border-radius:6px}
+.galeria figure img{width:100%;height:100%;object-fit:cover}
+.galeria figure:first-child{grid-row:span 2}
+.galeria-pe{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-top:22px}
+.insta{display:inline-flex;align-items:center;gap:10px;font-weight:700;text-decoration:none;color:var(--tinta)}
+.insta svg{width:24px;height:24px}
+.insta:hover{color:var(--vermelho)}
+
+/* onde */
+.onde{background:var(--papel)}
+.onde-grade{display:grid;grid-template-columns:1fr 1.3fr;gap:44px;align-items:center}
+.onde iframe{width:100%;height:380px;border:0;border-radius:6px;display:block;background:#eadfe2}
+.onde dl{margin:0 0 26px}
+.onde dt{font-weight:800;margin-top:14px}
+.onde dd{margin:2px 0 0}
+.onde .acoes{display:flex;flex-wrap:wrap;gap:12px}
+
+/* final */
+.final{background:var(--vermelho);color:#fff;text-align:center;padding:96px 0 104px;position:relative;overflow:hidden}
+.final .script{font-family:var(--script);font-size:48px;line-height:1;margin:0}
+.final h2{font-family:var(--display);font-weight:400;font-size:clamp(56px,8vw,104px);line-height:.92;margin:6px 0 26px}
+.final .btn-wa{font-size:18px;padding:16px 26px}
+.final .mini{display:flex;justify-content:center;gap:14px;margin-bottom:22px}
+.final .mini i{width:26px;height:32px;border-radius:50% 50% 48% 48% / 55% 55% 45% 45%;display:block}
+
+footer{background:var(--tinta);color:#f3dde2;padding:34px 0 90px;font-size:14px}
+footer .largura{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
+footer a{color:#fff}
+
+/* flutuante */
+.wa-flutuante{position:fixed;right:18px;bottom:18px;z-index:50;width:60px;height:60px;border-radius:50%;background:var(--verde-wa);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(0,0,0,.25)}
+.wa-flutuante svg{width:32px;height:32px}
+
+/* responsivo */
+@media (max-width:1060px){
+  .balao .corpo{width:124px;height:148px}
+  .balao b{font-size:36px}
+  .balao em{font-size:12.5px}
+  .balao:nth-child(1) .fio{height:70px}
+  .balao:nth-child(2) .fio{height:24px}
+  .balao:nth-child(3) .fio{height:100px}
+}
+@media (max-width:960px){
+  .topo nav a:not(.btn){display:none}
+  .hero .largura{grid-template-columns:minmax(0,500px);padding-top:300px}
+  .baloes{right:20px}
+  .vitrine-grade{grid-template-columns:repeat(2,1fr)}
+  .passos{grid-template-columns:repeat(2,1fr);gap:40px 20px}
+  .passos::before{display:none}
+  .onde-grade{grid-template-columns:1fr}
+  .galeria{grid-template-columns:1fr 1fr;grid-template-rows:280px 200px 200px}
+  .galeria figure:first-child{grid-column:span 2;grid-row:auto}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .marca img{width:64px;height:64px}
+  .marca span{font-size:25px}
+  .marca small{font-size:18px}
+  .topo .btn span{display:none}
+  .topo .btn{padding:10px 12px}
+  .hero{min-height:0}
+  .hero .largura{padding:236px 0 24px;width:calc(100% - 28px)}
+  .hero > img.fundo{object-position:70% 50%}
+  .baloes{left:0;right:0;justify-content:center;gap:10px}
+  .balao .corpo{width:100px;height:120px}
+  .balao .corpo::before{top:14px;left:18px;width:14px;height:22px}
+  .balao b{font-size:30px}
+  .balao em{font-size:11px}
+  .balao:nth-child(1) .fio{height:30px}
+  .balao:nth-child(2) .fio{height:8px}
+  .balao:nth-child(3) .fio{height:44px}
+  .balao .rabo{height:26px}
+  .etiqueta{padding:28px 22px 24px}
+  .etiqueta .script{font-size:32px}
+  .etiqueta p.sub{font-size:16.5px}
+  .etiqueta .acoes .btn{width:100%;justify-content:center}
+  section.bloco{padding:68px 0}
+  .vitrine-grade{gap:24px 14px}
+  .kit h3{font-size:25px}
+  .kit p{font-size:14.5px}
+  .passos{grid-template-columns:1fr;gap:26px}
+  .passos li{display:grid;grid-template-columns:60px 1fr;gap:0 16px}
+  .passos li .num{width:56px;height:56px;font-size:32px;margin:0;grid-row:span 2}
+  .galeria{grid-template-rows:220px 150px 150px;gap:8px}
+  .onde iframe{height:300px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.870 9.870 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.860 9.860 0 01-1.51-5.260c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.050 0C5.495 0 .160 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.480-8.413Z"/></symbol>
+  <symbol id="ig" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M7 2.5h10A4.5 4.5 0 0 1 21.5 7v10a4.5 4.5 0 0 1-4.5 4.5H7A4.5 4.5 0 0 1 2.5 17V7A4.5 4.5 0 0 1 7 2.5Z"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></symbol>
+</svg>
+
+<div class="faixa-demo">Modelo demonstrativo feito por Daniel para Allegra Locações para Festas - Kits Pegue e Monte. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <div class="largura">
+    <a class="marca" href="#inicio" aria-label="Allegra Locações para Festas, início">
+      <img src="logo.jpg" alt="Logo da Allegra Locações para Festas" width="58" height="58">
+          </a>
+    <nav aria-label="Seções">
+      <a href="#como">Como funciona</a>
+      <a href="#kits">Kits</a>
+      <a href="#fotos">Fotos</a>
+      <a href="#onde">Onde estamos</a>
+      <a class="btn btn-wa" href="https://wa.me/5519991192770?text=Ol%C3%A1%2C%20Allegra!%20Vim%20pelo%20site%20e%20quero%20ver%20os%20temas%20de%20pegue%20e%20monte." target="_blank" rel="noopener"><svg class="wa-ico" aria-hidden="true"><use href="#wa"/></svg><span>Chamar no WhatsApp</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero" aria-label="Apresentação">
+  <img class="fundo" src="fotos/hero.jpg" alt="Mesa de festa decorada com bolo, doces e arranjos" fetchpriority="high">
+  <div class="baloes" aria-hidden="true">
+    <div class="balao t"><div class="fio"></div><div class="corpo"><b>3.102</b><em>seguidores no Instagram</em></div><div class="rabo"></div></div>
+    <div class="balao v"><div class="fio"></div><div class="corpo"><b>+100</b><em>temas de pegue e monte</em></div><div class="rabo"></div></div>
+    <div class="balao a"><div class="fio"></div><div class="corpo"><em>kits a partir de</em><b>R$120</b></div><div class="rabo"></div></div>
+  </div>
+  <div class="largura">
+    <div class="etiqueta">
+      <p class="script">Allegra, Nova Odessa</p>
+      <h1>Sua festa pronta em um kit. Você pega, monta e comemora.</h1>
+      <p class="sub">Mais de 100 temas de pegue e monte para aniversário, chá de bebê e toda data que merece uma mesa bonita. Kits a partir de R$120.</p>
+      <div class="acoes">
+        <a class="btn btn-wa" href="https://wa.me/5519991192770?text=Ol%C3%A1%2C%20Allegra!%20Vim%20pelo%20site%20e%20quero%20ver%20os%20temas%20de%20pegue%20e%20monte." target="_blank" rel="noopener"><svg class="wa-ico" aria-hidden="true"><use href="#wa"/></svg>Ver temas no WhatsApp</a>
+        <a class="btn btn-borda" href="#kits">Conhecer os kits</a>
+      </div>
+    </div>
+  </div>
+  <p class="sr-only" style="position:absolute;left:-9999px">3.102 seguidores no Instagram, mais de 100 temas de pegue e monte, kits a partir de R$120.</p>
+</section>
+
+<section class="bloco como" id="como">
+  <div class="largura">
+    <h2 class="titulo">Como funciona o <span class="s">pegue e monte</span></h2>
+    <p class="intro">Você leva para casa a decoração da mesa já separada por tema e monta do seu jeito. <span class="nota">Texto de exemplo. No site final entram as regras de retirada e devolução da Allegra.</span></p>
+    <ol class="passos">
+      <li><span class="num">1</span><h3>Escolha o tema</h3><p>Veja os temas no Instagram ou peça as fotos pelo WhatsApp.</p></li>
+      <li><span class="num">2</span><h3>Reserve a data</h3><p>Confirme o dia da festa e o kit que você quer.</p></li>
+      <li><span class="num">3</span><h3>Retire o kit</h3><p>Pegue as peças separadas e conferidas, prontas para montar.</p></li>
+      <li><span class="num">4</span><h3>Monte e devolva</h3><p>Decore a mesa, aproveite a festa e devolva no combinado.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="bloco" id="kits">
+  <div class="largura">
+    <h2 class="titulo">Um kit para cada <span class="s">comemoração</span></h2>
+    <p class="intro">São mais de 100 temas. Aqui vão as ocasiões mais pedidas, e pelo WhatsApp a gente manda as fotos do tema que você quer. <span class="nota">Fotos ilustrativas. No site final entram as fotos dos kits da Allegra.</span></p>
+    <div class="vitrine-grade">
+      <article class="kit"><div class="foto"><img src="fotos/infantil.jpg" alt="Mesa de aniversário infantil com arco de balões rosa" loading="lazy"></div><h3>Aniversário infantil</h3><p>Personagens, bichinhos e os temas que a criançada pede.</p><a class="pedir" href="https://wa.me/5519991192770?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20kit%20de%20anivers%C3%A1rio%20infantil." target="_blank" rel="noopener"><svg class="wa-ico" aria-hidden="true"><use href="#wa"/></svg>Pedir fotos</a></article>
+      <article class="kit"><div class="foto"><img src="fotos/adulto.jpg" alt="Decoração de aniversário de 50 anos com balões" loading="lazy"></div><h3>Aniversário adulto</h3><p>Mesas elegantes para 30, 40, 50 anos e além.</p><a class="pedir" href="https://wa.me/5519991192770?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20kit%20de%20anivers%C3%A1rio%20adulto." target="_blank" rel="noopener"><svg class="wa-ico" aria-hidden="true"><use href="#wa"/></svg>Pedir fotos</a></article>
+      <article class="kit"><div class="foto"><img src="fotos/revelacao.jpg" alt="Placa de chá revelação com balões rosa e azuis" loading="lazy"></div><h3>Chá revelação</h3><p>Rosa e azul na medida para o grande momento.</p><a class="pedir" href="https://wa.me/5519991192770?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20kit%20de%20ch%C3%A1%20revela%C3%A7%C3%A3o." target="_blank" rel="noopener"><svg class="wa-ico" aria-hidden="true"><use href="#wa"/></svg>Pedir fotos</a></article>
+      <article class="kit"><div class="foto"><img src="fotos/cha-bebe.jpg" alt="Letreiro BABY com balões em tons pastel" loading="lazy"></div><h3>Chá de bebê</h3><p>Tons suaves para receber quem está chegando.</p><a class="pedir" href="https://wa.me/5519991192770?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20kit%20de%20ch%C3%A1%20de%20beb%C3%AA." target="_blank" rel="noopener"><svg class="wa-ico" aria-hidden="true"><use href="#wa"/></svg>Pedir fotos</a></article>
+      <article class="kit"><div class="foto"><img src="fotos/mesversario.jpg" alt="Mesa colorida com chapéus de festa e confete" loading="lazy"></div><h3>Mesversário</h3><p>Um kit compacto para comemorar cada mês em casa.</p><a class="pedir" href="https://wa.me/5519991192770?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20kit%20de%20mesvers%C3%A1rio." target="_blank" rel="noopener"><svg class="wa-ico" aria-hidden="true"><use href="#wa"/></svg>Pedir fotos</a></article>
+      <article class="kit"><div class="foto"><img src="fotos/batizado.jpg" alt="Bolo branco decorado com flores brancas" loading="lazy"></div><h3>Batizado e comunhão</h3><p>Branco, flores e delicadeza para datas especiais.</p><a class="pedir" href="https://wa.me/5519991192770?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20kit%20de%20batizado%20ou%20comunh%C3%A3o." target="_blank" rel="noopener"><svg class="wa-ico" aria-hidden="true"><use href="#wa"/></svg>Pedir fotos</a></article>
+      <article class="kit"><div class="foto"><img src="fotos/noivado.jpg" alt="Suportes de vidro com doces e bolinhos" loading="lazy"></div><h3>Noivado e bodas</h3><p>Boleiras e suportes para uma mesa de doces bonita.</p><a class="pedir" href="https://wa.me/5519991192770?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20kit%20de%20noivado%20ou%20bodas." target="_blank" rel="noopener"><svg class="wa-ico" aria-hidden="true"><use href="#wa"/></svg>Pedir fotos</a></article>
+      <article class="kit"><div class="foto"><img src="fotos/quinze.jpg" alt="Mesa com doces finos e arranjos de flores" loading="lazy"></div><h3>15 anos e formatura</h3><p>Uma mesa marcante para fotos que ficam para sempre.</p><a class="pedir" href="https://wa.me/5519991192770?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20kit%20de%2015%20anos%20ou%20formatura." target="_blank" rel="noopener"><svg class="wa-ico" aria-hidden="true"><use href="#wa"/></svg>Pedir fotos</a></article>
+    </div>
+    <div class="vitrine-rodape">
+      <p style="margin:0;max-width:52ch">Não achou a sua ocasião? Com mais de 100 temas, é bem provável que a Allegra tenha. Pergunte.</p>
+      <a class="btn btn-wa" href="https://wa.me/5519991192770?text=Ol%C3%A1%2C%20Allegra!%20Vim%20pelo%20site%20e%20quero%20saber%20se%20voc%C3%AAs%20t%C3%AAm%20um%20tema." target="_blank" rel="noopener"><svg class="wa-ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar por um tema</a>
+    </div>
+  </div>
+</section>
+
+<section class="faixa-preco" aria-label="Preço">
+  <div class="largura">
+    <p>Festa bonita sem gastar com decoração própria: kits <span class="s">a partir de</span> R$120.</p>
+    <a class="btn btn-verm" href="https://wa.me/5519991192770?text=Ol%C3%A1%2C%20Allegra!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20de%20kit%20pegue%20e%20monte." target="_blank" rel="noopener"><svg class="wa-ico" aria-hidden="true"><use href="#wa"/></svg>Pedir orçamento</a>
+  </div>
+</section>
+
+<section class="bloco" id="fotos">
+  <div class="largura">
+    <h2 class="titulo">Mesas que viram <span class="s">lembrança</span></h2>
+    <p class="intro">A Allegra posta temas novos quase todo dia no Instagram. <span class="nota">Fotos ilustrativas. No site final entram as montagens reais dos clientes.</span></p>
+    <div class="galeria">
+      <figure><img src="fotos/g-baloes.jpg" alt="Balões coloridos presos ao teto" loading="lazy"></figure>
+      <figure><img src="fotos/g-doces.jpg" alt="Mesa com cupcakes e doces em suportes" loading="lazy"></figure>
+      <figure><img src="fotos/g-mesa.jpg" alt="Mesa comprida decorada em tons de rosa" loading="lazy"></figure>
+      <figure><img src="fotos/g-cupcakes.jpg" alt="Cupcakes cor-de-rosa em bandeja" loading="lazy"></figure>
+      <figure><img src="fotos/g-porta.jpg" alt="Balões metalizados presos em uma porta" loading="lazy"></figure>
+    </div>
+    <div class="galeria-pe">
+      <a class="insta" href="https://www.instagram.com/allegralocacoesparafestas/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ig"/></svg>@allegralocacoesparafestas · 3.102 seguidores</a>
+      <a class="btn btn-borda" href="https://www.instagram.com/allegralocacoesparafestas/" target="_blank" rel="noopener">Ver todos os temas no Instagram</a>
+    </div>
+  </div>
+</section>
+
+<section class="bloco onde" id="onde">
+  <div class="largura onde-grade">
+    <div>
+      <h2 class="titulo">Retirada em <span class="s">Nova Odessa</span></h2>
+      <dl>
+        <dt>Cidade</dt>
+        <dd>Nova Odessa, SP</dd>
+        <dt>Endereço de retirada</dt>
+        <dd>Combinado pelo WhatsApp na hora da reserva. <span class="nota">No site final entra o endereço completo e os horários.</span></dd>
+        <dt>WhatsApp</dt>
+        <dd>(19) 99119-2770</dd>
+      </dl>
+      <div class="acoes">
+        <a class="btn btn-wa" href="https://wa.me/5519991192770?text=Ol%C3%A1%2C%20Allegra!%20Vim%20pelo%20site%20e%20quero%20combinar%20a%20retirada%20de%20um%20kit." target="_blank" rel="noopener"><svg class="wa-ico" aria-hidden="true"><use href="#wa"/></svg>Combinar retirada</a>
+        <a class="btn btn-borda" href="https://www.google.com/maps/dir/?api=1&amp;destination=Nova%20Odessa%2C%20SP" target="_blank" rel="noopener">Traçar rota</a>
+      </div>
+    </div>
+    <iframe src="https://www.google.com/maps?q=Nova%20Odessa%2C%20SP&amp;output=embed" loading="lazy" title="Mapa de Nova Odessa, SP" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<section class="final" aria-label="Chamar no WhatsApp">
+  <div class="largura">
+    <div class="mini" aria-hidden="true"><i style="background:var(--turquesa)"></i><i style="background:#fff"></i><i style="background:var(--amarelo)"></i></div>
+    <p class="script">Tem festa chegando?</p>
+    <h2>Escolha o tema hoje e garanta a data.</h2>
+    <a class="btn btn-wa" href="https://wa.me/5519991192770?text=Ol%C3%A1%2C%20Allegra!%20Vim%20pelo%20site%20e%20quero%20reservar%20um%20kit%20pegue%20e%20monte." target="_blank" rel="noopener"><svg class="wa-ico" aria-hidden="true"><use href="#wa"/></svg>Reservar meu kit no WhatsApp</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="largura">
+    <span>Allegra Locações para Festas · Kits pegue e monte · Nova Odessa, SP · <a href="https://wa.me/5519991192770" target="_blank" rel="noopener">(19) 99119-2770</a></span>
+    <span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span>
+  </div>
+</footer>
+
+<a class="wa-flutuante" href="https://wa.me/5519991192770?text=Ol%C3%A1%2C%20Allegra!%20Vim%20pelo%20site%20e%20quero%20saber%20dos%20kits%20pegue%20e%20monte." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp"><svg aria-hidden="true"><use href="#wa"/></svg></a>
+</body>
+</html>
