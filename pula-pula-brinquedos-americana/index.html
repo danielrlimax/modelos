@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Pula Pula Brinquedos Americana | Aluguel de cama elástica e infláveis</title>
+<meta name="description" content="Modelo demonstrativo de site para a Pula Pula Brinquedos, aluguel de cama elástica e brinquedos infláveis para festas em Americana.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Modak&family=Rethink+Sans:ital,wght@0,400;0,500;0,700;0,800;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lona:#1E3FD0;      /* azul do perfil */
+  --lona-esc:#13298F;
+  --ceu:#EDF2FF;
+  --tinta:#101A45;
+  --verm:#E8392B;
+  --amar:#FFC21A;
+  --verde:#1FA34A;
+  --branco:#fff;
+  --zap:#1FAF54;
+  --raio:18px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Rethink Sans",system-ui,sans-serif;color:var(--tinta);background:var(--branco);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amar);outline-offset:3px;border-radius:6px}
+.largura{width:min(1160px,100% - 40px);margin-inline:auto}
+h2{font-family:"Modak",system-ui;font-weight:400;font-size:clamp(2.6rem,5.4vw,4rem);line-height:.9;letter-spacing:.01em;margin:0 0 .3em;color:var(--lona)}
+.intro{max-width:58ch;margin:0 0 1.6rem;font-size:1.08rem}
+.nota{font-size:.85rem;color:#4b557c;font-style:italic;margin:.9rem 0 0}
+.ico{width:1.25em;height:1.25em;flex:none}
+
+/* aro: a faixa colorida da cama elástica */
+.aro{height:14px;border-radius:14px;background:
+  repeating-linear-gradient(90deg,var(--verm) 0 46px,var(--amar) 46px 92px,var(--verde) 92px 138px,var(--lona) 138px 184px);
+  box-shadow:inset 0 -3px 0 rgba(0,0,0,.16),inset 0 3px 0 rgba(255,255,255,.35)}
+
+.aviso{background:var(--tinta);color:#fff;text-align:center;font-size:.85rem;padding:8px 14px}
+
+/* botões */
+.botao{display:inline-flex;align-items:center;gap:.55em;font-weight:800;font-size:1.02rem;text-decoration:none;padding:.9em 1.3em;border-radius:12px;border:0;cursor:pointer;transition:transform .15s,box-shadow .15s}
+.botao:active{transform:translateY(2px)}
+.zap{background:var(--zap);color:#fff;box-shadow:0 5px 0 #13813b}
+.zap:active{box-shadow:0 2px 0 #13813b}
+.amarelo{background:var(--amar);color:var(--tinta);box-shadow:0 5px 0 #c8920a}
+.contorno{background:#fff;color:var(--lona);box-shadow:inset 0 0 0 2px var(--lona)}
+
+/* ---------- HERO ---------- */
+.topo{position:relative;min-height:min(92vh,820px);display:flex;flex-direction:column;color:#fff;overflow:hidden;background:var(--lona)}
+.topo .foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:78% 40%}
+.topo::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(19,41,143,.78) 0%,rgba(19,41,143,.45) 34%,rgba(19,41,143,0) 58%);z-index:1}
+.barra{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:center;padding-top:18px;gap:16px}
+.marca{font-family:"Modak";font-size:1.9rem;line-height:1;text-decoration:none;color:#fff}
+.barra nav{display:flex;gap:22px;font-weight:700;font-size:.95rem}
+.barra nav a{text-decoration:none;opacity:.95}
+.barra nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.miolo{position:relative;z-index:2;flex:1;display:flex;align-items:center;padding:30px 0 70px}
+.texto{max-width:520px}
+h1{margin:0;font-weight:400;line-height:.8}
+.pula{font-family:"Modak",system-ui;display:block;font-size:clamp(4.6rem,10vw,8.8rem);letter-spacing:.01em;cursor:pointer;-webkit-user-select:none;user-select:none;white-space:nowrap}
+.pula .l{display:inline-block;transform-origin:50% 100%;-webkit-text-stroke:0;text-shadow:0 .06em 0 rgba(10,20,70,.35)}
+.pula .l:nth-child(4n+1){color:var(--verm)}
+.pula .l:nth-child(4n+2){color:var(--amar)}
+.pula .l:nth-child(4n+3){color:#2ECC63}
+.pula .l:nth-child(4n+4){color:#fff}
+.pula .esp{display:inline-block;width:.18em}
+.pula.pulando .l{animation:quica .9s cubic-bezier(.3,.6,.4,1) both;animation-delay:calc(var(--i) * 70ms)}
+@keyframes quica{
+  0%{transform:translateY(-1.1em) scale(1,1)}
+  38%{transform:translateY(0) scale(1.18,.78)}
+  55%{transform:translateY(-.32em) scale(.94,1.08)}
+  72%{transform:translateY(0) scale(1.06,.92)}
+  84%{transform:translateY(-.08em) scale(1,1)}
+  100%{transform:translateY(0) scale(1,1)}
+}
+.h1-sub{display:block;font-family:"Rethink Sans";font-weight:800;font-size:clamp(1.15rem,2.2vw,1.5rem);letter-spacing:.01em;margin-top:.5rem}
+.topo .aro{width:min(360px,80%);margin:18px 0 20px}
+.sub{font-size:1.15rem;max-width:30ch;margin:0 0 24px;font-weight:500}
+.acoes{display:flex;flex-wrap:wrap;gap:12px}
+.selo-google{display:flex;align-items:center;gap:12px;margin-top:26px;font-weight:600;font-size:.98rem}
+.selo-google b{font-family:"Modak";font-weight:400;font-size:2.6rem;line-height:.8;color:var(--amar)}
+.estrelas{color:var(--amar);letter-spacing:2px;font-size:1.05rem;display:block}
+
+/* ---------- PROVA ---------- */
+.prova{background:var(--ceu);padding:56px 0}
+.prova .grade{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+.nota-grande{display:flex;align-items:flex-end;gap:18px}
+.nota-grande .n{font-family:"Modak";font-size:clamp(6rem,13vw,9.5rem);line-height:.72;color:var(--lona)}
+.nota-grande p{margin:0 0 6px;font-size:1.1rem;max-width:22ch}
+.nota-grande .estrelas{font-size:1.6rem;color:#F2A900}
+.fatos{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.fatos li{display:flex;gap:16px;align-items:baseline;border-bottom:2px dashed #c7d3f7;padding-bottom:12px}
+.fatos b{font-family:"Modak";font-weight:400;font-size:2.4rem;line-height:.8;color:var(--verm);min-width:3.2ch}
+.fatos li:nth-child(2) b{color:var(--verde)}
+.fatos li:nth-child(3) b{color:var(--lona)}
+.fatos a{font-weight:700;color:var(--lona)}
+
+/* ---------- MONTAR FESTA ---------- */
+.festa{padding:84px 0 90px}
+.festa .grade{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
+.cartoes{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.cartao{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;background:#fff;border-radius:var(--raio);overflow:hidden;box-shadow:0 0 0 2px #dfe6fb;position:relative;transition:box-shadow .15s,background .15s}
+.cartao:hover{box-shadow:0 0 0 2px var(--lona)}
+.cartao:focus-visible{outline:3px solid var(--amar);outline-offset:3px}
+.cartao-foto{aspect-ratio:5/4;overflow:hidden;display:block}
+.cartao-foto img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.cartao-texto{padding:12px 14px 14px;display:block}
+.cartao strong{display:block;font-size:1.02rem;line-height:1.2}
+.cartao small{display:block;font-size:.86rem;color:#4b557c;margin-top:3px;line-height:1.35}
+.cartao-marca{position:absolute;top:10px;right:10px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.92);box-shadow:0 0 0 2px var(--lona) inset;display:grid;place-items:center;font-weight:800;color:#fff;font-size:1.1rem}
+.cartao[aria-pressed=true]{background:var(--lona);box-shadow:0 0 0 3px var(--lona)}
+.cartao[aria-pressed=true] strong{color:#fff}
+.cartao[aria-pressed=true] small{color:#d6defc}
+.cartao[aria-pressed=true] .cartao-marca{background:var(--amar);box-shadow:none;color:var(--tinta)}
+.cartao[aria-pressed=true] .cartao-marca::after{content:"✓"}
+.ficha{background:var(--tinta);color:#fff;border-radius:24px;padding:26px 24px 24px;position:sticky;top:18px}
+.ficha .aro{height:10px;margin-bottom:18px}
+.ficha h3{font-family:"Modak";font-weight:400;font-size:2.4rem;line-height:.9;margin:0 0 14px;color:var(--amar)}
+.campo{margin-bottom:14px}
+.tit,legend{display:block;font-weight:700;font-size:.9rem;margin-bottom:6px;padding:0}
+fieldset{border:0;margin:0 0 14px;padding:0}
+.ficha input[type=text],.ficha input[type=date]{width:100%;font:inherit;font-size:1rem;padding:11px 12px;border-radius:10px;border:2px solid #34417a;background:#1a2660;color:#fff;color-scheme:dark}
+.ficha input::placeholder{color:#9aa6d6}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{padding:8px 12px;border-radius:10px;background:#1a2660;border:2px solid #34417a;font-size:.9rem;font-weight:600;cursor:pointer}
+.seg input:checked+label{background:var(--amar);border-color:var(--amar);color:var(--tinta)}
+.seg input:focus-visible+label{outline:3px solid #fff;outline-offset:2px}
+.lista{background:#1a2660;border-radius:12px;padding:12px 14px;margin:4px 0 16px}
+.lista>p{margin:0 0 6px;font-size:.82rem;color:#aab5e3;font-weight:700}
+.lista ul{margin:0;padding-left:1.1em}
+.lista .vazio{margin:0;color:#cfd6f5;font-size:.92rem}
+.ficha .zap{width:100%;justify-content:center}
+.ficha small{display:block;margin-top:12px;font-size:.8rem;color:#aab5e3;line-height:1.4}
+
+/* ---------- COMO FUNCIONA ---------- */
+.passos{background:var(--lona);color:#fff;padding:80px 0}
+.passos h2{color:#fff}
+.passos ol{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:26px;counter-reset:p}
+.passos li{counter-increment:p}
+.passos li::before{content:counter(p);font-family:"Modak";font-size:4.2rem;line-height:.8;display:block;margin-bottom:8px}
+.passos li:nth-child(1)::before{color:var(--verm)}
+.passos li:nth-child(2)::before{color:var(--amar)}
+.passos li:nth-child(3)::before{color:#2ECC63}
+.passos li:nth-child(4)::before{color:#fff}
+.passos h3{margin:0 0 4px;font-size:1.2rem}
+.passos p{margin:0;color:#dbe3ff}
+.passos .nota{color:#c3cff8;margin-top:28px}
+.fatos li{align-items:center}
+
+/* ---------- GALERIA ---------- */
+.galeria{padding:84px 0}
+.mosaico{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:260px 260px;gap:12px}
+.mosaico img{width:100%;height:100%;object-fit:cover;border-radius:var(--raio)}
+.mosaico img:first-child{grid-row:span 2}
+.mosaico img:nth-child(4){grid-column:span 2}
+
+/* ---------- ONDE ---------- */
+.onde{background:var(--ceu);padding:80px 0}
+.onde .grade{display:grid;grid-template-columns:1fr 1.15fr;gap:36px;align-items:stretch}
+.onde dl{margin:18px 0 24px;display:grid;grid-template-columns:auto 1fr;gap:10px 18px}
+.onde dt{font-weight:800}
+.onde dd{margin:0}
+.mapa{width:100%;min-height:360px;height:100%;border:0;border-radius:var(--raio);box-shadow:0 0 0 2px #c7d3f7}
+
+footer{background:var(--tinta);color:#cdd5f5;padding:26px 0 96px;font-size:.88rem}
+footer .aro{height:8px;margin-bottom:18px}
+footer .largura>div{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+
+.flutuante{position:fixed;right:18px;bottom:18px;z-index:50;display:flex;align-items:center;gap:8px;background:var(--zap);color:#fff;text-decoration:none;font-weight:800;padding:14px 18px;border-radius:40px;box-shadow:0 8px 22px rgba(16,26,69,.3)}
+.flutuante .ico{width:26px;height:26px}
+
+@media (max-width:1020px){
+  .cartoes{grid-template-columns:repeat(2,1fr)}
+  .festa .grade{grid-template-columns:1fr 320px}
+}
+@media (max-width:900px){
+  .barra nav{display:none}
+  .texto{max-width:440px}
+  .topo .foto{object-position:92% 40%}
+  .prova .grade,.onde .grade{grid-template-columns:1fr}
+  .festa .grade{grid-template-columns:1fr}
+  .cartoes{grid-template-columns:repeat(4,1fr)}
+  .ficha{position:static}
+  .passos ol{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .topo{min-height:0}
+  .topo .foto{position:relative;height:46vh;min-height:300px;object-position:74% 30%}
+  .topo::before{background:linear-gradient(180deg,rgba(19,41,143,.55) 0%,rgba(19,41,143,0) 22%)}
+  .barra{position:absolute;top:0;left:20px;right:20px;width:auto}
+  .miolo{background:var(--lona);padding:0 0 40px;margin-top:-1px}
+  .miolo .texto{margin-top:-3.6rem}
+  .pula{font-size:min(19vw,5.6rem)}
+  .miolo .texto{max-width:100%}
+  .sub{font-size:1.05rem}
+  .acoes .botao{flex:1 1 100%;justify-content:center}
+  .cartoes{grid-template-columns:repeat(2,1fr);gap:10px}
+  .cartao small{display:none}
+  .passos ol{grid-template-columns:1fr}
+  .mosaico{grid-template-columns:1fr 1fr;grid-template-rows:200px 160px 160px}
+  .mosaico img:first-child{grid-row:auto;grid-column:span 2}
+  .flutuante span{display:none}
+  .flutuante{padding:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .pula.pulando .l{animation:none}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.030-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.040 1.016-1.040 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.870 9.870 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.860 9.860 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.030 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para Pula Pula Brinquedos Americana. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <img class="foto" src="fotos/hero.jpg" alt="Menininha gargalhando no meio do pulo numa cama elástica, com céu azul ao fundo" fetchpriority="high">
+  <div class="largura barra">
+    <a class="marca" href="#">Pula Pula</a>
+    <nav aria-label="Seções"><a href="#festa">Montar a festa</a><a href="#como">Como funciona</a><a href="#onde">Onde estamos</a></nav>
+  </div>
+  <div class="largura miolo">
+    <div class="texto">
+      <h1><span class="pula pulando" id="pula" title="Toque para pular de novo" aria-label="Pula Pula"></span><span class="h1-sub">Brinquedos Americana</span></h1>
+      <div class="aro" aria-hidden="true"></div>
+      <p class="sub">Aluguel de cama elástica e brinquedos infláveis para a festa das crianças em Americana.</p>
+      <div class="acoes">
+        <a class="botao zap" href="https://wa.me/5519994857029?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20a%20disponibilidade%20dos%20brinquedos%20para%20uma%20festa." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Ver data no WhatsApp</a>
+        <a class="botao amarelo" href="#festa">Montar a festa</a>
+      </div>
+      <p class="selo-google"><b>4,8</b><span><span class="estrelas" aria-hidden="true">★★★★★</span>43 avaliações no Google</span></p>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="prova" aria-label="O que dizem da Pula Pula">
+  <div class="largura grade">
+    <div class="nota-grande">
+      <span class="n">4,8</span>
+      <p><span class="estrelas" aria-hidden="true">★★★★★</span>é a nota da Pula Pula no Google, dada por 43 famílias que já alugaram.</p>
+    </div>
+    <ul class="fatos">
+      <li><b>43</b><span>avaliações no Google Meu Negócio</span></li>
+      <li><b>529</b><span>curtidas na página do Facebook, mais ou menos</span></li>
+      <li><b aria-hidden="true"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg></b><span>Fotos das festas no Instagram: <a href="https://www.instagram.com/aluguel.brinquedos.pulapula/" rel="noopener">@aluguel.brinquedos.pulapula</a></span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="festa" id="festa">
+  <div class="largura">
+    <h2>Monte a sua festa</h2>
+    <p class="intro">Toque nos brinquedos que você quer na festa. A ficha ao lado se monta sozinha e o pedido vai pronto para o WhatsApp da Pula Pula, que confirma a data e o valor.</p>
+    <div class="grade">
+      <div class="cartoes" id="cartoes" role="group" aria-label="Brinquedos para a festa"></div>
+
+      <form class="ficha" id="ficha" onsubmit="return false" aria-label="Pedido para a Pula Pula">
+        <div class="aro" aria-hidden="true"></div>
+        <h3>Ficha da festa</h3>
+        <div class="campo"><label class="tit" for="data">Data da festa</label><input type="date" id="data"></div>
+        <fieldset><legend>Quantas crianças</legend><div class="seg">
+          <input type="radio" name="criancas" id="c1" value="até 15 crianças" checked><label for="c1">Até 15</label>
+          <input type="radio" name="criancas" id="c2" value="de 15 a 30 crianças"><label for="c2">15 a 30</label>
+          <input type="radio" name="criancas" id="c3" value="mais de 30 crianças"><label for="c3">Mais de 30</label>
+        </div></fieldset>
+        <fieldset><legend>Onde vai ser</legend><div class="seg">
+          <input type="radio" name="local" id="l1" value="em casa" checked><label for="l1">Casa ou quintal</label>
+          <input type="radio" name="local" id="l2" value="num salão de festas"><label for="l2">Salão</label>
+          <input type="radio" name="local" id="l3" value="no condomínio"><label for="l3">Condomínio</label>
+        </div></fieldset>
+        <div class="campo"><label class="tit" for="bairro">Bairro</label><input type="text" id="bairro" placeholder="Ex.: Vila Rehder" autocomplete="off" maxlength="40"></div>
+        <div class="lista" aria-live="polite"><p>Brinquedos escolhidos</p><div id="escolhidos"></div></div>
+        <a class="botao zap" id="enviar" href="#" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Mandar pedido no WhatsApp</a>
+        <small>Brinquedos de exemplo: no site final entram os brinquedos que a Pula Pula aluga, com fotos de verdade.</small>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="passos" id="como">
+  <div class="largura">
+    <h2>Como funciona</h2>
+    <ol>
+      <li><h3>Escolhe os brinquedos</h3><p>Monta a festa aqui no site ou manda uma mensagem.</p></li>
+      <li><h3>Reserva a data</h3><p>A Pula Pula confirma se está livre e passa o valor.</p></li>
+      <li><h3>Montagem no local</h3><p>Os brinquedos chegam e ficam prontos antes da criançada.</p></li>
+      <li><h3>Festa pulando</h3><p>Depois da festa, é só combinar a retirada.</p></li>
+    </ol>
+    <p class="nota">Texto de exemplo. No site final entra o jeito de trabalhar da Pula Pula: entrega, montagem, horários e regiões atendidas.</p>
+  </div>
+</section>
+
+<section class="galeria">
+  <div class="largura">
+    <h2>Festa boa é festa que pula</h2>
+    <p class="intro">Do aniversário no quintal à festa do condomínio, o brinquedo certo segura a criançada a tarde inteira.</p>
+    <div class="mosaico">
+      <img src="fotos/pes.jpg" alt="Pés de criança pulando dentro de um inflável colorido" loading="lazy">
+      <img src="fotos/baloes.jpg" alt="Menino correndo entre arcos de balões numa festa" loading="lazy">
+      <img src="fotos/rosa.jpg" alt="Bebê brincando numa piscina de bolinhas rosa" loading="lazy">
+      <img src="fotos/gramado.jpg" alt="Dois infláveis montados num gramado para festa" loading="lazy">
+    </div>
+    <p class="nota">Fotos ilustrativas. No site final entram as festas montadas pela Pula Pula.</p>
+  </div>
+</section>
+
+<section class="onde" id="onde">
+  <div class="largura grade">
+    <div>
+      <h2>Onde estamos</h2>
+      <p class="intro">A Pula Pula fica na Vila Rehder, em Americana. A disponibilidade de datas e a entrega são combinadas pelo WhatsApp.</p>
+      <dl>
+        <dt>Bairro</dt><dd>Vila Rehder, Americana – SP</dd>
+        <dt>WhatsApp</dt><dd><a href="https://wa.me/5519994857029" rel="noopener">(19) 99485-7029</a></dd>
+        <dt>Instagram</dt><dd><a href="https://www.instagram.com/aluguel.brinquedos.pulapula/" rel="noopener">@aluguel.brinquedos.pulapula</a></dd>
+      </dl>
+      <div class="acoes">
+        <a class="botao zap" href="https://wa.me/5519994857029?text=Ol%C3%A1!%20Vim%20pelo%20site.%20Voc%C3%AAs%20entregam%20no%20meu%20bairro%3F" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar no WhatsApp</a>
+        <a class="botao contorno" href="https://www.google.com/maps/dir/?api=1&destination=Vila%20Rehder%2C%20Americana%20-%20SP" rel="noopener">Traçar rota</a>
+      </div>
+      <p class="nota">No site final entram o endereço completo e os horários de atendimento.</p>
+    </div>
+    <iframe class="mapa" src="https://www.google.com/maps?q=Vila%20Rehder%2C%20Americana%20-%20SP&output=embed" loading="lazy" title="Mapa: Vila Rehder, Americana" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="largura">
+    <div class="aro" aria-hidden="true"></div>
+    <div><span>Pula Pula Brinquedos, Vila Rehder, Americana – SP</span><span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span></div>
+  </div>
+</footer>
+<a class="flutuante" href="https://wa.me/5519994857029?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20a%20disponibilidade%20dos%20brinquedos%20para%20uma%20festa." rel="noopener" aria-label="Chamar a Pula Pula no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg><span>WhatsApp</span></a>
+
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const FONE = '5519994857029';
+
+  // ----- Título que pula -----
+  const pula = $('pula');
+  let i = 0;
+  'Pula Pula'.split('').forEach((c) => {
+    const s = document.createElement('span');
+    if (c === ' ') { s.className = 'esp'; } else { s.className = 'l'; s.textContent = c; s.style.setProperty('--i', i++); }
+    s.setAttribute('aria-hidden', 'true');
+    pula.appendChild(s);
+  });
+  pula.addEventListener('click', () => { pula.classList.remove('pulando'); void pula.offsetWidth; pula.classList.add('pulando'); });
+
+  // ----- Montar a festa -----
+  // [id, nome no cartão, texto na mensagem, foto, descrição (exemplo)]
+  const BRINQ = [
+    ['cama', 'Cama elástica', 'cama elástica', 'fotos/cama.jpg', 'Redonda, com rede de proteção em volta.'],
+    ['castelo', 'Pula-pula inflável', 'pula-pula inflável', 'fotos/castelo.jpg', 'O clássico das festas, cheio de cor.'],
+    ['toboga', 'Tobogã inflável', 'tobogã inflável', 'fotos/toboga.jpg', 'Sobe pela escadinha e desce escorregando.'],
+    ['circuito', 'Circuito inflável', 'circuito inflável de obstáculos', 'fotos/circuito.jpg', 'Obstáculos para correr, pular e passar por baixo.'],
+    ['bolinhas', 'Piscina de bolinhas', 'piscina de bolinhas', 'fotos/bolinhas.jpg', 'Para os pequenos mergulharem sem medo.'],
+    ['sabao', 'Futebol inflável', 'futebol inflável', 'fotos/sabao.jpg', 'Campo fechado para a turma do futebol.'],
+    ['escorregador', 'Escorregador', 'escorregador', 'fotos/escorregador.jpg', 'Desce direto na piscina de bolinhas.'],
+    ['tematico', 'Inflável temático', 'inflável temático', 'fotos/tematico.jpg', 'Com o tema da festa, para render foto.'],
+  ];
+  const escolha = new Set(['cama']);
+  const cartoes = $('cartoes');
+  BRINQ.forEach(([id, rotulo, , foto, desc]) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'cartao'; b.dataset.s = id; b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = `<span class="cartao-foto"><img src="${foto}" alt="" loading="lazy"></span>` +
+      `<span class="cartao-texto"><strong>${rotulo}</strong><small>${desc}</small></span>` +
+      `<span class="cartao-marca" aria-hidden="true"></span>`;
+    b.addEventListener('click', () => { escolha.has(id) ? escolha.delete(id) : escolha.add(id); atualizar(); });
+    cartoes.appendChild(b);
+  });
+
+  const DIAS = ['domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado'];
+  function lista(itens) { return itens.length < 2 ? itens.join('') : itens.slice(0, -1).join(', ') + ' e ' + itens[itens.length - 1]; }
+  function quando() {
+    const v = $('data').value;
+    if (!v) return '';
+    const [a, m, d] = v.split('-').map(Number);
+    const dt = new Date(a, m - 1, d);
+    return ` no dia ${String(d).padStart(2, '0')}/${String(m).padStart(2, '0')} (${DIAS[dt.getDay()]})`;
+  }
+  // data mínima: hoje em São Paulo
+  $('data').min = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Sao_Paulo' }).format(new Date());
+
+  function atualizar() {
+    cartoes.querySelectorAll('.cartao').forEach((b) => b.setAttribute('aria-pressed', String(escolha.has(b.dataset.s))));
+    const itens = BRINQ.filter(([id]) => escolha.has(id)).map((c) => c[2]);
+    const alvo = $('escolhidos');
+    alvo.innerHTML = '';
+    if (!itens.length) { const p = document.createElement('p'); p.className = 'vazio'; p.textContent = 'Nenhum brinquedo ainda. Toque nas fotos.'; alvo.appendChild(p); }
+    else { const ul = document.createElement('ul'); itens.forEach((t) => { const li = document.createElement('li'); li.textContent = t[0].toUpperCase() + t.slice(1); ul.appendChild(li); }); alvo.appendChild(ul); }
+    const criancas = document.querySelector('input[name=criancas]:checked').value;
+    const local = document.querySelector('input[name=local]:checked').value;
+    const bairro = $('bairro').value.trim();
+    const pedido = itens.length ? lista(itens) : 'brinquedos';
+    const onde = bairro ? `${local}, no bairro ${bairro}` : local;
+    const msg = `Olá! Vim pelo site da Pula Pula. Quero alugar ${pedido} para uma festa${quando()}, ${onde}, com ${criancas}. Está disponível? Qual o valor?`;
+    $('enviar').href = `https://wa.me/${FONE}?text=` + encodeURIComponent(msg);
+  }
+  $('ficha').addEventListener('input', atualizar);
+  $('ficha').addEventListener('change', atualizar);
+  atualizar();
+})();
+</script>
+</body>
+</html>
