@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Na Cadeira da Ju · Studio de Beleza em Rio Claro</title>
+<meta name="description" content="Nacadeiradaju Studio de Beleza em Rio Claro: cabelo, estética, noivas, manicure e pedicure. Agende pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Mr+Dafoe&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --preto:#000;
+    --carvao:#17130e;
+    --ouro:#c9a35a;
+    --ouro-claro:#efd9a2;
+    --ouro-fundo:#8c6a2c;
+    --marfim:#f2ece1;
+    --cinza:#b9b0a2;
+    --verde:#25d366;
+    --foil:linear-gradient(100deg,#8c6a2c 0%,#e9cf8f 28%,#b8924a 48%,#f4e1ad 66%,#9c7a38 100%);
+    --sans:"Josefin Sans",system-ui,sans-serif;
+    --script:"Mr Dafoe",cursive;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--preto);color:var(--marfim);font-family:var(--sans);font-weight:300;font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  :focus-visible{outline:2px solid var(--ouro-claro);outline-offset:3px}
+  .wrap{width:min(1160px,100% - 2.5rem);margin-inline:auto}
+  svg.ico{width:1.15em;height:1.15em;flex:none}
+
+  /* faixa demonstrativa */
+  .demo{background:var(--ouro);color:#1b1408;font-size:.82rem;font-weight:400;text-align:center;padding:.45rem 1rem;line-height:1.35}
+
+  /* cabeçalho */
+  .topo{position:absolute;left:0;right:0;z-index:5;padding:1.1rem 0}
+  .topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+  .marca{font-family:var(--script);font-size:2.1rem;line-height:1;text-decoration:none;background:var(--foil);-webkit-background-clip:text;background-clip:text;color:transparent;padding:.1em .15em}
+  .topo nav{display:flex;gap:1.6rem;font-size:.95rem}
+  .topo nav a{text-decoration:none;color:var(--marfim);opacity:.85}
+  .topo nav a:hover{opacity:1;color:var(--ouro-claro)}
+
+  .btn{display:inline-flex;align-items:center;gap:.6rem;font:600 1rem/1 var(--sans);text-decoration:none;padding:1rem 1.4rem .9rem;border-radius:3px;border:1px solid transparent;cursor:pointer}
+  .btn-wa{background:var(--verde);color:#062b14}
+  .btn-wa:hover{background:#1fbe5b}
+  .btn-ouro{background:transparent;color:var(--ouro-claro);border-color:var(--ouro)}
+  .btn-ouro:hover{background:rgba(201,163,90,.12)}
+  .btn-sm{padding:.7rem 1rem .6rem;font-size:.92rem}
+
+  /* hero */
+  .hero{position:relative;min-height:max(100svh,640px);display:grid;place-items:center;overflow:hidden;isolation:isolate;padding:6.5rem 1.25rem 4rem}
+  .hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:30% 50%;z-index:-2;filter:grayscale(1) contrast(1.05) brightness(.62)}
+  .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at 50% 55%,rgba(0,0,0,.15),rgba(0,0,0,.65) 75%)}
+  .arco{position:relative;width:min(470px,100%);aspect-ratio:47/60;display:grid;place-items:center;text-align:center}
+  .arco svg.linhas{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+  .arco{container-type:inline-size}
+  .linhas path.painel{fill:rgba(0,0,0,.74);stroke:none}
+  .linhas path,.linhas line{fill:none;stroke:var(--ouro);stroke-width:1.2;vector-effect:non-scaling-stroke}
+  .linhas .fina{stroke-width:.8;opacity:.75}
+  .arco .conteudo{position:relative;padding:12% 11% 22%}
+  .hero h1{margin:0;font-weight:400;line-height:1}
+  .hero h1 .script{display:block;font-family:var(--script);font-size:15.5cqi;font-weight:400;background:var(--foil);-webkit-background-clip:text;background-clip:text;color:transparent;padding:.1em .2em .15em;margin:0 -.2em}
+  .hero h1 .sub{display:block;font-size:.95rem;letter-spacing:.32em;color:var(--ouro-claro);margin-top:.4rem;font-weight:300}
+  .hero p.lead{margin:1.6rem auto 0;max-width:26ch;font-size:1.12rem;line-height:1.5;color:var(--marfim)}
+  .hero .acoes{margin-top:1.8rem;display:flex;flex-direction:column;align-items:center;gap:.9rem}
+  .hero .ig{font-size:.92rem;color:var(--cinza);text-decoration:none}
+  .hero .ig strong{color:var(--ouro-claro);font-weight:600}
+
+  /* desenho do arco uma única vez */
+  .linhas .desenha{stroke-dasharray:1;stroke-dashoffset:1;animation:desenha 2.4s cubic-bezier(.6,.1,.2,1) .2s forwards}
+  .linhas .desenha.d2{animation-delay:.9s}
+  .linhas .desenha.d3{animation-delay:1.3s}
+  @keyframes desenha{to{stroke-dashoffset:0}}
+
+  /* faixa de provas */
+  .provas{border-block:1px solid rgba(201,163,90,.35);background:var(--preto)}
+  .provas ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
+  .provas li{padding:1.5rem 1.2rem;border-left:1px solid rgba(201,163,90,.25);text-align:center}
+  .provas li:first-child{border-left:0}
+  .provas b{display:block;font-weight:600;font-size:1.25rem;color:var(--ouro-claro)}
+  .provas span{font-size:.92rem;color:var(--cinza)}
+
+  section{padding:6rem 0}
+  h2{font-weight:300;font-size:clamp(2.1rem,4.6vw,3.3rem);line-height:1.08;letter-spacing:-.01em;margin:0 0 1rem;color:var(--marfim)}
+  .intro{max-width:56ch;color:var(--cinza);margin:0}
+  .nota{font-size:.85rem;color:#8d8577;margin-top:1rem}
+  .orn{display:block;width:84px;height:28px;margin-bottom:1.4rem;color:var(--ouro)}
+
+  /* serviços */
+  .servicos .cab{display:grid;grid-template-columns:1.1fr 1fr;gap:2rem;align-items:end;margin-bottom:3.2rem}
+  .grade{display:grid;grid-template-columns:repeat(4,1fr);gap:2.4rem 1.6rem}
+  .serv{display:flex;flex-direction:column}
+  .serv .foto{position:relative;border-radius:999px 999px 0 0 / 50% 50% 0 0;overflow:hidden;aspect-ratio:4/5;outline:1px solid rgba(201,163,90,.55);outline-offset:6px;margin:6px}
+  .serv .foto img{width:100%;height:100%;object-fit:cover}
+  .serv h3{font-weight:400;font-size:1.35rem;margin:1.3rem 0 .3rem;color:var(--ouro-claro)}
+  .serv p{margin:0 0 1rem;font-size:.97rem;color:var(--cinza);flex:1}
+  .serv a.pedir{display:inline-flex;align-items:center;gap:.5rem;font-weight:400;font-size:.95rem;text-decoration:none;color:var(--marfim);border-bottom:1px solid var(--ouro);padding-bottom:.25rem;align-self:flex-start}
+  .serv a.pedir svg{color:var(--verde)}
+  .serv a.pedir:hover{color:var(--ouro-claro)}
+  .extra{margin-top:3rem;padding-top:1.6rem;border-top:1px solid rgba(201,163,90,.25);display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center;justify-content:space-between;color:var(--cinza)}
+
+  /* noivas */
+  .noivas{background:var(--carvao)}
+  .noivas .wrap{display:grid;grid-template-columns:1fr 1fr;gap:4.5rem;align-items:center}
+  .noivas figure{margin:0;position:relative}
+  .noivas figure img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:999px 999px 0 0 / 42% 42% 0 0}
+  .noivas figure::before{content:"";position:absolute;inset:-14px;border:1px solid var(--ouro);border-radius:999px 999px 0 0 / 44% 44% 0 0;pointer-events:none}
+  .noivas figcaption{font-size:.8rem;color:#8d8577;margin-top:.8rem;text-align:right}
+  .passos{list-style:none;margin:2rem 0;padding:0;counter-reset:p}
+  .passos li{counter-increment:p;display:grid;grid-template-columns:2.6rem 1fr;gap:.4rem;padding:1rem 0;border-top:1px solid rgba(201,163,90,.22)}
+  .passos li::before{content:counter(p);font-family:var(--script);font-size:2rem;line-height:1;color:var(--ouro)}
+  .passos b{font-weight:600;display:block;color:var(--marfim)}
+  .passos span{color:var(--cinza);font-size:.97rem}
+
+  /* lanza */
+  .lanza{position:relative;padding:5.5rem 0;text-align:center;overflow:hidden}
+  .lanza .wrap{max-width:760px}
+  .lanza h2{font-size:clamp(2rem,4.2vw,3rem)}
+  .lanza .selo{font-family:var(--script);font-size:clamp(3rem,7vw,4.6rem);line-height:1.1;background:var(--foil);-webkit-background-clip:text;background-clip:text;color:transparent;padding:0 .2em;display:inline-block;margin-bottom:.4rem}
+  .lanza p{color:var(--cinza);margin:0 auto;max-width:54ch}
+  .lanza .acoes{margin-top:2rem}
+
+  /* galeria */
+  .galeria{background:var(--carvao)}
+  .galeria .cab{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:2.4rem;flex-wrap:wrap}
+  .fotos{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:160px;gap:.8rem}
+  .fotos button{all:unset;cursor:zoom-in;position:relative;overflow:hidden;border-radius:2px}
+  .fotos button:focus-visible{outline:2px solid var(--ouro-claro);outline-offset:3px}
+  .fotos img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .fotos button:hover img{transform:scale(1.04)}
+  .fotos button:nth-child(1){grid-column:span 3;grid-row:span 2}
+  .fotos button:nth-child(2){grid-column:span 3;grid-row:span 1}
+  .fotos button:nth-child(3){grid-column:span 3;grid-row:span 1}
+  .fotos button:nth-child(4),.fotos button:nth-child(5),.fotos button:nth-child(6){grid-column:span 2;grid-row:span 2}
+  dialog.zoom{border:0;padding:0;background:transparent;max-width:min(92vw,1000px);max-height:92vh}
+  dialog.zoom::backdrop{background:rgba(0,0,0,.88)}
+  dialog.zoom img{max-height:86vh;width:auto;margin:auto;border:1px solid var(--ouro)}
+  dialog.zoom button{position:absolute;top:.5rem;right:.5rem;background:#000;color:var(--ouro-claro);border:1px solid var(--ouro);font:400 1rem var(--sans);padding:.5rem .8rem;cursor:pointer}
+
+  /* instagram */
+  .insta .wrap{display:grid;grid-template-columns:auto 1fr;gap:3.5rem;align-items:center}
+  .insta .logo{width:clamp(200px,26vw,300px);aspect-ratio:1;border:1px solid rgba(201,163,90,.5);padding:10px;background:#000}
+  .insta .logo img{width:100%;height:100%;object-fit:cover}
+  .insta .num{font-size:clamp(3rem,7vw,4.8rem);font-weight:300;line-height:1;color:var(--ouro-claro);letter-spacing:-.02em}
+  .insta .acoes{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:1.8rem}
+
+  /* onde */
+  .onde{background:var(--carvao)}
+  .onde .wrap{display:grid;grid-template-columns:1fr 1.25fr;gap:3.5rem;align-items:stretch}
+  .onde iframe{width:100%;height:100%;min-height:360px;border:1px solid rgba(201,163,90,.45);filter:grayscale(.85) contrast(1.05)}
+  .onde dl{margin:2rem 0;display:grid;gap:1.1rem}
+  .onde dt{font-weight:600;color:var(--ouro-claro)}
+  .onde dd{margin:0;color:var(--cinza)}
+  .onde .acoes{display:flex;flex-wrap:wrap;gap:.9rem}
+
+  footer{padding:3rem 0 6rem;text-align:center;color:#8d8577;font-size:.9rem;border-top:1px solid rgba(201,163,90,.25)}
+  footer .marca{font-size:2.4rem;display:inline-block;margin-bottom:.4rem}
+  footer p{margin:.3rem 0}
+
+  .flutua{position:fixed;right:1.1rem;bottom:1.1rem;z-index:20;width:60px;height:60px;border-radius:50%;background:var(--verde);color:#fff;display:grid;place-items:center;box-shadow:0 6px 22px rgba(0,0,0,.45)}
+  .flutua svg{width:32px;height:32px}
+
+  @media (max-width:980px){
+    .grade{grid-template-columns:repeat(2,1fr)}
+    .servicos .cab,.noivas .wrap,.onde .wrap{grid-template-columns:1fr}
+    .noivas figure{max-width:460px;margin-inline:auto;width:calc(100% - 28px)}
+    .provas ul{grid-template-columns:repeat(2,1fr)}
+    .provas li:nth-child(3){border-left:0}
+    .provas li:nth-child(n+3){border-top:1px solid rgba(201,163,90,.25)}
+    .topo nav{display:none}
+  }
+  @media (max-width:600px){
+    section{padding:4.2rem 0}
+    .grade{gap:2rem 1rem}
+    .serv h3{font-size:1.15rem;margin-top:1rem}
+    .serv p{font-size:.9rem}
+    .marca{font-size:1.8rem}
+    .hero{padding-top:5.5rem}
+    .arco .conteudo{padding:12% 8% 22%}
+    .hero p.lead{font-size:1rem}
+    .hero h1 .sub{font-size:.8rem;letter-spacing:.26em}
+    .fotos{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}
+    .fotos button:nth-child(n){grid-column:span 1;grid-row:span 1}
+    .fotos button:nth-child(1){grid-column:span 2;grid-row:span 2}
+    .fotos button:nth-child(6){grid-column:span 2;grid-row:span 1}
+    .insta .wrap{grid-template-columns:1fr;gap:2rem}
+    .provas li{padding:1.1rem .6rem}
+    .provas b{font-size:1.05rem}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .linhas .desenha{animation:none;stroke-dashoffset:0}
+    .fotos img{transition:none}
+  }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.870 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.050 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.480-8.413Z"/></symbol>
+  <symbol id="orn" viewBox="0 0 84 28"><g fill="none" stroke="currentColor" stroke-width="1"><path d="M28 27V9a14 14 0 0 1 28 0v18"/><path d="M34 27V10a8 8 0 0 1 16 0v17"/><line x1="0" y1="27" x2="84" y2="27"/><line x1="42" y1="1" x2="42" y2="27"/></g></symbol>
+</svg>
+
+<div class="demo">Modelo demonstrativo feito por Daniel para Nacadeiradaju Studio de Beleza. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Na Cadeira da Ju, início">NacadeiradaJu</a>
+    <nav aria-label="Seções">
+      <a href="#servicos">Serviços</a>
+      <a href="#noivas">Noivas</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#onde">Onde estamos</a>
+    </nav>
+    <a class="btn btn-wa btn-sm" href="https://wa.me/5519981225547?text=Ol%C3%A1%2C%20Ju!%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Agendar</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo">
+    <img src="fotos/hero.jpg" alt="Salão de beleza com cadeiras e espelhos em arco" fetchpriority="high">
+    <div class="arco">
+      <svg class="linhas" viewBox="0 0 470 600" preserveAspectRatio="none" aria-hidden="true">
+        <!-- moldura em arco inspirada no monograma do logo -->
+        <path class="painel" d="M8 0 V372 A227 227 0 0 0 462 372 V0 Z"/>
+        <path class="desenha" pathLength="1" d="M8 0 V372 A227 227 0 0 0 462 372 V0"/>
+        <path class="desenha d2 fina" pathLength="1" d="M22 0 V372 A213 213 0 0 0 448 372 V0"/>
+        <path class="desenha d3 fina" pathLength="1" d="M8 0 H462"/>
+        <path class="desenha d3 fina" pathLength="1" d="M200 600 V560 M270 600 V560"/>
+      </svg>
+      <div class="conteudo">
+        <h1 id="titulo"><span class="script">NacadeiradaJu</span><span class="sub">Studio de beleza</span></h1>
+        <p class="lead">Cabelo, estética, noivas, manicure e pedicure em Rio Claro.</p>
+        <div class="acoes">
+          <a class="btn btn-wa" href="https://wa.me/5519981225547?text=Ol%C3%A1%2C%20Ju!%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Agendar pelo WhatsApp</a>
+          <a class="ig" href="https://www.instagram.com/nacadeiradaju/" target="_blank" rel="noopener"><strong>4.768</strong> seguidores no Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="provas">
+    <ul class="wrap">
+      <li><b>4.768</b><span>seguidores no Instagram</span></li>
+      <li><b>Embaixadora L'anza</b><span>linha profissional de cabelo</span></li>
+      <li><b>Noivas</b><span>penteado e maquiagem</span></li>
+      <li><b>Rio Claro</b><span>São Paulo</span></li>
+    </ul>
+  </div>
+
+  <section class="servicos" id="servicos" aria-labelledby="t-serv">
+    <div class="wrap">
+      <div class="cab">
+        <div>
+          <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
+          <h2 id="t-serv">Senta que a Ju cuida de tudo</h2>
+        </div>
+        <p class="intro">Do corte de todo dia ao penteado do casamento: os serviços que aparecem no Instagram do studio. Toque no que você quer e a mensagem já vai pronta para o WhatsApp.</p>
+      </div>
+
+      <div class="grade">
+        <article class="serv">
+          <div class="foto"><img src="fotos/s-noivas.jpg" alt="Penteado de noiva com acessório de pérolas" loading="lazy"></div>
+          <h3>Noivas</h3>
+          <p>Penteado e maquiagem para o dia do casamento.</p>
+          <a class="pedir" href="https://wa.me/5519981225547?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20noivas." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar</a>
+        </article>
+        <article class="serv">
+          <div class="foto"><img src="fotos/s-mechas.jpg" alt="Cabelo longo com mechas loiras" loading="lazy"></div>
+          <h3>Mechas</h3>
+          <p>Luzes e loiros feitos com calma e cuidado com o fio.</p>
+          <a class="pedir" href="https://wa.me/5519981225547?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20mechas." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar</a>
+        </article>
+        <article class="serv">
+          <div class="foto"><img src="fotos/s-escova.jpg" alt="Escova com secador em cliente no salão" loading="lazy"></div>
+          <h3>Cortes e escova</h3>
+          <p>Corte feminino, masculino e infantil, com finalização.</p>
+          <a class="pedir" href="https://wa.me/5519981225547?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20cortes%20e%20escova." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar</a>
+        </article>
+        <article class="serv">
+          <div class="foto"><img src="fotos/s-penteados.jpg" alt="Penteado com torção no cabelo ruivo" loading="lazy"></div>
+          <h3>Penteados</h3>
+          <p>Para festa, formatura, madrinhas e convidadas.</p>
+          <a class="pedir" href="https://wa.me/5519981225547?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20penteados." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar</a>
+        </article>
+        <article class="serv">
+          <div class="foto"><img src="fotos/s-makeup.jpg" alt="Maquiadora aplicando blush em cliente" loading="lazy"></div>
+          <h3>Maquiagem</h3>
+          <p>Make para eventos, ensaios e para o grande dia.</p>
+          <a class="pedir" href="https://wa.me/5519981225547?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20maquiagem." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar</a>
+        </article>
+        <article class="serv">
+          <div class="foto"><img src="fotos/s-unhas.jpg" alt="Unhas pintadas de preto e tartaruga" loading="lazy"></div>
+          <h3>Manicure e pedicure</h3>
+          <p>Mãos e pés bem feitos, da cor que você quiser.</p>
+          <a class="pedir" href="https://wa.me/5519981225547?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20manicure%20e%20pedicure." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar</a>
+        </article>
+        <article class="serv">
+          <div class="foto"><img src="fotos/s-pes.jpg" alt="Pés em bacia com água e flores" loading="lazy"></div>
+          <h3>Spa dos pés</h3>
+          <p>Um momento para relaxar e cuidar da pele dos pés.</p>
+          <a class="pedir" href="https://wa.me/5519981225547?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20o%20spa%20dos%20p%C3%A9s." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar</a>
+        </article>
+        <article class="serv">
+          <div class="foto"><img src="fotos/s-estetica.jpg" alt="Máscara facial sendo aplicada com pincel" loading="lazy"></div>
+          <h3>Estética</h3>
+          <p>Cuidados com a pele do rosto, feitos no studio.</p>
+          <a class="pedir" href="https://wa.me/5519981225547?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20est%C3%A9tica." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar</a>
+        </article>
+      </div>
+
+      <div class="extra">
+        <span>Fotos ilustrativas. Texto de exemplo: no site final entram a descrição de cada serviço e as fotos dos trabalhos da Ju.</span>
+        <a class="btn btn-ouro btn-sm" href="https://wa.me/5519981225547?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20os%20valores%20dos%20servi%C3%A7os." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir valores</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="noivas" id="noivas" aria-labelledby="t-noivas">
+    <div class="wrap">
+      <figure>
+        <img src="fotos/noiva.jpg" alt="Noiva de costas com coque, tiara de pérolas e véu" loading="lazy">
+        <figcaption>Foto ilustrativa.</figcaption>
+      </figure>
+      <div>
+        <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
+        <h2 id="t-noivas">A noiva também senta na cadeira da Ju</h2>
+        <p class="intro">Penteado e maquiagem para você chegar ao altar se sentindo você mesma. Combine tudo com antecedência e chegue tranquila no grande dia.</p>
+        <ol class="passos">
+          <li><div><b>Conversa pelo WhatsApp</b><span>Você conta a data, o estilo do vestido e o que imagina.</span></div></li>
+          <li><div><b>Prova</b><span>Testamos penteado e make antes do casamento.</span></div></li>
+          <li><div><b>O dia</b><span>Você se arruma com calma, sem correria.</span></div></li>
+        </ol>
+        <a class="btn btn-wa" href="https://wa.me/5519981225547?text=Ol%C3%A1%2C%20Ju!%20Vim%20pelo%20site%20e%20vou%20casar.%20Quero%20saber%20se%20voc%C3%AA%20tem%20a%20minha%20data%20livre." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Consultar minha data</a>
+        <p class="nota">Texto de exemplo. No site final entram as etapas e pacotes reais para noivas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lanza" aria-labelledby="t-lanza">
+    <div class="wrap">
+      <span class="selo" aria-hidden="true">L'anza</span>
+      <h2 id="t-lanza">Embaixadora L'anza em Rio Claro</h2>
+      <p>A Ju é embaixadora da L'anza, linha profissional de cuidados para o cabelo. No studio você também encontra produtos para manter o resultado em casa.</p>
+      <div class="acoes"><a class="btn btn-ouro" href="https://wa.me/5519981225547?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20os%20produtos%20L'anza." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar sobre produtos</a></div>
+    </div>
+  </section>
+
+  <section class="galeria" id="galeria" aria-labelledby="t-gal">
+    <div class="wrap">
+      <div class="cab">
+        <div>
+          <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
+          <h2 id="t-gal">Um pouco do studio</h2>
+          <p class="intro">Toque numa foto para ampliar.</p>
+        </div>
+        <p class="nota">Fotos ilustrativas. No site final entram fotos do Instagram do studio.</p>
+      </div>
+      <div class="fotos">
+        <button type="button" aria-label="Ampliar foto: lavagem de cabelo"><img src="fotos/g1.jpg" alt="Lavagem de cabelo no lavatório" loading="lazy"></button>
+        <button type="button" aria-label="Ampliar foto: maquiagem"><img src="fotos/g2.jpg" alt="Maquiagem sendo aplicada com pincel" loading="lazy"></button>
+        <button type="button" aria-label="Ampliar foto: manicure"><img src="fotos/g3.jpg" alt="Manicure trabalhando nas unhas de uma cliente" loading="lazy"></button>
+        <button type="button" aria-label="Ampliar foto: poltrona de pedicure"><img src="fotos/g4.jpg" alt="Poltrona preta de pedicure com bacia" loading="lazy"></button>
+        <button type="button" aria-label="Ampliar foto: preparo do cabelo"><img src="fotos/g5.jpg" alt="Profissional trabalhando em cabelo loiro preso em coque" loading="lazy"></button>
+        <button type="button" aria-label="Ampliar foto: maquiagens"><img src="fotos/g6.jpg" alt="Paleta de sombras e maquiagens sobre a mesa" loading="lazy"></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="insta" aria-labelledby="t-ig">
+    <div class="wrap">
+      <div class="logo"><img src="logo.jpg" alt="Logo Nacadeiradaju Studio de Beleza" loading="lazy"></div>
+      <div>
+        <div class="num">4.768</div>
+        <h2 id="t-ig">pessoas já acompanham o studio no Instagram</h2>
+        <p class="intro">Toda semana tem trabalho novo no @nacadeiradaju: mechas, cortes, unhas e noivas. Agora tudo isso também tem um endereço na internet.</p>
+        <div class="acoes">
+          <a class="btn btn-wa" href="https://wa.me/5519981225547?text=Ol%C3%A1%2C%20Ju!%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Agendar pelo WhatsApp</a>
+          <a class="btn btn-ouro" href="https://www.instagram.com/nacadeiradaju/" target="_blank" rel="noopener">Ver o Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="onde" id="onde" aria-labelledby="t-onde">
+    <div class="wrap">
+      <div>
+        <svg class="orn" aria-hidden="true"><use href="#orn"/></svg>
+        <h2 id="t-onde">Onde fica a cadeira</h2>
+        <dl>
+          <dt>Cidade</dt>
+          <dd>Rio Claro, São Paulo. O endereço completo entra no site final.</dd>
+          <dt>Horários</dt>
+          <dd>Combine o seu horário pelo WhatsApp. Os dias e horários de atendimento entram no site final.</dd>
+          <dt>WhatsApp</dt>
+          <dd>(19) 98122-5547</dd>
+        </dl>
+        <div class="acoes">
+          <a class="btn btn-wa" href="https://wa.me/5519981225547?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20o%20endere%C3%A7o%20do%20studio." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Chamar no WhatsApp</a>
+          <a class="btn btn-ouro" href="https://www.google.com/maps/dir/?api=1&destination=Rio%20Claro%20-%20SP" target="_blank" rel="noopener">Traçar rota</a>
+        </div>
+      </div>
+      <iframe src="https://www.google.com/maps?q=Rio%20Claro%20-%20SP&output=embed" loading="lazy" title="Mapa: Rio Claro, SP" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="marca">NacadeiradaJu</span>
+    <p>Studio de beleza em Rio Claro, SP</p>
+    <p>WhatsApp (19) 98122-5547 e Instagram <a href="https://www.instagram.com/nacadeiradaju/" target="_blank" rel="noopener">@nacadeiradaju</a></p>
+    <p>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</p>
+  </div>
+</footer>
+
+<a class="flutua" href="https://wa.me/5519981225547?text=Ol%C3%A1%2C%20Ju!%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp"><svg aria-hidden="true"><use href="#wa"/></svg></a>
+
+<dialog class="zoom" id="zoom" aria-label="Foto ampliada">
+  <img src="" alt="">
+  <button type="button" id="fechar">Fechar</button>
+</dialog>
+
+<script>
+  const dlg = document.getElementById('zoom');
+  const big = dlg.querySelector('img');
+  document.querySelectorAll('.fotos button').forEach((b) => {
+    b.addEventListener('click', () => {
+      const i = b.querySelector('img');
+      big.src = i.src; big.alt = i.alt;
+      dlg.showModal();
+    });
+  });
+  document.getElementById('fechar').addEventListener('click', () => dlg.close());
+  dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+</script>
+</body>
+</html>
