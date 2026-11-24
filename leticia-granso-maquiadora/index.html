@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Leticia Granso | Maquiagem e penteado de noiva em Limeira</title>
+<meta name="description" content="Modelo demonstrativo de site para Leticia Granso, maquiadora especialista em noivas e cabeleireira no Lefran Concept, em Limeira.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ameixa:#4A1D2C;      /* cor de batom: texto forte e fundos */
+  --ameixa-2:#6B2A3F;
+  --champanhe:#B08D57;   /* dourado do logo Lefran */
+  --champanhe-txt:#8A6A39;
+  --po:#F4E6E2;          /* rosa pó */
+  --branco:#FFFFFF;
+  --tinta:#2B2124;
+  --cinza:#6E6266;
+  --linha:#E8DCD9;
+  --verde:#25D366;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--branco);color:var(--tinta);font:17px/1.6 'Figtree',system-ui,sans-serif}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--champanhe);outline-offset:3px}
+.largura{max-width:1180px;margin:0 auto;padding:0 28px}
+.ico{width:1.2em;height:1.2em;flex:none}
+.aviso{background:var(--ameixa);color:#fff;font-size:14px;text-align:center;padding:8px 16px}
+
+h1,h2,h3,.serif{font-family:'Cormorant',Georgia,serif}
+h2{font-weight:600;font-size:clamp(40px,5vw,64px);line-height:1;letter-spacing:-.01em;margin:0 0 16px;color:var(--ameixa)}
+.intro{color:var(--cinza);max-width:56ch;margin:0 0 44px;font-size:18px}
+.nota-ex{font-size:14px;color:var(--cinza);font-style:italic}
+
+.botao{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;font-size:17px;line-height:1.2;padding:16px 26px;border:1.5px solid var(--ameixa);border-radius:4px}
+.botao.cheio{background:var(--ameixa);color:#fff}
+.botao.cheio:hover{background:var(--ameixa-2);border-color:var(--ameixa-2)}
+.botao.vazio{background:transparent;color:var(--ameixa)}
+.botao.vazio:hover{background:var(--po)}
+
+/* ---------- Banner: foto inteira com um véu de tule do lado do texto ---------- */
+.topo{position:relative;min-height:min(92vh,860px);display:flex;align-items:center;overflow:hidden;isolation:isolate}
+.topo>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 30%;z-index:-2}
+/* o véu: branco translúcido com trama de tule, que se desfaz para a direita */
+.topo::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:
+    radial-gradient(circle at 1px 1px,rgba(255,255,255,.55) 1px,transparent 1.4px) 0 0/7px 7px,
+    linear-gradient(90deg,rgba(255,255,255,.94) 0%,rgba(255,255,255,.86) 34%,rgba(255,255,255,.35) 54%,rgba(255,255,255,0) 68%);
+  -webkit-mask:linear-gradient(90deg,#000 0%,#000 40%,transparent 56%);mask:linear-gradient(90deg,#000 0%,#000 40%,transparent 56%)}
+.topo .largura{width:100%}
+.topo .texto{max-width:560px;padding:64px 0 72px}
+.assinatura{display:flex;align-items:center;gap:14px;margin-bottom:30px}
+.assinatura img{width:58px;height:58px;border-radius:50%;object-fit:cover;border:1px solid var(--linha);background:#fff}
+.assinatura span{font-size:15px;line-height:1.35;color:var(--cinza)}
+.assinatura b{display:block;color:var(--tinta);font-weight:600}
+.topo h1{font-weight:500;font-size:clamp(48px,6vw,86px);line-height:.92;letter-spacing:-.02em;margin:0;color:var(--ameixa)}
+.topo h1 .nome{display:block;font-style:italic;font-weight:500;color:var(--champanhe-txt);font-size:.5em;letter-spacing:0;margin-bottom:14px}
+.topo .sub{font-size:clamp(18px,1.6vw,20px);color:#4b3d41;max-width:40ch;margin:24px 0 0}
+.topo .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.topo .prova{margin:26px 0 0;font-size:15px;color:#4b3d41;display:flex;align-items:center;gap:8px}
+.topo .prova svg{color:#3897F0;width:18px;height:18px;flex:none}
+
+/* ---------- Faixa de prova social ---------- */
+.provas{border-bottom:1px solid var(--linha)}
+.provas ul{list-style:none;margin:0 auto;padding:34px 28px;max-width:1180px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.provas li{display:flex;align-items:baseline;gap:14px}
+.provas b{font-family:'Cormorant',serif;font-weight:600;font-size:clamp(40px,4.4vw,56px);line-height:1;color:var(--ameixa);white-space:nowrap}
+.provas span{color:var(--cinza);font-size:16px;line-height:1.35}
+
+section{padding:104px 0}
+
+/* ---------- Contador: o elemento marcante ---------- */
+.contador{background:var(--ameixa);color:#fff;position:relative;overflow:hidden}
+.contador .grade{display:grid;grid-template-columns:1fr 1.1fr;gap:64px;align-items:center}
+.contador h2{color:#fff}
+.contador p{color:#ead9dc;max-width:42ch}
+.campo{margin-top:30px}
+.campo label{display:block;font-size:15px;color:#ead9dc;margin-bottom:8px}
+.campo input{font:500 22px/1.2 'Figtree',sans-serif;color:#fff;background:transparent;border:0;border-bottom:1.5px solid var(--champanhe);padding:10px 2px;width:min(100%,300px);color-scheme:dark}
+.campo input:focus-visible{outline:3px solid var(--champanhe);outline-offset:4px}
+.mostrador{text-align:center;border:1px solid rgba(176,141,87,.55);padding:48px 28px 40px;position:relative}
+.mostrador::before{content:"";position:absolute;inset:10px;border:1px solid rgba(176,141,87,.3);pointer-events:none}
+.mostrador .numero{font-family:'Cormorant',serif;font-weight:500;font-size:clamp(110px,15vw,200px);line-height:.85;color:#fff;font-variant-numeric:lining-nums}
+.mostrador .unidade{font-family:'Cormorant',serif;font-style:italic;font-size:clamp(28px,3vw,38px);color:var(--champanhe);margin-top:6px}
+.mostrador .frase{margin:22px auto 26px;max-width:34ch;color:#ead9dc;font-size:17px}
+.mostrador .botao.cheio{background:#fff;color:var(--ameixa);border-color:#fff}
+.mostrador .botao.cheio:hover{background:var(--po)}
+.mostrador.vazio .numero{color:rgba(255,255,255,.28)}
+
+/* ---------- Serviços (vitrine) ---------- */
+.servicos .grade{display:grid;grid-template-columns:repeat(4,1fr);gap:34px 24px}
+.servico{display:flex;flex-direction:column}
+.servico img{width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--po)}
+.servico h3{font-weight:600;font-size:28px;line-height:1.05;margin:16px 0 6px;color:var(--ameixa)}
+.servico p{margin:0 0 12px;color:var(--cinza);font-size:16px;line-height:1.5;flex:1}
+.servico a{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;color:var(--ameixa);text-decoration:none;border-bottom:1px solid var(--champanhe);align-self:flex-start;padding-bottom:3px}
+.servico a:hover{color:var(--champanhe-txt)}
+.servico a .ico{color:#1FAF57}
+
+/* ---------- O dia da noiva (sequência real do dia) ---------- */
+.dia{background:var(--po)}
+.dia .grade{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.dia .foto img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.etapas{list-style:none;margin:0;padding:0;counter-reset:e}
+.etapas li{counter-increment:e;display:grid;grid-template-columns:64px 1fr;gap:6px 18px;padding:22px 0;border-top:1px solid #dcc6c1}
+.etapas li:last-child{border-bottom:1px solid #dcc6c1}
+.etapas li::before{content:counter(e);grid-row:span 2;font-family:'Cormorant',serif;font-style:italic;font-weight:500;font-size:52px;line-height:.9;color:var(--champanhe-txt)}
+.etapas strong{font-size:19px;color:var(--ameixa)}
+.etapas span{color:#5b4d51}
+
+/* ---------- Galeria ---------- */
+.galeria .mosaico{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:260px 260px;gap:12px}
+.galeria .mosaico img{width:100%;height:100%;object-fit:cover}
+.galeria .mosaico img:first-child{grid-row:span 2}
+.galeria .rodape{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:22px}
+
+/* ---------- Salão ---------- */
+.salao .grade{display:grid;grid-template-columns:1fr 1.1fr;gap:60px;align-items:start}
+.salao .marca{display:flex;align-items:center;gap:18px;margin-bottom:22px}
+.salao .marca img{width:92px;height:92px;object-fit:cover;border:1px solid var(--linha)}
+.salao .marca p{margin:0;color:var(--cinza);font-size:16px}
+.status{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:16px;margin:4px 0 22px;color:var(--ameixa)}
+.status::before{content:"";width:10px;height:10px;border-radius:50%;background:#2E9E5B;box-shadow:0 0 0 4px rgba(46,158,91,.18)}
+.status.fechado::before{background:#A9969A;box-shadow:0 0 0 4px rgba(169,150,154,.2)}
+table{border-collapse:collapse;width:100%;max-width:420px;margin-bottom:26px}
+th,td{text-align:left;padding:9px 0;border-bottom:1px solid var(--linha);font-weight:500}
+th{font-weight:600;width:44%}
+tr.hoje th,tr.hoje td{color:var(--champanhe-txt)}
+td.sem{color:var(--cinza)}
+.endereco{font-size:19px;margin:0 0 22px}
+.salao .acoes{display:flex;flex-wrap:wrap;gap:12px}
+.mapa{width:100%;aspect-ratio:4/3.4;border:0;background:var(--po)}
+
+/* ---------- Perguntas ---------- */
+.faq details{border-bottom:1px solid var(--linha);max-width:820px}
+.faq summary{cursor:pointer;padding:20px 0;font-weight:600;font-size:18px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:'Cormorant',serif;font-size:32px;line-height:.8;color:var(--champanhe-txt)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin:0 0 20px;color:#5b4d51;max-width:64ch}
+
+.final{background:var(--ameixa);color:#fff;text-align:center;padding:96px 0}
+.final h2{color:#fff;max-width:16ch;margin:0 auto 18px}
+.final p{color:#ead9dc;margin:0 auto 30px;max-width:44ch}
+.final .botao.cheio{background:#fff;color:var(--ameixa);border-color:#fff}
+
+footer{padding:30px 0 100px;font-size:14px;color:var(--cinza)}
+footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.flutuante{position:fixed;right:18px;bottom:18px;display:inline-flex;align-items:center;gap:8px;background:var(--verde);color:#073B1E;font-weight:700;text-decoration:none;padding:14px 18px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.22);font-size:15px;z-index:5}
+
+@media (max-width:1000px){
+  .servicos .grade{grid-template-columns:repeat(2,1fr)}
+  .contador .grade,.dia .grade,.salao .grade{grid-template-columns:1fr;gap:40px}
+  .dia .foto img{aspect-ratio:16/10}
+}
+@media (max-width:900px){
+  .topo{min-height:auto;display:block}
+  .topo>img{position:relative;height:min(62vw,500px);object-position:75% 25%;z-index:0}
+  .topo::before{display:none}
+  .topo .largura{position:relative;z-index:1;margin-top:-90px;background:linear-gradient(180deg,rgba(255,255,255,0) 0,rgba(255,255,255,.92) 70px,#fff 110px)}
+  .topo .texto{padding:70px 0 48px;max-width:620px}
+  .provas ul{grid-template-columns:1fr;gap:14px;padding:28px 24px}
+  section{padding:72px 0}
+  .galeria .mosaico{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .galeria .mosaico img{aspect-ratio:1}
+  .galeria .mosaico img:first-child{grid-row:auto;grid-column:span 2;aspect-ratio:16/10}
+}
+@media (max-width:560px){
+  .largura{padding:0 20px}
+  .topo>img{height:300px}
+  .topo .acoes .botao{flex:1 1 100%;justify-content:center}
+  .servicos .grade{gap:28px 14px}
+  .servico h3{font-size:23px}
+  .servico p{font-size:15px}
+  .mostrador{padding:40px 18px 34px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para Leticia Granso Maquiadora. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <img src="fotos/capa.jpg" alt="Maquiadora passando batom em uma noiva de robe de renda" fetchpriority="high">
+  <div class="largura">
+    <div class="texto">
+      <div class="assinatura"><img src="logo.jpg" alt="Logo do Lefran Concept"><span><b>Lefran Concept</b>Salão de beleza especialista em noivas, Limeira</span></div>
+      <h1><span class="nome">Leticia Granso</span>Noiva pronta, do cabelo à maquiagem.</h1>
+      <p class="sub">Maquiadora especialista em noivas e cabeleireira. Penteado, pele, olhos e o dia da noiva inteiro no mesmo lugar, no Jardim Santa Luiza.</p>
+      <div class="acoes">
+        <a class="botao cheio" href="https://wa.me/5519989132883?text=Ol%C3%A1%2C%20Leticia!%20Vim%20pelo%20site%20e%20quero%20saber%20se%20voc%C3%AA%20tem%20a%20minha%20data%20de%20casamento%20livre." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Consultar minha data</a>
+        <a class="botao vazio" href="https://www.instagram.com/leticiagranso/" rel="noopener">Ver noivas no Instagram</a>
+      </div>
+      <p class="prova"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 1.5l2.6 2.2 3.4-.4.9 3.3 3 1.7-1.3 3.2 1.3 3.2-3 1.7-.9 3.3-3.4-.4L12 22.5l-2.6-2.2-3.4.4-.9-3.3-3-1.7L3.4 12 2.1 8.8l3-1.7.9-3.3 3.4.4zM10.6 15.6l6-6-1.4-1.4-4.6 4.6-2.1-2.1-1.4 1.4z"/></svg>10,5 mil seguidores no Instagram, perfil verificado</p>
+    </div>
+  </div>
+</header>
+
+<div class="provas" aria-label="Números reais">
+  <ul>
+    <li><b>10,5 mil</b><span>pessoas acompanham a @leticiagranso no Instagram</span></li>
+    <li><b>+50 mil</b><span>atendimentos feitos no Lefran Concept, segundo o salão</span></li>
+    <li><b>8h às 20h</b><span>de terça a sábado, no Jardim Santa Luiza</span></li>
+  </ul>
+</div>
+
+<main>
+<section class="contador" id="contador">
+  <div class="largura grade">
+    <div>
+      <h2>Quanto falta para o seu sim?</h2>
+      <p>Coloque a data do casamento e veja quantos dias faltam. Data de noiva costuma ser reservada com antecedência, então vale consultar a agenda da Leticia cedo.</p>
+      <div class="campo">
+        <label for="data">Data do casamento</label>
+        <input type="date" id="data">
+      </div>
+    </div>
+    <div class="mostrador vazio" id="mostrador" aria-live="polite">
+      <div class="numero" id="numero">000</div>
+      <div class="unidade" id="unidade">dias até o grande dia</div>
+      <p class="frase" id="frase">Escolha a data ao lado para começar a contagem.</p>
+      <a class="botao cheio" href="https://wa.me/5519989132883?text=Ol%C3%A1%2C%20Leticia!%20Vim%20pelo%20site%20e%20quero%20saber%20se%20voc%C3%AA%20tem%20a%20minha%20data%20de%20casamento%20livre." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Ver se a data está livre</a>
+    </div>
+  </div>
+</section>
+
+<section class="servicos" id="servicos">
+  <div class="largura">
+    <h2>Do cabelo à maquiagem</h2>
+    <p class="intro">Os serviços que a Leticia e o Lefran Concept mostram no Instagram. Toque em um deles para perguntar direto no WhatsApp.</p>
+    <div class="grade">
+      <article class="servico">
+        <img src="fotos/dia-da-noiva.jpg" alt="Cabeleireira arrumando o penteado de uma cliente no salão" loading="lazy">
+        <h3>Dia da noiva</h3>
+        <p>Cabelo e maquiagem da noiva no mesmo lugar, no dia do casamento.</p>
+        <a href="https://wa.me/5519989132883?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20o%20Dia%20da%20Noiva." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar</a>
+      </article>
+      <article class="servico">
+        <img src="fotos/maquiagem-noiva.jpg" alt="Maquiagem sendo feita em uma noiva" loading="lazy">
+        <h3>Maquiagem de noiva</h3>
+        <p>A especialidade da Leticia: uma make que dura da cerimônia à festa.</p>
+        <a href="https://wa.me/5519989132883?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20maquiagem%20de%20noiva." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar</a>
+      </article>
+      <article class="servico">
+        <img src="fotos/penteado.jpg" alt="Penteado de noiva preso com detalhes" loading="lazy">
+        <h3>Penteados</h3>
+        <p>Preso, semipreso ou solto, pensado junto com o véu e o vestido.</p>
+        <a href="https://wa.me/5519989132883?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20penteados." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar</a>
+      </article>
+      <article class="servico">
+        <img src="fotos/pele.jpg" alt="Maquiadora aplicando blush com pincel" loading="lazy">
+        <h3>Pele completa</h3>
+        <p>Preparação, correção de cor e acabamento para a pele aparecer bem nas fotos.</p>
+        <a href="https://wa.me/5519989132883?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20maquiagem%20com%20pele%20completa." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar</a>
+      </article>
+      <article class="servico">
+        <img src="fotos/olhos.jpg" alt="Olho com maquiagem esfumada" loading="lazy">
+        <h3>Olhos esfumados</h3>
+        <p>Do esfumado leve ao marcado, para madrinhas, formandas e festas.</p>
+        <a href="https://wa.me/5519989132883?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20maquiagem%20com%20olhos%20esfumados." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar</a>
+      </article>
+      <article class="servico">
+        <img src="fotos/mechas.jpg" alt="Cabelo com mechas iluminadas" loading="lazy">
+        <h3>Mechas</h3>
+        <p>Cabelo iluminado com mechas feitas no salão.</p>
+        <a href="https://wa.me/5519989132883?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20mechas." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar</a>
+      </article>
+      <article class="servico">
+        <img src="fotos/corte.jpg" alt="Cabeleireira finalizando o cabelo de uma cliente" loading="lazy">
+        <h3>Corte</h3>
+        <p>Corte feminino para o dia a dia ou para chegar pronta ao casamento.</p>
+        <a href="https://wa.me/5519989132883?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20corte." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar</a>
+      </article>
+      <article class="servico">
+        <img src="fotos/mega-hair.jpg" alt="Cabelo longo com volume" loading="lazy">
+        <h3>Mega hair</h3>
+        <p>Comprimento e volume para quem quer o cabelo longo no grande dia.</p>
+        <a href="https://wa.me/5519989132883?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20mega%20hair." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar</a>
+      </article>
+    </div>
+    <p class="nota-ex" style="margin-top:30px">Fotos ilustrativas. No site final entram fotos das noivas e dos cabelos feitos pela Leticia.</p>
+  </div>
+</section>
+
+<section class="dia" id="como">
+  <div class="largura grade">
+    <div class="foto"><img src="fotos/dia.jpg" alt="Noiva de véu sorrindo, pronta para a cerimônia" loading="lazy"></div>
+    <div>
+      <h2>Como funciona, da reserva ao altar</h2>
+      <p class="intro">Texto de exemplo. No site final entram as etapas exatas que a Leticia segue com as noivas.</p>
+      <ol class="etapas">
+        <li><strong>Você consulta a data</strong><span>Pelo WhatsApp, com a data do casamento e o horário da cerimônia.</span></li>
+        <li><strong>Conversa e referências</strong><span>Você mostra o vestido, o véu e as fotos que ama. A Leticia monta a proposta de cabelo e make.</span></li>
+        <li><strong>Prova</strong><span>Um dia para testar maquiagem e penteado antes do casamento, com calma.</span></li>
+        <li><strong>O grande dia</strong><span>Cabelo, pele, olhos e os últimos ajustes no Lefran Concept, até você sair pronta para o sim.</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="galeria" id="galeria">
+  <div class="largura">
+    <h2>Noivas, cabelos e makes</h2>
+    <p class="intro">O portfólio completo está no Instagram da Leticia, com destaques de noivas, feedbacks, pele completa e olhos esfumados.</p>
+    <div class="mosaico">
+      <img src="fotos/galeria-1.jpg" alt="Noiva com amigas se arrumando" loading="lazy">
+      <img src="fotos/galeria-2.jpg" alt="Detalhe de penteado com acessório" loading="lazy">
+      <img src="fotos/galeria-3.jpg" alt="Pincéis e maquiagem" loading="lazy">
+      <img src="fotos/galeria-4.jpg" alt="Madrinha ajudando a noiva com o sapato" loading="lazy">
+      <img src="fotos/galeria-5.jpg" alt="Rosto sob o véu de tule" loading="lazy">
+    </div>
+    <div class="rodape">
+      <span class="nota-ex">Fotos ilustrativas. No site final entram os trabalhos da Leticia.</span>
+      <a class="botao vazio" href="https://www.instagram.com/leticiagranso/" rel="noopener">Abrir @leticiagranso</a>
+    </div>
+  </div>
+</section>
+
+<section class="salao" id="salao">
+  <div class="largura grade">
+    <div>
+      <div class="marca"><img src="logo.jpg" alt="Logo do Lefran Concept"><p>A Leticia atende no<br><b style="color:var(--tinta)">Lefran Concept</b>, salão de beleza especialista em noivas.</p></div>
+      <h2>Onde a noiva se arruma</h2>
+      <p class="status" id="status" role="status">Aberto agora</p>
+      <table aria-label="Horário de funcionamento">
+        <tbody id="tabela">
+          <tr data-dia="2"><th>Terça</th><td>8h às 20h</td></tr>
+          <tr data-dia="3"><th>Quarta</th><td>8h às 20h</td></tr>
+          <tr data-dia="4"><th>Quinta</th><td>8h às 20h</td></tr>
+          <tr data-dia="5"><th>Sexta</th><td>8h às 20h</td></tr>
+          <tr data-dia="6"><th>Sábado</th><td>8h às 20h</td></tr>
+          <tr data-dia="0"><th>Domingo</th><td class="sem">Sem horário divulgado</td></tr>
+          <tr data-dia="1"><th>Segunda</th><td class="sem">Sem horário divulgado</td></tr>
+        </tbody>
+      </table>
+      <p class="endereco">R. Pedro Zaccaria, 535<br>Jardim Santa Luiza, Limeira (SP)</p>
+      <div class="acoes">
+        <a class="botao cheio" href="https://www.google.com/maps/dir/?api=1&destination=R.%20Pedro%20Zaccaria%2C%20535%20-%20Jardim%20Santa%20Luiza%2C%20Limeira%20-%20SP%2C%2013484-343" rel="noopener">Traçar rota</a>
+        <a class="botao vazio" href="https://wa.me/5519989132883?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Agendar horário</a>
+      </div>
+    </div>
+    <iframe class="mapa" src="https://www.google.com/maps?q=R.%20Pedro%20Zaccaria%2C%20535%20-%20Jardim%20Santa%20Luiza%2C%20Limeira%20-%20SP%2C%2013484-343&output=embed" loading="lazy" title="Mapa: Lefran Concept, Limeira" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="largura">
+    <h2>Dúvidas de noiva</h2>
+    <p class="intro">Texto de exemplo. No site final entram as respostas da Leticia.</p>
+    <details><summary>Com quanto tempo de antecedência devo reservar?</summary><p>Quanto antes, melhor: sábados de casamento costumam ser os primeiros a fechar. Consulte sua data pelo WhatsApp.</p></details>
+    <details><summary>Tem prova de maquiagem e penteado?</summary><p>A prova serve para testar a make e o cabelo antes do casamento e ajustar o que for preciso. Pergunte como funciona na agenda da Leticia.</p></details>
+    <details><summary>Ela faz madrinhas e mãe da noiva?</summary><p>Pergunte pelo WhatsApp quantas pessoas dá para arrumar no mesmo dia, junto com a noiva.</p></details>
+    <details><summary>Onde é o atendimento?</summary><p>No Lefran Concept, na R. Pedro Zaccaria, 535, Jardim Santa Luiza, em Limeira.</p></details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="largura">
+    <h2>Sua data ainda está livre na agenda?</h2>
+    <p>Mande a data do casamento e o horário da cerimônia para a Leticia pelo WhatsApp.</p>
+    <a class="botao cheio" href="https://wa.me/5519989132883?text=Ol%C3%A1%2C%20Leticia!%20Vim%20pelo%20site%20e%20quero%20saber%20se%20voc%C3%AA%20tem%20a%20minha%20data%20de%20casamento%20livre." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Consultar minha data</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="largura"><span>Leticia Granso, maquiadora e cabeleireira no Lefran Concept, Limeira</span><span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span></div>
+</footer>
+<a class="flutuante" href="https://wa.me/5519989132883?text=Ol%C3%A1%2C%20Leticia!%20Vim%20pelo%20site%20e%20quero%20mais%20informa%C3%A7%C3%B5es." rel="noopener" aria-label="Chamar a Leticia no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+
+<script>
+(function () {
+  // Hora de agora em America/Sao_Paulo
+  const partes = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date()).map((p) => [p.type, p.value]));
+  const dia = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(partes.weekday);
+  const agora = Number(partes.hour) * 60 + Number(partes.minute);
+  const hojeUTC = Date.UTC(Number(partes.year), Number(partes.month) - 1, Number(partes.day));
+
+  // Status aberto/fechado. Horário real (Waze): terça a sábado, 8h às 20h.
+  const TURNOS = { 0: [], 1: [], 2: [[480, 1200]], 3: [[480, 1200]], 4: [[480, 1200]], 5: [[480, 1200]], 6: [[480, 1200]] };
+  const DIAS = ['domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado'];
+  const h = (m) => `${Math.floor(m / 60)}h${m % 60 ? String(m % 60).padStart(2, '0') : ''}`;
+  const status = document.getElementById('status');
+  const turno = TURNOS[dia].find(([a, f]) => agora >= a && agora < f);
+  if (turno) {
+    status.textContent = `Aberto agora, até as ${h(turno[1])}`;
+  } else {
+    status.classList.add('fechado');
+    let prox = TURNOS[dia].find(([a]) => a > agora), d = dia, i = 0;
+    while (!prox && i++ < 7) { d = (d + 1) % 7; prox = TURNOS[d][0]; }
+    const quando = d === dia ? 'hoje' : d === (dia + 1) % 7 ? 'amanhã' : DIAS[d];
+    status.textContent = `Fechado agora, abre ${quando} às ${h(prox[0])}`;
+  }
+  document.querySelector(`#tabela tr[data-dia="${dia}"]`)?.classList.add('hoje');
+
+  // Contador até o casamento
+  const campo = document.getElementById('data'), caixa = document.getElementById('mostrador');
+  const numero = document.getElementById('numero'), unidade = document.getElementById('unidade'), frase = document.getElementById('frase');
+  campo.min = new Date(hojeUTC).toISOString().slice(0, 10);
+  campo.addEventListener('input', () => {
+    if (!campo.value) return;
+    const [a, m, d] = campo.value.split('-').map(Number);
+    const alvo = Date.UTC(a, m - 1, d);
+    const falta = Math.round((alvo - hojeUTC) / 86400000);
+    if (falta < 0) {
+      caixa.classList.add('vazio'); numero.textContent = '000'; unidade.textContent = 'dias até o grande dia';
+      frase.textContent = 'Essa data já passou. Escolha a data do casamento.';
+      return;
+    }
+    caixa.classList.remove('vazio');
+    const semana = DIAS[new Date(alvo).getUTCDay()];
+    numero.textContent = falta.toLocaleString('pt-BR');
+    unidade.textContent = falta === 1 ? 'dia até o grande dia' : falta === 0 ? 'é hoje!' : 'dias até o grande dia';
+    if (falta === 0) numero.textContent = '0';
+    const mes = Math.floor(falta / 30);
+    const extra = falta > 60 ? `Mais ou menos ${mes} meses: tempo bom para reservar a data e marcar a prova.` : 'Está chegando. Consulte a agenda da Leticia o quanto antes.';
+    frase.textContent = `Seu casamento cai ${semana === 'sábado' || semana === 'domingo' ? 'num' : 'numa'} ${semana}. ${extra}`;
+  });
+})();
+</script>
+</body>
+</html>
