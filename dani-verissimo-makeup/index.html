@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dani Veríssimo Makeup · Maquiagem de noivas e social em domicílio em Piracicaba</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<meta name="description" content="Modelo demonstrativo de site para Dani Veríssimo Makeup, maquiadora social e de noivas que atende em domicílio em Piracicaba.">
+<meta name="theme-color" content="#5A1E33">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Karla:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --porcelana:#FAF3F0;
+  --pele:#F2E1DA;
+  --blush:#E8A0A2;
+  --rose:#B5546A;
+  --vinho:#5A1E33;
+  --tinta:#2B1820;
+  --bronze:#A8744E;
+  --verde:#1FA855;
+  --display:"Gloock", Georgia, serif;
+  --texto:"Karla", system-ui, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--porcelana);color:var(--tinta);font:400 1.0625rem/1.6 var(--texto);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--rose);outline-offset:3px}
+.ico{width:1.15em;height:1.15em;flex:none}
+
+.aviso{background:var(--vinho);color:#F8DADB;font-size:.82rem;text-align:center;padding:.45rem 1rem}
+
+/* topo */
+.topo{position:absolute;top:0;left:0;right:0;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:1rem clamp(1.1rem,4vw,3rem);color:#fff}
+.marca{font-family:var(--display);font-size:1.35rem;line-height:1;text-decoration:none;letter-spacing:.01em}
+.marca small{display:block;font-family:var(--texto);font-size:.72rem;letter-spacing:.18em;opacity:.85;margin-top:.3rem}
+.topo nav{display:flex;gap:1.6rem;font-size:.95rem}
+.topo nav a{text-decoration:none;opacity:.9}
+.topo nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
+
+/* botões */
+.bt{display:inline-flex;align-items:center;gap:.55rem;font:700 1rem/1 var(--texto);text-decoration:none;padding:1rem 1.35rem;border-radius:4px;transition:transform .15s ease, background-color .15s ease}
+.bt:hover{transform:translateY(-1px)}
+.bt-wa{background:var(--verde);color:#fff}
+.bt-wa:hover{background:#178f47}
+.bt-linha{color:inherit;box-shadow:inset 0 0 0 1.5px currentColor}
+.bt-linha:hover{background:rgba(255,255,255,.12)}
+
+/* hero */
+.hero{position:relative;min-height:min(100svh,920px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;isolation:isolate}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 30%;z-index:-2}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(90deg,rgba(74,22,40,.88) 0%,rgba(74,22,40,.62) 34%,rgba(74,22,40,0) 58%),
+             linear-gradient(0deg,rgba(43,24,32,.55) 0%,rgba(43,24,32,0) 30%)}
+.hero-txt{width:100%;padding:9rem clamp(1.1rem,4vw,3rem) 2.2rem}
+.nome{position:relative;display:inline-block;margin:0 0 1.3rem -.4rem;padding:.3em .55em .32em}
+.nome svg{position:absolute;inset:-6% -4% -10% -3%;width:107%;height:116%;z-index:-1;overflow:visible}
+.nome svg .pincel{clip-path:inset(0 100% 0 0);animation:pintar 1.1s .25s cubic-bezier(.6,.05,.25,1) forwards}
+@keyframes pintar{to{clip-path:inset(0 0 0 0)}}
+.nome h1{font-family:var(--display);font-weight:400;color:var(--vinho);font-size:clamp(2.6rem,6.4vw,5.4rem);line-height:.95;letter-spacing:-.01em}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.sub{font-style:italic;font-size:clamp(1.05rem,1.6vw,1.3rem);color:#F8DADB;margin:-.6rem 0 .9rem;letter-spacing:.02em}
+.hero p.lead{font-size:clamp(1.15rem,2vw,1.4rem);line-height:1.45;max-width:30ch;margin-bottom:1.8rem}
+.acoes{display:flex;flex-wrap:wrap;gap:.8rem}
+.provas{list-style:none;display:flex;flex-wrap:wrap;gap:.6rem 2.4rem;margin-top:3rem;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.35);font-size:.95rem;max-width:56rem}
+.provas b{display:block;font-family:var(--display);font-weight:400;font-size:1.7rem;line-height:1.1}
+
+/* seções */
+.sec{padding:clamp(4rem,9vw,7.5rem) clamp(1.1rem,4vw,3rem)}
+.miolo{max-width:1180px;margin:0 auto}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(2rem,4.2vw,3.3rem);line-height:1.05;color:var(--vinho);letter-spacing:-.005em}
+.intro{max-width:36rem;margin:1rem 0 0;color:#5b4650}
+.exemplo{font-size:.85rem;font-style:italic;color:var(--bronze);margin-top:.9rem}
+
+/* camarim */
+.camarim{display:grid;grid-template-columns:1.15fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.camarim figure{position:relative}
+.camarim figure img{width:100%;aspect-ratio:14/11;object-fit:cover;border-radius:2px}
+.camarim figcaption{position:absolute;left:-1rem;bottom:-1.2rem;background:var(--vinho);color:#F8DADB;font-size:.9rem;padding:.7rem 1rem;max-width:17rem}
+.camarim ul{list-style:none;margin:1.6rem 0 2rem;display:grid;gap:.9rem}
+.camarim li{padding-left:1.6rem;position:relative}
+.camarim li::before{content:"";position:absolute;left:0;top:.55em;width:.8rem;height:.45rem;border-radius:50%;background:var(--blush);transform:rotate(-14deg)}
+
+/* serviços */
+.servicos{background:var(--pele)}
+.servicos .cab{display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap;margin-bottom:2.6rem}
+.grade{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
+.card{display:flex;flex-direction:column;background:var(--porcelana)}
+.card img{width:100%;aspect-ratio:9/11;object-fit:cover}
+.card .c{padding:1.1rem 1.1rem 1.3rem;display:flex;flex-direction:column;flex:1}
+.card h3{font-family:var(--display);font-weight:400;font-size:1.45rem;color:var(--vinho);line-height:1.1}
+.card p{font-size:.97rem;color:#5b4650;margin:.45rem 0 1.1rem;flex:1}
+.card .bt{padding:.8rem 1rem;font-size:.93rem;align-self:flex-start}
+
+/* manhã da noiva */
+.manha{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(2rem,6vw,5rem);align-items:start}
+.manha figure{position:sticky;top:1.5rem}
+.manha figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.linha{list-style:none;margin-top:2.2rem;border-left:2px solid var(--blush);padding-left:1.6rem}
+.linha li{position:relative;padding-bottom:1.8rem}
+.linha li:last-child{padding-bottom:0}
+.linha li::before{content:"";position:absolute;left:calc(-1.6rem - 7px);top:.4rem;width:12px;height:12px;border-radius:50%;background:var(--porcelana);border:2px solid var(--rose)}
+.linha time{font-family:var(--display);font-size:1.5rem;color:var(--rose);line-height:1}
+.linha h3{font-size:1.1rem;font-weight:700;margin:.25rem 0 .2rem;color:var(--tinta)}
+.linha p{color:#5b4650;max-width:40ch}
+
+/* galeria */
+.galeria{background:var(--vinho);color:#F8DADB}
+.galeria h2{color:#fff}
+.galeria .intro{color:#F0C9CB}
+.mosaico{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(130px,16vw,210px);gap:.7rem;margin-top:2.6rem}
+.mosaico button{border:0;padding:0;background:none;cursor:zoom-in;overflow:hidden}
+.mosaico img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.mosaico button:hover img{transform:scale(1.03)}
+.m1{grid-column:span 2;grid-row:span 2}.m2{grid-column:span 2}.m3{grid-column:span 2;grid-row:span 2}.m4{grid-column:span 2}.m5{grid-column:span 3}.m6{grid-column:span 3}
+.insta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.2rem;margin-top:2.6rem;padding-top:1.8rem;border-top:1px solid rgba(248,218,219,.3)}
+.insta p{max-width:38rem}
+.insta strong{color:#fff}
+dialog{border:0;padding:0;background:transparent;max-width:min(92vw,1100px);margin:auto}
+dialog::backdrop{background:rgba(43,24,32,.88)}
+dialog img{max-height:86vh;width:auto;margin:auto}
+dialog form{position:absolute;top:.6rem;right:.6rem}
+dialog button{background:var(--porcelana);color:var(--vinho);border:0;font:700 .95rem var(--texto);padding:.6rem .9rem;border-radius:4px;cursor:pointer}
+
+/* onde atende */
+.onde{display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.onde iframe{width:100%;height:380px;border:0;filter:saturate(.75) sepia(.12)}
+.onde .acoes{margin-top:1.6rem}
+
+/* final */
+.final{position:relative;color:#fff;text-align:center;isolation:isolate;overflow:hidden}
+.final img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;z-index:-2}
+.final::before{content:"";position:absolute;inset:0;background:rgba(74,22,40,.7);z-index:-1}
+.final h2{color:#fff;max-width:18ch;margin:0 auto}
+.final p{max-width:34rem;margin:1rem auto 2rem;font-size:1.15rem}
+
+footer{background:var(--tinta);color:#d9c3c9;font-size:.9rem;padding:2rem clamp(1.1rem,4vw,3rem) 5.5rem}
+footer .miolo{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+footer a{color:#fff}
+
+.flutua{position:fixed;right:1.1rem;bottom:1.1rem;z-index:20;width:60px;height:60px;border-radius:50%;background:var(--verde);color:#fff;display:grid;place-items:center;box-shadow:0 6px 20px rgba(31,168,85,.45)}
+.flutua .ico{width:32px;height:32px}
+
+@media (max-width:1000px){
+  .grade{grid-template-columns:repeat(2,1fr)}
+  .camarim,.onde{grid-template-columns:1fr}
+  .manha{grid-template-columns:1fr}
+  .manha figure{position:static}
+  .manha figure img{aspect-ratio:16/10;object-position:center 30%}
+  .topo nav{display:none}
+  .hero>img{object-position:72% 30%}
+  .hero::before{background:linear-gradient(90deg,rgba(74,22,40,.9) 0%,rgba(74,22,40,.66) 42%,rgba(74,22,40,0) 70%),linear-gradient(0deg,rgba(43,24,32,.6) 0%,rgba(43,24,32,0) 35%)}
+}
+@media (max-width:640px){
+  .hero{min-height:100svh}
+  .hero>img{object-position:66% 20%}
+  .hero::before{background:linear-gradient(0deg,rgba(74,22,40,.95) 0%,rgba(74,22,40,.82) 45%,rgba(74,22,40,.1) 75%,rgba(74,22,40,.25) 100%)}
+  .hero-txt{padding-top:16rem}
+  .provas{display:grid;grid-template-columns:1fr 1fr;gap:.9rem 1.2rem;margin-top:2rem;padding-right:4.5rem;font-size:.88rem}
+  .provas li:last-child{grid-column:span 2}
+  .provas b{font-size:1.3rem}
+  .grade{gap:.8rem}
+  .card .c{padding:.85rem .8rem 1rem}
+  .card h3{font-size:1.2rem}
+  .card p{font-size:.9rem}
+  .card .bt{padding:.7rem .75rem;font-size:.85rem}
+  .mosaico{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}
+  .m1,.m3{grid-column:span 1;grid-row:span 2}.m2,.m4{grid-column:span 1}.m5,.m6{grid-column:span 2}
+  .camarim figcaption{left:.6rem}
+  .onde iframe{height:300px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .nome svg .pincel{animation:none;clip-path:none}
+  .bt,.mosaico img{transition:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.870 9.870 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.860 9.860 0 01-1.510-5.260c.001-5.450 4.436-9.884 9.888-9.884 2.640 0 5.122 1.030 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.450-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.050 0C5.495 0 .160 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.480-8.413Z"/></symbol>
+  <symbol id="ig" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M7 2.5h10A4.5 4.5 0 0 1 21.5 7v10a4.5 4.5 0 0 1-4.5 4.5H7A4.5 4.5 0 0 1 2.5 17V7A4.5 4.5 0 0 1 7 2.5Z"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.6" cy="6.4" r="1.3" fill="currentColor"/></symbol>
+  <filter id="cerdas" x="-5%" y="-20%" width="110%" height="140%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.018 0.32" numOctaves="2" seed="7" result="r"/>
+    <feDisplacementMap in="SourceGraphic" in2="r" scale="14" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para Dani Veríssimo Makeup. Ainda não é o site oficial.</div>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="titulo">
+    <header class="topo">
+      <a class="marca" href="#inicio">Dani Veríssimo<small>makeup em Piracicaba</small></a>
+      <nav aria-label="Seções">
+        <a href="#servicos">Serviços</a>
+        <a href="#manha">A manhã da noiva</a>
+        <a href="#trabalhos">Trabalhos</a>
+        <a href="#onde">Onde atende</a>
+      </nav>
+    </header>
+    <img src="fotos/capa.jpg" alt="Maquiadora aplicando blush em uma noiva de roupão, durante a preparação em casa" fetchpriority="high">
+    <div class="hero-txt">
+      <div class="nome">
+        <svg viewBox="0 0 600 130" preserveAspectRatio="none" aria-hidden="true">
+          <g class="pincel" filter="url(#cerdas)">
+            <path fill="#E8A0A2" d="M10 70 C30 34 120 22 230 24 C340 26 450 14 562 26 C588 30 598 50 592 68 C586 88 560 100 520 102 C420 108 300 114 190 110 C110 108 40 112 16 98 C4 90 4 80 10 70Z"/>
+            <path fill="#F1BDBE" opacity=".7" d="M60 44 C180 34 360 30 540 36 C420 44 240 46 60 52Z"/>
+            <path fill="#D98A8E" opacity=".5" d="M40 96 C160 100 320 98 500 92 C380 104 200 108 40 102Z"/>
+          </g>
+        </svg>
+        <h1 id="titulo">Dani Veríssimo <span class="sr">Makeup</span></h1>
+      </div>
+      <p class="sub">makeup social e de noivas</p>
+      <p class="lead">Maquiagem para noivas, madrinhas e festas, feita na sua casa, em Piracicaba.</p>
+      <div class="acoes">
+        <a class="bt bt-wa" href="https://wa.me/5519982088428?text=Ol%C3%A1%2C%20Dani!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20maquiagem%20em%20domic%C3%ADlio."><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Chamar a Dani no WhatsApp</a>
+        <a class="bt bt-linha" href="https://www.instagram.com/daniverissimomakeup/" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#ig"/></svg>Ver trabalhos no Instagram</a>
+      </div>
+      <ul class="provas">
+        <li><b>2.643</b>seguidores no Instagram</li>
+        <li><b>Em domicílio</b>ela vai até você</li>
+        <li><b>Noivas e social</b>casamentos, festas e formaturas</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="t-camarim">
+    <div class="miolo camarim">
+      <figure>
+        <img src="fotos/maleta.jpg" alt="Maleta de maquiagem aberta sobre uma penteadeira, com pincéis, paletas e produtos de pele" loading="lazy">
+        <figcaption>O camarim chega na maleta e é montado onde tiver a melhor luz da casa.</figcaption>
+      </figure>
+      <div>
+        <h2 id="t-camarim">Você não sai de casa. A Dani chega com o camarim.</h2>
+        <p class="intro">No dia do casamento ou da festa, ninguém quer enfrentar trânsito e salão. A Dani atende em domicílio em Piracicaba: você se arruma no seu ritmo, perto de quem você gosta.</p>
+        <ul>
+          <li>Pele preparada e maquiagem pensada para durar a festa inteira.</li>
+          <li>Noiva, mãe e madrinhas maquiadas no mesmo lugar.</li>
+          <li>Horário combinado antes, para a manhã correr sem pressa.</li>
+        </ul>
+        <a class="bt bt-wa" href="https://wa.me/5519982088428?text=Ol%C3%A1%2C%20Dani!%20Vim%20pelo%20site%20e%20quero%20saber%20se%20voc%C3%AA%20atende%20no%20meu%20bairro."><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar se atende no meu bairro</a>
+        <p class="exemplo">Texto de exemplo. No site final entra a apresentação da Dani com as palavras dela.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec servicos" id="servicos" aria-labelledby="t-serv">
+    <div class="miolo">
+      <div class="cab">
+        <div>
+          <h2 id="t-serv">O que a Dani faz</h2>
+          <p class="intro">Toque no serviço e a conversa já abre no WhatsApp com o assunto escrito.</p>
+        </div>
+      </div>
+      <div class="grade">
+        <article class="card">
+          <img src="fotos/noiva.jpg" alt="Noiva sorrindo enquanto recebe aplicação de cílios" loading="lazy">
+          <div class="c">
+            <h3>Maquiagem de noiva</h3>
+            <p>Pele leve, olhar marcado e acabamento que aguenta beijo, choro e pista.</p>
+            <a class="bt bt-wa" href="https://wa.me/5519982088428?text=Ol%C3%A1%2C%20Dani!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20maquiagem%20de%20noiva."><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Quero saber</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="fotos/previa.jpg" alt="Pincel de blush sobre pó compacto coral" loading="lazy">
+          <div class="c">
+            <h3>Teste da noiva</h3>
+            <p>Uma prévia antes do grande dia para acertar tons e estilo com calma.</p>
+            <a class="bt bt-wa" href="https://wa.me/5519982088428?text=Ol%C3%A1%2C%20Dani!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20o%20teste%20de%20maquiagem%20de%20noiva."><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Quero saber</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="fotos/madrinhas.jpg" alt="Noiva e madrinhas de verde segurando buquês brancos em um jardim" loading="lazy">
+          <div class="c">
+            <h3>Madrinhas e mães</h3>
+            <p>Todo mundo pronto no mesmo lugar, com a maquiagem combinando com a festa.</p>
+            <a class="bt bt-wa" href="https://wa.me/5519982088428?text=Ol%C3%A1%2C%20Dani!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20maquiagem%20para%20madrinhas%20e%20m%C3%A3e%20da%20noiva."><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Quero saber</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="fotos/social.jpg" alt="Sombra dourada sendo aplicada com pincel na pálpebra" loading="lazy">
+          <div class="c">
+            <h3>Maquiagem social</h3>
+            <p>Formaturas, aniversários, eventos e aquele jantar que pede produção.</p>
+            <a class="bt bt-wa" href="https://wa.me/5519982088428?text=Ol%C3%A1%2C%20Dani!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20maquiagem%20social."><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Quero saber</a>
+          </div>
+        </article>
+      </div>
+      <p class="exemplo">Fotos ilustrativas. No site final entram as fotos dos trabalhos da Dani e a lista exata de serviços.</p>
+    </div>
+  </section>
+
+  <section class="sec" id="manha" aria-labelledby="t-manha">
+    <div class="miolo manha">
+      <figure>
+        <img src="fotos/manha.jpg" alt="Amiga fechando os botões do vestido de renda da noiva" loading="lazy">
+      </figure>
+      <div>
+        <h2 id="t-manha">Como fica a manhã do casamento</h2>
+        <p class="intro">Quando a maquiadora vem até a casa, a manhã fica mais tranquila. Um roteiro comum:</p>
+        <ol class="linha">
+          <li><time>7h</time><h3>A Dani chega e monta o camarim</h3><p>Luz, cadeira e maleta perto da janela. Café pronto, música tocando.</p></li>
+          <li><time>7h30</time><h3>Mãe e madrinhas primeiro</h3><p>Assim a noiva fica com a maquiagem mais fresca para as fotos.</p></li>
+          <li><time>9h30</time><h3>A vez da noiva</h3><p>Preparação de pele, olhos, cílios e boca, sem correria.</p></li>
+          <li><time>11h</time><h3>Retoque e fotos do making of</h3><p>Últimos ajustes antes do vestido e um batom para levar na bolsa.</p></li>
+        </ol>
+        <p class="exemplo">Roteiro de exemplo. No site final entram os horários e o jeito de trabalhar da Dani.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec galeria" id="trabalhos" aria-labelledby="t-gal">
+    <div class="miolo">
+      <h2 id="t-gal">Clima de dia da noiva</h2>
+      <p class="intro">Toque numa foto para ampliar.</p>
+      <div class="mosaico">
+        <button class="m1" type="button" data-src="fotos/g-buque.jpg" aria-label="Ampliar: noiva de robe rendado com buquê de lírios"><img src="fotos/g-buque.jpg" alt="Noiva de robe rendado com buquê de lírios" loading="lazy"></button>
+        <button class="m2" type="button" data-src="fotos/g-janela.jpg" aria-label="Ampliar: noiva de costas em uma janela"><img src="fotos/g-janela.jpg" alt="Noiva de costas com tiara em uma janela aberta" loading="lazy"></button>
+        <button class="m3" type="button" data-src="fotos/g-paleta.jpg" aria-label="Ampliar: paleta de sombras rosadas"><img src="fotos/g-paleta.jpg" alt="Paleta de sombras em tons rosados com pincéis ao fundo" loading="lazy"></button>
+        <button class="m4" type="button" data-src="fotos/g-pinceis.jpg" aria-label="Ampliar: pincéis de maquiagem"><img src="fotos/g-pinceis.jpg" alt="Pincéis de maquiagem em um copo sobre a bancada" loading="lazy"></button>
+        <button class="m5" type="button" data-src="fotos/g-espelho.jpg" aria-label="Ampliar: noiva diante do espelho"><img src="fotos/g-espelho.jpg" alt="Noiva arrumando o cabelo diante do espelho, em preto e branco" loading="lazy"></button>
+        <button class="m6" type="button" data-src="fotos/g-porta.jpg" aria-label="Ampliar: noiva saindo pela porta"><img src="fotos/g-porta.jpg" alt="Noiva de vestido brilhante saindo por uma porta para o jardim" loading="lazy"></button>
+      </div>
+      <p class="exemplo" style="color:#E8B9A0">Fotos ilustrativas. No site final entram as noivas e clientes maquiadas pela Dani.</p>
+      <div class="insta">
+        <p><strong>2.643 pessoas</strong> já acompanham os trabalhos da Dani no Instagram, com noivas e produções postadas em novembro de 2026.</p>
+        <a class="bt bt-linha" style="color:#fff" href="https://www.instagram.com/daniverissimomakeup/" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#ig"/></svg>@daniverissimomakeup</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="onde" aria-labelledby="t-onde">
+    <div class="miolo onde">
+      <div>
+        <h2 id="t-onde">Atende na sua casa, em Piracicaba</h2>
+        <p class="intro">A Dani vai até a casa da noiva, do hotel ou do local da festa. Mande o bairro e a data pelo WhatsApp para confirmar a disponibilidade.</p>
+        <div class="acoes">
+          <a class="bt bt-wa" href="https://wa.me/5519982088428?text=Ol%C3%A1%2C%20Dani!%20Vim%20pelo%20site.%20Queria%20ver%20sua%20disponibilidade%20para%20a%20minha%20data."><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Consultar minha data</a>
+        </div>
+      </div>
+      <iframe title="Mapa de Piracicaba, SP" src="https://www.google.com/maps?q=Piracicaba%2C%20SP&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <section class="sec final" aria-labelledby="t-final">
+    <img src="fotos/g-janela.jpg" alt="" loading="lazy">
+    <div class="miolo">
+      <h2 id="t-final">Já tem a data? Garanta a Dani antes que a agenda feche.</h2>
+      <p>Datas de casamento costumam ser reservadas com antecedência. Uma mensagem resolve.</p>
+      <a class="bt bt-wa" href="https://wa.me/5519982088428?text=Ol%C3%A1%2C%20Dani!%20Vim%20pelo%20site%20e%20quero%20reservar%20minha%20data."><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Reservar minha data no WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="miolo">
+    <span>Dani Veríssimo Makeup · Piracicaba, SP · <a href="https://wa.me/5519982088428?text=Ol%C3%A1%2C%20Dani!%20Vim%20pelo%20site.">(19) 98208-8428</a></span>
+    <span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span>
+  </div>
+</footer>
+
+<a class="flutua" href="https://wa.me/5519982088428?text=Ol%C3%A1%2C%20Dani!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20maquiagem." aria-label="Conversar com a Dani no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg></a>
+
+<dialog id="zoom" aria-label="Foto ampliada">
+  <form method="dialog"><button type="submit">Fechar</button></form>
+  <img src="" alt="">
+</dialog>
+
+<script>
+(() => {
+  const dlg = document.getElementById('zoom');
+  const img = dlg.querySelector('img');
+  document.querySelectorAll('.mosaico button').forEach(b => {
+    b.addEventListener('click', () => {
+      img.src = b.dataset.src;
+      img.alt = b.querySelector('img').alt;
+      dlg.showModal();
+    });
+  });
+  dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+})();
+</script>
+</body>
+</html>
