@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Juh Pasetto Esmalteria | Unhas, cílios e depilação no Jardim Inocoop, Rio Claro</title>
+<meta name="description" content="Modelo demonstrativo de site para a Juh Pasetto Esmalteria, studio completo no Jardim Inocoop, em Rio Claro.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --banho:#F4A0AB;     /* o rosa da foto do topo */
+  --chiclete:#E0407A;  /* o 🩷 do Instagram */
+  --malva:#A6607A;     /* esmalte das unhas da foto */
+  --ameixa:#3A1226;    /* texto */
+  --ameixa-2:#7A4A5E;
+  --algodao:#FFF1F3;
+  --linha:#F0D3DA;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:#fff;color:var(--ameixa);font:17px/1.6 'Manrope',system-ui,sans-serif}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--ameixa);outline-offset:3px}
+.largura{max-width:1180px;margin:0 auto;padding:0 28px}
+.ico{width:1.2em;height:1.2em;flex:none}
+.aviso{background:var(--ameixa);color:#FBE3E9;font-size:14px;text-align:center;padding:8px 16px}
+
+.botao{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:17px;line-height:1.2;padding:16px 24px;border-radius:4px}
+.botao.cheio{background:var(--ameixa);color:#fff}
+.botao.cheio:hover{background:#5a1f3b}
+.botao.linha{box-shadow:inset 0 0 0 2px var(--ameixa)}
+.botao.linha:hover{background:rgba(58,18,38,.07)}
+
+h1,h2,.marca b,.numero{font-family:'Rozha One',Georgia,serif;font-weight:400}
+
+/* ---- Topo: a foto rosa é o banner, o texto fica no próprio rosa ---- */
+.topo{position:relative;min-height:min(94vh,900px);display:flex;flex-direction:column;overflow:hidden;isolation:isolate;background:var(--banho)}
+.topo>.fundo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0;z-index:-2}
+/* véu no mesmo rosa da foto, só onde o texto fica */
+.topo::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(246,166,176,.96) 0%,rgba(246,166,176,.82) 34%,rgba(246,166,176,0) 62%),linear-gradient(90deg,rgba(246,166,176,.7) 0%,rgba(246,166,176,.35) 42%,rgba(246,166,176,0) 62%)}
+.barra{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 28px;max-width:1180px;width:100%;margin:0 auto}
+.marca{margin:0;line-height:1;display:flex;flex-direction:column}
+.marca b{font-size:30px;letter-spacing:-.01em}
+.marca span{font-size:14px;font-weight:600;color:var(--ameixa-2);margin-top:4px}
+.barra a.insta{font-weight:700;font-size:15px;text-decoration:none;background:rgba(255,255,255,.55);padding:9px 14px;border-radius:4px}
+.barra a.insta:hover{background:rgba(255,255,255,.8)}
+.painel{margin-top:auto;width:100%;max-width:1180px;margin-left:auto;margin-right:auto;padding:0 28px 64px;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:40px}
+h1{font-size:clamp(44px,6.6vw,100px);line-height:.9;letter-spacing:-.02em;margin:0;max-width:11ch}
+.painel .sub{font-size:clamp(18px,1.7vw,21px);font-weight:500;max-width:36ch;margin:22px 0 0}
+.painel .acoes{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 0}
+.painel .botao.linha{background:rgba(255,255,255,.35)}
+.painel .botao.linha:hover{background:rgba(255,255,255,.6)}
+.painel .nota{margin:20px 0 0;font-size:15px;font-weight:600;color:#5b2340}
+.painel .nota b{color:var(--ameixa);font-weight:800}
+
+/* Cartela de esmaltes em leque: o elemento da casa. Abre uma vez ao carregar. */
+.leque{position:relative;width:320px;height:210px;margin:0 0 70px}
+.ponta{position:absolute;left:calc(50% - 23px);bottom:14px;width:46px;height:170px;transform-origin:23px 156px;transform:rotate(var(--r));animation:abre 1.3s cubic-bezier(.25,1.2,.45,1) both;animation-delay:calc(var(--i) * 70ms + .25s)}
+.ponta i{position:absolute;inset:0;background:var(--c);border-radius:50% 50% 10px 10px / 34% 34% 8px 8px;box-shadow:0 6px 14px rgba(58,18,38,.22),inset 0 0 0 1px rgba(58,18,38,.08)}
+.ponta i::after{content:"";position:absolute;left:9px;top:16px;width:7px;height:62px;border-radius:6px;background:rgba(255,255,255,.45)}
+.ponta i::before{content:"";position:absolute;left:50%;bottom:10px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:rgba(255,255,255,.75);box-shadow:inset 0 0 0 2px rgba(58,18,38,.2)}
+.pino{position:absolute;left:calc(50% - 15px);bottom:12px;width:30px;height:30px;border-radius:50%;background:#E9E3E6;box-shadow:inset 0 0 0 5px #CFC4CA,0 3px 8px rgba(58,18,38,.3)}
+@keyframes abre{from{transform:rotate(0)}to{transform:rotate(var(--r))}}
+@media (prefers-reduced-motion:reduce){.ponta{animation:none}}
+.leque figcaption{position:absolute;left:0;right:0;bottom:-26px;text-align:center;font-size:13px;font-weight:600;color:#5b2340}
+
+/* Faixa de provas */
+.provas{background:var(--ameixa);color:#FBE3E9}
+.provas ul{list-style:none;margin:0 auto;padding:26px 28px;max-width:1180px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.provas li{display:flex;align-items:center;gap:14px;font-size:16px}
+.provas li::before{content:"";flex:none;width:14px;height:26px;border-radius:50% 50% 4px 4px / 40% 40% 4px 4px;background:var(--c)}
+.provas strong{color:#fff;font-weight:800}
+
+section{padding:100px 0}
+h2{font-size:clamp(40px,5.2vw,68px);line-height:.95;letter-spacing:-.015em;margin:0 0 16px}
+.intro{color:var(--ameixa-2);max-width:58ch;margin:0 0 44px;font-size:18px}
+.legenda{font-size:14px;color:var(--ameixa-2);margin:18px 0 0}
+
+/* Serviços: vitrine, foto recortada no formato de unha */
+.servicos .cabeca{display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap;margin-bottom:44px}
+.servicos .cabeca .intro{margin:0}
+.vitrine{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:40px 22px}
+.vitrine li{display:flex;flex-direction:column}
+.vitrine img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:50% 50% 14px 14px / 26% 26% 14px 14px;background:var(--algodao)}
+.vitrine h3{font-size:21px;font-weight:800;letter-spacing:-.01em;margin:18px 0 4px}
+.vitrine p{margin:0 0 12px;color:var(--ameixa-2);font-size:16px;line-height:1.5}
+.vitrine a{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;color:#9C1F52;text-decoration:none;align-self:flex-start;padding:4px 0;border-bottom:2px solid var(--linha)}
+.vitrine a:hover{border-color:var(--chiclete)}
+.vitrine li{position:relative;container-type:inline-size}
+.vitrine .real{position:absolute;left:10px;top:calc(125cqw - 36px);font-size:12px;font-weight:700;color:#9C1F52;background:#fff;padding:3px 9px;border-radius:3px;box-shadow:0 2px 6px rgba(58,18,38,.15)}
+
+/* Cursos */
+.cursos{background:var(--algodao)}
+.cursos .grade{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:center}
+.cursos img{width:100%;aspect-ratio:6/5;object-fit:cover;border-radius:8px}
+.cursos ul{margin:0 0 30px;padding:0 0 0 20px;color:var(--ameixa-2)}
+.cursos li{margin:6px 0}
+
+/* Galeria */
+.mosaico{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:250px;gap:12px}
+.mosaico li{overflow:hidden;border-radius:6px;background:var(--algodao)}
+.mosaico li:first-child{grid-column:span 2;grid-row:span 2}
+.mosaico img{width:100%;height:100%;object-fit:cover}
+
+/* Instagram */
+.insta-sec{background:var(--banho)}
+.insta-sec .grade{display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:center}
+.numero{font-size:clamp(110px,17vw,230px);line-height:.8;letter-spacing:-.03em;color:var(--ameixa)}
+.insta-sec p{font-size:21px;max-width:38ch;margin:0 0 12px;font-weight:500}
+.insta-sec .legenda{color:#5b2340;font-size:15px}
+.insta-sec .botao{margin-top:18px}
+
+/* Onde */
+.onde .grade{display:grid;grid-template-columns:1fr 1.25fr;gap:56px;align-items:start}
+.onde dl{margin:0 0 28px}
+.onde dt{font-size:14px;font-weight:700;color:var(--ameixa-2)}
+.onde dd{margin:0 0 18px;font-size:19px}
+.mapa{width:100%;aspect-ratio:4/3;border:0;border-radius:8px;background:var(--algodao)}
+
+.faq{padding-top:0}
+.faq details{border-bottom:1px solid var(--linha);max-width:820px}
+.faq summary{cursor:pointer;padding:18px 0;font-weight:700;font-size:19px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:26px;line-height:1;color:var(--chiclete)}
+.faq details[open] summary::after{content:"−"}
+.faq details p{margin:0 0 18px;color:var(--ameixa-2);max-width:64ch}
+
+.final{background:var(--ameixa);color:#fff}
+.final .largura{display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap}
+.final h2{margin:0;max-width:15ch}
+.final .botao.cheio{background:var(--banho);color:var(--ameixa)}
+.final .botao.cheio:hover{background:#f7b7bf}
+
+footer{padding:28px 0 100px;font-size:14px;color:var(--ameixa-2)}
+footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.flutuante{position:fixed;right:18px;bottom:18px;display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#073B1E;font-weight:800;text-decoration:none;padding:14px 18px;border-radius:999px;box-shadow:0 6px 20px rgba(0,0,0,.25);font-size:15px;z-index:5}
+
+@media (max-width:980px){
+  .vitrine{grid-template-columns:repeat(2,1fr)}
+  .cursos .grade,.onde .grade,.insta-sec .grade{grid-template-columns:1fr;gap:36px}
+}
+@media (max-width:900px){
+  .topo{min-height:min(100svh,860px)}
+  .painel{gap:20px;padding-bottom:48px}
+  .leque{width:230px;height:150px;margin-bottom:84px}
+  .ponta{width:34px;height:124px;left:calc(50% - 17px);transform-origin:17px 113px}
+  .ponta i::after{height:42px;left:7px;width:6px}
+  .provas ul{grid-template-columns:1fr;gap:12px}
+  section{padding:68px 0}
+  .mosaico{grid-template-columns:1fr 1fr;grid-auto-rows:170px}
+  .mosaico li:first-child{grid-row:span 1}
+}
+@media (max-width:700px){
+  .painel{grid-template-columns:1fr}
+  .leque{justify-self:end;order:-1;margin:0 0 -10px}
+  .topo::before{background:linear-gradient(0deg,rgba(246,166,176,.97) 0%,rgba(246,166,176,.85) 52%,rgba(246,166,176,0) 80%),linear-gradient(180deg,rgba(246,166,176,.7) 0%,rgba(246,166,176,0) 18%)}
+}
+@media (max-width:560px){
+  .largura,.barra,.painel{padding-left:20px;padding-right:20px}
+  h1{font-size:46px}
+  .topo>.fundo{object-position:45% 0}
+  .marca b{font-size:25px}
+  .leque{width:200px;height:130px}
+  .ponta{width:30px;height:108px;left:calc(50% - 15px);transform-origin:15px 98px}
+  .ponta i::after{height:36px;left:6px;top:12px;width:5px}
+  .ponta i::before{width:9px;height:9px;margin-left:-4.5px;bottom:7px}
+  .pino{width:22px;height:22px;left:calc(50% - 11px);bottom:10px;box-shadow:inset 0 0 0 4px #CFC4CA,0 3px 8px rgba(58,18,38,.3)}
+  .painel .acoes .botao{flex:1 1 100%;justify-content:center}
+  .vitrine{gap:30px 14px}
+  .vitrine h3{font-size:18px}
+  .vitrine p{font-size:14.5px}
+  .vitrine a{font-size:14px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para Juh Pasetto Esmalteria. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <img class="fundo" src="fotos/banner.jpg" alt="Unhas esmaltadas em tom rosa malva sobre fundo rosa" fetchpriority="high">
+  <div class="barra">
+    <p class="marca"><b>Juh Pasetto</b><span>Esmalteria e studio</span></p>
+    <a class="insta" href="https://www.instagram.com/studiojuhpasetto/" rel="noopener">@studiojuhpasetto</a>
+  </div>
+  <div class="painel">
+    <div>
+      <h1>Transformamos sua autoestima.</h1>
+      <p class="sub">Studio completo no Jardim Inocoop, em Rio Claro: unhas em fibra de vidro, esmaltação, cílios e depilação.</p>
+      <div class="acoes">
+        <a class="botao cheio" href="https://wa.me/5519993020645?text=Ol%C3%A1%2C%20Juh!%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Agendar pelo WhatsApp</a>
+        <a class="botao linha" href="#servicos">Ver serviços</a>
+      </div>
+      <p class="nota"><b>2.854 seguidores</b> acompanham o trabalho da Juh no Instagram</p>
+    </div>
+    <figure class="leque" aria-hidden="true">
+      <span class="ponta" style="--r:-60deg;--i:0;--c:#F3D9CF"><i></i></span>
+      <span class="ponta" style="--r:-40deg;--i:1;--c:#E7B7A6"><i></i></span>
+      <span class="ponta" style="--r:-20deg;--i:2;--c:#F7B6C4"><i></i></span>
+      <span class="ponta" style="--r:0deg;--i:3;--c:#E0407A"><i></i></span>
+      <span class="ponta" style="--r:20deg;--i:4;--c:#A6607A"><i></i></span>
+      <span class="ponta" style="--r:40deg;--i:5;--c:#B3123E"><i></i></span>
+      <span class="ponta" style="--r:60deg;--i:6;--c:#5E1630"><i></i></span>
+      <span class="pino"></span>
+    </figure>
+  </div>
+</header>
+
+<div class="provas">
+  <ul>
+    <li style="--c:#E0407A"><span><strong>2.854 seguidores</strong> no Instagram</span></li>
+    <li style="--c:#F7B6C4"><span><strong>Studio completo:</strong> unhas, cílios e depilação</span></li>
+    <li style="--c:#E7B7A6"><span><strong>Jardim Inocoop</strong>, Rio Claro</span></li>
+  </ul>
+</div>
+
+<main>
+<section class="servicos" id="servicos">
+  <div class="largura">
+    <div class="cabeca">
+      <div>
+        <h2>Serviços</h2>
+        <p class="intro">Escolha o que quer fazer e chame a Juh no WhatsApp. A mensagem já vai escrita.</p>
+      </div>
+    </div>
+    <ul class="vitrine">
+      <li>
+        <img src="fotos/fibra.jpg" alt="Unhas longas amendoadas com francesinha decorada" loading="lazy">
+        <span class="real">Destaque no Instagram</span>
+        <h3>Fibra de vidro</h3>
+        <p>Alongamento fino e resistente, no formato que você escolher.</p>
+        <a href="https://wa.me/5519993020645?text=Ol%C3%A1%2C%20Juh!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20unhas%20em%20fibra%20de%20vidro." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar</a>
+      </li>
+      <li>
+        <img src="fotos/gel.jpg" alt="Unhas curtas esmaltadas em rosa claro" loading="lazy">
+        <h3>Esmaltação em gel</h3>
+        <p>Cor com brilho que dura semanas sem descascar.</p>
+        <a href="https://wa.me/5519993020645?text=Ol%C3%A1%2C%20Juh!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20esmalta%C3%A7%C3%A3o%20em%20gel." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar</a>
+      </li>
+      <li>
+        <img src="fotos/arte.jpg" alt="Unhas com pequenos detalhes dourados segurando um ramo" loading="lazy">
+        <h3>Nail art</h3>
+        <p>Detalhes, pedrinhas e desenhos para deixar a unha com a sua cara.</p>
+        <a href="https://wa.me/5519993020645?text=Ol%C3%A1%2C%20Juh!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20nail%20art." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar</a>
+      </li>
+      <li>
+        <img src="fotos/francesinha.jpg" alt="Unhas com francesinha clássica segurando uma florzinha" loading="lazy">
+        <h3>Francesinha</h3>
+        <p>O clássico que combina com tudo, do dia a dia à festa.</p>
+        <a href="https://wa.me/5519993020645?text=Ol%C3%A1%2C%20Juh!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20francesinha." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar</a>
+      </li>
+      <li>
+        <img src="fotos/pes.jpg" alt="Pés com unhas esmaltadas em rosa escuro" loading="lazy">
+        <h3>Pés</h3>
+        <p>Cutilagem e esmaltação para os pés ficarem tão lindos quanto as mãos.</p>
+        <a href="https://wa.me/5519993020645?text=Ol%C3%A1%2C%20Juh!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20unhas%20dos%20p%C3%A9s." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar</a>
+      </li>
+      <li>
+        <img src="fotos/maos.jpg" alt="Mãos com unhas naturais bem cuidadas" loading="lazy">
+        <h3>Manutenção</h3>
+        <p>Para manter o alongamento firme e bonito entre uma visita e outra.</p>
+        <a href="https://wa.me/5519993020645?text=Ol%C3%A1%2C%20Juh!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20manuten%C3%A7%C3%A3o." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar</a>
+      </li>
+      <li>
+        <img src="fotos/cilios.jpg" alt="Profissional aplicando extensão de cílios" loading="lazy">
+        <span class="real">Destaque no Instagram</span>
+        <h3>Cílios</h3>
+        <p>Olhar marcado sem precisar de máscara todo dia.</p>
+        <a href="https://wa.me/5519993020645?text=Ol%C3%A1%2C%20Juh!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20c%C3%ADlios." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar</a>
+      </li>
+      <li>
+        <img src="fotos/depilacao.jpg" alt="Cera de depilação escorrendo da espátula" loading="lazy">
+        <span class="real">Destaque no Instagram</span>
+        <h3>Depilação</h3>
+        <p>Pele lisinha, feita no mesmo studio das suas unhas.</p>
+        <a href="https://wa.me/5519993020645?text=Ol%C3%A1%2C%20Juh!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20depila%C3%A7%C3%A3o." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar</a>
+      </li>
+    </ul>
+    <p class="legenda">Fibra de vidro, cílios e depilação estão nos destaques do Instagram do studio. Os outros serviços e as descrições são texto de exemplo. No site final entram a lista completa e os valores da Juh. Fotos ilustrativas.</p>
+  </div>
+</section>
+
+<section class="cursos">
+  <div class="largura grade">
+    <div>
+      <img src="fotos/cursos.jpg" alt="Manicure trabalhando nas unhas de uma cliente com cabine de LED" loading="lazy">
+      <p class="legenda">Foto ilustrativa.</p>
+    </div>
+    <div>
+      <h2>A Juh também ensina</h2>
+      <p class="intro" style="margin-bottom:22px">O studio tem cursos para quem quer aprender a profissão ou se aperfeiçoar.</p>
+      <ul>
+        <li>Turmas pequenas, com prática de verdade</li>
+        <li>Técnicas que a Juh usa no dia a dia do studio</li>
+        <li>Datas e vagas combinadas pelo WhatsApp</li>
+      </ul>
+      <a class="botao cheio" href="https://wa.me/5519993020645?text=Ol%C3%A1%2C%20Juh!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20os%20cursos." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Quero saber dos cursos</a>
+      <p class="legenda">Os cursos aparecem nos destaques do Instagram. Os detalhes acima são texto de exemplo. No site final entram os cursos, a carga horária e as datas.</p>
+    </div>
+  </div>
+</section>
+
+<section class="galeria">
+  <div class="largura">
+    <h2>Unhas que saem daqui</h2>
+    <p class="intro">Fotos ilustrativas. No site final entram os trabalhos da Juh, os mesmos que estão no Instagram.</p>
+    <ul class="mosaico">
+      <li><img src="fotos/g1.jpg" alt="Unhas rosa recebendo esmalte com glitter" loading="lazy"></li>
+      <li><img src="fotos/g2.jpg" alt="Mão com unhas rosa e detalhe branco" loading="lazy"></li>
+      <li><img src="fotos/g3.jpg" alt="Unhas em malva, branco e glitter prata" loading="lazy"></li>
+      <li><img src="fotos/g4.jpg" alt="Francesinha com detalhes de glitter" loading="lazy"></li>
+      <li><img src="fotos/g5.jpg" alt="Prateleiras com vidros de esmalte coloridos" loading="lazy"></li>
+    </ul>
+  </div>
+</section>
+
+<section class="insta-sec">
+  <div class="largura grade">
+    <div class="numero" aria-hidden="true">2.854</div>
+    <div>
+      <p>pessoas seguem o @studiojuhpasetto para ver cada unha nova que sai do studio.</p>
+      <p class="legenda">No site final entram os depoimentos das clientes, os mesmos do destaque “Clientes” do Instagram.</p>
+      <a class="botao cheio" href="https://www.instagram.com/studiojuhpasetto/" rel="noopener">Ver o Instagram da Juh</a>
+    </div>
+  </div>
+</section>
+
+<section class="onde" id="onde">
+  <div class="largura grade">
+    <div>
+      <h2>Onde fica</h2>
+      <dl>
+        <dt>Bairro</dt><dd>Jardim Inocoop<br>Rio Claro – SP</dd>
+        <dt>WhatsApp</dt><dd><a href="https://wa.me/5519993020645" rel="noopener">(19) 99302-0645</a></dd>
+        <dt>Instagram</dt><dd><a href="https://www.instagram.com/studiojuhpasetto/" rel="noopener">@studiojuhpasetto</a></dd>
+        <dt>Horários</dt><dd>Com hora marcada. Chame no WhatsApp para ver os horários livres.</dd>
+      </dl>
+      <a class="botao linha" href="https://www.google.com/maps/dir/?api=1&destination=Jardim%20Inocoop%2C%20Rio%20Claro%20-%20SP" rel="noopener">Traçar rota</a>
+      <p class="legenda">No site final entram o endereço completo e os horários do studio.</p>
+    </div>
+    <iframe class="mapa" src="https://www.google.com/maps?q=Jardim%20Inocoop%2C%20Rio%20Claro%20-%20SP&output=embed" loading="lazy" title="Mapa: Jardim Inocoop, Rio Claro" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="largura">
+    <h2>Perguntas frequentes</h2>
+    <details><summary>Como faço para agendar?</summary><p>Pelo WhatsApp (19) 99302-0645. Diga o serviço que quer e o melhor dia para você.</p></details>
+    <details><summary>Fibra de vidro é a mesma coisa que alongamento?</summary><p>É um tipo de alongamento. Fios de fibra de vidro dão estrutura à unha, que fica fina, leve e resistente.</p></details>
+    <details><summary>De quanto em quanto tempo preciso fazer manutenção?</summary><p>Depende do crescimento da sua unha. A Juh explica o prazo certo para o seu caso no atendimento.</p></details>
+    <details><summary>Dá para fazer unha e cílios no mesmo dia?</summary><p>O studio faz unhas, cílios e depilação. Pergunte no WhatsApp se dá para encaixar tudo na mesma visita.</p></details>
+  </div>
+</section>
+
+<section class="final">
+  <div class="largura">
+    <h2>Escolha a cor. O resto é com a Juh.</h2>
+    <a class="botao cheio" href="https://wa.me/5519993020645?text=Ol%C3%A1%2C%20Juh!%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Agendar pelo WhatsApp</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="largura"><span>Juh Pasetto Esmalteria, Jardim Inocoop, Rio Claro – SP</span><span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span></div>
+</footer>
+<a class="flutuante" href="https://wa.me/5519993020645?text=Ol%C3%A1%2C%20Juh!%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio." rel="noopener" aria-label="Chamar a Juh Pasetto Esmalteria no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+</body>
+</html>
