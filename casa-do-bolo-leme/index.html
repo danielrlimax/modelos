@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Casa do Bolo Leme | Bolos, doces e sobremesas para festas</title>
+<meta name="description" content="Modelo demonstrativo de site para a Casa do Bolo, há 15 anos adoçando momentos em Leme: bolos, doces e sobremesas por encomenda.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Gilda+Display&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cacau:#1d140f;      /* fundo: chocolate amargo */
+  --cacau-2:#2a1d16;
+  --ouro:#c9a869;       /* dourado do logo */
+  --ouro-claro:#e8d3a2;
+  --glace:#f4ebdd;      /* glacê */
+  --tinta:#2b1e16;
+  --wa:#25d366;
+  --script:"Pinyon Script",cursive;
+  --titulo:"Gilda Display",Georgia,serif;
+  --texto:"Karla",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cacau);color:var(--glace);font:400 1.0625rem/1.6 var(--texto);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ouro-claro);outline-offset:3px}
+.ico{width:1.25em;height:1.25em;flex:none}
+.wrap{width:min(1180px,100% - 2.5rem);margin-inline:auto}
+
+.aviso{background:var(--ouro);color:var(--cacau);text-align:center;font-size:.875rem;font-weight:500;padding:.5rem 1rem}
+
+/* topo */
+.topo{position:absolute;left:0;right:0;z-index:5;padding:1.1rem 0}
+.topo .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.marca{font:2.1rem/1 var(--script);color:var(--ouro);text-decoration:none}
+.topo nav{display:flex;gap:1.6rem;align-items:center;font-size:.95rem}
+.topo nav a:not(.btn){text-decoration:none;color:var(--glace);opacity:.85}
+.topo nav a:not(.btn):hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
+
+.btn{display:inline-flex;align-items:center;gap:.55rem;background:var(--ouro);color:var(--cacau);font:700 1rem/1 var(--texto);padding:.95rem 1.3rem;border-radius:3px;text-decoration:none;border:1px solid var(--ouro);transition:background .2s}
+.btn:hover{background:var(--ouro-claro)}
+.btn.linha{background:transparent;color:var(--ouro-claro);border-color:rgba(201,168,105,.55)}
+.btn.linha:hover{background:rgba(201,168,105,.12)}
+.btn.pequeno{padding:.6rem .9rem;font-size:.9rem}
+
+/* hero */
+.hero{position:relative;min-height:min(100svh,920px);display:flex;align-items:center;overflow:hidden;background:#000}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 60%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.45) 38%,rgba(0,0,0,0) 62%)}
+.hero .wrap{position:relative;z-index:2;padding:7rem 0 5rem}
+.hero-txt{max-width:36rem}
+.hero h1{font:400 clamp(3.4rem,8vw,6.6rem)/.95 var(--script);color:var(--ouro);margin-left:-.06em}
+.hero h1 small{display:block;font:400 clamp(1.05rem,1.6vw,1.25rem)/1.3 var(--texto);color:var(--ouro-claro);letter-spacing:.02em;margin:.4rem 0 0 .2em}
+.hero .lead{font:400 clamp(1.5rem,2.6vw,2.1rem)/1.2 var(--titulo);margin:1.6rem 0 1.8rem;color:#fff;max-width:19ch}
+.acoes{display:flex;flex-wrap:wrap;gap:.75rem}
+.provas{display:flex;flex-wrap:wrap;gap:1.4rem 2.2rem;margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid rgba(201,168,105,.35);list-style:none}
+.provas li{font-size:.92rem;line-height:1.3;color:rgba(244,235,221,.85)}
+.provas b{display:block;font:400 1.75rem/1.1 var(--titulo);color:var(--ouro-claro)}
+.status{display:inline-flex;align-items:center;gap:.5rem}
+.provas b.status{display:flex;gap:.6rem}
+.status i{display:inline-block;flex:none;width:.6rem;height:.6rem;border-radius:50%;background:#6fd08c;box-shadow:0 0 0 4px rgba(111,208,140,.2)}
+.status.fechado i{background:#c98a6a;box-shadow:0 0 0 4px rgba(201,138,106,.2)}
+
+/* 15 velas */
+.velas{padding:5.5rem 0 5rem;text-align:center;background:radial-gradient(ellipse at 50% 30%,#2c1e15 0%,var(--cacau) 70%)}
+.fileira{display:flex;justify-content:center;align-items:flex-end;gap:clamp(.45rem,1.6vw,1.1rem);height:110px;margin-bottom:2.2rem}
+.vela{position:relative;width:clamp(7px,1vw,11px);height:var(--h,64px);border-radius:2px 2px 1px 1px;background:repeating-linear-gradient(160deg,var(--ouro) 0 6px,#8f7444 6px 9px)}
+.vela::before{content:"";position:absolute;left:50%;top:-7px;width:1.5px;height:7px;background:#3a2a1e;transform:translateX(-50%)}
+.chama{position:absolute;left:50%;bottom:calc(100% + 5px);width:12px;height:22px;margin-left:-6px;border-radius:50% 50% 50% 50%/62% 62% 38% 38%;background:radial-gradient(ellipse at 50% 72%,#fff 0 18%,#ffe39a 38%,#f2a33a 70%,rgba(242,163,58,0) 100%);box-shadow:0 0 18px 6px rgba(255,190,90,.28);opacity:0;transform:scale(.3);transform-origin:50% 100%;transition:opacity .5s ease,transform .5s ease}
+.velas.acesas .chama{opacity:1;transform:scale(1)}
+.velas h2{font:400 clamp(2rem,4.4vw,3.4rem)/1.1 var(--titulo);color:#fff;max-width:18ch;margin:0 auto}
+.velas p{max-width:36rem;margin:1.1rem auto 0;color:rgba(244,235,221,.78)}
+.velas .fonte{font-size:.85rem;margin-top:.7rem;color:rgba(244,235,221,.55)}
+
+/* vitrine */
+.vitrine{background:var(--glace);color:var(--tinta);padding:5.5rem 0}
+.cabeca{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:2.6rem}
+.cabeca h2{font:400 clamp(2.1rem,4vw,3.2rem)/1.05 var(--titulo);max-width:16ch}
+.cabeca p{max-width:27rem;color:#5b4637}
+.grade{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem 1.4rem;list-style:none}
+.bolo figure{aspect-ratio:4/5;overflow:hidden;background:#d9c9b0;border-radius:2px}
+.bolo img{width:100%;height:100%;object-fit:cover}
+.bolo h3{font:400 1.35rem/1.2 var(--titulo);margin:.9rem 0 .25rem}
+.bolo p{font-size:.95rem;line-height:1.45;color:#5b4637;margin-bottom:.7rem}
+.bolo a{display:inline-flex;align-items:center;gap:.4rem;font-weight:700;font-size:.92rem;color:#6c5226;text-decoration:none;border-bottom:1px solid rgba(108,82,38,.35);padding-bottom:2px}
+.bolo a:hover{border-bottom-color:#6c5226}
+.bolo a .ico{color:#1b9c4a;width:1.1em;height:1.1em}
+.nota{font-size:.85rem;color:#7b6656;margin-top:2.4rem}
+
+/* galeria */
+.galeria{padding:5.5rem 0}
+.galeria h2{font:400 clamp(2.1rem,4vw,3.2rem)/1.05 var(--titulo);margin-bottom:.6rem}
+.galeria .sub{color:rgba(244,235,221,.75);max-width:34rem;margin-bottom:2.4rem}
+.mosaico{display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:280px 280px;gap:.8rem}
+.mosaico img{width:100%;height:100%;object-fit:cover;border-radius:2px}
+.mosaico .grande{grid-row:span 2}
+.mosaico .largo{grid-column:span 2}
+
+/* encomenda / horario */
+.visita{background:var(--cacau-2);padding:5.5rem 0}
+.visita .cols{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
+.visita h2{font:400 clamp(2rem,3.6vw,2.8rem)/1.1 var(--titulo);margin-bottom:1.4rem}
+.passos{list-style:none;counter-reset:p;display:grid;gap:1.2rem;margin-bottom:2rem}
+.passos li{counter-increment:p;display:grid;grid-template-columns:2.4rem 1fr;gap:.8rem;color:rgba(244,235,221,.85)}
+.passos li::before{content:counter(p);font:400 2rem/1 var(--script);color:var(--ouro);padding-top:.1rem}
+.passos b{color:#fff;font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:1rem}
+td{padding:.7rem 0;border-bottom:1px solid rgba(201,168,105,.2)}
+td:last-child{text-align:right;color:var(--ouro-claro)}
+tr.hoje td{color:#fff;font-weight:700}
+tr.hoje td:first-child::after{content:" (hoje)";font-weight:400;color:var(--ouro)}
+.agora{display:flex;align-items:center;gap:.7rem;margin-bottom:1.3rem;font-size:1.05rem}
+.agora .status b{color:#fff}
+.contatos{list-style:none;margin-top:1.8rem;display:grid;gap:.5rem;color:rgba(244,235,221,.85)}
+.contatos a{color:var(--ouro-claro)}
+.mapa{margin-top:3.5rem;display:grid;grid-template-columns:1.4fr 1fr;gap:2rem;align-items:center}
+.mapa iframe{width:100%;height:320px;border:0;border-radius:2px;background:#3a2a20;filter:grayscale(.35) contrast(1.05)}
+.mapa p{color:rgba(244,235,221,.8);margin-bottom:1.2rem}
+.mapa .exemplo{font-size:.85rem;color:rgba(244,235,221,.55)}
+
+/* final */
+.final{position:relative;padding:7rem 0;text-align:center;overflow:hidden}
+.final>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.final::after{content:"";position:absolute;inset:0;background:rgba(20,13,9,.72)}
+.final .wrap{position:relative;z-index:2}
+.final .marca-g{font:400 clamp(3.2rem,7vw,5.5rem)/1 var(--script);color:var(--ouro)}
+.final p{font:400 clamp(1.3rem,2.4vw,1.8rem)/1.3 var(--titulo);margin:1rem auto 2rem;max-width:26ch}
+.final .acoes{justify-content:center}
+
+footer{padding:2.4rem 0 6rem;font-size:.88rem;color:rgba(244,235,221,.6)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+footer img{width:56px;height:56px;border-radius:4px}
+footer .id{display:flex;gap:1rem;align-items:center}
+
+.flutuante{position:fixed;right:1rem;bottom:1rem;z-index:20;display:inline-flex;align-items:center;gap:.5rem;background:var(--wa);color:#fff;font-weight:700;text-decoration:none;padding:.85rem 1.1rem;border-radius:2rem;box-shadow:0 6px 20px rgba(0,0,0,.35)}
+.flutuante .ico{width:1.5em;height:1.5em}
+
+@media (max-width:980px){
+  .grade{grid-template-columns:repeat(2,1fr)}
+  .visita .cols,.mapa{grid-template-columns:1fr}
+  .topo nav a:not(.btn){display:none}
+}
+@media (max-width:860px){
+  .hero>img{object-position:78% 60%}
+  .hero::after{background:linear-gradient(90deg,rgba(0,0,0,.86) 0%,rgba(0,0,0,.66) 52%,rgba(0,0,0,.15) 85%)}
+}
+@media (max-width:600px){
+  .hero{align-items:flex-start;min-height:auto}
+  .hero>img{object-position:62% 100%}
+  .hero::after{background:linear-gradient(180deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.7) 62%,rgba(0,0,0,.2) 100%)}
+  .hero .wrap{padding:5.5rem 0 12rem}
+  .marca{font-size:1.8rem}
+  .topo .btn{padding:.55rem .75rem;font-size:.85rem}
+  .grade{gap:1.6rem .9rem}
+  .bolo h3{font-size:1.15rem}
+  .bolo p{font-size:.88rem}
+  .mosaico{grid-template-columns:1fr 1fr;grid-template-rows:220px 160px 160px}
+  .mosaico .grande{grid-row:auto;grid-column:span 2}
+  .mosaico .largo{grid-column:span 2}
+  .fileira{gap:.38rem;height:96px}
+  .flutuante span{display:none}
+  .flutuante{padding:.9rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .chama{transition:none}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.040 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.870 9.870 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.860 9.860 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.050 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.480-8.413Z"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para Casa do Bolo Leme. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio">Casa do Bolo</a>
+    <nav aria-label="Seções">
+      <a href="#bolos">Bolos e doces</a>
+      <a href="#fotos">Fotos</a>
+      <a href="#horarios">Horários</a>
+      <a class="btn pequeno" href="https://wa.me/5519971267963?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20encomendar%20um%20bolo." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Encomendar</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <img src="fotos/hero-velas.jpg" alt="Bolo de chocolate com velas coloridas acesas no escuro" fetchpriority="high">
+    <div class="wrap">
+      <div class="hero-txt">
+        <h1>Casa do Bolo <small>Bolos, doces e sobremesas em Leme</small></h1>
+        <p class="lead">O bolo que vai estar no centro da sua festa.</p>
+        <div class="acoes">
+          <a class="btn" href="https://wa.me/5519971267963?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20encomendar%20um%20bolo." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Encomendar pelo WhatsApp</a>
+          <a class="btn linha" href="#bolos">Ver bolos e doces</a>
+        </div>
+        <ul class="provas">
+          <li><b>15 anos</b>adoçando momentos</li>
+          <li><b>4.244</b>seguidores no Instagram</li>
+          <li><b class="status" id="status-hero"><i></i><span>Seg a sáb</span></b><span id="status-hero-txt">horário da loja</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="velas" id="velas" aria-labelledby="t-velas">
+    <div class="wrap">
+      <div class="fileira" aria-hidden="true" id="fileira"></div>
+      <h2 id="t-velas">Uma vela para cada ano adoçando Leme.</h2>
+      <p>São 15 anos fazendo bolos para aniversários, casamentos, chás e encontros de família na cidade. Quem já pediu volta, e quem vai pedir pela primeira vez acha a gente no Instagram e no WhatsApp.</p>
+      <p class="fonte">“Há 15 anos adoçando momentos”, da bio do @casadobololeme.</p>
+    </div>
+  </section>
+
+  <section class="vitrine" id="bolos" aria-labelledby="t-bolos">
+    <div class="wrap">
+      <div class="cabeca">
+        <h2 id="t-bolos">Bolos, doces e sobremesas para festa</h2>
+        <p>Escolha o que combina com a sua comemoração e chame no WhatsApp. A conversa já vai com o assunto escrito.</p>
+      </div>
+      <ul class="grade">
+        <li class="bolo">
+          <figure><img src="fotos/aniversario.jpg" alt="Bolo de chocolate decorado com rosas de chantilly e escrita de feliz aniversário" loading="lazy"></figure>
+          <h3>Bolos de aniversário</h3>
+          <p>Decorados com o nome, o tema e o sabor da festa.</p>
+          <a href="https://wa.me/5519971267963?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20bolos%20de%20anivers%C3%A1rio." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir este</a>
+        </li>
+        <li class="bolo">
+          <figure><img src="fotos/casamento.jpg" alt="Bolo branco de três andares com rosas vermelhas" loading="lazy"></figure>
+          <h3>Bolos de casamento</h3>
+          <p>Andares, flores e acabamento para a mesa principal.</p>
+          <a href="https://wa.me/5519971267963?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20bolos%20de%20casamento." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir este</a>
+        </li>
+        <li class="bolo">
+          <figure><img src="fotos/naked-frutas.jpg" alt="Naked cake com morangos e flores sobre a mesa" loading="lazy"></figure>
+          <h3>Naked cake com frutas</h3>
+          <p>Massa aparente, creme e fruta fresca por cima.</p>
+          <a href="https://wa.me/5519971267963?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20naked%20cake%20com%20frutas." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir este</a>
+        </li>
+        <li class="bolo">
+          <figure><img src="fotos/chocolate-cereja.jpg" alt="Bolo de chocolate em camadas com creme e cerejas" loading="lazy"></figure>
+          <h3>Chocolate recheado</h3>
+          <p>Camadas de massa de chocolate e recheio generoso.</p>
+          <a href="https://wa.me/5519971267963?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20bolo%20de%20chocolate%20recheado." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir este</a>
+        </li>
+        <li class="bolo">
+          <figure><img src="fotos/mousse-ganache.jpg" alt="Bolo de mousse com ganache escorrendo e pérolas de açúcar" loading="lazy"></figure>
+          <h3>Mousse com ganache</h3>
+          <p>Leve por dentro, com cobertura brilhante de chocolate.</p>
+          <a href="https://wa.me/5519971267963?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20bolos%20com%20ganache." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir este</a>
+        </li>
+        <li class="bolo">
+          <figure><img src="fotos/brigadeiros.jpg" alt="Doces de chocolate em forminhas empilhados" loading="lazy"></figure>
+          <h3>Doces de festa</h3>
+          <p>Brigadeiros e docinhos em forminha para a mesa.</p>
+          <a href="https://wa.me/5519971267963?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20doces%20de%20festa." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir este</a>
+        </li>
+        <li class="bolo">
+          <figure><img src="fotos/copinhos.jpg" alt="Sobremesas em copinhos com creme e farofa" loading="lazy"></figure>
+          <h3>Sobremesas no copinho</h3>
+          <p>Porções individuais, fáceis de servir na festa.</p>
+          <a href="https://wa.me/5519971267963?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20sobremesas%20no%20copinho." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir este</a>
+        </li>
+        <li class="bolo">
+          <figure><img src="fotos/red-velvet.jpg" alt="Fatia de bolo vermelho com creme branco e frutas vermelhas" loading="lazy"></figure>
+          <h3>Tortas e sobremesas</h3>
+          <p>Para o almoço de domingo ou para levar de presente.</p>
+          <a href="https://wa.me/5519971267963?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20tortas%20e%20sobremesas." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir este</a>
+        </li>
+      </ul>
+      <p class="nota">Texto de exemplo e fotos ilustrativas. No site final entram os sabores, os tamanhos e as fotos dos bolos da Casa do Bolo.</p>
+    </div>
+  </section>
+
+  <section class="galeria" id="fotos" aria-labelledby="t-fotos">
+    <div class="wrap">
+      <h2 id="t-fotos">Feito para a foto da festa</h2>
+      <p class="sub">Fotos ilustrativas. No site final, esta galeria mostra os bolos que já saíram da Casa do Bolo, puxados do Instagram.</p>
+      <div class="mosaico">
+        <img class="grande" src="fotos/galeria-dourado.jpg" alt="Bolo com calda dourada escorrendo, flores e macarons sobre suporte dourado" loading="lazy">
+        <img src="fotos/galeria-figos.jpg" alt="Bolo de três andares com figos e folhas" loading="lazy">
+        <img src="fotos/galeria-fatia.jpg" alt="Fatia de bolo de chocolate em camadas no prato" loading="lazy">
+        <img class="largo" src="fotos/galeria-flores.jpg" alt="Bolo branco de andares decorado com flores cor-de-rosa" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="visita" id="horarios" aria-labelledby="t-enc">
+    <div class="wrap">
+      <div class="cols">
+        <div>
+          <h2 id="t-enc">Como encomendar</h2>
+          <ol class="passos">
+            <li><span><b>Chame no WhatsApp</b> e conte a data, o número de convidados e a ocasião.</span></li>
+            <li><span><b>Combine sabor, tamanho e decoração</b> direto com a Casa do Bolo.</span></li>
+            <li><span><b>Retire no dia combinado</b> e leve o bolo para a festa.</span></li>
+          </ol>
+          <a class="btn" href="https://wa.me/5519971267963?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20encomendar%20um%20bolo." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Começar minha encomenda</a>
+          <ul class="contatos">
+            <li>WhatsApp: <a href="https://wa.me/5519971267963?text=Ol%C3%A1!%20Vim%20pelo%20site." rel="noopener">(19) 97126-7963</a></li>
+            <li>Telefone fixo: <a href="tel:+551935547332">(19) 3554-7332</a></li>
+            <li>Instagram: <a href="https://www.instagram.com/casadobololeme/" rel="noopener">@casadobololeme</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Horário da loja</h2>
+          <p class="agora"><span class="status" id="status"><i></i><b id="estado">Seg a sáb</b></span><span id="detalhe"></span></p>
+          <table id="tabela">
+            <tbody>
+              <tr data-dia="1"><td>Segunda</td><td>9h às 19h</td></tr>
+              <tr data-dia="2"><td>Terça</td><td>9h às 19h</td></tr>
+              <tr data-dia="3"><td>Quarta</td><td>9h às 19h</td></tr>
+              <tr data-dia="4"><td>Quinta</td><td>9h às 19h</td></tr>
+              <tr data-dia="5"><td>Sexta</td><td>9h às 19h</td></tr>
+              <tr data-dia="6"><td>Sábado</td><td>9h às 17h</td></tr>
+              <tr data-dia="0"><td>Domingo</td><td>Fechado</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="mapa">
+        <iframe src="https://www.google.com/maps?q=Leme%2C%20SP&output=embed" loading="lazy" title="Mapa de Leme, SP" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div>
+          <h2>Em Leme, SP</h2>
+          <p>A Casa do Bolo atende Leme há 15 anos. Chame no WhatsApp para combinar a retirada.</p>
+          <a class="btn linha" href="https://www.google.com/maps/dir/?api=1&destination=Leme%2C%20SP" rel="noopener">Traçar rota</a>
+          <p class="exemplo" style="margin-top:1rem">No site final entra o endereço exato da loja, com o mapa e a rota até a porta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final" aria-labelledby="t-final">
+    <img src="fotos/velas-escuro.jpg" alt="" loading="lazy">
+    <div class="wrap">
+      <p class="marca-g" id="t-final">Casa do Bolo</p>
+      <p>Tem festa chegando? Garanta o bolo com antecedência.</p>
+      <div class="acoes">
+        <a class="btn" href="https://wa.me/5519971267963?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20encomendar%20um%20bolo." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Encomendar pelo WhatsApp</a>
+        <a class="btn linha" href="https://www.instagram.com/casadobololeme/" rel="noopener">Ver o Instagram</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="id"><img src="logo.jpg" alt="Logo da Casa do Bolo"><span>Casa do Bolo, Leme (SP)<br>Bolos, doces e sobremesas</span></div>
+    <p>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</p>
+  </div>
+</footer>
+
+<a class="flutuante" href="https://wa.me/5519971267963?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20encomendar%20um%20bolo." rel="noopener" aria-label="Chamar a Casa do Bolo no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg><span>WhatsApp</span></a>
+
+<script>
+(function () {
+  // 15 velas: uma para cada ano (bio do Instagram: "há 15 anos adoçando momentos")
+  const fileira = document.getElementById('fileira');
+  const alturas = [52, 70, 60, 78, 56, 66, 84, 62, 80, 58, 72, 64, 76, 54, 68];
+  alturas.forEach((h, i) => {
+    const v = document.createElement('span');
+    v.className = 'vela'; v.style.setProperty('--h', h + 'px');
+    const c = document.createElement('span');
+    c.className = 'chama'; c.style.transitionDelay = (i * 110) + 'ms';
+    v.appendChild(c); fileira.appendChild(v);
+  });
+  const secao = document.getElementById('velas');
+  const reduz = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduz || !('IntersectionObserver' in window)) secao.classList.add('acesas');
+  else {
+    const io = new IntersectionObserver((es) => { if (es[0].isIntersecting) { secao.classList.add('acesas'); io.disconnect(); } }, { threshold: .45 });
+    io.observe(secao);
+  }
+
+  // Horário real (bio do Instagram), em minutos. 0 = domingo.
+  const TURNOS = { 0: [], 1: [[540, 1140]], 2: [[540, 1140]], 3: [[540, 1140]], 4: [[540, 1140]], 5: [[540, 1140]], 6: [[540, 1020]] };
+  const DIAS = ['domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado'];
+  const h = (m) => `${Math.floor(m / 60)}h${m % 60 ? String(m % 60).padStart(2, '0') : ''}`;
+  const partes = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date()).map((p) => [p.type, p.value]));
+  const dia = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(partes.weekday);
+  const agora = Number(partes.hour) * 60 + Number(partes.minute);
+  const aberto = TURNOS[dia].find(([a, f]) => agora >= a && agora < f);
+  let estado, detalhe;
+  if (aberto) { estado = 'Aberto agora'; detalhe = 'até as ' + h(aberto[1]); }
+  else {
+    estado = 'Fechado agora';
+    let prox = TURNOS[dia].find(([a]) => a > agora), d = dia, i = 0;
+    while (!prox && i++ < 7) { d = (d + 1) % 7; prox = TURNOS[d][0]; }
+    const quando = d === dia ? 'hoje' : d === (dia + 1) % 7 ? 'amanhã' : DIAS[d];
+    detalhe = `abre ${quando} às ${h(prox[0])}`;
+  }
+  for (const id of ['status', 'status-hero']) document.getElementById(id).classList.toggle('fechado', !aberto);
+  document.getElementById('estado').textContent = estado;
+  document.getElementById('detalhe').textContent = detalhe;
+  document.querySelector('#status-hero span').textContent = estado;
+  document.getElementById('status-hero-txt').textContent = detalhe;
+  document.querySelector(`#tabela tr[data-dia="${dia}"]`)?.classList.add('hoje');
+})();
+</script>
+</body>
+</html>
