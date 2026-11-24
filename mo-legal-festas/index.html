@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Mó Legal Festas | Buffet infantil e festa na caixa em Limeira</title>
+<meta name="description" content="Modelo demonstrativo de site para a Mó Legal Festas: festas no buffet, decoração interna e externa e festa na caixa em Limeira.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Figtree:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --fita:#D6246E;      /* magenta da fita de cetim */
+  --fita-esc:#A3164F;
+  --uva:#3A1338;       /* texto */
+  --papel:#FFF4F6;     /* fundo rosado */
+  --cobre:#B9582F;     /* balões cobre da decoração */
+  --neon:#FFD25E;      /* amarelo do letreiro neon */
+  --wa:#1FA855;
+  --raio:10px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--papel);color:var(--uva);font:400 1.0625rem/1.6 "Figtree",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--neon);outline-offset:3px;border-radius:4px}
+.ico{width:1.2em;height:1.2em;flex:none}
+.largura{width:min(1160px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:"Bagel Fat One",system-ui,sans-serif;font-weight:400;line-height:1.05;margin:0;letter-spacing:.005em}
+h2{font-size:clamp(2.1rem,4.6vw,3.3rem);color:var(--fita-esc)}
+.nota{font-size:.875rem;color:#7a5a74;margin:.6rem 0 0}
+
+/* faixa demonstrativa */
+.demo{background:var(--uva);color:#fff;text-align:center;font-size:.875rem;padding:.5rem 1rem}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;gap:.55rem;font-weight:800;font-size:1rem;text-decoration:none;padding:.85rem 1.25rem;border-radius:var(--raio);border:2px solid transparent;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa:hover{background:#178a45}
+.btn-linha{border-color:currentColor;color:var(--uva);background:transparent}
+
+/* topo */
+.topo{position:absolute;inset:auto 0 auto 0;z-index:5;padding:14px 0}
+.topo .largura{padding-left:calc(var(--fx) + 54px);width:min(1160px,100% - 20px);display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.marca{font-family:"Bagel Fat One";font-size:1.5rem;color:#fff;text-decoration:none;text-shadow:0 2px 12px rgba(58,19,56,.55)}
+.topo nav{display:flex;align-items:center;gap:1.4rem}
+.topo nav a.link{color:#fff;text-decoration:none;font-weight:700;text-shadow:0 1px 8px rgba(58,19,56,.7)}
+.topo nav a.link:hover{text-decoration:underline}
+.topo .btn{padding:.6rem 1rem;font-size:.95rem}
+
+/* HERO — o presente */
+.hero{position:relative;min-height:min(100svh,920px);overflow:hidden;background:#5b2a40}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+.hero::after{content:"";position:absolute;inset:0 0 auto 0;height:140px;background:linear-gradient(rgba(58,19,56,.55),transparent);pointer-events:none}
+.fita{position:absolute;top:0;bottom:0;left:var(--fx);width:54px;z-index:2;
+  background:linear-gradient(90deg,var(--fita-esc) 0,var(--fita) 22%,#f0559a 46%,var(--fita) 62%,var(--fita-esc) 100%);
+  box-shadow:0 0 0 1px rgba(0,0,0,.05),6px 0 18px rgba(58,19,56,.25)}
+.fita::before,.fita::after{content:"";position:absolute;top:0;bottom:0;width:2px;background:rgba(255,255,255,.35)}
+.fita::before{left:6px}.fita::after{right:6px}
+:root{--fx:clamp(28px,9vw,120px)}
+.laco{position:absolute;z-index:4;top:64px;left:calc(var(--fx) + 27px);width:150px;transform:translateX(-50%);filter:drop-shadow(0 6px 10px rgba(58,19,56,.35))}
+.etiqueta-wrap{position:absolute;z-index:3;top:150px;left:calc(var(--fx) + 27px - 44px);transform-origin:44px 44px}
+.cordao{display:none}
+.etiqueta{position:relative;width:min(440px,calc(100vw - var(--fx) - 20px));
+  background:#fff;color:var(--uva);padding:34px 34px 28px 34px;
+  clip-path:polygon(0 78px,78px 0,100% 0,100% 100%,0 100%);
+  filter:drop-shadow(0 18px 30px rgba(58,19,56,.35));transform-origin:50% 0}
+.etiqueta::before{content:"";position:absolute;left:35px;top:35px;width:18px;height:18px;border-radius:50%;background:var(--papel);box-shadow:inset 0 0 0 3px var(--neon)}
+.etiqueta .para{font-size:.95rem;color:#7a5a74;margin:0 0 .5rem 58px;font-style:italic}
+.etiqueta h1{font-size:clamp(2.5rem,5.2vw,3.6rem);color:var(--fita)}
+.etiqueta .sub{font-family:"Bagel Fat One";font-size:1.25rem;color:var(--cobre);margin:.35rem 0 .9rem;line-height:1.2}
+.etiqueta p.txt{margin:0 0 1.3rem;max-width:34ch}
+.etiqueta .acoes{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+.etiqueta .ig{font-weight:700;font-size:.95rem}
+.etiqueta .pontilhado{border-top:2px dashed #f1c9d7;margin:1.4rem 0 0;padding-top:.9rem;font-size:.95rem;display:flex;gap:.5rem;align-items:baseline}
+.etiqueta .pontilhado b{white-space:nowrap;font-family:"Bagel Fat One";font-weight:400;font-size:1.6rem;color:var(--fita)}
+@media (prefers-reduced-motion:no-preference){
+  .etiqueta-wrap{animation:balanca 2.2s cubic-bezier(.3,.6,.3,1) .2s both}
+  @keyframes balanca{0%{transform:rotate(-9deg)}30%{transform:rotate(5deg)}55%{transform:rotate(-2.5deg)}78%{transform:rotate(1deg)}100%{transform:rotate(0)}}
+}
+.credito-hero{position:absolute;right:12px;bottom:10px;z-index:2;color:#fff;font-size:.75rem;text-shadow:0 1px 4px rgba(0,0,0,.7)}
+
+/* provas */
+.provas{background:var(--fita);color:#fff}
+.provas .largura{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.provas div{padding:1.4rem 1.2rem;border-left:2px dashed rgba(255,255,255,.35)}
+.provas div:first-child{border-left:0;padding-left:0}
+.provas strong{display:block;font-family:"Bagel Fat One";font-weight:400;font-size:clamp(1.6rem,3vw,2.2rem);line-height:1.1;color:var(--neon)}
+.provas span{font-size:.98rem}
+
+/* serviços */
+section{padding:clamp(64px,9vw,110px) 0}
+.cab{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:2.2rem;flex-wrap:wrap}
+.cab p{margin:.7rem 0 0;max-width:46ch}
+.grade{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 0 #f1d3dd}
+.card figure{margin:0;aspect-ratio:9/7;overflow:hidden}
+.card img{width:100%;height:100%;object-fit:cover}
+.card .corpo{padding:1.1rem 1.2rem 1.3rem;display:flex;flex-direction:column;gap:.5rem;flex:1}
+.card h3{font-size:1.45rem;color:var(--uva)}
+.card p{margin:0;flex:1}
+.card a{display:inline-flex;align-items:center;gap:.45rem;font-weight:800;color:var(--wa);text-decoration:none;margin-top:.4rem}
+.card a:hover{text-decoration:underline}
+
+/* festa na caixa */
+.caixa{background:#fff}
+.caixa .largura{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(28px,5vw,70px);align-items:center}
+.caixa-foto{position:relative}
+.caixa-foto img{border-radius:14px;aspect-ratio:7/6;object-fit:cover;width:100%}
+.caixa-foto img{position:relative}
+.caixa h2{margin-bottom:1rem}
+.passos{list-style:none;padding:0;margin:1.6rem 0 1.8rem;counter-reset:p;display:grid;gap:.9rem}
+.passos li{counter-increment:p;display:grid;grid-template-columns:42px 1fr;gap:.9rem;align-items:start}
+.passos li::before{content:counter(p);font-family:"Bagel Fat One";font-size:1.4rem;color:#fff;background:var(--cobre);width:42px;height:42px;border-radius:10px;display:grid;place-items:center}
+.passos b{display:block}
+
+/* galeria */
+.galeria-grade{display:grid;grid-template-columns:1.1fr 1fr 1fr;grid-template-rows:240px 240px;gap:14px}
+.galeria-grade img{width:100%;height:100%;object-fit:cover;border-radius:12px}
+.galeria-grade .alto{grid-row:span 2}
+.galeria-grade .largo{grid-column:span 2}
+
+/* instagram */
+.insta{background:var(--uva);color:#fff}
+.insta h2{color:#fff}
+.insta .largura{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(28px,5vw,70px);align-items:center}
+.insta p{max-width:44ch}
+.tags{display:flex;flex-wrap:wrap;gap:14px 12px;list-style:none;padding:0;margin:0}
+.tags a{position:relative;display:block;background:#fff;color:var(--uva);text-decoration:none;font-weight:800;padding:.6rem 1rem .6rem 2rem;clip-path:polygon(14px 0,100% 0,100% 100%,14px 100%,0 50%)}
+.tags a::before{content:"";position:absolute;left:13px;top:50%;width:8px;height:8px;margin-top:-4px;border-radius:50%;background:var(--uva)}
+.tags li:nth-child(3n+1) a{background:var(--neon)}
+.tags li:nth-child(3n+2) a{background:#ffc6da}
+.tags a:hover{background:var(--fita);color:#fff}
+
+/* onde */
+.onde .largura{display:grid;grid-template-columns:1fr 1.3fr;gap:clamp(28px,5vw,60px);align-items:center}
+.onde iframe{width:100%;height:380px;border:0;border-radius:14px;background:#eee}
+.onde .acoes{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1.4rem}
+
+/* final */
+.final{background:var(--fita);color:#fff;text-align:center;position:relative;overflow:hidden}
+.final::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:46px;margin-left:-23px;background:linear-gradient(90deg,rgba(0,0,0,.12),rgba(255,255,255,.12) 50%,rgba(0,0,0,.12));pointer-events:none}
+.final .largura{position:relative}
+.final h2{color:#fff;font-size:clamp(2.3rem,5.5vw,4rem);max-width:16ch;margin:0 auto 1rem}
+.final p{margin:0 auto 1.8rem;max-width:40ch}
+.final .btn-wa{font-size:1.1rem;padding:1rem 1.5rem;box-shadow:0 8px 24px rgba(58,19,56,.3)}
+
+footer{background:var(--uva);color:#e9d7e4;font-size:.9rem;padding:2rem 0 6rem}
+footer .largura{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+footer a{color:#fff}
+
+.flutuante{position:fixed;right:18px;bottom:18px;z-index:50;display:inline-flex;align-items:center;gap:.5rem;background:var(--wa);color:#fff;text-decoration:none;font-weight:800;padding:.85rem 1.1rem;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.flutuante .ico{width:1.5em;height:1.5em}
+
+/* responsivo */
+@media (max-width:980px){
+  .grade{grid-template-columns:repeat(2,1fr)}
+  .caixa .largura,.insta .largura,.onde .largura{grid-template-columns:1fr}
+  .topo nav a.link{display:none}
+}
+@media (max-width:900px){
+  .hero>img{object-position:0% 50%}
+  .etiqueta{width:400px;padding:30px 28px 24px}
+  .etiqueta h1{font-size:2.6rem}
+}
+@media (max-width:640px){
+  :root{--fx:35px}
+  .hero{min-height:auto;display:flex;flex-direction:column}
+  .marca{display:none}
+  .topo .largura{justify-content:flex-end}
+  .hero>img{position:relative;height:56svh;min-height:340px;object-position:56% 40%}
+  .hero::after{height:110px}
+  .fita{width:38px}
+  .laco{top:70px;width:110px;left:calc(var(--fx) + 19px)}
+  .etiqueta-wrap{position:relative;top:auto;left:auto;margin:-90px 12px 0 10px;z-index:3}
+  .cordao{display:none}
+  .etiqueta{margin:0;width:auto;padding:30px 22px 24px}
+  .etiqueta h1{font-size:2.35rem}
+  .hero{padding-bottom:28px;background:var(--papel)}
+  .credito-hero{display:none}
+  .provas .largura{grid-template-columns:1fr}
+  .provas div{border-left:0;border-top:2px dashed rgba(255,255,255,.35);padding:1rem 0}
+  .provas div:first-child{border-top:0}
+  .grade{gap:12px}
+  .card .corpo{padding:.8rem .8rem 1rem}
+  .card h3{font-size:1.15rem}
+  .card p{font-size:.92rem;line-height:1.45}
+  .galeria-grade{grid-template-columns:1fr 1fr;grid-template-rows:200px 150px 150px}
+  .galeria-grade .alto{grid-row:span 1;grid-column:span 2}
+  .galeria-grade .largo{grid-column:span 2}
+  .onde iframe{height:300px}
+  .flutuante span{display:none}
+  .flutuante{padding:.9rem}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.860 9.860 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.050 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.480-8.413Z"/></symbol>
+</svg>
+
+<div class="demo">Modelo demonstrativo feito por Daniel para Mó Legal Festas. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <div class="largura">
+    <a class="marca" href="#">Mó Legal Festas</a>
+    <nav aria-label="Seções">
+      <a class="link" href="#servicos">O que fazemos</a>
+      <a class="link" href="#caixa">Festa na caixa</a>
+      <a class="link" href="#onde">Onde estamos</a>
+      <a class="btn btn-wa" href="https://wa.me/5519998460229?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20or%C3%A7amento%20de%20festa." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" style="padding:0" aria-label="Apresentação">
+  <img src="fotos/hero.jpg" alt="Mesa de bolo infantil cercada de balões rosa e brancos, com arco de balões e letreiro neon ao fundo" fetchpriority="high">
+  <div class="fita" aria-hidden="true"></div>
+  <svg class="laco" viewBox="0 0 150 100" aria-hidden="true">
+    <defs><linearGradient id="cetim" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f0559a"/><stop offset=".5" stop-color="#D6246E"/><stop offset="1" stop-color="#A3164F"/></linearGradient></defs>
+    <path d="M75 50 C55 18 14 6 8 30 C3 52 40 62 75 50Z" fill="url(#cetim)"/>
+    <path d="M75 50 C95 18 136 6 142 30 C147 52 110 62 75 50Z" fill="url(#cetim)"/>
+    <path d="M70 54 L48 96 L60 90 L66 99 L76 56Z" fill="#A3164F"/>
+    <path d="M80 54 L102 96 L90 90 L84 99 L74 56Z" fill="#C21E62"/>
+    <path d="M30 30 C45 32 60 40 72 48" stroke="#ff8ab9" stroke-width="2" fill="none" opacity=".7"/>
+    <path d="M120 30 C105 32 90 40 78 48" stroke="#ff8ab9" stroke-width="2" fill="none" opacity=".7"/>
+    <rect x="64" y="39" width="22" height="22" rx="7" fill="#C21E62"/>
+  </svg>
+  <div class="etiqueta-wrap">
+    <span class="cordao" aria-hidden="true"></span>
+    <div class="etiqueta">
+      <p class="para">Para a festa do seu pequeno:</p>
+      <h1>Mó Legal Festas</h1>
+      <p class="sub">Buffet infantil, decoração e festa na caixa em Limeira</p>
+      <p class="txt">Festa no nosso buffet, decoração montada onde você quiser ou a festa inteira dentro de uma caixa. Conte o tema e a data pelo WhatsApp.</p>
+      <div class="acoes">
+        <a class="btn btn-wa" href="https://wa.me/5519998460229?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20or%C3%A7amento%20de%20festa." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir orçamento</a>
+        <a class="ig" href="https://www.instagram.com/molegalfestas/" rel="noopener">Ver no Instagram</a>
+      </div>
+      <p class="pontilhado"><b>13,6 mil</b> famílias e amigos seguem a gente no Instagram</p>
+    </div>
+  </div>
+  <span class="credito-hero">Foto ilustrativa</span>
+</section>
+
+<div class="provas">
+  <div class="largura">
+    <div><strong>13,6 mil</strong><span>seguidores no Instagram @molegalfestas</span></div>
+    <div><strong>Toda semana</strong><span>festas novas postadas no perfil</span></div>
+    <div><strong>3 jeitos</strong><span>de fazer a festa: no buffet, na sua casa ou na caixa</span></div>
+  </div>
+</div>
+
+<section id="servicos">
+  <div class="largura">
+    <div class="cab">
+      <div>
+        <h2>O que a Mó Legal faz</h2>
+        <p>Do salão cheio de balões à caixa com a decoração pronta: escolha o formato que cabe na sua festa.</p>
+      </div>
+      <a class="btn btn-linha" href="https://wa.me/5519998460229?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20quais%20temas%20voc%C3%AAs%20t%C3%AAm." rel="noopener"><svg class="ico" aria-hidden="true" style="color:var(--wa)"><use href="#wa"/></svg>Perguntar sobre temas</a>
+    </div>
+    <div class="grade">
+      <article class="card">
+        <figure><img src="fotos/buffet.jpg" alt="Crianças comemorando aniversário em volta da mesa do bolo" loading="lazy"></figure>
+        <div class="corpo"><h3>Festa no buffet</h3><p>O espaço preparado para a criançada brincar e a família curtir junto.</p>
+        <a href="https://wa.me/5519998460229?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20festa%20no%20buffet." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Saber mais</a></div>
+      </article>
+      <article class="card">
+        <figure><img src="fotos/interna.jpg" alt="Arco de balões coloridos em frente a uma cortina" loading="lazy"></figure>
+        <div class="corpo"><h3>Decoração interna</h3><p>Painel, mesa do bolo e balões montados no salão com o tema escolhido.</p>
+        <a href="https://wa.me/5519998460229?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20decora%C3%A7%C3%A3o%20interna." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Saber mais</a></div>
+      </article>
+      <article class="card">
+        <figure><img src="fotos/externa.jpg" alt="Arco de balões em cores do arco-íris na fachada de um prédio" loading="lazy"></figure>
+        <div class="corpo"><h3>Decoração externa</h3><p>Arcos de balões e decoração para festas ao ar livre e fachadas.</p>
+        <a href="https://wa.me/5519998460229?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20decora%C3%A7%C3%A3o%20externa." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Saber mais</a></div>
+      </article>
+      <article class="card">
+        <figure><img src="fotos/caixa.jpg" alt="Caixa de presente pink com laço de fita" loading="lazy"></figure>
+        <div class="corpo"><h3>Festa na caixa</h3><p>A decoração do tema chega pronta na caixa para você montar em casa.</p>
+        <a href="https://wa.me/5519998460229?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20a%20festa%20na%20caixa." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Saber mais</a></div>
+      </article>
+      <article class="card">
+        <figure><img src="fotos/kit.jpg" alt="Cupcakes decorados com estrelinhas em uma mesa de festa" loading="lazy"></figure>
+        <div class="corpo"><h3>Kit individual</h3><p>Kits montados um a um, no tema da festa, para cada convidado.</p>
+        <a href="https://wa.me/5519998460229?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20o%20kit%20individual." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Saber mais</a></div>
+      </article>
+      <article class="card">
+        <figure><img src="fotos/casa.jpg" alt="Mesa de bolo decorada com flores em um quintal" loading="lazy"></figure>
+        <div class="corpo"><h3>Festa na sua casa</h3><p>A decoração vai até você e a festa acontece no quintal ou na sala.</p>
+        <a href="https://wa.me/5519998460229?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20festa%20na%20minha%20casa." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Saber mais</a></div>
+      </article>
+    </div>
+    <p class="nota">Fotos ilustrativas. No site final entram as fotos das festas da Mó Legal e a descrição de cada serviço.</p>
+  </div>
+</section>
+
+<section class="caixa" id="caixa">
+  <div class="largura">
+    <div class="caixa-foto"><img src="fotos/caixa-grande.jpg" alt="Caixa de presente embrulhada com fita pink" loading="lazy"></div>
+    <div>
+      <h2>A festa inteira cabe numa caixa</h2>
+      <p>Para quem quer comemorar em casa, no condomínio ou na escola: a Mó Legal separa a decoração do tema e você só abre e arruma.</p>
+      <ol class="passos">
+        <li><span><b>Escolha o tema</b>Mande no WhatsApp o tema e a data da festa.</span></li>
+        <li><span><b>Receba a caixa</b>Combine a retirada ou a entrega da decoração.</span></li>
+        <li><span><b>Monte e comemore</b>Arrume a mesa, tire as fotos e aproveite a festa.</span></li>
+        <li><span><b>Devolva</b>Depois da festa, as peças voltam para a Mó Legal.</span></li>
+      </ol>
+      <a class="btn btn-wa" href="https://wa.me/5519998460229?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20como%20funciona%20a%20festa%20na%20caixa." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Quero a festa na caixa</a>
+      <p class="nota">Texto de exemplo. No site final entram os itens da caixa, os temas e como funciona a retirada.</p>
+    </div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="largura">
+    <div class="cab"><div><h2>Cada festa com a sua cara</h2><p>Balões, bolo, doces e cor para todo lado.</p></div></div>
+    <div class="galeria-grade">
+      <img class="alto" src="fotos/g-arco.jpg" alt="Arco de balões em tons pastel com estrelas metalizadas" loading="lazy">
+      <img src="fotos/g-cupcakes.jpg" alt="Fileira de cupcakes com cobertura verde-água e confeitos" loading="lazy">
+      <img src="fotos/g-teto.jpg" alt="Balões metalizados coloridos presos no teto" loading="lazy">
+      <img class="largo" src="fotos/g-baloes.jpg" alt="Guirlanda de balões coloridos sobre fundo azul" loading="lazy">
+    </div>
+    <p class="nota">Fotos ilustrativas. No site final entra a galeria com as festas postadas no Instagram.</p>
+  </div>
+</section>
+
+<section class="insta" id="instagram">
+  <div class="largura">
+    <div>
+      <h2>Veja as festas de verdade no Instagram</h2>
+      <p>São 13,6 mil seguidores e posts novos toda semana. Nos destaques do perfil você encontra cada tipo de festa e os depoimentos de quem já comemorou com a Mó Legal.</p>
+      <a class="btn" style="background:#fff;color:var(--uva)" href="https://www.instagram.com/molegalfestas/" rel="noopener">Abrir @molegalfestas</a>
+    </div>
+    <ul class="tags" aria-label="Destaques do Instagram">
+      <li><a href="https://www.instagram.com/molegalfestas/" rel="noopener">Festa na Caixa</a></li>
+      <li><a href="https://www.instagram.com/molegalfestas/" rel="noopener">Kit Individual</a></li>
+      <li><a href="https://www.instagram.com/molegalfestas/" rel="noopener">Decoração Buffet</a></li>
+      <li><a href="https://www.instagram.com/molegalfestas/" rel="noopener">Dec. Externa</a></li>
+      <li><a href="https://www.instagram.com/molegalfestas/" rel="noopener">Depoimentos</a></li>
+      <li><a href="https://www.instagram.com/molegalfestas/" rel="noopener">Na sua casa</a></li>
+      <li><a href="https://www.instagram.com/molegalfestas/" rel="noopener">Casa Nova</a></li>
+      <li><a href="https://www.instagram.com/molegalfestas/" rel="noopener">Indicação</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="onde" id="onde">
+  <div class="largura">
+    <div>
+      <h2>Buffet em Limeira</h2>
+      <p>A Mó Legal Festas faz festas no buffet em Limeira e leva a decoração para a sua casa.</p>
+      <p class="nota">Texto de exemplo. No site final entram o endereço do buffet, os horários de atendimento e os bairros e cidades atendidos.</p>
+      <div class="acoes">
+        <a class="btn btn-wa" href="https://wa.me/5519998460229?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20o%20endere%C3%A7o%20do%20buffet." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar endereço</a>
+        <a class="btn btn-linha" href="https://www.google.com/maps/dir/?api=1&amp;destination=Buffet%20M%C3%B3%20Legal%2C%20Limeira%20-%20SP" rel="noopener">Traçar rota</a>
+      </div>
+    </div>
+    <iframe title="Mapa: Buffet Mó Legal em Limeira" src="https://www.google.com/maps?q=Buffet%20M%C3%B3%20Legal%2C%20Limeira%20-%20SP&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<section class="final">
+  <div class="largura">
+    <h2>Já tem a data? Conte o tema.</h2>
+    <p>Fala com a Mó Legal pelo WhatsApp e receba o orçamento da festa.</p>
+    <a class="btn btn-wa" href="https://wa.me/5519998460229?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20or%C3%A7amento%20de%20festa." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Chamar no WhatsApp</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="largura">
+    <span>Mó Legal Festas, buffet infantil em Limeira. <a href="https://www.instagram.com/molegalfestas/" rel="noopener">@molegalfestas</a></span>
+    <span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span>
+  </div>
+</footer>
+
+<a class="flutuante" href="https://wa.me/5519998460229?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20or%C3%A7amento%20de%20festa." rel="noopener" aria-label="Chamar a Mó Legal Festas no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg><span>WhatsApp</span></a>
+</body>
+</html>
