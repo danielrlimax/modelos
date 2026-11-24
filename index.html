@@ -1,1 +1,466 @@
-<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>Modelos</title><p>Nada por aqui.</p>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Modelos de site · 58</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--fundo:#f6f4ef;--texto:#1d1b18;--fraco:#6d675e;--linha:#dcd6cb;--real:#c2410c}
+  @media (prefers-color-scheme:dark){:root{--fundo:#141311;--texto:#ece8e1;--fraco:#9c958a;--linha:#2d2a26;--real:#fb923c}}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--fundo);color:var(--texto);font:16px/1.5 Inter,system-ui,sans-serif}
+  main{max-width:860px;margin:0 auto;padding:56px 20px 80px}
+  h1{font:600 clamp(2rem,5vw,3rem)/1.1 Fraunces,Georgia,serif;margin:0 0 6px}
+  .sub{color:var(--fraco);margin:0 0 32px}
+  .sub b{color:var(--real);font-weight:500}
+  .filtros{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+  input,select{font:inherit;color:inherit;background:transparent;border:1px solid var(--linha);border-radius:8px;padding:10px 12px}
+  input{flex:1;min-width:200px}
+  input:focus-visible,select:focus-visible,a:focus-visible{outline:2px solid var(--real);outline-offset:2px}
+  ul{list-style:none;margin:0;padding:0}
+  li a{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:16px 4px;border-bottom:1px solid var(--linha);color:inherit;text-decoration:none}
+  li a:hover .nome{color:var(--real)}
+  .nome{font-weight:500;font-size:1.05rem}
+  .info{color:var(--fraco);font-size:.92rem;grid-column:1}
+  time{color:var(--fraco);font-size:.85rem;grid-column:2;grid-row:1/3;align-self:center;font-variant-numeric:tabular-nums}
+  .vazio{color:var(--fraco);padding:24px 4px;display:none}
+</style>
+</head>
+<body>
+<main>
+  <h1>Modelos de site</h1>
+  <p class="sub"><b id="total">58</b> sites criados, do mais novo para o mais antigo.</p>
+  <div class="filtros">
+    <input type="search" id="busca" placeholder="Buscar por nome, nicho ou cidade" aria-label="Buscar">
+    <select id="cidade" aria-label="Filtrar por cidade"><option value="">Todas as cidades</option><option>Americana</option><option>Araras</option><option>Hortolândia</option><option>Leme</option><option>Limeira</option><option>Mogi Guaçu</option><option>Mogi Mirim</option><option>Nova Odessa</option><option>Piracicaba</option><option>Pirassununga</option><option>Rio Claro</option><option>Santa Bárbara d'Oeste</option><option>Sumaré</option></select>
+  </div>
+  <ul id="lista">
+    <li data-busca="dani veríssimo makeup maquiadora social e de noivas em domicílio piracicaba" data-cidade="Piracicaba">
+      <a href="./dani-verissimo-makeup/">
+        <span class="nome">Dani Veríssimo Makeup</span>
+        <span class="info">maquiadora social e de noivas em domicílio · Piracicaba</span>
+        <time datetime="2026-11-24T11:54:42-03:00">24/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="mó legal festas buffet infantil e decoração de festas (festa na caixa) limeira" data-cidade="Limeira">
+      <a href="./mo-legal-festas/">
+        <span class="nome">Mó Legal Festas</span>
+        <span class="info">buffet infantil e decoração de festas (festa na caixa) · Limeira</span>
+        <time datetime="2026-11-24T11:52:28-03:00">24/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="nathália bolos &amp; doces bolos e doces para festas (somente encomendas) pirassununga" data-cidade="Pirassununga">
+      <a href="./nathalia-bolos-e-doces/">
+        <span class="nome">Nathália Bolos &amp; Doces</span>
+        <span class="info">bolos e doces para festas (somente encomendas) · Pirassununga</span>
+        <time datetime="2026-11-24T11:45:54-03:00">24/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="casa do bolo leme bolos, doces e sobremesas para festas leme" data-cidade="Leme">
+      <a href="./casa-do-bolo-leme/">
+        <span class="nome">Casa do Bolo Leme</span>
+        <span class="info">bolos, doces e sobremesas para festas · Leme</span>
+        <time datetime="2026-11-24T11:45:17-03:00">24/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="gabi stephan estética e lash lifting estética, design de sobrancelhas e lash lifting araras" data-cidade="Araras">
+      <a href="./gabi-stephan-estetica-e-lash-lifting/">
+        <span class="nome">Gabi Stephan Estética e Lash Lifting</span>
+        <span class="info">estética, design de sobrancelhas e lash lifting · Araras</span>
+        <time datetime="2026-11-24T11:39:27-03:00">24/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="leticia granso maquiadora maquiadora especialista em noivas / cabeleireira limeira" data-cidade="Limeira">
+      <a href="./leticia-granso-maquiadora/">
+        <span class="nome">Leticia Granso Maquiadora</span>
+        <span class="info">maquiadora especialista em noivas / cabeleireira · Limeira</span>
+        <time datetime="2026-11-24T11:38:08-03:00">24/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="juh pasetto esmalteria nail designer / esmalteria rio claro" data-cidade="Rio Claro">
+      <a href="./juh-pasetto-esmalteria/">
+        <span class="nome">Juh Pasetto Esmalteria</span>
+        <span class="info">nail designer / esmalteria · Rio Claro</span>
+        <time datetime="2026-11-24T11:30:52-03:00">24/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="nacadeiradaju studio de beleza studio de beleza (noivas, manicure, estética) rio claro" data-cidade="Rio Claro">
+      <a href="./nacadeiradaju-studio-de-beleza/">
+        <span class="nome">Nacadeiradaju Studio de Beleza</span>
+        <span class="info">studio de beleza (noivas, manicure, estética) · Rio Claro</span>
+        <time datetime="2026-11-24T11:29:00-03:00">24/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="lava sofá e cia limpeza de estofados, tapetes e persianas americana" data-cidade="Americana">
+      <a href="./lava-sofa-e-cia/">
+        <span class="nome">Lava Sofá e Cia</span>
+        <span class="info">limpeza de estofados, tapetes e persianas · Americana</span>
+        <time datetime="2026-11-24T11:19:06-03:00">24/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="franciele estevam lash designer lash designer e micropigmentação rio claro" data-cidade="Rio Claro">
+      <a href="./franciele-estevam-lash-designer/">
+        <span class="nome">Franciele Estevam Lash Designer</span>
+        <span class="info">lash designer e micropigmentação · Rio Claro</span>
+        <time datetime="2026-11-24T11:17:34-03:00">24/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="thay salgadinhos salgados para festa hortolândia" data-cidade="Hortolândia">
+      <a href="./thay-salgadinhos/">
+        <span class="nome">Thay Salgadinhos</span>
+        <span class="info">salgados para festa · Hortolândia</span>
+        <time datetime="2026-11-24T11:11:40-03:00">24/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="iara amâncio fotografia fotógrafa de aniversário infantil e eventos sumaré" data-cidade="Sumaré">
+      <a href="./iara-amancio-fotografia/">
+        <span class="nome">Iara Amâncio Fotografia</span>
+        <span class="info">fotógrafa de aniversário infantil e eventos · Sumaré</span>
+        <time datetime="2026-11-24T11:11:37-03:00">24/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="rebeca ferreira confeitaria bolos e doces para festas hortolândia" data-cidade="Hortolândia">
+      <a href="./rebeca-ferreira-confeitaria/">
+        <span class="nome">Rebeca Ferreira Confeitaria</span>
+        <span class="info">bolos e doces para festas · Hortolândia</span>
+        <time datetime="2026-11-24T09:41:47-03:00">24/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="studio lótus studio de beleza (sobrancelha, cílios, unhas, maquiagem) rio claro" data-cidade="Rio Claro">
+      <a href="./studio-lotus/">
+        <span class="nome">Studio Lótus</span>
+        <span class="info">studio de beleza (sobrancelha, cílios, unhas, maquiagem) · Rio Claro</span>
+        <time datetime="2026-11-24T09:41:47-03:00">24/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="pula pula brinquedos americana aluguel de brinquedos para festas americana" data-cidade="Americana">
+      <a href="./pula-pula-brinquedos-americana/">
+        <span class="nome">Pula Pula Brinquedos Americana</span>
+        <span class="info">aluguel de brinquedos para festas · Americana</span>
+        <time datetime="2026-11-24T07:41:37-03:00">24/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="anelan artes e decorações decoração de festas / pegue e monte limeira" data-cidade="Limeira">
+      <a href="./anelan-artes-e-decoracoes/">
+        <span class="nome">Anelan Artes e Decorações</span>
+        <span class="info">decoração de festas / pegue e monte · Limeira</span>
+        <time datetime="2026-11-24T07:41:34-03:00">24/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="imperial salgados &amp; cia salgados para festa limeira" data-cidade="Limeira">
+      <a href="./imperial-salgados-e-cia/">
+        <span class="nome">Imperial Salgados &amp; Cia</span>
+        <span class="info">salgados para festa · Limeira</span>
+        <time datetime="2026-11-24T07:41:31-03:00">24/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="alegria e diversão locação de brinquedos aluguel de brinquedos para festas americana" data-cidade="Americana">
+      <a href="./alegria-e-diversao-locacao-de-brinquedos/">
+        <span class="nome">Alegria e Diversão Locação de Brinquedos</span>
+        <span class="info">aluguel de brinquedos para festas · Americana</span>
+        <time datetime="2026-11-24T07:16:09-03:00">24/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="iris fotografias fotógrafo de ensaios (gestante, newborn, família) santa bárbara d'oeste" data-cidade="Santa Bárbara d'Oeste">
+      <a href="./iris-fotografias/">
+        <span class="nome">Iris Fotografias</span>
+        <span class="info">fotógrafo de ensaios (gestante, newborn, família) · Santa Bárbara d'Oeste</span>
+        <time datetime="2026-11-24T07:15:58-03:00">24/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="angelica lashes e sobrancelhas extensão de cílios e micropigmentação mogi guaçu" data-cidade="Mogi Guaçu">
+      <a href="./angelica-lashes-e-sobrancelhas/">
+        <span class="nome">Angelica Lashes e Sobrancelhas</span>
+        <span class="info">extensão de cílios e micropigmentação · Mogi Guaçu</span>
+        <time datetime="2026-11-24T07:06:49-03:00">24/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="marina oliveira nail designer nail designer piracicaba" data-cidade="Piracicaba">
+      <a href="./marina-oliveira-nail-designer/">
+        <span class="nome">Marina Oliveira Nail Designer</span>
+        <span class="info">nail designer · Piracicaba</span>
+        <time datetime="2026-11-24T07:06:39-03:00">24/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="wm nails por mayara lopes nail designer / manicure americana" data-cidade="Americana">
+      <a href="./wm-nails-por-mayara-lopes/">
+        <span class="nome">WM Nails por Mayara Lopes</span>
+        <span class="info">nail designer / manicure · Americana</span>
+        <time datetime="2026-11-24T06:58:56-03:00">24/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="ingrid gilves beauty – cílios e sobrancelhas extensão de cílios e sobrancelhas santa bárbara d'oeste" data-cidade="Santa Bárbara d'Oeste">
+      <a href="./ingrid-gilves-beauty-cilios-e-sobrancelhas/">
+        <span class="nome">Ingrid Gilves Beauty – Cílios e Sobrancelhas</span>
+        <span class="info">extensão de cílios e sobrancelhas · Santa Bárbara d'Oeste</span>
+        <time datetime="2026-11-24T06:57:23-03:00">24/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="michele lofrani – sobrancelha e micropigmentação design de sobrancelha e micropigmentação hortolândia" data-cidade="Hortolândia">
+      <a href="./michele-lofrani-sobrancelha-e-micropigmentacao/">
+        <span class="nome">Michele Lofrani – Sobrancelha e Micropigmentação</span>
+        <span class="info">design de sobrancelha e micropigmentação · Hortolândia</span>
+        <time datetime="2026-11-24T06:48:38-03:00">24/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="vitória higienizadora (sandro) limpeza de estofados piracicaba" data-cidade="Piracicaba">
+      <a href="./vitoria-higienizadora-sandro/">
+        <span class="nome">Vitória Higienizadora (Sandro)</span>
+        <span class="info">limpeza de estofados · Piracicaba</span>
+        <time datetime="2026-11-24T06:48:35-03:00">24/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="abre já chaveiro (tiago alves) chaveiro limeira" data-cidade="Limeira">
+      <a href="./abre-ja-chaveiro-tiago-alves/">
+        <span class="nome">Abre Já Chaveiro (Tiago Alves)</span>
+        <span class="info">chaveiro · Limeira</span>
+        <time datetime="2026-11-23T14:33:47-03:00">23/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="alessandro eletricista eletricista sumaré" data-cidade="Sumaré">
+      <a href="./alessandro-eletricista/">
+        <span class="nome">Alessandro Eletricista</span>
+        <span class="info">eletricista · Sumaré</span>
+        <time datetime="2026-11-23T14:31:11-03:00">23/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="poliana souza beauty design de sobrancelha piracicaba" data-cidade="Piracicaba">
+      <a href="./poliana-souza-beauty/">
+        <span class="nome">Poliana Souza Beauty</span>
+        <span class="info">design de sobrancelha · Piracicaba</span>
+        <time datetime="2026-11-23T14:27:10-03:00">23/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="espaço cínthia talasso design de sobrancelha, micropigmentação e depilação americana" data-cidade="Americana">
+      <a href="./espaco-cinthia-talasso/">
+        <span class="nome">Espaço Cínthia Talasso</span>
+        <span class="info">design de sobrancelha, micropigmentação e depilação · Americana</span>
+        <time datetime="2026-11-23T14:23:24-03:00">23/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="rico locação de brinquedos aluguel de brinquedos para festas piracicaba" data-cidade="Piracicaba">
+      <a href="./rico-locacao-de-brinquedos/">
+        <span class="nome">Rico Locação de Brinquedos</span>
+        <span class="info">aluguel de brinquedos para festas · Piracicaba</span>
+        <time datetime="2026-11-23T13:41:35-03:00">23/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="boni churrasqueiro churrasqueiro para eventos rio claro" data-cidade="Rio Claro">
+      <a href="./boni-churrasqueiro/">
+        <span class="nome">BONI Churrasqueiro</span>
+        <span class="info">churrasqueiro para eventos · Rio Claro</span>
+        <time datetime="2026-11-23T13:40:51-03:00">23/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="posi confeitaria confeitaria mogi mirim" data-cidade="Mogi Mirim">
+      <a href="./posi-confeitaria/">
+        <span class="nome">Posi Confeitaria</span>
+        <span class="info">confeitaria · Mogi Mirim</span>
+        <time datetime="2026-11-23T13:17:38-03:00">23/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="alessandra chocolove cakes confeitaria araras" data-cidade="Araras">
+      <a href="./alessandra-chocolove-cakes/">
+        <span class="nome">Alessandra Chocolove Cakes</span>
+        <span class="info">confeitaria · Araras</span>
+        <time datetime="2026-11-23T13:17:36-03:00">23/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="lia boutique de doces doces finos limeira" data-cidade="Limeira">
+      <a href="./lia-boutique-de-doces/">
+        <span class="nome">Lia Boutique de Doces</span>
+        <span class="info">doces finos · Limeira</span>
+        <time datetime="2026-11-23T13:17:33-03:00">23/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="toca dos brinquedos aluguel de brinquedos e recreação infantil limeira" data-cidade="Limeira">
+      <a href="./toca-dos-brinquedos/">
+        <span class="nome">Toca dos Brinquedos</span>
+        <span class="info">aluguel de brinquedos e recreação infantil · Limeira</span>
+        <time datetime="2026-11-23T13:13:44-03:00">23/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="sb brinquedos aluguel de brinquedos para festas limeira" data-cidade="Limeira">
+      <a href="./sb-brinquedos/">
+        <span class="nome">SB Brinquedos</span>
+        <span class="info">aluguel de brinquedos para festas · Limeira</span>
+        <time datetime="2026-11-23T13:13:41-03:00">23/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="limeira festas - locação de brinquedos aluguel de brinquedos para festas limeira" data-cidade="Limeira">
+      <a href="./limeira-festas/">
+        <span class="nome">Limeira Festas - Locação de Brinquedos</span>
+        <span class="info">aluguel de brinquedos para festas · Limeira</span>
+        <time datetime="2026-11-23T13:13:39-03:00">23/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="plantae paisagismo paisagismo limeira" data-cidade="Limeira">
+      <a href="./plantae-paisagismo/">
+        <span class="nome">Plantae Paisagismo</span>
+        <span class="info">paisagismo · Limeira</span>
+        <time datetime="2026-11-23T13:13:36-03:00">23/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="zedek climatização instalação de ar-condicionado araras" data-cidade="Araras">
+      <a href="./zedek-climatizacao/">
+        <span class="nome">Zedek Climatização</span>
+        <span class="info">instalação de ar-condicionado · Araras</span>
+        <time datetime="2026-11-23T13:13:33-03:00">23/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="doces &amp; delícias rio claro doceria rio claro" data-cidade="Rio Claro">
+      <a href="./doces-e-delicias-rio-claro/">
+        <span class="nome">Doces &amp; Delícias Rio Claro</span>
+        <span class="info">doceria · Rio Claro</span>
+        <time datetime="2026-11-23T13:12:59-03:00">23/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="doces maria doceria / brigadeiros rio claro" data-cidade="Rio Claro">
+      <a href="./doces-maria/">
+        <span class="nome">Doces Maria</span>
+        <span class="info">doceria / brigadeiros · Rio Claro</span>
+        <time datetime="2026-11-23T13:12:56-03:00">23/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="tay doces finos doces finos / bem-casados santa bárbara d'oeste" data-cidade="Santa Bárbara d'Oeste">
+      <a href="./tay-doces-finos/">
+        <span class="nome">Tay Doces Finos</span>
+        <span class="info">doces finos / bem-casados · Santa Bárbara d'Oeste</span>
+        <time datetime="2026-11-23T13:12:53-03:00">23/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="barbearia grau e corte barbearia sumaré" data-cidade="Sumaré">
+      <a href="./barbearia-grau-e-corte/">
+        <span class="nome">Barbearia Grau e Corte</span>
+        <span class="info">barbearia · Sumaré</span>
+        <time datetime="2026-11-21T14:30:56-03:00">21/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="barbearia villa americana barbearia americana" data-cidade="Americana">
+      <a href="./barbearia-villa-americana/">
+        <span class="nome">Barbearia Villa Americana</span>
+        <span class="info">barbearia · Americana</span>
+        <time datetime="2026-11-21T14:30:37-03:00">21/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="barbearia viny barbearia santa bárbara d'oeste" data-cidade="Santa Bárbara d'Oeste">
+      <a href="./barbearia-viny/">
+        <span class="nome">Barbearia Viny</span>
+        <span class="info">barbearia · Santa Bárbara d'Oeste</span>
+        <time datetime="2026-11-21T14:30:37-03:00">21/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="barbearia visconde barbearia leme" data-cidade="Leme">
+      <a href="./barbearia-visconde/">
+        <span class="nome">Barbearia Visconde</span>
+        <span class="info">barbearia · Leme</span>
+        <time datetime="2026-11-21T14:27:44-03:00">21/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="pilates e fisioterapia larissa boller fisioterapia / pilates leme" data-cidade="Leme">
+      <a href="./larissa-boller-pilates-fisioterapia/">
+        <span class="nome">Pilates e Fisioterapia Larissa Boller</span>
+        <span class="info">fisioterapia / pilates · Leme</span>
+        <time datetime="2026-11-21T14:06:54-03:00">21/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="taty's pet banho &amp; tosa banho e tosa americana" data-cidade="Americana">
+      <a href="./tatys-pet-banho-e-tosa/">
+        <span class="nome">Taty's Pet Banho &amp; Tosa</span>
+        <span class="info">banho e tosa · Americana</span>
+        <time datetime="2026-11-21T14:06:54-03:00">21/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="studio de pilates life mais pilates nova odessa" data-cidade="Nova Odessa">
+      <a href="./studio-pilates-life-mais/">
+        <span class="nome">Studio de Pilates Life Mais</span>
+        <span class="info">pilates · Nova Odessa</span>
+        <time datetime="2026-11-21T14:06:21-03:00">21/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="meu xodó banho e tosa banho e tosa piracicaba" data-cidade="Piracicaba">
+      <a href="./meu-xodo-banho-e-tosa/">
+        <span class="nome">Meu Xodó Banho e Tosa</span>
+        <span class="info">banho e tosa · Piracicaba</span>
+        <time datetime="2026-11-21T14:06:10-03:00">21/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="renovato fisioterapia e pilates fisioterapia / pilates santa bárbara d'oeste" data-cidade="Santa Bárbara d'Oeste">
+      <a href="./renovato-fisioterapia-pilates/">
+        <span class="nome">Renovato Fisioterapia e Pilates</span>
+        <span class="info">fisioterapia / pilates · Santa Bárbara d'Oeste</span>
+        <time datetime="2026-11-21T14:05:07-03:00">21/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="studio paulinha zaccariotto - pilates pilates leme" data-cidade="Leme">
+      <a href="./studio-paulinha-zaccariotto/">
+        <span class="nome">Studio Paulinha Zaccariotto - Pilates</span>
+        <span class="info">pilates · Leme</span>
+        <time datetime="2026-11-21T14:04:57-03:00">21/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="adriana montalvão - fisioterapia e pilates fisioterapia / pilates santa bárbara d'oeste" data-cidade="Santa Bárbara d'Oeste">
+      <a href="./adriana-montalvao-fisioterapia-pilates/">
+        <span class="nome">Adriana Montalvão - Fisioterapia e Pilates</span>
+        <span class="info">fisioterapia / pilates · Santa Bárbara d'Oeste</span>
+        <time datetime="2026-11-21T14:03:48-03:00">21/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="esteticão banho e tosa banho e tosa sumaré" data-cidade="Sumaré">
+      <a href="./esteticao-banho-e-tosa/">
+        <span class="nome">Esteticão Banho e Tosa</span>
+        <span class="info">banho e tosa · Sumaré</span>
+        <time datetime="2026-11-21T13:44:33-03:00">21/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="vita pilates studio pilates rio claro" data-cidade="Rio Claro">
+      <a href="./vita-pilates-studio/">
+        <span class="nome">Vita Pilates Studio</span>
+        <span class="info">pilates · Rio Claro</span>
+        <time datetime="2026-11-21T13:28:06-03:00">21/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="cantina do angelo cantina italiana limeira" data-cidade="Limeira">
+      <a href="./cantina-do-angelo/">
+        <span class="nome">Cantina do Angelo</span>
+        <span class="info">cantina italiana · Limeira</span>
+        <time datetime="2026-11-21T12:22:49-03:00">21/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="doces finos fátima barros doceria (bem-casados, doces finos) limeira" data-cidade="Limeira">
+      <a href="./doces-finos-fatima-barros/">
+        <span class="nome">Doces Finos Fátima Barros</span>
+        <span class="info">doceria (bem-casados, doces finos) · Limeira</span>
+        <time datetime="2026-11-21T12:22:49-03:00">21/11/2026</time>
+      </a>
+    </li>
+    <li data-busca="souza barbearia barbearia limeira" data-cidade="Limeira">
+      <a href="./souza-barbearia/">
+        <span class="nome">Souza Barbearia</span>
+        <span class="info">barbearia · Limeira</span>
+        <time datetime="2026-11-21T12:22:49-03:00">21/11/2026</time>
+      </a>
+    </li>
+  </ul>
+  <p class="vazio" id="vazio">Nenhum site encontrado.</p>
+</main>
+<script>
+  const busca = document.getElementById('busca'), cidade = document.getElementById('cidade');
+  const itens = [...document.querySelectorAll('#lista li')];
+  function filtrar() {
+    const q = busca.value.trim().toLowerCase(), c = cidade.value;
+    let n = 0;
+    for (const li of itens) {
+      const ok = (!q || li.dataset.busca.includes(q)) && (!c || li.dataset.cidade === c);
+      li.hidden = !ok; if (ok) n++;
+    }
+    document.getElementById('total').textContent = n;
+    document.getElementById('vazio').style.display = n ? 'none' : 'block';
+  }
+  busca.addEventListener('input', filtrar); cidade.addEventListener('change', filtrar);
+</script>
+</body>
+</html>
