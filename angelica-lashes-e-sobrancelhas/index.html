@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Angelica Lashes e Sobrancelhas | Cílios e micropigmentação em Mogi Guaçu</title>
+<meta name="description" content="Modelo demonstrativo de site para a Angelica Lashes e Sobrancelhas: extensão de cílios, sobrancelhas, micropigmentação e cursos em Mogi Guaçu.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --luva:#1A1718;     /* luva preta da foto do perfil */
+  --luva-2:#262122;
+  --ouro:#C9A45C;     /* relógio e correntinha dourados */
+  --ouro-claro:#E4C98E;
+  --concreto:#D9D6D2; /* fundo cinza do ensaio */
+  --giz:#F2F1EF;
+  --boca:#A9625A;     /* batom nude, fechado para contraste */
+  --grafite:#5C5653;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--giz);color:var(--luva);font:17px/1.6 'Manrope',system-ui,sans-serif}
+a{color:inherit}
+img{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--ouro);outline-offset:3px}
+.largura{max-width:1200px;margin:0 auto;padding:0 32px}
+.ico{width:1.25em;height:1.25em;flex:none}
+h1,h2,h3{font-family:'Syne',system-ui,sans-serif;font-weight:800;margin:0;letter-spacing:-.02em}
+h2{font-size:clamp(34px,4.6vw,58px);line-height:1.02;max-width:16ch}
+.aviso{background:#000;color:#eee;font-size:14px;text-align:center;padding:8px 16px}
+.nota{font-size:14px;color:var(--grafite);margin:18px 0 0}
+section{padding:108px 0}
+.intro{font-size:18px;color:var(--grafite);max-width:52ch;margin:18px 0 0}
+
+/* Botões: retangulares, cantos levemente quebrados, como uma ponta de pinça */
+.botao{display:inline-flex;align-items:center;gap:10px;font:700 16px/1.2 'Manrope',sans-serif;text-decoration:none;padding:16px 22px;border-radius:4px;border:2px solid transparent;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.botao.zap{background:#25D366;color:#062E17}
+.botao.zap:hover{background:#3fe07c}
+.botao.linha{border-color:currentColor;background:transparent}
+.botao.linha:hover{background:rgba(255,255,255,.1)}
+.botao.ouro{background:var(--ouro);color:var(--luva)}
+.botao.ouro:hover{background:var(--ouro-claro)}
+
+/* ---------- Topo: foto grande de fundo ---------- */
+.topo{position:relative;min-height:min(94vh,880px);background:var(--luva);color:#fff;display:flex;flex-direction:column;isolation:isolate;overflow:hidden}
+.topo .fundo{position:absolute;top:0;right:0;width:62%;height:100%;object-fit:cover;object-position:42% 40%;z-index:-2;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 38%);mask-image:linear-gradient(90deg,transparent 0,#000 38%)}
+.topo>.largura{width:100%}
+.barra{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:22px;padding-bottom:22px}
+.marca{text-decoration:none;font-family:'Syne',sans-serif;font-weight:800;font-size:20px;line-height:1.05;letter-spacing:-.01em}
+.marca small{display:block;font:600 13px/1.3 'Manrope',sans-serif;letter-spacing:0;color:var(--ouro-claro)}
+.barra nav{display:flex;gap:28px;font-weight:600;font-size:15px}
+.barra nav a{text-decoration:none}
+.barra nav a:hover{color:var(--ouro-claro)}
+.topo .miolo{flex:1;display:flex;align-items:center}
+.topo .texto{max-width:560px;padding:20px 0 84px}
+.topo .onde-topo{margin:0 0 18px;font-weight:600;color:var(--ouro-claro)}
+h1{font-size:clamp(40px,5.2vw,74px);line-height:1}
+.topo .sub{font-size:clamp(18px,1.6vw,20px);margin:24px 0 0;max-width:36ch;color:#E9E5E3}
+.topo .acoes{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+
+/* ---------- Faixa do mapping (o elemento marcante) ---------- */
+.mapping{background:var(--luva);color:#fff;padding:64px 0 56px;border-top:1px solid #3a3334}
+.mapping .grade{display:grid;grid-template-columns:.8fr 1.6fr;gap:40px;align-items:center}
+.numeros{display:grid;gap:26px}
+.numeros div{border-left:2px solid var(--ouro);padding-left:18px}
+.numeros b{display:block;font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(42px,5vw,64px);line-height:1;color:var(--ouro)}
+.numeros span{display:block;margin-top:6px;color:#D8D2CF;font-weight:500}
+.desenho svg{width:100%;height:auto;display:block;overflow:visible}
+.desenho figcaption{color:#A9A09C;font-size:14px;margin-top:10px;text-align:center}
+.fio{fill:none;stroke:var(--ouro);stroke-width:2.2;stroke-linecap:round}
+.palpebra{fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round}
+.zona{stroke:#5e5452;stroke-width:1;stroke-dasharray:3 5}
+.mm{fill:#fff;font:700 22px 'Syne',sans-serif;text-anchor:middle}
+.mm-u{fill:#A9A09C;font:600 12px 'Manrope',sans-serif;text-anchor:middle}
+.desenho.anima .fio{stroke-dasharray:var(--l);stroke-dashoffset:var(--l);animation:fio .7s cubic-bezier(.3,.6,.3,1) forwards;animation-delay:var(--d)}
+@keyframes fio{to{stroke-dashoffset:0}}
+
+/* ---------- Duas portas ---------- */
+.portas{padding:0;background:var(--concreto)}
+.portas .grade{display:grid;grid-template-columns:1fr 1fr}
+.porta{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:420px;padding:40px;color:#fff;text-decoration:none;overflow:hidden;isolation:isolate}
+.porta img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .5s ease}
+.porta::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(26,23,24,.88) 0,rgba(26,23,24,.25) 60%,rgba(26,23,24,0) 100%)}
+.porta:hover img{transform:scale(1.04)}
+.porta h3{font-size:clamp(28px,3vw,40px);line-height:1.05}
+.porta p{margin:10px 0 0;max-width:34ch;color:#EAE5E2}
+.porta .seta{margin-top:18px;font-weight:700;color:var(--ouro-claro);text-decoration:underline;text-underline-offset:5px}
+
+/* ---------- Agendamento: cartões + ficha ---------- */
+.agenda .grade{display:grid;grid-template-columns:1.55fr .7fr;gap:40px;align-items:start;margin-top:44px}
+.cartoes{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.cartao{position:relative;display:flex;flex-direction:column;text-align:left;font:inherit;color:var(--luva);background:#fff;border:1px solid #CFCAC6;border-radius:6px;padding:0;cursor:pointer;overflow:hidden;transition:background .15s,border-color .15s,color .15s}
+.cartao:hover{border-color:var(--luva)}
+.cartao-foto{display:block;aspect-ratio:4/3;overflow:hidden;background:var(--concreto)}
+.cartao-foto img{width:100%;height:100%;object-fit:cover}
+.cartao-texto{display:block;padding:12px 14px 16px}
+.cartao-texto strong{display:block;font-weight:800;font-size:16.5px;line-height:1.2;hyphens:auto}
+.cartao-texto small{display:block;margin-top:6px;font-size:13.5px;line-height:1.4;color:var(--grafite)}
+.cartao-marca{position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:4px;background:rgba(255,255,255,.92);color:var(--luva);display:grid;place-items:center;font:800 17px/1 'Manrope',sans-serif}
+.cartao-marca::after{content:'+'}
+.cartao[aria-pressed="true"]{background:var(--luva);border-color:var(--luva);color:#fff}
+.cartao[aria-pressed="true"] .cartao-texto small{color:#CFC8C5}
+.cartao[aria-pressed="true"] .cartao-marca{background:var(--ouro)}
+.cartao[aria-pressed="true"] .cartao-marca::after{content:'✓'}
+.ficha{position:sticky;top:20px;background:var(--luva);color:#fff;border-radius:6px;padding:30px;border-top:4px solid var(--ouro)}
+.ficha h3{font-size:28px;line-height:1.1}
+.ficha .campo{margin-top:20px}
+.ficha label.tit,.ficha legend{display:block;font-weight:700;margin-bottom:8px;padding:0;font-size:15px}
+.ficha fieldset{border:0;margin:20px 0 0;padding:0}
+.ficha input[type=text]{width:100%;font:inherit;padding:12px 14px;border:1px solid #574E4E;border-radius:4px;background:var(--luva-2);color:#fff}
+.ficha input[type=text]::placeholder{color:#8E8582}
+.seg{display:flex;flex-wrap:wrap;gap:8px}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{padding:9px 14px;border:1px solid #6B6161;border-radius:4px;font-weight:600;font-size:15px;cursor:pointer}
+.seg input:checked+label{background:var(--ouro);border-color:var(--ouro);color:var(--luva)}
+.seg input:focus-visible+label{outline:3px solid var(--ouro-claro);outline-offset:2px}
+.lista{margin:22px 0 0;padding:16px 0 0;border-top:1px dashed #6B6161}
+.lista p{margin:0;font-weight:700;font-size:15px}
+.lista ul{margin:8px 0 0;padding-left:20px}
+.lista .vazio{color:#A9A09C;font-weight:500}
+.ficha .botao{width:100%;justify-content:center;margin-top:22px}
+.ficha small{display:block;margin-top:12px;color:#A9A09C;font-size:13.5px}
+
+/* ---------- Cursos ---------- */
+.cursos{background:var(--concreto)}
+.cursos .grade{display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:center}
+.cursos .foto{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:6px}
+.cem{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(96px,13vw,176px);line-height:.85;letter-spacing:-.04em;color:var(--luva)}
+.cem span{color:var(--boca)}
+.cursos .frase{font-size:clamp(21px,2.2vw,26px);font-weight:600;line-height:1.3;margin:14px 0 0;max-width:26ch}
+.modulos{margin:30px 0 0;padding:0;list-style:none}
+.modulos li{display:grid;grid-template-columns:200px 1fr;gap:18px;padding:16px 0;border-top:1px solid #A9A39F}
+.modulos li:last-child{border-bottom:1px solid #A9A39F}
+.modulos strong{font-family:'Syne',sans-serif;font-size:20px;line-height:1.15}
+.modulos span{color:var(--grafite)}
+.interesse{margin-top:28px}
+.interesse p{font-weight:700;margin:0 0 10px}
+.interesse .seg label{border-color:var(--luva)}
+.interesse .seg input:checked+label{background:var(--luva);border-color:var(--luva);color:#fff}
+.interesse .botao{margin-top:18px}
+
+/* ---------- Galeria ---------- */
+.galeria .fotos{display:grid;grid-template-columns:1.3fr 1fr 1fr;grid-template-rows:260px 260px;gap:14px;margin-top:40px}
+.galeria img{width:100%;height:100%;object-fit:cover;border-radius:6px}
+.galeria img:first-child{grid-row:span 2}
+
+/* ---------- Passos ---------- */
+.passos{background:var(--luva);color:#fff}
+.passos .intro{color:#CFC8C5}
+.passos ol{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:36px;counter-reset:p}
+.passos li{counter-increment:p;border-top:2px solid var(--ouro);padding-top:20px}
+.passos li::before{content:counter(p);display:block;font-family:'Syne',sans-serif;font-weight:800;font-size:44px;line-height:1;color:var(--ouro);margin-bottom:14px}
+.passos h3{font-size:23px}
+.passos p{margin:8px 0 0;color:#CFC8C5}
+.passos .nota{color:#A9A09C}
+
+/* ---------- Onde ---------- */
+.onde .grade{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start;margin-top:40px}
+.onde dl{margin:0 0 28px}
+.onde dt{font-size:14px;color:var(--grafite);font-weight:600}
+.onde dd{margin:2px 0 18px;font-size:19px;font-weight:600}
+.onde .acoes{display:flex;flex-wrap:wrap;gap:14px}
+.onde .botao.linha{color:var(--luva)}
+.onde .botao.linha:hover{background:var(--concreto)}
+.mapa{width:100%;aspect-ratio:4/3.2;border:0;border-radius:6px;background:var(--concreto);display:block;filter:grayscale(.35)}
+
+footer{background:#000;color:#B9B1AE;padding:30px 0 110px;font-size:14px}
+footer .largura{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.flutuante{position:fixed;right:18px;bottom:18px;display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#062E17;font-weight:800;text-decoration:none;padding:14px 18px;border-radius:6px;box-shadow:0 6px 20px rgba(0,0,0,.35);font-size:15px;z-index:9}
+
+/* ---------- Responsivo ---------- */
+@media (max-width:1080px){
+  .barra nav{display:none}
+  .topo .fundo{width:60%}
+  .topo .texto{max-width:420px}
+  .mapping .grade{grid-template-columns:1fr;gap:36px}
+  .numeros{grid-template-columns:1fr 1fr}
+}
+@media (max-width:980px){
+  .ficha{position:static}
+  .agenda .grade,.cursos .grade,.onde .grade{grid-template-columns:1fr;gap:40px}
+  .cursos .foto{aspect-ratio:4/3}
+}
+@media (max-width:760px){
+  .largura{padding:0 20px}
+  section{padding:72px 0}
+  .topo{min-height:0}
+  .topo .fundo{position:static;width:100%;height:auto;aspect-ratio:1/1;object-position:62% 50%;order:2;-webkit-mask-image:none;mask-image:none}
+  .topo .miolo{order:3}
+  .topo .texto{padding:28px 0 48px}
+  h1{font-size:clamp(30px,8.6vw,40px)}
+  h2{font-size:clamp(28px,8vw,40px)}
+  .topo .acoes .botao{flex:1 1 100%;justify-content:center}
+  .mapping{padding:44px 0 40px}
+  .numeros{grid-template-columns:1fr}
+  .portas .grade{grid-template-columns:1fr}
+  .porta{min-height:320px;padding:28px 22px}
+  .cartoes{grid-template-columns:1fr 1fr;gap:10px}
+  .cartao-texto{padding:10px 11px 12px}
+  .cartao-texto strong{font-size:15.5px}
+  .cartao-texto small{font-size:12.5px}
+  .ficha{padding:24px 20px}
+  .modulos li{grid-template-columns:1fr;gap:4px}
+  .galeria .fotos{grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .galeria img{aspect-ratio:1/1;height:auto}
+  .galeria img:first-child{grid-row:auto;grid-column:span 2;aspect-ratio:4/3}
+  .passos ol{grid-template-columns:1fr;gap:30px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.030-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.870 9.870 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.860 9.860 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.030 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para Angelica Lashes e Sobrancelhas. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <img class="fundo" src="fotos/hero.jpg" alt="Profissional de luvas pretas fazendo micropigmentação de sobrancelha em uma cliente deitada na maca" fetchpriority="high">
+  <div class="largura barra">
+    <a class="marca" href="#">Angelica<small>Lashes e Sobrancelhas</small></a>
+    <nav aria-label="Seções"><a href="#agenda">Agendar</a><a href="#cursos">Cursos</a><a href="#galeria">Trabalhos</a><a href="#onde">Contato</a></nav>
+  </div>
+  <div class="largura miolo">
+    <div class="texto">
+      <p class="onde-topo">Mogi Guaçu, SP</p>
+      <h1>Cílios e sobrancelhas no detalhe de cada fio.</h1>
+      <p class="sub">Extensão de cílios, design de sobrancelha e micropigmentação com a Angelica. E, para quem quer trabalhar com isso, os cursos em que ela já formou mais de 100 alunas.</p>
+      <div class="acoes">
+        <a class="botao zap" href="https://wa.me/5519971168205?text=Ol%C3%A1%2C%20Angelica!%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio." rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Agendar no WhatsApp</a>
+        <a class="botao linha" href="#cursos">Ver os cursos</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="mapping" aria-label="Números da Angelica">
+  <div class="largura grade">
+    <div class="numeros">
+      <div><b>3.723</b><span>seguidores no Instagram</span></div>
+      <div><b>+100</b><span>alunas formadas em cílios e micropigmentação</span></div>
+    </div>
+    <figure class="desenho" id="desenho" style="margin:0">
+      <svg viewBox="0 0 900 300" role="img" aria-labelledby="desc-map">
+        <title id="desc-map">Desenho de um mapping de cílios: a linha do olho dividida em zonas, cada uma com o comprimento do fio em milímetros</title>
+        <g id="zonas"></g><g id="fios"></g>
+        <path class="palpebra" id="palpebra"/>
+        <g id="rotulos"></g>
+      </svg>
+      <figcaption>Mapping de cílios: cada zona do olho recebe um comprimento de fio.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="portas" aria-label="O que você procura">
+  <div class="grade">
+    <a class="porta" href="#agenda">
+      <img src="fotos/fioafio.jpg" alt="" loading="lazy">
+      <h3>Quero ficar pronta</h3>
+      <p>Cílios, sobrancelha ou micropigmentação. Monte o seu horário e mande pelo WhatsApp.</p>
+      <span class="seta">Montar meu horário</span>
+    </a>
+    <a class="porta" href="#cursos">
+      <img src="fotos/curso2.jpg" alt="" loading="lazy">
+      <h3>Quero aprender a fazer</h3>
+      <p>Cursos de cílios e de micropigmentação com quem atende todo dia.</p>
+      <span class="seta">Conhecer os cursos</span>
+    </a>
+  </div>
+</section>
+
+<section class="agenda" id="agenda">
+  <div class="largura">
+    <h2>Escolha o que você quer fazer</h2>
+    <p class="intro">Toque em um ou mais procedimentos. A ficha ao lado se monta sozinha e o pedido vai pronto para o WhatsApp da Angelica.</p>
+    <div class="grade">
+      <div class="cartoes" id="cartoes" role="group" aria-label="Procedimentos"></div>
+      <form class="ficha" id="ficha" onsubmit="return false" aria-label="Pedido de horário">
+        <h3>Seu horário</h3>
+        <div class="campo"><label class="tit" for="nome">Seu nome</label><input type="text" id="nome" placeholder="Como você se chama?" autocomplete="given-name" maxlength="40"></div>
+        <fieldset><legend>É a primeira vez?</legend><div class="seg">
+          <input type="radio" name="vez" id="v1" value="primeira vez" checked><label for="v1">Primeira vez</label>
+          <input type="radio" name="vez" id="v2" value="manutenção"><label for="v2">Manutenção</label>
+        </div></fieldset>
+        <fieldset><legend>Melhor período</legend><div class="seg">
+          <input type="radio" name="periodo" id="p1" value="de manhã" checked><label for="p1">Manhã</label>
+          <input type="radio" name="periodo" id="p2" value="à tarde"><label for="p2">Tarde</label>
+          <input type="radio" name="periodo" id="p3" value="em qualquer período"><label for="p3">Tanto faz</label>
+        </div></fieldset>
+        <div class="lista" aria-live="polite"><p>Você escolheu</p><div id="escolhidos"></div></div>
+        <a class="botao zap" id="enviar" href="#" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Mandar no WhatsApp</a>
+        <small>Valor, duração e horário a Angelica confirma pelo WhatsApp. Lista de exemplo: no site final entram os procedimentos que ela oferece.</small>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="cursos" id="cursos">
+  <div class="largura grade">
+    <img class="foto" src="fotos/curso1.jpg" alt="Lash designer aplicando extensão de cílios fio a fio com pinças" loading="lazy">
+    <div>
+      <div class="cem">+100<span>.</span></div>
+      <p class="frase">alunas já aprenderam cílios e micropigmentação com a Angelica.</p>
+      <ul class="modulos">
+        <li><strong>Curso de extensão de cílios</strong><span>Técnica fio a fio e volume, mapping, isolamento e manutenção, com prática em modelo.</span></li>
+        <li><strong>Curso de micropigmentação</strong><span>Desenho da sobrancelha, pigmentos, biossegurança e prática acompanhada.</span></li>
+      </ul>
+      <p class="nota">Texto de exemplo. No site final entram o conteúdo, a carga horária e as próximas turmas de cada curso.</p>
+      <form class="interesse" id="interesse" onsubmit="return false" aria-label="Interesse em curso">
+        <p id="lbl-curso">Tenho interesse em</p>
+        <div class="seg" role="radiogroup" aria-labelledby="lbl-curso">
+          <input type="radio" name="curso" id="c1" value="no curso de extensão de cílios" checked><label for="c1">Cílios</label>
+          <input type="radio" name="curso" id="c2" value="no curso de micropigmentação"><label for="c2">Micropigmentação</label>
+          <input type="radio" name="curso" id="c3" value="nos cursos de cílios e de micropigmentação"><label for="c3">Os dois</label>
+        </div>
+        <a class="botao zap" id="enviar-curso" href="#" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Perguntar da próxima turma</a>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="galeria" id="galeria">
+  <div class="largura">
+    <h2>Olhar marcado, sobrancelha no lugar</h2>
+    <div class="fotos">
+      <img src="fotos/olhar.jpg" alt="Olho com extensão de cílios longos e curvados" loading="lazy">
+      <img src="fotos/g2.jpg" alt="Cílios volumosos em olho com sombra dourada" loading="lazy">
+      <img src="fotos/bandeja.jpg" alt="Pinça sobre a bandeja de fios para extensão de cílios" loading="lazy">
+      <img src="fotos/g3.jpg" alt="Sobrancelha natural e bem desenhada em close" loading="lazy">
+      <img src="fotos/volume.jpg" alt="Aplicação de extensão de cílios com pinça" loading="lazy">
+    </div>
+    <p class="nota">Fotos ilustrativas. No site final entram os trabalhos da Angelica, do Instagram dela.</p>
+  </div>
+</section>
+
+<section class="passos">
+  <div class="largura">
+    <h2>Como agendar</h2>
+    <p class="intro">Tudo pelo WhatsApp, sem cadastro e sem aplicativo.</p>
+    <ol>
+      <li><h3>Mande o que quer fazer</h3><p>Use a ficha acima ou escreva direto: procedimento e melhor período.</p></li>
+      <li><h3>Combine dia e valor</h3><p>A Angelica responde com os horários livres e o valor do procedimento.</p></li>
+      <li><h3>Chegue e relaxe</h3><p>No dia, é só deitar na maca. Ela cuida do resto, fio por fio.</p></li>
+    </ol>
+    <p class="nota">Texto de exemplo. No site final entra o jeito de agendar da Angelica, com os cuidados antes e depois.</p>
+  </div>
+</section>
+
+<section class="onde" id="onde">
+  <div class="largura">
+    <h2>Atendimento em Mogi Guaçu</h2>
+    <div class="grade">
+      <div>
+        <dl>
+          <dt>WhatsApp de agendamento</dt><dd><a href="https://wa.me/5519971168205" rel="noopener">(19) 97116-8205</a></dd>
+          <dt>Instagram</dt><dd><a href="https://www.instagram.com/angelicalashesobrancelhas/" rel="noopener">@angelicalashesobrancelhas</a></dd>
+          <dt>Cidade</dt><dd>Mogi Guaçu, SP</dd>
+        </dl>
+        <div class="acoes">
+          <a class="botao zap" href="https://wa.me/5519971168205?text=Ol%C3%A1%2C%20Angelica!%20Vim%20pelo%20site.%20Qual%20o%20endere%C3%A7o%20do%20atendimento%3F" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Pedir o endereço</a>
+          <a class="botao linha" href="https://www.google.com/maps/dir/?api=1&destination=Mogi%20Gua%C3%A7u%20-%20SP" rel="noopener">Traçar rota</a>
+        </div>
+        <p class="nota">No site final entram o endereço do estúdio, o mapa exato e os horários de atendimento.</p>
+      </div>
+      <iframe class="mapa" src="https://www.google.com/maps?q=Mogi%20Gua%C3%A7u%20-%20SP&output=embed" loading="lazy" title="Mapa de Mogi Guaçu" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="largura"><span>Angelica Lashes e Sobrancelhas, Mogi Guaçu, SP</span><span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span></div>
+</footer>
+<a class="flutuante" href="https://wa.me/5519971168205?text=Ol%C3%A1%2C%20Angelica!%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio." rel="noopener" aria-label="Chamar a Angelica no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>WhatsApp</a>
+
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const FONE = '5519971168205';
+  const NS = 'http://www.w3.org/2000/svg';
+
+  // ----- Mapping de cílios -----
+  const ZONAS = [8, 9, 10, 11, 12, 12, 11, 10]; // comprimento (mm) por zona, do canto interno ao externo
+  const cx = 450, cy = 300, rx = 400, ry = 150; // linha da pálpebra superior (meia elipse)
+  const ponto = (t) => [cx - rx * Math.cos(Math.PI * t), cy - 40 - ry * Math.sin(Math.PI * t) * 0.62];
+  const pts = []; for (let i = 0; i <= 60; i++) pts.push(ponto(i / 60));
+  $('palpebra').setAttribute('d', 'M' + pts.map((p) => p.map((n) => n.toFixed(1)).join(' ')).join(' L'));
+  const zonas = $('zonas'), fios = $('fios'), rot = $('rotulos');
+  ZONAS.forEach((mm, z) => {
+    // divisória da zona
+    if (z > 0) {
+      const [x, y] = ponto(z / ZONAS.length);
+      let ux = x - cx, uy = y - (cy + 260); const un = Math.hypot(ux, uy); ux /= un; uy /= un;
+      const l = document.createElementNS(NS, 'line'); l.setAttribute('class', 'zona');
+      l.setAttribute('x1', x); l.setAttribute('y1', y + 8); l.setAttribute('x2', x + ux * 150); l.setAttribute('y2', y + uy * 150); zonas.appendChild(l);
+    }
+    // número da zona, abaixo da linha
+    const [mx, my] = ponto((z + 0.5) / ZONAS.length);
+    const t1 = document.createElementNS(NS, 'text'); t1.setAttribute('class', 'mm'); t1.setAttribute('x', mx); t1.setAttribute('y', my + 36); t1.textContent = mm; rot.appendChild(t1);
+    const t2 = document.createElementNS(NS, 'text'); t2.setAttribute('class', 'mm-u'); t2.setAttribute('x', mx); t2.setAttribute('y', my + 52); t2.textContent = 'mm'; rot.appendChild(t2);
+    // fios da zona
+    for (let k = 0; k < 6; k++) {
+      const t = (z + (k + 0.5) / 6) / ZONAS.length;
+      const [x, y] = ponto(t);
+      let dx = x - cx, dy = y - (cy + 260); const n = Math.hypot(dx, dy); dx /= n; dy /= n;
+      const L = mm * 9.5 + (k % 2) * 6;
+      const curva = (t - 0.5) * 0.7; // cílio curva para fora, para os dois lados
+      const ex = x + dx * L + curva * L * 0.45, ey = y + dy * L;
+      const qx = x + dx * L * 0.55, qy = y + dy * L * 0.55 + 4;
+      const p = document.createElementNS(NS, 'path');
+      p.setAttribute('class', 'fio');
+      p.setAttribute('d', `M${x.toFixed(1)} ${y.toFixed(1)} Q${qx.toFixed(1)} ${qy.toFixed(1)} ${ex.toFixed(1)} ${ey.toFixed(1)}`);
+      const comp = Math.ceil(L * 1.2);
+      p.style.setProperty('--l', comp);
+      p.style.setProperty('--d', (z * 6 + k) * 22 + 'ms');
+      fios.appendChild(p);
+    }
+  });
+  const desenho = $('desenho');
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+    desenho.classList.add('anima');
+    desenho.querySelectorAll('.fio').forEach((p) => p.style.animationPlayState = 'paused');
+    const io = new IntersectionObserver((es) => { if (es[0].isIntersecting) { desenho.querySelectorAll('.fio').forEach((p) => p.style.animationPlayState = 'running'); io.disconnect(); } }, { threshold: 0.35 });
+    io.observe(desenho);
+  }
+
+  // ----- Agendamento por cartões -----
+  // [id, nome no cartão, texto na mensagem, foto, linha (exemplo)]
+  const PROCS = [
+    ['fioafio', 'Extensão fio a fio', 'extensão de cílios fio a fio', 'fotos/fioafio.jpg', 'Um fio sintético em cada cílio, efeito natural.'],
+    ['volume', 'Extensão volume', 'extensão de cílios volume', 'fotos/volume.jpg', 'Leques de fios para um olhar mais marcado.'],
+    ['manutencao', 'Manutenção de cílios', 'manutenção dos cílios', 'fotos/manutencao.jpg', 'Repõe os fios que caíram no ciclo natural.'],
+    ['lifting', 'Lash lifting', 'lash lifting', 'fotos/lifting.jpg', 'Curva e alonga os seus próprios cílios.'],
+    ['design', 'Design de sobrancelha', 'design de sobrancelha', 'fotos/design.jpg', 'Desenho medido para o formato do seu rosto.'],
+    ['henna', 'Design com henna', 'design de sobrancelha com henna', 'fotos/henna.jpg', 'Preenche falhas e dá cor por alguns dias.'],
+    ['micro', 'Micropigmentação de sobrancelha', 'micropigmentação de sobrancelha', 'fotos/micro.jpg', 'Sobrancelha desenhada que dura meses.'],
+    ['labial', 'Micropigmentação labial', 'micropigmentação labial', 'fotos/labial.jpg', 'Cor e contorno nos lábios, efeito batom leve.'],
+  ];
+  const escolha = new Set(['fioafio']);
+  const cartoes = $('cartoes');
+  PROCS.forEach(([id, rotulo, , foto, desc]) => {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'cartao'; b.dataset.s = id; b.setAttribute('aria-pressed', 'false');
+    b.innerHTML = `<span class="cartao-foto"><img src="${foto}" alt="" loading="lazy"></span>` +
+      `<span class="cartao-texto"><strong>${rotulo}</strong><small>${desc}</small></span>` +
+      `<span class="cartao-marca" aria-hidden="true"></span>`;
+    b.addEventListener('click', () => { escolha.has(id) ? escolha.delete(id) : escolha.add(id); atualizar(); });
+    cartoes.appendChild(b);
+  });
+  const juntar = (a) => a.length < 2 ? a.join('') : a.slice(0, -1).join(', ') + ' e ' + a[a.length - 1];
+  function atualizar() {
+    cartoes.querySelectorAll('.cartao').forEach((b) => b.setAttribute('aria-pressed', String(escolha.has(b.dataset.s))));
+    const itens = PROCS.filter(([id]) => escolha.has(id)).map((c) => c[2]);
+    const nome = $('nome').value.trim();
+    const vez = document.querySelector('input[name=vez]:checked').value;
+    const periodo = document.querySelector('input[name=periodo]:checked').value;
+    const alvo = $('escolhidos'); alvo.innerHTML = '';
+    if (!itens.length) { const p = document.createElement('p'); p.className = 'vazio'; p.textContent = 'Nada escolhido ainda. Toque nos procedimentos.'; alvo.appendChild(p); }
+    else { const ul = document.createElement('ul'); itens.forEach((t) => { const li = document.createElement('li'); li.textContent = t[0].toUpperCase() + t.slice(1); ul.appendChild(li); }); alvo.appendChild(ul); }
+    const quem = nome ? `Olá, Angelica! Aqui é a ${nome}, vim pelo site.` : 'Olá, Angelica! Vim pelo site.';
+    const oque = itens.length ? juntar(itens) : 'um procedimento';
+    const msg = `${quem} Quero agendar ${oque} (${vez}). Prefiro ${periodo}. Qual o valor e os horários livres?`;
+    $('enviar').href = `https://wa.me/${FONE}?text=` + encodeURIComponent(msg);
+  }
+  $('ficha').addEventListener('input', atualizar);
+  $('ficha').addEventListener('change', atualizar);
+  atualizar();
+
+  // ----- Interesse em curso -----
+  function curso() {
+    const c = document.querySelector('input[name=curso]:checked').value;
+    $('enviar-curso').href = `https://wa.me/${FONE}?text=` + encodeURIComponent(`Olá, Angelica! Vim pelo site e tenho interesse ${c}. Quando é a próxima turma e como funciona?`);
+  }
+  $('interesse').addEventListener('change', curso);
+  curso();
+})();
+</script>
+</body>
+</html>
