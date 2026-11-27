@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Lounge Eventos Araras · Espaço moderno para casamentos e festas</title>
+<meta name="description" content="Modelo demonstrativo de site para a Lounge Eventos, espaço de festas em Araras (SP).">
+<meta name="theme-color" content="#10383a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Italiana&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --petroleo:#10383a;
+  --abismo:#0a2526;
+  --champanhe:#f3e6cc;
+  --lampada:#ffc15e;
+  --rose:#e7a99a;
+  --papel:#fbf7ef;
+  --tinta:#1d2b2b;
+  --wa:#25d366;
+  --disp:"Italiana", "Didot", serif;
+  --txt:"Jost", system-ui, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--txt);font-weight:400;color:var(--tinta);background:var(--papel);line-height:1.6;font-size:1.0625rem;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--lampada);outline-offset:3px;border-radius:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.wrap{width:min(1180px,100% - 2.5rem);margin-inline:auto}
+
+/* faixa demonstrativa */
+.demo{background:var(--champanhe);color:var(--petroleo);font-size:.85rem;text-align:center;padding:.45rem 1rem;position:relative;z-index:30}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;gap:.6rem;font:500 1rem/1 var(--txt);text-decoration:none;padding:1rem 1.4rem;border-radius:4px;border:1px solid transparent;transition:background .2s,color .2s,border-color .2s}
+.btn svg{width:1.25rem;height:1.25rem;flex:none}
+.btn-wa{background:var(--wa);color:#08311a}
+.btn-wa:hover{background:#3ee07c}
+.btn-linha{border-color:rgba(243,230,204,.55);color:var(--champanhe)}
+.btn-linha:hover{border-color:var(--champanhe);background:rgba(243,230,204,.08)}
+.btn-escuro{border-color:var(--petroleo);color:var(--petroleo)}
+.btn-escuro:hover{background:var(--petroleo);color:var(--papel)}
+
+/* topo */
+.topo{position:absolute;left:0;right:0;z-index:20;padding:1.4rem 0}
+.topo .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.marca{font-family:var(--disp);font-size:1.7rem;color:var(--champanhe);text-decoration:none;line-height:1}
+.marca small{display:block;font:400 .78rem/1.4 var(--txt);letter-spacing:.08em;color:rgba(243,230,204,.75)}
+.topo nav{display:flex;gap:1.6rem;align-items:center}
+.topo nav a{color:var(--champanhe);text-decoration:none;font-size:.95rem}
+.topo nav a:hover{color:var(--lampada)}
+.topo nav .btn{padding:.7rem 1rem;font-size:.92rem;color:#08311a}
+
+/* hero */
+.hero{position:relative;min-height:max(640px,100svh);color:var(--champanhe);display:flex;align-items:flex-end;overflow:hidden;background:var(--abismo)}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.hero::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(180deg,rgba(10,37,38,.55) 0%,rgba(10,37,38,.05) 28%,rgba(10,37,38,.15) 50%,rgba(10,37,38,.88) 100%),
+  linear-gradient(90deg,rgba(10,37,38,.78),rgba(10,37,38,.35) 45%,rgba(10,37,38,0) 75%)}
+.hero .lead{text-shadow:0 1px 12px rgba(10,37,38,.8)}
+.varal{position:absolute;left:0;right:0;top:4.6rem;height:150px;z-index:5;pointer-events:none}
+.varal svg{width:100%;height:100%;overflow:visible}
+.fio{fill:none;stroke:rgba(243,230,204,.45);stroke-width:1.2}
+.bulbo{fill:#4b5a55;transition:fill .5s ease,filter .5s ease}
+.bulbo.on{fill:var(--lampada);filter:drop-shadow(0 0 6px rgba(255,193,94,.95)) drop-shadow(0 0 18px rgba(255,193,94,.55))}
+.hero-txt{position:relative;z-index:6;padding-bottom:clamp(2.5rem,7vh,5rem);width:min(1180px,100% - 2.5rem);margin-inline:auto}
+.hero h1{font-family:var(--disp);font-weight:400;font-size:clamp(3.2rem,8.4vw,7.4rem);line-height:.92;letter-spacing:-.01em;max-width:11ch}
+.hero .lead{font-size:clamp(1.05rem,1.6vw,1.25rem);font-weight:300;max-width:34rem;margin:1.4rem 0 2rem;color:rgba(243,230,204,.92)}
+.hero .acoes{display:flex;flex-wrap:wrap;gap:.8rem}
+.prova{display:flex;flex-wrap:wrap;gap:.4rem 2.2rem;margin-top:2.6rem;padding-top:1.4rem;border-top:1px solid rgba(243,230,204,.25);font-size:.95rem;color:rgba(243,230,204,.85)}
+.prova b{font-family:var(--disp);font-weight:400;font-size:1.9rem;color:var(--lampada);margin-right:.4rem;vertical-align:-.15rem}
+.prova a{text-decoration-color:rgba(243,230,204,.4);text-underline-offset:3px}
+
+/* seções */
+section{padding:clamp(4rem,9vw,7.5rem) 0}
+h2{font-family:var(--disp);font-weight:400;font-size:clamp(2.4rem,5vw,4rem);line-height:1;letter-spacing:-.005em;color:var(--petroleo)}
+.intro{max-width:38rem;margin-top:1rem;color:#3c4a49}
+.nota{font-size:.85rem;color:#6a7675;margin-top:.8rem;font-style:italic}
+
+/* noite (linha do tempo com lâmpadas) */
+.noite{background:var(--petroleo);color:var(--champanhe)}
+.noite h2{color:var(--champanhe)}
+.noite .intro{color:rgba(243,230,204,.82)}
+.noite .nota{color:rgba(243,230,204,.6)}
+.roteiro{list-style:none;margin-top:3.5rem;position:relative;display:grid;gap:3.5rem}
+.roteiro::before{content:"";position:absolute;left:11px;top:0;bottom:0;border-left:1.2px dashed rgba(243,230,204,.35)}
+.passo{display:grid;grid-template-columns:24px 1fr;gap:1.6rem;align-items:start}
+.passo .luz{width:24px;height:24px;border-radius:50% 50% 45% 45%;background:#4b5a55;margin-top:.5rem;position:relative;transition:background .6s,box-shadow .6s}
+.passo .luz::before{content:"";position:absolute;left:7px;top:-7px;width:10px;height:8px;background:#2a3b3a;border-radius:2px}
+.passo.on .luz{background:var(--lampada);box-shadow:0 0 10px rgba(255,193,94,.9),0 0 34px rgba(255,193,94,.45)}
+.passo-corpo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:clamp(1.2rem,3vw,3rem);align-items:center}
+.passo:nth-child(even) .passo-corpo{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)}
+.passo:nth-child(even) .passo-corpo figure{order:-1}
+.hora{font-family:var(--disp);font-size:clamp(2.6rem,5vw,4.2rem);line-height:1;color:var(--lampada)}
+.passo h3{font-weight:500;font-size:1.35rem;margin:.4rem 0 .5rem}
+.passo p{color:rgba(243,230,204,.82);max-width:30rem}
+.passo figure img{width:100%;aspect-ratio:7/5;object-fit:cover;border-radius:3px}
+
+/* eventos */
+.eventos-topo{display:flex;justify-content:space-between;align-items:end;gap:2rem;flex-wrap:wrap}
+.vitrine{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3rem}
+.card{background:#fff;border-radius:3px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 1px 0 rgba(16,56,58,.12)}
+.card img{width:100%;aspect-ratio:4/4.3;object-fit:cover}
+.card div{padding:1.1rem 1.2rem 1.3rem;display:flex;flex-direction:column;gap:.35rem;flex:1}
+.card h3{font-family:var(--disp);font-weight:400;font-size:1.75rem;line-height:1.05;color:var(--petroleo)}
+.card p{font-size:.97rem;color:#4b5857;flex:1}
+.card a{margin-top:.6rem;display:inline-flex;align-items:center;gap:.45rem;font-weight:500;font-size:.95rem;color:#127a3e;text-decoration:none;align-self:flex-start;padding:.3rem 0;border-bottom:1px solid currentColor}
+.card a svg{width:1.1rem;height:1.1rem}
+.card a:hover{color:var(--petroleo)}
+
+/* galeria */
+.momentos{background:var(--abismo);color:var(--champanhe)}
+.momentos h2{color:var(--champanhe)}
+.momentos .nota{color:rgba(243,230,204,.6)}
+.grade{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:clamp(120px,15vw,200px);gap:.7rem;margin-top:2.6rem}
+.grade button{border:0;padding:0;background:none;cursor:zoom-in;overflow:hidden;border-radius:3px}
+.grade img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.grade button:hover img{transform:scale(1.04)}
+.g1{grid-column:span 4;grid-row:span 2}.g2{grid-column:span 2;grid-row:span 2}
+.g3,.g4,.g5{grid-column:span 2;grid-row:span 2}
+dialog{border:0;padding:0;background:transparent;max-width:min(94vw,1300px);margin:auto}
+dialog::backdrop{background:rgba(6,22,23,.92)}
+dialog img{max-height:84vh;width:auto;margin:auto;border-radius:3px}
+dialog form{text-align:right;margin-bottom:.6rem}
+dialog button{background:none;border:1px solid rgba(243,230,204,.5);color:var(--champanhe);font:500 .95rem var(--txt);padding:.5rem .9rem;border-radius:3px;cursor:pointer}
+
+/* instagram */
+.insta{background:var(--champanhe)}
+.insta .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.citacao{font-family:var(--disp);font-size:clamp(2.6rem,6vw,5rem);line-height:1;color:var(--petroleo)}
+.citacao span{display:block;font:400 .95rem/1.5 var(--txt);color:#53605f;margin-top:1rem}
+.numeros{display:grid;gap:1.3rem}
+.numeros p{border-top:1px solid rgba(16,56,58,.25);padding-top:1rem;color:#3c4a49}
+.numeros strong{display:block;font-family:var(--disp);font-weight:400;font-size:2.4rem;line-height:1;color:var(--petroleo)}
+
+/* onde */
+.onde .wrap{display:grid;grid-template-columns:1fr 1.35fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.onde iframe{width:100%;aspect-ratio:4/3;border:0;border-radius:3px;filter:saturate(.8);background:#e4ddd0}
+.onde .acoes{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.onde dl{margin-top:1.6rem;display:grid;gap:.7rem}
+.onde dt{font-size:.85rem;color:#6a7675}
+.onde dd{font-weight:500;color:var(--petroleo)}
+
+/* final */
+.final{position:relative;color:var(--champanhe);text-align:center;overflow:hidden;background:var(--abismo)}
+.final img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.4}
+.final::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(10,37,38,.75) 0%,rgba(10,37,38,.2) 70%)}
+.final .wrap{z-index:1}
+.final .wrap{position:relative}
+.final h2{color:var(--champanhe);font-size:clamp(2.8rem,7vw,5.6rem);max-width:14ch;margin-inline:auto}
+.final p{max-width:32rem;margin:1.2rem auto 2rem;color:rgba(243,230,204,.88)}
+
+footer{background:var(--abismo);color:rgba(243,230,204,.7);font-size:.9rem;padding:2.2rem 0 6rem;border-top:1px solid rgba(243,230,204,.12)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+footer a{color:var(--champanhe)}
+
+.flutua{position:fixed;right:1.1rem;bottom:1.1rem;z-index:40;width:60px;height:60px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.3)}
+.flutua svg{width:32px;height:32px}
+
+@media (max-width:960px){
+  .topo nav a:not(.btn){display:none}
+  .vitrine{grid-template-columns:repeat(2,1fr)}
+  .insta .wrap,.onde .wrap{grid-template-columns:1fr}
+}
+@media (max-width:700px){
+  .passo-corpo,.passo:nth-child(even) .passo-corpo{grid-template-columns:1fr}
+  .passo:nth-child(even) .passo-corpo figure{order:0}
+  .grade{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}
+  .g1{grid-column:span 2;grid-row:span 2}.g2,.g3,.g4,.g5{grid-column:span 1;grid-row:span 1}
+  .g5{grid-column:span 2}
+  .varal{top:5rem;height:80px}
+  .hero{min-height:0}
+  .hero-txt{padding-top:10.5rem}
+  .hero h1{font-size:3rem}
+  .prova{gap:.6rem 1.4rem}
+  .vitrine{gap:.8rem}
+  .card div{padding:.85rem .85rem 1rem}
+  .card h3{font-size:1.3rem;overflow-wrap:anywhere;hyphens:auto}
+  .card p{font-size:.88rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.870 9.870 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.860 9.860 0 01-1.510-5.260c.001-5.450 4.436-9.884 9.888-9.884 2.640 0 5.122 1.030 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.450-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.050 0C5.495 0 .160 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.480-8.413Z"/></symbol>
+</svg>
+
+<div class="demo">Modelo demonstrativo feito por Daniel para Lounge Eventos Araras. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio">Lounge Eventos<small>Araras · SP</small></a>
+    <nav aria-label="Seções">
+      <a href="#noite">A noite</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#momentos">Momentos</a>
+      <a href="#onde">Onde estamos</a>
+      <a class="btn btn-wa" href="https://wa.me/5519998972667?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento."><svg aria-hidden="true"><use href="#wa"/></svg>Orçamento</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="hero" style="padding:0">
+  <img src="fotos/salao-moderno.jpg" alt="Salão amplo e moderno com mesas compridas e varais de luz no teto" fetchpriority="high">
+  <div class="varal" aria-hidden="true">
+    <svg viewBox="0 0 1200 150" preserveAspectRatio="none" id="varal"></svg>
+  </div>
+  <div class="hero-txt">
+    <h1>Sua festa merece o melhor.</h1>
+    <p class="lead">Espaço super moderno em Araras para casamentos, aniversários e todo tipo de comemoração. Conte a data e o tamanho da festa e a gente responde pelo WhatsApp.</p>
+    <div class="acoes">
+      <a class="btn btn-wa" href="https://wa.me/5519998972667?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento."><svg aria-hidden="true"><use href="#wa"/></svg>Pedir orçamento no WhatsApp</a>
+      <a class="btn btn-linha" href="#eventos">Ver tipos de evento</a>
+    </div>
+    <div class="prova">
+      <span><b>5,6 mil</b>seguidores no <a href="https://www.instagram.com/loungeeventosararas/" target="_blank" rel="noopener">Instagram</a></span>
+      <span><b>Casamentos</b>e festas no feed</span>
+      <span><b>6 posts</b>só em novembro de 2026</span>
+    </div>
+  </div>
+</section>
+
+<section class="noite" id="noite">
+  <div class="wrap">
+    <h2>Uma noite na Lounge</h2>
+    <p class="intro">Da chegada dos convidados até a última música, o salão acompanha cada momento da festa. As lâmpadas acendem conforme a noite anda.</p>
+    <p class="nota">Texto de exemplo. No site final entram os horários e a estrutura reais do espaço. Fotos ilustrativas.</p>
+    <ol class="roteiro">
+      <li class="passo">
+        <span class="luz" aria-hidden="true"></span>
+        <div class="passo-corpo">
+          <div>
+            <span class="hora">19h</span>
+            <h3>Chegada dos convidados</h3>
+            <p>Mesas postas, luz baixa e o salão pronto para receber. É a hora das fotos com a família e dos primeiros brindes.</p>
+          </div>
+          <figure><img src="fotos/mesa-velas.jpg" alt="Mesa comprida posta com velas e flores" loading="lazy"></figure>
+        </div>
+      </li>
+      <li class="passo">
+        <span class="luz" aria-hidden="true"></span>
+        <div class="passo-corpo">
+          <div>
+            <span class="hora">20h</span>
+            <h3>Cerimônia</h3>
+            <p>Para quem casa no próprio espaço: corredor, altar e convidados no mesmo lugar onde a festa continua depois.</p>
+          </div>
+          <figure><img src="fotos/vestido.jpg" alt="Salão com tecidos, lustres e vestido de noiva pendurado" loading="lazy"></figure>
+        </div>
+      </li>
+      <li class="passo">
+        <span class="luz" aria-hidden="true"></span>
+        <div class="passo-corpo">
+          <div>
+            <span class="hora">21h</span>
+            <h3>Jantar</h3>
+            <p>O buffet entra, as mesas enchem e a conversa rende. Cada festa monta o cardápio e a decoração do seu jeito.</p>
+          </div>
+          <figure><img src="fotos/mesa-flores.jpg" alt="Mesa de jantar com taças e arranjo de flores coloridas" loading="lazy"></figure>
+        </div>
+      </li>
+      <li class="passo">
+        <span class="luz" aria-hidden="true"></span>
+        <div class="passo-corpo">
+          <div>
+            <span class="hora">23h</span>
+            <h3>Pista aberta</h3>
+            <p>Luz colorida, som alto e todo mundo dançando. A parte da noite que ninguém quer que acabe.</p>
+          </div>
+          <figure><img src="fotos/pista.jpg" alt="Noiva dançando na pista com luzes coloridas" loading="lazy"></figure>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="eventos">
+  <div class="wrap">
+    <div class="eventos-topo">
+      <div>
+        <h2>Que festa você vai fazer?</h2>
+        <p class="intro">Escolha o tipo de evento e mande uma mensagem. O WhatsApp já abre com o assunto escrito.</p>
+      </div>
+    </div>
+    <p class="nota">Texto de exemplo. No site final entram os tipos de evento e as fotos da própria Lounge. Fotos ilustrativas.</p>
+    <div class="vitrine">
+      <article class="card">
+        <img src="fotos/casamento.jpg" alt="Corredor de cerimônia com arco de flores brancas" loading="lazy">
+        <div><h3>Casamentos</h3><p>Cerimônia e festa no mesmo lugar, do jeito que vocês sonharam.</p>
+        <a href="https://wa.me/5519998972667?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20casamento%20na%20Lounge."><svg aria-hidden="true"><use href="#wa"/></svg>Pedir orçamento</a></div>
+      </article>
+      <article class="card">
+        <img src="fotos/quinze-anos.jpg" alt="Letreiro iluminado com o número 15 e balões" loading="lazy">
+        <div><h3>Festas de 15 anos</h3><p>Valsa, pista e decoração com a cara da debutante.</p>
+        <a href="https://wa.me/5519998972667?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20festa%20de%2015%20anos."><svg aria-hidden="true"><use href="#wa"/></svg>Pedir orçamento</a></div>
+      </article>
+      <article class="card">
+        <img src="fotos/aniversario.jpg" alt="Mesa de bolo de aniversário com arco de balões" loading="lazy">
+        <div><h3>Aniversários</h3><p>Do infantil ao de 50 anos, com espaço para todo mundo.</p>
+        <a href="https://wa.me/5519998972667?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20festa%20de%20anivers%C3%A1rio."><svg aria-hidden="true"><use href="#wa"/></svg>Pedir orçamento</a></div>
+      </article>
+      <article class="card">
+        <img src="fotos/noivado.jpg" alt="Taças de cristal enfileiradas sobre a mesa" loading="lazy">
+        <div><h3>Noivados e bodas</h3><p>O brinde com quem acompanhou a história de vocês.</p>
+        <a href="https://wa.me/5519998972667?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20noivado%20ou%20bodas."><svg aria-hidden="true"><use href="#wa"/></svg>Pedir orçamento</a></div>
+      </article>
+      <article class="card">
+        <img src="fotos/confraternizacao.jpg" alt="Salão com mesas redondas postas e lustre de cristal" loading="lazy">
+        <div><h3>Confraternizações</h3><p>Fim de ano da empresa, formatura ou encontro da turma.</p>
+        <a href="https://wa.me/5519998972667?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20confraterniza%C3%A7%C3%A3o."><svg aria-hidden="true"><use href="#wa"/></svg>Pedir orçamento</a></div>
+      </article>
+      <article class="card">
+        <img src="fotos/jantar.jpg" alt="Mesa longa com velas, garrafas e pratos brancos" loading="lazy">
+        <div><h3>Jantares e recepções</h3><p>Eventos menores, com mesa posta e clima de lounge.</p>
+        <a href="https://wa.me/5519998972667?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20jantar%20ou%20recep%C3%A7%C3%A3o."><svg aria-hidden="true"><use href="#wa"/></svg>Pedir orçamento</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="momentos" id="momentos">
+  <div class="wrap">
+    <h2>Momentos</h2>
+    <p class="nota">Fotos ilustrativas. No site final entram as fotos dos eventos que a Lounge já recebeu. Toque para ampliar.</p>
+    <div class="grade">
+      <button class="g1" type="button" aria-label="Ampliar foto: salão com varais de luz e convidados"><img src="fotos/salao-luzes.jpg" alt="Salão com varais de luz e convidados à mesa" loading="lazy"></button>
+      <button class="g2" type="button" aria-label="Ampliar foto: lustre do salão"><img src="fotos/lustre.jpg" alt="Salão com grande lustre e mesas decoradas" loading="lazy"></button>
+      <button class="g3" type="button" aria-label="Ampliar foto: convidados dançando"><img src="fotos/danca.jpg" alt="Convidados dançando, detalhe dos sapatos" loading="lazy"></button>
+      <button class="g4" type="button" aria-label="Ampliar foto: casal dançando"><img src="fotos/passos.jpg" alt="Casal dançando no salão" loading="lazy"></button>
+      <button class="g5" type="button" aria-label="Ampliar foto: varal de lâmpadas"><img src="fotos/luzes.jpg" alt="Varal de lâmpadas acesas à noite" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+<dialog id="foto" aria-label="Foto ampliada">
+  <form method="dialog"><button>Fechar</button></form>
+  <img src="" alt="">
+</dialog>
+
+<section class="insta">
+  <div class="wrap">
+    <p class="citacao">“Espaço super moderno para seu evento.”<span>Da bio do Instagram @loungeeventosararas</span></p>
+    <div class="numeros">
+      <p><strong>5.636</strong>pessoas acompanham a Lounge no Instagram.</p>
+      <p><strong>Casamentos</strong>são presença frequente no perfil, com vídeos de noivas e casais.</p>
+      <p><strong>23 de novembro</strong>foi um dos posts mais recentes: o espaço segue ativo em 2026.</p>
+      <a class="btn btn-escuro" href="https://www.instagram.com/loungeeventosararas/" target="_blank" rel="noopener" style="justify-self:start">Ver o Instagram</a>
+    </div>
+  </div>
+</section>
+
+<section class="onde" id="onde">
+  <div class="wrap">
+    <div>
+      <h2>Onde estamos</h2>
+      <p class="intro">A Lounge Eventos fica em Araras, interior de São Paulo. Para conhecer o salão antes de fechar, combine uma visita pelo WhatsApp.</p>
+      <dl>
+        <div><dt>Cidade</dt><dd>Araras, SP</dd></div>
+        <div><dt>Atendimento</dt><dd>Pelo WhatsApp (19) 99897-2667</dd></div>
+      </dl>
+      <p class="nota">O endereço exato e o horário de visitas entram no site final.</p>
+      <div class="acoes">
+        <a class="btn btn-wa" href="https://wa.me/5519998972667?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20visita%20ao%20espa%C3%A7o."><svg aria-hidden="true"><use href="#wa"/></svg>Agendar visita</a>
+        <a class="btn btn-escuro" href="https://www.google.com/maps/dir/?api=1&destination=Araras%2C%20SP" target="_blank" rel="noopener">Traçar rota</a>
+      </div>
+    </div>
+    <iframe src="https://www.google.com/maps?q=Araras%2C%20SP&output=embed" loading="lazy" title="Mapa de Araras, SP" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<section class="final">
+  <img src="fotos/luzes.jpg" alt="" loading="lazy">
+  <div class="wrap">
+    <h2>Tem uma data em mente?</h2>
+    <p>Mande o dia, o tipo de festa e quantos convidados. A Lounge responde com disponibilidade e orçamento.</p>
+    <a class="btn btn-wa" href="https://wa.me/5519998972667?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20se%20voc%C3%AAs%20t%C3%AAm%20minha%20data%20dispon%C3%ADvel."><svg aria-hidden="true"><use href="#wa"/></svg>Consultar minha data</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Lounge Eventos Araras · <a href="https://www.instagram.com/loungeeventosararas/" target="_blank" rel="noopener">@loungeeventosararas</a></span>
+    <span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span>
+  </div>
+</footer>
+
+<a class="flutua" href="https://wa.me/5519998972667?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20fazer%20um%20or%C3%A7amento." aria-label="Falar com a Lounge Eventos no WhatsApp"><svg aria-hidden="true"><use href="#wa"/></svg></a>
+
+<script>
+(() => {
+  const calmo = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // varal de lâmpadas do hero
+  const svg = document.getElementById('varal'), ns = 'http://www.w3.org/2000/svg';
+  const arcos = [[0,10,300,70,600,18],[600,18,900,90,1200,12]];
+  const bulbos = [];
+  arcos.forEach(([x0,y0,cx,cy,x1,y1]) => {
+    const p = document.createElementNS(ns,'path');
+    p.setAttribute('d',`M${x0} ${y0} Q${cx} ${cy*2-(y0+y1)/2} ${x1} ${y1}`);
+    p.setAttribute('class','fio'); svg.appendChild(p);
+    const qy = cy*2-(y0+y1)/2;
+    for (let i=1;i<8;i++){
+      const t=i/8, x=(1-t)**2*x0+2*(1-t)*t*cx+t*t*x1, y=(1-t)**2*y0+2*(1-t)*t*qy+t*t*y1;
+      const e=document.createElementNS(ns,'ellipse');
+      e.setAttribute('cx',x); e.setAttribute('cy',y+9); e.setAttribute('rx',5); e.setAttribute('ry',7.5);
+      e.setAttribute('class','bulbo'); svg.appendChild(e); bulbos.push(e);
+    }
+  });
+  bulbos.forEach((b,i) => calmo ? b.classList.add('on') : setTimeout(()=>b.classList.add('on'), 350 + i*110));
+
+  // lâmpadas da linha do tempo
+  const passos = document.querySelectorAll('.passo');
+  if (calmo || !('IntersectionObserver' in window)) passos.forEach(p=>p.classList.add('on'));
+  else {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target);} }), {rootMargin:'0px 0px -35% 0px'});
+    passos.forEach(p=>io.observe(p));
+  }
+
+  // galeria
+  const dlg = document.getElementById('foto'), big = dlg.querySelector('img');
+  document.querySelectorAll('.grade button').forEach(b => b.addEventListener('click', () => {
+    const im = b.querySelector('img'); big.src = im.src; big.alt = im.alt;
+    dlg.showModal ? dlg.showModal() : window.open(im.src);
+  }));
+  dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+})();
+</script>
+</body>
+</html>
