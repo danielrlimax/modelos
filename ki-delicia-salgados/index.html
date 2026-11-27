@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Ki Delícia Salgados · Salgados para festas em Mogi Guaçu</title>
+<meta name="description" content="Salgados para festas e eventos com entrega em Mogi Guaçu e região. Peça pelo WhatsApp.">
+<link rel="icon" href="logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Karla:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --laranja:#EE5A17;   /* fundo do logo */
+  --laranja-fundo:#FFE7D6;
+  --verde:#1F9A41;     /* oval do logo */
+  --verde-escuro:#11652A;
+  --tinta:#211D1A;     /* letra do logo */
+  --cinza:#5E544D;
+  --branco:#fff;
+  --zap:#1FAF54;
+  --raio:8px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:400 1.0625rem/1.6 Karla,system-ui,sans-serif;color:var(--tinta);background:var(--branco);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:"Bree Serif",Georgia,serif;font-weight:400;line-height:1.08;margin:0}
+h2{font-size:clamp(2rem,4.4vw,3.2rem);letter-spacing:-.01em}
+h3{font-size:1.35rem}
+p{margin:0}
+:focus-visible{outline:3px solid var(--laranja);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+.ico{width:1.25em;height:1.25em;flex:none}
+
+.aviso{background:var(--tinta);color:#fff;font-size:.85rem;text-align:center;padding:8px 16px}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;gap:.55em;font:800 1.05rem/1 Karla,sans-serif;text-decoration:none;padding:16px 22px;border-radius:var(--raio);border:2px solid transparent;transition:transform .15s,background .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-zap{background:var(--zap);color:#fff}
+.btn-zap:hover{background:#17964a}
+.btn-linha{border-color:currentColor;color:inherit}
+
+/* topo */
+.topo{position:absolute;inset:auto 0 auto 0;z-index:5;padding:18px 0}
+.topo .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.topo nav{display:flex;gap:22px;font-weight:700;font-size:.98rem}
+.topo nav a{color:#fff;text-decoration:none;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.topo nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.topo .btn{padding:11px 16px;font-size:.95rem}
+
+/* HERO: o oval do logo pousado sobre a foto */
+.hero{position:relative;min-height:min(92vh,820px);display:flex;align-items:center;color:#fff;overflow:hidden;background:#3a2414}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(32,16,6,.78) 0%,rgba(32,16,6,.45) 42%,rgba(32,16,6,0) 70%)}
+.hero .wrap{position:relative;z-index:2;padding:84px 0 56px}
+.oval{display:grid;place-items:center;text-align:center;width:min(440px,100%);aspect-ratio:1.9/1;background:#fff;border-radius:50%;border:14px solid var(--verde);box-shadow:0 0 0 6px #fff,0 22px 40px rgba(0,0,0,.35);color:var(--tinta);padding:6% 10%}
+.oval small{display:block;font:800 .82rem/1 Karla,sans-serif;letter-spacing:.08em;color:var(--tinta);margin-bottom:.5em}
+.oval .nome{font-family:"Bree Serif",serif;font-size:clamp(2.4rem,6vw,3.4rem);line-height:.95;display:block;white-space:nowrap}
+.oval .tipo{font-family:"Bree Serif",serif;font-size:clamp(1.5rem,3.6vw,2.4rem);line-height:1;display:block;margin-top:.12em;padding-left:30%}
+.hero h1{font-size:clamp(1.9rem,3.6vw,2.75rem);max-width:19ch;margin:28px 0 12px;text-shadow:0 2px 14px rgba(0,0,0,.45)}
+.hero p.sub{font-size:1.15rem;max-width:36ch;margin-bottom:26px;text-shadow:0 1px 10px rgba(0,0,0,.5)}
+.hero .acoes{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.hero .btn-linha{color:#fff}
+
+/* faixa laranja de prova */
+.prova{background:var(--laranja);color:#fff}
+.prova .wrap{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:0}
+.prova .item{padding:30px 26px 30px 0}
+.prova .item+.item{border-left:2px solid rgba(255,255,255,.35);padding-left:26px}
+.prova strong{display:block;font-family:"Bree Serif",serif;font-weight:400;font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.05;margin-bottom:4px}
+.prova span{font-size:1rem;opacity:.95}
+.prova strong span{font-size:inherit;opacity:1}
+#status-titulo .ponto{display:inline-block;width:.5em;height:.5em;border-radius:50%;background:#fff;margin-right:.3em;vertical-align:.15em}
+#status-titulo.aberto .ponto{background:#9BF0B4;box-shadow:0 0 0 4px rgba(155,240,180,.35)}
+
+/* seções */
+section{scroll-margin-top:20px}
+.secao{padding:clamp(64px,9vw,110px) 0}
+.cab{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+.cab p{max-width:44ch;color:var(--cinza)}
+.nota{font-size:.88rem;color:var(--cinza);font-style:italic}
+
+/* vitrine */
+.vitrine{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.prato{display:flex;flex-direction:column}
+.prato .foto{border-radius:var(--raio);overflow:hidden;aspect-ratio:6/5;background:var(--laranja-fundo)}
+.prato img{width:100%;height:100%;object-fit:cover}
+.prato h3{margin:14px 0 4px}
+.prato p{color:var(--cinza);font-size:.98rem;flex:1}
+.prato a{margin-top:10px;display:inline-flex;align-items:center;gap:.4em;font-weight:800;color:var(--verde-escuro);text-decoration:none;font-size:.97rem}
+.prato a:hover{text-decoration:underline;text-underline-offset:3px}
+.prato a .ico{color:var(--zap)}
+
+/* festas: verde do oval */
+.festas{background:var(--verde);color:#fff}
+.festas .grade{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(30px,5vw,70px);align-items:center}
+.festas .foto{border-radius:var(--raio);overflow:hidden;aspect-ratio:4/3.4}
+.festas .foto img{width:100%;height:100%;object-fit:cover}
+.festas h2{margin-bottom:18px}
+.festas p{max-width:46ch;margin-bottom:14px}
+.festas ul{list-style:none;padding:0;margin:22px 0 30px;display:flex;flex-wrap:wrap;gap:8px}
+.festas li{background:rgba(255,255,255,.14);padding:7px 12px;border-radius:4px;font-weight:700;font-size:.95rem}
+.festas .nota{color:rgba(255,255,255,.85)}
+.festas .btn-zap{background:#fff;color:var(--verde-escuro)}
+.festas .btn-zap .ico{color:var(--zap)}
+
+/* como pedir */
+.passos{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,4vw,48px);counter-reset:p}
+.passo{border-top:3px solid var(--tinta);padding-top:18px}
+.passo b{font-family:"Bree Serif",serif;font-weight:400;font-size:2.6rem;color:var(--laranja);line-height:1;display:block;margin-bottom:10px}
+.passo h3{margin-bottom:8px}
+.passo p{color:var(--cinza)}
+
+/* depoimentos (no Instagram) */
+.clientes{background:var(--laranja-fundo)}
+.clientes .grade{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,5vw,70px);align-items:center}
+.clientes .foto{border-radius:var(--raio);overflow:hidden;aspect-ratio:1}
+.clientes .foto img{width:100%;height:100%;object-fit:cover}
+.clientes h2{margin-bottom:18px}
+.clientes p{max-width:48ch;margin-bottom:14px;color:#4a3f37}
+.grande{font-family:"Bree Serif",serif;font-size:clamp(3.6rem,9vw,6.4rem);line-height:.9;color:var(--laranja);display:block;margin-bottom:6px}
+.clientes .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn-insta{background:var(--tinta);color:#fff}
+
+/* galeria */
+.galeria{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:240px 240px;gap:12px}
+.galeria figure{margin:0;border-radius:var(--raio);overflow:hidden}
+.galeria img{width:100%;height:100%;object-fit:cover}
+.galeria figure:first-child{grid-row:span 2}
+.galeria figure:nth-child(4){grid-column:span 2}
+
+/* horário e entrega */
+.horario .grade{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(30px,5vw,60px);align-items:start}
+.tabela{width:100%;border-collapse:collapse;margin:22px 0 14px;font-size:1.05rem}
+.tabela td{padding:12px 0;border-bottom:1px solid #e6ddd6}
+.tabela td:last-child{text-align:right;font-weight:700}
+.tabela tr.hoje td{color:var(--verde-escuro)}
+.tabela tr.hoje td:first-child::after{content:" (hoje)";font-weight:400;color:var(--cinza)}
+.estado{display:flex;gap:12px;align-items:center;background:var(--laranja-fundo);padding:16px 18px;border-radius:var(--raio);font-weight:700}
+.estado .luz{width:14px;height:14px;border-radius:50%;background:#bbb;flex:none}
+.estado.aberto .luz{background:var(--zap);box-shadow:0 0 0 5px rgba(31,175,84,.22)}
+.estado.fechado .luz{background:var(--laranja)}
+.estado small{display:block;font-weight:400;color:var(--cinza)}
+.mapa{width:100%;height:380px;border:0;border-radius:var(--raio);background:#eee}
+.entrega p{color:var(--cinza);margin:10px 0 18px;max-width:46ch}
+
+/* fecho */
+.fecho{background:var(--laranja);color:#fff;text-align:center;padding:clamp(70px,10vw,120px) 0}
+.fecho .oval{margin:0 auto 34px;width:min(380px,100%);border-width:11px}
+.fecho .oval .nome{font-size:clamp(2.2rem,6vw,3.4rem)}
+.fecho .oval .tipo{font-size:clamp(1.3rem,3vw,1.8rem)}
+.fecho h2{max-width:20ch;margin:0 auto 14px}
+.fecho p{max-width:44ch;margin:0 auto 30px;font-size:1.1rem}
+.fecho .btn-zap{font-size:1.15rem;padding:18px 26px}
+
+footer{background:var(--tinta);color:#d8cfc8;padding:40px 0 100px;font-size:.92rem}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+footer .logo{width:150px;aspect-ratio:591/290;background:url(logo.jpg) 50% 47%/100% auto no-repeat;border-radius:6px}
+footer a{color:#fff}
+
+.flutuante{position:fixed;right:18px;bottom:18px;z-index:20;width:60px;height:60px;border-radius:50%;background:var(--zap);color:#fff;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.3)}
+.flutuante .ico{width:32px;height:32px}
+
+/* entrada única do oval */
+@media (prefers-reduced-motion:no-preference){
+  .hero .oval{animation:pousa .7s cubic-bezier(.2,.9,.3,1.2) both}
+  .hero h1,.hero .sub,.hero .acoes{animation:sobe .6s .35s both}
+  @keyframes pousa{from{opacity:0;transform:scale(.85)}}
+  @keyframes sobe{from{opacity:0;transform:translateY(12px)}}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn:hover{transform:none}}
+
+@media (max-width:980px){
+  .vitrine{grid-template-columns:repeat(2,1fr)}
+  .topo nav a.n{display:none}
+  .prova .wrap{grid-template-columns:1fr 1fr}
+  .prova .item:first-child{grid-column:1/-1;border-bottom:2px solid rgba(255,255,255,.35);padding-right:0}
+  .prova .item:nth-child(2){border-left:0;padding-left:0}
+}
+@media (max-width:860px){
+  .hero::after{background:linear-gradient(180deg,rgba(32,16,6,.2) 0%,rgba(32,16,6,.55) 55%,rgba(32,16,6,.85) 100%)}
+  .hero>img{object-position:60% 30%}
+  .hero .wrap{padding:96px 0 48px}
+  .hero{align-items:flex-end}
+  .oval{width:min(400px,100%)}
+  .galeria{grid-template-columns:1fr 1fr;grid-template-rows:200px 200px 200px}
+  .galeria figure:first-child{grid-row:span 1;grid-column:span 2}
+}
+@media (max-width:700px){
+  .festas .grade,.clientes .grade,.horario .grade{grid-template-columns:1fr}
+  .passos{grid-template-columns:1fr}
+  .clientes .foto{aspect-ratio:16/11}
+  .festas .foto{aspect-ratio:16/11}
+}
+@media (max-width:520px){
+  .wrap{width:min(1160px,100% - 32px)}
+  .topo nav{display:none}
+  .vitrine{gap:14px}
+  .prato h3{font-size:1.15rem}
+  .prato p{font-size:.92rem}
+  .prova .wrap{grid-template-columns:1fr}
+  .prova .item,.prova .item+.item{border-left:0;padding:20px 0;border-bottom:2px solid rgba(255,255,255,.3)}
+  .prova .item:last-child{border-bottom:0}
+  .oval{border-width:10px}
+  .oval .tipo{padding-left:24%}
+  .hero h1{margin-top:26px}
+  .btn{padding:15px 18px}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.030-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.870 9.870 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.860 9.860 0 01-1.510-5.260c.001-5.450 4.436-9.884 9.888-9.884 2.640 0 5.122 1.030 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.450-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.050 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.480-8.413Z"/></symbol>
+  <symbol id="ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/></g><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para Ki Delícia Salgados. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <div class="wrap">
+    <span></span>
+    <nav aria-label="Seções">
+      <a class="n" href="#cardapio">Salgados</a>
+      <a class="n" href="#festas">Festas</a>
+      <a class="n" href="#horario">Horário e entrega</a>
+      <a class="btn btn-zap" href="https://wa.me/5519992106592?text=Ol%C3%A1%2C%20Ki%20Del%C3%ADcia!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido."><svg class="ico"><use href="#wa"/></svg>Pedir</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="titulo">
+  <img src="fotos/hero.jpg" alt="Coxinhas douradas servidas sobre guardanapo xadrez" fetchpriority="high">
+  <div class="wrap">
+    <div class="oval" role="img" aria-label="Ki Delícia Salgados, de Douglas e Andressa">
+      <div>
+        <small>Douglas e Andressa</small>
+        <span class="nome">ki Delícia</span>
+        <span class="tipo">salgados</span>
+      </div>
+    </div>
+    <h1 id="titulo">Os salgados da sua festa, fritinhos e no capricho.</h1>
+    <p class="sub">Salgados para festas e eventos, com entrega em Mogi Guaçu e região. Pede pelo WhatsApp que a gente combina tudo.</p>
+    <div class="acoes">
+      <a class="btn btn-zap" href="https://wa.me/5519992106592?text=Ol%C3%A1%2C%20Ki%20Del%C3%ADcia!%20Vim%20pelo%20site%20e%20quero%20encomendar%20salgados%20para%20uma%20festa."><svg class="ico"><use href="#wa"/></svg>Encomendar pelo WhatsApp</a>
+      <a class="btn btn-linha" href="#cardapio">Ver os salgados</a>
+    </div>
+  </div>
+</section>
+
+<div class="prova">
+  <div class="wrap">
+    <div class="item">
+      <strong>10,7 mil seguidores</strong>
+      <span>acompanham a Ki Delícia no Instagram</span>
+    </div>
+    <div class="item">
+      <strong>Mogi Guaçu e região</strong>
+      <span>entrega dos salgados na sua festa</span>
+    </div>
+    <div class="item">
+      <strong id="status-titulo"><span class="ponto"></span><span id="status-curto">Seg a qui, 7h às 22h</span></strong>
+      <span id="status-sub">sex e sáb a partir das 7h</span>
+    </div>
+  </div>
+</div>
+
+<section class="secao" id="cardapio" aria-labelledby="t-cardapio">
+  <div class="wrap">
+    <div class="cab">
+      <h2 id="t-cardapio">Escolha os salgados da sua festa</h2>
+      <p>Toque no salgado que você quer e mande a mensagem pronta no WhatsApp. <span class="nota">Sabores de exemplo e fotos ilustrativas. No site final entram o cardápio e as fotos da Ki Delícia.</span></p>
+    </div>
+    <div class="vitrine">
+      <article class="prato">
+        <div class="foto"><img src="fotos/coxinha.jpg" alt="Coxinhas de frango, uma aberta mostrando o recheio" loading="lazy"></div>
+        <h3>Coxinha de frango</h3>
+        <p>A rainha da mesa de festa, com recheio cremoso.</p>
+        <a href="https://wa.me/5519992106592?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20a%20coxinha%20de%20frango."><svg class="ico"><use href="#wa"/></svg>Quero coxinha</a>
+      </article>
+      <article class="prato">
+        <div class="foto"><img src="fotos/coxinha-recheio.jpg" alt="Salgado frito aberto com recheio de queijo derretido" loading="lazy"></div>
+        <h3>Presunto e queijo</h3>
+        <p>Queijo que puxa e presunto, sucesso com a criançada.</p>
+        <a href="https://wa.me/5519992106592?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20o%20salgado%20de%20presunto%20e%20queijo."><svg class="ico"><use href="#wa"/></svg>Quero esse</a>
+      </article>
+      <article class="prato">
+        <div class="foto"><img src="fotos/risoles.jpg" alt="Risoles dourados em meia-lua num prato branco" loading="lazy"></div>
+        <h3>Risoles</h3>
+        <p>Massa fininha e crocante, recheio de carne ou queijo.</p>
+        <a href="https://wa.me/5519992106592?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20os%20risoles."><svg class="ico"><use href="#wa"/></svg>Quero risoles</a>
+      </article>
+      <article class="prato">
+        <div class="foto"><img src="fotos/kibe.jpg" alt="Bolinhos fritos numa cestinha de metal" loading="lazy"></div>
+        <h3>Kibe</h3>
+        <p>Bem temperado, sequinho por fora e suculento por dentro.</p>
+        <a href="https://wa.me/5519992106592?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20o%20kibe."><svg class="ico"><use href="#wa"/></svg>Quero kibe</a>
+      </article>
+      <article class="prato">
+        <div class="foto"><img src="fotos/esfiha.jpg" alt="Esfihas fechadas em triângulo num prato" loading="lazy"></div>
+        <h3>Esfiha</h3>
+        <p>Assada, macia e recheada, pra quem prefere sem fritura.</p>
+        <a href="https://wa.me/5519992106592?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20as%20esfihas."><svg class="ico"><use href="#wa"/></svg>Quero esfiha</a>
+      </article>
+      <article class="prato">
+        <div class="foto"><img src="fotos/croquete.jpg" alt="Croquetes de carne num prato com salada" loading="lazy"></div>
+        <h3>Croquete de carne</h3>
+        <p>Clássico de festa de família, crocante do jeito certo.</p>
+        <a href="https://wa.me/5519992106592?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20o%20croquete%20de%20carne."><svg class="ico"><use href="#wa"/></svg>Quero croquete</a>
+      </article>
+      <article class="prato">
+        <div class="foto"><img src="fotos/enroladinho.jpg" alt="Enroladinhos empanados e dourados num prato" loading="lazy"></div>
+        <h3>Enroladinho de salsicha</h3>
+        <p>Não falta em aniversário e acaba sempre primeiro.</p>
+        <a href="https://wa.me/5519992106592?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20o%20enroladinho%20de%20salsicha."><svg class="ico"><use href="#wa"/></svg>Quero enroladinho</a>
+      </article>
+      <article class="prato">
+        <div class="foto"><img src="fotos/assados.jpg" alt="Bandeja com fileiras de salgados assados" loading="lazy"></div>
+        <h3>Salgados assados</h3>
+        <p>Opções de forno para variar a bandeja da festa.</p>
+        <a href="https://wa.me/5519992106592?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20os%20salgados%20assados."><svg class="ico"><use href="#wa"/></svg>Quero assados</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="secao festas" id="festas" aria-labelledby="t-festas">
+  <div class="wrap grade">
+    <div class="foto"><img src="fotos/festa.jpg" alt="Mesa de festa ao ar livre cheia de comidas e convidados" loading="lazy"></div>
+    <div>
+      <h2 id="t-festas">Festa boa tem bandeja que esvazia rápido</h2>
+      <p>A Ki Delícia faz salgados para festas e eventos. Você conta quantos convidados vêm e a data, e a gente ajuda a acertar a quantidade e os sabores.</p>
+      <ul aria-label="Ocasiões">
+        <li>Aniversário</li><li>Chá de bebê</li><li>Casamento</li><li>Confraternização</li><li>Reunião de empresa</li>
+      </ul>
+      <p class="nota">Texto de exemplo. No site final entram as quantidades, os prazos e as condições da Ki Delícia.</p>
+      <p style="margin-top:22px"><a class="btn btn-zap" href="https://wa.me/5519992106592?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20de%20salgados%20para%20minha%20festa."><svg class="ico"><use href="#wa"/></svg>Pedir orçamento da festa</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="secao" aria-labelledby="t-passos">
+  <div class="wrap">
+    <div class="cab"><h2 id="t-passos">Como encomendar</h2></div>
+    <div class="passos">
+      <div class="passo"><b>1</b><h3>Chame no WhatsApp</h3><p>Conte a data, o horário e quantas pessoas vão à festa.</p></div>
+      <div class="passo"><b>2</b><h3>Escolha os sabores</h3><p>A gente ajuda a montar a quantidade certa de cada salgado.</p></div>
+      <div class="passo"><b>3</b><h3>Receba quentinho</h3><p>Entrega em Mogi Guaçu e região, no dia combinado.</p></div>
+    </div>
+    <p class="nota" style="margin-top:22px">Texto de exemplo. No site final entra o jeito de pedir da Ki Delícia.</p>
+  </div>
+</section>
+
+<section class="secao clientes" aria-labelledby="t-clientes">
+  <div class="wrap grade">
+    <div class="foto"><img src="fotos/coxinha-laranja.jpg" alt="Uma coxinha dourada sobre fundo laranja" loading="lazy"></div>
+    <div>
+      <span class="grande">10,7 mil</span>
+      <h2 id="t-clientes">pessoas acompanham os salgados da Ki Delícia</h2>
+      <p>Quem já pediu conta como foi: os depoimentos dos clientes ficam guardados nos destaques do Instagram da Ki Delícia, junto com fotos das festas.</p>
+      <p class="nota">No site final, os depoimentos dos clientes entram aqui.</p>
+      <div class="acoes">
+        <a class="btn btn-insta" href="https://www.instagram.com/ki_delicia_salgadinhos/" target="_blank" rel="noopener"><svg class="ico"><use href="#ig"/></svg>Ver depoimentos no Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao" aria-labelledby="t-galeria">
+  <div class="wrap">
+    <div class="cab">
+      <h2 id="t-galeria">Direto da fritura pra mesa</h2>
+      <p class="nota">Fotos ilustrativas.</p>
+    </div>
+    <div class="galeria">
+      <figure><img src="fotos/g1.jpg" alt="Coxinhas sobre tábua de pedra com guardanapo xadrez" loading="lazy"></figure>
+      <figure><img src="fotos/massa.jpg" alt="Massa sendo fechada à mão antes de ir pro forno" loading="lazy"></figure>
+      <figure><img src="fotos/g3.jpg" alt="Salgados empanados num prato" loading="lazy"></figure>
+      <figure><img src="fotos/g2.jpg" alt="Tábua com salgados fritos e molhos" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="secao horario" id="horario" aria-labelledby="t-horario" style="padding-top:0">
+  <div class="wrap grade">
+    <div>
+      <h2 id="t-horario">Horário de atendimento</h2>
+      <table class="tabela" aria-label="Horários">
+        <tbody>
+          <tr data-d="1"><td>Segunda</td><td>7h às 22h</td></tr>
+          <tr data-d="2"><td>Terça</td><td>7h às 22h</td></tr>
+          <tr data-d="3"><td>Quarta</td><td>7h às 22h</td></tr>
+          <tr data-d="4"><td>Quinta</td><td>7h às 22h</td></tr>
+          <tr data-d="5"><td>Sexta</td><td>a partir das 7h</td></tr>
+          <tr data-d="6"><td>Sábado</td><td>a partir das 7h</td></tr>
+          <tr data-d="0"><td>Domingo</td><td>consulte</td></tr>
+        </tbody>
+      </table>
+      <div class="estado" id="estado"><span class="luz"></span><div><span id="estado-txt">Horário</span><small id="estado-det">Seg a qui das 7h às 22h; sex e sáb a partir das 7h.</small></div></div>
+    </div>
+    <div class="entrega">
+      <h2>Entregamos em Mogi Guaçu e região</h2>
+      <p>Pergunte pelo WhatsApp se a entrega chega no seu bairro ou cidade.</p>
+      <iframe class="mapa" src="https://www.google.com/maps?q=Mogi%20Gua%C3%A7u%2C%20SP&output=embed" loading="lazy" title="Mapa: Mogi Guaçu, área de entrega" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <p style="margin-top:18px"><a class="btn btn-zap" href="https://wa.me/5519992106592?text=Ol%C3%A1!%20Vim%20pelo%20site.%20Voc%C3%AAs%20entregam%20no%20meu%20bairro%3F"><svg class="ico"><use href="#wa"/></svg>Perguntar sobre a entrega</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="fecho" aria-labelledby="t-fecho">
+  <div class="wrap">
+    <div class="oval" role="img" aria-label="Ki Delícia Salgados">
+      <div><small>Douglas e Andressa</small><span class="nome">ki Delícia</span><span class="tipo">salgados</span></div>
+    </div>
+    <h2 id="t-fecho">Tem festa vindo aí? Garanta os salgados.</h2>
+    <p>Mande a data e o número de convidados. O Douglas e a Andressa respondem pelo WhatsApp.</p>
+    <a class="btn btn-zap" href="https://wa.me/5519992106592?text=Ol%C3%A1%2C%20Douglas%20e%20Andressa!%20Vim%20pelo%20site%20e%20quero%20encomendar%20salgados."><svg class="ico"><use href="#wa"/></svg>Chamar no WhatsApp</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="logo" role="img" aria-label="Logo Ki Delícia Salgados"></div>
+    <div>
+      <p><strong style="color:#fff">Ki Delícia Salgados</strong> · Salgados para festas e eventos · Mogi Guaçu e região</p>
+      <p>WhatsApp <a href="https://wa.me/5519992106592">(19) 99210-6592</a> · <a href="https://www.instagram.com/ki_delicia_salgadinhos/" target="_blank" rel="noopener">@ki_delicia_salgadinhos</a></p>
+      <p style="margin-top:8px;opacity:.75">Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</p>
+    </div>
+  </div>
+</footer>
+
+<a class="flutuante" href="https://wa.me/5519992106592?text=Ol%C3%A1%2C%20Ki%20Del%C3%ADcia!%20Vim%20pelo%20site%20e%20quero%20fazer%20um%20pedido." aria-label="Chamar a Ki Delícia no WhatsApp"><svg class="ico"><use href="#wa"/></svg></a>
+
+<script>
+(() => {
+  const partes = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', weekday: 'short', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date()).map(p => [p.type, p.value]));
+  const dia = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].indexOf(partes.weekday);
+  const h = Number(partes.hour) + Number(partes.minute) / 60;
+  const linha = document.querySelector(`.tabela tr[data-d="${dia}"]`);
+  if (linha) linha.classList.add('hoje');
+  // Seg-qui 7h-22h; sex e sáb abre às 7h (fechamento não confirmado: consideramos aberto até a meia-noite); domingo não informado.
+  let aberto = null, txt, det;
+  if (dia >= 1 && dia <= 4) {
+    if (h >= 7 && h < 22) { aberto = true; txt = 'Aberto agora'; det = 'Hoje até as 22h. Chame no WhatsApp.'; }
+    else if (h < 7) { aberto = false; txt = 'Fechado agora'; det = 'Abre hoje às 7h. Pode deixar sua mensagem no WhatsApp.'; }
+    else { aberto = false; txt = 'Fechado agora'; det = 'Abre amanhã às 7h. Pode deixar sua mensagem no WhatsApp.'; }
+  } else if (dia === 5 || dia === 6) {
+    if (h >= 7) { aberto = true; txt = 'Aberto agora'; det = 'Sexta e sábado o atendimento vai até mais tarde.'; }
+    else { aberto = false; txt = 'Abre às 7h'; det = 'Pode deixar sua mensagem no WhatsApp.'; }
+  } else {
+    txt = 'Domingo'; det = 'Confirme o atendimento pelo WhatsApp. Segunda abre às 7h.';
+  }
+  const est = document.getElementById('estado');
+  if (aberto !== null) est.classList.add(aberto ? 'aberto' : 'fechado');
+  document.getElementById('estado-txt').textContent = txt;
+  document.getElementById('estado-det').textContent = det;
+  const st = document.getElementById('status-titulo');
+  if (aberto) st.classList.add('aberto');
+  document.getElementById('status-curto').textContent = aberto === true ? 'Aberto agora' : aberto === false ? 'Fechado agora' : 'Hoje é domingo';
+  document.getElementById('status-sub').textContent = det.replace(' Chame no WhatsApp.', '').replace(' Pode deixar sua mensagem no WhatsApp.', '');
+})();
+</script>
+</body>
+</html>
