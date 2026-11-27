@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Inflakids | Aluguel de infláveis e brinquedos para festas em Guarulhos</title>
+<meta name="description" content="Inflakids: locação de infláveis, tobogãs, piscina de bolinhas e brinquedos para festas em Guarulhos. Nota 5,0 no Google. Orçamento pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Figtree:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ceu:#0A3E8C; --ceu-2:#0C55B8; --azul:#1E9BE0; --ciano:#6FE3F5;
+  --roxo:#A44FDB; --laranja:#F26A1F; --amarelo:#FFC93C; --verde:#25D366;
+  --fundo:#F2FAFF; --texto:#0B2A55; --suave:#46628A; --branco:#fff;
+  --display:'Bree Serif', Georgia, serif; --corpo:'Figtree', system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--corpo);color:var(--texto);background:var(--fundo);font-size:17px;line-height:1.55}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amarelo);outline-offset:3px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.1;margin:0}
+.wrap{width:min(1160px,100% - 40px);margin-inline:auto}
+svg.i{width:1.2em;height:1.2em;flex:none}
+
+.aviso{background:var(--amarelo);color:#3a2a00;text-align:center;font-size:14px;font-weight:600;padding:8px 14px}
+
+/* topo */
+.topo{position:absolute;inset:auto 0 auto 0;z-index:5;padding:18px 0}
+.topo .wrap{display:flex;align-items:center;gap:18px}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff}
+.marca img{width:58px;height:58px;border-radius:50%;box-shadow:0 0 0 3px rgba(255,255,255,.85)}
+.marca span{font-family:var(--display);font-size:22px;line-height:1}
+.marca small{display:block;font-family:var(--corpo);font-size:13px;opacity:.85;margin-top:3px}
+.topo nav{margin-left:auto;display:flex;gap:22px;align-items:center}
+.topo nav a{color:#fff;text-decoration:none;font-weight:600;font-size:15px}
+.topo nav a:hover{text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:800;text-decoration:none;border-radius:14px;padding:14px 22px;font-size:16px;line-height:1.2;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn-wa{background:var(--verde);color:#063d1c}
+.btn-claro{background:rgba(255,255,255,.16);color:#fff;border:2px solid rgba(255,255,255,.7)}
+.topo .btn{padding:10px 16px;font-size:15px}
+
+/* hero */
+.hero{position:relative;min-height:min(92vh,820px);display:flex;align-items:center;color:#fff;
+  background:url(fotos/hero.jpg) center 60%/cover no-repeat;padding:130px 0 150px;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(100deg,rgba(10,62,140,.94) 0%,rgba(10,62,140,.82) 38%,rgba(10,62,140,.25) 70%,rgba(10,62,140,0) 100%)}
+.hero-txt{max-width:600px}
+.hero h1{font-size:clamp(40px,5.6vw,70px);margin-bottom:20px;text-wrap:balance}
+.hero p{font-size:clamp(18px,1.6vw,21px);max-width:30em;margin:0 0 28px;color:#E4F6FF}
+.acoes{display:flex;flex-wrap:wrap;gap:14px}
+.nota{display:inline-flex;align-items:center;gap:14px;margin-top:34px;background:#fff;color:var(--texto);
+  border-radius:16px;padding:12px 18px 12px 14px;box-shadow:0 10px 30px rgba(5,30,70,.3)}
+.nota b{font-family:var(--display);font-size:36px;line-height:1;color:var(--ceu)}
+.estrelas{color:#F5A400;letter-spacing:2px;font-size:18px;line-height:1}
+.nota small{display:block;color:var(--suave);font-size:14px;margin-top:3px}
+
+/* borda de inflável: o elemento memorável */
+.boia{position:absolute;left:0;right:0;bottom:-1px;height:64px;display:flex;overflow:hidden;z-index:2}
+.boia i{flex:1 0 0;min-width:46px;border-radius:999px 999px 0 0;position:relative;margin:0 -1px;
+  box-shadow:inset 0 10px 0 rgba(255,255,255,.28), inset 0 -6px 0 rgba(0,0,0,.08);transform-origin:bottom;animation:enche 1.1s cubic-bezier(.3,1.6,.5,1) both}
+.boia i:nth-child(4n+1){background:var(--roxo)} .boia i:nth-child(4n+2){background:var(--laranja)}
+.boia i:nth-child(4n+3){background:var(--amarelo)} .boia i:nth-child(4n+4){background:var(--azul)}
+.boia::after{content:"";position:absolute;left:0;right:0;bottom:0;height:16px;background:var(--fundo)}
+.boia.ceu::after{background:var(--ceu)}
+@keyframes enche{from{transform:scaleY(.15)}to{transform:scaleY(1)}}
+
+section{padding:88px 0}
+.cab{max-width:640px;margin-bottom:38px}
+.cab h2{font-size:clamp(32px,4vw,48px);color:var(--ceu);margin-bottom:12px}
+.cab p{margin:0;color:var(--suave);font-size:18px}
+.obs{font-size:14px;color:var(--suave);font-style:italic;margin-top:10px}
+
+/* brinquedos */
+.grade{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{background:#fff;border-radius:22px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 2px 0 #D7ECFA}
+.card img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.card div{padding:16px 18px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{font-size:22px;color:var(--ceu)}
+.card p{margin:0;color:var(--suave);font-size:15px;flex:1}
+.card a{margin-top:10px;display:inline-flex;align-items:center;gap:8px;color:#0B7A3B;font-weight:800;text-decoration:none;font-size:15px}
+.card a:hover{text-decoration:underline;text-underline-offset:3px}
+
+/* como funciona */
+.funciona{background:#fff}
+.funciona .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.funciona img{border-radius:28px;width:100%;aspect-ratio:7/5;object-fit:cover}
+.passos{list-style:none;margin:0;padding:0;display:grid;gap:22px}
+.passos li{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start}
+.passos li span{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-size:24px;color:#fff}
+.passos li:nth-child(1) span{background:var(--roxo)} .passos li:nth-child(2) span{background:var(--laranja)}
+.passos li:nth-child(3) span{background:#E0A800} .passos li:nth-child(4) span{background:var(--azul)}
+.passos h3{font-size:22px;color:var(--ceu);margin-bottom:2px}
+.passos p{margin:0;color:var(--suave)}
+
+/* avaliações */
+.prova{background:var(--ceu);color:#fff;position:relative;padding-bottom:140px}
+.prova .wrap{display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:center}
+.selo-nota{font-family:var(--display);font-size:clamp(110px,15vw,190px);line-height:.85;color:var(--ciano)}
+.selo-nota + .estrelas{font-size:28px;margin-top:10px}
+.prova h2{font-size:clamp(30px,3.6vw,44px);margin-bottom:14px}
+.prova p{margin:0 0 24px;color:#CFE9FF;font-size:18px;max-width:34em}
+
+/* onde */
+.onde .wrap{display:grid;grid-template-columns:1fr 1.25fr;gap:44px;align-items:center}
+.onde iframe{width:100%;height:380px;border:0;border-radius:24px;background:#dbeefa}
+.onde .acoes{margin-top:22px}
+.btn-azul{background:var(--ceu);color:#fff}
+.insta{display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-weight:700;color:var(--roxo)}
+
+/* final */
+.final{background:var(--fundo);text-align:center;padding:72px 0 96px}
+.final h2{font-size:clamp(32px,4.4vw,54px);color:var(--ceu);max-width:15em;margin:0 auto 14px;text-wrap:balance}
+.final p{color:var(--suave);margin:0 auto 28px;max-width:32em;font-size:18px}
+.final .btn{font-size:18px;padding:17px 28px}
+
+footer{background:var(--ceu);color:#BFDDF7;font-size:14px;padding:28px 0 90px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+.flutua{position:fixed;right:20px;bottom:20px;z-index:20;width:62px;height:62px;border-radius:50%;background:var(--verde);color:#fff;
+  display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.flutua svg{width:34px;height:34px}
+
+@media (max-width:1000px){
+  .grade{grid-template-columns:repeat(2,1fr)}
+  .topo nav a:not(.btn){display:none}
+}
+@media (max-width:860px){
+  .funciona .wrap,.onde .wrap{grid-template-columns:1fr;gap:32px}
+  .prova .wrap{grid-template-columns:1fr;gap:18px}
+  .hero::before{background:linear-gradient(100deg,rgba(10,62,140,.92) 0%,rgba(10,62,140,.75) 50%,rgba(10,62,140,.1) 100%)}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .hero{background-position:62% 60%}
+  .hero::before{background:linear-gradient(180deg,rgba(10,62,140,.5) 0%,rgba(10,62,140,.78) 40%,rgba(10,62,140,.55) 100%)}
+  .grade{gap:12px}
+  .card div{padding:12px 12px 14px}
+  .card h3{font-size:18px}
+  .card p{font-size:14px}
+  .marca img{width:46px;height:46px}
+  .marca small{display:none}
+  .topo .btn span{display:none}
+  .hero{padding:110px 0 120px;min-height:auto}
+  .boia{height:44px}
+  .boia i{min-width:34px}
+  section{padding:64px 0}
+  .acoes .btn{width:100%;justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .boia i{animation:none}
+  .btn{transition:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+<symbol id="ig" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zM12 16a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.4 1.4 0 100 2.9 1.4 1.4 0 000-2.9z"/></symbol>
+</svg>
+
+<div class="aviso">Modelo demonstrativo feito por Daniel para Inflakids locação de brinquedos. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#">
+      <img src="logo.jpg" alt="Logo da Inflakids">
+      <span>Inflakids<small>Locação de brinquedos · Guarulhos</small></span>
+    </a>
+    <nav aria-label="Seções">
+      <a href="#brinquedos">Brinquedos</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#onde">Onde estamos</a>
+      <a class="btn btn-wa" href="https://wa.me/5511948290034?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20para%20minha%20festa." target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg><span>Orçamento</span></a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-txt">
+      <h1>Inflável montado, criançada pulando e você curtindo a festa.</h1>
+      <p>A Inflakids aluga infláveis e brinquedos para aniversários e eventos em Guarulhos. Você escolhe o brinquedo, a gente leva e monta.</p>
+      <div class="acoes">
+        <a class="btn btn-wa" href="https://wa.me/5511948290034?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20para%20minha%20festa." target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>Pedir orçamento no WhatsApp</a>
+        <a class="btn btn-claro" href="#brinquedos">Ver os brinquedos</a>
+      </div>
+      <div class="nota">
+        <b>5,0</b>
+        <div><div class="estrelas" aria-hidden="true">★★★★★</div><small>71 avaliações no Google</small></div>
+      </div>
+    </div>
+  </div>
+  <div class="boia" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+</section>
+
+<section id="brinquedos">
+  <div class="wrap">
+    <div class="cab">
+      <h2>Os brinquedos que fazem a festa</h2>
+      <p>Escolha o seu e chame no WhatsApp com a data da festa. A gente confirma se está livre e passa o valor.</p>
+      <p class="obs">Fotos ilustrativas. No site final entram as fotos e a lista real de brinquedos da Inflakids.</p>
+    </div>
+    <div class="grade">
+      <article class="card"><img src="fotos/pula-pula.jpg" alt="Criança pulando em um inflável" loading="lazy"><div><h3>Pula-pula inflável</h3><p>O clássico que segura a criançada a festa inteira.</p><a href="https://wa.me/5511948290034?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20o%20pula-pula%20infl%C3%A1vel." target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>Consultar data</a></div></article>
+      <article class="card"><img src="fotos/toboga.jpg" alt="Crianças descendo um tobogã inflável" loading="lazy"><div><h3>Tobogã inflável</h3><p>Sobe, escorrega e volta para a fila.</p><a href="https://wa.me/5511948290034?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20o%20tobog%C3%A3%20infl%C3%A1vel." target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>Consultar data</a></div></article>
+      <article class="card"><img src="fotos/toboga-aquatico.jpg" alt="Tobogã aquático inflável em um quintal" loading="lazy"><div><h3>Tobogã aquático</h3><p>Para as festas de calor, com água e muita risada.</p><a href="https://wa.me/5511948290034?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20o%20tobog%C3%A3%20aqu%C3%A1tico." target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>Consultar data</a></div></article>
+      <article class="card"><img src="fotos/circuito.jpg" alt="Circuito inflável montado em um gramado" loading="lazy"><div><h3>Circuito inflável</h3><p>Obstáculos para gastar energia em grupo.</p><a href="https://wa.me/5511948290034?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20o%20circuito%20infl%C3%A1vel." target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>Consultar data</a></div></article>
+      <article class="card"><img src="fotos/tematico.jpg" alt="Inflável colorido com tema" loading="lazy"><div><h3>Inflável temático</h3><p>Combina com o tema do aniversário.</p><a href="https://wa.me/5511948290034?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20os%20infl%C3%A1veis%20tem%C3%A1ticos." target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>Consultar data</a></div></article>
+      <article class="card"><img src="fotos/bolinhas.jpg" alt="Bolinhas coloridas de piscina de bolinhas" loading="lazy"><div><h3>Piscina de bolinhas</h3><p>Perfeita para os pequenininhos.</p><a href="https://wa.me/5511948290034?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20a%20piscina%20de%20bolinhas." target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>Consultar data</a></div></article>
+      <article class="card"><img src="fotos/algodao-doce.jpg" alt="Algodão-doce sendo feito em máquina" loading="lazy"><div><h3>Algodão-doce</h3><p>A máquina que vira atração da festa.</p><a href="https://wa.me/5511948290034?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20a%20m%C3%A1quina%20de%20algod%C3%A3o-doce." target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>Consultar data</a></div></article>
+      <article class="card"><img src="fotos/pipoca.jpg" alt="Máquina de pipoca" loading="lazy"><div><h3>Pipoca</h3><p>Cheirinho de festa desde a chegada.</p><a href="https://wa.me/5511948290034?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20a%20m%C3%A1quina%20de%20pipoca." target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>Consultar data</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="funciona" id="como-funciona">
+  <div class="wrap">
+    <img src="fotos/montagem.jpg" alt="Infláveis montados em um gramado antes da festa" loading="lazy">
+    <div>
+      <div class="cab">
+        <h2>Do orçamento à última pulada</h2>
+        <p class="obs">Texto de exemplo. No site final entra o passo a passo de como a Inflakids trabalha.</p>
+      </div>
+      <ol class="passos">
+        <li><span>1</span><div><h3>Chame no WhatsApp</h3><p>Conte a data, o endereço e quais brinquedos você quer.</p></div></li>
+        <li><span>2</span><div><h3>Receba o orçamento</h3><p>A gente confirma a disponibilidade e passa o valor.</p></div></li>
+        <li><span>3</span><div><h3>Entrega e montagem</h3><p>Levamos e montamos tudo antes de os convidados chegarem.</p></div></li>
+        <li><span>4</span><div><h3>Retirada</h3><p>Depois da festa, voltamos para desmontar. Você só aproveita.</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="prova">
+  <div class="wrap">
+    <div>
+      <div class="selo-nota">5,0</div>
+      <div class="estrelas" aria-hidden="true">★★★★★</div>
+    </div>
+    <div>
+      <h2>Nota máxima de quem já fez festa com a Inflakids</h2>
+      <p>São 71 avaliações no Google, todas somando 5 estrelas. As famílias de Guarulhos recomendam.</p>
+      <a class="btn btn-claro" href="https://www.google.com/search?q=Inflakids+loca%C3%A7%C3%A3o+de+brinquedos+Guarulhos" target="_blank" rel="noopener">Ver as avaliações no Google</a>
+    </div>
+  </div>
+  <div class="boia" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+</section>
+
+<section class="onde" id="onde">
+  <div class="wrap">
+    <div>
+      <div class="cab">
+        <h2>Jardim São Paulo, Guarulhos</h2>
+        <p>Levamos os brinquedos até a sua festa, em casa, no salão ou no condomínio.</p>
+        <p class="obs">Texto de exemplo. No site final entram os bairros e cidades que a Inflakids atende.</p>
+      </div>
+      <div class="acoes">
+        <a class="btn btn-wa" href="https://wa.me/5511948290034?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20se%20voc%C3%AAs%20atendem%20no%20meu%20bairro." target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>Atende no meu bairro?</a>
+        <a class="btn btn-azul" href="https://www.google.com/maps/dir/?api=1&destination=Jardim%20S%C3%A3o%20Paulo%2C%20Guarulhos%20-%20SP" target="_blank" rel="noopener">Traçar rota</a>
+      </div>
+      <a class="insta" href="https://instagram.com/infla_kidsbrinquedos" target="_blank" rel="noopener"><svg class="i"><use href="#ig"/></svg>@infla_kidsbrinquedos</a>
+    </div>
+    <iframe title="Mapa: Jardim São Paulo, Guarulhos" src="https://www.google.com/maps?q=Jardim%20S%C3%A3o%20Paulo%2C%20Guarulhos%20-%20SP&output=embed" loading="lazy"></iframe>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Já tem a data da festa? Garanta o brinquedo.</h2>
+    <p>Mande a data e o endereço e saiba na hora o que está livre.</p>
+    <a class="btn btn-wa" href="https://wa.me/5511948290034?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20reservar%20brinquedos%20para%20minha%20festa." target="_blank" rel="noopener"><svg class="i"><use href="#wa"/></svg>Reservar pelo WhatsApp</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Inflakids locação de brinquedos · Jardim São Paulo, Guarulhos - SP · (11) 94829-0034</span>
+    <span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span>
+  </div>
+</footer>
+
+<a class="flutua" href="https://wa.me/5511948290034?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento." target="_blank" rel="noopener" aria-label="Falar com a Inflakids no WhatsApp"><svg><use href="#wa"/></svg></a>
+</body>
+</html>
