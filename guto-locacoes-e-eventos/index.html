@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="modelo" content="sob-medida">
+<title>Guto Locações e Eventos | Aluguel de brinquedos com monitores em Presidente Prudente</title>
+<meta name="description" content="Modelo demonstrativo de site para a Guto Locações e Eventos: aluguel de brinquedos para festas infantis com monitores em Presidente Prudente e região.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ultra&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --vermelho:#D3201B; --vermelho-fundo:#B8170F; --vermelho-claro:#FDECEA;
+  --tinta:#1B2140; --tinta-2:#4A5070; --papel:#FFFFFF; --linha:#EAD9D7;
+  --azul:#1F4FBF; --amarelo:#FFC928; --verde:#1FA855;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--papel);color:var(--tinta);font:17px/1.6 'Rubik',system-ui,sans-serif}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amarelo);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:'Ultra',Georgia,serif;font-weight:400;line-height:1.08;margin:0;letter-spacing:.005em}
+h2{font-size:clamp(1.9rem,1.2rem + 2.6vw,3.1rem)}
+p{margin:0}
+.ico{width:1.15em;height:1.15em;flex:none}
+
+/* faixa demo */
+.demo{background:var(--tinta);color:#fff;font-size:.85rem;text-align:center;padding:7px 14px}
+
+/* topo */
+.topo{background:var(--vermelho);color:#fff;position:sticky;top:0;z-index:20;box-shadow:0 1px 0 rgba(0,0,0,.12)}
+.topo .wrap{display:flex;align-items:center;gap:24px;min-height:64px}
+.marca{text-decoration:none;display:flex;flex-direction:column;line-height:1}
+.marca b{font-family:'Ultra',serif;font-weight:400;font-size:1.75rem;letter-spacing:.02em}
+.marca small{font-size:.78rem;font-weight:600;margin-top:2px}
+.topo nav{display:flex;gap:22px;margin-left:auto;font-weight:500;font-size:.95rem}
+.topo nav a{text-decoration:none;opacity:.92}
+.topo nav a:hover{opacity:1;text-decoration:underline;text-underline-offset:4px}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;border-radius:6px;padding:13px 20px;line-height:1.2}
+.btn-wa{background:var(--verde);color:#fff}
+.btn-wa:hover{background:#178f47}
+.btn-branco{background:#fff;color:var(--vermelho)}
+.btn-branco:hover{background:var(--vermelho-claro)}
+.btn-linha{border:2px solid currentColor;padding:11px 18px}
+.topo .btn{padding:10px 16px;font-size:.92rem}
+@media (max-width:860px){.topo nav{display:none}.topo .btn{margin-left:auto}}
+
+/* hero */
+.hero{position:relative;min-height:calc(100svh - 64px - 34px);display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:#3c6b2a}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 55%}
+.hero .wrap{position:relative;padding:48px 0 40px}
+.placa{background:var(--vermelho);max-width:640px;padding:30px 34px 32px;border-radius:4px;box-shadow:0 18px 40px rgba(40,10,5,.28)}
+.placa .quem{font-weight:600;font-size:1rem;opacity:.95;margin-bottom:12px}
+.placa h1{font-size:clamp(2.1rem,1.3rem + 3.2vw,3.7rem)}
+.placa p.sub{margin-top:16px;font-size:1.08rem;max-width:34em}
+.placa .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.credito-hero{position:absolute;right:12px;bottom:10px;font-size:.72rem;background:rgba(0,0,0,.45);padding:2px 8px;border-radius:3px}
+@media (max-width:1000px) and (min-width:661px){
+  .hero>img{object-position:78% 50%}
+  .placa{max-width:520px;padding:26px 28px 28px}
+}
+@media (max-width:660px){
+  .hero{min-height:auto;display:block}
+  .hero>img{position:relative;height:56vw;min-height:280px;object-position:70% 50%}
+  .hero .wrap{padding:0;width:100%}
+  .placa{border-radius:0;max-width:none;padding:28px 22px 30px;box-shadow:none}
+  .credito-hero{top:calc(56vw - 30px);bottom:auto}
+}
+@media (max-width:520px){.credito-hero{top:250px}}
+
+/* prova */
+.prova{border-bottom:1px solid var(--linha)}
+.prova .wrap{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;align-items:stretch}
+.prova .item{padding:26px 22px;border-left:1px solid var(--linha)}
+.prova .item:first-child{border-left:0;padding-left:0}
+.prova strong{display:block;font-family:'Ultra',serif;font-weight:400;font-size:2.1rem;line-height:1;color:var(--vermelho)}
+.prova span{display:block;margin-top:8px;color:var(--tinta-2);font-size:.95rem;line-height:1.4}
+.estrelas{display:inline-flex;gap:2px;vertical-align:middle;margin-left:8px;color:var(--amarelo)}
+.estrelas svg{width:20px;height:20px}
+@media (max-width:860px){
+  .prova .wrap{grid-template-columns:1fr 1fr}
+  .prova .item{padding:20px 16px;border-left:0;border-top:1px solid var(--linha)}
+  .prova .item:nth-child(-n+2){border-top:0}
+  .prova .item:nth-child(odd){padding-left:0}
+  .prova .item:nth-child(even){border-left:1px solid var(--linha)}
+}
+@media (max-width:520px){
+  .prova strong{font-size:1.45rem}
+  .prova .estrelas svg{width:15px;height:15px}
+  .prova span{font-size:.86rem}
+  .radar .cid text{font-size:16px}
+  .radar .km{font-size:14px}
+}
+
+section.bloco{padding:84px 0}
+.intro{max-width:640px;margin-bottom:38px}
+.intro p{margin-top:14px;color:var(--tinta-2);font-size:1.07rem}
+.nota-ex{font-size:.85rem;color:var(--tinta-2);font-style:italic;margin-top:10px}
+
+/* brinquedos */
+.grade{display:grid;grid-template-columns:repeat(4,1fr);gap:26px 20px}
+.brinq{display:flex;flex-direction:column}
+.brinq img{aspect-ratio:4/3;object-fit:cover;border-radius:6px}
+.brinq h3{font-size:1.28rem;margin-top:14px}
+.brinq p{color:var(--tinta-2);font-size:.95rem;margin-top:6px;flex:1}
+.brinq a{display:inline-flex;align-items:center;gap:7px;margin-top:10px;font-weight:600;color:var(--vermelho);font-size:.93rem;text-decoration:none}
+.brinq a:hover{text-decoration:underline;text-underline-offset:3px}
+.brinq a .ico{color:var(--verde)}
+@media (max-width:980px){.grade{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:420px){.grade{gap:22px 14px}.brinq h3{font-size:1.08rem}.brinq p{font-size:.88rem}}
+
+/* monitores */
+.monitores{background:var(--vermelho);color:#fff}
+.monitores .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center}
+.monitores figure{margin:0;position:relative}
+.monitores figure img{border-radius:6px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.monitores figcaption{font-size:.8rem;opacity:.85;margin-top:8px}
+.monitores .intro p{color:#fff;opacity:.95}
+.falas{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:14px}
+.falas li{background:#fff;color:var(--tinta);border-radius:6px;padding:16px 18px}
+.falas q{quotes:none;display:block;font-size:1.02rem}
+.falas cite{display:block;font-style:normal;font-size:.85rem;color:var(--tinta-2);margin-top:6px}
+.monitores .btn{margin-top:28px}
+@media (max-width:860px){.monitores .wrap{grid-template-columns:1fr;gap:32px}.monitores figure img{aspect-ratio:3/2}}
+
+/* raio 250 km */
+.raio .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+.radar{width:100%;height:auto;max-width:620px;justify-self:center}
+.radar .anel{fill:none;stroke:var(--vermelho);stroke-width:1.4}
+.radar .anel-fora{fill:var(--vermelho-claro);stroke:var(--vermelho);stroke-width:3}
+.radar .km{font:600 12px 'Rubik',sans-serif;fill:var(--vermelho)}
+.radar .cid circle{fill:var(--tinta)}
+.radar .cid text{font:500 13px 'Rubik',sans-serif;fill:var(--tinta)}
+.radar .cid text.dist{font-size:11px;fill:var(--tinta-2);font-weight:400}
+.radar .centro text{font:400 15px 'Ultra',serif;fill:#fff}
+.radar .divisa{stroke:var(--tinta-2);stroke-width:1;stroke-dasharray:4 4;fill:none;opacity:.5}
+.radar .uf{font:600 11px 'Rubik',sans-serif;fill:var(--tinta-2);opacity:.75}
+.raio ul{margin:22px 0 0;padding-left:1.1em;color:var(--tinta-2)}
+.raio ul li{margin:4px 0}
+.raio .btn{margin-top:26px}
+@media (max-width:860px){.raio .wrap{grid-template-columns:1fr;gap:26px}}
+
+/* avaliações */
+.avaliacoes{background:var(--vermelho-claro)}
+.aval-topo{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:34px}
+.aval-topo .nota{display:flex;align-items:center;gap:14px}
+.aval-topo .nota strong{font-family:'Ultra',serif;font-weight:400;font-size:3.4rem;line-height:1;color:var(--vermelho)}
+.aval-topo .nota span{color:var(--tinta-2);line-height:1.35}
+.aval{columns:3 300px;column-gap:20px}
+.aval blockquote{break-inside:avoid;margin:0 0 20px;background:#fff;border-radius:6px;padding:20px 22px}
+.aval blockquote p{font-size:1.02rem}
+.aval footer{margin-top:10px;font-size:.88rem;color:var(--tinta-2)}
+.aval footer b{color:var(--tinta);font-weight:600}
+.fonte{font-size:.85rem;color:var(--tinta-2);margin-top:6px}
+
+/* horário + endereço */
+.onde .wrap{display:grid;grid-template-columns:1fr 1.25fr;gap:44px;align-items:start}
+.status{display:inline-flex;align-items:center;gap:10px;font-weight:600;padding:8px 14px;border-radius:6px;background:#E3F6EA;color:#11612F;margin-top:22px}
+.status::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--verde)}
+.status.fechado{background:#FBE7E5;color:#8E1510}
+.status.fechado::before{background:var(--vermelho)}
+.horas{margin-top:22px;border-top:1px solid var(--linha)}
+.horas div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--linha)}
+.horas b{font-weight:600}
+.endereco{margin-top:26px;font-size:1.05rem}
+.onde .acoes{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.onde .btn-linha{color:var(--vermelho)}
+.mapa{border:0;width:100%;height:100%;min-height:400px;border-radius:6px;background:#eee}
+.redes{margin-top:22px;color:var(--tinta-2);font-size:.95rem}
+@media (max-width:860px){.onde .wrap{grid-template-columns:1fr}.mapa{min-height:320px}}
+
+/* cta final */
+.final{background:var(--tinta);color:#fff;text-align:left}
+.final .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:26px;padding:62px 0}
+.final h2{max-width:16em}
+.final p{opacity:.85;margin-top:12px;max-width:36em}
+footer.rodape{background:#141933;color:#C9CCE0;font-size:.88rem;padding:26px 0 96px}
+footer.rodape .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+/* flutuante */
+.flutuante{position:fixed;right:18px;bottom:18px;z-index:30;width:60px;height:60px;border-radius:50%;background:var(--verde);color:#fff;display:grid;place-items:center;box-shadow:0 8px 22px rgba(0,0,0,.25)}
+.flutuante .ico{width:32px;height:32px}
+.flutuante:hover{background:#178f47}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+  <symbol id="estrela" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></symbol>
+</svg>
+
+<div class="demo">Modelo demonstrativo feito por Daniel para Guto Locações e Eventos. Ainda não é o site oficial.</div>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="#inicio" aria-label="Guto Locações e Eventos, início"><b>GUTO</b><small>Locações e Eventos</small></a>
+    <nav aria-label="Seções">
+      <a href="#brinquedos">Brinquedos</a>
+      <a href="#monitores">Monitores</a>
+      <a href="#atendimento">Onde atende</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn btn-wa" href="https://wa.me/5518997250782?text=Ol%C3%A1%2C%20Guto!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20para%20minha%20festa." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Orçamento</a>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero" aria-labelledby="h1">
+    <img src="fotos/hero.jpg" alt="Brinquedo inflável vermelho montado num gramado para uma festa infantil" fetchpriority="high">
+    <div class="wrap">
+      <div class="placa">
+        <p class="quem">Guto Locações e Eventos, Presidente Prudente</p>
+        <h1 id="h1">Os brinquedos chegam com monitor junto.</h1>
+        <p class="sub">Aluguel de brinquedos para festas infantis em Presidente Prudente e região. Enquanto a criançada brinca, a equipe do Guto fica de olho em cada uma.</p>
+        <div class="acoes">
+          <a class="btn btn-branco" href="https://wa.me/5518997250782?text=Ol%C3%A1%2C%20Guto!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20para%20minha%20festa." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true" style="color:var(--verde)"><use href="#wa"/></svg>Pedir orçamento no WhatsApp</a>
+          <a class="btn btn-linha" href="#brinquedos">Ver os brinquedos</a>
+        </div>
+      </div>
+    </div>
+    <span class="credito-hero">Foto ilustrativa</span>
+  </section>
+
+  <section class="prova" aria-label="Números da Guto Locações">
+    <div class="wrap">
+      <div class="item"><strong>5,0<span class="estrelas" aria-hidden="true"><svg><use href="#estrela"/></svg><svg><use href="#estrela"/></svg><svg><use href="#estrela"/></svg><svg><use href="#estrela"/></svg><svg><use href="#estrela"/></svg></span></strong><span>Nota no Google, com 155 avaliações</span></div>
+      <div class="item"><strong>10 anos</strong><span>Cerca de uma década alugando brinquedos</span></div>
+      <div class="item"><strong>Monitores</strong><span>Acompanham as crianças durante a festa</span></div>
+      <div class="item"><strong>250 km</strong><span>Raio de atendimento a partir de Prudente</span></div>
+    </div>
+  </section>
+
+  <section class="bloco" id="brinquedos" aria-labelledby="h-brinq">
+    <div class="wrap">
+      <div class="intro">
+        <h2 id="h-brinq">Escolha os brinquedos da festa</h2>
+        <p>Toque em um brinquedo para perguntar no WhatsApp se ele está livre na data da sua festa.</p>
+        <p class="nota-ex">Fotos ilustrativas e texto de exemplo. No site final entram os brinquedos e as fotos reais do Guto.</p>
+      </div>
+      <div class="grade">
+        <article class="brinq"><img src="fotos/c-castelo2.jpg" alt="Brinquedos infláveis montados num gramado" loading="lazy"><h3>Castelo inflável</h3><p>Pula-pula grande para a turma toda gastar energia.</p><a href="https://wa.me/5518997250782?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20o%20castelo%20infl%C3%A1vel." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Consultar data</a></article>
+        <article class="brinq"><img src="fotos/c-castelo4.jpg" alt="Criança descendo um tobogã inflável colorido" loading="lazy"><h3>Tobogã inflável</h3><p>Sobe pela escadinha e desce escorregando.</p><a href="https://wa.me/5518997250782?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20o%20tobog%C3%A3%20infl%C3%A1vel." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Consultar data</a></article>
+        <article class="brinq"><img src="fotos/c-cama1.jpg" alt="Crianças brincando numa cama elástica ao ar livre" loading="lazy"><h3>Cama elástica</h3><p>Com rede de proteção, para pular sem medo.</p><a href="https://wa.me/5518997250782?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20a%20cama%20el%C3%A1stica." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Consultar data</a></article>
+        <article class="brinq"><img src="fotos/c-bolinha1.jpg" alt="Piscina cheia de bolinhas coloridas" loading="lazy"><h3>Piscina de bolinhas</h3><p>A preferida dos pequenininhos.</p><a href="https://wa.me/5518997250782?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20a%20piscina%20de%20bolinhas." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Consultar data</a></article>
+        <article class="brinq"><img src="fotos/c-pebolim2.jpg" alt="Mesa de pebolim com bonecos vermelhos e azuis" loading="lazy"><h3>Pebolim</h3><p>Para os maiores (e para os pais) disputarem uma partida.</p><a href="https://wa.me/5518997250782?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20o%20pebolim." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Consultar data</a></article>
+        <article class="brinq"><img src="fotos/c-algodao1.jpg" alt="Máquina de algodão-doce fazendo algodão cor-de-rosa" loading="lazy"><h3>Algodão-doce</h3><p>Máquina para servir algodão-doce na hora.</p><a href="https://wa.me/5518997250782?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20a%20m%C3%A1quina%20de%20algod%C3%A3o-doce." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Consultar data</a></article>
+        <article class="brinq"><img src="fotos/c-pipoca2.jpg" alt="Carrinho de pipoca cheio de pipoca" loading="lazy"><h3>Pipoca</h3><p>Carrinho de pipoca para o cheirinho de festa.</p><a href="https://wa.me/5518997250782?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20a%20m%C3%A1quina%20de%20pipoca." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Consultar data</a></article>
+        <article class="brinq"><img src="fotos/c-pintura2.jpg" alt="Menina com uma borboleta verde pintada no rosto" loading="lazy"><h3>Pintura facial</h3><p>Borboleta, super-herói, bichinho: a criança escolhe.</p><a href="https://wa.me/5518997250782?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20quero%20saber%20sobre%20a%20pintura%20facial." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Consultar data</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco monitores" id="monitores" aria-labelledby="h-mon">
+    <div class="wrap">
+      <figure>
+        <img src="fotos/c-pintura1.jpg" alt="Monitora pintando o rosto de um menino durante uma festa" loading="lazy">
+        <figcaption>Foto ilustrativa.</figcaption>
+      </figure>
+      <div>
+        <div class="intro" style="margin-bottom:0">
+          <h2 id="h-mon">Você curte a festa. O monitor cuida da brincadeira.</h2>
+          <p>Os brinquedos do Guto vão com monitores, que acompanham as crianças, organizam a vez de cada uma e ficam atentos à segurança. Quem contratou conta como foi:</p>
+        </div>
+        <ul class="falas">
+          <li><q>Brinquedos novos, em boas condições e monitores educados e profissionais.</q><cite>David B., avaliação pública</cite></li>
+          <li><q>Experiência incrível, e quero dar meus parabéns para o monitor Pedro, um menino muito simpático.</q><cite>Avaliação pública</cite></li>
+          <li><q>Ótimo atendimento, pessoas carinhosas com as crianças, pontual no atendimento. Nota 1000.</q><cite>Avaliação pública</cite></li>
+        </ul>
+        <a class="btn btn-branco" href="https://wa.me/5518997250782?text=Ol%C3%A1%2C%20Guto!%20Vim%20pelo%20site%20e%20quero%20saber%20como%20funcionam%20os%20monitores%20na%20festa." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true" style="color:var(--verde)"><use href="#wa"/></svg>Perguntar sobre os monitores</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco raio" id="atendimento" aria-labelledby="h-raio">
+    <div class="wrap">
+      <div>
+        <div class="intro" style="margin-bottom:0">
+          <h2 id="h-raio">A festa é longe? O Guto vai até 250 km.</h2>
+          <p>A base fica em Presidente Prudente, e o atendimento chega a cidades do Oeste Paulista, do norte do Paraná e da divisa com o Mato Grosso do Sul.</p>
+        </div>
+        <ul>
+          <li>Distâncias do mapa em linha reta, aproximadas.</li>
+          <li>Para festas fora de Prudente, confirme a cidade e a data no WhatsApp.</li>
+        </ul>
+        <a class="btn btn-wa" href="https://wa.me/5518997250782?text=Ol%C3%A1%2C%20Guto!%20Vim%20pelo%20site.%20Voc%C3%AAs%20atendem%20na%20minha%20cidade%3F%20Ela%20fica%20em%3A%20" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Atende na minha cidade?</a>
+      </div>
+      <svg class="radar" viewBox="0 0 640 640" role="img" aria-labelledby="radar-t">
+        <title id="radar-t">Mapa com anéis de 50 a 250 km a partir de Presidente Prudente, com cidades como Presidente Venceslau, Dracena, Assis, Marília, Ourinhos, Londrina, Maringá e Bauru dentro do raio.</title>
+        <g transform="translate(320 320)">
+          <circle class="anel-fora" r="270"/>
+          <circle class="anel" r="216"/>
+          <circle class="anel" r="162"/>
+          <circle class="anel" r="108"/>
+          <circle class="anel" r="54"/>
+          <!-- divisa SP/PR (rio Paranapanema, simplificada) e SP/MS (rio Paraná) -->
+          <path class="divisa" d="M-120 70 C -60 60, 0 70, 60 80 S 160 92, 230 120"/>
+          <path class="divisa" d="M-150 -150 C -110 -90, -100 -10, -120 70"/>
+          <text class="uf" x="-215" y="-60">MS</text>
+          <text class="uf" x="-150" y="190">PR</text>
+          <text class="uf" x="60" y="-215">SP</text>
+          <text class="km" x="-4" y="68" text-anchor="end">50 km</text>
+          <text class="km" x="-4" y="122" text-anchor="end">100 km</text>
+          <text class="km" x="-4" y="176" text-anchor="end">150 km</text>
+          <text class="km" x="-4" y="230" text-anchor="end">200 km</text>
+          <text class="km" x="-4" y="262" text-anchor="end">250 km</text>
+          <g class="cid"><circle cx="-51" cy="-30" r="4"/><text x="-58" y="-14" text-anchor="end">P. Venceslau</text></g>
+          <g class="cid"><circle cx="-81" cy="-43" r="4"/><text x="-90" y="-52" text-anchor="end">P. Epitácio</text></g>
+          <g class="cid"><circle cx="-16" cy="-77" r="4"/><text x="-24" y="-82" text-anchor="end">Dracena</text></g>
+          <g class="cid"><circle cx="35" cy="-53" r="4"/><text x="43" y="-56">Adamantina</text></g>
+          <g class="cid"><circle cx="97" cy="-23" r="4"/><text x="105" y="-19">Tupã</text></g>
+          <g class="cid"><circle cx="55" cy="12" r="4"/><text x="63" y="16">Rancharia</text></g>
+          <g class="cid"><circle cx="109" cy="64" r="4"/><text x="117" y="68">Assis</text></g>
+          <g class="cid"><circle cx="161" cy="11" r="4"/><text x="169" y="15">Marília</text></g>
+          <g class="cid"><circle cx="169" cy="102" r="4"/><text x="177" y="106">Ourinhos</text></g>
+          <g class="cid"><circle cx="107" cy="-110" r="4"/><text x="115" y="-106">Araçatuba</text></g>
+          <g class="cid"><circle cx="183" cy="-54" r="4"/><text x="191" y="-50">Lins</text></g>
+          <g class="cid"><circle cx="259" cy="23" r="4"/><text x="251" y="40" text-anchor="end">Bauru</text></g>
+          <g class="cid"><circle cx="25" cy="142" r="4"/><text x="33" y="146">Londrina</text></g>
+          <g class="cid"><circle cx="-61" cy="155" r="4"/><text x="-69" y="159" text-anchor="end">Maringá</text></g>
+          <g class="cid"><circle cx="-87" cy="49" r="4"/><text x="-95" y="53" text-anchor="end">Teodoro Sampaio</text></g>
+          <g class="cid"><circle cx="-217" cy="13" r="4"/><text x="-209" y="-1">Nova Andradina</text></g>
+          <g class="centro"><circle r="26" fill="#D3201B"/><text text-anchor="middle" y="6">PP</text></g>
+          <text class="km" x="0" y="-36" text-anchor="middle" style="fill:var(--tinta);font-weight:700">Presidente Prudente</text>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="bloco avaliacoes" id="avaliacoes" aria-labelledby="h-aval">
+    <div class="wrap">
+      <div class="aval-topo">
+        <div>
+          <h2 id="h-aval">Quem contratou, recomenda</h2>
+          <p class="fonte">Trechos de avaliações públicas de clientes.</p>
+        </div>
+        <div class="nota"><strong>5,0</strong><span><span class="estrelas" style="margin:0" aria-hidden="true"><svg><use href="#estrela"/></svg><svg><use href="#estrela"/></svg><svg><use href="#estrela"/></svg><svg><use href="#estrela"/></svg><svg><use href="#estrela"/></svg></span><br>155 avaliações no Google</span></div>
+      </div>
+      <div class="aval">
+        <blockquote><p>Excelente atendimento. Equipe comprometida, organizada, pontual, e com muita experiência no setor de recreação. Parabéns!</p><footer><b>Cliente</b>, avaliação 5 estrelas</footer></blockquote>
+        <blockquote><p>Brinquedos excelentes, atendimento nota 10, monitores capacitados e gentis e o proprietário bom para negociar!</p><footer><b>Cliente</b>, avaliação 5 estrelas</footer></blockquote>
+        <blockquote><p>Muito bom profissional, de qualidade, com um cuidado impecável com as crianças. Obrigado pela atenção dedicada aos clientes.</p><footer><b>Cliente</b>, avaliação 5 estrelas</footer></blockquote>
+        <blockquote><p>Excelente atendimento, cumpriu horário, tudo certinho, super educados e prestativos.</p><footer><b>Cliente</b>, avaliação 5 estrelas</footer></blockquote>
+        <blockquote><p>Pontual, preço justo e brinquedos de ótima qualidade!</p><footer><b>Cliente</b>, avaliação 5 estrelas</footer></blockquote>
+        <blockquote><p>Nossa família adorou o atendimento, ficamos muito satisfeitos. Obrigado, Guto e equipe!</p><footer><b>Cliente</b>, avaliação 5 estrelas</footer></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section class="bloco onde" id="contato" aria-labelledby="h-onde">
+    <div class="wrap">
+      <div>
+        <h2 id="h-onde">Atendimento todos os dias</h2>
+        <p class="status" id="statusAgora" role="status"><span>Verificando horário…</span></p>
+        <div class="horas" role="table" aria-label="Horário de atendimento">
+          <div role="row"><b role="rowheader">Segunda a domingo</b><span role="cell">7h30 às 23h</span></div>
+          <div role="row"><b role="rowheader">Feriados</b><span role="cell">7h30 às 23h</span></div>
+        </div>
+        <p class="endereco">Rua Daniel Martins, 1496<br>Vila Formosa, Presidente Prudente, SP</p>
+        <div class="acoes">
+          <a class="btn btn-wa" href="https://wa.me/5518997250782?text=Ol%C3%A1%2C%20Guto!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20para%20minha%20festa." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>(18) 99725-0782</a>
+          <a class="btn btn-linha" href="https://www.google.com/maps/dir/?api=1&amp;destination=Rua%20Daniel%20Martins%2C%201496%2C%20Vila%20Formosa%2C%20Presidente%20Prudente%20-%20SP" target="_blank" rel="noopener">Traçar rota</a>
+        </div>
+        <p class="redes">Instagram <a href="https://www.instagram.com/guto_locacoes/" target="_blank" rel="noopener">@guto_locacoes</a> e Facebook <a href="https://www.facebook.com/locacoesguto/" target="_blank" rel="noopener">/locacoesguto</a></p>
+      </div>
+      <iframe class="mapa" title="Mapa: Rua Daniel Martins, 1496, Vila Formosa, Presidente Prudente" src="https://www.google.com/maps?q=Rua%20Daniel%20Martins%2C%201496%2C%20Vila%20Formosa%2C%20Presidente%20Prudente%20-%20SP&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <section class="final" aria-labelledby="h-final">
+    <div class="wrap">
+      <div>
+        <h2 id="h-final">Já tem a data da festa?</h2>
+        <p>Mande a data, o bairro ou a cidade e a idade da criançada. O Guto responde com os brinquedos livres e o valor.</p>
+      </div>
+      <a class="btn btn-wa" href="https://wa.me/5518997250782?text=Ol%C3%A1%2C%20Guto!%20Vim%20pelo%20site.%20Minha%20festa%20%C3%A9%20no%20dia%20" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg>Chamar no WhatsApp</a>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <span>Guto Locações e Eventos, Presidente Prudente (SP). WhatsApp (18) 99725-0782</span>
+    <span>Fotos ilustrativas: Unsplash. Modelo feito por Daniel.</span>
+  </div>
+</footer>
+
+<a class="flutuante" href="https://wa.me/5518997250782?text=Ol%C3%A1%2C%20Guto!%20Vim%20pelo%20site%20e%20quero%20um%20or%C3%A7amento%20para%20minha%20festa." target="_blank" rel="noopener" aria-label="Conversar com a Guto Locações no WhatsApp"><svg class="ico" aria-hidden="true"><use href="#wa"/></svg></a>
+
+<script>
+(() => {
+  // Horário real (Lista Mais): segunda a domingo e feriados, 7h30 às 23h.
+  const ABRE = 450, FECHA = 1380;
+  const p = Object.fromEntries(new Intl.DateTimeFormat('en-US', { timeZone: 'America/Sao_Paulo', hour: 'numeric', minute: 'numeric', hourCycle: 'h23' }).formatToParts(new Date()).map((x) => [x.type, x.value]));
+  const agora = Number(p.hour) * 60 + Number(p.minute);
+  const st = document.getElementById('statusAgora');
+  if (agora >= ABRE && agora < FECHA) st.querySelector('span').textContent = 'Aberto agora, até as 23h';
+  else {
+    st.classList.add('fechado');
+    st.querySelector('span').textContent = agora < ABRE ? 'Fechado agora, abre hoje às 7h30' : 'Fechado agora, abre amanhã às 7h30';
+  }
+})();
+</script>
+</body>
+</html>
